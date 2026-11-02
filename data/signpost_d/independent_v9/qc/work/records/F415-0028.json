@@ -1,0 +1,130 @@
+{
+ "id": "F415-0028",
+ "family": "F415",
+ "state": {
+  "site": {
+   "id": "TB-22",
+   "closures": []
+  },
+  "shift": {
+   "date": "2024-07-09",
+   "sched_slots": [
+    "08:00",
+    "09:00",
+    "10:00",
+    "11:30",
+    "13:00",
+    "14:30",
+    "15:45"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "10:00",
+    "status": "not_recorded"
+   },
+   {
+    "slot": "15:45",
+    "end": "16:02",
+    "status": "done",
+    "checklist": {
+     "pan": false,
+     "floor": true
+    }
+   }
+  ],
+  "faults": [
+   {
+    "type": "blocked_pan",
+    "reported_at": "2024-07-09T09:20",
+    "remedied_at": "2024-07-09T11:29",
+    "remedy_note": "pan cleared 10:40"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2024-07-09T16:00"
+  },
+  "history": {
+   "defaults": 3
+  }
+ },
+ "factors": {
+  "scheduled_slots": 7,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "signed_before_last_visit",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 128.98,
+  "block_closed_during_fault": false,
+  "checklist_completion": "partial",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 3
+ },
+ "factors_sampled": {
+  "scheduled_slots": 7,
+  "missed_slots": "0",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "none",
+  "fault_open_minutes": 128.98,
+  "block_closed_during_fault": false,
+  "checklist_completion": "partial",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 3
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "missed_clean": "The 10:00 slot is not_recorded, closures is empty, and other slots have no visit entries either.",
+  "sign_off_valid": "signed_at 16:00 is two minutes before the final visit end 16:02, but the signer is a supervisor and the gap is small.",
+  "next_step": "The remedy_note says cleared 10:40 while remedied_at is 11:29, one specific discrepancy to evidence before deciding.",
+  "staff_effort": "Many slots have no visit entries and the visit records are sparse, which could mean a long reconstruction or a more modest one.",
+  "fault_exposure": "The fault ran 09:20-11:29 (129 min) with no closure, so it was open to the public for over 60 and under 240 minutes."
+ },
+ "request": "rec-F415-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008749
+}

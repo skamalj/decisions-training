@@ -1,0 +1,141 @@
+{
+ "id": "F438-0031",
+ "family": "F438",
+ "state": {
+  "coded_record": {
+   "primary_dx": {
+    "code": "K35.8"
+   },
+   "secondary_dx": [
+    "E11.9",
+    "I10"
+   ],
+   "procedures": [
+    {
+     "code": "W37.1"
+    },
+    {
+     "code": "X40.2"
+    }
+   ]
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "K35.3"
+   },
+   "comorbidities": [
+    "E11.9",
+    "N18.3"
+   ],
+   "theatre_log": [
+    "W37.1",
+    "T20.1"
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "FD05A",
+   "hrg_regrouped": null,
+   "submitted_to_commissioner": false
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    {
+     "code_pair": [
+      "K35.8",
+      "K35.3"
+     ]
+    }
+   ],
+   "queries": [
+    {
+     "target_code": "I10",
+     "status": "closed",
+     "response": "contradicts"
+    }
+   ]
+  },
+  "coder_history": {
+   "error_rate": 0.14,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 2,
+  "procedure_mismatch": "documented_not_coded",
+  "regroup_outcome": "not_regroupable",
+  "missing_source": "none",
+  "clinician_query": "answered_contradicts",
+  "approved_local_convention": true,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.14,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 2,
+  "procedure_mismatch": "documented_not_coded",
+  "regroup_outcome": "not_regroupable",
+  "missing_source": "none",
+  "clinician_query": "answered_contradicts",
+  "approved_local_convention": true,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.14,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "amend_codes",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unsupported_billable_code = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 25,
+ "deciding": {
+  "primary_supported": "K35.8 vs K35.3 share three characters, and an approved local convention covers exactly that pair, so the primary is supported.",
+  "hrg_shift": "hrg_regrouped is null, so regrouping has not been possible and no shift is shown.",
+  "next_step": "The errors are fixable locally and the submission is still pending, so correction is the natural step. The unsupported code gives some pull toward escalation.",
+  "error_count": "I10 is coded but not documented, N18.3 is documented but not coded, T20.1 is in the theatre log but not coded, and X40.2 is coded with no log entry. That is four errors.",
+  "error_severity": "X40.2 is a coded procedure with no documentation entry, which points to critical. The absent regroup leaves the major level (HRG change) defensible."
+ },
+ "request": "rec-F438-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01254
+}

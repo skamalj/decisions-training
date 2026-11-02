@@ -1,0 +1,146 @@
+{
+ "id": "F403-0017",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "egg",
+    "milk",
+    "wheat"
+   ],
+   "plan_start": "2025-02-24"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-01-10",
+   "allergens": [
+    "egg",
+    "milk",
+    "wheat"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-02-10",
+   "dishes": [
+    {
+     "dish": "fish pie",
+     "contains": [
+      "milk",
+      "wheat"
+     ],
+     "recipe_version_date": "2025-01-15",
+     "substitute": "dairy-free pie",
+     "spec_checked_on": "2025-02-05"
+    },
+    {
+     "dish": "sponge",
+     "contains": [
+      "egg",
+      "wheat"
+     ],
+     "recipe_version_date": "2025-01-15",
+     "substitute": "withheld",
+     "spec_checked_on": "2025-02-05"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true
+  },
+  "history": {
+   "review_date": "2025-03-03",
+   "packed_lunch_until": "2025-03-28",
+   "incidents": [
+    {
+     "date": "2025-02-26",
+     "dish": "sponge",
+     "note": "taster lunch, served in error"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 20,
+  "packed_lunch_interim": true,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "shared_equipment",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 15,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_restricted",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "no_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 66,
+ "deciding": {
+  "evidence_allergens_covered": "All three evidence allergens appear in dishes, but sponge is handled by 'withheld' rather than a true substitute, so coverage is defensible either way.",
+  "next_step": "One dish (sponge) is withheld and the rest of the plan is sound, which fits release with that dish restricted; the taster incident adds some doubt.",
+  "first_gap_stage": "Evidence is unexpired and clinician-issued, both dishes are mapped with spec checks after recipe dates, and equipment is segregated with a complete cleaning log.",
+  "exposure_proximity": "Incident on 2025-02-26, after plan_start 2025-02-24, involved sponge, which contains egg and wheat, both declared.",
+  "meal_urgency": "packed_lunch_until 2025-03-28 puts the first meal on 2025-03-31, 20 school days after review_date 2025-03-03, right at the boundary between levels 0 and 1."
+ },
+ "request": "rec-F403-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011976
+}

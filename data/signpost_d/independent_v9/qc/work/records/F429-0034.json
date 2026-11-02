@@ -1,0 +1,135 @@
+{
+ "id": "F429-0034",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 250,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 75.0,
+    "action_m": 75.8
+   },
+   "readings": [
+    {
+     "level_m": 74.2,
+     "datum": "site"
+    },
+    {
+     "level_m": 74.3,
+     "datum": "site"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "2024-07-19T08:00",
+    "open_after_m": 0.8
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 0.8
+    }
+   ],
+   "calc_peak_m3s": 90,
+   "gauged_peak_m3s": 109
+  },
+  "instruments": null,
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "2024-07-19T07:40",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 19.03,
+  "datum_mismatch": false,
+  "missing_section": "instruments_null",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 19.03,
+  "datum_mismatch": false,
+  "missing_section": "instruments_null",
+  "notice_after_release": true,
+  "inspection_status": "completed",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "trigger_tier": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 31,
+ "deciding": {
+  "within_licence": "Calculated 90 and gauged 109 are both well under the 250 limit.",
+  "gates_reconciled": "G1 open_after 0.8 equals calc opening 0.8.",
+  "next_step": "The warning was sent before the release, levels are below alert, and the discharge is under the limit; the log can be accepted.",
+  "trigger_tier": "Levels 74.2 and 74.3 are below the 75.0 alert trigger.",
+  "parties_needed": "Nothing is outstanding, so one person can close the log."
+ },
+ "request": "rec-F429-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005425
+}

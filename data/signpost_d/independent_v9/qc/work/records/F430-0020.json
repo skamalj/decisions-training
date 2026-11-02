@@ -1,0 +1,136 @@
+{
+ "id": "F430-0020",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S420",
+   "assets": [
+    {
+     "id": "T1",
+     "param": "oil_temp",
+     "unit": "C",
+     "normal_band": [
+      40,
+      85
+     ],
+     "alarm_limit": 95,
+     "trip_limit": 105,
+     "customers_fed": 13036,
+     "partner_id": "T2"
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-08-05",
+   "scheduled_assets": [
+    "T1"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 72,
+    "unit": "C"
+   }
+  ],
+  "defects": [],
+  "history": {
+   "previous_round": {
+    "T1": 70
+   },
+   "open_work_orders": [],
+   "permits": []
+  },
+  "network": {
+   "partner_status": {
+    "T2": "in_service"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "within_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "none",
+  "benign_cause_covers": false,
+  "defect_claim": "none_logged",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 13036,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 13036,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "benign_explanation": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "clear",
+   "target": "file_closed",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 75,
+ "deciding": {
+  "defect_corroborated": "No defects logged and the reading is normal, so nothing is corroborated.",
+  "benign_explanation": "No abnormal reading exists to explain.",
+  "follow_up": "All scheduled readings within band, no defects, so file.",
+  "limit_deviation": "72 C is inside the 40-85 normal band.",
+  "supply_exposure": "No open defect and partner T2 in service."
+ },
+ "request": "rec-F430-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006034
+}

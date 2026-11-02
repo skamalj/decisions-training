@@ -1,0 +1,154 @@
+{
+ "id": "F427-0025",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V105",
+   "visit_date": "2024-08-09"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 20,
+   "dipwells_scheduled": 3
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 11
+    },
+    {
+     "depth_cm": 13
+    }
+   ],
+   "rain_30d_pct_normal": 95
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam": "D5",
+     "inspected_on": "2024-08-02",
+     "pool_level_cm": 28,
+     "design_pool_cm": 28,
+     "defect_code": "OK",
+     "remark": "Damp at toe, no flow."
+    }
+   ],
+   "open_work_orders": [
+    {
+     "dam_id": "D5",
+     "status": "raised"
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 3
+    },
+    {
+     "q": 2,
+     "score": null
+    }
+   ],
+   "photos_uploaded": 6,
+   "photos_expected": 6
+  },
+  "notes": {
+   "prior_visits": [
+    {
+     "date": "2024-03-01",
+     "dam": "D5",
+     "event": "BRCH"
+    },
+    {
+     "date": "2024-05-20",
+     "dam": "D5",
+     "event": "BRCH"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.67,
+  "photos_status": "full",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "intact",
+  "water_table_offset_cm": 0.0,
+  "rainfall_pct_normal": 95.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 2,
+  "date_sequence_fault": true,
+  "surveyor_grade": "accredited",
+  "note_tone": "none",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.7,
+  "photos_status": "full",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": false,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -9.32,
+  "rainfall_pct_normal": 95.22,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 2,
+  "date_sequence_fault": true,
+  "surveyor_grade": "accredited",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate_lead",
+   "second": "request_data",
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "within_band",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "dam_caused_drop": "The wells read 11 and 13 cm, inside the 5 to 20 cm band, so there is no drop to attribute to the dam.",
+  "next_step": "D5 has two prior breaches, which argues for escalating. The inspected_on date (2024-08-02) is before the visit date and the dipwell and quadrat data are partial, which argues for requesting data.",
+  "hydro_state": "The mean depth of 12 cm lies inside the 5 to 20 cm band.",
+  "dam_severity": "D5 has code OK with the pool at design level. The remark about damp at the toe leaves seepage a defensible reading.",
+  "evidence_completeness": "All four elements are present. Dipwells are 2 of 3 and one quadrat score is null, so at least one is only partly recorded."
+ },
+ "request": "rec-F427-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01043
+}

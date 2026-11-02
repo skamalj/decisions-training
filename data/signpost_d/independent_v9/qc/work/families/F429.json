@@ -1,0 +1,300 @@
+{
+ "id": "F429",
+ "domain": "dam spillway monitoring logs",
+ "role": "Reservoir duty engineer reviewing gated spillway shift logs before sign-off",
+ "setting": "A water utility's reservoir operations team keeps one structured log per shift for each gated spillway. The duty engineer reviews each log alone and reconciles reservoir levels, gate movements, the discharge calculation, instrument readings and the notification trail. They decide whether the release stayed within licence, whether gate data agrees across sections, what happens to the log next, and which trigger tier the readings reached.",
+ "questions": {
+  "within_licence": {
+   "type": "noul",
+   "instructions": "The spillway release stayed within the licensed discharge limit throughout the shift.",
+   "criteria": {
+    "true": "Measured and calculated peak discharge both under limit.",
+    "false": "A discharge figure exceeds the limit or is unavailable."
+   }
+  },
+  "gates_reconciled": {
+   "type": "noul",
+   "instructions": "Gate openings in the operations list match those used in the discharge calculation.",
+   "criteria": null
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the reviewer do with this shift log next?",
+   "criteria": {
+    "accept_log": "Sections reconcile and every required step is already recorded.",
+    "query_operator": "Exactly one confirmation or minor data correction outstanding before closure.",
+    "hold_for_inspection": "Post-operation inspection or an instrument field check remains outstanding.",
+    "escalate": "Action trigger, licence breach or large data conflict needs senior engineer."
+   }
+  },
+  "trigger_tier": {
+   "type": "score",
+   "instructions": "Which highest trigger tier do this log's readings reach?",
+   "criteria": [
+    "Normal: no reading at or above any alert trigger",
+    "Alert: highest reading between alert and action triggers",
+    "Action: at least one reading at or above action trigger",
+    "Critical: licensed ramp rate or discharge limit broken"
+   ]
+  },
+  "parties_needed": {
+   "type": "score",
+   "instructions": "How many separate people or teams must act to resolve this?",
+   "criteria": [
+    "One person can resolve it alone",
+    "Two people or teams must act",
+    "Three or four people or teams must act",
+    "Five or more people or teams must act"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "reservoir_tier",
+   "description": "Highest trigger band reached by the reservoir level or an unexplained piezometer reading during the shift",
+   "kind": "categorical",
+   "values": [
+    "normal",
+    "alert",
+    "action"
+   ],
+   "weights": [
+    0.45,
+    0.35,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "near_boundary",
+   "description": "The peak level sits within 0.02 m of the next trigger threshold, so the tier can be read either way",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S6"
+   ]
+  },
+  {
+   "name": "discharge_vs_licence",
+   "description": "Peak released discharge relative to the licensed maximum",
+   "kind": "categorical",
+   "values": [
+    "well_below",
+    "near_limit",
+    "above_limit"
+   ],
+   "weights": [
+    0.6,
+    0.25,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S7"
+   ]
+  },
+  {
+   "name": "gate_position_mismatch",
+   "description": "Size of the disagreement between gate openings in gate_ops and those used in discharge.calc_inputs",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "trivial",
+    "material",
+    "large"
+   ],
+   "weights": [
+    0.4,
+    0.25,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "discharge_discrepancy_pct",
+   "description": "Percentage gap between the gauged downstream flow and the gate-rating calculated discharge",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 40,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "datum_mismatch",
+   "description": "One reservoir level is recorded against gauge zero rather than the site datum, which offsets it by a fixed amount",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.15,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "missing_section",
+   "description": "A required part of the log that is absent or null",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "instruments_null",
+    "notifications_missing",
+    "downstream_gauge_null"
+   ],
+   "weights": [
+    0.55,
+    0.15,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2"
+   ]
+  },
+  {
+   "name": "notice_after_release",
+   "description": "The downstream warning notification timestamp falls after the first gate opening, although it is required beforehand",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S2"
+   ]
+  },
+  {
+   "name": "inspection_status",
+   "description": "State of the post-operation spillway chute and gate inspection",
+   "kind": "categorical",
+   "values": [
+    "completed",
+    "pending",
+    "not_started"
+   ],
+   "weights": [
+    0.5,
+    0.3,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "piezometer_rise",
+   "description": "An embankment piezometer rises above its alert value during the release",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.35,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "tailwater_explains_rise",
+   "description": "Mitigation: the recorded tailwater rise coincides with the piezometer increase and accounts for it",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "ramp_limit_breached",
+   "description": "Aggravating: a gate opened faster than the licensed maximum ramp rate, so downstream flow rose beyond permitted speed",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S7",
+    "S1"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "log_header",
+   "description": "Dam and spillway identifiers, shift window, operator ID, log version and licence limits"
+  },
+  {
+   "name": "reservoir",
+   "description": "Timed level readings with datum, trigger thresholds and 24-hour rainfall"
+  },
+  {
+   "name": "gate_ops",
+   "description": "List of gate movements with gate ID, timestamp and opening before and after in metres"
+  },
+  {
+   "name": "discharge",
+   "description": "Calculation inputs per gate, calculated peak, gauged downstream peak and tailwater level"
+  },
+  {
+   "name": "instruments",
+   "description": "Piezometer and seepage weir readings with alert values and timestamps"
+  },
+  {
+   "name": "notifications",
+   "description": "Downstream warnings and internal call-outs with timestamps and acknowledgement flags"
+  }
+ ],
+ "rendering_notes": "log_header holds licence_q_max_m3s and ramp_max_m_per_10min. reservoir_tier and near_boundary appear only through reservoir.readings[].level_m compared with reservoir.triggers.alert_m and action_m. When near_boundary is true, the peak sits within 0.02 m of a threshold. datum_mismatch makes one reading carry datum:'gauge_zero' while the others use 'site', with a fixed offset shown in reservoir.gauge_zero_offset_m. discharge_vs_licence is shown by discharge.calc_peak_m3s and gauged_peak_m3s against licence_q_max_m3s; near_limit puts one figure within 3% of the limit on either side. gate_position_mismatch compares gate_ops[].open_after_m with discharge.calc_inputs[].opening_m for the same gate_id: trivial is under 0.02 m, material is 0.05 to 0.2 m, large is over 0.2 m or a gate missing from one list. discharge_discrepancy_pct is the gap between calc_peak_m3s and gauged_peak_m3s. missing_section sets instruments to null, omits notifications entirely, or sets discharge.gauged_peak_m3s to null. notice_after_release is visible only by comparing notifications[type='downstream_warning'].sent_at with the earliest gate_ops timestamp. inspection_status appears as instruments.post_op_inspection: {status, completed_at}, with completed_at null unless the inspection is completed. piezometer_rise shows as a reading above its alert_kpa. tailwater_explains_rise shows as discharge.tailwater_m readings rising within 30 minutes of that reading. ramp_limit_breached is detectable only by computing the change in opening over time between consecutive gate_ops entries for one gate and comparing it with ramp_max_m_per_10min. Decoys: operator_id, log_version, rainfall_mm_24h, gate_ops entries with zero change, and seepage weir readings that are always within limits. No field states a tier, risk, breach, reconciliation result or recommended action; no free-text fields.",
+ "skills": [
+  "S1",
+  "S2",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "parties_needed",
+ "next_step": null,
+ "aggravating_factor": "ramp_limit_breached",
+ "design_cost": 0.116112
+}

@@ -1,0 +1,168 @@
+{
+ "id": "F403-0032",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P2208",
+   "yr": 6,
+   "declared_allergens": [
+    "milk",
+    "sesame",
+    "peanut"
+   ],
+   "auto_injector": true,
+   "plan_start": "2025-01-13"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2024-12-10",
+   "expires": "2025-12-10",
+   "allergens": [
+    "milk",
+    "sesame",
+    "peanut"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-01-06",
+   "dishes": [
+    {
+     "dish": "korma",
+     "contains": [
+      "milk"
+     ],
+     "recipe_version_date": "2024-11-01",
+     "substitute": "coconut korma",
+     "spec_checked_on": "2025-01-05"
+    },
+    {
+     "dish": "hummus wrap",
+     "contains": [
+      "sesame"
+     ],
+     "recipe_version_date": "2024-11-01",
+     "substitute": "plain wrap",
+     "spec_checked_on": "2025-01-05"
+    },
+    {
+     "dish": "peanut cookie",
+     "contains": [
+      "peanut"
+     ],
+     "recipe_version_date": "2024-11-01",
+     "substitute": null,
+     "spec_checked_on": "2025-01-05",
+     "note": "withdrawn from cycle"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "staff_trained": [
+    "2024-10-02",
+    "2024-10-02"
+   ],
+   "exceptions": []
+  },
+  "history": {
+   "review_date": "2025-03-10",
+   "packed_lunch_until": "2025-03-31",
+   "incidents": [
+    {
+     "date": "2025-01-20",
+     "dish": "peanut cookie",
+     "contains": [
+      "peanut"
+     ],
+     "note": "taster session, no reaction observed"
+    }
+   ],
+   "messages": [
+    "Parent: all fine, thanks for sorting this."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 16,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 13,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_restricted",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "balanced",
+   "target": "no_gap",
+   "second": "menu_gap",
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 78,
+ "deciding": {
+  "evidence_allergens_covered": "Milk and sesame have substitutes. Peanut has substitute null, but the dish note says it was withdrawn from the cycle, so coverage is arguable either way.",
+  "next_step": "Exactly one dish (peanut cookie) lacks a substitute, and evidence and kitchen controls are sound, so the single dish is withheld and the plan released.",
+  "first_gap_stage": "Evidence is current and the kitchen is verified. The only shortfall is the peanut cookie with null substitute, which is withdrawn, so no_gap and menu_gap are both defensible.",
+  "exposure_proximity": "The incident dated 2025-01-20, after plan_start 2025-01-13, served peanut cookie containing peanut, a declared allergen. The 'no reaction observed' note is a decoy.",
+  "meal_urgency": "Packed lunches run until 2025-03-31, so the first meal is 2025-04-01, about 16 school days after review on 2025-03-10."
+ },
+ "request": "rec-F403-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014493
+}

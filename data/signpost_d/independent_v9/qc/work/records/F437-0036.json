@@ -1,0 +1,135 @@
+{
+ "id": "F437-0036",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": 3,
+   "target_locale": "de-DE",
+   "glossary_version": 4,
+   "due_at": "2025-03-12T12:00"
+  },
+  "source": {
+   "version": 3,
+   "segment_count": 210,
+   "word_count": 3100
+  },
+  "deliverable": {
+   "built_from_version": 3,
+   "target_locale": "de-DE",
+   "segments_translated": 210,
+   "word_count": 3118,
+   "glossary_version_used": 4,
+   "delivered_at": "2025-03-11T18:00"
+  },
+  "qa_report": {
+   "false_positive_marked": 7,
+   "number_mismatches": [
+    {
+     "s": "1,200",
+     "t": "1.200"
+    },
+    {
+     "s": "4.5",
+     "t": "4,5"
+    }
+   ],
+   "unresolved": {
+    "minor": 0
+   }
+  },
+  "review": {
+   "signed_off": true,
+   "completed_at": "2025-03-11T21:00",
+   "errors": [
+    {
+     "sev": "minor",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-03-05",
+    "2025-03-08"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_after_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.34,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": 18,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.34,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": 18,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "scope_matches": "Version 3 and 210 segments agree across order, source and deliverable; only a 0.6% word count drift with no repetitions breakdown to explain it keeps modest doubt.",
+  "reviewed_in_time": "review.completed_at 2025-03-11T21:00 is after deliverable.delivered_at 2025-03-11T18:00, so sign-off came after delivery.",
+  "next_step": "Counts, locale, glossary, sign-off and 18h slack are all consistent, so release is likely; the late review timing leaves some doubt.",
+  "open_severity": "Unresolved minor is 0 and the only review error is closed, but the two number mismatches (separator style) have no stated status, which holds level 0 and 1 in balance.",
+  "parties_needed": "Nothing is open and the item may be released by the QA linguist alone, but the unresolved number mismatch entries could need a translator confirmation, so one or two people are defensible."
+ },
+ "request": "rec-F437-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009538
+}

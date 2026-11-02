@@ -1,0 +1,124 @@
+{
+ "id": "F426-0011",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B12",
+   "crop": "plum",
+   "planted_area_ha": 2
+  },
+  "applications": [
+   {
+    "app_id": 1,
+    "date": "2024-02-10",
+    "product_code": "FX1",
+    "qty_applied": 9,
+    "qty_unit": "L",
+    "area_treated_ha": 2
+   },
+   {
+    "app_id": 2,
+    "date": "2024-02-20",
+    "product_code": "FX1",
+    "qty_applied": 1,
+    "qty_unit": "L",
+    "area_treated_ha": 2
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "FX1",
+    "max_rate_per_ha": 2,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "approved_crops": [
+     "apple"
+    ],
+    "minor_use_auth_ref": "MU-77"
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-03-12",
+   "residue_test": {
+    "sampled": true,
+    "result_date": null,
+    "below_limit": null
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "above_25",
+  "partial_block_spray": false,
+  "clerical_mismatch": "unit_ml_vs_l",
+  "minor_use_auth": true,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": true,
+  "num_applications": 2,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "unit_ml_vs_l",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": true,
+  "num_applications": 4,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_and_test",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "no_finding",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 54,
+ "deciding": {
+  "phi_cleared": "Last spray 2024-02-20 with 14-day PHI and first pick 2024-03-12 gives a 21-day gap; but the residue result is still pending.",
+  "next_step": "Residue sampled but result_date and below_limit are null, so hold the lot and test.",
+  "finding_class": "Intervals respected and rate is covered by the minor-use auth; plum is not in approved crops but the auth reference covers it, so no clear discrepancy.",
+  "reversal_time": "Pending residue testing and possible rework would take weeks.",
+  "rate_overrun": "9 L over 2 ha is 4.5 L/ha against a max of 2; whether the auth raises the cap is not shown, so this is near the boundary of the top levels."
+ },
+ "request": "rec-F426-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004835
+}

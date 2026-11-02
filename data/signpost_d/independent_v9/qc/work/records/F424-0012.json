@@ -1,0 +1,112 @@
+{
+ "id": "F424-0012",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2412",
+   "vessel_id": "FV1",
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 22
+  },
+  "readings": [
+   {
+    "ts": "2024-04-02",
+    "gravity_sg": 1.009,
+    "temp_c": 23.1
+   },
+   {
+    "ts": "2024-04-03",
+    "gravity_sg": 1.008,
+    "temp_c": 22
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2412",
+   "diacetyl_mgl": 0.07
+  },
+  "release_request": {
+   "vessel_id": "FV2",
+   "note": "Routine slot."
+  }
+ },
+ "factors": {
+  "gravity_status": "over_attenuated, below the FG band",
+  "final_reading_gap": false,
+  "temp_excursion": "23.1C over the 22C strain max, unmitigated",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.07,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": true,
+  "release_pressure": "routine",
+  "operator_note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "gravity_status": "over_attenuated",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.07,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": true,
+  "release_pressure": "routine",
+  "operator_note_tone": "reassuring"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "contamination_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "contested",
+   "target": "release_conditional",
+   "second": "rework",
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (hard_limit_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 33,
+ "deciding": {
+  "terminal_gravity": "Readings of 1.009 and 1.008 are stable but below the 1.010 minimum.",
+  "contamination_supported": "There is no plate, retest, or sensory note, so nothing supports it.",
+  "batch_disposition": "Release_conditional vs rework is open: lab results are complete but gravity is below the band.",
+  "deviation_severity": "The 23.1C reading is above the 22C strain max, a hard limit breach.",
+  "record_discrepancies": "batch FV1 vs release FV2 is one mismatch; whether gravity below band counts as a second is open."
+ },
+ "request": "rec-F424-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00502
+}

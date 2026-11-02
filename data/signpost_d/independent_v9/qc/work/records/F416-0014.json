@@ -1,0 +1,198 @@
+{
+ "id": "F416-0014",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "station": "S6",
+   "date": "2025-08-02",
+   "signoff": "G4"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "08:00",
+    "off": "18:00",
+    "qual": "2026-04-12"
+   },
+   {
+    "id": "G2",
+    "on": "08:00",
+    "off": "18:00",
+    "qual": "2025-08-02"
+   },
+   {
+    "id": "G3",
+    "on": "08:00",
+    "off": "18:00",
+    "qual": "2026-01-30"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "10:00",
+    "wave_m": 1.8,
+    "rip": "high",
+    "flag": "red_yellow",
+    "zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "t": "09:40",
+    "type": "water_rescue",
+    "r": [
+     "G1",
+     "G3"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I2",
+    "t": "10:30",
+    "type": "water_rescue",
+    "r": [
+     "G2",
+     "G3"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I3",
+    "t": "12:10",
+    "type": "water_rescue",
+    "r": [
+     "G1",
+     "G2"
+    ],
+    "out": "conveyed",
+    "aed": true,
+    "amb": "AMB-508"
+   },
+   {
+    "id": "I4",
+    "t": "14:20",
+    "type": "water_rescue",
+    "r": [
+     "G1",
+     "G3"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I5",
+    "t": "15:45",
+    "type": "water_rescue",
+    "r": [
+     "G2",
+     "G3"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I6",
+    "t": "11:00",
+    "type": "first_aid",
+    "r": [
+     "G3"
+    ],
+    "out": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jet_ski",
+    "unit": "JS1",
+    "out_from": "09:00",
+    "out_to": "12:00",
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 5,
+   "first_aid": 1,
+   "kit_defects": 1
+  }
+ },
+ "factors": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "conveyed",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": true,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 157,
+ "deciding": {
+  "two_guard_cover": "Every rescue has two rostered responders, but G2's qual expiry equals the shift date 2025-08-02, leaving cover contestable on G2's rescues I2, I3, I5.",
+  "totals_reconcile": "Rescues 5, first_aid 1 and kit_defects 1 match the itemised entries; dates all equal shift date. Slight doubt only from the boundary-dated qual.",
+  "next_step": "No missing items and sign-off present; the red_yellow flag with high rip is paired with zone_moved true, so mitigated. A conveyed and AED case would argue for review.",
+  "outcome_severity": "I3 outcome code conveyed with ambulance_ref AMB-508, but aed true, so 2 versus 3 is open.",
+  "kit_outage": "JS1 out 09:00-12:00 is exactly 180 minutes with no substitute, on the 2/3 boundary."
+ },
+ "request": "rec-F416-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00993
+}

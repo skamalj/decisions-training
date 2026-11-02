@@ -1,0 +1,139 @@
+{
+ "id": "F434-0002",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 4,
+   "riders_started": 118
+  },
+  "post": {
+   "km_marker": 48,
+   "post_type": "roundabout",
+   "on_post_from": "10:30",
+   "off_post_at": "13:15:20",
+   "relief": [
+    {
+     "marshal_ref": "M3",
+     "signed_in": "10:30",
+     "signed_out": "13:15"
+    }
+   ]
+  },
+  "incidents": [
+   {
+    "time": "12:11",
+    "km": 48,
+    "type": "fall",
+    "bibs": [
+     22
+    ],
+    "medic_called": true,
+    "medic_arrival_min": 21.6,
+    "rider_status": "abandoned",
+    "escort_present": true
+   }
+  ],
+  "control_record": {
+   "incident_log": [
+    {
+     "time": "12:11",
+     "km": 48,
+     "type": "fall",
+     "bibs": [
+      22
+     ]
+    }
+   ],
+   "medical_handovers": [
+    {
+     "bib": 22,
+     "km": 48,
+     "destination": "race_medical_tent"
+    }
+   ],
+   "abandonments": [
+    22
+   ]
+  },
+  "sweep": {
+   "passed_at": "13:16",
+   "last_rider_bib": 118
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "abandoned",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 21.63,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "abandoned",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 21.63,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "file",
+   "second": "hold_confirm",
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "rider_fall",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "coverage_held": "Relief entry signed out 13:15 and off_post_at 13:15:20 are both before sweep passed_at 13:16; the post left before the sweep passed.",
+  "next_step": "Post and control records match and the handover is to the tent, so file is defensible; the 21.6 minute medic arrival and the early departure could justify hold_confirm.",
+  "incident_class": "Fall of bib 22 in both post incidents and control log, with no vehicle, person or animal entry.",
+  "reversal_time": "Abandonment of the race stage cannot be undone, so level 3 leads, though a reader could place it lower.",
+  "consequence_severity": "Rider abandoned with medic attendance and tent handover points to level 2; level 1 is arguable because the rider walked away and there was no transfer."
+ },
+ "request": "rec-F434-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006875
+}

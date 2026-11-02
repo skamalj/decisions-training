@@ -1,0 +1,169 @@
+{
+ "id": "F412-0011",
+ "family": "F412",
+ "state": {
+  "premises": {
+   "ref": "P-1042",
+   "type": "cafe"
+  },
+  "inspection": {
+   "date": "2024-02-02",
+   "contraventions": [
+    {
+     "ref": "C1",
+     "area": "FAB",
+     "due_date": "2024-03-01"
+    },
+    {
+     "ref": "C2",
+     "area": "TMP",
+     "due_date": "2024-03-01"
+    },
+    {
+     "ref": "C3",
+     "area": "REC",
+     "due_date": "2024-03-01"
+    }
+   ]
+  },
+  "revisit": {
+   "date": "2024-05-01",
+   "items": [
+    {
+     "ref": "C1",
+     "status": "remedied"
+    },
+    {
+     "ref": "C2",
+     "status": "part_remedied"
+    },
+    {
+     "ref": "C3",
+     "status": "remedied"
+    }
+   ],
+   "officer_note": "Fridge repaired; probe readings still inconsistent."
+  },
+  "correspondence": {
+   "extensions": [
+    {
+     "ref": "C2",
+     "new_date": "2024-03-20",
+     "agreed": null,
+     "note": "agreed by phone"
+    }
+   ],
+   "evidence": [
+    {
+     "ref": "C2",
+     "doc": "engineer job sheet",
+     "verified": false
+    }
+   ]
+  },
+  "history": {
+   "enforcement": [
+    {
+     "yr": 2020
+    },
+    {
+     "yr": 2021
+    },
+    {
+     "yr": 2022
+    },
+    {
+     "yr": 2023
+    }
+   ],
+   "complaints": [
+    {
+     "summary": "Diner alleged undercooked food; not substantiated.",
+     "outcome": "no action"
+    }
+   ],
+   "samples": []
+  }
+ },
+ "factors": {
+  "contravention_count": 3,
+  "resolution_share": "most_resolved",
+  "worst_open_area": "food_handling",
+  "food_handling_open_count": 1,
+  "cross_section_mismatch": "none",
+  "days_past_original_due": 61,
+  "extension_agreed": false,
+  "benign_explanation": true,
+  "operator_evidence": "submitted_partial",
+  "adverse_sample": false,
+  "complaint_since_inspection": "related_unsubstantiated",
+  "prior_enforcement_count": 4,
+  "boundary_case": true,
+  "reassuring_note_decoy": false
+ },
+ "factors_sampled": {
+  "contravention_count": 3,
+  "resolution_share": "most_resolved",
+  "worst_open_area": "fabric_cleaning",
+  "food_handling_open_count": 1,
+  "cross_section_mismatch": "none",
+  "days_past_original_due": -15,
+  "extension_agreed": true,
+  "benign_explanation": true,
+  "operator_evidence": "submitted_partial",
+  "adverse_sample": false,
+  "complaint_since_inspection": "related_unsubstantiated",
+  "prior_enforcement_count": 4,
+  "boundary_case": false,
+  "reassuring_note_decoy": false
+ },
+ "plan": {
+  "all_remedied": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "refer_lead",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "worst_hazard": {
+   "clarity": "clear",
+   "target": "no_open_item",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "overdue_extent": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "residual_risk": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "all_remedied": "C2 is part_remedied and its only evidence is an unverified job sheet, so not every item is remedied.",
+  "next_step": "Four prior enforcement entries show repeat failure, and C2 (TMP) is still open after a phone-only extension, which points to lead officer escalation.",
+  "worst_hazard": "C2 (TMP) is the only open item. The plan's no_open_item answer could not be reconciled with the open items needed for the other decisions.",
+  "overdue_extent": "C2 was due 2024-03-01 and the revisit was 2024-05-01, 61 days. The phone extension to 03-20 has agreed null; if accepted it gives 42 days, which is level 2.",
+  "residual_risk": "One TMP item is open with no adverse sample, which is level 2. It is only part_remedied, so level 1 is arguable."
+ },
+ "request": "rec-F412-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014951
+}

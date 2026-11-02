@@ -1,0 +1,138 @@
+{
+ "id": "F402-0034",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-7315",
+   "source": "first_contact",
+   "received": "2025-02-18",
+   "priority": "urgent",
+   "site": {
+    "part": "lumbar spine",
+    "side": "central"
+   },
+   "onset_date": "2023-09-20"
+  },
+  "patient": {
+   "mobility_aid": "none",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx_code": "lumbar_pain_recurrent",
+   "red_flags": [
+    "saddle_anaesthesia_bladder"
+   ],
+   "neuro_signs": {
+    "progression": "stable"
+   },
+   "function_index": 55,
+   "anticoagulant": false,
+   "weight_bearing": "full"
+  },
+  "gp_record": {
+   "meds": [
+    "warfarin"
+   ],
+   "falls_3m": 3,
+   "reviews": [
+    "2025-01-25 urgent"
+   ]
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-01-30",
+    "result": "no_sinister"
+   }
+  ],
+  "history": {
+   "episodes": [
+    {
+     "date": "2024-05-01"
+    },
+    {
+     "date": "2024-10-01"
+    }
+   ],
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "saddle_anaesthesia_bladder",
+  "red_flag_mitigated": true,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 73,
+  "function_index": 55.0,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 3,
+  "post_op_days": "none",
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "saddle_anaesthesia_bladder",
+  "red_flag_mitigated": true,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 73,
+  "function_index": 55.1,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 3,
+  "post_op_days": 22,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "book_amended",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "red_flag_unresolved": "Saddle/bladder flag, but MRI no_sinister after an urgent review; stable signs.",
+  "next_step": "clinical.anticoagulant false while GP meds list warfarin: book with corrected precautions and priority.",
+  "pathway": "Mitigated, stable simple lumbar pain, full weight-bearing, self-management already tried.",
+  "reversal_time": "Anticoagulant error or missed cauda equina could cause lasting harm; contested between months and permanent.",
+  "clinical_urgency": "Cleared red flag but warfarin and falls; split between two-week and six-week contact."
+ },
+ "request": "rec-F402-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004947
+}

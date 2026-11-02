@@ -1,0 +1,124 @@
+{
+ "id": "F434-0020",
+ "family": "F434",
+ "state": {
+  "post": {
+   "km_marker": 31,
+   "marshals_rostered": 3,
+   "marshals_signed_in": 2,
+   "on_post_from": "09:05",
+   "off_post_at": "11:50"
+  },
+  "incidents": [
+   {
+    "time": "10:40",
+    "km": 31,
+    "type": "fall",
+    "bibs": [
+     52
+    ],
+    "medic_called": true,
+    "medic_arrival_min": 9.4,
+    "rider_status": "transferred"
+   }
+  ],
+  "control_record": {
+   "incident_log": [
+    {
+     "time": "10:41",
+     "km": 31,
+     "type": "animal_on_course",
+     "bibs": [
+      52
+     ]
+    }
+   ],
+   "medical_handovers": [
+    {
+     "bib": 52,
+     "km": 31,
+     "destination": "race_medical_tent"
+    }
+   ]
+  },
+  "sweep": {
+   "passed_at": "11:44"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "type_mismatch",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "transferred",
+  "staffing_gap": "partial_roster",
+  "relief_swap_logged": false,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 9.4,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": 9.4,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "query_marshal",
+   "second": null,
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "balanced",
+   "target": "rider_fall",
+   "second": "course_intrusion",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "consequence_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "coverage_held": "Signed in 09:05 to 11:50, spanning sweep 11:44, but only 2 of 3 rostered marshals with no relief entry.",
+  "next_step": "Post logs a fall for bib 52 while control logs animal_on_course for the same bib and time; clerical mismatch the marshal can correct.",
+  "incident_class": "Post type is fall; control type for bib 52 is animal_on_course, so rider_fall and course_intrusion are both defensible.",
+  "reversal_time": "One medic-attended fall, transferred, with a handover to the tent, so days-scale recovery.",
+  "consequence_severity": "Post status is transferred but the handover destination is race_medical_tent, not a hospital, so level 2 or 3."
+ },
+ "request": "rec-F434-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008646
+}

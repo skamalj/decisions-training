@@ -1,0 +1,147 @@
+{
+ "id": "F410-0040",
+ "family": "F410",
+ "state": {
+  "application": {
+   "licence_no": "ML-6408",
+   "holder_ref": "H-9021",
+   "term_end": "2026-04-30",
+   "pitch_req": {
+    "width_m": 3.12
+   },
+   "commodities": [
+    "fabrics"
+   ],
+   "docs_pending": [
+    "pli_certificate"
+   ]
+  },
+  "licence_current": {
+   "holder_ref": "H-9021",
+   "pitch": {
+    "width_m": 3.0
+   },
+   "commodities": [
+    "fabrics"
+   ],
+   "conditions": {
+    "min_attendance_pct": 50
+   },
+   "variations": []
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-04-30",
+    "indemnity_gbp": 4950000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": null
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2026",
+     "amount_gbp": 500
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2026-01-08",
+     "amount_gbp": 241.78,
+     "method": "card"
+    }
+   ],
+   "payment_plan": null
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 28,
+   "complaints": [
+    {
+     "date": "2025-12-02",
+     "category": "parking",
+     "upheld": true,
+     "status": "open"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "indemnity_below_required",
+  "broker_confirmation_held": false,
+  "commodity_change": "none",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.12,
+  "variation_approved": false,
+  "fee_arrears_gbp": 258.22,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.56,
+  "absences_notified": false,
+  "complaint_profile": "upheld_open_non_safety",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 1
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "indemnity_below_required",
+  "broker_confirmation_held": false,
+  "commodity_change": "none",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.12,
+  "variation_approved": false,
+  "fee_arrears_gbp": 258.22,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.56,
+  "absences_notified": false,
+  "complaint_profile": "upheld_open_non_safety",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 3
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "renewal_disposition": {
+   "clarity": "contested",
+   "target": "grant",
+   "second": "defer",
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "clear",
+   "target": "desk_check",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 80,
+ "deciding": {
+  "pli_term_covered": "The indemnity of 4,950,000 is just under the required 5,000,000 and no broker confirmation is held. The cover dates run to term_end, and a pli_certificate is pending that might settle it.",
+  "renewal_disposition": "One document is pending, which supports defer, while the shortfall is small and the other issues are minor, which supports grant.",
+  "inspection_level": "Documents only need verifying. This is a non-food stall, the width delta of 0.12 is under the tolerance, and the complaint is a parking matter.",
+  "reversal_time": "A grant or hold on a non-food stall could be reversed within a day or within a week of administration, so level 0 and level 1 both fit.",
+  "discrepancy_count": "Two remain unresolved: the indemnity of 4,950,000 against the required 5,000,000, and arrears of 258.22 with no payment plan. Attendance of 56% meets the 50% minimum and the width is within tolerance."
+ },
+ "request": "rec-F410-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009793
+}

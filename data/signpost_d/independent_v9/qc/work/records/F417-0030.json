@@ -1,0 +1,146 @@
+{
+ "id": "F417-0030",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V-8810",
+   "type": "ketch",
+   "loa_m": 9.7,
+   "beam_m": 3.3,
+   "draught_m": 2.2,
+   "draught_src": "survey_certificate",
+   "home_port": "Dartmouth"
+  },
+  "berth": {
+   "id": "P7",
+   "max_loa_m": 10.0,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 3.32,
+   "waiver_ref": "W-118",
+   "waiver_expiry": "2025-12-31",
+   "waiver_note": "max 5 nights, no neap-tide departure"
+  },
+  "booking": {
+   "arrival": "2025-09-08",
+   "departure": "2025-09-12",
+   "nights": 4,
+   "next_on_berth": {
+    "arrival": "2025-09-20"
+   }
+  },
+  "documents": {
+   "survey": {
+    "date": "2021-03-15",
+    "loa_m": 10.38,
+    "draught_m": 2.3
+   },
+   "insurance_expiry": "2026-02-28",
+   "inspection_date": "2025-09-09",
+   "inspection_booked": true
+  },
+  "account": {
+   "dues_outstanding_gbp": 0,
+   "deposit_paid": true,
+   "plan_id": null,
+   "credit_balance_gbp": 120
+  },
+  "history": [
+   {
+    "date": "2022-07-01",
+    "berth": "P7",
+    "incidents": 1
+   },
+   {
+    "date": "2023-07-04",
+    "berth": "P7",
+    "incidents": 1
+   },
+   {
+    "date": "2024-07-02",
+    "berth": "P7",
+    "incidents": 0
+   },
+   {
+    "date": "2024-09-10",
+    "berth": "P2",
+    "incidents": 0
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 7.0,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 1.02,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 0,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 2,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 6.96,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 0.73,
+  "draught_source": "survey_certificate",
+  "insurance_status": "expires_during_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 765,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 2,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "allocate_with_conditions",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 165,
+ "deciding": {
+  "length_fits": "Survey loa 10.38 is over max_loa 10.0 and relies on the fender allowance and waiver W-118 rather than fitting the limit.",
+  "next_step": "Waiver W-118 carries stay and tide limits (max 5 nights, no neap-tide departure), so allocation proceeds under those conditions.",
+  "primary_issue": "Insurance is valid, dues are zero and inspection is booked within the stay; the length excess is covered by the waiver.",
+  "ukc_band": "Depth 3.32 minus survey draught 2.3 = 1.02, just above the 1 m boundary.",
+  "unresolved_count": "Declared loa 9.7 against surveyed 10.38 is a gap, but the waiver already acknowledges the dimension excess, so it may count as one or none."
+ },
+ "request": "rec-F417-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011897
+}

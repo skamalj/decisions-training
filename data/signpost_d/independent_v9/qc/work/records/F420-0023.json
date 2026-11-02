@@ -1,0 +1,153 @@
+{
+ "id": "F420-0023",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PAG20931",
+   "flt": "EK0782",
+   "pos": "21L",
+   "contour_max_cm": 160,
+   "tare_kg": 200,
+   "planned_gross_kg": 2000,
+   "straps_required": 6
+  },
+  "manifest_lines": [
+   {
+    "awb": "176-55014273",
+    "pcs": 10,
+    "weight_kg": 1000,
+    "shc": [
+     "RFL"
+    ],
+    "un_no": "1993",
+    "dg_class": "3"
+   },
+   {
+    "awb": "176-55018842",
+    "pcs": 4,
+    "weight_kg": 800,
+    "shc": [
+     "MAG"
+    ],
+    "un_no": "3480",
+    "dg_class": "9"
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2025-03-14T08:20:00Z",
+   "scale_id": "S-03",
+   "scale_gross_kg": 1853,
+   "max_height_cm": 160,
+   "pcs_counted": {
+    "176-55014273": 9,
+    "176-55018842": 4
+   },
+   "straps_fitted": 6,
+   "net_fitted": null
+  },
+  "dg_notoc": [
+   {
+    "awb": "176-55014273",
+    "un_no": "1993",
+    "dg_class": "3",
+    "pcs": 9
+   },
+   {
+    "awb": "176-55018842",
+    "un_no": "3480",
+    "dg_class": "9",
+    "pcs": 4
+   }
+  ],
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "176-55014723",
+     "pcs_this_flight": 9
+    }
+   ]
+  },
+  "checks_log": {
+   "scale_cal_due": "2025-03-01",
+   "reweigh": {
+    "scale": "S-07",
+    "kg": 2019
+   },
+   "rebuilds": []
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": "0.95 (reweigh 2019 on calibrated scale; build scale 1853 overdue)",
+  "piece_count_gap": 1,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "at_limit",
+  "contour_waiver": false,
+  "dg_state": "dg_compatible",
+  "notoc_match": "matched",
+  "securing_state": "net_not_logged",
+  "scale_cal_overdue": true,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 258,
+  "prior_rebuilds": 1
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -7.36,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "over_more_than_5cm",
+  "contour_waiver": false,
+  "dg_state": "dg_segregation_conflict",
+  "notoc_match": "matched",
+  "securing_state": "two_or_more_straps_short",
+  "scale_cal_overdue": true,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "dest_code_differs",
+  "minutes_to_cutoff": 258,
+  "prior_rebuilds": 1
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "hold",
+   "second": "rebuild",
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "balanced",
+   "target": "none",
+   "second": "dangerous_goods",
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 126,
+ "deciding": {
+  "pieces_reconciled": "176-55014273 counted 9 of 10; the part shipment names 176-55014723 (transposed digits), so cover is doubtful but plausible.",
+  "disposition": "net_fitted null is one outstanding confirmation (hold), but height exactly at 160 limit and the piece gap could push toward rebuild.",
+  "worst_discrepancy": "Classes 3 and 9 with NOTOC pcs matching suggest none, yet DG is on board with a counted-9 line and the transposed AWB leaves doubt.",
+  "weight_deviation": "Reweigh 2019 vs planned 2000 (200+1000+800) is 0.95%, next to the 1% boundary; reweigh supersedes the overdue S-03 reading.",
+  "rework_extent": "Net not logged gives Minor, but height exactly at the 160 limit and the piece gap leave Partial plausible."
+ },
+ "request": "rec-F420-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011678
+}

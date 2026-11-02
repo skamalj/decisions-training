@@ -1,0 +1,167 @@
+{
+ "id": "F422-0027",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "delivered_at": "2025-01-02T10:00",
+   "received_at": "2025-01-25T09:00",
+   "review_date": "2025-02-10",
+   "lines": [
+    {
+     "gtin": "G1",
+     "qty_claimed": 60
+    },
+    {
+     "gtin": "G2",
+     "qty_claimed": 20
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "lines": [
+    {
+     "gtin": "G1",
+     "batch": "A12",
+     "expiry": "2025-10-31",
+     "qty_dispatched": 60
+    },
+    {
+     "gtin": "G2",
+     "batch": "B07",
+     "expiry": "2025-10-31",
+     "qty_dispatched": 20
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G1",
+     "batch": "A12",
+     "expiry": "2025-10-31",
+     "qty_counted": 52,
+     "packs_damaged": 0,
+     "seals_intact": 52
+    },
+    {
+     "gtin": "G2",
+     "batch": "B09",
+     "expiry": "2025-10-31",
+     "qty_counted": 20,
+     "packs_damaged": 14,
+     "seals_intact": 6
+    }
+   ],
+   "uid_scans": []
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": "L3",
+   "logger_start": "2025-01-02T09:00",
+   "logger_end": "2025-01-25T10:00",
+   "min_c": 14.8,
+   "max_c": 31.5,
+   "minutes_out_of_range": 283,
+   "stability_ref": {
+    "max_hours": 2,
+    "max_c": 30
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-12-01",
+   "declaration_received": true
+  },
+  "quarantine_control": {
+   "hold_limit_days": 14,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-02-25"
+   },
+   "max_days_out_of_control": 14,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 283,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "one_foreign_batch",
+  "count_discrepancy_packs": 8,
+  "damaged_pack_fraction": 0.2,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 23,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 15,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 8
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 283,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "one_foreign_batch",
+  "count_discrepancy_packs": 8,
+  "damaged_pack_fraction": 0.2,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 23,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": -2,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 8
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_stock",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "storage_maintained": "max_c 31.5 over the 25C limit for 283 minutes, beyond the stability_ref allowance of 2 hours and 30C.",
+  "batch_traceable": "Counted G2 batch B09 is not on dispatch, which lists only B07 for G2.",
+  "next_step": "One G2 batch is foreign and the excursion exceeds the allowance, so a plain release is not supported; a partial or whole-return destruction decision fits the record better than the plan's release_stock.",
+  "resaleable_share": "G1 has 52 sound packs of 72 counted, but the whole return had an excursion; the share is uncertain between half-plus and none.",
+  "disposition_urgency": "Original limit 2025-02-08 has passed but the approved extension runs to 2025-02-25, 15 days after review."
+ },
+ "request": "rec-F422-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015173
+}

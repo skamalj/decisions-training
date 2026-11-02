@@ -1,0 +1,125 @@
+{
+ "id": "F431-0014",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "seal_state": "intact",
+   "seal_checked_date": "2024-01-10"
+  },
+  "period_read": {
+   "read_date": "2024-03-01",
+   "reg_kwh": 5000,
+   "src_code": "CUS",
+   "photo_ref": "IMG-12"
+  },
+  "history": [
+   {
+    "date": "2024-02-01",
+    "reg_kwh": 5000,
+    "src_code": "AMR",
+    "same_period_ly_kwh": 300
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW",
+    "E_TPROBE",
+    "E_AIR"
+   ],
+   "flow_temp_c": 68,
+   "return_temp_c": 45
+  },
+  "site_context": {
+   "hdd_current": 134,
+   "hdd_prior_year": 100,
+   "occupancy": "changed",
+   "tenancy_change_date": "2024-02-12",
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "closed",
+     "date": "2023-11-05"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 0.0,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.34,
+  "diagnostic_error_count": 3,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 0.03,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.34,
+  "diagnostic_error_count": 3,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_reading",
+   "second": "escalate_engineer",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "meter_fault": "Three active errors (E_FLOW, E_TPROBE, E_AIR) with zero register movement suggest a device fault; the intact seal and tenancy change give some doubt.",
+  "billable_actual": "Register is identical to the previous read (5000) over a month, with expected about 402 kWh and no explanation, so the read is not a valid actual.",
+  "next_step": "Photo-supported customer read is in sequence (accept), but zero consumption with three error codes could justify an engineer visit.",
+  "staff_effort": "Possible meter replacement, tenancy check and rebilling could take days; the span of one to five or more than five days is arguable.",
+  "consumption_deviation": "Consumption is 0 against expected 300 x 134/100 = 402, a 100% shortfall right on the level 2/3 boundary."
+ },
+ "request": "rec-F431-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010463
+}

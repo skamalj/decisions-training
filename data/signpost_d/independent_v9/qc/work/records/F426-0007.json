@@ -1,0 +1,167 @@
+{
+ "id": "F426-0007",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B22",
+   "crop": "nectarine",
+   "planted_area_ha": 10,
+   "lot_id": "L450"
+  },
+  "applications": [
+   {
+    "app_id": "A1",
+    "date": "2024-01-05",
+    "product_code": "FNG7",
+    "qty_applied": 18,
+    "qty_unit": "kg",
+    "area_treated_ha": 10
+   },
+   {
+    "app_id": "A2",
+    "date": "2024-01-19",
+    "product_code": "FNG7",
+    "qty_applied": 18,
+    "qty_unit": "kg",
+    "area_treated_ha": 10
+   },
+   {
+    "app_id": "A3",
+    "date": "2024-02-02",
+    "product_code": "FNG7",
+    "qty_applied": 18,
+    "qty_unit": "kg",
+    "area_treated_ha": 10
+   },
+   {
+    "app_id": "A4",
+    "date": "2024-01-12",
+    "product_code": "MIT50",
+    "qty_applied": 8,
+    "qty_unit": "L",
+    "area_treated_ha": 10
+   },
+   {
+    "app_id": "A5",
+    "date": "2024-02-09",
+    "product_code": "MIT50",
+    "qty_applied": 11.8,
+    "qty_unit": "mL",
+    "area_treated_ha": 10
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "FNG7",
+    "max_rate_per_ha": 2.0,
+    "rate_unit": "kg",
+    "phi_days": 14,
+    "max_apps_per_season": 4,
+    "approved_crops": [
+     "nectarine"
+    ]
+   },
+   {
+    "product_code": "MIT50",
+    "max_rate_per_ha": 1.0,
+    "rate_unit": "L",
+    "phi_days": 21,
+    "max_apps_per_season": 3,
+    "approved_crops": [
+     "nectarine"
+    ]
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "SP-3",
+   "sprayer_type": "airblast"
+  },
+  "harvest": {
+   "lot_id": "L450",
+   "block_id": "B22",
+   "first_pick_date": "2024-03-05",
+   "residue_test": {
+    "sampled": false
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "over_10_25",
+  "partial_block_spray": false,
+  "clerical_mismatch": "unit_ml_vs_l",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "missing",
+  "missing_item": "residue_not_sampled",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 5,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "breached_long",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "unit_ml_vs_l",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "missing",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 5,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_and_test",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "clerical_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 88,
+ "deciding": {
+  "phi_cleared": "Last FNG7 app 2024-02-02 is 32 days before first pick against phi 14, and last MIT50 app 2024-02-09 is 25 days before pick against phi 21.",
+  "next_step": "Residue_test.sampled is false, the sprayer has no calibration dates, and A5 shows an odd unit/magnitude, so holding and sampling is favoured over a bare evidence request.",
+  "finding_class": "A5 qty_applied 11.8 with unit mL on a 10 ha block is an obvious unit slip against MIT50's L rate unit; dates and other fields agree.",
+  "reversal_time": "A hold plus sampling can be lifted within a day if the lab turns fast, or could take several days, so levels 0 and 1 are both plausible.",
+  "rate_overrun": "If A5 is read as 11.8 L over 10 ha, the rate is 1.18 L/ha against the 1.0 maximum, about 18% over; the other rates are within limits."
+ },
+ "request": "rec-F426-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01283
+}

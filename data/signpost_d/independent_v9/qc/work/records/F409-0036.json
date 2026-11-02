@@ -1,0 +1,142 @@
+{
+ "id": "F409-0036",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "D. Hale",
+   "submitted_on": "2024-06-10",
+   "app_type": "new",
+   "message": "Can I also buy visitor vouchers?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-03-06",
+     "address_line": "9 Pine Ct",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": null,
+     "address_line": null,
+     "verified": null
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "AB12CDE",
+   "keeper_name": "K. Moss",
+   "supporting_letters": []
+  },
+  "request": {
+   "zone_code": "Z4",
+   "address": "9 Pine Ct",
+   "plate_entered": "AB12CDE",
+   "duration_months": 12
+  },
+  "account_history": {
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "live_permits": [
+    "P-201",
+    "P-388"
+   ],
+   "exceptions": [],
+   "pcns": [
+    {
+     "issued_on": "2024-01-09",
+     "contravention_code": "01",
+     "status": "open"
+    },
+    {
+     "issued_on": "2024-02-14",
+     "contravention_code": "01",
+     "status": "open"
+    },
+    {
+     "issued_on": "2024-04-02",
+     "contravention_code": "12",
+     "status": "paid"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 96,
+  "docs_missing": 2,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 96,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "refuse",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "household_cap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "residency_shown": "The only residence document was issued 96 days before submission, over the 90-day limit, so it counts as unverified even though the address matches.",
+  "disposition": "Two live permits at the address equal the cap of 2 and there is no exception, which fails a stated eligibility rule. The stale proof adds some doubt about hold versus refuse.",
+  "main_issue": "live_permits has 2 entries against max_per_household 2 with an empty exceptions list, and there is no cloned permit record, so household_cap decides.",
+  "misuse_strength": "The keeper name differs from the applicant with no supporting letter (one indicator). Three uncancelled PCNs, one of them paid, sit right on the threshold of a second indicator, so level 1 or 2 are both defensible.",
+  "document_gaps": "The council tax bill is stale and the id_card is unverified, giving two gaps. Whether a tenancy agreement is also required is unclear, so level 3 is a minor doubt."
+ },
+ "request": "rec-F409-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011907
+}

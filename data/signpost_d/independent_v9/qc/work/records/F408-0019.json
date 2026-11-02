@@ -1,0 +1,125 @@
+{
+ "id": "F408-0019",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "M404",
+   "uprn": 4004,
+   "stream": "refuse",
+   "claimed": "2025-06-03",
+   "logged_at": "2025-06-03T16:10",
+   "photo": true
+  },
+  "property": {
+   "uprn": 4004,
+   "assisted": false
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled": "2025-06-03",
+   "week": "B"
+  },
+  "round_log": {
+   "status": "complete",
+   "completed_at": "2025-06-03T15:40",
+   "disruption": "weather_suspension",
+   "catch_up": "2025-06-05",
+   "sweep_collected_at": "2025-06-03T18:05",
+   "stops": [
+    {
+     "uprn": 4004,
+     "exception_code": "access_blocked",
+     "photo_ref": null,
+     "gps_stop": false
+    }
+   ]
+  },
+  "history": []
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "access_blocked",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "weather_suspension",
+  "already_collected": true,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 0,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "access_blocked",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "weather_suspension",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 4,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 40,
+ "deciding": {
+  "crew_missed": "access_blocked has no photo and gps_stop false, so it is unsupported; the weather suspension adds a little doubt.",
+  "report_matches": "Stream and date match, logged 30 minutes after round completion, close to the completion time.",
+  "next_step": "sweep_collected_at 18:05 is later than logged_at 16:10, so the bin has been emptied and the case can close.",
+  "return_urgency": "The sweep collection after the report means no return is needed.",
+  "repeat_failures": "History is empty, so there are no upheld misses in the window."
+ },
+ "request": "rec-F408-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009575
+}

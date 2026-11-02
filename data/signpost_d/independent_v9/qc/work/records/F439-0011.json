@@ -1,0 +1,124 @@
+{
+ "id": "F439-0011",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T-48213",
+   "start": "09:10",
+   "end": "09:55",
+   "conditions": "heavy rain, standing water"
+  },
+  "candidate": {
+   "ref": "C77",
+   "attempt": 2,
+   "id_check": null
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "junctions",
+     "driving": 2,
+     "serious": 0,
+     "dangerous": 0
+    },
+    {
+     "item": "mirrors",
+     "driving": 1,
+     "serious": 0,
+     "dangerous": 0
+    }
+   ],
+   "driving_fault_total": 3
+  },
+  "outcome": {
+   "result": "pass",
+   "intervention": false,
+   "debrief": true,
+   "examiner_note": "Failed to stop at red light; candidate unsafe.",
+   "examiner_signoff_at": "10:05"
+  },
+  "incident": null,
+  "review_trail": {
+   "upheld_complaints_12m": 1,
+   "edits": []
+  }
+ },
+ "factors": {
+  "fault_profile": "clear_pass",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "id_check_null",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": false,
+  "adverse_conditions": true,
+  "note_alignment": "contradicts_sheet",
+  "examiner_complaints_12m": 1,
+  "post_submission_edit": "no_edit"
+ },
+ "factors_sampled": {
+  "fault_profile": "clear_pass",
+  "result_mismatch": true,
+  "tally_error": false,
+  "documentation_gap": "id_check_null",
+  "intervention_recorded": false,
+  "intervention_explained": true,
+  "continued_after_collision": false,
+  "senior_countersigned": false,
+  "adverse_conditions": true,
+  "note_alignment": "contradicts_sheet",
+  "examiner_complaints_12m": 1,
+  "post_submission_edit": "no_edit"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_complete": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "amend_record",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "issue_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 102,
+ "deciding": {
+  "result_supported": "Sheet shows 3 driving faults and no serious, so pass fits; but the note describes a red-light failure, which leaves doubt.",
+  "report_complete": "candidate.id_check is null, though all other sections and sign-off are present and ordered; the gap is modest.",
+  "disposition": "The note contradicts the clean sheet and the ID check is blank; both look like clerical errors fixable from the report, so amend.",
+  "staff_effort": "A note correction and ID confirmation could take under an hour, or a bit more if the examiner must be consulted.",
+  "issue_severity": "Note alleges a red-light breach, which would be a safety breach, but the sheet shows none; either a breach or a result-changing discrepancy."
+ },
+ "request": "rec-F439-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005604
+}

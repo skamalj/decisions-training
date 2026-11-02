@@ -1,0 +1,143 @@
+{
+ "id": "F437-0029",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v5",
+   "glossary_version": "g3",
+   "target_locale": "fr-FR",
+   "due_at": "2025-06-12T09:00",
+   "workflow": [
+    {
+     "step": "translate",
+     "done_at": "2025-06-10"
+    },
+    {
+     "step": "dtp",
+     "done_at": "2025-06-11"
+    }
+   ]
+  },
+  "source": {
+   "version": "v5",
+   "segment_count": 240,
+   "word_count": 3100
+  },
+  "deliverable": {
+   "built_from_version": "v5",
+   "target_locale": "fr-FR",
+   "segments_translated": 212,
+   "word_count": 2740,
+   "glossary_version_used": "g3",
+   "delivered_at": "2025-06-12T07:00"
+  },
+  "qa_report": {
+   "run_at": "2025-06-11",
+   "flags": 21,
+   "false_positive_marked": 8,
+   "number_mismatches": [
+    {
+     "src": "2,500",
+     "tgt": "2,050"
+    },
+    {
+     "src": "40",
+     "tgt": "14"
+    },
+    {
+     "src": "7.5",
+     "tgt": "75"
+    }
+   ],
+   "unresolved": {
+    "minor": 1,
+    "major": 2
+   }
+  },
+  "review": null,
+  "history": {
+   "revision_rounds": [
+    "2025-06-03",
+    "2025-06-07"
+   ],
+   "reassignments": 0
+  }
+ },
+ "factors": {
+  "scope_mismatch": "missing_segments",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "section_missing",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.38,
+  "number_mismatch_count": 3,
+  "deadline_slack_hours": 2,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "section_missing",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.38,
+  "number_mismatch_count": 3,
+  "deadline_slack_hours": 2,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_for_fix",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 117,
+ "deciding": {
+  "scope_matches": "source segment_count is 240 but segments_translated is 212, and word_count is 3100 against 2740. That is a material gap with no repetitions to explain it.",
+  "reviewed_in_time": "review is null, so no sign-off is shown. It may simply not have been recorded, which leaves some doubt.",
+  "next_step": "Missing segments and 2 unresolved majors are fixable, and the job was delivered 2 hours before the 09:00 deadline. It should go back to the translator.",
+  "open_severity": "qa unresolved shows 2 major and 1 minor with no critical. The number mismatches might be serious but are not classified.",
+  "parties_needed": "The translator must complete the segments and fix the numbers, and a reviewer must then check them. A PM or DTP person may also be needed, which makes it two or three people."
+ },
+ "request": "rec-F437-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008311
+}

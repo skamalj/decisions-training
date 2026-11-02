@@ -1,0 +1,120 @@
+{
+ "id": "F428-0038",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "RD-22",
+   "gate_type": "radial",
+   "rated_closure_s": 180,
+   "seal_type": "music_note"
+  },
+  "inspection": {
+   "asset_id": "RD-22",
+   "insp_date": "2025-06-12",
+   "closure_test": {
+    "performed": false,
+    "test_date": null,
+    "closure_s": null,
+    "leakage_l_min": null,
+    "result": null
+   }
+  },
+  "defects": [],
+  "maintenance": {
+   "last_service": "2025-02-01"
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": false
+  }
+ },
+ "factors": {
+  "gate_type": "radial",
+  "closure_time_ratio": 1.0,
+  "max_defect_grade": 0,
+  "dominant_defect_component": "none",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "not_performed",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "none",
+  "days_to_forecast_peak": 21,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "radial",
+  "closure_time_ratio": 1.0,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "none",
+  "mismatch_count": 2,
+  "mismatch_location": "seal_type",
+  "test_status": "not_performed",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 21,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 41,
+ "deciding": {
+  "closure_test_valid": "closure_test performed false with null timings and result.",
+  "next_step": "No defects, no alert, in service; only the missing test gives slight doubt over sign-off.",
+  "defect_class": "defects list is empty.",
+  "section_discrepancies": "asset_id matches and no seal defect or other cross-section values differ.",
+  "flood_risk": "No defects, in service, no flood alert."
+ },
+ "request": "rec-F428-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005562
+}

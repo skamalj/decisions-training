@@ -1,0 +1,148 @@
+{
+ "id": "F403-0046",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-2291",
+   "yr": 4,
+   "school": "S114",
+   "declared_allergens": [
+    "egg",
+    "milk"
+   ],
+   "auto_injector": false,
+   "plan_start": "2025-02-17"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2024-11-05",
+   "expires": "2026-11-05",
+   "allergens": [
+    "egg",
+    "milk"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-02-03",
+   "cycle_weeks": 3,
+   "dishes": [
+    {
+     "dish": "Quiche",
+     "contains": [
+      "egg"
+     ],
+     "recipe_version_date": "2025-01-20",
+     "substitute": "egg-free flan",
+     "spec_checked_on": "2025-02-01"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "prep_area": "allergen bench",
+   "segregated_equipment": true,
+   "trained_staff": 3,
+   "trained_on": [
+    "2024-09-02",
+    "2024-09-02",
+    "2024-10-14"
+   ],
+   "cleaning_log_complete": true,
+   "exceptions": []
+  },
+  "history": {
+   "review_date": "2025-03-10",
+   "packed_lunch_until": null,
+   "incidents": [
+    {
+     "date": "2025-02-12",
+     "dish": "Custard tart",
+     "contains": [
+      "milk"
+     ],
+     "note": "near miss at hatch"
+    }
+   ],
+   "messages": [
+    "Cook: stop everything, milk is in everything here!",
+    "Parent: still sending a packed lunch this week."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 2,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": -21,
+  "packed_lunch_interim": false,
+  "note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 2,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "shared_equipment",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 29,
+  "packed_lunch_interim": false,
+  "note_tone": "alarmed"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "balanced",
+   "target": "menu_gap",
+   "second": "no_gap",
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 102,
+ "deciding": {
+  "evidence_allergens_covered": "Egg has a substituted dish, but milk is declared and in the evidence with no dish or substitution mapped; unclear whether none is needed.",
+  "next_step": "Evidence current, the only listed dish is substituted with spec checked, and all kitchen controls are verified, so release.",
+  "first_gap_stage": "Nothing is unsubstituted, but the mapping lists no milk dish, so a menu gap versus no gap is open.",
+  "exposure_proximity": "The milk near-miss dish (2025-02-12) predates plan_start 2025-02-17, and the mapping has no milk entry; reviewers may read Open or Reached.",
+  "meal_urgency": "plan_start is 3 weeks before review_date with no packed_lunch_until, but the parent says a packed lunch is still sent this week; already eating or next day."
+ },
+ "request": "rec-F403-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.0122
+}

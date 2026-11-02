@@ -1,0 +1,130 @@
+{
+ "id": "F404-0040",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "G1",
+   "date": "2025-09-09",
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty"
+  },
+  "children": {
+   "booked": 8,
+   "slots": [
+    {
+     "t": "15:45",
+     "signed_in": 9
+    },
+    {
+     "t": "16:30",
+     "signed_in": 9
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S301",
+    "end": "18:00"
+   },
+   {
+    "id": "S302",
+    "end": "17:00"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S301",
+    "out": "18:00"
+   },
+   {
+    "id": "S302",
+    "out": "15:46"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F09",
+    "from": "15:46",
+    "to": "17:00",
+    "room": "G1",
+    "cosign": null
+   }
+  ]
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 9,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 74,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 3
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 11,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 74,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 3
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "below_ratio": "S302 left at 15:46 against a 17:00 rota end, leaving 1 staff for 9 children (need 2); the floater entry for G1 covers 15:46-17:00 but has cosign null, so it holds the answer in balance.",
+  "disposition": "Outcome rests on the single missing countersignature on F09's cover entry.",
+  "primary_cause": "Cover is logged for the room and matches the 74-minute window, so apart from the early leaver there is no cause beyond the paperwork; the overrun of 1 child is minor.",
+  "shortfall_duration": "With F09 counted, spanning 15:46-17:00 exactly, there is no uncovered time, so level 0.",
+  "breach_severity": "9 children against one eligible adult at 1:8 leaves exactly 1 child beyond cover if the floater is disregarded."
+ },
+ "request": "rec-F404-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014659
+}

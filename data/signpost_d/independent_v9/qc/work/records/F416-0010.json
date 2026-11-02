@@ -1,0 +1,173 @@
+{
+ "id": "F416-0010",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "E21",
+   "date": "2025-09-03",
+   "signoff": "G40 16:10"
+  },
+  "roster": [
+   {
+    "id": "G40",
+    "on": "08:00",
+    "off": "16:00",
+    "qual": "2026-04-01",
+    "home": "E21"
+   },
+   {
+    "id": "G41",
+    "on": "08:00",
+    "off": "16:00",
+    "qual": "2026-01-15",
+    "home": "E21"
+   },
+   {
+    "id": "G52",
+    "on": "08:00",
+    "off": "16:00",
+    "qual": "2025-12-20",
+    "home": "E19"
+   }
+  ],
+  "incidents": [
+   {
+    "type": "water_rescue",
+    "time": "09:30",
+    "resp": [
+     "G40",
+     "G41"
+    ],
+    "out": "released"
+   },
+   {
+    "type": "water_rescue",
+    "time": "11:10",
+    "resp": [
+     "G41",
+     "G52"
+    ],
+    "out": "released"
+   },
+   {
+    "type": "water_rescue",
+    "time": "13:40",
+    "resp": [
+     "G40",
+     "G52"
+    ],
+    "out": "released"
+   },
+   {
+    "type": "water_rescue",
+    "time": "16:00",
+    "resp": [
+     "G40",
+     "G41"
+    ],
+    "out": "gp_advised",
+    "amb": "A-55"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jetski",
+    "out_from": "12:00",
+    "out_to": "15:02",
+    "sub": null
+   },
+   {
+    "item": "radio",
+    "out_from": null,
+    "out_to": null,
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 4,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "check_sheet_ref": "CS-12"
+  }
+ },
+ "factors": {
+  "rescue_count": 4,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "gp_advised with ambulance_ref present",
+  "kit_gap_band": "over_180 (182 min)",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 4,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "kit_defect_unlisted",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "accept_log",
+   "second": "amend_and_file",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "two_guard_cover": "Every rescue lists two rostered responders with qual dates after the shift date; G52 is mutual aid from E19, in date. The last rescue at 16:00 equals the roster off time, leaving slight doubt.",
+  "totals_reconcile": "Rescues 4 and kit_defects 1 match the itemised entries, but the radio entry has null out_from and nothing explains its inclusion, so a recount is arguable.",
+  "next_step": "The log is complete and signed, with the only oddities being the radio entry with no out time and the 182 min unsubstituted jetski outage; filing as is and a clerical amendment are both defensible.",
+  "outcome_severity": "The last rescue is coded gp_advised but has ambulance ref A-55, balancing referred against conveyed.",
+  "kit_outage": "The jetski was out 12:00 to 15:02 (182 min) with no substitute, which is only just over the 180 min line."
+ },
+ "request": "rec-F416-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014231
+}

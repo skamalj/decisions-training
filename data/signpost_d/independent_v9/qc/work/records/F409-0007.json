@@ -1,0 +1,142 @@
+{
+ "id": "F409-0007",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A2045",
+   "submitted_on": "2024-06-03",
+   "app_type": "new",
+   "message": "Can I buy visitor vouchers too?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-03-07",
+     "address_line": "9 Dale Rd",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "verified": null
+    },
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2024-05-02",
+     "address_line": "9 Dale Rd",
+     "verified": false
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "LM70 ABC",
+   "supporting_letters": [
+    {
+     "type": "lease_agreement",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "address": "9 Dale Rd",
+   "plate_entered": "LM70 ABC"
+  },
+  "account_history": {
+   "live_permits": [],
+   "past_permits": [
+    {
+     "status": "seized",
+     "seize_reason": "altered expiry date"
+    }
+   ],
+   "pcns": [
+    "01 cancelled",
+    "01 cancelled",
+    "12 cancelled",
+    "12 cancelled",
+    "01 cancelled",
+    "05 cancelled"
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 88,
+  "docs_missing": 2,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 6,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 88,
+  "docs_missing": 3,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 6,
+  "pcns_cancelled": true,
+  "date_order_anomaly": true,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "approve_temporary",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "residency_shown": "Council tax bill verified true with exact address, issued 88 days before submission, just inside the 90-day limit.",
+  "disposition": "Residency proven but id_card verified null and utility_bill verified false, so documents are outstanding and a time-limited permit fits.",
+  "main_issue": "Address, keeper letter and plate all line up and household count is 0; only the non-residency documents are outstanding.",
+  "misuse_strength": "Past permit seized with reason 'altered expiry date'; the six PCNs are all cancelled and do not count.",
+  "document_gaps": "id_card verified null and utility_bill verified false give two unverified documents."
+ },
+ "request": "rec-F409-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014286
+}

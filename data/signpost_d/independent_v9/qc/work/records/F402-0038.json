@@ -1,0 +1,124 @@
+{
+ "id": "F402-0038",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-3377",
+   "source": "GP",
+   "received": "2025-05-12",
+   "priority": "routine",
+   "site": {
+    "part": "lumbar spine",
+    "side": "B"
+   },
+   "onset": "2023-09-18"
+  },
+  "patient": {
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx": "M54.5",
+   "red_flags": [
+    "cancer_history_new_spinal_pain"
+   ],
+   "neuro_signs": {
+    "progression": "stable"
+   },
+   "function_index": 89.99
+  },
+  "gp_record": {
+   "first_presented": "2023-10-09",
+   "reviews": []
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-05-05",
+    "result": "pending"
+   }
+  ],
+  "history": {
+   "episodes": 3,
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "imaging_report",
+  "condition_group": "non_physio_surgical",
+  "symptom_duration_weeks": 85,
+  "function_index": 89.99,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "routine",
+  "falls_last_3m": 5,
+  "post_op_days": 84,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": true,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "imaging_report",
+  "condition_group": "non_physio_surgical",
+  "symptom_duration_weeks": 85,
+  "function_index": 89.99,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "routine",
+  "falls_last_3m": 5,
+  "post_op_days": 84,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "book_amended",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "community_msk",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 82,
+ "deciding": {
+  "red_flag_unresolved": "Cancer-history spinal pain flag; the only MRI result is pending and no urgent review follows.",
+  "next_step": "Imaging report is not yet back and the priority is routine, so book with amended priority and precautions.",
+  "pathway": "Pain is mechanical, function is high and no neuro progression, so community MSK, though the flag creates some doubt.",
+  "reversal_time": "Delay to a missed spinal cause would take weeks to months to undo.",
+  "clinical_urgency": "Cancer history with new spinal pain and a pending scan suggests medical review soon, though stable neuro signs add doubt."
+ },
+ "request": "rec-F402-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007313
+}

@@ -1,0 +1,140 @@
+{
+ "id": "F438-0044",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E4408",
+   "los": 4,
+   "specialty": "general surgery"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "K35.3"
+   },
+   "comorbidities": [
+    "E66.9",
+    "I10"
+   ],
+   "theatre_log": [
+    {
+     "proc": "H01.1",
+     "date": "2024-05-11"
+    }
+   ],
+   "documents_present": {
+    "discharge_summary": true,
+    "operation_note": true,
+    "pathology_report": false
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "K35.8"
+   },
+   "secondary_dx": [
+    "I10",
+    "E66.9",
+    "E78.5"
+   ],
+   "procedures": [
+    {
+     "code": "H01.1",
+     "date": "2024-05-11"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "FD01C",
+   "hrg_regrouped": "FD01C",
+   "tariff_submitted": 3120,
+   "tariff_regrouped": 3120,
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "audit_context": {
+   "local_conventions_applied": [],
+   "queries": []
+  },
+  "coder_history": {
+   "prior_audits": 7,
+   "error_rate": 0.18,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "pathology_report",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.18,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.18,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_records",
+   "second": "accept_as_coded",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 101,
+ "deciding": {
+  "primary_supported": "Coded K35.8 differs from documented principal K35.3 and no convention or query supports it.",
+  "hrg_shift": "hrg_submitted and hrg_regrouped are both FD01C with equal tariffs; the missing pathology report leaves slight doubt.",
+  "next_step": "pathology_report is absent, which could settle the K35 specificity (request_records), yet the HRG is unchanged and the differences could be fixed locally.",
+  "error_count": "The primary specificity difference plus the extra E78.5 code make two errors, or one if the primary slip is not counted.",
+  "error_severity": "The K35 difference is a specificity slip and E78.5 an extra secondary code with no HRG effect, so severity is 0 or 1."
+ },
+ "request": "rec-F438-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009158
+}

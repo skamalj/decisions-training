@@ -1,0 +1,154 @@
+{
+ "id": "F427-0009",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V-3377",
+   "site_ref": "RM03",
+   "visit_date": "2024-08-19",
+   "surveyor_grade": "accredited"
+  },
+  "site_targets": {
+   "band_top_cm": 10,
+   "band_floor_cm": 30,
+   "dipwells_scheduled": 8,
+   "dams_total": 4
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "W1",
+     "depth_cm": 4
+    },
+    {
+     "id": "W5",
+     "depth_cm": 10
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "depth_cm": 6,
+     "prev_depth_cm": 6
+    }
+   ],
+   "rain_30d_pct_normal": 132
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D2",
+     "pool_level_cm": 4,
+     "design_pool_cm": 30,
+     "defect_code": "OVTP",
+     "remark": "Overtopping at centre; little water held behind."
+    }
+   ],
+   "open_work_orders": [
+    {
+     "dam_id": "D2",
+     "status": "contractor_booked"
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "score": 5
+    },
+    {
+     "score": null
+    },
+    {
+     "score": 4
+    }
+   ],
+   "photos_uploaded": 8,
+   "photos_expected": 8
+  },
+  "notes": {
+   "surveyor_note": "Breach looks minor and should hold.",
+   "prior_visits": []
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.25,
+  "photos_status": "full",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "partial_breach",
+  "water_table_offset_cm": 3.0,
+  "rainfall_pct_normal": 132.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.15,
+  "photos_status": "full",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "partial_breach",
+  "water_table_offset_cm": -32.91,
+  "rainfall_pct_normal": 132.22,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "leaning",
+   "target": "above_band",
+   "second": null,
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "dam_caused_drop": "Control well is steady (6 vs 6) and D2 is overtopping with a pool of 4 against a design of 30, which favours dams. Rain at 132% of normal is a real counterweight.",
+  "next_step": "D2 already has a contractor_booked work order and no required element is clearly missing, so the record can be filed.",
+  "hydro_state": "Mean depth is 7 cm against a band top of 10 cm, so the level is above the band. One well sits exactly at the top, which is the doubt.",
+  "dam_severity": "D2 is coded OVTP, a partial breach, but its pool is 4 cm against a design of 30 and the remark says little water is held, which is close to failed.",
+  "evidence_completeness": "2 of 8 wells were read, exactly 25%, on the line between not recorded and partly recorded. Photos 8/8 and the dam log are present, and quadrats are partial (one score null), so three or four elements are recorded."
+ },
+ "request": "rec-F427-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014753
+}

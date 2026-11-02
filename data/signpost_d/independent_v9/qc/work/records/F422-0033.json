@@ -1,0 +1,162 @@
+{
+ "id": "F422-0033",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-6230",
+   "site": "S-118",
+   "delivered_at": "2025-05-15T09:00",
+   "received_at": "2025-05-20T09:00",
+   "review_date": "2025-06-10",
+   "reason": "OVERSTOCK",
+   "lines": [
+    {
+     "gtin": "G3",
+     "qty_claimed": 25
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "D-512",
+   "date": "2025-05-10",
+   "lines": [
+    {
+     "gtin": "G3",
+     "batch": "M77",
+     "expiry": "2026-06-01",
+     "qty_dispatched": 25
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G3",
+     "batch": "M77",
+     "expiry": "2026-06-01",
+     "qty_counted": 25,
+     "packs_damaged": 13,
+     "seals_intact": 12
+    }
+   ],
+   "uid_scans": [
+    {
+     "uid": "u7",
+     "status": "decommissioned",
+     "decommission_site": "S-118",
+     "decommission_at": "2025-06-03"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": "L-31",
+   "logger_start": "2025-05-15T08:00",
+   "logger_end": "2025-05-20T10:00",
+   "min_c": 16.2,
+   "max_c": 23.8,
+   "minutes_out_of_range": 0,
+   "stability_ref": null
+  },
+  "customer_compliance": {
+   "last_audit": "2023-12-31",
+   "audit_valid_until": "2024-12-31",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "location": "Q-2",
+   "hold_limit_days": 30,
+   "extension": {
+    "approved": false,
+    "new_limit_date": null
+   },
+   "max_days_out_of_control": 10,
+   "min_shelf_life_months": 12
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 0,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 0,
+  "damaged_pack_fraction": 0.52,
+  "uid_alert": true,
+  "uid_alert_explained": true,
+  "days_out_of_control": 5,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 9,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 11
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 387,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 0,
+  "damaged_pack_fraction": 0.52,
+  "uid_alert": true,
+  "uid_alert_explained": true,
+  "days_out_of_control": 16,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": -5,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 11
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_stock",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 66,
+ "deciding": {
+  "storage_maintained": "Logger covers delivery to receipt, 16.2-23.8C inside 15-25C, 0 minutes out of range, 5 days out of control against a limit of 10.",
+  "batch_traceable": "Batch M77 and expiry match the dispatch exactly; the only doubt is the decommissioned UID, explained by the customer's own site S-118 on 2025-06-03.",
+  "next_step": "Plan conflict: release_stock fails because 13 of 25 packs are damaged and expiry is under the 12-month minimum; record supports destruction or partial handling.",
+  "resaleable_share": "13 of 25 packs damaged and expiry 2026-06-01 is about 11.7 months against a 12-month minimum, so near zero fit; if the shortfall is waived, 12 sealed packs (under half) fit.",
+  "disposition_urgency": "Received 2025-05-20 plus 30 days gives limit 2025-06-19, 9 days after review, at the boundary of the 4-9 and 10-20 day bands."
+ },
+ "request": "rec-F422-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015865
+}

@@ -1,0 +1,151 @@
+{
+ "id": "F437-0006",
+ "family": "F437",
+ "state": {
+  "job": {
+   "id": "J-4410",
+   "lang_pair": "en-de",
+   "target_locale": "de-DE",
+   "source_version": "3",
+   "glossary_version": "g5",
+   "due_at": "2025-04-10T12:00",
+   "terms": {
+    "glossary_exception": true
+   }
+  },
+  "source": {
+   "version": "3",
+   "segment_count": 140
+  },
+  "deliverable": {
+   "built_from_version": "3",
+   "target_locale": "de-DE",
+   "segments_translated": 140,
+   "glossary_version_used": "g4",
+   "delivered_at": "2025-04-09T16:00"
+  },
+  "qa_report": {
+   "flags": 22,
+   "false_positive_marked": 8,
+   "number_mismatches": [
+    {
+     "src": "1,200",
+     "tgt": "1,020"
+    }
+   ],
+   "unresolved": {
+    "critical": 1,
+    "major": 2,
+    "minor": 3
+   }
+  },
+  "review": {
+   "reviewer_id": "R-17",
+   "completed_at": "2025-04-09T14:00",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "critical",
+     "status": "open",
+     "owner": "translator"
+    },
+    {
+     "sev": "major",
+     "status": "open",
+     "owner": "terminologist"
+    },
+    {
+     "sev": "minor",
+     "status": "open",
+     "owner": "dtp"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-03-20",
+    "2025-04-01"
+   ],
+   "reassignments": 1
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "critical",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.36,
+  "number_mismatch_count": 1,
+  "deadline_slack_hours": 20,
+  "client_waiver": true,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.36,
+  "number_mismatch_count": 1,
+  "deadline_slack_hours": -16,
+  "client_waiver": true,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_for_fix",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 112,
+ "deciding": {
+  "scope_matches": "Source version 3 matches the order and the build, and 140 of 140 segments are translated.",
+  "reviewed_in_time": "Review completed 14:00 and signed off before the 16:00 delivery. Doubt remains because a critical error is still open after sign-off.",
+  "next_step": "Fixable errors are open, and delivery is 20 hours before the due time. The glossary exception covers the older glossary, so there is no terms breach and the translator can correct and resubmit.",
+  "open_severity": "Review lists a critical error with status open and QA unresolved critical is 1. The signed-off status and the number mismatch that may duplicate it leave major as a plausible alternative.",
+  "parties_needed": "Open errors are owned by the translator, a terminologist and DTP, and there is also a reviewer and a reassignment. That is about four to five parties, so the count sits at the boundary."
+ },
+ "request": "rec-F437-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011372
+}

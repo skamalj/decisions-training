@@ -1,0 +1,185 @@
+{
+ "id": "F406-0002",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-5518",
+   "gallery_code": "G-04",
+   "session_date": "2025-05-10",
+   "open": "10:00",
+   "close": "12:00",
+   "certified_limit": 80
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "10:00",
+     "in": 45,
+     "out": 5,
+     "occupancy": 40
+    },
+    {
+     "start": "10:15",
+     "in": 30,
+     "out": 8,
+     "occupancy": 62
+    },
+    {
+     "start": "10:30",
+     "in": 35,
+     "out": 16,
+     "occupancy": 81
+    },
+    {
+     "start": "10:45",
+     "in": 25,
+     "out": 15,
+     "occupancy": 91
+    },
+    {
+     "start": "11:00",
+     "in": 20,
+     "out": 18,
+     "occupancy": 93
+    },
+    {
+     "start": "11:15",
+     "in": 12,
+     "out": 15,
+     "occupancy": 90
+    },
+    {
+     "start": "11:30",
+     "in": 6,
+     "out": 12,
+     "occupancy": 84
+    },
+    {
+     "start": "11:45",
+     "in": 4,
+     "out": 12,
+     "occupancy": 76
+    }
+   ],
+   "ticket_scans": 224,
+   "manual_tally_peak": 81,
+   "summary_peak": 93
+  },
+  "variations": [
+   {
+    "ref": "CV-2217",
+    "gallery_code": "G-04",
+    "valid_from": "2025-05-03",
+    "valid_to": "2025-05-10",
+    "uplift_to": 90,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "gates": [
+    "G1",
+    "G2"
+   ],
+   "last_calibrated": "2025-01-20",
+   "maintenance": [
+    {
+     "gate": "G2",
+     "raised_at": "2025-05-10T08:40",
+     "summary": "entry beam double-counting"
+    }
+   ]
+  },
+  "staff_log": {
+   "stewards": 2,
+   "egress_check": "done",
+   "notes": [
+    "Quiet session, never felt crowded.",
+    "Uplift paperwork not at desk; worked to 90 per rota."
+   ]
+  },
+  "history": {
+   "overages_30d": 1,
+   "dates": [
+    "2025-04-26"
+   ]
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.9,
+  "intervals_over_limit": 2,
+  "section_mismatch": "scans_vs_counter_major",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 1,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.11,
+  "intervals_over_limit": 11,
+  "section_mismatch": "scans_vs_counter_major",
+  "variation_present": false,
+  "variation_scope": "matches",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "file_as_complete",
+   "second": "request_counter_data",
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 152,
+ "deciding": {
+  "variation_applies": "CV-2217 is approved, same gallery code, window ends on the session date and uplift is 90; a steward note says the paperwork was not at the desk, which leaves some doubt.",
+  "fault_explains_overage": "A G2 ticket 'entry beam double-counting' was raised at 08:40 on the session date, before opening; the counter overage (91, 93) follows it.",
+  "next_step": "The fault ticket and low tally (81) support filing, but ticket_scans (224) exceed counter entries (sum of in = 177) by over 25%, which a double-counting fault would not cause; that gap makes a counter data request defensible.",
+  "peak_excess": "The manual tally peak of 81 is exactly 90% of the 90 uplift limit, against counter peak 93 which is faulted; the anchor between levels 0 and 1 holds it in balance.",
+  "intervals_over": "Two counter intervals (91, 93) exceed 90, and the 90 reading is not above it; a reviewer discounting one as faulty counts one."
+ },
+ "request": "rec-F406-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.020462
+}

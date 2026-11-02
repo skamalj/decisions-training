@@ -1,0 +1,146 @@
+{
+ "id": "F426-0022",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B7",
+   "crop": "pear"
+  },
+  "applications": [
+   {
+    "date": "2024-07-10",
+    "product_code": "HRB12",
+    "qty_applied": 5400,
+    "qty_unit": "L",
+    "area_treated_ha": 3.0,
+    "sprayer_id": "S2",
+    "wind_kmh": 20
+   },
+   {
+    "date": "2024-07-18",
+    "product_code": "FNG40",
+    "qty_applied": 6.0,
+    "qty_unit": "L",
+    "area_treated_ha": 3.0,
+    "wind_kmh": 8
+   },
+   {
+    "date": "2024-08-01",
+    "product_code": "FNG40",
+    "qty_applied": 6.0,
+    "qty_unit": "L",
+    "area_treated_ha": 3.0
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "HRB12",
+    "max_rate_per_ha": 2.0,
+    "rate_unit": "L",
+    "phi_days": 7,
+    "approved_crops": [
+     "apple"
+    ]
+   },
+   {
+    "product_code": "FNG40",
+    "max_rate_per_ha": 3.0,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "approved_crops": [
+     "apple",
+     "pear"
+    ]
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "S2",
+   "sprayer_type": "tunnel_recycling",
+   "calibration_valid_to": "2025-03-01",
+   "nozzle_dev_pct": 3
+  },
+  "harvest": {
+   "block_id": "B7",
+   "first_pick_date": "2024-08-15",
+   "residue_test": {
+    "sampled": false,
+    "below_limit": null,
+    "result_date": null
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "unit_ml_vs_l",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": true,
+  "num_applications": 3,
+  "high_wind_decoy": true
+ },
+ "factors_sampled": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "above_10_to_25",
+  "partial_block_spray": false,
+  "clerical_mismatch": "unit_ml_vs_l",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 3,
+  "high_wind_decoy": true
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_and_test",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "label_deviation",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "phi_cleared": "The FNG40 application on 2024-08-01 and the first pick on 2024-08-15 are exactly 14 days apart, equal to phi_days 14. Whether the day counts inclusively or exclusively is open, so both answers are defensible.",
+  "next_step": "The residue test is not sampled, the FNG40 interval sits on the boundary, and HRB12 is used on pear outside its approved crops. Testing before release resolves the doubts, though a grower document could also be asked for.",
+  "finding_class": "HRB12 approved_crops lists only apple while the block is pear, so the crop is off-label. That outranks the unit oddity on the 5400 L entry. The boundary-day interval leaves some doubt about interval_breach.",
+  "reversal_time": "A hold followed by sampling and a lab result likely takes one to several weeks. Roughly a week versus a month is open, so levels 1 and 2 both fit.",
+  "rate_overrun": "The HRB12 quantity of 5400 with unit L is probably mL: 5.4 L over 3 ha = 1.8 L/ha against a 2.0 maximum, which is under. FNG40 is at 2.0 L/ha against 3.0. The literal unit leaves slight doubt."
+ },
+ "request": "rec-F426-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013782
+}

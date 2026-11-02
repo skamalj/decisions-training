@@ -1,0 +1,123 @@
+{
+ "id": "F439-0034",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T-2208",
+   "date": "2024-07-02",
+   "start": "13:00",
+   "end": "13:39",
+   "route_code": "R7"
+  },
+  "candidate": {
+   "ref": "C310",
+   "attempt": 1,
+   "id_check": "passport_ok"
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "junctions",
+     "driving": 2,
+     "serious": 0,
+     "dangerous": 0
+    },
+    {
+     "item": "observation",
+     "driving": 2,
+     "serious": 0,
+     "dangerous": 0
+    }
+   ],
+   "driving_fault_total": 4
+  },
+  "outcome": {
+   "result": "Pass",
+   "intervention": false,
+   "debrief": "given",
+   "examiner_note": "Dual-control brake used at roundabout; otherwise good.",
+   "examiner_signoff_at": null
+  },
+  "review_trail": {
+   "upheld_complaints_12m": 3,
+   "edits": []
+  }
+ },
+ "factors": {
+  "fault_profile": "clear_pass",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "signoff_missing",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": false,
+  "adverse_conditions": false,
+  "note_alignment": "contradicts_sheet",
+  "examiner_complaints_12m": 3,
+  "post_submission_edit": "no_edit"
+ },
+ "factors_sampled": {
+  "fault_profile": "clear_pass",
+  "result_mismatch": true,
+  "tally_error": false,
+  "documentation_gap": "none",
+  "intervention_recorded": false,
+  "intervention_explained": true,
+  "continued_after_collision": false,
+  "senior_countersigned": false,
+  "adverse_conditions": false,
+  "note_alignment": "contradicts_sheet",
+  "examiner_complaints_12m": 3,
+  "post_submission_edit": "no_edit"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "report_complete": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold_query",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "issue_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 84,
+ "deciding": {
+  "result_supported": "Four driving faults, no serious or dangerous, agree with the recorded Pass.",
+  "report_complete": "examiner_signoff_at is null, so a required sign-off is missing.",
+  "disposition": "The missing sign-off and the note on dual-control braking (intervention false, no matching fault) need examiner confirmation.",
+  "staff_effort": "Only a confirmation and sign-off are needed, under an hour.",
+  "issue_severity": "A dual-control brake use that is not flagged as an intervention may mean a safety procedure was breached (level 3), or it may be only a documentation issue that could affect the result (level 2)."
+ },
+ "request": "rec-F439-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010223
+}

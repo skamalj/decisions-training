@@ -1,0 +1,134 @@
+{
+ "id": "F429-0049",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 300,
+   "ramp_max_m_per_10min": 0.5
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "t": "09:00",
+     "level_m": 72.4,
+     "datum": "site"
+    }
+   ],
+   "triggers": {
+    "alert_m": 74.0,
+    "action_m": 75.0
+   }
+  },
+  "gate_ops": [
+   {
+    "gate_id": "G1",
+    "t": "10:00",
+    "open_before_m": 0,
+    "open_after_m": 0.4
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate_id": "G1",
+     "opening_m": 0.4
+    }
+   ],
+   "calc_peak_m3s": 210,
+   "gauged_peak_m3s": 179.5
+  },
+  "instruments": null,
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "09:30",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 17.01,
+  "datum_mismatch": false,
+  "missing_section": "instruments_null",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 17.01,
+  "datum_mismatch": false,
+  "missing_section": "instruments_null",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "trigger_tier": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 64,
+ "deciding": {
+  "within_licence": "calc 210 and gauged 179.5 are both well under the 300 limit.",
+  "gates_reconciled": "G1 open_after 0.4 equals calc opening 0.4; the calc/gauged gap is a doubt.",
+  "next_step": "Instruments section is null, but nothing else is outstanding and all readings are low.",
+  "trigger_tier": "Level 72.4 is below alert 74.0; single 0.4 m gate move.",
+  "parties_needed": "Nothing to resolve; the engineer can sign off alone."
+ },
+ "request": "rec-F429-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011386
+}

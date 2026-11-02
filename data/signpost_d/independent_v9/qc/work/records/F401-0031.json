@@ -1,0 +1,171 @@
+{
+ "id": "F401-0031",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P-1182",
+   "planned_discharge_at": "2025-03-10T14:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 16,
+     "spo2": 97,
+     "sbp": 128,
+     "hr": 72,
+     "temp": 36.8,
+     "cons": "alert",
+     "at": "2025-03-10T06:00"
+    }
+   ],
+   "investigations": [
+    {
+     "test": "CT report",
+     "status": "awaited",
+     "required_before_discharge": true,
+     "follow_up_owner": null
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P-1182",
+   "reconciled": [
+    {
+     "drug": "apixaban",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "apixaban",
+     "action": "dose_reduced",
+     "reason": "renal function",
+     "prescriber": "Dr Hale",
+     "changed_at": "2025-03-10T09:05"
+    }
+   ],
+   "discharge_rx": {
+    "signed_at": "2025-03-10T09:00",
+    "items": [
+     {
+      "drug": "apixaban",
+      "dose": 2.5,
+      "unit": "mg",
+      "freq": "bd"
+     }
+    ]
+   },
+   "pharmacy_ready_at": "2025-03-10T12:00"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": null,
+    "transfer_assist_count": 0,
+    "adl_score": 20
+   },
+   "social": {
+    "lives_alone": false,
+    "carer_available": true
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "summary",
+     "status": "done",
+     "completed_at": "2025-03-10T08:30",
+     "signed_by": "RN Ortiz"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-03-13",
+    "pickup_time": "10:00"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "awaited_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "three_days",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 1,
+  "false_completion": true,
+  "care_need": "none",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "next_day",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_item",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "home_independent",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discharge_delay": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 74,
+ "deciding": {
+  "rx_matches": "Apixaban 5 mg reconciled vs 2.5 mg on rx; a change entry exists but changed_at 09:05 is after signed_at 09:00, so it only weakly covers it.",
+  "next_step": "CT report awaited, required_before_discharge true, no follow-up owner: a blocking result is outstanding.",
+  "destination": "Independent ADL 20, no aid, carer available, no new care.",
+  "outstanding_tasks": "The only checklist item is done with completed_at and signed_by.",
+  "discharge_delay": "Transport booked 2025-03-13, three days after planned 03-10; doubt from the other times being earlier."
+ },
+ "request": "rec-F401-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010525
+}

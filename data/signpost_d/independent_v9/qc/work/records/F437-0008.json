@@ -1,0 +1,127 @@
+{
+ "id": "F437-0008",
+ "family": "F437",
+ "state": {
+  "job": {
+   "ordered_words": 1200,
+   "glossary_version": "g4",
+   "due_at": "2025-05-08T09:00",
+   "terms": {
+    "glossary_exception": true
+   }
+  },
+  "source": {
+   "version": "2",
+   "segment_count": 80,
+   "word_count": 1200,
+   "repetitions": 9
+  },
+  "deliverable": {
+   "built_from_version": "2",
+   "segments_translated": 80,
+   "word_count": 1194,
+   "glossary_version_used": null,
+   "delivered_at": "2025-05-07T16:00"
+  },
+  "qa_report": {
+   "flags": 25,
+   "false_positive_marked": 16,
+   "number_mismatches": [
+    {
+     "src": "1,250",
+     "tgt": "1.205"
+    }
+   ],
+   "unresolved": {
+    "major": 1,
+    "minor": 1
+   }
+  },
+  "review": {
+   "completed_at": "2025-05-07T16:00",
+   "signed_off": true,
+   "errors": []
+  },
+  "history": {
+   "revision_rounds": []
+  }
+ },
+ "factors": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major_possibly_false_positive",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.64,
+  "number_mismatch_count": 1,
+  "deadline_slack_hours": 17,
+  "client_waiver": true,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.64,
+  "number_mismatch_count": 1,
+  "deadline_slack_hours": 17,
+  "client_waiver": true,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate_am",
+   "second": "release",
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "scope_matches": "Segments are 80 of 80 and the version is 2 throughout. Word count is 1194 against 1200, a drift under 1% that the 9 repetitions explain, so a small doubt remains.",
+  "reviewed_in_time": "Review completed_at and delivered_at are both 16:00 on 2025-05-07, with signed_off true. Whether sign-off came before delivery is borderline.",
+  "next_step": "glossary_version_used is null and the glossary exception may or may not cover that. Delivery is 17 hours early with the review signed off. Escalating on the terms question and releasing are both defensible.",
+  "open_severity": "QA unresolved shows 1 major and 1 minor, but 16 of 25 flags are marked false positive and the review has no errors. Whether the major is real decides between level 2 and level 1.",
+  "parties_needed": "The one number mismatch and the glossary record need the translator and possibly the PM, so about two parties."
+ },
+ "request": "rec-F437-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011372
+}

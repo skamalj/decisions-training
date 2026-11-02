@@ -1,0 +1,132 @@
+{
+ "id": "F420-0038",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PMC55218",
+   "flt": "QR712",
+   "dest": "DOH",
+   "pos": "05R",
+   "contour_max_cm": 163,
+   "tare_kg": 110,
+   "planned_gross_kg": 1000,
+   "straps_required": 4
+  },
+  "manifest_lines": [
+   {
+    "awb": "157-20384",
+    "dest": "DOH",
+    "pcs": 14,
+    "weight_kg": 890
+   }
+  ],
+  "build_measured": {
+   "scale_gross_kg": 996,
+   "max_height_cm": 148,
+   "pcs_counted": {
+    "157-20384": 11
+   },
+   "straps_fitted": 4,
+   "net_fitted": true,
+   "uld_serial_scanned": "55218"
+  },
+  "dg_notoc": null,
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "157-20384",
+     "pcs_this_flight": 11
+    }
+   ],
+   "contour_waivers": []
+  },
+  "checks_log": {
+   "scale_cal_due": "2026-02-10"
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": -0.4,
+  "piece_count_gap": 3,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 222,
+  "prior_rebuilds": 2
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -3.08,
+  "piece_count_gap": 3,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "over_up_to_5cm",
+  "contour_waiver": true,
+  "dg_state": "dg_segregation_conflict",
+  "notoc_match": "not_applicable",
+  "securing_state": "one_strap_short",
+  "scale_cal_overdue": true,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "awb_digits_transposed",
+  "minutes_to_cutoff": 222,
+  "prior_rebuilds": 2
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "weight_deviation": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "rework_extent": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 59,
+ "deciding": {
+  "pieces_reconciled": "Counted 11 of 14 pcs, with a part shipment on file showing pcs_this_flight 11 for the same AWB, so the shortfall is covered.",
+  "disposition": "Straps 4 of 4 and net fitted, height 148 under 163, scale calibration current, dg_notoc null and no document mismatches: release.",
+  "worst_discrepancy": "The only count difference is covered by the part shipment. Weight, height, securing and documents all agree, so none.",
+  "weight_deviation": "Scale 996 against planned 1000 is -0.4%, well inside 1%.",
+  "rework_extent": "Nothing physical is outstanding: straps and net are complete, height is within the limit and the weight is near plan."
+ },
+ "request": "rec-F420-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010224
+}

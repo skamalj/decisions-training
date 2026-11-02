@@ -1,0 +1,123 @@
+{
+ "id": "F424-0027",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2412",
+   "vessel_id": "FV1",
+   "volume_hl": 25,
+   "yeast_strain": "US-05",
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 22
+  },
+  "readings": [
+   {
+    "ts": "2024-06-04",
+    "gravity_sg": 1.012,
+    "temp_c": 19.5
+   },
+   {
+    "ts": "2024-06-05",
+    "gravity_plato": 3.1,
+    "temp_c": 19
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2412",
+   "diacetyl_mgl": 0.06,
+   "abv_pct": 5.0,
+   "micro_plate": {
+    "result": "negative"
+   }
+  },
+  "release_request": {
+   "volume_hl": 25,
+   "vessel_id": "FV1"
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.06,
+  "discrepancy_count": 0,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.06,
+  "discrepancy_count": 0,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 37,
+ "deciding": {
+  "terminal_gravity": "1.012 SG and 3.1 Plato (~1.0124) agree and sit inside 1.010-1.014.",
+  "contamination_supported": "Negative plate, no sensory notes.",
+  "batch_disposition": "All results are in and in spec; volume and vessel match the release request.",
+  "deviation_severity": "Temperatures stay below 22 C and diacetyl is 0.06.",
+  "record_discrepancies": "Plato vs SG is a unit-converted match; vessel, volume and batch_ref all agree."
+ },
+ "request": "rec-F424-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005293
+}

@@ -1,0 +1,170 @@
+{
+ "id": "F425-0049",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "farm_ref": "F-0872",
+   "flock_id": "FL-27D",
+   "producer_code": "1UK-5D44",
+   "method": "1",
+   "lay_dates": [
+    "2024-08-15",
+    "2024-08-08"
+   ],
+   "declared_eggs": 4000,
+   "trays": 134
+  },
+  "grading_run": {
+   "grader_id": "G2",
+   "run_start": "2024-08-19T06:40",
+   "run_end": "2024-08-19T10:20",
+   "eggs_in": 4000,
+   "by_size": {
+    "S": 300,
+    "M": 1400,
+    "L": 1500,
+    "XL": 520
+   },
+   "outgrades": {
+    "cracks": 210,
+    "dirties": 40,
+    "blood_spots": 18,
+    "leakers": 8,
+    "misshapen": 4
+   },
+   "class_a_total": 3720
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-03-01",
+    "interval_days": 90
+   },
+   "candling_sample": {
+    "n": 120,
+    "sampled_at": "2024-08-19T08:15"
+   },
+   "scale_check": null,
+   "store_temp": {
+    "minutes_above_limit": 0,
+    "max_c": 6.0
+   }
+  },
+  "flock": {
+   "age_weeks": 27,
+   "last_swab": {
+    "date": "2024-08-01",
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2024-08-19",
+   "packs": [
+    {
+     "size": "S",
+     "pack_size": 6,
+     "count": 50
+    },
+    {
+     "size": "M",
+     "pack_size": 10,
+     "count": 140
+    },
+    {
+     "size": "L",
+     "pack_size": 6,
+     "count": 250
+    },
+    {
+     "size": "XL",
+     "pack_size": 10,
+     "count": 52
+    }
+   ],
+   "stamp_code": "1UK-5D44",
+   "best_before": "2024-09-12",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "none",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 11,
+  "mixed_lay_dates": true,
+  "missing_check": "scale_check_missing",
+  "swab_positive": false,
+  "outgrade_rate_pct": 7.0,
+  "dominant_defect": "cracks",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 27
+ },
+ "factors_sampled": {
+  "count_gap_size": "none",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": true,
+  "lay_to_pack_days": 10,
+  "mixed_lay_dates": true,
+  "missing_check": "scale_check_missing",
+  "swab_positive": false,
+  "outgrade_rate_pct": 2.07,
+  "dominant_defect": "dirties",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "brief",
+  "temp_mitigated": false,
+  "flock_age_weeks": 27
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "hold_pending",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "leaning",
+   "target": "equipment_fault",
+   "second": null,
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 128,
+ "deciding": {
+  "counts_reconcile": "Declared 4000 equals eggs_in 4000; bins 3720 plus outgrades 280 is 4000; packs sum 3720 equal to class_a_total.",
+  "batch_disposition": "checks.scale_check is null, a specific missing check, while stamp code matches, swab is negative and counts agree, so hold pending the scale check.",
+  "anomaly_cause": "Crack detector last calibrated 2024-03-01 with a 90 day interval is overdue at run_start 2024-08-19 with no manual_recheck, and cracks dominate at 210; the flock is young at 27 weeks and the store temperature is normal.",
+  "lay_to_pack": "The oldest lay date 2024-08-08 against pack_date 2024-08-19 is 11 days; the newer date 08-15 gives slight doubt.",
+  "outgrade_share": "280 outgrades of 4000 eggs_in is 7.0%, within the 5% to under 10% band."
+ },
+ "request": "rec-F425-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013775
+}

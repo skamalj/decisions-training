@@ -1,0 +1,143 @@
+{
+ "id": "F415-0049",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": [
+    {
+     "from": "12:05",
+     "to": "12:45",
+     "reason": "routine flush",
+     "approved_by": "OFF-07"
+    }
+   ]
+  },
+  "shift": {
+   "sched_slots": [
+    "09:00",
+    "12:00",
+    "15:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "09:00",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "pans": false
+    },
+    "photo_ref": null
+   },
+   {
+    "slot": "12:00",
+    "status": "not_recorded"
+   },
+   {
+    "slot": "15:00",
+    "status": "done",
+    "end": "15:25"
+   }
+  ],
+  "faults": [
+   {
+    "type": "spillage",
+    "reported_at": "12:10",
+    "remedied_at": "12:35"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "15:40"
+  },
+  "history": {
+   "prior_defaults_90d": 4
+  }
+ },
+ "factors": {
+  "scheduled_slots": 3,
+  "missed_slots": "1",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "spillage",
+  "fault_open_minutes": 25.0,
+  "block_closed_during_fault": true,
+  "checklist_completion": "partial",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 4
+ },
+ "factors_sampled": {
+  "scheduled_slots": 3,
+  "missed_slots": "0",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "spillage",
+  "fault_open_minutes": 450.19,
+  "block_closed_during_fault": false,
+  "checklist_completion": "partial",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 4
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 55,
+ "deciding": {
+  "missed_clean": "The 12:00 slot is not_recorded while the approved closure begins at 12:05, just after the slot, so it is borderline whether the closure covers it.",
+  "sign_off_valid": "Supervisor signed 15:40, after the final visit ended at 15:25.",
+  "next_step": "The gap sits at an approved closure edge, and the sign-off and other visits are in order, so accept with little doubt.",
+  "staff_effort": "Nothing needs chasing; a quick look settles it in under an hour.",
+  "fault_exposure": "Spillage 12:10-12:35 lies inside the 12:05-12:45 approved closure, so it was not open while the block was public."
+ },
+ "request": "rec-F415-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009797
+}

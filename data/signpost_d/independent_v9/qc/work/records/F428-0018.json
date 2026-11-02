@@ -1,0 +1,137 @@
+{
+ "id": "F428-0018",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "MT-88",
+   "gate_type": "mitre",
+   "rated_closure_s": 120,
+   "clear_width": 6.0,
+   "clear_width_unit": "m"
+  },
+  "inspection": {
+   "asset_id": "MT-88",
+   "insp_date": "2025-05-12",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-04-22",
+    "closure_s": 108,
+    "leakage_l_min": 6,
+    "leakage_limit_l_min": 25,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "PT-4",
+    "component": "leaf",
+    "grade": 1,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W9",
+     "component": "hinge",
+     "status": "complete",
+     "completed": "2025-03-15",
+     "retest_insp_id": null
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": false
+  }
+ },
+ "factors": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.9,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "none",
+  "mismatch_count": 0,
+  "mismatch_location": "width_units",
+  "test_status": "passed_current",
+  "repair_progress": "none_needed",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 35,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 1.3,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 0,
+  "mismatch_location": "width_units",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 35,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 46,
+ "deciding": {
+  "closure_test_valid": "Pass at 108 s vs rated 120 s with leakage 6 under 25, dated 2025-04-22 (three weeks old), after the hinge order completed 2025-03-15 but with no retest id linked.",
+  "next_step": "Test passes, only a grade 1 paint-type defect is open, in service, no alert: file.",
+  "defect_class": "Sole open defect is grade 1, so none above grade 1.",
+  "section_discrepancies": "asset_id, width 6.0 m and all other values agree across sections.",
+  "flood_risk": "Closes within rated time, no defect above grade 1, no alert; a slightly dated test leaves minor doubt."
+ },
+ "request": "rec-F428-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010422
+}

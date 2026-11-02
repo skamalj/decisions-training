@@ -1,0 +1,184 @@
+{
+ "id": "F440-0010",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "G-6618",
+   "review_date": "2025-07-01",
+   "arrival": "2025-07-15",
+   "departure": "2025-07-17",
+   "pax_by_band": {
+    "13_17": 14,
+    "adult": 2
+   },
+   "amendments": [
+    {
+     "type": "pax_change",
+     "delta": 2,
+     "logged_at": "2025-06-18"
+    }
+   ]
+  },
+  "roster": [
+   {
+    "role": "participant",
+    "sex": "F",
+    "n": 9,
+    "dob": "2008-2011"
+   },
+   {
+    "role": "participant",
+    "sex": "M",
+    "n": 9,
+    "dob": "2008-2011"
+   },
+   {
+    "role": "leader",
+    "n": 2,
+    "dob": "1984-1988"
+   }
+  ],
+  "allocation": [
+   {
+    "room": "F1",
+    "sex": "F",
+    "beds": 9,
+    "nights": [
+     "2025-07-15",
+     "2025-07-16"
+    ]
+   },
+   {
+    "room": "M1",
+    "sex": "M",
+    "beds": 9,
+    "nights": [
+     "2025-07-15",
+     "2025-07-16"
+    ]
+   },
+   {
+    "room": "L1",
+    "sex": "mixed",
+    "beds": 2,
+    "nights": [
+     "2025-07-15",
+     "2025-07-16"
+    ]
+   }
+  ],
+  "payment": {
+   "total_price": 1600,
+   "deposit_due": 400,
+   "paid_total": 200,
+   "instalments": [
+    {
+     "due": "2025-06-01",
+     "amt": 200,
+     "paid": true
+    },
+    {
+     "due": "2025-07-05",
+     "amt": 200
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "adult": "A1",
+    "status": "verified",
+    "expiry": "2026-03-01"
+   },
+   {
+    "adult": "A2",
+    "status": "verified",
+    "expiry": "2026-03-01"
+   }
+  ],
+  "history": {
+   "org_id": "O-90",
+   "trusted": false,
+   "stays": 2,
+   "no_shows": 1,
+   "last_stay": "2024-08-03"
+  }
+ },
+ "factors": {
+  "pax_mismatch": "two_to_four",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "comfortable",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": true,
+  "days_to_arrival": 14,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 1,
+  "diet_count_drift": "none"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "two_to_four",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 87,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 1,
+  "diet_count_drift": "none"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "decline",
+   "second": "confirm_conditional",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 61,
+ "deciding": {
+  "ratio_met": "18 teens need 2 adults and exactly 2 leaders are rostered. The ratio is met with zero margin.",
+  "deposit_covered": "paid_total 200 is below deposit_due 400, but the schedule shows the 200 due 2025-06-01 paid and the next 200 not due until 2025-07-05.",
+  "disposition": "The booked headcount is 4 below the roster, and pax_change +2 explains only half of it. Beds and adult cover are both at exactly zero spare. That supports declining, but conditional confirmation is also defensible.",
+  "urgency": "Review 2025-07-01, arrival 2025-07-15: 14 days, right at the edge of the 15-day Soon band.",
+  "conflict_count": "Booked 16 vs roster 20, with the +2 amendment leaving 2 people unexplained. That residual counts as one conflict or two."
+ },
+ "request": "rec-F440-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01636
+}

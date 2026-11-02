@@ -1,0 +1,122 @@
+{
+ "id": "F417-0048",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "SY Marlin",
+   "loa_m": 12.3,
+   "draught_m": 1.8,
+   "draught_src": "owner"
+  },
+  "berth": {
+   "id": "P7",
+   "max_loa_m": 12.0,
+   "fender_allow_m": 0.3,
+   "depth_lat_m": 2.78,
+   "waiver_ref": null
+  },
+  "booking": {
+   "arrival": "2026-08-01",
+   "departure": "2026-08-08",
+   "next_on_berth": {
+    "arrival": "2026-08-10"
+   }
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 12.4,
+    "draught_m": null
+   },
+   "insurance_expiry": "2027-02-01",
+   "inspection_date": "2026-07-15"
+  },
+  "account": {
+   "dues_outstanding_gbp": 943,
+   "deposit_paid": true,
+   "plan_id": "PP-31",
+   "plan_status": "approved"
+  },
+  "history": [
+   {
+    "d": "2025-08-02",
+    "inc": 1
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 0.84,
+  "berth_length_fit": "exceeds_limit",
+  "ukc_margin_m": 0.98,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 943,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 0.84,
+  "berth_length_fit": "exceeds_limit",
+  "ukc_margin_m": -0.16,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 943,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "one_night",
+  "trusted_regular": false,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "allocate_with_conditions",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "length_fits": "Survey loa 12.4 vs max 12.0 + fender 0.3 = 12.3: over by 0.1 only, with no waiver, so the call is marginal.",
+  "next_step": "The slight overlength and thin clearance suggest allocating with conditions; everything else is in order.",
+  "primary_issue": "Documents, account (approved plan) and dates (departure 08-08, next arrival 08-10) are all fine; only the marginal length remains.",
+  "ukc_band": "Depth 2.78 minus declared draught 1.8 = 0.98 m, right at the 1 m boundary.",
+  "unresolved_count": "Slight overlength, owner-declared unsurveyed draught and the 12.3 vs 12.4 loa gap: two or three depending on counting."
+ },
+ "request": "rec-F417-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008586
+}

@@ -1,0 +1,123 @@
+{
+ "id": "F417-0041",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V101",
+   "loa_m": 12.7,
+   "draught_m": 2.4,
+   "draught_src": "owner"
+  },
+  "berth": {
+   "id": "B7",
+   "max_loa_m": 13.0,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 2.4,
+   "waiver_ref": "W-221",
+   "waiver_expiry": "2025-09-30"
+  },
+  "booking": {
+   "arrival": "2025-06-02",
+   "departure": "2025-06-09"
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 12.62,
+    "draught_m": null
+   },
+   "insurance_expiry": "2026-01-01",
+   "inspection_date": "2025-06-20",
+   "inspection_booked": true
+  },
+  "account": {
+   "dues_outstanding_gbp": 1464,
+   "plan_id": "P55",
+   "plan_status": "approved"
+  },
+  "history": [
+   {
+    "d": "2024-07-01",
+    "berth": "B7",
+    "inc": 3
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 0.63,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 0.0,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 1464,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 3,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 0.63,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 1.98,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 1464,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 3,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "confirm_allocation",
+   "second": "refer_harbourmaster",
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "dimension_mismatch",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "length_fits": "Survey loa 12.62 is under max_loa 13.0; the small gap to declared 12.7 leaves slight doubt.",
+  "next_step": "Waiver, approved plan and valid insurance support confirming; a zero-clearance declared draught and three prior incidents keep referral plausible.",
+  "primary_issue": "Declared draught 2.4 equals depth_lat_m 2.4; lengths agree and the other sections are in order.",
+  "ukc_band": "Owner-declared draught 2.4 equals depth 2.4, giving zero clearance (level 0); an unverified figure leaves level 1 plausible.",
+  "unresolved_count": "Sections largely agree; the inspection date after departure (booked) may or may not count as one discrepancy."
+ },
+ "request": "rec-F417-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012082
+}

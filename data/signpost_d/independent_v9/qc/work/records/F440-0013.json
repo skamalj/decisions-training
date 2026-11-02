@@ -1,0 +1,208 @@
+{
+ "id": "F440-0013",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "GB-6033",
+   "review": "2025-06-10",
+   "arrive": "2025-06-13",
+   "depart": "2025-06-16",
+   "pax": {
+    "13-17": 17,
+    "adult": 3
+   },
+   "amend": [
+    {
+     "type": "pax_change",
+     "delta": -7,
+     "logged_at": "2025-06-02"
+    }
+   ]
+  },
+  "roster": [
+   [
+    "L",
+    "1982-04-14",
+    "F"
+   ],
+   [
+    "P",
+    "2009-10-10",
+    "F"
+   ],
+   [
+    "P",
+    "2010-02-19",
+    "F"
+   ],
+   [
+    "P",
+    "2009-07-07",
+    "F"
+   ],
+   [
+    "P",
+    "2010-05-23",
+    "F"
+   ],
+   [
+    "P",
+    "2010-12-01",
+    "F"
+   ],
+   [
+    "P",
+    "2009-08-16",
+    "M"
+   ],
+   [
+    "P",
+    "2010-01-28",
+    "M"
+   ],
+   [
+    "P",
+    "2009-11-11",
+    "M"
+   ],
+   [
+    "P",
+    "2010-03-30",
+    "M"
+   ],
+   [
+    "P",
+    "2010-06-06",
+    "M"
+   ],
+   [
+    "P",
+    "2009-09-02",
+    "M"
+   ]
+  ],
+  "allocation": [
+   {
+    "room": "R1",
+    "sex": "F",
+    "beds": 6,
+    "nights": [
+     "2025-06-13",
+     "2025-06-14",
+     "2025-06-15"
+    ],
+    "warden_cover": [
+     "2025-06-13",
+     "2025-06-14"
+    ]
+   },
+   {
+    "room": "R2",
+    "sex": "M",
+    "beds": 6,
+    "nights": [
+     "2025-06-13",
+     "2025-06-14",
+     "2025-06-15"
+    ]
+   }
+  ],
+  "payment": {
+   "total": 2000,
+   "deposit_due": 600,
+   "paid_total": 200,
+   "schedule": null
+  },
+  "safeguarding": [
+   {
+    "adult": "L1",
+    "status": "verified",
+    "exp": "2027-03-01"
+   }
+  ],
+  "history": {
+   "org": "O-342",
+   "trusted": false,
+   "stays": 2,
+   "no_show": 3
+  }
+ },
+ "factors": {
+  "pax_mismatch": "five_plus",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": true,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 3,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 3,
+  "diet_count_drift": "none"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "five_plus",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "comfortable",
+  "extra_cover_logged": true,
+  "deposit_position": "paid_full",
+  "instalment_approved": false,
+  "days_to_arrival": 55,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 3,
+  "diet_count_drift": "none"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "deposit_covered": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "ratio_met": "11 minors aged 13-17 need 2 adults; warden_cover lists only 06-13 and 06-14, leaving night 06-15 with 1 leader, though the warden's status as an adult is a slight doubt.",
+  "deposit_covered": "Paid 200 against deposit_due 600 with schedule null, so no approved instalment plan.",
+  "disposition": "The single missing item is the outstanding deposit balance; checks are verified and dorms fit.",
+  "urgency": "Review 2025-06-10 to arrival 2025-06-13 is 3 days, at the boundary between the within-3-day and 4-14-day levels.",
+  "conflict_count": "Booked 20 vs roster 12 is a gap of 8 but the logged pax_change is -7, leaving about one unit possibly unexplained; nights and dorms agree."
+ },
+ "request": "rec-F440-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.017357
+}

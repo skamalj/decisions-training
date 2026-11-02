@@ -1,0 +1,135 @@
+{
+ "id": "F433-0036",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H112",
+   "age": 9,
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "res": "recheck"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 30
+   },
+   "arrived_at": "09:40",
+   "departed_at": null
+  },
+  "vet_card": {
+   "presented_at": "10:01",
+   "pulse_bpm": 60,
+   "cri": {
+    "first_bpm": 56,
+    "second_bpm": 60
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 2,
+    "skin_tent_s": 1
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 1
+    }
+   ],
+   "tack": null,
+   "vet_signed_at": "10:06"
+  },
+  "treatment": [
+   {
+    "t": "09:55",
+    "type": "electrolytes",
+    "vet": "Dr Hale"
+   }
+  ],
+  "notes": {
+   "rider": "Stumbled on stony descent."
+  }
+ },
+ "factors": {
+  "pulse_status": "met_after_window",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": false,
+  "metabolic_flags": 2,
+  "cri_rise": 4.0,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_after_window",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": false,
+  "metabolic_flags": 2,
+  "cri_rise": 12.51,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "eliminate_ftq",
+   "second": "request_recheck",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "leaning",
+   "target": "pass",
+   "second": null,
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 75,
+ "deciding": {
+  "pulse_met": "Presented 10:01 is 21 min after 09:40 arrival, one minute over window, but pulse 60 is under 64.",
+  "next_step": "Gait grade 1 on a single trot-up and a late presentation could justify a recheck or elimination.",
+  "outcome_code": "Pulse 60 under limit, gait grade 1 only, metabolic mostly normal and no tack finding, so pass.",
+  "welfare_risk": "Grade 1 gait and a late presentation are borderline; one or two parameters may be outside limits.",
+  "record_completeness": "All readings and signature present and sequential, but the treatment at 09:55 precedes presentation, so the order is arguable."
+ },
+ "request": "rec-F433-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005437
+}

@@ -1,0 +1,133 @@
+{
+ "id": "F422-0009",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "delivered_at": "2025-08-19",
+   "received_at": "2025-08-25",
+   "review_date": "2025-09-10"
+  },
+  "dispatch_ref": {
+   "lines": [
+    {
+     "batch": "M9",
+     "expiry": "2026-10"
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "batch": "M9",
+     "expiry": "2026-10-31",
+     "qty_counted": 18,
+     "packs_damaged": 0
+    }
+   ],
+   "uid_scans": []
+  },
+  "temperature": {
+   "labelled_range": "2-8",
+   "logger_start": "2025-08-19",
+   "logger_end": "2025-08-25",
+   "max_c": 9.6,
+   "minutes_out_of_range": 254,
+   "stability_ref": {
+    "max_hours": 2,
+    "max_c": 10
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2026-03-01",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "hold_limit_days": 14,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-09-13"
+   }
+  }
+ },
+ "factors": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "full",
+  "excursion_minutes": 254,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "expiry_format_only",
+  "count_discrepancy_packs": 0,
+  "damaged_pack_fraction": 0.0,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 6,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 3,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 13
+ },
+ "factors_sampled": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "full",
+  "excursion_minutes": 254,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "one_foreign_batch",
+  "count_discrepancy_packs": 6,
+  "damaged_pack_fraction": 0.65,
+  "uid_alert": true,
+  "uid_alert_explained": false,
+  "days_out_of_control": 6,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 15,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 13
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_traceable": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "storage_maintained": "254 minutes above 8C exceeds the stability allowance of 2 hours (120 minutes), though max 9.6 is under its 10C cap.",
+  "batch_traceable": "Batch M9 matches; expiry differs only in format (2026-10 vs 2026-10-31), so it is probably but not certainly the same.",
+  "next_step": "customer_compliance.declaration_received is false: the storage declaration is the one named missing document.",
+  "resaleable_share": "No damage and the batch matches, but the excursion against the allowance leaves possible doubt on all packs.",
+  "disposition_urgency": "Extension replaces the limit with 09-13; review 09-10 leaves 3 days, at the edge of the 4-day boundary."
+ },
+ "request": "rec-F422-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01102
+}

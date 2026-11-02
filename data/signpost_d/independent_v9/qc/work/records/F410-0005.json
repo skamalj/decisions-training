@@ -1,0 +1,124 @@
+{
+ "id": "F410-0005",
+ "family": "F410",
+ "state": {
+  "application": {
+   "term_end": "2026-05-31",
+   "pitch_req": {
+    "width_m": 3.34
+   },
+   "docs_pending": []
+  },
+  "licence_current": {
+   "pitch": {
+    "width_m": 3.0
+   },
+   "conditions": {
+    "min_attendance_pct": 85
+   }
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-12-31",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000
+  },
+  "account": {
+   "fees_due": [
+    {
+     "amount_gbp": 242.34
+    }
+   ],
+   "ledger": []
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 40,
+   "complaints": [
+    {
+     "category": "stall safety",
+     "upheld": true,
+     "status": "closed"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": false,
+  "commodity_change": "none",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.34,
+  "variation_approved": false,
+  "fee_arrears_gbp": 242.34,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.8,
+  "absences_notified": false,
+  "complaint_profile": "upheld_closed",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": false,
+  "commodity_change": "none",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.34,
+  "variation_approved": false,
+  "fee_arrears_gbp": 242.34,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.8,
+  "absences_notified": false,
+  "complaint_profile": "upheld_closed",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "balanced",
+   "target": "grant_conditional",
+   "second": "grant",
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "balanced",
+   "target": "urgent_visit",
+   "second": "none_needed",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-12-31 is after term_end 2026-05-31 at the required 5,000,000.",
+  "renewal_disposition": "No pending docs, but arrears and attendance shortfall plus a closed upheld complaint make conditional grant versus plain grant close.",
+  "inspection_level": "Closed upheld stall-safety complaint with a 0.34m width increase; nothing is open, so none_needed is plausible, but a visit could be justified.",
+  "reversal_time": "A renewal issued for the term would take weeks to reverse through formal revocation.",
+  "discrepancy_count": "Unresolved: 242.34 fees with empty ledger and no plan, attendance 40/50 vs 85% with no notices, width 3.34m vs 3.0m with no variation; the last is near the tolerance boundary and may not count."
+ },
+ "request": "rec-F410-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010784
+}

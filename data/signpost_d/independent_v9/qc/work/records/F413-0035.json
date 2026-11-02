@@ -1,0 +1,157 @@
+{
+ "id": "F413-0035",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "food_production",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ]
+  },
+  "visit": {
+   "type": "routine",
+   "start": "2025-08-11T09:00",
+   "end": "2025-08-11T09:55",
+   "client_signoff": "2025-08-11",
+   "tech_licence_expiry": "2026-04-30"
+  },
+  "treatments": [
+   {
+    "product_code": "BR2",
+    "zone": "Z1",
+    "area_m2": 25,
+    "qty_applied": 0.5,
+    "unit": "kg",
+    "label_max_per_m2": 0.03
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S3",
+    "zone": "Z1",
+    "activity": true
+   },
+   {
+    "id": "S1",
+    "zone": "Z1",
+    "activity": true
+   },
+   {
+    "id": "S4",
+    "zone": "Z1",
+    "activity": false
+   },
+   {
+    "id": "S2",
+    "zone": "Z1",
+    "activity": true
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product_code": "BR2",
+    "qty": 0.5,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 1,
+   "actions": [
+    {
+     "id": "CA3",
+     "status": "booked",
+     "booked": "2025-08-25"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 0.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "booked",
+  "site_risk_tier": "food_production"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "applied_qty_null",
+  "stock_return_logged": false,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 46.65,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "booked",
+  "site_risk_tier": "food_production"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 51,
+ "deciding": {
+  "usage_reconciled": "0.5 kg BR2 applied matches 0.5 kg withdrawn.",
+  "activity_increased": "Three active stations against prev_active_stations 1.",
+  "next_step": "The log is complete and within limits, and corrective action CA3 is already booked for 2025-08-25, though the rise in activity leaves some doubt.",
+  "breach_severity": "Dose 0.02/m2 against a 0.03 limit, valid licence, all stations checked, signoff present and no banned product.",
+  "parties_needed": "The corrective visit is already booked, so the reviewer alone can file the log."
+ },
+ "request": "rec-F413-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010861
+}

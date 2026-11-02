@@ -1,0 +1,130 @@
+{
+ "id": "F403-0022",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "year": 4,
+   "declared_allergens": [
+    "peanut",
+    "sesame",
+    "egg"
+   ],
+   "plan_start": "2025-09-08"
+  },
+  "medical_evidence": null,
+  "menu_mapping": {
+   "mapped_on": "2025-09-02",
+   "dishes": [
+    {
+     "dish": "satay chicken",
+     "contains": [
+      "peanut"
+     ],
+     "recipe_version_date": "2025-08-20",
+     "substitute": null,
+     "spec_checked_on": "2025-08-28"
+    },
+    {
+     "dish": "egg fried rice",
+     "contains": [
+      "egg"
+     ],
+     "recipe_version_date": "2025-08-20",
+     "substitute": null,
+     "spec_checked_on": "2025-08-28"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": false,
+   "trained_staff": 4,
+   "cleaning_log_complete": true
+  },
+  "history": {
+   "review_date": "2025-09-15",
+   "packed_lunch_until": "2025-09-16",
+   "incidents": [],
+   "messages": [
+    "Parent says the allergy is mild and all is under control."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "missing",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "shared_equipment",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 2,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "missing",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "shared_equipment",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 16,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "approve_plan",
+   "second": "return_for_rework",
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "evidence_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 66,
+ "deciding": {
+  "evidence_allergens_covered": "medical_evidence is null so no evidence allergens exist to check; two declared allergen dishes have substitute null, so false is led but vacuous truth remains plausible.",
+  "next_step": "Evidence is null, which argues for a different step, yet the two dishes with null substitutes point to rework; the reassuring note and packed lunches keep approving defensible.",
+  "first_gap_stage": "medical_evidence is null, the first stage, so evidence gap.",
+  "exposure_proximity": "Two allergen dishes have substitute null and no incidents, so Open; shared equipment is a minor extra.",
+  "meal_urgency": "Packed lunch until 2025-09-16 gives a first meal on 2025-09-17, 2 school days from review 2025-09-15, at the boundary between levels 2 and 3."
+ },
+ "request": "rec-F403-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009392
+}

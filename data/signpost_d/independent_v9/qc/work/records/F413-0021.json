@@ -1,0 +1,151 @@
+{
+ "id": "F413-0021",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "id": "W17",
+   "tier": "warehouse",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ]
+  },
+  "visit": {
+   "type": "routine",
+   "lic_exp": "2026-03-01",
+   "start": "2025-05-06T09:00",
+   "end": "2025-05-06T10:10",
+   "signoff": "2025-05-06"
+  },
+  "treatments": [
+   {
+    "prod": "GR2",
+    "zone": "Z1",
+    "area_m2": 50,
+    "qty": 0.25,
+    "unit": "kg",
+    "label_max_per_m2": 0.01
+   }
+  ],
+  "monitoring": [
+   {
+    "st": "S3",
+    "act": true,
+    "bait_pct": 20
+   },
+   {
+    "st": "S1",
+    "act": false,
+    "bait_pct": 0
+   },
+   {
+    "st": "S4",
+    "act": true,
+    "bait_pct": 10
+   },
+   {
+    "st": "S2",
+    "act": false,
+    "bait_pct": 5
+   }
+  ],
+  "van_stock": [
+   {
+    "mv": "withdraw",
+    "prod": "GR2",
+    "qty": 255,
+    "unit": "g"
+   }
+  ],
+  "follow_up": {
+   "prev_visit": "V881",
+   "prev_active": 1,
+   "actions": []
+  }
+ },
+ "factors": {
+  "stock_mismatch": "trivial_under_5pct",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": true,
+  "dose_overage_pct": 0.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "warehouse"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "moderate_5_to_25pct",
+  "stock_return_logged": false,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": true,
+  "dose_overage_pct": 60.67,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "warehouse"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 35,
+ "deciding": {
+  "usage_reconciled": "GR2 applied 0.25 kg against 255 g withdrawn, a gap of about 2%, which is a rounding-level difference.",
+  "activity_increased": "2 active stations now against prev_active 1; the rise is only one station, so a reviewer could call it noise.",
+  "next_step": "All four stations checked, dates in order, licence valid, dose within limit and no open actions, so the log can be filed.",
+  "breach_severity": "Applied 0.005 kg/m2 against a label maximum of 0.01, with no record gaps.",
+  "parties_needed": "Nothing is outstanding, so at most the reviewer acts alone."
+ },
+ "request": "rec-F413-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009995
+}

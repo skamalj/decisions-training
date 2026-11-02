@@ -1,0 +1,131 @@
+{
+ "id": "F428-0010",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-502",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 120,
+   "seal_type": "J_bulb"
+  },
+  "inspection": {
+   "asset_id": "VL-502",
+   "insp_date": "2025-02-19",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-02-19",
+    "closure_s": 188,
+    "leakage_l_min": 4,
+    "leakage_limit_l_min": 10,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D1",
+    "component": "anchor",
+    "loss_pct": 35,
+    "grade": 3,
+    "status": "open"
+   },
+   {
+    "code": "D4",
+    "component": "hoist",
+    "grade": 3,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W07",
+     "component": "seal",
+     "grade_raised": 2,
+     "status": "complete",
+     "rated_closure_s": 200,
+     "completed": "2023-09-01"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.57,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 1,
+  "mismatch_location": "rated_closure_time",
+  "test_status": "passed_logged_late_vs_register",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "none",
+  "days_to_forecast_peak": 42,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.57,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "none",
+  "mismatch_count": 1,
+  "mismatch_location": "rated_closure_time",
+  "test_status": "failed",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 42,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_engineer",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "balanced",
+   "target": "structural",
+   "second": "drive_actuation",
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 82,
+ "deciding": {
+  "closure_test_valid": "Test logged result pass with leakage 4 under limit 10; closure_s 188 is within the work order's rated 200 but over the register's 120.",
+  "next_step": "Open grade 3 defects with no scheduled order and a late closure against the register's rated time point to an urgent engineer decision.",
+  "defect_class": "Anchor D1 (structural, 35% loss) and hoist D4 are both grade 3; the measured section loss tips it slightly to structural.",
+  "section_discrepancies": "rated_closure_s 120 in the register against 200 in W07 is the single disagreement; ids and other values match.",
+  "flood_risk": "closure_s 188 against rated 120 is late (High); with two open grade 3 defects and an unclear rated time, Critical is arguable."
+ },
+ "request": "rec-F428-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009068
+}

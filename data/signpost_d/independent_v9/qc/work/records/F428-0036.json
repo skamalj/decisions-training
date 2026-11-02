@@ -1,0 +1,137 @@
+{
+ "id": "F428-0036",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-114",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 300,
+   "seal_type": "J_bulb",
+   "clear_width": 6.0,
+   "clear_width_unit": "m"
+  },
+  "inspection": {
+   "asset_id": "VL-114",
+   "insp_date": "2025-03-10",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-01-20",
+    "closure_s": 477,
+    "leakage_l_min": 9,
+    "leakage_limit_l_min": 20,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D7",
+    "component": "seal",
+    "grade": 1,
+    "length_mm": 200,
+    "status": "open",
+    "first_seen": "2025-01-05"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W81",
+     "component": "hoist",
+     "grade_raised": 2,
+     "status": "complete",
+     "completed": "2025-02-14",
+     "retest_insp_id": null
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "temp_barrier_deployed": true,
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2025-03-21"
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.59,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 2,
+  "mismatch_location": "test_date_vs_repair",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "completed_untested",
+  "mitigation_present": true,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 11,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.59,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 0,
+  "mismatch_location": "test_date_vs_repair",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 11,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "balanced",
+   "target": "seal",
+   "second": "drive_actuation",
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "closure_test_valid": "Test 2025-01-20 predates hoist repair completed 2025-02-14, and closure 477s exceeds rated 300s; no retest linked.",
+  "next_step": "Temporary barrier deployed, only minor defects, peak 11 days away; nothing missing, so file.",
+  "defect_class": "Open seal grade 1 versus hoist work order grade 2; seal is the only open defect, hoist order hints at drive.",
+  "section_discrepancies": "Test predating repair and hoist order grade 2 with no matching defect; a third reading is the late closure, so 2 or 3.",
+  "flood_risk": "Closure 477s vs 300s rated is late (level 2 at least); the stale test could mean it is unproven, hence level 3 possible."
+ },
+ "request": "rec-F428-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005562
+}

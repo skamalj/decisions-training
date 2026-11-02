@@ -1,0 +1,135 @@
+{
+ "id": "F407-0002",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-6102",
+   "received_at": "2025-05-12T14:30:00",
+   "channel": "own_inspector",
+   "photo_ref": "IMG-6102-a",
+   "linked_reports": [],
+   "claim_ref": null
+  },
+  "location": {
+   "usrn": 10098231,
+   "road_class": "main_distributor",
+   "intervention_depth_mm": 40,
+   "speed_limit": 40
+  },
+  "inspection": {
+   "inspector": "HI-04",
+   "inspected_at": "2025-05-13",
+   "depth_mm": 40,
+   "width_mm": 196.39,
+   "offset_m": 15
+  },
+  "works_history": [
+   {
+    "job": "J-7001",
+    "completed": "2023-11-02",
+    "offset_m": null,
+    "guarantee_end": "2024-11-02"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "id": "S-90",
+     "start": "2025-11-03",
+     "extent_m": [
+      200,
+      420
+     ]
+    }
+   ],
+   "temp_measures": [
+    {
+     "type": "steel_plate",
+     "offset_m": 15,
+     "installed": "2025-05-13",
+     "expires": "2025-08-13"
+    }
+   ]
+  },
+  "current_order": null
+ },
+ "factors": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "on_boundary",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 0,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 196.39,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "on_boundary",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_out_guarantee",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 0,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 196.39,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_engineer",
+   "second": "close_no_action",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 76,
+ "deciding": {
+  "meets_threshold": "inspection.depth_mm 40 equals intervention_depth_mm 40, so it is at the threshold.",
+  "repeat_failure": "J-7001 is a street-level entry with offset_m null and its guarantee ended 2024-11-02, so no confirmed same-spot repair.",
+  "next_step": "Threshold met on a main distributor with a possible earlier repair nearby and a temporary plate fitted, so engineer referral versus closing is arguable.",
+  "staff_effort": "Unconfirmed old job to trace, a plate to monitor and a scheme starting only in November suggest more than five days of effort, though not certainly.",
+  "response_timescale": "Plate in place to August and scheme S-90 only starts in November, so no new repair is required now."
+ },
+ "request": "rec-F407-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007329
+}

@@ -1,0 +1,112 @@
+{
+ "id": "F421-0034",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P4",
+   "contents": "tablet 10in",
+   "qty": 1,
+   "kg": 0.6,
+   "value_gbp": 1400.63
+  },
+  "handling_events": [
+   {
+    "site": "DEP",
+    "ev": "INBOUND",
+    "exc": null
+   },
+   {
+    "site": "DEP",
+    "ev": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "observed_item": "tablet 11in",
+   "qty_found": 1,
+   "kg": 0.6,
+   "condition": "screen shattered",
+   "photos": [
+    "d.jpg"
+   ],
+   "repair_est_gbp": 1390
+  }
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 99.2,
+  "declared_value": 1400.63,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.0
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "none",
+  "inspection_state": "complete",
+  "loss_pct": 3.56,
+  "declared_value": 1400.63,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 0.96
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_repack",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "depot_fault": "Clean inbound scan at DEP, then DMG at the DEP sort event.",
+  "contents_match": "Tablet 10in declared against tablet 11in observed; same weight, so a near-miss description keeps it balanced.",
+  "next_step": "Depot-caused, complete report with photo and estimate; repack or write-off is the action, with a small doubt over the size discrepancy.",
+  "loss_share": "repair_est_gbp 1390 on 1400.63 is about 99%, right at the edge of total loss.",
+  "parties_needed": "Near-total loss with a description discrepancy leaves it between several and many teams; no note settles it."
+ },
+ "request": "rec-F421-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007847
+}

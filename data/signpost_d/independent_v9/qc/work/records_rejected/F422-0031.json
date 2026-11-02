@@ -1,0 +1,42 @@
+{
+ "id": "F422-0031",
+ "reason": "205 words (maximum 200)",
+ "plan": {
+  "storage_maintained": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "reject_destroy",
+   "second": "escalate_qp",
+   "targets": [
+    "T1"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "target_words": 53,
+ "raw": "{\"return_header\":{\"id\":\"RT-5101\",\"site\":\"S-204\",\"delivered_at\":\"2025-02-01T09:00\",\"received_at\":\"2025-02-07T10:00\",\"review_date\":\"2025-03-10\",\"reason\":\"DAMAGED_IN_TRANSIT\",\"lines\":[{\"gtin\":\"G1\",\"qty_claimed\":6},{\"gtin\":\"G2\",\"qty_claimed\":4}]},\"dispatch_ref\":{\"no\":\"D-881\",\"date\":\"2025-01-30\",\"lines\":[{\"gtin\":\"G1\",\"batch\":\"A1\",\"expiry\":\"2026-02-28\",\"qty_dispatched\":6},{\"gtin\":\"G2\",\"batch\":\"B2\",\"expiry\":\"2026-02-28\",\"qty_dispatched\":4}]},\"inspection\":{\"lines\":[{\"gtin\":\"G1\",\"batch\":\"A1\",\"expiry\":\"2026-02-28\",\"qty_counted\":6,\"packs_damaged\":5,\"seals_intact\":1},{\"gtin\":\"G2\",\"batch\":\"Z9\",\"expiry\":\"2026-02-28\",\"qty_counted\":3,\"packs_damaged\":2,\"seals_intact\":1}],\"uid_scans\":[{\"uid\":\"u1\",\"status\":\"unknown\"}]},\"temperature\":{\"storage_class\":\"ambient_25\",\"labelled_range\":\"15-25C\",\"logger_id\":\"L-204\",\"logger_start\":\"2025-02-01T14:00\",\"logger_end\":\"2025-02-07T10:30\",\"min_c\":16.0,\"max_c\":27.1,\"minutes_out_of_range\":22,\"stability_ref\":{\"max_hours\":48,\"max_c\":30}},\"customer_compliance\":{\"last_audit\":\"2023-11-30\",\"audit_valid_until\":\"2024-11-30\",\"declaration_received\":false},\"quarantine_control\":{\"location\":\"Q-3\",\"hold_limit_days\":30,\"extension\":{\"approved\":true,\"new_limit_date\":\"2025-03-31\"},\"max_days_out_of_control\":10,\"min_shelf_life_months\":6}}"
+}

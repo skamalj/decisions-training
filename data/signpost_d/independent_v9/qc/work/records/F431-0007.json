@@ -1,0 +1,134 @@
+{
+ "id": "F431-0007",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "sn": "HM2048",
+   "seal_state": "intact",
+   "seal_checked_date": "2024-02-20"
+  },
+  "period_read": {
+   "read_date": "2024-03-28",
+   "reg_kwh": 11205,
+   "src_code": "ENG",
+   "photo_ref": "P-5521"
+  },
+  "history": [
+   {
+    "d": "2023-12-28",
+    "kwh": 9200,
+    "src": "EST"
+   },
+   {
+    "d": "2024-01-28",
+    "kwh": 9400,
+    "src": "EST"
+   },
+   {
+    "d": "2024-02-28",
+    "kwh": 10000,
+    "src": "EST",
+    "same_period_ly_kwh": 800
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW",
+    "E_TPROBE",
+    "E_AIR"
+   ],
+   "flow_temp_c": 68,
+   "return_temp_c": 44
+  },
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2024-03-10",
+   "hdd_current": 262,
+   "hdd_prior_year": 200,
+   "works_orders": [],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "engineer_manual",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.15,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.31,
+  "diagnostic_error_count": 3,
+  "meter_works_order": false,
+  "consecutive_estimates": 5,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "engineer_manual",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.71,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.31,
+  "diagnostic_error_count": 3,
+  "meter_works_order": false,
+  "consecutive_estimates": 5,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "bill_estimate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 61,
+ "deciding": {
+  "meter_fault": "Three active codes E_FLOW, E_TPROBE and E_AIR in diagnostics corroborate a device fault, even with seal intact and delta-T normal.",
+  "billable_actual": "Engineer read with photo is in sequence and the tenancy change on 2024-03-10 gives a mitigating explanation, but the device error codes weaken it.",
+  "next_step": "Three error codes on the meter and a long run of estimates make a flagged estimate the plain route; no extra information is missing.",
+  "staff_effort": "Everything needed is present, so the flagged estimate can be raised in under an hour.",
+  "consumption_deviation": "Period 1205 kWh vs expected 800*262/200=1048 gives a ratio of about 1.15, right on the 15% boundary between levels 0 and 1."
+ },
+ "request": "rec-F431-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009154
+}

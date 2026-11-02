@@ -1,0 +1,325 @@
+{
+ "id": "F410",
+ "domain": "street market trader licence renewals",
+ "role": "Council market licensing officer reviewing street trader licence renewal applications",
+ "setting": "A district council's markets team processes renewals of annual street market trader licences. Each record pulls together the renewal application, the current licence and pitch allocation, compliance documents, the trader's fee account and twelve months of trading history. The officer reviews one renewal at a time and decides how to dispose of it, what inspection it needs, whether insurance is properly evidenced and how many cross-section discrepancies remain unresolved.",
+ "questions": {
+  "pli_term_covered": {
+   "type": "noul",
+   "instructions": "Public liability cover is evidenced for the whole renewed licence term.",
+   "criteria": {
+    "true": "Cover at the required sum spans the full term",
+    "false": "Gap, indemnity shortfall, or renewal only assumed"
+   }
+  },
+  "renewal_disposition": {
+   "type": "choice",
+   "instructions": "What should happen to this renewal application now?",
+   "criteria": {
+    "grant": "Renew as applied; nothing unresolved across any section",
+    "grant_conditional": "Renew with conditions; only minor or mitigated issues remain",
+    "defer": "Hold until one outstanding document or confirmation arrives",
+    "refuse": "Decline; unmitigated lapse or two or more serious breaches"
+   }
+  },
+  "inspection_level": {
+   "type": "choice",
+   "instructions": "What pre-renewal pitch inspection does this record warrant?",
+   "criteria": {
+    "none_needed": "Pitch and stock unchanged, hygiene evidence current where required",
+    "desk_check": "Only documents to verify; any changes already formally approved",
+    "scheduled_visit": "Unapproved pitch or stock change, no food safety gap",
+    "urgent_visit": "Food sold without valid registration or open upheld safety complaint"
+   }
+  },
+  "reversal_time": {
+   "type": "score",
+   "instructions": "How long would it take to fully undo this outcome?",
+   "criteria": [
+    "Could be fully undone within one day",
+    "Needs one to seven days to undo",
+    "Needs eight days to three months to undo",
+    "Cannot be undone within three months"
+   ]
+  },
+  "discrepancy_count": {
+   "type": "score",
+   "instructions": "How many unresolved cross-section discrepancies does this renewal carry?",
+   "criteria": [
+    "No unresolved discrepancies between any sections",
+    "Exactly one unresolved discrepancy found",
+    "Two or three unresolved discrepancies found",
+    "Four or more unresolved discrepancies found"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "pli_cover_gap",
+   "description": "How the public liability policy dates and indemnity compare with the renewed term and the required sum",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "ends_within_14d_of_term_end",
+    "ends_more_than_14d_early",
+    "indemnity_below_required"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "broker_confirmation_held",
+   "description": "A broker renewal confirmation with a new end date covering the term is on file; mitigates a date gap but not an indemnity shortfall",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "commodity_change",
+   "description": "How the commodities on the application differ from those on the current licence",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "synonym_only",
+    "related_non_food_added",
+    "food_added"
+   ],
+   "weights": [
+    0.4,
+    0.2,
+    0.2,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "food_registration_state",
+   "description": "State of food business registration and hygiene rating where food is or will be sold",
+   "kind": "categorical",
+   "values": [
+    "not_applicable",
+    "registered_rating_4_5",
+    "registered_rating_3_or_below",
+    "not_registered"
+   ],
+   "weights": [
+    0.35,
+    0.35,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S3"
+   ]
+  },
+  {
+   "name": "stall_size_delta_m",
+   "description": "Difference in metres between requested stall width and allocated pitch width; council tolerance is 0.25 m",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 1.5,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "variation_approved",
+   "description": "An approved variation on the current licence covers the size or commodity change",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "fee_arrears_gbp",
+   "description": "Pitch fees due minus payments in the ledger; never shown as a single arrears figure",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 420,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "payment_plan_active",
+   "description": "An agreed instalment plan with no missed instalments covers the arrears",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "attendance_ratio",
+   "description": "Markets attended divided by markets allocated over 12 months; licence condition sets a minimum percentage",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.45,
+   "max": 1,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "absences_notified",
+   "description": "Missed markets were notified in advance with accepted reasons such as illness or weather cancellation",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "complaint_profile",
+   "description": "Mix of complaints in the last 12 months by upheld status, category and whether still open",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "not_upheld_only",
+    "upheld_closed",
+    "upheld_open_non_safety",
+    "upheld_open_safety"
+   ],
+   "weights": [
+    0.35,
+    0.2,
+    0.2,
+    0.15,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "holder_ref_mismatch",
+   "description": "How the holder reference and name on the application compare with the current licence",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "transcription_error",
+    "different_holder"
+   ],
+   "weights": [
+    0.7,
+    0.2,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "docs_outstanding",
+   "description": "Number of required documents listed as pending on the application",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "application",
+   "description": "Renewal request: refs, term dates, requested pitch size, commodities, pending documents"
+  },
+  {
+   "name": "licence_current",
+   "description": "Existing licence: holder, expiry, allocated pitch, commodities, conditions, approved variations"
+  },
+  {
+   "name": "compliance_docs",
+   "description": "Insurance policy, required indemnity, broker confirmation, food registration and hygiene rating"
+  },
+  {
+   "name": "account",
+   "description": "Fees due per period, payment ledger entries and any instalment plan"
+  },
+  {
+   "name": "history",
+   "description": "Twelve months of allocations, attendance, absence notices, complaints and enforcement"
+  }
+ ],
+ "rendering_notes": "application: {app_ref, licence_no, holder_ref, holder_name, submitted, term_start, term_end, pitch_req:{market, width_m, depth_m}, commodities:[...], docs_pending:[...]} where docs_pending length = docs_outstanding. licence_current: {licence_no, holder_ref, holder_name, expires, pitch:{market, pitch_no, width_m, depth_m}, commodities:[...], conditions:{min_attendance_pct, max_width_m}, variations:[{type, detail, approved, approved_on}]}. compliance_docs: {pli:{insurer_ref, start, end, indemnity_gbp}, pli_required_gbp, broker_conf:{received, new_end} or null, food_reg:{registered, fhrs_rating, inspected_on} or null}. account: {fees_due:[{period, amount_gbp}], ledger:[{date, amount_gbp, method}], payment_plan:{active, instalments_left, missed} or null}. history: {allocated_12m, attended_12m, absence_notices:[{date, reason, accepted}], complaints:[{date, category, upheld, status}], enforcement_notices}. pli_cover_gap shows only through pli.end versus application.term_end and indemnity_gbp versus pli_required_gbp; broker_conf with new_end on or after term_end appears in about half of gap cases. commodity_change appears as differing lists; synonym_only uses wording like 'coffee' against 'hot drinks' and is a decoy, not a discrepancy. stall_size_delta_m is pitch_req.width_m minus pitch.width_m; values near 0.25 sit on the tolerance boundary. variation_approved appears as a matching entry in variations; non-matching or unapproved variations are decoys. Arrears are derived by summing fees_due minus ledger; the plan mitigates arrears only if active with missed = 0. attendance_ratio is attended_12m / allocated_12m against min_attendance_pct; accepted absence notices offset shortfall. holder_ref_mismatch: transcription_error swaps two digits but name matches; different_holder changes both. Decoys: insurer_ref changing between years, pitch_no differing on a different market day, not-upheld complaints, food_reg present for non-food stalls, ledger refunds. A discrepancy counts as unresolved unless a field elsewhere explains it (approved variation, broker confirmation, active plan, accepted absences). Inspection options apply by highest matching condition. No record contains a risk, decision, status-of-renewal, arrears total or discrepancy count field; all answers must be inferred.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "reversal_time",
+ "next_step": null,
+ "aggravating_factor": null,
+ "design_cost": 0.136972
+}

@@ -1,0 +1,120 @@
+{
+ "id": "F421-0024",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P4",
+   "fragile": false,
+   "contents": "headphones",
+   "qty": 1,
+   "weight_kg": 0.4,
+   "declared_value_gbp": 2379.99
+  },
+  "handling_events": [
+   {
+    "ts": "2024-08-05T07:00",
+    "site": "HUB-S",
+    "ev": "SORT"
+   },
+   {
+    "ts": "2024-08-06T06:30",
+    "site": "DEP",
+    "ev": "INB",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-08-06T08:15",
+   "observed_item": "earbuds",
+   "qty_found": 1,
+   "weight_kg": 0.4,
+   "condition": "minor scuff on case",
+   "photos": [
+    "a"
+   ],
+   "repair_est_gbp": 47.6
+  },
+  "claim": null
+ },
+ "factors": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 2.0,
+  "declared_value": 2379.99,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 1.0
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 72.57,
+  "declared_value": 2379.99,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": true,
+  "note_slant": "absent",
+  "claim_amount_gap": 0.55
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 50,
+ "deciding": {
+  "depot_fault": "The scuff code coincides with the inbound scan and the upstream scan is clean, so timing cannot be established; both answers are defensible, with false slightly ahead.",
+  "contents_match": "Manifest says headphones but the report says earbuds, a different product, though the weight is identical.",
+  "next_step": "Damage is trivial, no claim is filed, and the report is complete, so nothing further is needed.",
+  "loss_share": "Estimate 47.6 against declared 2379.99 is 2%, under the 5% threshold.",
+  "parties_needed": "Only the assessor is involved, with no claim or onward action."
+ },
+ "request": "rec-F421-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007513
+}

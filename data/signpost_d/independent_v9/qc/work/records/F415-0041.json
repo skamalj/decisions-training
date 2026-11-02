@@ -1,0 +1,167 @@
+{
+ "id": "F415-0041",
+ "family": "F415",
+ "state": {
+  "site": {
+   "id": "TB-014",
+   "hours": "07:00-19:00",
+   "closures": [
+    {
+     "from": "2024-05-14T09:00",
+     "to": "2024-05-14T12:00",
+     "reason": "drain jetting",
+     "approved_by": "OFF-22"
+    }
+   ]
+  },
+  "shift": {
+   "date": "2024-05-14",
+   "start": "07:00",
+   "end": "19:00",
+   "sched_slots": [
+    "07:30",
+    "10:00",
+    "12:30",
+    "14:00",
+    "16:00",
+    "18:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "07:30",
+    "status": "done",
+    "start": "07:32",
+    "end": "07:55"
+   },
+   {
+    "slot": "12:30",
+    "status": "done",
+    "start": "12:31",
+    "end": "12:54"
+   },
+   {
+    "slot": "14:00",
+    "status": "not_recorded",
+    "checklist": null,
+    "photo_ref": null,
+    "op_note": "14:00 clean done, logged late"
+   },
+   {
+    "slot": "16:00",
+    "status": "done",
+    "start": "16:01",
+    "end": "16:22"
+   },
+   {
+    "slot": "18:00",
+    "status": "done",
+    "start": "18:02",
+    "end": "18:25"
+   }
+  ],
+  "faults": [
+   {
+    "type": "blocked_pan",
+    "reported_at": "2024-05-14T09:10",
+    "remedied_at": "2024-05-14T11:38",
+    "source": "staff"
+   }
+  ],
+  "sign_off": {
+   "signer_id": "S41",
+   "signer_role": "supervisor",
+   "signed_at": "2024-05-14T18:40"
+  },
+  "history": {
+   "defaults_90d": 3
+  }
+ },
+ "factors": {
+  "scheduled_slots": 6,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 148.28,
+  "block_closed_during_fault": true,
+  "checklist_completion": "absent",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 3
+ },
+ "factors_sampled": {
+  "scheduled_slots": 6,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "unauthorised_signer",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 148.28,
+  "block_closed_during_fault": false,
+  "checklist_completion": "absent",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 3
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 104,
+ "deciding": {
+  "missed_clean": "The 14:00 slot is not_recorded with no checklist or photo and no closure covering it (closure is 09:00-12:00), but the op_note says the clean was done and logged late.",
+  "sign_off_valid": "A supervisor signed at 18:40, after the last visit ended at 18:25.",
+  "next_step": "Five visits are recorded, the fault was remedied and the sign-off is valid, so the only lapse is a late log entry and nothing needs follow-up.",
+  "staff_effort": "Nothing is outstanding apart from one late-logged entry, so it takes under an hour.",
+  "fault_exposure": "The blocked pan was open 09:10-11:38, entirely inside the approved 09:00-12:00 closure, so no fault was open while the block was public."
+ },
+ "request": "rec-F415-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007844
+}

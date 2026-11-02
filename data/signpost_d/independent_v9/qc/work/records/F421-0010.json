@@ -1,0 +1,142 @@
+{
+ "id": "F421-0010",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P7716",
+   "service": "standard",
+   "fragile": true,
+   "contents": "glass tumblers",
+   "qty": 4,
+   "weight_kg": 3.2,
+   "declared_value_gbp": 412.29
+  },
+  "handling_events": [
+   {
+    "ts": "2024-09-14T02:10",
+    "site": "HUB-N",
+    "code": "SORT",
+    "exc": "CRUSH"
+   },
+   {
+    "ts": "2024-09-14T05:00",
+    "site": "HUB-N",
+    "code": "SORT",
+    "exc": "ADDR"
+   },
+   {
+    "ts": "2024-09-14T09:20",
+    "site": "DEP-M",
+    "code": "INB",
+    "exc": null
+   },
+   {
+    "ts": "2024-09-14T10:05",
+    "site": "DEP-M",
+    "code": "CONV-STD",
+    "exc": null
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": null,
+   "inspector": "RB",
+   "observed_item": "glass tumblers",
+   "qty_found": 3,
+   "weight_kg": 3.2,
+   "condition": "box split, most glass broken",
+   "photos": [
+    "img_2210.jpg"
+   ],
+   "repair_est_gbp": null
+  },
+  "claim": {
+   "claim_id": "C-5518",
+   "claimed_gbp": 507.7,
+   "item_desc": "4 glass tumblers",
+   "packaging_desc": "single-wall box, no void fill",
+   "submitted": "2024-09-16"
+  },
+  "notes": [
+   "Sort team: fragile parcel went down the standard conveyor, probably our fault.",
+   "Needs hub, carrier, sender, claims, insurer."
+  ]
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "quantity",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 58.36,
+  "declared_value": 412.29,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": true,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 2.11
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "quantity",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 58.36,
+  "declared_value": 412.29,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": true,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 2.11
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_supervisor",
+   "second": "close_no_action",
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 153,
+ "deciding": {
+  "depot_fault": "Upstream CRUSH at HUB-N (ADDR is a decoy) against CONV-STD on a fragile parcel at the depot plus a note admitting fault.",
+  "contents_match": "Same item, but qty_found 3 vs manifest 4 and the box is split, so a piece may have been lost or broken.",
+  "next_step": "Claim of 507.70 exceeds declared value and liability is disputed (upstream crush vs depot misroute), which suggests escalation; inspection is incomplete and the damage could be treated as minor, so closing is arguable.",
+  "loss_share": "Condition 'box split, most glass broken' with 3 of 4 found, so loss is major but not written off.",
+  "parties_needed": "Note names hub, carrier, sender, claims and insurer, but some may be dropped, leaving three or four."
+ },
+ "request": "rec-F421-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007462
+}

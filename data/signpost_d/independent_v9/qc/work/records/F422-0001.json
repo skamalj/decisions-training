@@ -1,0 +1,158 @@
+{
+ "id": "F422-0001",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-5521",
+   "site": "C-1042",
+   "delivered_at": "2025-03-03T09:00",
+   "received_at": "2025-03-09T10:00",
+   "review_date": "2025-03-20",
+   "reason": "OVERSTOCK",
+   "lines": [
+    {
+     "gtin": "G1",
+     "qty_claimed": 40
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "D-881",
+   "lines": [
+    {
+     "gtin": "G1",
+     "batch": "B71",
+     "expiry": "2026-07-31",
+     "qty_dispatched": 40
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G1",
+     "batch": "B71",
+     "expiry": "2026-07-31",
+     "qty_counted": 37,
+     "packs_damaged": 28,
+     "seals_intact": 9
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "decommissioned",
+     "decommission_site": "S-77",
+     "decommission_at": "2024-11-02"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "cold_2_8",
+   "labelled_range": "2-8C",
+   "logger_id": "L9",
+   "logger_start": "2025-03-03T15:00",
+   "logger_end": "2025-03-09T08:00",
+   "min_c": 2.1,
+   "max_c": 9.4,
+   "minutes_out_of_range": 118,
+   "stability_ref": null
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-12-01",
+   "declaration_received": true
+  },
+  "quarantine_control": {
+   "location": "Q3",
+   "hold_limit_days": 14,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-04-04"
+   },
+   "max_days_out_of_control": 10,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 118,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 3,
+  "damaged_pack_fraction": 0.76,
+  "uid_alert": true,
+  "uid_alert_explained": false,
+  "days_out_of_control": 6,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 15,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 16
+ },
+ "factors_sampled": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 118,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 3,
+  "damaged_pack_fraction": 0.76,
+  "uid_alert": true,
+  "uid_alert_explained": false,
+  "days_out_of_control": 6,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 15,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 16
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "reject_destroy",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 59,
+ "deciding": {
+  "storage_maintained": "Cold 2-8C but max_c 9.4 with 118 minutes out of range, no stability_ref, and the logger starts after delivery and ends before receipt.",
+  "batch_traceable": "Counted batch B71 matches the dispatch line exactly; the 3-pack shortfall and UID alert leave some doubt.",
+  "next_step": "The cold excursion without allowance plus 28 of 37 packs damaged and a decommissioned UID from another site means nothing is resaleable, so destroy the whole return.",
+  "resaleable_share": "With the excursion, damage and unexplained UID, no pack is fit (level 0). This departs from the planned level 3 to stay consistent with the clear destroy decision.",
+  "disposition_urgency": "Extension approved with new_limit_date 2025-04-04, which is 15 days after the 2025-03-20 review (level 1)."
+ },
+ "request": "rec-F422-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.017261
+}

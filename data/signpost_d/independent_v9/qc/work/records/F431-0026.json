@@ -1,0 +1,126 @@
+{
+ "id": "F431-0026",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "H1",
+   "seal_state": "broken",
+   "seal_checked_date": "2024-03-02"
+  },
+  "period_read": {
+   "read_date": "2024-03-31",
+   "reg_kwh": 12680,
+   "src_code": "CUS",
+   "photo_ref": "P11"
+  },
+  "history": [
+   {
+    "date": "2024-02-29",
+    "reg_kwh": 10000,
+    "src_code": "EST",
+    "same_period_ly_kwh": 1000
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW",
+    "E_TPROBE",
+    "E_AIR",
+    "E_COMMS"
+   ],
+   "flow_temp_c": 70,
+   "return_temp_c": 45
+  },
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2024-03-10",
+   "hdd_current": 134,
+   "hdd_prior_year": 100,
+   "works_orders": [
+    {
+     "type": "METER_EXCH",
+     "status": "open",
+     "date": "2024-03-02"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 2.0,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.34,
+  "diagnostic_error_count": 4,
+  "meter_works_order": true,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "register_rollback",
+  "missing_section": "none",
+  "consumption_ratio": 0.44,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.34,
+  "diagnostic_error_count": 4,
+  "meter_works_order": true,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 29,
+ "deciding": {
+  "meter_fault": "Four error codes (E_FLOW, E_TPROBE, E_AIR, E_COMMS), a broken seal and an open METER_EXCH works order dated the seal check corroborate a device fault.",
+  "billable_actual": "Customer read with photo, in sequence, but consumption is 2680 kWh against expected 1340 (1000*134/100) and the device shows faults, so it is balanced.",
+  "next_step": "Photo-backed, in-sequence read with a tenancy change explaining some of the rise and the seal break matched to a works order date, so release leans; the faults leave some doubt.",
+  "staff_effort": "Open works order and error codes need a short check of the exchange status, which is around one hour either way.",
+  "consumption_deviation": "Consumption 12680-10000=2680 vs expected 1340 is exactly 100% above, on the boundary of levels 2 and 3."
+ },
+ "request": "rec-F431-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009637
+}

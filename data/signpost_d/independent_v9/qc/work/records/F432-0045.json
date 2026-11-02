@@ -1,0 +1,170 @@
+{
+ "id": "F432-0045",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E18",
+   "risk_cat": 2,
+   "roster": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6",
+    "e7",
+    "e8"
+   ],
+   "temp_range_c": [
+    15,
+    27
+   ],
+   "active_vet_case": true
+  },
+  "shift": {
+   "end": "18:00",
+   "opening_count": 8,
+   "closing_count": 8
+  },
+  "movements": [
+   {
+    "animal_id": "e2",
+    "direction": "out",
+    "time": "09:15",
+    "dest": "E40"
+   },
+   {
+    "animal_id": "e2",
+    "direction": "in",
+    "time": "15:40",
+    "dest": "E40"
+   }
+  ],
+  "feeding": {
+   "items": [
+    {
+     "sheet_g": 1000,
+     "offered_g": 1200,
+     "leftover_g": 120
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched_time": "10:00",
+    "logged": true,
+    "temp_c": 21
+   },
+   {
+    "sched_time": "14:00",
+    "logged": true,
+    "temp_c": 22
+   },
+   {
+    "sched_time": "17:00",
+    "logged": true,
+    "temp_c": 21
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "A",
+     "time": "17:30"
+    }
+   ],
+   "ticket_state": null
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 1.08,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 0,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "unexplained_off_by_one",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 1.08,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 5,
+  "cctv_cover": true,
+  "temp_excursion": "brief_single_reading",
+  "heater_maintenance_window": false,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 1,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "missed_rounds": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 34,
+ "deciding": {
+  "count_reconciles": "Opening 8 and closing 8 with e2 logged out at 09:15 and back in at 15:40 nets to zero; the round trip leaves slight doubt.",
+  "secure_at_close": "Door A is checked at 17:30, after the 17:00 round, with no barrier ticket.",
+  "next_step": "All rounds are logged, temperatures are in range, intake is full and the door is checked, so the log can be filed.",
+  "intake_shortfall": "Offered 1200 less leftover 120 is 1080 g against a 1000 g sheet, 108%.",
+  "missed_rounds": "All three scheduled rounds have logged true."
+ },
+ "request": "rec-F432-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011057
+}

@@ -1,0 +1,129 @@
+{
+ "id": "F417-0040",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V-505",
+   "loa_m": 14.24,
+   "draught_m": 2.4,
+   "draught_src": "survey",
+   "home_port": "Poole",
+   "beam_m": 4.2
+  },
+  "berth": {
+   "id": "Q5",
+   "max_loa_m": 14.0,
+   "fender_allow_m": 0.3,
+   "depth_lat_m": 2.45,
+   "waiver_ref": null
+  },
+  "booking": {
+   "arrival": "2025-10-15",
+   "departure": "2025-10-19",
+   "nights": 4,
+   "next_on_berth": {
+    "arrival": "2025-10-25"
+   }
+  },
+  "documents": {
+   "survey": {
+    "date": "2022-03-10",
+    "loa_m": 14.4,
+    "draught_m": 2.4
+   },
+   "insurance_expiry": "2026-05-01",
+   "inspection_date": null,
+   "inspection_booked": true
+  },
+  "account": {
+   "dues_outstanding_gbp": 2196,
+   "deposit_paid": true,
+   "plan_id": "PP-31",
+   "plan_status": "approved",
+   "credit_balance_gbp": 0
+  },
+  "history": [
+   {
+    "date": "2024-10-02",
+    "berth": "Q5",
+    "incidents": 0
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 1.13,
+  "berth_length_fit": "exceeds_limit",
+  "ukc_margin_m": 0.05,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 2196,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 1.13,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 1.63,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 2196,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "confirm_allocation",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "document_gap",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 140,
+ "deciding": {
+  "length_fits": "Survey loa 14.4 is 0.1 over max 14.0 plus fender 0.3 = 14.3 with no waiver; the margin is slight.",
+  "next_step": "Insurance valid, plan approved, no date overlap and inspection booked; the minor items do not stop the allocation.",
+  "primary_issue": "inspection_date null with inspection_booked true is the only gap in documents; the dues are under an approved plan.",
+  "ukc_band": "Depth 2.45 minus survey draught 2.4 = 0.05 m, almost nil and close to the grounding line.",
+  "unresolved_count": "Declared 14.24 vs survey 14.4 is a slight difference and survey loa slightly exceeds the berth limit; inspection pending is a third possible item, so one or two."
+ },
+ "request": "rec-F417-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01351
+}

@@ -1,0 +1,126 @@
+{
+ "id": "F404-0002",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "K1",
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty"
+  },
+  "children": {
+   "booked": 9,
+   "slots": [
+    {
+     "from": "10:00",
+     "to": "11:14",
+     "signed_in": 13
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S07",
+    "qual": 3,
+    "counts": true
+   },
+   {
+    "id": "S08",
+    "qual": 3,
+    "counts": true
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S07",
+    "in": "08:00",
+    "out": "16:00"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F2",
+    "room": "K1",
+    "from": "10:00",
+    "to": "11:14",
+    "countersigned_by": null
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 4
+  }
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 13,
+  "staff_signin_variance": "absent",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 74,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 13,
+  "staff_signin_variance": "absent",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 74,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "hold_confirm",
+   "second": "corrective_plan",
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 42,
+ "deciding": {
+  "below_ratio": "13 children need 2 staff (no L6 on rota) and only S07 signed in 10:00-11:14; S08 is absent. The F2 cover for K1 is unsigned, so the breach is probable but not confirmed.",
+  "disposition": "Cover entry F2 has countersigned_by null, so a confirmation is missing (hold), while four prior breaches and the 74-minute gap support a plan instead.",
+  "primary_cause": "Only one staff signed in versus two rostered, plus 4 children over bookings; the none_found lean is weak and does not fit a gap.",
+  "shortfall_duration": "The gap window is 74 minutes, in the sixteen-to-sixty or over-sixty range depending on whether the unsigned cover is trusted; it exceeds sixty if uncovered.",
+  "breach_severity": "13 children with one eligible adult (capacity 8) leaves 5 beyond cover, or fewer if the unsigned floater is counted."
+ },
+ "request": "rec-F404-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011484
+}

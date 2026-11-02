@@ -1,0 +1,165 @@
+{
+ "id": "F435-0045",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E505",
+   "zone_id": "S2",
+   "zone_type": "seated_tier",
+   "doors_open": "2025-07-12T18:00",
+   "check_filed_at": "2025-07-12T23:30",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 400,
+   "variation": null,
+   "stewards_required": 30,
+   "exit_routes": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5",
+    "r6"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 400,
+   "issued": 352,
+   "scanned_in": 349
+  },
+  "ingress": {
+   "device_status": "calibration_due",
+   "raw_peak": 456,
+   "manual_recount": {
+    "count": 456,
+    "at": "2025-07-12T20:00"
+   }
+  },
+  "stewarding": {
+   "rostered": 30,
+   "signed_in": 29,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "r1",
+    "checked_at": "2025-07-12T17:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "r2",
+    "checked_at": "2025-07-12T17:32",
+    "status": "clear"
+   },
+   {
+    "route_id": "r3",
+    "checked_at": "2025-07-12T17:35",
+    "status": "clear"
+   },
+   {
+    "route_id": "r4",
+    "checked_at": "2025-07-12T17:38",
+    "status": "clear"
+   },
+   {
+    "route_id": "r5",
+    "checked_at": "2025-07-12T17:40",
+    "status": "clear"
+   },
+   {
+    "route_id": "r6",
+    "checked_at": "2025-07-12T17:50",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "r6",
+    "checked_at": "2025-07-12T18:20",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "seated_tier",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.14,
+  "counter_status": "calibration_due",
+  "counter_inflation": 0.06,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.88,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.03,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 1,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "seated_tier",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.14,
+  "counter_status": "calibration_due",
+  "counter_inflation": 0.06,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.88,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.03,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 3,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "verified_exceedance": "There is no variation, so the limit is 400. The device is only calibration_due, so raw_peak 456 stands, and the recount of 456 confirms it, 14% over.",
+  "disposition": "The event is post_event and a verified 456 against 400 is a breach, so refer it to the licensing authority.",
+  "discrepancy_source": "Issued 352 is under the limit used of 400, and the counter is not faulty because the recount matches. The excess is therefore not explained by ticketing or the counter.",
+  "steward_shortfall": "29 signed in against 30 required is one short, about 3%, which is nearly met.",
+  "unconfirmed_exits": "Route r6 was obstructed at 17:50 and its only clear entry is at 18:20, after doors. The other five routes were clear before doors."
+ },
+ "request": "rec-F435-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015789
+}

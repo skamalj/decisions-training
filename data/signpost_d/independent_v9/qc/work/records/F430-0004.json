@@ -1,0 +1,142 @@
+{
+ "id": "F430-0004",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "SS-350",
+   "assets": [
+    {
+     "id": "B1",
+     "unit": "V",
+     "normal_band": [
+      124,
+      130
+     ],
+     "alarm_limit": 118,
+     "trip_limit": 110,
+     "partner_id": null,
+     "customers_fed": 0
+    }
+   ]
+  },
+  "round": {
+   "id": "RD-7003",
+   "date": "2024-08-02",
+   "scheduled_assets": [
+    "B1"
+   ],
+   "inspector_note": "Routine visit."
+  },
+  "readings": [
+   {
+    "asset_id": "B1",
+    "param": "float_voltage",
+    "value": 127,
+    "unit": "V",
+    "timestamp": "2024-08-02T11:00:00"
+   }
+  ],
+  "defects": [],
+  "history": {
+   "previous_round": [
+    {
+     "asset_id": "B1",
+     "param": "float_voltage",
+     "value": 127
+    }
+   ],
+   "open_work_orders": [],
+   "permits": []
+  },
+  "network": {
+   "outage_plan": [],
+   "partner_status": {}
+  }
+ },
+ "factors": {
+  "worst_reading_band": "normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "none",
+  "benign_cause_covers": false,
+  "defect_claim": "none_logged",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 0,
+  "trivial_discrepancies": 0,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": true,
+  "redundancy_state": "no_partner",
+  "customers_fed": 4135,
+  "trivial_discrepancies": 3,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "clear",
+   "target": "file_closed",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 137,
+ "deciding": {
+  "defect_corroborated": "No defects logged, so none is corroborated.",
+  "benign_explanation": "Battery 127 V is in band; nothing abnormal to explain.",
+  "follow_up": "All read, in band, stable, no defects: file closed.",
+  "limit_deviation": "127 V sits inside the 124-130 band.",
+  "supply_exposure": "No open defect; battery asset feeds zero customers."
+ },
+ "request": "rec-F430-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006385
+}

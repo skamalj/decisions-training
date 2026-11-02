@@ -1,0 +1,132 @@
+{
+ "id": "F421-0031",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P1",
+   "qty": 1,
+   "contents": "office chair",
+   "kg": 4.0,
+   "value_gbp": 1708.23
+  },
+  "handling_events": [
+   {
+    "ts": "2024-03-04T08:00",
+    "site": "HubA",
+    "ev": "SCAN",
+    "exc": "ADDR"
+   },
+   {
+    "ts": "2024-03-05T06:10",
+    "site": "DEP",
+    "ev": "INBOUND",
+    "exc": null
+   },
+   {
+    "ts": "2024-03-05T09:30",
+    "site": "DEP",
+    "ev": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-03-05T10:00",
+   "observed_item": "office chair",
+   "qty_found": 1,
+   "kg": 3.1,
+   "condition": "scuffed armrest",
+   "photos": [
+    "a.jpg"
+   ],
+   "repair_est_gbp": 30
+  },
+  "claim": null,
+  "notes": [
+   "Minor scuff, wipes clean."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "complete",
+  "loss_pct": 1.76,
+  "declared_value": 1708.23,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.0
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 79.86,
+  "declared_value": 1708.23,
+  "scan_order_anomaly": true,
+  "tamper_signs": true,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 2.13
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 77,
+ "deciding": {
+  "depot_fault": "Clean inbound scan at DEP, then DMG at the DEP sort event; only an ADDR decoy upstream.",
+  "contents_match": "Item name and quantity agree, but weight is 3.1 kg against 4.0 kg declared (about 22% lower), which keeps it balanced.",
+  "next_step": "Inspection complete with photo, no claim, trivial repair estimate, nothing outstanding.",
+  "loss_share": "repair_est_gbp 30 against declared 1708.23 is about 1.8%, under 5%.",
+  "parties_needed": "Minor scuff that wipes clean; one person can close it."
+ },
+ "request": "rec-F421-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007847
+}

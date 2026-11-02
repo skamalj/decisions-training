@@ -1,0 +1,137 @@
+{
+ "id": "F438-0026",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E1041",
+   "los": 3
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "J18.9"
+   },
+   "comorbidities": [
+    "I10"
+   ]
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "J18.1"
+   },
+   "secondary_dx": [
+    "I10"
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "DZ11K",
+   "hrg_regrouped": "DZ11L",
+   "tariff_submitted": 2410,
+   "tariff_regrouped": 2380,
+   "submitted_to_commissioner": true
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    {
+     "code_pair": [
+      "J18.1",
+      "J18.9"
+     ]
+    }
+   ],
+   "queries": [
+    {
+     "target_code": "J18.1",
+     "status": "closed",
+     "response": "confirms"
+    }
+   ]
+  },
+  "coder_history": {
+   "error_rate": 0.1,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "none",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.1,
+  "boundary_case": true,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "date_or_side_differs",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "none",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.1,
+  "boundary_case": true,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "hrg_shift": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "error_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 68,
+ "deciding": {
+  "primary_supported": "Coded J18.1 differs from documented J18.9 at the fourth character, but an approved local convention for that pair and a closed confirming query cover it.",
+  "hrg_shift": "hrg_submitted DZ11K differs from hrg_regrouped DZ11L.",
+  "next_step": "Secondary codes match, the code difference is covered by a convention, and the query is closed and confirming, so nothing is left to change.",
+  "error_count": "The only difference is the convention-covered pair and secondary diagnoses are identical, so no errors.",
+  "error_severity": "No code needs altering: the convention and the confirming query account for the one difference."
+ },
+ "request": "rec-F438-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009977
+}

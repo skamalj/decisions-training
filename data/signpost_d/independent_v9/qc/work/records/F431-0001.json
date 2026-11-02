@@ -1,0 +1,115 @@
+{
+ "id": "F431-0001",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM4417",
+   "seal_state": null
+  },
+  "period_read": {
+   "read_date": "2024-04-02",
+   "reg_kwh": 12790,
+   "src_code": "CUS",
+   "photo_ref": "IMG-2291"
+  },
+  "history": [
+   {
+    "date": "2024-03-01",
+    "reg_kwh": 12000,
+    "src": "EST",
+    "ly_kwh": 800
+   }
+  ],
+  "diagnostics": {
+   "error_codes": []
+  },
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2024-03-15",
+   "hdd_current": 490,
+   "hdd_prior_year": 500,
+   "works_orders": [],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.01,
+  "occupancy_change": true,
+  "degree_day_ratio": 0.98,
+  "diagnostic_error_count": 0,
+  "meter_works_order": false,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "not_recorded",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "none",
+  "consumption_ratio": 2.24,
+  "occupancy_change": true,
+  "degree_day_ratio": 0.98,
+  "diagnostic_error_count": 0,
+  "meter_works_order": false,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "not_recorded",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 36,
+ "deciding": {
+  "meter_fault": "No errors, no works order, seal not recorded; normal consumption, but little device evidence either way.",
+  "billable_actual": "Customer-submitted read with photo after an estimate, in sequence and plausible; customer source and occupancy change leave modest doubt.",
+  "next_step": "Consumption of 790 kWh against about 784 expected and no flags, so release.",
+  "staff_effort": "Nothing outstanding; a quick check at most.",
+  "consumption_deviation": "790 kWh actual against 800*490/500=784 expected, about 1% deviation."
+ },
+ "request": "rec-F431-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007098
+}

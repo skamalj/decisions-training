@@ -1,0 +1,127 @@
+{
+ "id": "F417-0045",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V505",
+   "loa_m": 10.6,
+   "draught_m": 1.9,
+   "draught_src": null
+  },
+  "berth": {
+   "id": "P9",
+   "max_loa_m": 10.5,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 2.9,
+   "waiver_ref": "W-77",
+   "waiver_expiry": "2025-09-10"
+  },
+  "booking": {
+   "arrival": "2025-09-06",
+   "departure": "2025-09-12",
+   "next_on_berth": "2025-09-11"
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 10.99,
+    "draught_m": null
+   },
+   "insurance_expiry": "2026-02-01",
+   "inspection_date": "2025-08-20"
+  },
+  "account": {
+   "dues_outstanding_gbp": 2595,
+   "plan_id": "P31",
+   "plan_status": "approved"
+  },
+  "history": [
+   {
+    "d": "2024-09-05",
+    "berth": "P9",
+    "inc": 0
+   },
+   {
+    "d": "2023-09-04",
+    "berth": "P9",
+    "inc": 0
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 3.67,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 1.0,
+  "draught_source": "null",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 2595,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "one_night",
+  "trusted_regular": true,
+  "prior_incidents": 0,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 3.67,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 0.46,
+  "draught_source": "null",
+  "insurance_status": "expires_during_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 2595,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 0,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "refer_harbourmaster",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "contested",
+   "target": "dimension_mismatch",
+   "second": "date_conflict",
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "length_fits": "Survey loa 10.99 is just under max_loa 10.5 plus 0.5 allowance (11.0) and above the nominal max.",
+  "next_step": "Waiver W-77 expires 2025-09-10 before departure 2025-09-12 and next_on_berth 2025-09-11 overlaps; a lapsing waiver is for the harbour master.",
+  "primary_issue": "Waiver lapse over a loa above nominal max competes with the one-night overlap on the next booking.",
+  "ukc_band": "Depth 2.9 minus unverified draught 1.9 is 1.0 m, on the ample/adequate boundary, with no surveyed draught.",
+  "unresolved_count": "Waiver expiring before departure and the 09-11 next booking overlap are two; the declared 10.6 vs survey 10.99 gap may be a third or absorbed."
+ },
+ "request": "rec-F417-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012082
+}

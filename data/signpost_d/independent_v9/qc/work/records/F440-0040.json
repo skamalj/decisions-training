@@ -1,0 +1,122 @@
+{
+ "id": "F440-0040",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "review": "2025-05-01",
+   "arrival": "2025-06-01",
+   "diet": {
+    "veg": 3
+   }
+  },
+  "roster": [
+   {
+    "role": "leader",
+    "n": 2
+   },
+   {
+    "role": "participant",
+    "n": 14,
+    "dob": "2010",
+    "veg": 4
+   }
+  ],
+  "payment": {
+   "due": 200,
+   "paid": 200,
+   "paid_on": null
+  },
+  "safeguarding": [
+   {
+    "status": "verified"
+   },
+   {
+    "status": "pending"
+   }
+  ],
+  "history": {
+   "stays": 3,
+   "no_shows": 3,
+   "trusted": false
+  }
+ },
+ "factors": {
+  "pax_mismatch": "none",
+  "night_mismatch": "none",
+  "amendment_logged": false,
+  "supervision_level": "comfortable",
+  "extra_cover_logged": false,
+  "deposit_position": "paid_date_unknown",
+  "instalment_approved": false,
+  "days_to_arrival": 31,
+  "dorm_fit": "fits",
+  "leader_checks": "one_pending",
+  "trusted_organiser": false,
+  "prior_no_shows": 3,
+  "diet_count_drift": "minor"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "none",
+  "night_mismatch": "none",
+  "amendment_logged": false,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": true,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 79,
+  "dorm_fit": "fits",
+  "leader_checks": "one_pending",
+  "trusted_organiser": true,
+  "prior_no_shows": 3,
+  "diet_count_drift": "minor"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "decline",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "ratio_met": "14 participants aged 15 need 2 adults and there are 2 leaders, with no early departures.",
+  "deposit_covered": "paid 200 equals due 200, but paid_on is null, so the receipt date is unconfirmed.",
+  "disposition": "History shows 3 no-shows in 3 stays and the organiser is untrusted, with one check pending; this points to declining, though a hold is conceivable.",
+  "urgency": "Review 05-01 to arrival 06-01 is 31 days, just beyond the 30-day line.",
+  "conflict_count": "Booked veg 3 vs roster flags 4 is the only mismatch and is trivial, so the count is 1 or arguably 0."
+ },
+ "request": "rec-F440-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.018845
+}

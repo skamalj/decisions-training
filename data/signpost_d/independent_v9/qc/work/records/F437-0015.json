@@ -1,0 +1,145 @@
+{
+ "id": "F437-0015",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v3",
+   "due_at": "2024-07-02T18:00",
+   "workflow": [
+    {
+     "step": "dtp",
+     "done_at": "2024-07-01T15:00"
+    }
+   ]
+  },
+  "source": {
+   "version": "v3",
+   "segment_count": 88
+  },
+  "deliverable": {
+   "built_from_version": "v3",
+   "segments_translated": 88,
+   "delivered_at": "2024-07-02T09:00"
+  },
+  "qa_report": {
+   "flags": 10,
+   "false_positive_marked": 6,
+   "number_mismatches": [
+    {
+     "source": "15",
+     "target": "51"
+    },
+    {
+     "source": "3.2",
+     "target": "3,2"
+    },
+    {
+     "source": "2024",
+     "target": "2042"
+    }
+   ],
+   "unresolved": {
+    "minor": 1,
+    "major": 0,
+    "critical": 1
+   }
+  },
+  "review": {
+   "completed_at": "2024-07-02T08:00",
+   "signed_off": true,
+   "errors": [
+    {
+     "severity": "critical",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2024-06-20",
+    "2024-06-26"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "critical",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.6,
+  "number_mismatch_count": 3,
+  "deadline_slack_hours": 9,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.6,
+  "number_mismatch_count": 3,
+  "deadline_slack_hours": 9,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": true
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 54,
+ "deciding": {
+  "scope_matches": "Versions are all v3 and segments are 88/88.",
+  "reviewed_in_time": "review.completed_at 08:00 with signed_off true precedes delivered_at 09:00 the same day.",
+  "next_step": "Sign-off is done, the DTP step has done_at set, and delivery is 9h before the deadline.",
+  "open_severity": "QA unresolved shows critical 1; the review's only critical is closed, so the critical comes from QA and a reader may question it.",
+  "parties_needed": "Three number mismatches plus a critical QA item need translator, reviewer and PM, and possibly DTP or an account manager, so 3-4 vs 5 or more."
+ },
+ "request": "rec-F437-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010095
+}

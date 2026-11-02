@@ -1,0 +1,320 @@
+{
+ "id": "F405",
+ "domain": "university timetable room clash reviews",
+ "role": "Central timetabling officer reviewing room clash reports",
+ "setting": "A university timetabling office receives automatically detected room clash reports during term planning and live teaching weeks. For each report the officer reconciles the two bookings against the room record, any listed free rooms and the change history, then decides whether the clash is real, what to do with it and how soon it bites.",
+ "questions": {
+  "genuine_clash": {
+   "type": "noul",
+   "instructions": "Both bookings occupy the same physical room at overlapping times.",
+   "criteria": {
+    "true": "Room, teaching weeks and times overlap after reconciliation.",
+    "false": "Reconciled weeks, times or rooms show no overlap."
+   }
+  },
+  "alt_room_fits": {
+   "type": "noul",
+   "instructions": "A listed free room meets the displaced booking's capacity and features.",
+   "criteria": null
+  },
+  "resolution": {
+   "type": "choice",
+   "instructions": "What should the officer do with this clash report?",
+   "criteria": {
+    "dismiss": "No overlap remains once weeks, times and room codes reconciled.",
+    "hold_confirm": "Overlap exists but one booking's status or pending change unconfirmed.",
+    "relocate": "Both bookings confirmed and a listed free room fits one.",
+    "reschedule": "Both confirmed, no listed room fits; a teaching time must move."
+   }
+  },
+  "urgency": {
+   "type": "score",
+   "instructions": "How soon does the first clashing occurrence fall after the report?",
+   "criteria": [
+    "Distant: first clashing occurrence more than 28 days away",
+    "Upcoming: first clashing occurrence 8 to 28 days away",
+    "Imminent: first clashing occurrence 1 to 7 days away",
+    "Live: first clashing occurrence today or already passed"
+   ]
+  },
+  "parties_needed": {
+   "type": "score",
+   "instructions": "How many separate people or teams must act to resolve this?",
+   "criteria": [
+    "One person can resolve it alone",
+    "Two people or teams must act",
+    "Three or four people or teams must act",
+    "Five or more people or teams must act"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "overlap_type",
+   "description": "True relationship between the two bookings once times and teaching weeks are compared; only full and partial_time are genuine clashes.",
+   "kind": "categorical",
+   "values": [
+    "full",
+    "partial_time",
+    "week_pattern_disjoint",
+    "adjacent_no_overlap"
+   ],
+   "weights": [
+    0.4,
+    0.25,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "room_code_alias",
+   "description": "Booking B cites the room by an alternative code (building-floor-number versus short name) that maps to the same room via the room section; a decoy mismatch that is not a real difference.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "wrong_room_variant",
+   "description": "Booking B actually references a neighbouring room whose code differs by one character and is not listed among the room's aliases, meaning no genuine clash.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.1,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "booking_b_status",
+   "description": "Approval state of the second booking; anything other than confirmed points towards holding.",
+   "kind": "categorical",
+   "values": [
+    "confirmed",
+    "provisional",
+    "pending_approval",
+    "cancelled_not_released"
+   ],
+   "weights": [
+    0.55,
+    0.2,
+    0.15,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "approval_out_of_order",
+   "description": "Booking B's approved_at timestamp falls after its first scheduled occurrence or its approver field is null while status reads confirmed, so confirmation is effectively incomplete.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.15,
+   "skills": [
+    "S2",
+    "S6"
+   ]
+  },
+  {
+   "name": "pending_change_request",
+   "description": "Mitigation: one booking already has an open change request in history moving it to another slot or room, not yet actioned; same alarming overlap appears with and without it.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "days_to_first_occurrence",
+   "description": "Days between report date and first clashing occurrence, derived from term_start, teaching week list and weekday rather than stated directly; values near 7 and 28 create boundary cases.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": -14,
+   "max": 70,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "alt_room_fit",
+   "description": "Best match among listed free rooms for the displaced booking, judged by capacity against headcount and required features.",
+   "kind": "categorical",
+   "values": [
+    "full_fit",
+    "capacity_short",
+    "missing_feature",
+    "fit_wrong_weeks"
+   ],
+   "weights": [
+    0.35,
+    0.25,
+    0.2,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "alternatives_missing",
+   "description": "Alternatives section is null because the free-room search was not run, so no fitting room can be shown.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S2"
+   ]
+  },
+  {
+   "name": "headcount_ratio",
+   "description": "Displaced booking's expected headcount divided by the best alternative room's capacity; just above 1.0 is a near-miss boundary.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.6,
+   "max": 1.3,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "required_feature",
+   "description": "Facility the displaced booking requires, to be checked against each alternative's feature list.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "lab_benches",
+    "hearing_loop",
+    "lecture_capture",
+    "accessible_entry"
+   ],
+   "weights": [
+    0.35,
+    0.15,
+    0.15,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "owning_departments",
+   "description": "Whether the two bookings belong to the same department, different departments, or one is an external hire; drives how many parties must act.",
+   "kind": "categorical",
+   "values": [
+    "same_dept",
+    "different_depts",
+    "external_hire"
+   ],
+   "weights": [
+    0.35,
+    0.5,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "prior_clash_count",
+   "description": "Number of earlier clash reports on the same room and slot in history; a decoy that looks alarming but does not change the decisions.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "clash_report",
+   "description": "Report id, detection date, term_start, room code flagged and slot flagged by the scan."
+  },
+  {
+   "name": "booking_a",
+   "description": "First booking: module code, department, weekday, start and end times, weeks list, headcount, required features, status."
+  },
+  {
+   "name": "booking_b",
+   "description": "Second booking with the same fields plus approved_at and approver, which may be null."
+  },
+  {
+   "name": "room",
+   "description": "Room record: canonical code, aliases list, capacity, feature list, building."
+  },
+  {
+   "name": "alternatives",
+   "description": "List of free rooms for the slot with code, capacity, features and weeks free; null if search not run."
+  },
+  {
+   "name": "history",
+   "description": "List of prior events on this room and slot: clash reports, change requests with state and dates."
+  }
+ ],
+ "rendering_notes": "overlap_type is shown only through booking_a and booking_b weekday, start/end times (HH:MM) and weeks lists (integers); week_pattern_disjoint gives non-intersecting week lists, adjacent_no_overlap gives one ending exactly when the other starts. room_code_alias puts an alias from room.aliases in booking_b.room; wrong_room_variant puts a near-identical code not in aliases. booking_b_status appears as booking_b.status; approval_out_of_order sets approved_at after the first occurrence date or approver null. pending_change_request adds a history entry type change_request, state open, target slot or room differing. days_to_first_occurrence must be computed from clash_report.detected_on, term_start, the earliest shared week and weekday; never state it. alt_room_fit and headcount_ratio show via alternatives capacities, feature lists and weeks_free versus the clashing weeks; alternatives_missing sets the section to null. required_feature appears in the displaced booking's required_features list. owning_departments appears via booking department fields or an external_hire flag. prior_clash_count adds past clash_report entries in history as decoys. Booking priority flags and the scan's flagged slot are decoys; the scan flags pairs even when weeks do not intersect. No field may state genuineness, fit, resolution, urgency or parties needed; no free-text fields.",
+ "skills": [
+  "S1",
+  "S2",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "parties_needed",
+ "next_step": null,
+ "aggravating_factor": null,
+ "design_cost": 0.103288
+}

@@ -1,0 +1,154 @@
+{
+ "id": "F414-0045",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SR-221",
+   "site_id": "S19",
+   "equip_type": "spring_rocker",
+   "std_ref": "EN1176-6",
+   "crit_fall_height_m": 0.9,
+   "surf_type": "rubber",
+   "variance_ref": {
+    "id": "V-08",
+    "expires": "2026-03-31"
+   }
+  },
+  "inspection": {
+   "insp_date": "2024-08-20",
+   "insp_grade": "annual_main",
+   "fall_height_m": 0.9,
+   "surf_type_found": "rubber",
+   "surf_depth_mm": 100,
+   "surf_req_table": [
+    {
+     "h": 0.9,
+     "type": "rubber",
+     "min_depth_mm": 100
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "O1",
+     "result": "pass"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "PAINT-02",
+     "component_id": "C1",
+     "injury_mech": "cosmetic"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W7",
+    "asset_id": "SR-221",
+    "component_id": "C1",
+    "defect_ref": "D-20",
+    "status": "closed",
+    "closed_date": "2024-08-10"
+   }
+  ],
+  "site": {
+   "usage_level": "low",
+   "incident_reports_90d": 2
+  },
+  "history": [
+   {
+    "date": "2024-02-15",
+    "grade": "annual_main",
+    "defect_refs": [
+     "D-14"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 0.0,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 1.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "low",
+  "incident_reports_90d": 2
+ },
+ "factors_sampled": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -83.16,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.01,
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "low",
+  "incident_reports_90d": 2
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (head_neck_entrapment_fail = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 106,
+ "deciding": {
+  "prior_defects_cleared": "The previous inspection raised D-14, and no work order carries D-14; the only order is D-20.",
+  "surfacing_adequate": "Depth 100 mm equals the 100 mm rubber minimum at 0.9 m.",
+  "asset_disposition": "The head_neck probe passed, the only finding is cosmetic and the one raised work order is closed.",
+  "remedial_progress": "The single raised work order, W7, is closed with a closed_date before the inspection.",
+  "hazard_severity": "The only finding is PAINT-02 with injury_mech cosmetic and the head_neck probe passed."
+ },
+ "request": "rec-F414-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013685
+}

@@ -1,0 +1,125 @@
+{
+ "id": "F413-0037",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "food_production",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ]
+  },
+  "visit": {
+   "start": "2025-05-02T08:00",
+   "lic_exp": "2026-02-01"
+  },
+  "treatments": [
+   {
+    "p": "BR2",
+    "area_m2": 100,
+    "qty": 6.1,
+    "unit": "kg",
+    "label_max_per_m2": 0.05
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "act": true
+   },
+   {
+    "id": "S2",
+    "act": false
+   }
+  ],
+  "van_stock": [
+   {
+    "p": "BR2",
+    "mv": "out",
+    "qty": 6.1,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_active": 1
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 2,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "stable",
+  "previous_visit_available": true,
+  "dose_overage_pct": 22.26,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "food_production"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 2,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "stable",
+  "previous_visit_available": true,
+  "dose_overage_pct": 22.26,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "food_production"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 30,
+ "deciding": {
+  "usage_reconciled": "Applied 6.1 kg equals the 6.1 kg withdrawn, so the quantities match; the reviewer's doubt comes from an apparent dose problem.",
+  "activity_increased": "1 active station against 1 previously, but 2 of 4 stations are unchecked, so an increase cannot be ruled out.",
+  "next_step": "Quantities match and there are no missing sheets, though the dose and the missing stations give some doubt.",
+  "breach_severity": "0.061 per m2 against a 0.05 limit is a dose exceedance (level 2), while the 2 unchecked stations could be read as a paperwork gap (level 1).",
+  "parties_needed": "The technician plus a manager (two parties) could fix it, but the missing stations might also need a revisit scheduler."
+ },
+ "request": "rec-F413-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005519
+}

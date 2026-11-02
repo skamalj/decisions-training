@@ -1,0 +1,140 @@
+{
+ "id": "F417-0031",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "MV Karelia",
+   "type": "ketch",
+   "loa_m": 12.0,
+   "beam_m": 4.0,
+   "draught_m": 1.8,
+   "draught_src": null
+  },
+  "berth": {
+   "id": "P14",
+   "max_loa_m": 13.0,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 3.0,
+   "waiver_ref": "W-221",
+   "waiver_expiry": "2025-12-31"
+  },
+  "booking": {
+   "arrival": "2025-07-10",
+   "departure": "2025-07-24",
+   "nights": 14,
+   "next_on_berth": null
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 12.85,
+    "draught_m": null
+   },
+   "insurance_expiry": "2025-07-18",
+   "inspection_date": null,
+   "inspection_booked": true
+  },
+  "account": {
+   "dues_outstanding_gbp": 1299,
+   "deposit_paid": true,
+   "plan_id": null,
+   "credit_balance_gbp": 0
+  },
+  "history": [
+   {
+    "date": "2022-06-02",
+    "berth": "P14",
+    "incidents": 1
+   },
+   {
+    "date": "2023-06-11",
+    "berth": "P14",
+    "incidents": 2
+   },
+   {
+    "date": "2024-06-20",
+    "berth": "P14",
+    "incidents": 0
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 7.08,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 1.19,
+  "draught_source": "null",
+  "insurance_status": "expires_during_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 1299,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 3,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 7.08,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 1.19,
+  "draught_source": "null",
+  "insurance_status": "expires_during_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 1299,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 3,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_document",
+   "second": "refer_harbourmaster",
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "account_arrears",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 143,
+ "deciding": {
+  "length_fits": "Survey loa 12.85 is within max 13.0 plus fender 0.5; the declared 12.0 differs from the survey.",
+  "next_step": "Insurance expires 2025-07-18 mid-stay, so renewal proof is needed, but 1299 arrears with no plan could go to the harbour master.",
+  "primary_issue": "dues_outstanding_gbp 1299 with plan_id null; insurance expiry mid-stay competes.",
+  "ukc_band": "Depth 3.0 minus declared draught 1.8 is 1.2 with no survey draught; just above 1.0, so a modest allowance for the unverified draught could put it in level 2.",
+  "unresolved_count": "Three discrepancies: declared loa 12.0 vs survey 12.85, insurance expiring mid-stay, and arrears with no plan."
+ },
+ "request": "rec-F417-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004934
+}

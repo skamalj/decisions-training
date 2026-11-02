@@ -1,0 +1,115 @@
+{
+ "id": "F402-0022",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "soon",
+   "site": "lumbar",
+   "onset": "2024-12-01",
+   "received": "2025-05-26"
+  },
+  "clinical": {
+   "dx": "post_op_spine",
+   "surgery_date": "2025-02-15",
+   "red_flags": [
+    "saddle_anaesthesia_bladder"
+   ],
+   "fi": 29.6
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-05-01",
+    "result": "no_sinister"
+   }
+  ],
+  "gp_record": {
+   "falls_3m": 3,
+   "reviews": []
+  },
+  "history": {
+   "episodes": 0,
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "saddle_anaesthesia_bladder",
+  "red_flag_mitigated": true,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "post_op_protocol",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 25,
+  "function_index": 29.63,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "soon",
+  "falls_last_3m": 3,
+  "post_op_days": 99,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "saddle_anaesthesia_bladder",
+  "red_flag_mitigated": true,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "post_op_protocol",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 25,
+  "function_index": 29.63,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "soon",
+  "falls_last_3m": 3,
+  "post_op_days": 99,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_as_referred",
+   "second": "escalate_lead",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "specialist_rehab",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "red_flag_unresolved": "Recent MRI no_sinister partly explains the bladder/saddle flag, but no dated urgent GP review follows it.",
+  "next_step": "MRI no_sinister supports accepting, but the saddle/bladder flag and absent op protocol make escalation defensible.",
+  "pathway": "Post-op spine, function index 29.6 and 3 falls plainly need specialist rehab.",
+  "reversal_time": "Possible nerve compromise over 25 weeks could take months to reverse, near the 3-month boundary.",
+  "clinical_urgency": "Flag mitigated by MRI but bladder symptoms persist, placing urgency between two weeks and 48 hours."
+ },
+ "request": "rec-F402-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00483
+}

@@ -1,0 +1,308 @@
+{
+ "id": "F434",
+ "domain": "cycling event marshal reports",
+ "role": "Course safety coordinator reviewing post-shift marshal point reports for a closed-road cycling race",
+ "setting": "After each stage of a multi-day closed-road road race, every marshal post files a structured shift report. The course safety coordinator checks each report against race control's own log, the sweep vehicle record and the medical handover list. For each report the coordinator decides whether the post was properly held, what kind of incident occurred, how serious the worst consequence was, and what follow-up the report needs before the next stage.",
+ "questions": {
+  "coverage_held": {
+   "type": "noul",
+   "instructions": "Marshals held the post continuously until the sweep vehicle passed.",
+   "criteria": {
+    "true": "Signed-in coverage spans first rider to sweep passage.",
+    "false": "Coverage gap, early departure, or sweep time unverifiable."
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the safety coordinator do with this report next?",
+   "criteria": {
+    "file": "Report matches control record and no safety items remain open.",
+    "query_marshal": "Clerical mismatch only, correctable by the post marshal directly.",
+    "hold_confirm": "One outcome awaits confirmation from medical or race control.",
+    "safety_review": "Confirmed safety failure needing formal review by the safety panel."
+   }
+  },
+  "incident_class": {
+   "type": "choice",
+   "instructions": "Which category describes the most serious incident at this post?",
+   "criteria": {
+    "no_incident": "Neither post log nor control record lists an incident here.",
+    "mechanical_only": "Only punctures or mechanical stops recorded; no rider fell.",
+    "rider_fall": "At least one rider fell; nothing entered the closed course.",
+    "course_intrusion": "A vehicle, person or animal entered the closed course."
+   }
+  },
+  "reversal_time": {
+   "type": "score",
+   "instructions": "How long would it take to fully undo this outcome?",
+   "criteria": [
+    "Could be fully undone within one day",
+    "Needs one to seven days to undo",
+    "Needs eight days to three months to undo",
+    "Cannot be undone within three months"
+   ]
+  },
+  "consequence_severity": {
+   "type": "score",
+   "instructions": "How serious is the worst confirmed safety consequence at this post?",
+   "criteria": [
+    "No rider fell, was injured, or met traffic",
+    "Rider fell but continued without medic attendance",
+    "Medic attended or rider abandoned, no hospital transfer",
+    "Hospital transfer, or riders met reopened traffic"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "reopen_before_sweep",
+   "description": "Race control reopened this road section to traffic before the sweep vehicle and last riders had passed the post; riders rode into live traffic. Decisive aggravating fact.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "incident_mix",
+   "description": "Most serious incident type that actually occurred at the post, after reconciling post log with control log.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "mechanical",
+    "fall",
+    "intrusion"
+   ],
+   "weights": [
+    0.2,
+    0.25,
+    0.3,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "control_log_mismatch",
+   "description": "Kind of discrepancy between the post incident list and race control's log for this km range.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "time_offset_minor",
+    "bib_digit_swap",
+    "incident_missing_from_post",
+    "extra_post_incident"
+   ],
+   "weights": [
+    0.3,
+    0.2,
+    0.2,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "intrusion_mitigated",
+   "description": "When an intrusion occurred, a moto marshal escort or a rider hold kept riders and intruder apart with no contact.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "worst_rider_outcome",
+   "description": "Worst outcome for any rider involved in an incident at this post.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "continued",
+    "medic_attended",
+    "abandoned",
+    "hospital"
+   ],
+   "weights": [
+    0.25,
+    0.25,
+    0.2,
+    0.18,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "staffing_gap",
+   "description": "Pattern of marshal presence relative to first rider and sweep passage.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "late_before_first_rider",
+    "gap_during_race",
+    "left_before_sweep"
+   ],
+   "weights": [
+    0.4,
+    0.2,
+    0.2,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "relief_swap_logged",
+   "description": "A relief marshal signed in to cover an apparent staffing gap, which may close the gap.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "radio_check_failures",
+   "description": "Number of failed scheduled radio checks from the post; alarming but often covered by a successful backup phone contact.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "medic_arrival_minutes",
+   "description": "Minutes from medic call to medic arrival, when a medic was called.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 2,
+   "max": 35,
+   "p_true": 0,
+   "skills": [
+    "S6"
+   ]
+  },
+  {
+   "name": "medical_handover_confirmed",
+   "description": "Race control's medical handover list carries a matching reference for the post's medical incident.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "sweep_record_missing",
+   "description": "The sweep vehicle passage record for this post is absent, so coverage to sweep cannot be verified.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.15,
+   "skills": [
+    "S4",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "timestamp_boundary",
+   "description": "Marshal off-post time falls within one minute of the sweep passage time, leaving coverage on a boundary.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S6",
+    "S5"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "event",
+   "description": "Stage identifiers, date, road closure window and rider start count."
+  },
+  {
+   "name": "post",
+   "description": "Marshal post location, type, roster, sign-in and sign-off times, relief swaps."
+  },
+  {
+   "name": "incidents",
+   "description": "Post-logged incident list with times, km, type, bibs, medic and rider status."
+  },
+  {
+   "name": "comms",
+   "description": "Scheduled radio checks, backup phone contacts and escalations to race control."
+  },
+  {
+   "name": "control_record",
+   "description": "Race control's incident log, medical handovers, abandonments and road reopening times."
+  },
+  {
+   "name": "sweep",
+   "description": "Sweep vehicle passage time, last rider bib and post clearance time; may be null."
+  }
+ ],
+ "rendering_notes": "event: event_id, stage_no, date (ISO), closure_start, closure_end, riders_started. post: post_id, km_marker, post_type (junction, descent, roundabout, feed_zone), marshals_rostered, marshals_signed_in, on_post_from, off_post_at, relief list of {marshal_ref, signed_in, signed_out}. incidents: list of {inc_ref, time, km, type (mechanical, fall, vehicle_on_course, pedestrian_on_course, animal_on_course), bibs, medic_called, medic_cancelled, medic_arrival_min, rider_status (continued, abandoned, transferred), escort_present, riders_held}. comms: radio_checks list of {time, ok}, backup_phone list of {time, ok}, escalations list of {time, inc_ref, acknowledged}. control_record: incident_log list of {ctl_ref, time, km, type, bibs}, medical_handovers list of {ref, bib, km, destination}, abandonments list of bibs, road_reopened_at map of km range to ISO time. sweep: passed_at, last_rider_bib, post_cleared_at, or the whole section null. Factor mapping: reopen_before_sweep shows only as road_reopened_at for the range covering km_marker earlier than sweep.passed_at, with last_rider_bib passing after it; never as a flag. incident_mix is set by the reconciled union of post and control incidents near km_marker; control_log_mismatch renders as a 1 to 4 minute time offset (trivial), a swapped digit in a bib, a control incident absent from the post list, or a post incident absent from control. intrusion_mitigated renders as escort_present or riders_held true with no fall in the same minute. worst_rider_outcome renders via rider_status, medic_called/medic_cancelled, abandonments and medical_handovers destination (hospital name vs race_medical_tent). medical_handover_confirmed absent with a medic-attended incident supports hold. staffing_gap renders through on_post_from vs first rider time, gaps in signed_in counts, and off_post_at vs sweep.passed_at; relief_swap_logged adds a relief entry covering the gap, sometimes only partially. radio_check_failures appear as ok false entries, with backup_phone ok true about half the time. sweep_record_missing nulls the sweep section. timestamp_boundary sets off_post_at within 60 seconds of sweep.passed_at. Decoys: medical_handovers to hospital for bibs at other km markers; medic_called true later cancelled; vehicle entries for official race vehicles listed in control; small time offsets that match the same incident. No field may state coverage status, severity, category or recommended action; answers must be derived by comparing sections.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "reversal_time",
+ "next_step": null,
+ "aggravating_factor": "reopen_before_sweep",
+ "design_cost": 0.152852
+}

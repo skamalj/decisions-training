@@ -1,0 +1,145 @@
+{
+ "id": "F429-0021",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 400,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 101.5,
+    "action_m": 102.4
+   },
+   "readings": [
+    {
+     "t": "06:00",
+     "level_m": 99.8,
+     "datum": "site"
+    },
+    {
+     "t": "10:00",
+     "level_m": 100.1,
+     "datum": "site"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "ts": "07:00",
+    "open_before_m": 0.5,
+    "open_after_m": 0.5
+   },
+   {
+    "gate": "G1",
+    "ts": "07:10",
+    "open_before_m": 0.5,
+    "open_after_m": 1.2
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.2
+    }
+   ],
+   "calc_peak_m3s": 310,
+   "gauged_peak_m3s": 233
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "11:30"
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "07:20",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 33.05,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": true,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": true
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 33.05,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": true,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": true
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate",
+   "second": null,
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (ramp_limit_breached = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 86,
+ "deciding": {
+  "within_licence": "Calculated 310 and gauged 233 are under 400, but a 33% gap between them leaves doubt about the figures.",
+  "gates_reconciled": "G1 open_after 1.2 matches calc opening 1.2.",
+  "next_step": "G1 moved 0.7 m in 10 min against a 0.3 limit, which needs a senior engineer.",
+  "trigger_tier": "The ramp of 0.7 m per 10 min exceeds the 0.3 limit, so the critical tier applies.",
+  "parties_needed": "A ramp breach plus the discharge gap could involve several teams, but the record does not settle how many."
+ },
+ "request": "rec-F429-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005114
+}

@@ -1,0 +1,174 @@
+{
+ "id": "F415-0002",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": [
+    {
+     "from": "2025-02-20T09:00",
+     "to": "2025-02-20T12:10",
+     "reason": "burst main repair",
+     "approved_by": "OF07",
+     "claim_ref": "INS-2291 open"
+    }
+   ]
+  },
+  "shift": {
+   "date": "2025-02-20",
+   "sched_slots": [
+    "08:00",
+    "10:30",
+    "12:30",
+    "14:30",
+    "16:30",
+    "18:30"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "end": "2025-02-20T08:20",
+    "checklist": {
+     "floors": true,
+     "pans": true,
+     "stock": true
+    },
+    "photo_ref": "P118"
+   },
+   {
+    "slot": "12:30",
+    "end": "2025-02-20T12:50",
+    "checklist": {
+     "floors": true,
+     "pans": true,
+     "stock": true
+    },
+    "photo_ref": "P119"
+   },
+   {
+    "slot": "14:30",
+    "end": "2025-02-20T14:50",
+    "checklist": {
+     "floors": true,
+     "pans": true,
+     "stock": true
+    },
+    "photo_ref": "P120"
+   },
+   {
+    "slot": "16:30",
+    "end": "2025-02-20T16:50",
+    "checklist": {
+     "floors": true,
+     "pans": true,
+     "stock": true
+    },
+    "photo_ref": "P121"
+   },
+   {
+    "slot": "18:30",
+    "end": "2025-02-20T18:50",
+    "checklist": {
+     "floors": true,
+     "pans": true,
+     "stock": true
+    },
+    "photo_ref": "P122"
+   }
+  ],
+  "faults": [
+   {
+    "type": "no_soap_or_paper",
+    "reported_at": "2025-02-20T09:00:00",
+    "remedied_at": "2025-02-20T12:16:48",
+    "remedy_note": "restocked 12:05"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2025-02-20T19:05"
+  },
+  "history": {
+   "prior_defaults_90d": 0
+  }
+ },
+ "factors": {
+  "scheduled_slots": 6,
+  "missed_slots": "1",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "no_soap_or_paper",
+  "fault_open_minutes": 196.8,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 0
+ },
+ "factors_sampled": {
+  "scheduled_slots": 6,
+  "missed_slots": "1",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "missing",
+  "fault_type": "no_soap_or_paper",
+  "fault_open_minutes": 196.8,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 0
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "sign_off_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "missed_clean": "The 10:30 slot has no visit, but the approved closure 09:00-12:10 spans it. Leftover doubt comes from the contradictory fault note.",
+  "sign_off_valid": "A supervisor signed at 19:05, after the final visit ended at 18:50.",
+  "next_step": "The gap is exempt and every other visit is complete with photos, so accept is leaning. The 12:05 note against the 12:16:48 remedied_at is a small blemish.",
+  "staff_effort": "The closure carries an open insurance claim, INS-2291, so resolving the record involves a long-running claim.",
+  "fault_exposure": "The fault was reported at 09:00, inside the closure. The note says restocked 12:05, but remedied_at is 12:16:48 and the block reopened at 12:10. So public exposure is either zero or about 7 minutes."
+ },
+ "request": "rec-F415-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013412
+}

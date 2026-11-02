@@ -1,0 +1,150 @@
+{
+ "id": "F422-0032",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-5207",
+   "site": "S-077",
+   "delivered_at": "2025-01-20T10:00",
+   "received_at": "2025-02-05T09:00",
+   "review_date": "2025-02-18",
+   "reason": "ORDER_ERROR",
+   "lines": [
+    {
+     "gtin": "G2",
+     "qty_claimed": 50
+    }
+   ]
+  },
+  "dispatch_ref": null,
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G2",
+     "batch": "K4410",
+     "expiry": "2027-06-30",
+     "qty_counted": 47,
+     "packs_damaged": 3,
+     "seals_intact": 44
+    }
+   ],
+   "uid_scans": [
+    {
+     "uid": "u5",
+     "status": "active"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": "L-77",
+   "logger_start": "2025-01-20T08:00",
+   "logger_end": "2025-02-05T11:00",
+   "min_c": 17.0,
+   "max_c": 29.2,
+   "minutes_out_of_range": 133,
+   "stability_ref": null
+  },
+  "customer_compliance": {
+   "last_audit": "2023-12-15",
+   "audit_valid_until": "2024-12-31",
+   "declaration_received": true
+  },
+  "quarantine_control": {
+   "location": "Q-1",
+   "hold_limit_days": 40,
+   "extension": {
+    "approved": false,
+    "new_limit_date": null
+   },
+   "max_days_out_of_control": 21,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 133,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "no_dispatch_link",
+  "count_discrepancy_packs": 3,
+  "damaged_pack_fraction": 0.06,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 16,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 27,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 28
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 133,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "no_dispatch_link",
+  "count_discrepancy_packs": 3,
+  "damaged_pack_fraction": 0.06,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 16,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 9,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 28
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_traceable": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_stock",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "disposition_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 58,
+ "deciding": {
+  "storage_maintained": "Logger covers the whole trip but max 29.2C and 133 minutes out of range, with no stability_ref.",
+  "batch_traceable": "dispatch_ref is null, so no counted batch can be matched to a dispatch; the record is otherwise unremarkable.",
+  "next_step": "Plan conflict: release_stock cannot be supported with an unlinked return and an unallowed excursion; the record stays routine, with no UID alert and no urgency.",
+  "resaleable_share": "Even the 44 sealed packs failed storage (133-min excursion, no allowance) and cannot be traced, so none are fit.",
+  "disposition_urgency": "Received 2025-02-05 plus 40 days gives limit 2025-03-17, 27 days after review, with no extension."
+ },
+ "request": "rec-F422-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015865
+}

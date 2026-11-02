@@ -1,0 +1,143 @@
+{
+ "id": "F422-0008",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "delivered_at": "2025-06-02",
+   "received_at": "2025-06-17",
+   "review_date": "2025-07-11",
+   "site": "S-118",
+   "lines": [
+    {
+     "qty_claimed": 14
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "lines": [
+    {
+     "batch": "K4471",
+     "expiry": "2027-07-31"
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "batch": "K4417",
+     "expiry": "2027-07-31",
+     "qty_counted": 12,
+     "packs_damaged": 1,
+     "seals_intact": 11
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "decommissioned",
+     "decommission_site": "S-118",
+     "decommission_at": "2025-07-05"
+    }
+   ]
+  },
+  "temperature": {
+   "labelled_range": "15-25",
+   "logger_start": "2025-06-02",
+   "logger_end": "2025-06-17",
+   "min_c": 16,
+   "max_c": 26.4,
+   "minutes_out_of_range": 31,
+   "stability_ref": null
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2026-01-31",
+   "declaration_received": true
+  },
+  "quarantine_control": {
+   "hold_limit_days": 30,
+   "extension": {
+    "approved": false,
+    "new_limit_date": null
+   },
+   "max_days_out_of_control": 14,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 31,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "one_foreign_batch",
+  "count_discrepancy_packs": 2,
+  "damaged_pack_fraction": 0.08,
+  "uid_alert": true,
+  "uid_alert_explained": true,
+  "days_out_of_control": 15,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 6,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 24
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 31,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 2,
+  "damaged_pack_fraction": 0.08,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 15,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 20,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 24
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_traceable": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_evidence",
+   "second": "partial_release",
+   "targets": [
+    "T1"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "storage_maintained": "Max 26.4 exceeds 25 for 31 minutes with no stability allowance, and 15 days out of control exceeds the 14-day limit.",
+  "batch_traceable": "Counted batch K4417 differs from dispatched K4471 by transposed digits; it could be a typo or a foreign batch, and it is the only counted line.",
+  "next_step": "Batch mismatch could be resolved with a customer or dispatch document, but one pack is sound, so partial release is also arguable.",
+  "resaleable_share": "All counted packs are of the mismatched batch and exceeded the temperature and time limits, so none is clearly fit.",
+  "disposition_urgency": "Received 06-17 plus 30 days is 07-17; review 07-11 leaves 6 days, no extension."
+ },
+ "request": "rec-F422-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01102
+}

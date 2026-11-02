@@ -1,0 +1,179 @@
+{
+ "id": "F405-0032",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-4417",
+   "detected_on": "2025-10-20",
+   "term_start": "2025-09-29",
+   "room": "SC-1.02",
+   "slot": "Tue 10:00"
+  },
+  "booking_a": {
+   "module": "HIS1020",
+   "dept": "HIS",
+   "day": "Tue",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    9
+   ],
+   "headcount": 40,
+   "required_features": [],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "SOC1100",
+   "dept": "SOC",
+   "room": "SC102",
+   "day": "Tue",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "headcount": 43,
+   "required_features": [
+    "accessible_entry"
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-08-12",
+   "approver": "j.okoro"
+  },
+  "room": {
+   "code": "SC-1.02",
+   "aliases": [
+    "SC102"
+   ],
+   "capacity": 50,
+   "features": [
+    "accessible_entry"
+   ]
+  },
+  "alternatives": [
+   {
+    "room": "SC-1.07",
+    "capacity": 50,
+    "features": [
+     "accessible_entry"
+    ],
+    "weeks_free": [
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-09-15"
+   },
+   {
+    "type": "change_request",
+    "state": "approved",
+    "module": "SOC1100",
+    "week": 9,
+    "target_room": "SC-1.07"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 36,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.86,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 1
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 23,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.86,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 1
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 72,
+ "deciding": {
+  "genuine_clash": "SC102 is an alias of SC-1.02, times are identical and week 9 appears in both weeks lists, so the bookings share a room and slot on paper.",
+  "alt_room_fits": "SC-1.07 has capacity 50 for 43 students, has accessible_entry and is free in weeks 6-10, covering week 9.",
+  "resolution": "An approved change request already moves SOC1100 week 9 to SC-1.07, so little overlap remains; the booking lists have not been updated, which leaves a little doubt.",
+  "urgency": "First shared week is 9, Tuesday 2025-11-25, 36 days after detection on 2025-10-20.",
+  "parties_needed": "Change already approved and a free fitting room exists; only the officer needs to tidy the record."
+ },
+ "request": "rec-F405-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013731
+}

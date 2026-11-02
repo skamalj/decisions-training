@@ -1,0 +1,155 @@
+{
+ "id": "F434-0042",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 4,
+   "riders_started": 131,
+   "first_rider_at": "10:40"
+  },
+  "post": {
+   "km_marker": 63,
+   "post_type": "roundabout",
+   "marshals_rostered": 3,
+   "marshals_signed_in": 3,
+   "on_post_from": "10:05",
+   "off_post_at": "12:12",
+   "relief": [
+    {
+     "marshal_ref": "M7",
+     "signed_in": "10:05",
+     "signed_out": "12:12"
+    }
+   ]
+  },
+  "incidents": [
+   {
+    "inc_ref": "P1",
+    "time": "11:03",
+    "km": 63,
+    "type": "mechanical",
+    "bibs": [
+     54
+    ],
+    "medic_called": false,
+    "rider_status": "continued",
+    "escort_present": false,
+    "riders_held": false
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:30",
+     "ok": true
+    },
+    {
+     "time": "11:30",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C9",
+     "time": "11:04",
+     "km": 63,
+     "type": "mechanical",
+     "bibs": [
+      54
+     ]
+    }
+   ],
+   "medical_handovers": [],
+   "abandonments": [],
+   "road_reopened_at": {
+    "60-66": "11:52"
+   }
+  },
+  "sweep": {
+   "passed_at": "12:05",
+   "last_rider_bib": 187,
+   "post_cleared_at": "12:12"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": true,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": "none",
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": true,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "hospital",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 4.87,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "safety_review",
+   "second": null,
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "mechanical_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (reopen_before_sweep = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 114,
+ "deciding": {
+  "coverage_held": "Signed in from 10:05, before first rider 10:40, and off post at 12:12 after sweep passage at 12:05; the 7-minute margin leaves slight doubt.",
+  "next_step": "Road reopened at 11:52 for km 60-66, before sweep passage at 12:05 with last rider 187 still to pass, which points to a formal safety review.",
+  "incident_class": "Post and control both list only a mechanical stop for bib 54, and the rider continued with no fall.",
+  "reversal_time": "Reopening to traffic is a safety-process failure that cannot be undone, but remediation plausibly takes days, so level 1 is more likely than a longer period.",
+  "consequence_severity": "The road reopened before the sweep passed while riders were still on course, so riders met reopened traffic."
+ },
+ "request": "rec-F434-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00934
+}

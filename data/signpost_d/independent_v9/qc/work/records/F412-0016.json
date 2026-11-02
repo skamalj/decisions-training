@@ -1,0 +1,138 @@
+{
+ "id": "F412-0016",
+ "family": "F412",
+ "state": {
+  "premises": {
+   "ref": "P-4417",
+   "type": "cafe"
+  },
+  "inspection": {
+   "date": "2025-02-01",
+   "contraventions": [
+    {
+     "ref": "C1",
+     "area": "REC",
+     "due_date": "2025-03-01"
+    },
+    {
+     "ref": "C2",
+     "area": "CLN",
+     "due_date": "2025-03-01"
+    },
+    {
+     "ref": "C3",
+     "area": "TMP",
+     "due_date": "2025-03-01"
+    }
+   ]
+  },
+  "revisit": {
+   "date": "2025-04-13",
+   "items": [
+    {
+     "ref": "C1",
+     "status": "remedied"
+    },
+    {
+     "ref": "C2",
+     "status": "remedied"
+    },
+    {
+     "ref": "C3",
+     "status": "part_remedied"
+    }
+   ],
+   "officer_note": "All works completed per operator."
+  },
+  "correspondence": {
+   "evidence": [
+    {
+     "ref": "C4",
+     "verified": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "contravention_count": 3,
+  "resolution_share": "most_resolved",
+  "worst_open_area": "food_handling",
+  "food_handling_open_count": 1,
+  "cross_section_mismatch": "ref_mismatch",
+  "days_past_original_due": 43,
+  "extension_agreed": false,
+  "benign_explanation": false,
+  "operator_evidence": "submitted_partial",
+  "adverse_sample": false,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 3,
+  "boundary_case": false,
+  "reassuring_note_decoy": true
+ },
+ "factors_sampled": {
+  "contravention_count": 3,
+  "resolution_share": "most_resolved",
+  "worst_open_area": "food_handling",
+  "food_handling_open_count": 1,
+  "cross_section_mismatch": "ref_mismatch",
+  "days_past_original_due": -2,
+  "extension_agreed": true,
+  "benign_explanation": false,
+  "operator_evidence": "submitted_partial",
+  "adverse_sample": false,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 3,
+  "boundary_case": false,
+  "reassuring_note_decoy": true
+ },
+ "plan": {
+  "all_remedied": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "worst_hazard": {
+   "clarity": "contested",
+   "target": "no_open_item",
+   "second": "food_handling",
+   "targets": []
+  },
+  "overdue_extent": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "residual_risk": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "all_remedied": "C3 (TMP) is part_remedied at revisit; the note 'all works completed' is only the operator's claim and the only evidence cites C4, absent from the inspection.",
+  "next_step": "The one open item has no verified evidence; the submitted evidence cites a ref that does not exist, so correct verified proof for C3 is the specific missing item.",
+  "worst_hazard": "C3 is a TMP item, part remedied. Whether a partly remedied item still counts as open or as closed is arguable.",
+  "overdue_extent": "C3 was due 2025-03-01; revisit 2025-04-13 is 43 days later, just past the 42-day boundary.",
+  "residual_risk": "One TMP item is open and part_remedied, with no adverse sample and no complaint, so level 2 versus level 3 is arguable."
+ },
+ "request": "rec-F412-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009757
+}

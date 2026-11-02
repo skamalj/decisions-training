@@ -1,0 +1,121 @@
+{
+ "id": "F418-0029",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "BRW",
+   "plat": 3,
+   "date": "2025-06-09",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 1,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S22",
+    "planned_start": "06:00"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S27",
+    "sign_on": "06:20",
+    "safety_comp_exp": "2025-05-01",
+    "dispatch_comp_exp": "2025-05-01"
+   }
+  ],
+  "events": [],
+  "controls": null,
+  "remarks": [
+   "Routine shift."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 0,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": false,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": true,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 5,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 24,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": false,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": true,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 5,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 39,
+ "deciding": {
+  "headcount_verified": "Attendance shows S27 not on roster and no redeploy event, with safety_comp_exp 2025-05-01 lapsed.",
+  "next_step": "No gap events and routine remark, so the log reads as acceptable; the roster mismatch gives slight doubt.",
+  "coverage_outcome": "events empty and a staffed post throughout, no gap recorded.",
+  "reversal_time": "No gap or consequential outcome, so nothing to undo.",
+  "exposure_severity": "No gap events recorded during service; the mismatch is the only doubt."
+ },
+ "request": "rec-F418-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00554
+}

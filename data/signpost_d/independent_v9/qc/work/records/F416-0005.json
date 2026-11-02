@@ -1,0 +1,165 @@
+{
+ "id": "F416-0005",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "N9",
+   "date": "2025-07-15",
+   "signoff": "G6 18:00"
+  },
+  "roster": [
+   {
+    "id": "G6",
+    "on": "08:30",
+    "off": "18:00",
+    "home": "N9",
+    "qual_expiry": "2026-02-14"
+   },
+   {
+    "id": "G10",
+    "on": "08:30",
+    "off": "18:00",
+    "home": "N5",
+    "qual_expiry": "2025-07-15"
+   },
+   {
+    "id": "G11",
+    "on": "08:30",
+    "off": "18:00",
+    "home": "N9",
+    "qual_expiry": "2025-09-30"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "13:00",
+    "wave_m": 2.6,
+    "wind_kt": 30,
+    "water_c": 13,
+    "rip_risk": "mod",
+    "flag": "yellow"
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-07-15",
+    "time": "11:20",
+    "type": "water_rescue",
+    "resp": [
+     "G6",
+     "G10"
+    ],
+    "outcome": "gp_advised",
+    "ambulance_ref": "AMB-41"
+   },
+   {
+    "id": "I2",
+    "date": "2025-07-15",
+    "time": "14:05",
+    "type": "water_rescue",
+    "resp": [
+     "G6",
+     "G11"
+    ],
+    "outcome": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jetski",
+    "out_from": "10:00",
+    "out_to": "13:05",
+    "substitute_unit_id": null
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "beach_users_est": 9800,
+   "advisories": 6,
+   "check_sheet_ref": "CS-12"
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "gp_advised_ambulance_called",
+  "kit_gap_band": "over_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": true,
+  "decoy_load": "high"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "over_180",
+  "kit_substitute_logged": false,
+  "missing_record": "aed_check_sheet",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "accept_log",
+   "second": "amend_and_file",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 54,
+ "deciding": {
+  "two_guard_cover": "Both rescues list two rostered responders. G10 is mutual aid from N5 with qual_expiry equal to the shift date, 2025-07-15, which is borderline but still in date.",
+  "totals_reconcile": "Rescues 2, first_aid 0 and kit_defects 1 match the itemised entries. Incident dates equal the shift date.",
+  "next_step": "Sign-off, check sheet and cover are all complete. The only open point is the long unsubstituted jetski outage, which is not tied to any rescue, so accept_log against amend_and_file is contested.",
+  "outcome_severity": "I1 has outcome gp_advised but also an ambulance_ref AMB-41. This splits level 1 (referred) against level 2 (conveyed).",
+  "kit_outage": "The jetski was out 10:00 to 13:05, which is 185 minutes, with no substitute. That is just over the 180-minute boundary, so level 3 leads over level 2."
+ },
+ "request": "rec-F416-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010773
+}

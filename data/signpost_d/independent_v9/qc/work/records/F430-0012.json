@@ -1,0 +1,157 @@
+{
+ "id": "F430-0012",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S2",
+   "assets": [
+    {
+     "id": "T1",
+     "param": "oil_temp",
+     "unit": "C",
+     "normal_band": [
+      40,
+      85
+     ],
+     "alarm": 90,
+     "trip": 100,
+     "customers_fed": 60,
+     "partner_id": "T2"
+    }
+   ]
+  },
+  "round": {
+   "date": "2025-04-08",
+   "scheduled_assets": [
+    "T1"
+   ],
+   "start": "08:00",
+   "finish": "09:10"
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 99.5,
+    "unit": "C",
+    "timestamp": "08:10"
+   },
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 78,
+    "unit": "C",
+    "timestamp": "09:05"
+   }
+  ],
+  "defects": [
+   {
+    "defect_id": "D2",
+    "asset_id": "T1",
+    "photo_ref": "P7",
+    "note": "Oil temperature high on arrival."
+   }
+  ],
+  "history": {
+   "previous_round": [
+    {
+     "asset_id": "T1",
+     "value": 93
+    }
+   ],
+   "open_work_orders": [],
+   "permits": [],
+   "load_events": []
+  },
+  "network": {
+   "partner_status": {
+    "T2": "out_of_service"
+   },
+   "outage_plan": [
+    {
+     "asset_id": "T2",
+     "from": "2025-04-01",
+     "to": "2025-04-15"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_reading_band": "trip",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "improving",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 60,
+  "trivial_discrepancies": 0,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "improving",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 7241,
+  "trivial_discrepancies": 0,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "follow_up": {
+   "clarity": "clear",
+   "target": "file_closed",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 82,
+ "deciding": {
+  "defect_corroborated": "Defect D2 says oil temperature high on arrival, matched by the 08:10 reading of 99.5 and the earlier 93.",
+  "benign_explanation": "No permits, load events or work orders; the arrival-time high reading has no documented cause, though it later fell.",
+  "follow_up": "The 09:05 retake of 78 is inside the 40-85 band and the trend is down from 93, with nothing missing, so the report can be filed.",
+  "limit_deviation": "Worst reading 99.5 against trip 100 and alarm 90; it is just under trip, so level 3 versus 2 is balanced.",
+  "supply_exposure": "Partner T2 is on outage, so a failure of T1 would drop its 60 customers; but the retake in band means no open defect, hence level 1 versus 0."
+ },
+ "request": "rec-F430-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010711
+}

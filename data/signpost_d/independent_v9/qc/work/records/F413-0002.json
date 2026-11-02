@@ -1,0 +1,136 @@
+{
+ "id": "F413-0002",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "warehouse",
+   "stations": [
+    "W1",
+    "W2",
+    "W3"
+   ],
+   "zones": [
+    {
+     "id": "dock",
+     "toxic_bait_permitted": true
+    }
+   ]
+  },
+  "visit": {
+   "id": "V210",
+   "type": "routine",
+   "tech": "T14",
+   "tech_licence_expiry": "2025-03-01",
+   "start": "2024-06-11T08:00",
+   "end": "2024-06-11T09:10",
+   "client_signoff": "2024-06-11"
+  },
+  "treatments": [
+   {
+    "product": "RB-2",
+    "zone": "dock",
+    "area_m2": 50,
+    "qty_applied": 380,
+    "unit": "g",
+    "label_max_per_m2": 5
+   }
+  ],
+  "monitoring": null,
+  "van_stock": [
+   {
+    "movement": "withdrawal",
+    "product": "RB-2",
+    "qty": 0.38,
+    "unit": "kg",
+    "batch": "B551"
+   }
+  ],
+  "follow_up": {
+   "prev_visit": "V198",
+   "prev_active_stations": 1,
+   "actions": [
+    {
+     "status": "completed",
+     "date": "2024-06-11"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": true,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": true,
+  "dose_overage_pct": 52.02,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "warehouse"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": true,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": true,
+  "dose_overage_pct": 52.02,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "warehouse"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 97,
+ "deciding": {
+  "usage_reconciled": "380 g applied equals 0.38 kg withdrawn, no return; only unit differs.",
+  "activity_increased": "Monitoring is null so current activity cannot be counted against prev_active_stations 1.",
+  "next_step": "Stock and dates are in order, so sign-off is the action.",
+  "breach_severity": "7.6 g/m2 against label_max 5 is an overdose (level 2), while the missing monitoring sheet alone is paperwork (level 1).",
+  "parties_needed": "The technician alone could supply the sheet, but a manager might also need to review the overdose."
+ },
+ "request": "rec-F413-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005474
+}

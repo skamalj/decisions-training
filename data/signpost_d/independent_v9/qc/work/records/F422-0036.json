@@ -1,0 +1,154 @@
+{
+ "id": "F422-0036",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT1",
+   "site": "S210",
+   "delivered_at": "2024-03-01T10:00",
+   "received_at": "2024-03-30T09:00",
+   "review_date": "2024-04-24",
+   "reason": "OVERSTOCK",
+   "lines": [
+    {
+     "gtin": "G1",
+     "qty_claimed": 40
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "D88",
+   "lines": [
+    {
+     "gtin": "G1",
+     "batch": "B7Q",
+     "expiry": "2026-10",
+     "qty_dispatched": 40
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G1",
+     "batch": "B7Q",
+     "expiry": "2026-10-31",
+     "qty_counted": 36,
+     "packs_damaged": 3,
+     "seals_intact": 33
+    }
+   ],
+   "uid_scans": []
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": "L5",
+   "logger_start": "2024-03-20T00:00",
+   "logger_end": "2024-03-30T08:00",
+   "min_c": 16.2,
+   "max_c": 27.5,
+   "minutes_out_of_range": 278,
+   "stability_ref": {
+    "max_hours": 6,
+    "max_c": 30
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-01-31",
+   "declaration_received": true
+  },
+  "quarantine_control": {
+   "location": "Q3",
+   "hold_limit_days": 45,
+   "extension": {
+    "approved": false,
+    "new_limit_date": null
+   },
+   "max_days_out_of_control": 30,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 278,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "expiry_format_only",
+  "count_discrepancy_packs": 4,
+  "damaged_pack_fraction": 0.08,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 29,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 20,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 30
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 278,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "no_dispatch_link",
+  "count_discrepancy_packs": 4,
+  "damaged_pack_fraction": 0.76,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 29,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": -1,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 30
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "partial_release",
+   "second": "release_stock",
+   "targets": [
+    "T1"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "storage_maintained": "Logger starts 2024-03-20, 19 days after delivery on 03-01, so most of the time away is uncovered. The excursion that is recorded sits inside the stability allowance.",
+  "batch_traceable": "Counted batch B7Q appears on the linked dispatch. Expiry is written as month-year on one side and as a full date on the other, which leaves slight doubt.",
+  "next_step": "Three of 36 packs are damaged. Releasing the other 33 and destroying the 3 is about as defensible as releasing everything, because the damage is not described. No document is missing.",
+  "resaleable_share": "33 of 36 intact (3 packs_damaged) puts it at half or more. Level 3 holds if the damage is cosmetic and level 2 if those packs fail.",
+  "disposition_urgency": "Received 03-30 plus a 45-day hold gives 05-14, which is 20 days after the 04-24 review. That sits on the boundary between the 10 to 20 day level and the more-than-20-day level, and there is no extension."
+ },
+ "request": "rec-F422-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014519
+}

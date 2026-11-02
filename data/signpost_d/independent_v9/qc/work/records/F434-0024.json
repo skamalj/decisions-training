@@ -1,0 +1,141 @@
+{
+ "id": "F434-0024",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 4,
+   "riders_started": 110
+  },
+  "post": {
+   "km_marker": 52,
+   "post_type": "descent",
+   "marshals_signed_in": 1,
+   "on_post_from": "09:30",
+   "off_post_at": "14:25:00",
+   "relief": [
+    {
+     "marshal_ref": "M5",
+     "signed_in": "11:10",
+     "signed_out": "14:25"
+    }
+   ]
+  },
+  "incidents": [],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "11:00",
+     "ok": false
+    },
+    {
+     "time": "12:00",
+     "ok": false
+    },
+    {
+     "time": "13:00",
+     "ok": false
+    }
+   ],
+   "escalations": [
+    {
+     "time": "14:02",
+     "inc_ref": null,
+     "acknowledged": false
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [],
+   "medical_handovers": [],
+   "road_reopened_at": {
+    "50-60": "2024-06-20T14:05"
+   }
+  },
+  "sweep": {
+   "passed_at": "14:20:00",
+   "last_rider_bib": 131
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": true,
+  "incident_mix": "none",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": "none",
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": true,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "bib_digit_swap",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "gap_during_race",
+  "relief_swap_logged": true,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 27.5,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "no_incident",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (reopen_before_sweep = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 82,
+ "deciding": {
+  "coverage_held": "Signed in at 09:30, relief M5 covers 11:10 to 14:25, and the post was held until after sweep passed_at 14:20.",
+  "next_step": "Escalation at 14:02 has acknowledged false, so a response from race control is still awaited.",
+  "incident_class": "The post incidents list and the control incident_log are both empty.",
+  "reversal_time": "Riders met reopened traffic; the record shows no injury, but its consequence is not settled and could last beyond three months.",
+  "consequence_severity": "road_reopened_at 14:05 for km 50-60 is before sweep passed_at 14:20, with last rider bib 131 still to pass, so riders met reopened traffic."
+ },
+ "request": "rec-F434-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010094
+}

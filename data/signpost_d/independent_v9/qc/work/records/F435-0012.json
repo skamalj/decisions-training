@@ -1,0 +1,138 @@
+{
+ "id": "F435-0012",
+ "family": "F435",
+ "state": {
+  "event": {
+   "zone_id": "FL-B",
+   "doors_open": "2025-05-02T19:00",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 800,
+   "variation": null,
+   "stewards_required": 16,
+   "exit_routes": [
+    "X1",
+    "X2",
+    "X3",
+    "X4"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 800,
+   "issued": 824
+  },
+  "ingress": {
+   "device_status": "ok",
+   "raw_peak": 803,
+   "manual_recount": {
+    "count": 800
+   }
+  },
+  "stewarding": {
+   "signed_in": 17
+  },
+  "exit_checks": [
+   {
+    "route_id": "X1",
+    "checked_at": "2025-05-02T18:20",
+    "status": "clear"
+   },
+   {
+    "route_id": "X2",
+    "checked_at": "2025-05-02T18:25",
+    "status": "clear"
+   },
+   {
+    "route_id": "X3",
+    "checked_at": "2025-05-02T18:30",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "X4",
+    "checked_at": "2025-05-02T19:01",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.004,
+  "counter_status": "ok",
+  "counter_inflation": 0.0,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 1.03,
+  "limit_mismatch": false,
+  "steward_gap_pct": -0.06,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "live",
+  "occupancy_ratio": 1.0,
+  "counter_status": "ok",
+  "counter_inflation": 0.09,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 1.03,
+  "limit_mismatch": false,
+  "steward_gap_pct": -0.06,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "escalate",
+   "second": "restrict_entry",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "ticket_overissue",
+   "second": null,
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 30,
+ "deciding": {
+  "verified_exceedance": "Counter ok with raw_peak 803 against limit 800, but the manual recount says exactly 800; a 3-person split at the boundary.",
+  "disposition": "Event is post_event with a marginal, disputed breach and an unconfirmed exit; escalate versus restrict is open.",
+  "discrepancy_source": "Issued 824 exceeds zone_limit_used 800, which itself equals the licence limit.",
+  "steward_shortfall": "signed_in 17 is above stewards_required 16.",
+  "unconfirmed_exits": "X3 is obstructed with no later clear; X4 was checked clear one minute after doors, so it counts as one or two."
+ },
+ "request": "rec-F435-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012699
+}

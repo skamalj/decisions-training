@@ -1,0 +1,148 @@
+{
+ "id": "F437-0033",
+ "family": "F437",
+ "state": {
+  "job": {
+   "target_locale": "de-AT",
+   "due_at": "2025-04-10T12:00:00Z",
+   "terms": {
+    "variant_accepted": true
+   }
+  },
+  "source": {
+   "segment_count": 80
+  },
+  "deliverable": {
+   "target_locale": "de-DE",
+   "segments_translated": 80,
+   "delivered_at": "2025-04-09T10:00:00Z"
+  },
+  "qa_report": {
+   "flags": 25,
+   "false_positive_marked": 14,
+   "number_mismatches": [
+    [
+     "12",
+     "21"
+    ],
+    [
+     "3,5",
+     "35"
+    ],
+    [
+     "40",
+     "4"
+    ],
+    [
+     "1990",
+     "1999"
+    ],
+    [
+     "7",
+     "17"
+    ],
+    [
+     "60",
+     "16"
+    ]
+   ],
+   "unresolved": {
+    "critical": 1,
+    "major": 3
+   }
+  },
+  "review": {
+   "completed_at": "2025-04-09",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "major",
+     "status": "open"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": []
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": true,
+  "glossary_version_state": "match",
+  "review_status": "signed_same_day_date_only",
+  "open_error_profile": "major_with_one_unresolved_qa_critical",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.56,
+  "number_mismatch_count": 6,
+  "deadline_slack_hours": 26,
+  "client_waiver": true,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": true,
+  "glossary_version_state": "match",
+  "review_status": "in_progress",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.56,
+  "number_mismatch_count": 6,
+  "deadline_slack_hours": 26,
+  "client_waiver": true,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "return_for_fix",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 81,
+ "deciding": {
+  "scope_matches": "Segments are 80 of 80, but the target locale is de-DE against ordered de-AT, covered by variant_accepted.",
+  "reviewed_in_time": "Signed off with a date-only completed_at on the delivery day, so the order is not certain.",
+  "next_step": "Open major errors and six number mismatches can be fixed by the translator within the 26 hours of slack.",
+  "open_severity": "QA shows 1 unresolved critical among 25 flags with 14 marked false positive, while the review lists only a major error; the critical may or may not be real.",
+  "parties_needed": "The translator fixes and the reviewer re-checks, so two people."
+ },
+ "request": "rec-F437-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009205
+}

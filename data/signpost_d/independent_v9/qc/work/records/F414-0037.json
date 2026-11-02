@@ -1,0 +1,171 @@
+{
+ "id": "F414-0037",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SW-0870",
+   "equip_type": "swing",
+   "crit_fall_height_m": 1.8,
+   "surf_type": "bonded_rubber"
+  },
+  "inspection": {
+   "insp_date": "2024-06-10",
+   "insp_grade": "routine_visual",
+   "fall_height_m": 2.1,
+   "surf_type_found": "bonded_rubber",
+   "surf_depth_mm": 45,
+   "surf_req_table": [
+    {
+     "max_h": 2.0,
+     "type": "bonded_rubber",
+     "min_depth_mm": 40
+    },
+    {
+     "max_h": 2.5,
+     "type": "bonded_rubber",
+     "min_depth_mm": 50
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "O3",
+     "result": "fail"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "ENT2",
+     "component_id": "C2",
+     "injury_mech": "serious"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W7",
+    "asset_id": "SW-0870",
+    "component_id": "C1",
+    "defect_ref": "D1",
+    "status": "closed",
+    "closed_date": "2024-03-02"
+   },
+   {
+    "wo_id": "W8",
+    "asset_id": "SW-0870",
+    "component_id": "C4",
+    "defect_ref": "D2",
+    "status": "closed",
+    "closed_date": "2024-03-09"
+   },
+   {
+    "wo_id": "W9",
+    "asset_id": "SW-0870",
+    "component_id": "C5",
+    "defect_ref": "D3",
+    "status": "closed",
+    "closed_date": "2024-06-12"
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 1
+  },
+  "history": [
+   {
+    "date": "2024-02-20",
+    "grade": "annual_main",
+    "defect_refs": [
+     "D1",
+     "D2",
+     "D3"
+    ]
+   },
+   {
+    "date": "2024-06-20",
+    "grade": "followup",
+    "component_results": {
+     "C4": "pass"
+    }
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "swing",
+  "register_mismatch": "moderate",
+  "surfacing_depth_margin_mm": -5.0,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 1.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "medium",
+  "incident_reports_90d": 1
+ },
+ "factors_sampled": {
+  "equipment_type": "swing",
+  "register_mismatch": "moderate",
+  "surfacing_depth_margin_mm": 12.32,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 3,
+  "work_orders_closed_fraction": 0.78,
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "medium",
+  "incident_reports_90d": 1
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "sign_off_actions",
+   "second": null,
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (head_neck_entrapment_fail = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 42,
+ "deciding": {
+  "prior_defects_cleared": "All three prior refs D1-D3 have closed orders, but W9 (D3) closed on 2024-06-12, after the 2024-06-10 visit, and the follow-up check covers only C4; closure is arguable.",
+  "surfacing_adequate": "Register height 1.8 m but measured 2.1 m; 45 mm meets the 40 mm band for 2.0 m but falls short of 50 mm for 2.1 m. Which height governs keeps this balanced.",
+  "asset_disposition": "All work orders are closed and the surfacing is only marginal, so use continues with scheduled actions; the head_neck fail on O3 leaves doubt about this.",
+  "remedial_progress": "W7, W8 and W9 all have status closed with closed_dates, so all raised orders are closed.",
+  "hazard_severity": "The head_neck probe on O3 has result fail and ENT2 has injury_mech serious, which is a head/neck entrapment hazard."
+ },
+ "request": "rec-F414-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013525
+}

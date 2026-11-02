@@ -1,0 +1,143 @@
+{
+ "id": "F410-0042",
+ "family": "F410",
+ "state": {
+  "application": {
+   "term_end": "2025-06-30",
+   "commodities": [
+    "cakes",
+    "hot food"
+   ],
+   "pitch_req": {
+    "width_m": 3.77
+   },
+   "docs_pending": [
+    "food reg"
+   ]
+  },
+  "licence_current": {
+   "commodities": [
+    "cakes"
+   ],
+   "pitch": {
+    "width_m": 3.0
+   },
+   "conditions": {
+    "min_attendance_pct": 85
+   },
+   "variations": [
+    {
+     "type": "size",
+     "approved": true
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2025-07-15",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "food_reg": null
+  },
+  "account": {
+   "fees_due": [
+    {
+     "amount_gbp": 900
+    }
+   ],
+   "ledger": [
+    {
+     "amount_gbp": 535.06
+    }
+   ]
+  },
+  "history": {
+   "allocated_12m": 48,
+   "attended_12m": 36,
+   "absence_notices": [],
+   "complaints": [
+    {
+     "upheld": false
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": false,
+  "commodity_change": "food_added",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.77,
+  "variation_approved": true,
+  "fee_arrears_gbp": 364.94,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.75,
+  "absences_notified": false,
+  "complaint_profile": "not_upheld_only",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 1
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": false,
+  "commodity_change": "food_added",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.77,
+  "variation_approved": true,
+  "fee_arrears_gbp": 364.94,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.75,
+  "absences_notified": false,
+  "complaint_profile": "not_upheld_only",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 1
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "leaning",
+   "target": "grant_conditional",
+   "second": null,
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "balanced",
+   "target": "urgent_visit",
+   "second": "desk_check",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 29,
+ "deciding": {
+  "pli_term_covered": "pli.end 2025-07-15 is after term_end 2025-06-30 at the required indemnity.",
+  "renewal_disposition": "Arrears, attendance shortfall and a pending food reg are moderate; conditional grant leads.",
+  "inspection_level": "Hot food added with food_reg null suggests urgent visit, though it is only a pending document so desk check is arguable.",
+  "reversal_time": "Conditions are reversible quickly; days versus same day is balanced.",
+  "discrepancy_count": "Arrears, attendance shortfall without notices and commodity change without food registration; the size change is approved, so 2 or 3 is arguable."
+ },
+ "request": "rec-F410-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00521
+}

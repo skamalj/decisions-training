@@ -1,0 +1,133 @@
+{
+ "id": "F430-0047",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "CB1",
+     "unit": "kPa",
+     "normal_band": [
+      550,
+      600
+     ],
+     "alarm_limit": 500,
+     "trip_limit": 450,
+     "customers_fed": 22512
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-06-03",
+   "scheduled_assets": [
+    "CB1",
+    "cb2",
+    "T1"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "CB1",
+    "param": "sf6",
+    "value": 5.1,
+    "unit": "bar"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "CB1",
+    "photo_ref": "P77",
+    "note": "SF6 leaking badly, gauge falling fast."
+   }
+  ],
+  "history": {
+   "previous_round": [
+    {
+     "asset_id": "CB1",
+     "value": 5.2
+    }
+   ],
+   "open_work_orders": [
+    "SF6 gauge on CB2 reading low, replacement ordered"
+   ]
+  }
+ },
+ "factors": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": true,
+  "benign_cause_type": "known_gauge_fault",
+  "benign_cause_covers": false,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 22512,
+  "trivial_discrepancies": 3,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "normal",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": false,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 22512,
+  "trivial_discrepancies": 3,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "balanced",
+   "target": "urgent_attendance",
+   "second": "recheck_next_round",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 70,
+ "deciding": {
+  "defect_corroborated": "Note says falling fast, but 5.1 bar (510 kPa) vs 5.2 last round is only a slow drift, yet it is low.",
+  "benign_explanation": "Work order covers a low SF6 gauge on CB2, a neighbouring asset, not CB1.",
+  "follow_up": "No partner and 22,512 customers favour attendance; a stable reading just above alarm favours recheck.",
+  "limit_deviation": "510 kPa after conversion is just below the 550 band and just above the 500 alarm limit.",
+  "supply_exposure": "CB1 has no partner and feeds 22,512 customers."
+ },
+ "request": "rec-F430-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008421
+}

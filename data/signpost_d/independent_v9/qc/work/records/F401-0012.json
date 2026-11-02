@@ -1,0 +1,154 @@
+{
+ "id": "F401-0012",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "A22",
+   "planned_discharge_at": "2025-06-01T16:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 16,
+     "spo2": 97,
+     "sbp": 124,
+     "hr": 72
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "A22",
+   "reconciled": [
+    {
+     "drug": "metformin",
+     "dose": 500,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "metformin",
+     "dose": 1000,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ]
+  },
+  "function_social": {
+   "therapy": null,
+   "care_arrangement": {
+    "type": "intermediate_bed",
+    "status": "confirmed",
+    "start_date": "2025-06-03"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "pending"
+    },
+    {
+     "t": "equipment",
+     "status": "pending"
+    },
+    {
+     "t": "letter",
+     "status": "pending"
+    },
+    {
+     "t": "bed handover",
+     "status": "done",
+     "signed_by": null
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-06-03",
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "function_assessment_null",
+  "outstanding_task_count": 4,
+  "false_completion": true,
+  "care_need": "rehab",
+  "care_arrangement_status": "confirmed_start_two_days_after_planned",
+  "logistics_delay": "two_days_late_pickup_unknown",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "unit_expression_only",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "function_assessment_null",
+  "outstanding_task_count": 2,
+  "false_completion": false,
+  "care_need": "new_package",
+  "care_arrangement_status": "confirmed_on_time",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": true
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "discharge_now",
+   "second": "request_item",
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "intermediate_care",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "rx_matches": "Metformin is 500 mg bd on the reconciled list but 1000 mg bd on discharge_rx, and no changes[] entry covers it, so the dose differs.",
+  "next_step": "therapy is null, so a required assessment is missing and request_item is defensible. The arrangement is confirmed and obs are normal, so proceeding is also arguable.",
+  "destination": "care_arrangement type is intermediate_bed with status confirmed and a start_date, which settles intermediate_care.",
+  "outstanding_tasks": "Three items are pending and the bed handover is done with null signed_by, which counts as outstanding, giving four. A reader who accepts the handover would count three, which is level 2.",
+  "discharge_delay": "The bed start is 2025-06-03, two days after the planned 2025-06-01. Transport is booked for the same date with a null pickup_time, so a later slip to three days is plausible."
+ },
+ "request": "rec-F401-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013802
+}

@@ -1,0 +1,151 @@
+{
+ "id": "F427-0026",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V-1041",
+   "site_ref": "BG-17",
+   "visit_date": "2024-06-11",
+   "surveyor_grade": "trainee",
+   "weather_on_day": "dry"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 3,
+   "dams_total": 6
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "D1",
+     "depth_cm": 20,
+     "prev_depth_cm": 11
+    },
+    {
+     "id": "D2",
+     "depth_cm": 24,
+     "prev_depth_cm": 13
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "depth_cm": 14,
+     "prev_depth_cm": 14
+    }
+   ],
+   "rain_30d_pct_normal": 125
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D4",
+     "pool_level_cm": 3,
+     "design_pool_cm": 40,
+     "defect_code": "BRCH",
+     "remark": "Centre cut through; thin pool left behind."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 6
+    },
+    {
+     "q": 2,
+     "score": null
+    }
+   ],
+   "photos_uploaded": 8,
+   "photos_expected": 8
+  },
+  "notes": {
+   "surveyor_note": "Breach at D4, rest fine.",
+   "prior_visits": []
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.67,
+  "photos_status": "full",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "breach_near_failed",
+  "water_table_offset_cm": -2.0,
+  "rainfall_pct_normal": 125.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.68,
+  "photos_status": "full",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": -20.88,
+  "rainfall_pct_normal": 124.97,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 2,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "schedule_repair",
+   "second": "request_data",
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "leaning",
+   "target": "within_band",
+   "second": null,
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 125,
+ "deciding": {
+  "dam_caused_drop": "Wells dropped about 10 cm while the control is unchanged and rain is 125% of normal; a breach is logged at D4.",
+  "next_step": "A breach with no work order favours repair, but one well is unread and one quadrat score is null, so requesting data is also plausible.",
+  "hydro_state": "Mean depth 22 cm sits inside the 5-25 cm band but close to the floor.",
+  "dam_severity": "BRCH with pool 3 of 40 cm and a thin pool left: near failed, but some water is still held.",
+  "evidence_completeness": "2 of 3 wells read and a quadrat score null, with photos and the dam log present: all four elements recorded, some only partly."
+ },
+ "request": "rec-F427-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011036
+}

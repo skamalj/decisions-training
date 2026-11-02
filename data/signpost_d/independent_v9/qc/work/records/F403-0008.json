@@ -1,0 +1,147 @@
+{
+ "id": "F403-0008",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-2250",
+   "yr": 8,
+   "school": "S044",
+   "declared_allergens": [
+    "egg",
+    "milk",
+    "fish"
+   ],
+   "auto_injector": true,
+   "plan_start": "2025-06-09"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2025-04-02",
+   "expires": "2026-04-02",
+   "allergens": [
+    "egg",
+    "milk",
+    "fish",
+    "celery"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-05-20",
+   "dishes": [
+    {
+     "dish": "fish pie",
+     "contains": [
+      "fish",
+      "milk"
+     ],
+     "recipe_version_date": "2025-05-01",
+     "substitute": "chicken pie",
+     "spec_checked_on": "2025-05-15"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "trained": {
+    "count": 3,
+    "last": "2025-03-01"
+   },
+   "cleaning_log_complete": true,
+   "exceptions": []
+  },
+  "history": {
+   "review_date": "2025-06-02",
+   "packed_lunch_until": "2025-07-04",
+   "incidents": [],
+   "messages": [
+    "Cook: routine plan."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 25,
+  "packed_lunch_interim": true,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 5,
+  "packed_lunch_interim": true,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "no_gap",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 58,
+ "deciding": {
+  "evidence_allergens_covered": "The evidence lists celery, which is not in declared_allergens and has no mapping entry; egg also has no dish entry. Leans false, although no dish contains celery.",
+  "next_step": "Evidence is current, the only allergen dish is substituted and spec-checked, controls are verified, there are no incidents and no first meal until July.",
+  "first_gap_stage": "Evidence is current and the mapped dish is substituted; controls are verified. The celery mismatch is the only doubt, since no dish contains celery.",
+  "exposure_proximity": "The one allergen dish has a substitute, all controls are verified and there are no incidents.",
+  "meal_urgency": "Packed lunch runs until 2025-07-04, so the first school meal is 2025-07-07, about 25 school days after the 2025-06-02 review."
+ },
+ "request": "rec-F403-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013191
+}

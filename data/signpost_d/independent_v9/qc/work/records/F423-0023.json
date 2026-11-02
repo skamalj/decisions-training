@@ -1,0 +1,135 @@
+{
+ "id": "F423-0023",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-51907",
+   "stock_spec": "GL115",
+   "run_qty": 8000,
+   "overs_pct": 5.97,
+   "customer_tier": "standard",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "ok_sheet_no": 22,
+   "signed_at": "2024-04-09T08:05",
+   "concession": null
+  },
+  "colour_readings": {
+   "calibrated_on": "2024-03-28",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 3.0
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.1
+    },
+    {
+     "ink": "Y",
+     "delta_e": 2.8
+    },
+    {
+     "ink": "K",
+     "delta_e": 2.6
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.28,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P1",
+   "stock_loaded": "GL115",
+   "first_production_at": "2024-04-09T08:10",
+   "sheets_production": 819,
+   "sheets_makeready": 150,
+   "stoppages": [
+    {},
+    {},
+    {},
+    {}
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "marginal",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_before_production",
+  "sheets_before_check": 819,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 5.97,
+  "register_offset_mm": 0.28,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 12,
+  "customer_tier": "standard",
+  "prior_stoppages": 4
+ },
+ "factors_sampled": {
+  "colour_deviation": "multiple_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 819,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 5.97,
+  "register_offset_mm": 0.28,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 12,
+  "customer_tier": "standard",
+  "prior_stoppages": 4
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_for_signoff",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 80,
+ "deciding": {
+  "colour_in_tolerance": "Magenta reads 3.1 against spec 3.0 with no concession, while cyan sits exactly at 3.0. The excess is slight, so true is also plausible.",
+  "run_before_signoff": "signed_at 08:05 is before first_production_at 08:10, so no production sheets precede signature, though the margin is only five minutes.",
+  "next_step": "The OK sheet is signed. Magenta is over spec and the K register offset of 0.28 mm is in image, so correcting and re-checking fits; hold_for_signoff is only weakly supported.",
+  "staff_effort": "819 production sheets are suspect with colour and in-image register issues. Handling a reprint could take one to five days or more than five.",
+  "scrap_exposure": "819/8000 is 10.2% of run, just above the 10% line and well over the 5.97% overs. Levels 2 and 3 are both defensible at this boundary."
+ },
+ "request": "rec-F423-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010639
+}

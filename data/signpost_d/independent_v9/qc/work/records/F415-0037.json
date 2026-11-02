@@ -1,0 +1,156 @@
+{
+ "id": "F415-0037",
+ "family": "F415",
+ "state": {
+  "site": {
+   "hours": "07:00-22:00",
+   "closures": []
+  },
+  "shift": {
+   "start": "2024-06-03T07:00",
+   "end": "2024-06-03T21:30",
+   "sched_slots": [
+    "07:00",
+    "09:00",
+    "11:00",
+    "13:00",
+    "15:00",
+    "17:00",
+    "19:00",
+    "21:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "07:00",
+    "status": "done"
+   },
+   {
+    "slot": "09:00",
+    "status": "done"
+   },
+   {
+    "slot": "11:00",
+    "status": "done"
+   },
+   {
+    "slot": "13:00",
+    "status": "not_recorded",
+    "op_note": "block shut 13:00-14:00 for police incident"
+   },
+   {
+    "slot": "15:00",
+    "status": "done"
+   },
+   {
+    "slot": "17:00",
+    "status": "done"
+   },
+   {
+    "slot": "19:00",
+    "status": "done"
+   },
+   {
+    "slot": "21:00",
+    "end": "2024-06-03T21:20",
+    "status": "done",
+    "photo_ref": "P220"
+   }
+  ],
+  "faults": [
+   {
+    "type": "sharps_find",
+    "reported_at": "2024-06-03T09:10",
+    "remedied_at": "2024-06-03T10:11",
+    "source": "public_app"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2024-06-03T21:35"
+  },
+  "history": {
+   "prior_defaults_90d": 3
+  }
+ },
+ "factors": {
+  "scheduled_slots": 8,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 61.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "explains_gap_unbacked",
+  "prior_defaults_90d": 3
+ },
+ "factors_sampled": {
+  "scheduled_slots": 8,
+  "missed_slots": "0",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 35.45,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "explains_gap_unbacked",
+  "prior_defaults_90d": 3
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_noted",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 76,
+ "deciding": {
+  "missed_clean": "The 13:00 slot is not_recorded. The op_note claims a police closure, but the closures list is empty, so no exemption backs the gap.",
+  "sign_off_valid": "A supervisor signed at 21:35, after the last visit ended at 21:20.",
+  "next_step": "The unbacked police-closure claim suggests a recording lapse that can be noted, and the rest of the log is complete. A default notice is less likely.",
+  "staff_effort": "One slot needs its police-incident claim checked with the contractor or police. That is one to eight hours.",
+  "fault_exposure": "The fault ran 09:10-10:11, which is 61 minutes, right at the 60-minute boundary. The block was open throughout and there was no closure."
+ },
+ "request": "rec-F415-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012138
+}

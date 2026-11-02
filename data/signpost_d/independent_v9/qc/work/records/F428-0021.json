@@ -1,0 +1,138 @@
+{
+ "id": "F428-0021",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-210",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 300
+  },
+  "inspection": {
+   "asset_id": "VL-210",
+   "insp_date": "2025-03-12",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2024-04-02",
+    "closure_s": 264,
+    "leakage_l_min": 6,
+    "leakage_limit_l_min": 20,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D7",
+    "component": "hoist",
+    "grade": 1,
+    "status": "open",
+    "first_seen": "2025-01-10"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W88",
+     "component": "hoist",
+     "defect_code": "D7",
+     "grade_raised": 1,
+     "status": "in_progress",
+     "retest_insp_id": null
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "forecast": {
+    "peak_date": "2025-05-01"
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.88,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "passed_but_dated_about_11_months_before_visit",
+  "repair_progress": "in_progress",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 50,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.88,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 1,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "not_performed",
+  "repair_progress": "in_progress",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 50,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 45,
+ "deciding": {
+  "closure_test_valid": "Test passes (264 s vs 300 s rated, leakage 6 vs 20) but is dated 2024-04-02, nearly a year before the 2025-03-12 visit, so currency is doubtful; the open hoist work order has no retest yet.",
+  "next_step": "Only an open grade 1 hoist defect with a work order in progress, in service, peak 50 days away, nothing outstanding that needs action.",
+  "defect_class": "Sole open defect is grade 1 (hoist), so nothing above grade 1; slight doubt because a hoist defect is listed.",
+  "section_discrepancies": "Asset ids match, work order grade_raised 1 equals defect grade 1, and the component and code agree.",
+  "flood_risk": "Closure 264 s is within the 300 s rated time and the only defect is grade 1, so low."
+ },
+ "request": "rec-F428-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009946
+}

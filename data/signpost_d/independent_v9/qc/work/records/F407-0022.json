@@ -1,0 +1,130 @@
+{
+ "id": "F407-0022",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "P-2210",
+   "channel": "public_app",
+   "photo_ref": "IMG-5531",
+   "linked_reports": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "main_distributor",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspected_at": "2025-04-09",
+   "depth_mm": 78,
+   "width_mm": 416.06,
+   "offset_m": 30
+  },
+  "works_history": [
+   {
+    "job": "J-31",
+    "completed": "2024-11-02",
+    "offset_m": 28,
+    "guarantee_end": "2025-11-02"
+   }
+  ],
+  "programme": {
+   "temp_measures": [
+    {
+     "type": "cones",
+     "offset_m": 30,
+     "expiry": "2025-06-30"
+    }
+   ]
+  },
+  "current_order": {
+   "status": "partial",
+   "completed_items": 2,
+   "total_items": 5
+  }
+ },
+ "factors": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 5,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "partially_complete",
+  "defect_width_mm": 416.06,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "none",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 5,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "partially_complete",
+  "defect_width_mm": 416.06,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "request_inspection",
+   "second": "escalate_engineer",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "meets_threshold": "inspection.depth_mm 78 against intervention_depth_mm 40; the inspection has no received_at to compare with, which leaves a little doubt.",
+  "repeat_failure": "J-31 completed 2024-11-02 at offset 28 m, 2 m from the defect at 30 m, within guarantee until 2025-11-02.",
+  "next_step": "The recurrence in guarantee supports engineer referral, but the inspection has no received date and a partial order is open, so a fresh inspection is also defensible.",
+  "staff_effort": "Recurrence investigation, guarantee recovery and finishing the 3 remaining order items could take 2 to 5 days or more.",
+  "response_timescale": "Depth far above threshold, but temporary cones are in place until 2025-06-30; routine 28 days versus priority 5 days is balanced."
+ },
+ "request": "rec-F407-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008718
+}

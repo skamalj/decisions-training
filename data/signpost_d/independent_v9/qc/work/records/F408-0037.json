@@ -1,0 +1,124 @@
+{
+ "id": "F408-0037",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 100201,
+   "flat_no": "4",
+   "logged_at": "2024-06-04T11:00",
+   "stream": "refuse",
+   "claimed": "2024-06-04",
+   "photo": false
+  },
+  "property": {
+   "uprn": 100200,
+   "flat_no": "2",
+   "assisted": true,
+   "since": "2023-11-15"
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "date": "2024-06-03"
+  },
+  "round_log": {
+   "done_at": "2024-06-04T16:00",
+   "disruption": "weather_suspension",
+   "catch_up": "2024-06-04",
+   "stops": [
+    {
+     "uprn": 100200,
+     "exc": null,
+     "photo": null,
+     "gps_stop": false
+    }
+   ]
+  },
+  "history": [
+   {
+    "on": "2024-05-02",
+    "out": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "before_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "no_stop_confirmed_gps_stop_false",
+  "round_disruption": "weather_suspension",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 1,
+  "history_decoys": 0,
+  "assisted_miss_breach": true
+ },
+ "factors_sampled": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "before_round_complete",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "weather_suspension",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 0,
+  "history_decoys": 0,
+  "assisted_miss_breach": true
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "close_no_action",
+   "second": "schedule_return",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (assisted_miss_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 105,
+ "deciding": {
+  "crew_missed": "Stop gps_stop false with no exception or photo, but a weather suspension with same-day catch-up leaves doubt.",
+  "report_matches": "Claimed date is a day after scheduled and logged before round done, yet stream agrees and catch-up falls on the claimed date.",
+  "next_step": "Flat and UPRN differ from the property record and a catch-up is pending, against a failed stop at an assisted address.",
+  "return_urgency": "Assisted collection true and stop gps_stop false: same day.",
+  "repeat_failures": "One upheld case on 2024-05-02, within 84 days; the address mismatch leaves slight doubt."
+ },
+ "request": "rec-F408-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008871
+}

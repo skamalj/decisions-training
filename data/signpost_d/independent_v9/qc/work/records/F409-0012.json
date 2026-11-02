@@ -1,0 +1,140 @@
+{
+ "id": "F409-0012",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "submitted_on": "2024-08-12",
+   "app_type": "renewal",
+   "message": "Please send visitor voucher info."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2024-06-23",
+     "address_line": "Flat 3, 9 Elm Court",
+     "verified": true
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "KD21 PLR",
+   "keeper_name": "Brightway Leasing",
+   "supporting_letters": [
+    {
+     "type": "lease_agreement",
+     "names_applicant": false
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "A1",
+   "address": "3/9 Elm Court",
+   "plate_entered": "KD21 PLR"
+  },
+  "account_history": {
+   "live_permits": [],
+   "exceptions": [
+    {
+     "type": "carer",
+     "approved_on": "2023-02-01"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "format_only",
+  "proof_age_days": 50,
+  "docs_missing": 0,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 0,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 5,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "format_only",
+  "proof_age_days": 50,
+  "docs_missing": 0,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 0,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 5,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "hold",
+   "second": "refuse",
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 59,
+ "deciding": {
+  "residency_shown": "The bill is verified and 50 days old, and the address differs only in format (Flat 3, 9 Elm Court vs 3/9 Elm Court). That would normally show residency. The plan says false because the keeper letter does not name the applicant.",
+  "disposition": "Three open PCNs and a lease letter that does not name the applicant argue for refusing, while the verified residence proof argues for a hold. Both are defensible.",
+  "main_issue": "Residence proof is verified and recent, there is no household permit at the cap, and there is no cloned permit. The letter has no named-applicant issue that decides the outcome.",
+  "misuse_strength": "Three open PCNs are one indicator. The lease letter has names_applicant false, so the different keeper may be unmitigated, which would make two indicators.",
+  "document_gaps": "The only residence document is verified and within 90 days, and the record shows no missing document."
+ },
+ "request": "rec-F409-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009388
+}

@@ -1,0 +1,128 @@
+{
+ "id": "F401-0009",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P404",
+   "planned_discharge_at": "2025-06-03T10:00"
+  },
+  "medications": {
+   "patient_id": "P404",
+   "reconciled": [
+    {
+     "drug": "paracetamol",
+     "dose": 1,
+     "unit": "g",
+     "freq": "qds"
+    }
+   ],
+   "discharge_rx": {
+    "items": [
+     {
+      "drug": "paracetamol",
+      "dose": 1000,
+      "unit": "mg",
+      "freq": "6-hourly"
+     }
+    ]
+   }
+  },
+  "function_social": {
+   "care_arrangement": {
+    "type": "home_care",
+    "status": "confirmed",
+    "start_date": "2025-06-06"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "letter",
+     "status": "in_progress"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "unit_expression_only",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": "1 (in progress)",
+  "false_completion": false,
+  "care_need": "new_package",
+  "care_arrangement_status": "confirmed_late",
+  "logistics_delay": "care_start_three_days_later",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "none",
+  "outstanding_task_count": 4,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "declined",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "conditional_discharge",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "home_with_package",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "rx_matches": "Paracetamol 1 g qds vs 1000 mg 6-hourly is expression only, but the frequency wording could be read as a difference.",
+  "next_step": "No clinical concern is shown; one in-progress letter fits discharge once completed.",
+  "destination": "Home care confirmed with a start date, so home with package.",
+  "outstanding_tasks": "The letter is in_progress, which is arguably one outstanding task or none.",
+  "discharge_delay": "Care starts 2025-06-06, three days after the planned date."
+ },
+ "request": "rec-F401-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010243
+}

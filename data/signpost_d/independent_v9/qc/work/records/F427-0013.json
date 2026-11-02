@@ -1,0 +1,158 @@
+{
+ "id": "F427-0013",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V-4102",
+   "site_ref": "BB-21",
+   "visit_date": "2024-08-14",
+   "surveyor_grade": "trainee",
+   "weather_on_day": "dry"
+  },
+  "site_targets": {
+   "band_top_cm": 10,
+   "band_floor_cm": 30,
+   "dipwells_scheduled": 6,
+   "dams_total": 5
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "D2",
+     "depth_cm": 52,
+     "prev_depth_cm": 38
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 45,
+     "prev_depth_cm": 35
+    }
+   ],
+   "rain_30d_pct_normal": 61
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam": "D3",
+     "inspected_on": "2024-08-14",
+     "pool_level_cm": 22,
+     "design_pool_cm": 40,
+     "defect_code": "OVTP",
+     "remark": "Water overtopping the centre."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "id": "Q1",
+     "score": 3
+    },
+    {
+     "id": "Q2",
+     "score": 4
+    }
+   ],
+   "photos_uploaded": 0,
+   "photos_expected": 6,
+   "grazing_signs": true
+  },
+  "notes": {
+   "surveyor_note": "D3 overtopping.",
+   "prior_visits": [
+    {
+     "date": "2024-02-10",
+     "event": "breach D3"
+    },
+    {
+     "date": "2023-11-05",
+     "event": "breach D3"
+    },
+    {
+     "date": "2023-06-20",
+     "event": "breach D3"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.16,
+  "photos_status": "none",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "partial breach",
+  "water_table_offset_cm": -22.0,
+  "rainfall_pct_normal": 61.0,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 3,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.16,
+  "photos_status": "partial",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": 4.08,
+  "rainfall_pct_normal": 61.25,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 3,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_lead",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "leaning",
+   "target": "well_below",
+   "second": null,
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 98,
+ "deciding": {
+  "dam_caused_drop": "Rain is only 61% of normal and the controls dropped 10 cm, which points to weather; D3 is overtopping with its pool well below design, which keeps a dam cause plausible.",
+  "next_step": "D3 has three earlier breach entries in prior_visits and is overtopping again, a repeat failure that calls for referral to the lead.",
+  "hydro_state": "The one dipwell reads 52 cm against a band floor of 30, so 22 cm below the floor.",
+  "dam_severity": "D3 is coded OVTP with the pool at 22 against a 40 cm design, a partial breach.",
+  "evidence_completeness": "Only 1 of 6 dipwells was read and no photos were uploaded; quadrats and the dam inspection are present, so two elements."
+ },
+ "request": "rec-F427-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011059
+}

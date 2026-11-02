@@ -1,0 +1,130 @@
+{
+ "id": "F428-0005",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "SL-219",
+   "gate_type": "demountable_stoplog",
+   "rated_closure_s": 1200,
+   "seal_type": "music_note"
+  },
+  "inspection": {
+   "insp_id": "I-412",
+   "asset_id": "SL-219",
+   "insp_date": "2025-06-01",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-05-10",
+    "closure_s": 1080,
+    "leakage_l_min": 4,
+    "leakage_limit_l_min": 10,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D9",
+    "component": "seal",
+    "grade": 1,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W21",
+     "component": "seal",
+     "status": "complete",
+     "completed": "2025-05-20",
+     "retest_insp_id": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "gate_type": "demountable_stoplog",
+  "closure_time_ratio": 0.9,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "completed_untested",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 50,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "demountable_stoplog",
+  "closure_time_ratio": 1.35,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 2,
+  "mismatch_location": "test_date_vs_repair",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 50,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 53,
+ "deciding": {
+  "closure_test_valid": "Balanced: the test passed within time (1080 vs 1200 s) and leakage limits, but test_date 2025-05-10 is before the seal order's completion on 2025-05-20 and retest_insp_id is null.",
+  "next_step": "Only a grade 1 seal defect, a passing test and a completed order; nothing calls for action beyond filing.",
+  "defect_class": "The only open defect is grade 1, so no open defect above grade 1.",
+  "section_discrepancies": "asset_id, component and rated closure values agree across sections.",
+  "flood_risk": "closure_s 1080 is within rated 1200 and no defect is above grade 1; risk is low, with slight doubt from the unretested seal repair."
+ },
+ "request": "rec-F428-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008804
+}

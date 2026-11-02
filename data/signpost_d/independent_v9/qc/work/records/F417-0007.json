@@ -1,0 +1,122 @@
+{
+ "id": "F417-0007",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V2",
+   "loa_m": 10.2,
+   "draught_m": 1.9,
+   "draught_src": "survey_certificate"
+  },
+  "berth": {
+   "id": "Q2",
+   "max_loa_m": 10.0,
+   "fender_allow_m": 0.4,
+   "depth_lat_m": 2.4
+  },
+  "booking": {
+   "arrival": "2025-08-10",
+   "departure": "2025-08-14",
+   "next_on_berth": {
+    "arrival": "2025-08-14"
+   }
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 10.2,
+    "draught_m": 1.92
+   },
+   "insurance_expiry": "2025-08-13",
+   "inspection_date": "2025-07-01"
+  },
+  "account": {
+   "dues_outstanding_gbp": 0
+  },
+  "history": [
+   {
+    "date": "2024-07-02",
+    "berth": "Q2",
+    "incidents": 1
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 0.0,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 0.48,
+  "draught_source": "survey_certificate",
+  "insurance_status": "expires_before_departure",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 0,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": false,
+  "prior_incidents": 1,
+  "boundary_placement": true
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 7.76,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 1.16,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 1368,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": false,
+  "prior_incidents": 1,
+  "boundary_placement": true
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "refer_harbourmaster",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "balanced",
+   "target": "document_gap",
+   "second": "date_conflict",
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "length_fits": "Survey loa 10.2 is above max 10.0 but within max plus fender 0.4 = 10.4.",
+  "next_step": "Insurance lapses a day before departure and the next vessel arrives on the departure day, which suits a harbour master decision.",
+  "primary_issue": "Insurance expiry 2025-08-13 is before departure 08-14, while next arrival equals departure date. These hold document_gap and date_conflict in balance.",
+  "ukc_band": "Depth 2.4 minus survey draught 1.92 is 0.48, just under the 0.5 boundary between tight and adequate.",
+  "unresolved_count": "The insurance expiry against departure is one arguable discrepancy, and the same-day turnover might not count, so the count is 0 or 1."
+ },
+ "request": "rec-F417-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00864
+}

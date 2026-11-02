@@ -1,0 +1,127 @@
+{
+ "id": "F437-0028",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v4",
+   "glossary_version": "g7"
+  },
+  "source": {
+   "version": "v4",
+   "segment_count": 200
+  },
+  "deliverable": {
+   "built_from_version": "v4",
+   "segments_translated": 200,
+   "glossary_version_used": null,
+   "delivered_at": "2025-05-03"
+  },
+  "qa_report": {
+   "number_mismatches": [
+    {
+     "src": "1,200",
+     "tgt": "1.020"
+    },
+    {
+     "src": "15%",
+     "tgt": "51%"
+    }
+   ]
+  },
+  "review": {
+   "signed_off": true,
+   "completed_at": "2025-05-02",
+   "errors": [
+    {
+     "sev": "major",
+     "status": "open"
+    },
+    {
+     "sev": "critical",
+     "status": "fix_claimed"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.42,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": 116,
+  "client_waiver": false,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "in_progress",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.42,
+  "number_mismatch_count": 5,
+  "deadline_slack_hours": 116,
+  "client_waiver": true,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_for_item",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "scope_matches": "job.source_version, source.version and built_from_version are all v4, and the segment counts are 200 and 200.",
+  "reviewed_in_time": "review.signed_off is true and completed_at 2025-05-02 is before delivered_at 2025-05-03.",
+  "next_step": "deliverable.glossary_version_used is null while the job requires g7. That is one named missing item to request.",
+  "open_severity": "The major error is open, but the critical error has status fix_claimed, which is neither clearly open nor closed. The number mismatches are another possible critical source.",
+  "parties_needed": "The translator could correct and confirm alone, or a reviewer might also need to verify the fix. That is one or two people."
+ },
+ "request": "rec-F437-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008311
+}

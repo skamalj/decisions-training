@@ -1,0 +1,38 @@
+{
+ "persona": "careful_operator",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "odometer_consistent": {
+   "true": 0.04,
+   "false": 0.96
+  },
+  "next_step": {
+   "renew": 0.01,
+   "request_evidence": 0.12,
+   "conditional_renewal": 0.03,
+   "refuse_renewal": 0.04,
+   "refer_committee": 0.8
+  },
+  "inspection_outcome": {
+   "clean_pass": 0.02,
+   "advisory_only": 0.9,
+   "minor_fail": 0.05,
+   "major_fail": 0.03
+  },
+  "document_gaps": {
+   "0": 0.01,
+   "1": 0.07,
+   "2": 0.8,
+   "3": 0.12
+  },
+  "outstanding_severity": {
+   "0": 0.02,
+   "1": 0.85,
+   "2": 0.07,
+   "3": 0.02,
+   "4": 0.04
+  }
+ },
+ "cost": 0.000316
+}

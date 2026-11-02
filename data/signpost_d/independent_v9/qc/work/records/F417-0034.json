@@ -1,0 +1,119 @@
+{
+ "id": "F417-0034",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "Tern",
+   "loa_m": 14.7,
+   "draught_m": 2.1,
+   "draught_src": "survey"
+  },
+  "berth": {
+   "id": "A2",
+   "max_loa_m": 14.5,
+   "fender_allow_m": 0.4,
+   "depth_lat_m": 2.28
+  },
+  "booking": {
+   "arrival": "2025-09-02",
+   "departure": "2025-09-09"
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 15.0,
+    "draught_m": 2.1
+   },
+   "insurance_expiry": "2026-01-10",
+   "inspection_date": null,
+   "inspection_booked": false
+  },
+  "account": {
+   "dues_outstanding_gbp": 2013,
+   "deposit_paid": false,
+   "plan_id": null
+  },
+  "history": [
+   {
+    "date": "2024-09-01",
+    "berth": "A2",
+    "incidents": 1
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 2.0,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 0.18,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "not_done",
+  "arrears_amount": 2013,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 2.0,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 0.18,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 2013,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_document",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "balanced",
+   "target": "document_gap",
+   "second": "account_arrears",
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 81,
+ "deciding": {
+  "length_fits": "Survey 15.0 exceeds max 14.5 but is within 14.9 with fender; wait, 15.0 is just beyond 14.9, a marginal call.",
+  "next_step": "inspection_date null and not booked; one specific item is missing.",
+  "primary_issue": "Inspection missing competes with 2013 arrears and no plan.",
+  "ukc_band": "Depth 2.28 minus draught 2.1 is 0.18, near grounding but positive.",
+  "unresolved_count": "Declared loa 14.7 vs survey 15.0, missing inspection, arrears and unpaid deposit make two or three."
+ },
+ "request": "rec-F417-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004934
+}

@@ -1,0 +1,143 @@
+{
+ "id": "F418-0017",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "LDM",
+   "plat": 1,
+   "date": "2025-04-02",
+   "svc_from": "06:00",
+   "svc_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S10",
+    "planned_start": "07:00"
+   },
+   {
+    "staff_id": "S11",
+    "planned_start": "07:00"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S10",
+    "sign_on": "07:00",
+    "safety_comp_exp": "2026-01-10",
+    "dispatch_comp_exp": "2026-01-10"
+   },
+   {
+    "staff_id": "S11",
+    "sign_on": "07:12",
+    "safety_comp_exp": "2026-02-01",
+    "dispatch_comp_exp": "2026-02-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "08:00"
+   },
+   {
+    "type": "cover_start",
+    "time": "08:30",
+    "staff_id": "S10"
+   },
+   {
+    "type": "gap_end",
+    "time": "09:16"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-410",
+   "disp_platform": 1,
+   "valid_to": "2025-06-30",
+   "approved_by": "RO-3",
+   "prior_shortfalls_30d": 6
+  },
+  "remarks": [
+   "Short-staffed at peak, covered after 30 min."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 76,
+  "shortfall_timing": "peak",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 6,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 76,
+  "shortfall_timing": "peak",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 6,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "contested",
+   "target": "fully_rostered",
+   "second": "partial_cover",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 92,
+ "deciding": {
+  "headcount_verified": "Both rostered staff signed on with in-date competence; only S11's 12-minute late sign-on is minor.",
+  "next_step": "Peak gap 08:00-09:16 within valid dispensation D-410 but with late sign-on and cover only partly spanning; amend log and brief.",
+  "coverage_outcome": "Roster posts filled, yet cover_start 08:30 by S10 leaves gap open until 09:16; fully_rostered vs partial_cover.",
+  "reversal_time": "Minor sign-on discrepancy correctable in days, with repeat history of 6 pushing toward longer; levels 1 vs 2.",
+  "exposure_severity": "Dispensation D-410 plat 1 valid to June, so level 1 arguable, but only partial cover and 6 prior shortfalls; contested with level 2/3."
+ },
+ "request": "rec-F418-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005159
+}

@@ -1,0 +1,138 @@
+{
+ "id": "F428-0043",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "MG-113",
+   "gate_type": "mitre",
+   "rated_closure_s": 120,
+   "seal_type": "music_note"
+  },
+  "inspection": {
+   "asset_id": "MG-113",
+   "insp_date": "2025-05-25",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-05-12",
+    "closure_s": 113,
+    "leakage_l_min": 3,
+    "leakage_limit_l_min": 10,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "P2",
+    "component": "leaf_paint",
+    "grade": 1,
+    "status": "closed"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W-31",
+     "defect_code": "P2",
+     "grade_raised": 1,
+     "status": "complete",
+     "completed": "2025-05-20",
+     "retest_insp_id": null
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": false
+  }
+ },
+ "factors": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.94,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 0,
+  "mismatch_location": "test_date_vs_repair",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "completed_untested",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 58,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.94,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 1,
+  "mismatch_location": "test_date_vs_repair",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "completed_untested",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 58,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 53,
+ "deciding": {
+  "closure_test_valid": "The test passed (113 s of 120 s, 3 of 10 l/min), but test_date 2025-05-12 is before the work order completed on 2025-05-20. The repair was only a cosmetic paint item, so the test is still arguably current.",
+  "next_step": "The test is within limits, the only defect is a closed grade 1 paint item, and the gate is in service with no alert, so nothing remains to act on.",
+  "defect_class": "The only defect listed is closed and grade 1, so no open defect remains.",
+  "section_discrepancies": "Asset_id, grade_raised and the other counterpart values all agree across sections.",
+  "flood_risk": "Closure of 113 s is within the rated 120 s and there are no open defects, so risk is low."
+ },
+ "request": "rec-F428-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011489
+}

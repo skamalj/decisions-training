@@ -1,0 +1,215 @@
+{
+ "id": "F440-0015",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "GB-8841",
+   "review": "2025-09-01",
+   "arrive": "2025-09-05",
+   "depart": "2025-09-07",
+   "pax": {
+    "13-17": 11,
+    "adult": 2
+   },
+   "amend": [
+    {
+     "type": "date_change",
+     "delta": "-1 night",
+     "logged_at": "2025-08-20"
+    }
+   ]
+  },
+  "roster": [
+   [
+    "L",
+    "1981-03-03",
+    "F"
+   ],
+   [
+    "L",
+    "1987-12-12",
+    "M",
+    "2025-09-06"
+   ],
+   [
+    "P",
+    "2008-05-05",
+    "F"
+   ],
+   [
+    "P",
+    "2009-01-22",
+    "F"
+   ],
+   [
+    "P",
+    "2008-10-10",
+    "F"
+   ],
+   [
+    "P",
+    "2009-03-18",
+    "F"
+   ],
+   [
+    "P",
+    "2008-07-27",
+    "F"
+   ],
+   [
+    "P",
+    "2008-09-14",
+    "M"
+   ],
+   [
+    "P",
+    "2009-02-02",
+    "M"
+   ],
+   [
+    "P",
+    "2008-12-19",
+    "M"
+   ],
+   [
+    "P",
+    "2009-04-11",
+    "M"
+   ],
+   [
+    "P",
+    "2008-11-06",
+    "M"
+   ],
+   [
+    "P",
+    "2007-09-06",
+    "M"
+   ]
+  ],
+  "allocation": [
+   {
+    "room": "D1",
+    "sex": "F",
+    "beds": 4,
+    "nights": [
+     "2025-09-04",
+     "2025-09-05",
+     "2025-09-06"
+    ]
+   },
+   {
+    "room": "D2",
+    "sex": "M",
+    "beds": 8,
+    "nights": [
+     "2025-09-04",
+     "2025-09-05",
+     "2025-09-06"
+    ]
+   }
+  ],
+  "payment": {
+   "total": 1800,
+   "deposit_due": 540,
+   "paid_total": 270,
+   "schedule": null
+  },
+  "safeguarding": [
+   {
+    "adult": "L1",
+    "status": "verified",
+    "exp": "2027-05-01"
+   },
+   {
+    "adult": "L2",
+    "status": "verified",
+    "exp": "2025-09-03"
+   }
+  ],
+  "history": {
+   "org": "O-190",
+   "trusted": true,
+   "stays": 5,
+   "no_show": 1
+  }
+ },
+ "factors": {
+  "pax_mismatch": "none",
+  "night_mismatch": "different_dates",
+  "amendment_logged": true,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 4,
+  "dorm_fit": "needs_one_swap",
+  "leader_checks": "one_pending",
+  "trusted_organiser": true,
+  "prior_no_shows": 1,
+  "diet_count_drift": "none"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "none",
+  "night_mismatch": "different_dates",
+  "amendment_logged": true,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 24,
+  "dorm_fit": "needs_one_swap",
+  "leader_checks": "one_pending",
+  "trusted_organiser": true,
+  "prior_no_shows": 1,
+  "diet_count_drift": "minor"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "deposit_covered": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "refer_manager",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "ratio_met": "11 minors need 2 adults; L2 departs 2025-09-06, leaving the 09-06 night with 1 adult, though one minor turns 18 on that day which gives slight doubt.",
+  "deposit_covered": "Paid 270 against deposit_due 540 with schedule null; no instalment plan.",
+  "disposition": "Several open issues: under-supervised night, short deposit, female dorm 4 beds for 5 girls, and L2's check expiring 09-03 before departure.",
+  "urgency": "Review 2025-09-01 to arrival 2025-09-05 is 4 days, at the boundary with the within-3-day level.",
+  "conflict_count": "The allocation nights starting 09-04 are explained by the logged date_change; only the female dorm (4 beds vs 5 female minors) is unexplained, arguably capacity rather than a conflict."
+ },
+ "request": "rec-F440-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.017357
+}

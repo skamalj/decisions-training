@@ -1,0 +1,133 @@
+{
+ "id": "F402-0020",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-9358",
+   "source": "first_contact",
+   "received": "2025-06-03",
+   "priority": "urgent",
+   "site": {
+    "part": "knee",
+    "side": "R"
+   },
+   "onset_date": "2023-11-27"
+  },
+  "patient": {
+   "id": "p-4402",
+   "dob": "1971-01-30",
+   "aid": "stick",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx": "M17.1",
+   "red_flags": [],
+   "neuro_signs": null,
+   "function_index": 58,
+   "anticoagulant": false,
+   "surgery_date": "2025-04-18",
+   "weight_bearing": null
+  },
+  "gp_record": {
+   "dob": "1971-01-30",
+   "meds": [],
+   "falls_3m": 1,
+   "reviews": []
+  },
+  "attachments": [
+   {
+    "type": "op_protocol",
+    "date": "2025-01-09",
+    "side": "R"
+   }
+  ],
+  "history": {
+   "episodes": [
+    {
+     "date": "2024-10-05",
+     "discharge": "goals_met"
+    }
+   ],
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": false,
+  "mismatch_field": "surgery_date",
+  "mismatch_magnitude": "major",
+  "missing_item": "weight_bearing status",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 81,
+  "function_index": 58.0,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 1,
+  "post_op_days": 46,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "surgery_date",
+  "mismatch_magnitude": "major",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 81,
+  "function_index": 90.25,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 3,
+  "post_op_days": 46,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_info",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "specialist_rehab",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "red_flag_unresolved": "clinical.red_flags is empty and no neuro signs or night-pain weight-loss findings are recorded.",
+  "next_step": "weight_bearing is null and clinical.surgery_date (2025-04-18) disagrees with the op_protocol date (2025-01-09), so ask the referrer for weight-bearing status and the confirmed surgery date.",
+  "pathway": "A post-operative knee with a stick and function index 58 points to specialist rehabilitation, but the unconfirmed surgery date leaves doubt.",
+  "reversal_time": "A delay or wrong post-op pathway is recoverable over days to months; whether that is one week or up to three months is uncertain.",
+  "clinical_urgency": "If surgery was 46 days ago with unknown weight-bearing, contact within two weeks is arguable, but function index 58 and one fall support six weeks; the urgent priority is a decoy."
+ },
+ "request": "rec-F402-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00919
+}

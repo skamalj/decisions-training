@@ -1,0 +1,144 @@
+{
+ "id": "F418-0032",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "HRB",
+   "plat": 1,
+   "date": "2025-04-02",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S10"
+   },
+   {
+    "staff_id": "S11"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S10",
+    "sign_on": "05:20",
+    "dispatch_comp_exp": "2026-01-01"
+   },
+   {
+    "staff_id": "S19",
+    "sign_on": "05:25",
+    "dispatch_comp_exp": null
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "22:20"
+   },
+   {
+    "type": "dispatch",
+    "time": "22:30",
+    "staff_id": "S19"
+   },
+   {
+    "type": "gap_end",
+    "time": "23:09"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-88",
+   "disp_platform": 1,
+   "valid_to": "2025-06-30",
+   "approved_by": "ROM",
+   "prior_shortfalls_30d": 3
+  },
+  "remarks": [
+   "S11 covered all day, no issues."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 49,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 49,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_log",
+   "second": "request_records",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unqualified_dispatch = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 35,
+ "deciding": {
+  "headcount_verified": "S19 signed on in place of rostered S11 with no redeploy event, and remarks say S11 worked; S19 has an attendance row, so it is balanced.",
+  "next_step": "The dispensation is valid, favouring accept; the S11/S19 contradiction could justify requesting records.",
+  "coverage_outcome": "Gap 22:20-23:09 lies after service_to 22:00, so rostered staff covered all service.",
+  "reversal_time": "A dispatch by S19 with null dispatch_comp_exp in staff mode is an event that cannot be undone, but dispensation and no in-service shortfall make it an eight-day to three-month record-correction matter.",
+  "exposure_severity": "Dispatch event at 22:30 by S19 (dispatch_comp_exp null) in staff dispatch mode is a safety-critical duty performed uncertified; the timing after service_to creates some doubt."
+ },
+ "request": "rec-F418-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006704
+}

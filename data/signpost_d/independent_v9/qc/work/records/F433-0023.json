@@ -1,0 +1,137 @@
+{
+ "id": "F433-0023",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H08",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "result": "pass"
+    }
+   ],
+   "passport_remark": "known left fore irregularity, regular at loops 1-2"
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "11:00"
+  },
+  "vet_card": {
+   "arrival_copied": "11:08",
+   "presented_at": "11:24",
+   "pulse_bpm": 56,
+   "cri": {
+    "first_bpm": 52,
+    "second_bpm": 52
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 2,
+    "gut_sounds": [
+     "reduced",
+     "reduced",
+     "normal",
+     "normal"
+    ]
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 1
+    },
+    {
+     "surface": "grass",
+     "grade": 0
+    }
+   ],
+   "tack": {
+    "site": "girth",
+    "finding": "old rub"
+   },
+   "vet_signed_at": "11:28"
+  },
+  "notes": {
+   "rider_note": "Girth slipped on the climb, rub is old."
+  }
+ },
+ "factors": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "major_over_5min",
+  "gait_grade": "regular on grass, grade 1 on hard",
+  "gait_mitigation": true,
+  "metabolic_flags": "2 (mild, reduced gut sounds in two quadrants)",
+  "cri_rise": "none",
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "minor_rub",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "major_over_5min",
+  "gait_grade": "regular",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 5.18,
+  "missing_items": 2,
+  "out_of_sequence": false,
+  "tack_wound": "minor_rub",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "clear_to_continue",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "contested",
+   "target": "pass",
+   "second": "ftq_gait",
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 84,
+ "deciding": {
+  "pulse_met": "Gate arrival 11:00 gives 24 min to presentation (late), though copied arrival 11:08 gives 16 min; pulse 56 is low.",
+  "next_step": "All readings and signature are recorded, pulse and CRI are fine, trot-up regular on grass and a rub that is old.",
+  "outcome_code": "Grade 1 on hard is explained by the passport remark and regular on grass, so pass or gait fail are both defensible.",
+  "welfare_risk": "Reduced gut sounds in two quadrants and the grade 1 trot-up are possible outside-limit parameters; the late-looking window could imply uncleared.",
+  "record_completeness": "Everything is present and signed, but the 8-minute gap between gate and copied arrival time muddies the sequence."
+ },
+ "request": "rec-F433-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010225
+}

@@ -1,0 +1,162 @@
+{
+ "id": "F418-0050",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "DVN",
+   "plat": 5,
+   "date": "2025-05-20",
+   "svc_from": "05:30",
+   "svc_to": "23:30",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S58",
+    "planned_start": "06:00"
+   },
+   {
+    "staff_id": "S61",
+    "planned_start": "06:00",
+    "overtime": true
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S58",
+    "sign_on": "06:00",
+    "safety_comp_exp": "2026-04-01",
+    "dispatch_comp_exp": "2025-05-20"
+   },
+   {
+    "staff_id": "S61",
+    "sign_on": "06:00",
+    "safety_comp_exp": "2026-01-09",
+    "dispatch_comp_exp": "2026-01-09"
+   },
+   {
+    "staff_id": "S63",
+    "sign_on": "14:08",
+    "safety_comp_exp": "2025-10-02",
+    "dispatch_comp_exp": "2025-10-02"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "13:00",
+    "staff_id": "S61",
+    "plat": 5
+   },
+   {
+    "type": "dispatch",
+    "time": "13:30",
+    "staff_id": "S58",
+    "plat": 5
+   },
+   {
+    "type": "cover_start",
+    "time": "14:05",
+    "staff_id": "S63",
+    "plat": 5
+   },
+   {
+    "type": "gap_end",
+    "time": "14:40",
+    "staff_id": "S61",
+    "plat": 5
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-7714",
+   "disp_platform": 5,
+   "valid_from": "2025-05-01",
+   "valid_to": "2025-05-20T13:50",
+   "approved_by": "OPS-09",
+   "prior_shortfalls_30d": 3
+  },
+  "remarks": [
+   "Gap covered throughout, dispensation in force all day."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 100,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "expired_midgap",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 100,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "expired_midgap",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": true
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_ops",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "balanced",
+   "target": "partial_cover",
+   "second": "fully_rostered",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "headcount_verified": "S63's sign_on 14:08 comes three minutes after cover_start 14:05, and S58's dispatch_comp_exp equals the shift date, so it is in date but borderline.",
+  "next_step": "Dispensation valid_to 13:50 falls inside the gap, the remark says covered throughout, and three prior shortfalls: refer to route operations.",
+  "coverage_outcome": "Cover starts 14:05 with no cover_end; gap 13:00-14:40 is partly open, but the remark claims full cover and S63's sign_on is 14:08.",
+  "reversal_time": "Log can be amended quickly, but the expired dispensation and repeat pattern could take a few days to resolve.",
+  "exposure_severity": "Dispatch at 13:30 by S58 after dispensation expiry at 13:50? No: before expiry, but gap continues beyond 13:50; S58's dispatch_comp_exp on the shift date makes level 2 versus 3 turn on whether it counts as in date."
+ },
+ "request": "rec-F418-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011548
+}

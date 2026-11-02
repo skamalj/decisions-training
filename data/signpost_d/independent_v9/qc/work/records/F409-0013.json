@@ -1,0 +1,152 @@
+{
+ "id": "F409-0013",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "submitted_on": "2024-06-10",
+   "app_type": "new",
+   "message": "I have lived at this address since 2019."
+  },
+  "residence_evidence": {
+   "ct_liability_from": "2024-03-01",
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-03-12",
+     "address_line": "2/8 Quay St",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": null,
+     "address_line": null,
+     "verified": null
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "B4",
+   "address": "Flat 2, 8 Quay St"
+  },
+  "account_history": {
+   "live_permits": [
+    {
+     "permit_no": "P402"
+    },
+    {
+     "permit_no": "P455"
+    }
+   ],
+   "exceptions": [
+    {
+     "type": "medical",
+     "approved_on": "2023-09-14"
+    }
+   ],
+   "past_permits": [
+    {
+     "permit_no": "P120",
+     "status": "seized",
+     "seize_reason": "altered permit suspected, appeal pending"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "format_only",
+  "proof_age_days": 90,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 2,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 5,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "contradicting_claim",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "format_only",
+  "proof_age_days": 159,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 2,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 5,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "contradicting_claim",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "approve_temporary",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 74,
+ "deciding": {
+  "residency_shown": "The bill address matches in format only and is verified. It is exactly 90 days old (2024-03-12 to 2024-06-10), at the limit, so the plan puts residency at the boundary.",
+  "disposition": "Residency is accepted at the 90-day limit, while the id_card is missing and unverified. That points to a time-limited permit pending the ID.",
+  "main_issue": "The household is at the cap of 2 but has an approved medical exception. The address matches and no keeper issue appears, so no check clearly fails.",
+  "misuse_strength": "The claim of living there since 2019 is contradicted by ct_liability_from 2024-03-01, and three PCNs are open. The seized permit for suspected alteration with an appeal pending could count as confirmed.",
+  "document_gaps": "The id_card entry is null and unverified, which is one gap. The 90-day-old bill is at the limit and may count as a second unverified document."
+ },
+ "request": "rec-F409-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009388
+}

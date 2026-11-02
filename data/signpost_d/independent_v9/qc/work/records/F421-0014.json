@@ -1,0 +1,128 @@
+{
+ "id": "F421-0014",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P55102",
+   "contents": "ceramic vases",
+   "qty": 4,
+   "weight_kg": 9.0,
+   "declared_value_gbp": 1015.35
+  },
+  "handling_events": [
+   {
+    "ts": "2024-08-14T07:00",
+    "site": "HubW",
+    "code": "SCAN",
+    "exc": "ADDR"
+   },
+   {
+    "ts": "2024-08-14T10:00",
+    "site": "DEPOT",
+    "code": "INBOUND",
+    "exc": null
+   },
+   {
+    "ts": "2024-08-14T13:30",
+    "site": "DEPOT",
+    "code": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-08-14T15:00",
+   "observed_item": "ceramic vases",
+   "qty_found": 3,
+   "weight_kg": 8.8,
+   "condition": "one vase chipped at rim",
+   "photos": [
+    "a.jpg",
+    "b.jpg"
+   ],
+   "repair_est_gbp": 219.8
+  },
+  "claim": {
+   "claimed_gbp": 145.1,
+   "packaging_desc": "thin box, no void fill"
+  },
+  "notes": [
+   "Four listed, three in box."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "quantity",
+  "inspection_state": "complete",
+  "loss_pct": 21.65,
+  "declared_value": 1015.35,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 0.66
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "quantity",
+  "inspection_state": "complete",
+  "loss_pct": 21.65,
+  "declared_value": 1015.35,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 0.66
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "approve_repack",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 74,
+ "deciding": {
+  "depot_fault": "Clean inbound then DMG at sort, but poor packaging and an ADDR decoy upstream.",
+  "contents_match": "qty_found 3 vs manifest 4 though same item; may be a count slip.",
+  "next_step": "Complete report with photos supports repack, but the quantity gap could need evidence.",
+  "loss_share": "Estimate 219.80 of 1015.35 is 21.65%, though the missing vase could shift it.",
+  "parties_needed": "Assessor alone may suffice, or a second team needed for the missing vase."
+ },
+ "request": "rec-F421-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005646
+}

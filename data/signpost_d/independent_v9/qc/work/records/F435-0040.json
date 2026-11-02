@@ -1,0 +1,169 @@
+{
+ "id": "F435-0040",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E-7105",
+   "zone_id": "ST6",
+   "zone_type": "seated_tier",
+   "doors_open": "2025-09-06T18:00",
+   "check_filed_at": "2025-09-06T23:20",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 800,
+   "variation": {
+    "ref": "V-305",
+    "new_limit": 900,
+    "status": "pending",
+    "approved_on": null
+   },
+   "stewards_required": 25,
+   "exit_routes": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 800,
+   "issued": 760,
+   "comps_included": 40,
+   "scanned_in": 748
+  },
+  "ingress": {
+   "device_id": "D40",
+   "device_status": "ok",
+   "raw_peak": 797,
+   "peak_at": "2025-09-06T19:40",
+   "manual_recount": {
+    "count": 795,
+    "at": "2025-09-06T19:50"
+   }
+  },
+  "stewarding": {
+   "rostered": 25,
+   "signed_in": 24,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "S1",
+    "checked_at": "2025-09-06T17:10",
+    "status": "clear"
+   },
+   {
+    "route_id": "S2",
+    "checked_at": "2025-09-06T17:15",
+    "status": "clear"
+   },
+   {
+    "route_id": "S3",
+    "checked_at": null,
+    "status": "clear"
+   },
+   {
+    "route_id": "S4",
+    "checked_at": "2025-09-06T18:20",
+    "status": "clear"
+   },
+   {
+    "route_id": "S5",
+    "checked_at": "2025-09-06T17:30",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "S6",
+    "checked_at": "2025-09-06T17:35",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "S6",
+    "checked_at": "2025-09-06T18:40",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "seated_tier",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.995,
+  "counter_status": "ok",
+  "counter_inflation": 0.0,
+  "manual_recount_present": true,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 0.95,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.04,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "seated_tier",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.99,
+  "counter_status": "ok",
+  "counter_inflation": 0.0,
+  "manual_recount_present": true,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 0.95,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.04,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 1,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 152,
+ "deciding": {
+  "verified_exceedance": "Variation to 900 is pending, so the limit stays 800; counter ok at peak 797 and recount 795 are just under it.",
+  "disposition": "Counts reconcile under 800 and issued 760 is within the limit, but the exit log shows unconfirmed routes.",
+  "discrepancy_source": "Issued 760 is under limit used 800, and verified 795-797 is under the effective 800.",
+  "steward_shortfall": "signed_in 24 of 25 required is 4% below, while rostered is 25, which supports either Met or Slight.",
+  "unconfirmed_exits": "S3 has a null check time, S4 was checked after doors, S5 stayed obstructed, S6 was cleared only after doors and S7 is absent: five routes."
+ },
+ "request": "rec-F435-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010641
+}

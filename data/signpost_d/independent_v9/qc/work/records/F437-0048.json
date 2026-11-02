@@ -1,0 +1,129 @@
+{
+ "id": "F437-0048",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v1",
+   "glossary_version": "g5",
+   "due_at": "2025-05-05T10:00",
+   "workflow": [
+    {
+     "step": "dtp",
+     "done_at": null
+    }
+   ]
+  },
+  "source": {
+   "version": "v1",
+   "segment_count": 200,
+   "word_count": 3100
+  },
+  "deliverable": {
+   "built_from_version": "v1",
+   "segments_translated": 200,
+   "word_count": 3050,
+   "glossary_version_used": "g4",
+   "delivered_at": "2025-05-06T08:00"
+  },
+  "qa_report": {
+   "flags": 13,
+   "false_positive_marked": 6,
+   "number_mismatches": []
+  },
+  "review": {
+   "completed_at": "2025-05-06T09:30",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "major",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-04-28",
+    "2025-05-01",
+    "2025-05-03"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "signed_after_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.46,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": -22,
+  "client_waiver": false,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": true
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.46,
+  "number_mismatch_count": 3,
+  "deadline_slack_hours": -22,
+  "client_waiver": false,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": true
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_for_item",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "scope_matches": "Versions and 200/200 segments agree; 50-word drop is unexplained without a repetitions breakdown, so slight doubt.",
+  "reviewed_in_time": "review.completed_at 09:30 is after delivered_at 08:00 on 05-06.",
+  "next_step": "Pending DTP step (done_at null) is the named missing item; glossary g4 vs g5 adds doubt.",
+  "open_severity": "Only error is closed; QA flags 13 with 6 marked false, remainder unclear.",
+  "parties_needed": "DTP, translator for glossary update, and perhaps reviewer or account manager; two or three parties."
+ },
+ "request": "rec-F437-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005927
+}

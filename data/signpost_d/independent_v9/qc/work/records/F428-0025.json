@@ -1,0 +1,141 @@
+{
+ "id": "F428-0025",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "FL-402",
+   "gate_type": "flap",
+   "rated_closure_s": 300,
+   "seal_type": "music_note",
+   "clear_width": 4.5,
+   "clear_width_unit": "m",
+   "consequence_class": "high"
+  },
+  "inspection": {
+   "asset_id": "FL-402",
+   "insp_date": "2025-09-01",
+   "measured_width_m": 4.48,
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-09-01",
+    "closure_s": 303,
+    "leakage_l_min": 12,
+    "leakage_limit_l_min": 20,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D9",
+    "component": "seal",
+    "grade": 3,
+    "loss_pct": 35,
+    "status": "open",
+    "first_seen": "2025-06-10"
+   },
+   {
+    "code": "D5",
+    "component": "leaf",
+    "grade": 2,
+    "status": "open",
+    "first_seen": "2025-06-10"
+   }
+  ],
+  "maintenance": {
+   "work_orders": []
+  },
+  "operations": {
+   "outage": {
+    "status": "out_of_service",
+    "since": "2025-08-25",
+    "permit_ref": "P-219",
+    "permit_expiry": "2025-09-30"
+   },
+   "temp_barrier_deployed": false,
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2025-09-21"
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.01,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "seal",
+  "mismatch_count": "0 or 1 (width 4.5 m vs 4.48 m, near rounding)",
+  "mismatch_location": "width_units",
+  "test_status": "passed_marginally_over_rated_time",
+  "repair_progress": "none_needed",
+  "mitigation_present": true,
+  "mitigation_kind": "approved_outage_permit",
+  "days_to_forecast_peak": 20,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.2,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 4,
+  "mismatch_location": "width_units",
+  "test_status": "failed",
+  "repair_progress": "none_needed",
+  "mitigation_present": true,
+  "mitigation_kind": "approved_outage_permit",
+  "days_to_forecast_peak": 20,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "raise_repair",
+   "second": "escalate_engineer",
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "seal",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 104,
+ "deciding": {
+  "closure_test_valid": "Result is pass with leakage 12 vs 20, but closure_s 303 is 3 s over the 300 s rated time, so leaning valid with doubt.",
+  "next_step": "Open grade 3 seal defect with no work order, outage permit valid to 2025-09-30, peak 20 days away, no alert: raising a repair is natural, though the borderline late closure makes escalation defensible.",
+  "defect_class": "Highest open grade is the seal defect D9 (grade 3, 35% loss), above the grade 2 leaf defect.",
+  "section_discrepancies": "Register width 4.5 m vs measured 4.48 m: rounding or a real disagreement; all other values (ids, rated time, seal) agree.",
+  "flood_risk": "Closure 303 s vs 300 s rated is marginally late (level 2), while the only high-grade defect is one grade 3 (level 1); there is no grade 4 defect and the outage is within its permit."
+ },
+ "request": "rec-F428-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009946
+}

@@ -1,0 +1,143 @@
+{
+ "id": "F402-0019",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-6013",
+   "source": "GP",
+   "received": "2025-05-12",
+   "priority": "routine",
+   "site": {
+    "part": "lumbar_spine",
+    "side": "B"
+   },
+   "onset_date": "2023-06-19"
+  },
+  "patient": {
+   "id": "p-1986",
+   "dob": "1965-09-14",
+   "aid": "none",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx": "M54.5",
+   "red_flags": [
+    "ca_hx_new_spinal_pain"
+   ],
+   "neuro_signs": null,
+   "function_index": 68,
+   "anticoagulant": false,
+   "surgery_date": null
+  },
+  "gp_record": {
+   "dob": "1965-09-14",
+   "falls_3m": 0,
+   "reviews": []
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-04-08",
+    "side": "B",
+    "result": "no_sinister"
+   }
+  ],
+  "history": {
+   "episodes": [
+    {
+     "date": "2024-07-02",
+     "discharge": "oncology_discharge"
+    },
+    {
+     "date": "2025-01-15",
+     "discharge": "goals_met"
+    }
+   ],
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": true,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "none",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 99,
+  "function_index": 68.0,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "routine",
+  "falls_last_3m": 0,
+  "post_op_days": "none",
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": true,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "consent_to_refer",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 99,
+  "function_index": 23.12,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "routine",
+  "falls_last_3m": 2,
+  "post_op_days": 62,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 87,
+ "deciding": {
+  "red_flag_unresolved": "The cancer-history flag is explained by an MRI of 2025-04-08 with no_sinister and an oncology_discharge code in history; the pain is 99 weeks old, leaving small doubt.",
+  "next_step": "Consent is true, DOB and sides agree, nothing is missing and the priority is routine, so the referral is accepted as referred.",
+  "pathway": "Long-standing, low-impact back pain with function index 68, cleared MRI and no falls suits advice and exercise, though two prior episodes add some doubt.",
+  "reversal_time": "Placing a routine low-impact referral on the list is undone within a day.",
+  "clinical_urgency": "Pain is 99 weeks old, MRI is clear, function is good and priority is routine, so waiting beyond six weeks is safe."
+ },
+ "request": "rec-F402-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00919
+}

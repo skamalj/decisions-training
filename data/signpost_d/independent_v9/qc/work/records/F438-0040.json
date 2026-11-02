@@ -1,0 +1,132 @@
+{
+ "id": "F438-0040",
+ "family": "F438",
+ "state": {
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "J18.9"
+   },
+   "comorbidities": [
+    "I10",
+    "E11.9"
+   ],
+   "theatre_log": [],
+   "documents_present": {
+    "discharge_summary": true,
+    "operation_note": false,
+    "pathology_report": true
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "I21.4"
+   },
+   "secondary_dx": [
+    "I10",
+    "E11.9",
+    "J95.8"
+   ],
+   "procedures": [
+    {
+     "code": "K63.1",
+     "date": "2024-06-02"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "EB10B",
+   "hrg_regrouped": null,
+   "regroup_status": "blocked_missing_source",
+   "tariff_submitted": 5300,
+   "tariff_regrouped": null,
+   "submitted_to_commissioner": true
+  },
+  "audit_context": {
+   "queries": [
+    {
+     "target_code": "J18.9",
+     "status": "closed",
+     "response": "confirms"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "coded_procedure_no_theatre_entry",
+  "regroup_outcome": "not_regroupable",
+  "missing_source": "operation_note",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.01,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "not_regroupable",
+  "missing_source": "operation_note",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.01,
+  "boundary_case": true,
+  "unsupported_billable_code": true
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_as_coded",
+   "second": "amend_codes",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unsupported_billable_code = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 47,
+ "deciding": {
+  "primary_supported": "Coded I21.4 is a different condition from documented J18.9, and the closed query confirms J18.9.",
+  "hrg_shift": "hrg_regrouped is null with status blocked_missing_source, so no shift can be shown. The primary mismatch makes one likely.",
+  "next_step": "Accepting is arguable because regrouping is blocked and the record is already submitted. Amending the primary code is the other defensible option.",
+  "error_count": "The primary mismatch, secondary J95.8 not documented, and procedure K63.1 not in the theatre_log give three errors. The missing operation note leaves some doubt on the count.",
+  "error_severity": "The wrong primary diagnosis and the undocumented J95.8 and K63.1 with a billed tariff point to a major-or-higher level. The missing operation note blurs whether K63.1 is unsupported."
+ },
+ "request": "rec-F438-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009481
+}

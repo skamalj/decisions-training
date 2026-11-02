@@ -1,0 +1,160 @@
+{
+ "id": "F405-0038",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-2208",
+   "detected_on": "2025-03-03",
+   "term_start": "2025-03-03",
+   "room": "LT4"
+  },
+  "booking_a": {
+   "module": "HIS101",
+   "dept": "HIS",
+   "day": "Mon",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3
+   ],
+   "headcount": 38,
+   "required_features": [
+    "accessible_entry"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "LAW105",
+   "dept": "LAW",
+   "room": "LT4",
+   "day": "Mon",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3
+   ],
+   "headcount": 55,
+   "status": "confirmed",
+   "approved_at": "2025-02-10",
+   "approver": "M.Cole"
+  },
+  "room": {
+   "code": "LT4",
+   "aliases": [],
+   "capacity": 60,
+   "features": [
+    "accessible_entry"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "LT7",
+    "capacity": 40,
+    "features": [
+     "step_free_access"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.05,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 4
+ },
+ "factors_sampled": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 17,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.69,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 4
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "relocate",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 37,
+ "deciding": {
+  "genuine_clash": "Both bookings are in LT4 on Monday 09:00-11:00 in weeks 1-3, both confirmed. The overlap is full and unambiguous.",
+  "alt_room_fits": "LT7 holds 40 against A's headcount 38 and is free in weeks 1-3. Its feature reads step_free_access rather than the required accessible_entry, so the match is uncertain.",
+  "resolution": "Both bookings are confirmed and a listed free room is available for one of them, so relocate.",
+  "urgency": "Detected on term_start, a Monday, so the first occurrence is week 1 Monday, the same day. Whether 09:00 has already passed decides between live and imminent.",
+  "parties_needed": "Two departments, two approvers, room services and the accessibility team may all be involved, so 3 to 4 or 5 or more is arguable. Four earlier clash reports add context."
+ },
+ "request": "rec-F405-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010228
+}

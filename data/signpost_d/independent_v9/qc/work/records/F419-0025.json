@@ -1,0 +1,162 @@
+{
+ "id": "F419-0025",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "survey_date": "2024-10-08",
+   "test_speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": {
+    "precip_mm": 0,
+    "wind_kmh": 12
+   }
+  },
+  "device": {
+   "serial": "CF-31",
+   "cal_cert_date": "2023-10-08",
+   "cal_expiry": "2024-10-08",
+   "tyre_pressure_kpa": 700,
+   "tyre_spec_kpa": [
+    650,
+    750
+   ],
+   "water_depth_mm": 1.0
+  },
+  "runs": [
+   {
+    "dir": "16",
+    "mean_speed_kmh": 73,
+    "thirds": [
+     0.52,
+     0.64,
+     0.6
+    ]
+   },
+   {
+    "dir": "34",
+    "mean_speed_kmh": 72,
+    "thirds": [
+     0.62,
+     0.66,
+     0.53
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.9,
+    1.0,
+    0.9
+   ],
+   "mtd_threshold_mm": 0.6
+  },
+  "maintenance": {
+   "last_rubber_removal": "2024-03-08",
+   "works_orders": [],
+   "prior_surveys": [
+    {
+     "date": "2024-02-01",
+     "lowest_third": 0.6
+    },
+    {
+     "date": "2024-06-12",
+     "lowest_third": 0.55
+    }
+   ],
+   "cross_checks": [
+    {
+     "serial": "CF-07",
+     "date": "2024-10-08",
+     "thirds": [
+      0.61,
+      0.68,
+      0.66
+     ]
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-10-08T16:30Z"
+  }
+ },
+ "factors": {
+  "min_third_band": "at_maint_planning_boundary",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 214,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "speed_off",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "declining"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_planning",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 214,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "speed_off",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "declining"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "schedule_works",
+   "second": "restrict_ops",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "genuine_deficit": "Lowest third 0.52 sits on the planning level and the trend is declining, but mean runs were 72-73 km/h against 65 and the CF-07 cross-check reads 0.61 against 0.52, so true and false are both defensible.",
+  "next_step": "No works order exists and the lowest value is on the planning boundary, which favours scheduling works; the off-speed test and higher cross-check leave restriction or retest as a competing view.",
+  "deficit_driver": "No third or segment is below the 0.52 planning level, with texture adequate at 0.9-1.0 mm.",
+  "friction_severity": "Lowest third 0.52 equals the planning threshold, so level 1 or level 2 depending on how a boundary value reads.",
+  "evidence_completeness": "Every element is present, but calibration expires on the survey date itself and signed_at is the same day, so level 4 and level 3 are both defensible."
+ },
+ "request": "rec-F419-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013244
+}

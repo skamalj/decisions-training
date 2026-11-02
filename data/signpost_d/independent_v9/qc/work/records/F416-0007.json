@@ -1,0 +1,165 @@
+{
+ "id": "F416-0007",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "W07",
+   "date": "2025-06-21",
+   "signoff": "G11 17:30"
+  },
+  "roster": [
+   {
+    "id": "G11",
+    "on": "09:00",
+    "off": "17:00",
+    "qual": "2025-06-21",
+    "home": "W07"
+   },
+   {
+    "id": "G12",
+    "on": "09:00",
+    "off": "17:00",
+    "qual": "2026-05-01",
+    "home": "W07"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "11:00",
+    "wave_m": 1.1,
+    "rip": "high",
+    "flag": "red_yellow",
+    "zone_moved": false
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "type": "water_rescue",
+    "time": "11:40",
+    "resp": [
+     "G11",
+     "G12"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I2",
+    "type": "water_rescue",
+    "time": "14:20",
+    "resp": [
+     "G11",
+     "G12"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I3",
+    "type": "first_aid",
+    "time": "15:10",
+    "resp": [
+     "G12"
+    ],
+    "out": "treated_onsite"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "oxygen_kit",
+    "out_from": "16:40",
+    "out_to": null,
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 1,
+   "kit_defects": 1,
+   "check_sheet_ref": "CS-31"
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": true,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "kit_defect_unlisted",
+  "worst_outcome": "conveyed",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "corrective_order",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 140,
+ "deciding": {
+  "two_guard_cover": "Both rescues have two rostered responders, but G11's qual expiry 2025-06-21 equals the shift date, so validity is at the boundary.",
+  "totals_reconcile": "Rescues 2, first_aid 1 and kit_defects 1 match the two water rescues, one first-aid incident and one equipment entry.",
+  "next_step": "The 11:00 reading shows rip high with flag red_yellow and zone_moved false, an unmitigated flag lag, while no serious outcome or missing item is present.",
+  "outcome_severity": "The only non-rescue incident is first aid treated on site; both rescues were released and there is no ambulance ref or AED.",
+  "kit_outage": "The oxygen kit went out at 16:40 with out_to null and no substitute; the shift ends at 17:00, so the outage is at most about 20 min and its true length is unrecorded, which holds level 0 against level 1."
+ },
+ "request": "rec-F416-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014231
+}

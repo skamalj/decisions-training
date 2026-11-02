@@ -1,0 +1,126 @@
+{
+ "id": "F421-0028",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P3",
+   "fragile": true,
+   "contents": "ceramic vase set",
+   "qty": 1,
+   "weight_kg": 12,
+   "declared_value_gbp": 2936.96
+  },
+  "handling_events": [
+   {
+    "site": "HUB1",
+    "code": "OUT",
+    "exc": "DMG"
+   },
+   {
+    "site": "HUB3",
+    "code": "OUT",
+    "exc": "CRUSH"
+   },
+   {
+    "site": "DEP",
+    "code": "INB",
+    "exc": "DMG"
+   },
+   {
+    "site": "DEP",
+    "code": "CONV-STD"
+   }
+  ],
+  "damage_report": {
+   "observed_item": "ceramic vase set",
+   "qty_found": 1,
+   "weight_kg": 9,
+   "condition": "shards, set cracked",
+   "photos": [
+    "p1.jpg",
+    "p2.jpg"
+   ],
+   "repair_est_gbp": 146.85
+  },
+  "claim": {
+   "claimed_gbp": 323.07,
+   "item_desc": "vase set"
+  }
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "complete",
+  "loss_pct": 5.0,
+  "declared_value": 2936.96,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": true,
+  "note_slant": "absent",
+  "claim_amount_gap": 2.2
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "photos_missing",
+  "loss_pct": 85.87,
+  "declared_value": 2936.96,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": true,
+  "note_slant": "absent",
+  "claim_amount_gap": 2.2
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_repack",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "depot_fault": "DMG at HUB1 and CRUSH at HUB3 before the depot INB, which carries DMG. Damage predates intake, but the later CONV-STD misroute at the depot adds doubt.",
+  "contents_match": "Same item description, but 9 kg against 12 kg is a 25% drop. Likely a match, with the weight raising doubt.",
+  "next_step": "Report and photos are complete and the fragile parcel was put on CONV-STD at the depot, so accepting and handling it is the likely route.",
+  "loss_share": "Repair 146.85 over declared 2936.96 is exactly 5.0%, on the boundary between levels 0 and 1.",
+  "parties_needed": "Upstream hubs, the depot, claims and a repack or write-off decision all plausibly act, so three to five or more teams are defensible."
+ },
+ "request": "rec-F421-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008944
+}

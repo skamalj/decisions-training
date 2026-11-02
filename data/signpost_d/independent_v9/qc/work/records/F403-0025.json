@@ -1,0 +1,134 @@
+{
+ "id": "F403-0025",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "milk"
+   ],
+   "plan_start": "2025-09-01"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-07-01",
+   "allergens": [
+    "milk",
+    "sesame"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-08-15",
+   "dishes": [
+    {
+     "dish": "cheese pasta",
+     "contains": [
+      "milk"
+     ],
+     "recipe_version_date": "2025-08-25",
+     "substitute": "dairy-free pasta",
+     "spec_checked_on": "2025-08-27"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": false,
+   "staff_trained": "2025-06-20",
+   "cleaning_log_complete": true,
+   "exceptions": [
+    {
+     "date": "2025-08-28",
+     "signed_by": "catering manager",
+     "covers": "shared equipment"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-10-10",
+   "packed_lunch_until": "2025-10-09",
+   "incidents": [],
+   "messages": [
+    "Parent says the new meals are going well."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "shared_equipment",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 0,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "missing",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "shared_equipment",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 10,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_to_lead",
+   "second": "approve_restricted",
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "no_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 102,
+ "deciding": {
+  "evidence_allergens_covered": "Evidence lists sesame, which is absent from declared allergens and from any mapped dish, so not every evidence allergen is covered.",
+  "next_step": "The sesame mismatch calls for referral, though the single dish is substituted and controls are covered by exception, so approve_restricted is the rival.",
+  "first_gap_stage": "Evidence is current, the milk dish is substituted with spec checked after the recipe change, and the shared-equipment weakness has a dated signed exception; the sesame mismatch is the only loose end.",
+  "exposure_proximity": "The milk dish is substituted and shared equipment is covered by a signed exception, but the unmapped sesame leaves guarded as the rival, and there are no incidents.",
+  "meal_urgency": "Packed lunch ended 2025-10-09 and review is 2025-10-10, so the first meal is the review day and the pupil is just starting, between levels 4 and 3."
+ },
+ "request": "rec-F403-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009392
+}

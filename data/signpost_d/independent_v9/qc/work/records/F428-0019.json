@@ -1,0 +1,132 @@
+{
+ "id": "F428-0019",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "MT-140",
+   "gate_type": "mitre",
+   "rated_closure_s": 100,
+   "seal_type": "music_note",
+   "clear_width": 5200,
+   "clear_width_unit": "mm"
+  },
+  "inspection": {
+   "asset_id": "MT-14O",
+   "insp_date": "2025-06-10",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-06-10",
+    "closure_s": 95,
+    "leakage_l_min": 4,
+    "leakage_limit_l_min": 20,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "JB-3",
+    "component": "seal_j_bulb",
+    "grade": 1,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": []
+  },
+  "operations": {
+   "outage": {
+    "status": "out_of_service",
+    "since": "2025-05-20",
+    "permit_ref": "P-771",
+    "permit_expiry": "2025-06-05"
+   },
+   "temp_barrier_deployed": true,
+   "flood_alert_active": true,
+   "forecast": {
+    "peak_date": "2025-07-14"
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.95,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "none",
+  "mismatch_count": 3,
+  "mismatch_location": "seal_type, asset_id, width_units",
+  "test_status": "passed_current",
+  "repair_progress": "none_needed",
+  "mitigation_present": true,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 34,
+  "borderline_case": true,
+  "outage_beyond_permit": true
+ },
+ "factors_sampled": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 1.18,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 0,
+  "mismatch_location": "seal_type",
+  "test_status": "passed_current",
+  "repair_progress": "none_needed",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 34,
+  "borderline_case": true,
+  "outage_beyond_permit": true
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "raise_repair",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (outage_beyond_permit = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 51,
+ "deciding": {
+  "closure_test_valid": "Pass on insp_date, 95 s vs rated 100 s, leakage 4 under limit 20.",
+  "next_step": "Open seal defect JB-3 has no work order, so a works order is needed now; the permit lapse is the alternative escalation.",
+  "defect_class": "Only open defect is grade 1, so no open defect above grade 1.",
+  "section_discrepancies": "seal_type music_note vs defect seal_j_bulb, asset_id MT-140 vs MT-14O, and width given as 5200 mm; the width mismatch rests on a unit difference.",
+  "flood_risk": "Out of service with permit_expiry 2025-06-05 before insp_date 2025-06-10 and flood alert active, offset by a deployed temporary barrier and a passing test."
+ },
+ "request": "rec-F428-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010422
+}

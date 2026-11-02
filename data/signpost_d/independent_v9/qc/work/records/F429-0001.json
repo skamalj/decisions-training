@@ -1,0 +1,143 @@
+{
+ "id": "F429-0001",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "dam": "WB-2",
+   "operator_id": "op117",
+   "licence_q_max_m3s": 120,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "datum": "site",
+   "triggers": {
+    "alert_m": 84.5,
+    "action_m": 85.2
+   },
+   "readings": [
+    {
+     "t": "06:00",
+     "level_m": 83.9
+    },
+    {
+     "t": "12:00",
+     "level_m": 84.0
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "08:00",
+    "open_before_m": 0.5,
+    "open_after_m": 0.8
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 0.83
+    }
+   ],
+   "calc_peak_m3s": 46,
+   "gauged_peak_m3s": null
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "2024-05-03T13:10"
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "07:15",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "trivial (0.03 m)",
+  "discharge_discrepancy_pct": "not computable (gauged peak null)",
+  "datum_mismatch": false,
+  "missing_section": "gauged_peak_null",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "action",
+  "near_boundary": true,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 33.69,
+  "datum_mismatch": true,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "trigger_tier": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 63,
+ "deciding": {
+  "within_licence": "gauged_peak_m3s is null, so the measured peak is unavailable and compliance cannot be shown.",
+  "gates_reconciled": "G1 open_after 0.8 vs calc opening 0.83; a small 0.03 m gap leaves slight doubt.",
+  "next_step": "Inspection completed, notification acknowledged, no other step outstanding.",
+  "trigger_tier": "Readings 83.9 and 84.0 m are below alert 84.5 m.",
+  "parties_needed": "Nothing needs action beyond the duty engineer."
+ },
+ "request": "rec-F429-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009701
+}

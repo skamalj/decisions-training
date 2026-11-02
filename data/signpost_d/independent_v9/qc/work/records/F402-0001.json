@@ -1,0 +1,126 @@
+{
+ "id": "F402-0001",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-4417",
+   "received": "2025-03-10",
+   "priority": "routine",
+   "site": {
+    "part": "lumbar",
+    "side": "L"
+   },
+   "onset": "2025-02-03"
+  },
+  "patient": {
+   "dob": "1958-03-12",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx": "M54.5",
+   "red_flags": [
+    "PND01"
+   ],
+   "neuro_signs": {
+    "progression": "worsening"
+   },
+   "fi": 38.99,
+   "surgery_date": "2024-12-05",
+   "wb": "full"
+  },
+  "gp_record": {
+   "dob": "1958-03-21",
+   "falls_3m": 2
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-02-20",
+    "side": "L",
+    "result": "no_sinister"
+   }
+  ],
+  "history": {
+   "episodes": [],
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "progressive_neuro_deficit",
+  "red_flag_mitigated": true,
+  "mismatch_field": "date_of_birth",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 5,
+  "function_index": 38.99,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 2,
+  "post_op_days": 95,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "progressive_neuro_deficit",
+  "red_flag_mitigated": true,
+  "mismatch_field": "date_of_birth",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 5,
+  "function_index": 38.99,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 2,
+  "post_op_days": 95,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "book_amended",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "balanced",
+   "target": "self_management",
+   "second": "specialist_rehab",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 75,
+ "deciding": {
+  "red_flag_unresolved": "The neuro flag is covered by an MRI dated 2025-02-20 (within 8 weeks) with result no_sinister.",
+  "next_step": "The record is complete and the DOB gap is trivial, but two falls, worsening neuro signs and a surgery 95 days ago suggest booking with stated precautions rather than accepting as referred.",
+  "pathway": "FI 38.99 sits near the 40 boundary, with a simple low-back diagnosis and no prior episodes (self-management), against the earlier surgery and neuro signs (specialist rehab).",
+  "reversal_time": "Progressive neuro deficit is explained by a negative MRI, so permanent harm from a wrong call is uncertain: level 3 versus level 2.",
+  "clinical_urgency": "Onset is 5 weeks, close to the 6-week boundary, and the MRI is benign, so level 0 versus level 1 is close, though worsening neuro signs add some weight."
+ },
+ "request": "rec-F402-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008417
+}

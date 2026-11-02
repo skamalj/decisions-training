@@ -1,0 +1,130 @@
+{
+ "id": "F428-0014",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-118",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 240,
+   "seal_type": "J_bulb",
+   "consequence_class": "high"
+  },
+  "inspection": {
+   "asset_id": "VL-118",
+   "insp_date": "2025-04-02",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-03-12",
+    "closure_s": 254.4,
+    "leakage_l_min": 25,
+    "leakage_limit_l_min": 40,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "component": "hoist_motor",
+    "grade": 4,
+    "status": "open",
+    "first_seen": "2025-03-20"
+   },
+   {
+    "component": "seal_bulb",
+    "grade": 2,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": []
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2025-04-23",
+    "peak_level_mAOD": 3.4,
+    "sill_level_mAOD": 2.6
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.06,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 0,
+  "mismatch_location": "test_date_vs_repair",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 21,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.06,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 0,
+  "mismatch_location": "test_date_vs_repair",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 21,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "sign_off",
+   "second": "request_retest",
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "drive_actuation",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 98,
+ "deciding": {
+  "closure_test_valid": "Test passed but closure 254.4 s is 6% over rated 240 s, and the grade 4 hoist defect appeared after the test date; false vs true balanced.",
+  "next_step": "Passing test on file, yet a grade 4 hoist defect first seen after the test and no work order; sign_off vs retest balanced.",
+  "defect_class": "Highest open defect is hoist_motor grade 4.",
+  "section_discrepancies": "Cross-section values agree on id, seal type and rating; with no discrepancy 2 or 3 is arbitrary, kept sparse so a reviewer may count differently.",
+  "flood_risk": "Open grade 4 defect plus closure over rated time; sill 2.6 below peak 3.4 in 21 days."
+ },
+ "request": "rec-F428-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005501
+}

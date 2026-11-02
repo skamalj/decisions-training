@@ -1,0 +1,142 @@
+{
+ "id": "F419-0033",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "date": "2024-03-02",
+   "speed_kmh": 65,
+   "thr": [
+    0.72,
+    0.52,
+    0.42
+   ],
+   "weather": null
+  },
+  "device": {
+   "cal_expiry": "2025-02-01",
+   "tyre_kpa": null,
+   "water_mm": null
+  },
+  "runs": [
+   {
+    "dir": "18",
+    "thirds": [
+     0.74,
+     0.75,
+     0.73
+    ]
+   },
+   {
+    "dir": "36",
+    "thirds": [
+     0.73,
+     0.76,
+     0.74
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.7,
+    0.72,
+    0.7
+   ],
+   "mtd_threshold_mm": 0.5
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-11-16",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start": "2024-03-10"
+    }
+   ]
+  },
+  "review": {
+   "signed_at": null
+  }
+ },
+ "factors": {
+  "min_third_band": "above_design",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 107,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 4,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_planning",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 107,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 4,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file_routine",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 37,
+ "deciding": {
+  "genuine_deficit": "All thirds are 0.73 to 0.76 against the 0.52 planning level, so a deficit is not shown; this is kept as a doubt only because a routine rubber removal is already ordered.",
+  "next_step": "Every third is above the 0.72 design level, so routine filing fits, though the four null items give some doubt.",
+  "deficit_driver": "The lowest third of 0.73 is well above the 0.52 planning level and MTD is adequate.",
+  "friction_severity": "The lowest third of 0.73 is just above the 0.72 design level, so level 0, but it is close to the boundary.",
+  "evidence_completeness": "The weather, tyre_kpa, water_mm and signed_at fields are null, which is four missing elements."
+ },
+ "request": "rec-F419-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011307
+}

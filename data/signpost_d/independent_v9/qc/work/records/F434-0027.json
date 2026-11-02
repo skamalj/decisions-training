@@ -1,0 +1,161 @@
+{
+ "id": "F434-0027",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 3,
+   "date": "2025-06-14",
+   "closure_start": "10:30",
+   "riders_started": 120
+  },
+  "post": {
+   "km_marker": 18,
+   "post_type": "roundabout",
+   "marshals_rostered": 2,
+   "marshals_signed_in": 2,
+   "on_post_from": "10:15",
+   "off_post_at": "13:20",
+   "relief": [
+    {
+     "marshal_ref": "M7",
+     "signed_in": "11:55",
+     "signed_out": "12:10"
+    }
+   ]
+  },
+  "incidents": [],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:45",
+     "ok": true
+    },
+    {
+     "time": "11:30",
+     "ok": false
+    },
+    {
+     "time": "12:15",
+     "ok": true
+    }
+   ],
+   "backup_phone": [
+    {
+     "time": "11:31",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C9",
+     "time": "11:40",
+     "km": 18,
+     "type": "fall",
+     "bibs": [
+      62
+     ]
+    }
+   ],
+   "medical_handovers": [
+    {
+     "ref": "M2",
+     "bib": 62,
+     "km": 18,
+     "destination": "race_medical_tent"
+    }
+   ]
+  },
+  "sweep": {
+   "passed_at": "12:50",
+   "last_rider_bib": 118,
+   "post_cleared_at": "12:55"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "medic_attended",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": 20.03,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "hospital",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": 20.03,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "leaning",
+   "target": "no_incident",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "consequence_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 74,
+ "deciding": {
+  "coverage_held": "on_post_from 10:15 before closure; off_post_at 13:20 after sweep passed_at 12:50; both marshals signed in.",
+  "next_step": "Handover confirmed to medical tent, sweep cleared post, coverage held; nothing open.",
+  "incident_class": "Post incidents empty but control logs a fall at km 18 bib 62; reviewer leans no_incident only by the post view, with real doubt.",
+  "reversal_time": "Medical tent only, no abandonment; undone within a day.",
+  "consequence_severity": "Control handover goes to race_medical_tent, not hospital; no traffic contact."
+ },
+ "request": "rec-F434-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005805
+}

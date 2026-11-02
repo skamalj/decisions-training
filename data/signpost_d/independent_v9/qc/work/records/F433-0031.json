@@ -1,0 +1,125 @@
+{
+ "id": "F433-0031",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H11",
+   "passport_remark": "known left fore irregularity, regular at loops 1-2",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "recheck": true
+    }
+   ]
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "10:00",
+   "departed_at": "10:24"
+  },
+  "vet_card": {
+   "presented_at": "10:21",
+   "pulse_bpm": 62,
+   "cri": {
+    "first_bpm": 62,
+    "second_bpm": 54
+   },
+   "metabolic": {
+    "mm": "pale",
+    "crt_s": 3,
+    "skin_tent_s": 3
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 1
+    }
+   ],
+   "vet_signed_at": "10:30"
+  }
+ },
+ "factors": {
+  "pulse_status": "met_after_window",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": 3,
+  "cri_rise": 8.04,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "none",
+  "departed_before_clearance": true,
+  "note_tone": "none"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_after_window",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": 3,
+  "cri_rise": 8.04,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "none",
+  "departed_before_clearance": true,
+  "note_tone": "none"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "eliminate_ftq",
+   "second": "request_recheck",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "contested",
+   "target": "pass",
+   "second": "ftq_metabolic",
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (departed_before_clearance = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 30,
+ "deciding": {
+  "pulse_met": "Pulse 62 at 10:21, one minute past the 20 min window, but under the limit; presentation only just late, so doubt remains.",
+  "next_step": "Horse departed 10:24 before vet signed 10:30: eliminate-style breach, though recheck remains plausible.",
+  "outcome_code": "Pale mm, crt 3 and skin tent 3 are borderline metabolic flags against a grade 1 gait with passport mitigation; pass vs metabolic is contested.",
+  "welfare_risk": "departed_at 10:24 precedes vet_signed_at 10:30: horse on course uncleared.",
+  "record_completeness": "All readings present and signed, but signature after departure makes the sequence arguably out of order."
+ },
+ "request": "rec-F433-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006071
+}

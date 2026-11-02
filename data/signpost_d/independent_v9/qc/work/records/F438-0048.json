@@ -1,0 +1,143 @@
+{
+ "id": "F438-0048",
+ "family": "F438",
+ "state": {
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "J44.1"
+   },
+   "comorbidities": [
+    {
+     "code": "I25.1"
+    },
+    {
+     "code": "E78.0"
+    }
+   ],
+   "theatre_log": [],
+   "documents_present": {
+    "discharge_summary": true,
+    "operation_note": true,
+    "pathology_report": true
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "J44.0"
+   },
+   "secondary_dx": [
+    {
+     "code": "I25.1"
+    },
+    {
+     "code": "I48.9"
+    },
+    {
+     "code": "N17.9"
+    }
+   ],
+   "procedures": []
+  },
+  "grouping": {
+   "hrg_submitted": "DZ16F",
+   "hrg_regrouped": "DZ16F",
+   "tariff_submitted": 1820,
+   "tariff_regrouped": 1910,
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "audit_context": {
+   "local_conventions_applied": [],
+   "queries": [
+    {
+     "target_code": "J44.1",
+     "status": "closed",
+     "response": "confirms"
+    }
+   ]
+  },
+  "coder_history": {
+   "prior_audits": 14,
+   "error_rate": 0.3,
+   "last_audit_result": "pass"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 2,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.3,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 2,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.3,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_as_coded",
+   "second": "request_records",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 87,
+ "deciding": {
+  "primary_supported": "J44.0 vs documented J44.1 (query closed confirming J44.1) is a specificity slip, so the support is arguable.",
+  "hrg_shift": "Both HRGs are DZ16F, but the tariff differs (1820 vs 1910), which leaves a shift arguable.",
+  "next_step": "Documents are complete and the query is closed, so no specific item is missing; but mismatches are visible, so accepting is balanced against requesting more records.",
+  "error_count": "Secondary I48.9 and N17.9 are not documented, with I48.9 and N17.9 potentially counted as two errors; the primary specificity slip may make a third.",
+  "error_severity": "N17.9 and I48.9 have no documentation entry, with the tariff differing (critical), but the primary mismatch could be read as major."
+ },
+ "request": "rec-F438-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006864
+}

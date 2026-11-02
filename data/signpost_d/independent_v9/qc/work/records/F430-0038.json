@@ -1,0 +1,138 @@
+{
+ "id": "F430-0038",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "C",
+     "normal": [
+      50,
+      80
+     ],
+     "alarm": 90,
+     "trip": 100,
+     "partner_id": "T2",
+     "customers_fed": 15884
+    }
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 79,
+    "unit": "C"
+   },
+   {
+    "asset_id": "T1",
+    "param": "oil_level",
+    "value": 62,
+    "unit": "%"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "T1",
+    "note": "oil weeping heavily",
+    "photo_ref": "IMG-77"
+   }
+  ],
+  "history": {
+   "load_events": [
+    "T2 to T1 transfer"
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "T2": "in_service"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "within_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": true,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 15884,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": false,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": true,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 15884,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "leaning",
+   "target": "file_closed",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 34,
+ "deciding": {
+  "defect_corroborated": "The note says oil is weeping heavily, but oil level is 62%, mid-band. The readings do not support it.",
+  "benign_explanation": "The oil temperature of 79 C is just under the 80 C band edge, and a T2 to T1 load transfer is logged as a likely cause. A reader could still see no abnormal reading at all.",
+  "follow_up": "Every reading is in band, the photo is present, and the partner is in service. The report can be accepted.",
+  "limit_deviation": "The worst reading, 79 C, is inside the 50-80 normal band and far below the 90 C alarm limit. It sits close to the band edge, which leaves slight doubt.",
+  "supply_exposure": "T2 is in service and carries the load, so no customers would lose supply."
+ },
+ "request": "rec-F430-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009872
+}

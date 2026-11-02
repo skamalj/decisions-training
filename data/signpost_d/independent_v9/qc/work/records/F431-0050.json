@@ -1,0 +1,121 @@
+{
+ "id": "F431-0050",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM9084",
+   "type": "ultrasonic",
+   "last_verified": "2020-02-11",
+   "seal_state": "broken",
+   "seal_checked": "2024-03-20"
+  },
+  "period_read": {
+   "read_date": "2024-03-29",
+   "reg_kwh": 7333,
+   "src_code": "CUS",
+   "photo_ref": "P5-0329"
+  },
+  "history": [
+   {
+    "date": "2024-02-29",
+    "reg_kwh": 5700,
+    "src": "AMR"
+   },
+   {
+    "date": "2024-03-31",
+    "reg_kwh": 6000,
+    "src": "EST",
+    "same_period_ly_kwh": 750
+   }
+  ],
+  "diagnostics": null,
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 440,
+   "hdd_prior_year": 500,
+   "works_orders": [],
+   "dispute_open": false,
+   "tariff_code": "T2"
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "diagnostics_null",
+  "consumption_ratio": 2.02,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.88,
+  "diagnostic_error_count": 0,
+  "meter_works_order": false,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "diagnostics_null",
+  "consumption_ratio": 2.33,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.88,
+  "diagnostic_error_count": 1,
+  "meter_works_order": false,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": true
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "bill_estimate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 88,
+ "deciding": {
+  "meter_fault": "Seal broken (checked 2024-03-20) with no ENG entry or works order matching, unexplained use about double expected: tamper evidence is unmatched.",
+  "billable_actual": "Customer read has a photo ref and a higher register than the estimate, but its date (03-29) is before the latest history entry (03-31) and use is far above expected.",
+  "next_step": "Broken unmatched seal, no diagnostics and an out-of-order read make the reading unusable, so a flagged estimate replaces it.",
+  "staff_effort": "Simple estimate substitution may take under an hour, but the unmatched seal could add an hour or more of follow-up.",
+  "consumption_deviation": "1333 kWh vs expected 750*440/500=660 gives ratio 2.02, about 102%, right at the 100% boundary."
+ },
+ "request": "rec-F431-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01112
+}

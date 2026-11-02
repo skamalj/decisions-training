@@ -1,0 +1,140 @@
+{
+ "id": "F402-0030",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "E530",
+   "priority": "soon",
+   "site": "knee_L",
+   "onset": "2023-09-18",
+   "received": "2025-06-02"
+  },
+  "patient": {
+   "dob": "1962-07-09",
+   "consent_to_refer": true,
+   "mobility_aid": null
+  },
+  "clinical": {
+   "dx": "M23.2",
+   "red_flags": [
+    "night_pain"
+   ],
+   "neuro_signs": {},
+   "function_index": 70.2,
+   "surgery_date": "2025-03-25",
+   "weight_bearing": "full"
+  },
+  "gp_record": {
+   "dob": "1962-07-09",
+   "falls_3m": 0,
+   "reviews": [
+    "2024-11-12"
+   ]
+  },
+  "attachments": [
+   {
+    "type": "op_protocol",
+    "date": "2025-03-25",
+    "side": "L",
+    "result": "arthroscopy_uncomplicated"
+   }
+  ],
+  "history": {
+   "episodes": [
+    {
+     "start": "2024-08-05"
+    },
+    {
+     "start": "2024-12-03"
+    }
+   ],
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 89,
+  "function_index": 70.2,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "soon",
+  "falls_last_3m": 0,
+  "post_op_days": 69,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "date_of_birth",
+  "mismatch_magnitude": "major",
+  "missing_item": "none",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 89,
+  "function_index": 12.46,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "soon",
+  "falls_last_3m": 0,
+  "post_op_days": 69,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 141,
+ "deciding": {
+  "red_flag_unresolved": "A night_pain code is listed. The only GP review (2024-11-12) is routine, and there is no MRI or oncology discharge. Nothing in the record explains it.",
+  "next_step": "Complete record: op protocol present with matching side, consent present, and DOB agrees. Nothing is missing, so it is accepted at the stated priority, with slight doubt from the open flag.",
+  "pathway": "Uncomplicated arthroscopy 69 days ago, full weight-bearing, function index 70.2 and self-management already tried. Self-management leads, with some doubt from the surgery.",
+  "reversal_time": "Accepting and waiting is undone within a day. The surgery and flag add slight doubt.",
+  "clinical_urgency": "Stable 89-week problem, uncomplicated op, no neuro signs, no falls and good function. Waiting over six weeks is safe, with slight doubt from the unexplained night_pain."
+ },
+ "request": "rec-F402-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00964
+}

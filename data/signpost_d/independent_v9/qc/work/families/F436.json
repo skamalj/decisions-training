@@ -1,0 +1,349 @@
+{
+ "id": "F436",
+ "domain": "newspaper corrections desk reviews",
+ "role": "Corrections editor on a regional daily newspaper's standards desk, reviewing one reader correction request at a time against the published article, the reporter's notes and the source documents",
+ "setting": "A corrections request queue. Each record bundles a published article's metadata and disputed passage, the reader's complaint, the desk's evidence check against reporter notes and source documents, the article's edit and correction history, and any draft correction already written. The editor decides whether a real error exists, what to do now, where the error came from, how far it spread and how serious it is.",
+ "questions": {
+  "error_confirmed": {
+   "type": "noul",
+   "instructions": "The published article contains a factual error confirmed by documentary evidence.",
+   "criteria": {
+    "true": "Source document contradicts what was published.",
+    "false": "Matches source, unverified, or only a dispute of opinion."
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the desk do with this request now?",
+   "criteria": {
+    "no_action": "Close request; published text stands or is already correctly amended.",
+    "request_evidence": "Hold and ask for one named missing document first.",
+    "correct_now": "Amend and publish correction once draft wording matches source.",
+    "escalate": "Refer to standards editor or legal before any change."
+   }
+  },
+  "error_origin": {
+   "type": "choice",
+   "instructions": "At which stage was the published inaccuracy first introduced?",
+   "criteria": {
+    "no_inaccuracy": "Published text matches the best available source record.",
+    "source_supplied": "Outside source gave the wrong fact; reporter quoted it faithfully.",
+    "reporter_drafting": "Reporter's filed copy differs from their own notes or documents.",
+    "editing_stage": "Filed copy was correct; error added during subbing or headlining."
+   }
+  },
+  "spread": {
+   "type": "score",
+   "instructions": "How widely was the disputed version distributed before review?",
+   "criteria": [
+    "Online only, live under 24 hours",
+    "Online only, live 24 hours or longer",
+    "Online plus exactly one of print or syndication",
+    "Online, print edition and syndication partners all carried it"
+   ]
+  },
+  "harm_severity": {
+   "type": "score",
+   "instructions": "How serious is the disputed error if left uncorrected?",
+   "criteria": [
+    "Cosmetic: spelling, style or punctuation; no fact changed",
+    "Minor: wrong incidental fact, no named party affected",
+    "Material: wrong fact attributed to a named person or organisation",
+    "Grave: wrongly implies a named party committed wrongdoing"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "error_status",
+   "description": "Whether the evidence actually shows an error: source contradicts published text, source agrees, evidence cannot yet settle it, or the complaint disputes interpretation rather than fact",
+   "kind": "categorical",
+   "values": [
+    "confirmed_by_source",
+    "matches_source",
+    "unverifiable_pending",
+    "opinion_dispute"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "error_origin_stage",
+   "description": "Stage where the wrong fact first appears when comparing source document, reporter notes, filed copy and published text; none when no error",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "source_supplied",
+    "reporter_drafting",
+    "editing_stage"
+   ],
+   "weights": [
+    0.3,
+    0.2,
+    0.3,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "discrepancy_field",
+   "description": "Which kind of value differs between sections: a figure, a personal or place name, a date, a job title or role, or headline wording",
+   "kind": "categorical",
+   "values": [
+    "figure",
+    "name",
+    "date",
+    "title_role",
+    "headline"
+   ],
+   "weights": [
+    0.3,
+    0.2,
+    0.2,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "discrepancy_size",
+   "description": "How large the mismatch is between published value and source value, from a one-letter slip to a wholly different fact",
+   "kind": "categorical",
+   "values": [
+    "trivial",
+    "moderate",
+    "large"
+   ],
+   "weights": [
+    0.35,
+    0.4,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "claim_type",
+   "description": "Nature of the disputed passage: cosmetic, incidental fact, fact about a named party, or implication of wrongdoing by a named party",
+   "kind": "categorical",
+   "values": [
+    "cosmetic",
+    "incidental_fact",
+    "named_party_fact",
+    "wrongdoing_implication"
+   ],
+   "weights": [
+    0.2,
+    0.3,
+    0.32,
+    0.18
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S6"
+   ]
+  },
+  {
+   "name": "hours_live",
+   "description": "Hours between first online publication and the review timestamp, derived from two dates rather than stated",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 2,
+   "max": 400,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "distribution_channels",
+   "description": "Channels beyond the website that carried the disputed version: none, print only, syndication only, or both",
+   "kind": "categorical",
+   "values": [
+    "online_only",
+    "print",
+    "syndicated",
+    "print_and_syndicated"
+   ],
+   "weights": [
+    0.4,
+    0.25,
+    0.15,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "mitigation_present",
+   "description": "A benign explanation that lowers concern: error already silently fixed before syndication pickup, source has since issued its own revised figure, or print edition went out before the error was introduced",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "missing_evidence",
+   "description": "One key document is absent: reporter notes not attached, or complainant's cited source not supplied, leaving the comparison incomplete",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S4",
+    "S5"
+   ]
+  },
+  {
+   "name": "legal_signal",
+   "description": "Complainant or named party mentions solicitors or formal action; mitigated in about half of cases by a note that legal has already reviewed and cleared routine correction",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  },
+  {
+   "name": "legal_cleared",
+   "description": "Given a legal signal, whether history shows legal already reviewed and cleared standard correction handling",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "draft_fix_mismatch",
+   "description": "Draft correction exists but its stated value or name differs from the source document, so the fix is drafted but not yet usable",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.35,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "prior_corrections",
+   "description": "Number of earlier corrections logged on the same article; a decoy that raises suspicion but does not decide any answer",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "boundary_case",
+   "description": "Record placed on a scale boundary: hours_live within an hour of 24, or a passage naming a party only indirectly, splitting judges",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.15,
+   "skills": [
+    "S6"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "article",
+   "description": "Published piece: slug, section, byline, first_published_at, channels list, disputed_passage text and headline"
+  },
+  {
+   "name": "complaint",
+   "description": "Reader request: received_at, complainant_type, claimed_correct_value, cited_source, one-sentence summary"
+  },
+  {
+   "name": "desk_check",
+   "description": "Evidence comparison: source_doc value, reporter_notes value, filed_copy value, attachments list, reporter_note free text"
+  },
+  {
+   "name": "history",
+   "description": "Edit log and prior corrections: list of timestamped edits, prior correction count, legal review entries"
+  },
+  {
+   "name": "draft_correction",
+   "description": "Proposed fix, possibly null: draft text, stated corrected value, drafted_by, drafted_at"
+  }
+ ],
+ "rendering_notes": "error_status shows only by comparing article.disputed_passage with desk_check.source_doc (confirmed), agreement between them (matches_source), source_doc null or 'awaiting' (unverifiable_pending), or complaint.summary objecting to characterisation not a value (opinion_dispute). error_origin_stage is found by locating the first divergence along desk_check.source_doc -> reporter_notes -> filed_copy -> article.disputed_passage; editing_stage also shows as a history edit by a sub-editor after filing. discrepancy_field and discrepancy_size set which value differs and by how much (e.g. 1,240 vs 1,420; Smyth vs Smith; 14 March vs 4 March). claim_type is implicit in the disputed passage wording (typo, incidental count, attribution to a named councillor or firm, implied fraud or assault). hours_live is never stated: compute from article.first_published_at and the record's review_at in complaint or history. distribution_channels appear in article.channels list; mitigation can show history evidence that print went out before the erroneous edit, so print copy was not affected. mitigation_present appears as a history entry or reporter_note line (silent fix timestamp, source's own revised release). missing_evidence shows as an attachment listed but null, or cited_source with no matching document. legal_signal appears in complaint.summary; legal_cleared as a history legal review entry. draft_fix_mismatch shows as draft_correction.stated_value differing from source_doc. prior_corrections is a decoy count. Decoys: complainant_type 'subject_of_story' sounds alarming but does not decide anything; reporter_note may defend the copy confidently even when notes contradict it; a high prior_corrections count with no current error. Never include fields such as error_confirmed, severity, origin, spread level or recommended_action; the record must not state any answer.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_evidence"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.135096
+}

@@ -1,0 +1,132 @@
+{
+ "id": "F431-0039",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM-50922",
+   "seal_state": "intact",
+   "seal_checked_date": "2024-12-02"
+  },
+  "period_read": {
+   "read_date": "2025-02-27",
+   "reg_kwh": 6823,
+   "src_code": "CUS",
+   "photo_ref": "C-5530"
+  },
+  "history": [
+   {
+    "date": "2024-12-01",
+    "reg_kwh": 5400,
+    "src": "EST"
+   },
+   {
+    "date": "2024-12-31",
+    "reg_kwh": 5600,
+    "src": "EST"
+   },
+   {
+    "date": "2025-01-30",
+    "reg_kwh": 5800,
+    "src": "EST"
+   },
+   {
+    "date": "2025-03-01",
+    "reg_kwh": 6000,
+    "src": "EST",
+    "same_period_ly_kwh": 800
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_TPROBE"
+   ],
+   "flow_temp_c": 51.0,
+   "return_temp_c": 50.6
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 162,
+   "hdd_prior_year": 200,
+   "works_orders": [],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "none",
+  "consumption_ratio": 1.27,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.81,
+  "diagnostic_error_count": 1,
+  "meter_works_order": false,
+  "consecutive_estimates": 4,
+  "delta_t_implausible": true,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "none",
+  "consumption_ratio": 2.16,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.81,
+  "diagnostic_error_count": 1,
+  "meter_works_order": false,
+  "consecutive_estimates": 4,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "bill_estimate",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "meter_fault": "E_TPROBE and a delta-T of only 0.4 C point to a probe fault. The seal is intact, so some doubt remains.",
+  "billable_actual": "The read date 2025-02-27 is earlier than the last history date 2025-03-01, which is a sequence problem. The customer photo is present, and that supports the read.",
+  "next_step": "The date is out of sequence and the probe error is active, so a flagged estimate until verified is the lean. The photo and a higher register give some doubt.",
+  "staff_effort": "Resolving the date conflict and the probe error takes one to eight hours, or possibly a couple of days if a visit is needed.",
+  "consumption_deviation": "Period use is 6823-6000=823 kWh. Expected is 800*162/200=648 kWh, so the ratio is 1.27 and the deviation is 27%."
+ },
+ "request": "rec-F431-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009886
+}

@@ -1,0 +1,119 @@
+{
+ "id": "F423-0040",
+ "family": "F423",
+ "state": {
+  "job": {
+   "run_qty": 7900,
+   "overs_pct": 2.74,
+   "spec_max_de": 3.0,
+   "stock_spec": "GL90"
+  },
+  "proof_signoff": {
+   "signed_at": null
+  },
+  "colour_readings": {
+   "patches": [
+    {
+     "ink": "K",
+     "delta_e": 1.8
+    },
+    {
+     "ink": "Y",
+     "delta_e": 2.1
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.11,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "GL90",
+   "sheets_production": 787
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 787,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.74,
+  "register_offset_mm": 0.11,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 23,
+  "customer_tier": "key_account",
+  "prior_stoppages": 4
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 787,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.74,
+  "register_offset_mm": 0.11,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 23,
+  "customer_tier": "key_account",
+  "prior_stoppages": 4
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_for_signoff",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 28,
+ "deciding": {
+  "colour_in_tolerance": "Patches read 1.8 and 2.1, both under spec_max_de 3.0.",
+  "run_before_signoff": "signed_at is null while sheets_production is 787. That is a run without any signature.",
+  "next_step": "Colour passes and the in-image register offset of 0.11 mm is under 0.15, but signed_at is null. The press waits for the signed OK sheet.",
+  "staff_effort": "The only missing item is a signature. If the unsigned 787 sheets are treated as at risk, the effort could grow. This plan is not clearly supported.",
+  "scrap_exposure": "No spec failure is shown. If all 787 unsigned sheets count as at risk, they equal 9.96% of run_qty 7900, which is right at the 10% boundary and far above the 2.74% overs allowance."
+ },
+ "request": "rec-F423-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008885
+}

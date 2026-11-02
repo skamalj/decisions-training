@@ -1,0 +1,132 @@
+{
+ "id": "F429-0019",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 120,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "level_m": 99.2
+    }
+   ],
+   "triggers": {
+    "alert_m": 101,
+    "action_m": 102
+   }
+  },
+  "gate_ops": [
+   {
+    "gate": "G4",
+    "t": "09:00",
+    "open_after_m": 0.4
+   },
+   {
+    "gate": "G4",
+    "t": "09:10",
+    "open_after_m": 1.0
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G4",
+     "opening_m": 1.21
+    }
+   ],
+   "calc_peak_m3s": 123,
+   "gauged_peak_m3s": 119.8
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "not_started",
+    "completed_at": null
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "08:30",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "above_limit",
+  "gate_position_mismatch": "large",
+  "discharge_discrepancy_pct": 2.7,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": true
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "large",
+  "discharge_discrepancy_pct": 2.7,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": true,
+  "inspection_status": "not_started",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": true
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_for_inspection",
+   "second": null,
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (ramp_limit_breached = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 45,
+ "deciding": {
+  "within_licence": "Calculated peak 123 m3s exceeds the 120 limit.",
+  "gates_reconciled": "G4 open_after 1.0 m vs 1.21 m in the calculation, a gap just over 0.2 m, while calculated and gauged peaks agree within 2.7%.",
+  "next_step": "post_op_inspection not_started with null completion.",
+  "trigger_tier": "G4 moved 0.6 m in 10 minutes against a 0.3 limit, though reservoir level is normal.",
+  "parties_needed": "One operator correction plus an inspection by a second team; whether the senior engineer must also act is open."
+ },
+ "request": "rec-F429-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009804
+}

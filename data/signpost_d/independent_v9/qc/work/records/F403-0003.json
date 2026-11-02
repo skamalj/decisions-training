@@ -1,0 +1,134 @@
+{
+ "id": "F403-0003",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-9031",
+   "allergens": [
+    "kiwi"
+   ],
+   "plan_start": "2025-03-03"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-01-10",
+   "allergens": [
+    "kiwi"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-01-20",
+   "dishes": [
+    {
+     "dish": "fruit pot",
+     "contains": [
+      "kiwi"
+     ],
+     "substitute": "apple pot",
+     "spec_checked_on": "2025-01-22"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": false,
+   "staff_trained": [
+    "2024-10-02"
+   ],
+   "exceptions": [
+    {
+     "covers": "cleaning log",
+     "signed": "2025-01-30"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-02-03",
+   "incidents": [],
+   "messages": [
+    "Urgent: log still blank!"
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current clinician letter",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "cleaning log incomplete, covered by signed exception",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 20,
+  "packed_lunch_interim": false,
+  "note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 28,
+  "packed_lunch_interim": false,
+  "note_tone": "alarmed"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "no_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 29,
+ "deciding": {
+  "evidence_allergens_covered": "The only evidence allergen, kiwi, is declared and mapped to apple pot.",
+  "next_step": "Evidence current, dish substituted, cleaning log gap covered by signed exception; the alarmed note leaves slight doubt.",
+  "first_gap_stage": "Clinician letter valid to 2026, dish mapped, and the signed exception covers the incomplete cleaning log.",
+  "exposure_proximity": "Dishes are substituted and no incident exists; level 0 versus 1 depends on whether the log is treated as verified despite cleaning_log_complete false.",
+  "meal_urgency": "plan_start 2025-03-03 is 20 school days after review_date 2025-02-03, on the boundary of levels 0 and 1."
+ },
+ "request": "rec-F403-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010549
+}

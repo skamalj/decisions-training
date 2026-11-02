@@ -1,0 +1,38 @@
+{
+ "persona": "generalist",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "evidence_allergens_covered": {
+   "true": 0.85,
+   "false": 0.15
+  },
+  "next_step": {
+   "approve_plan": 0.02,
+   "request_evidence": 0.1,
+   "approve_restricted": 0.08,
+   "return_for_rework": 0.1,
+   "escalate_to_lead": 0.7
+  },
+  "first_gap_stage": {
+   "no_gap": 0.3,
+   "evidence_gap": 0.1,
+   "menu_gap": 0.3,
+   "kitchen_gap": 0.3
+  },
+  "exposure_proximity": {
+   "0": 0.01,
+   "1": 0.02,
+   "2": 0.04,
+   "3": 0.93
+  },
+  "meal_urgency": {
+   "0": 0.4040404040404041,
+   "1": 0.5050505050505051,
+   "2": 0.07070707070707072,
+   "3": 0.010101010101010102,
+   "4": 0.010101010101010102
+  }
+ },
+ "cost": 0.000553
+}

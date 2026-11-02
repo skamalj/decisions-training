@@ -1,0 +1,130 @@
+{
+ "id": "F429-0010",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 100,
+   "ramp_max_m_per_10min": 0.5
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "t": "12:00",
+     "level_m": 101.51
+    }
+   ],
+   "triggers": {
+    "alert_m": 100.5,
+    "action_m": 101.5
+   }
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "11:30",
+    "open_before_m": 1.0,
+    "open_after_m": 1.4
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.4
+    }
+   ],
+   "calc_peak_m3s": 100.4,
+   "gauged_peak_m3s": 91.7
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "13:00"
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "11:00",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "action",
+  "near_boundary": true,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 9.53,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": true,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 9.53,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "gates_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "trigger_tier": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "within_licence": "Calculated peak 100.4 is just over the 100 limit, while the gauged peak 91.7 is under it. The two figures conflict narrowly.",
+  "gates_reconciled": "G1 open_after_m is 1.4 and the calculation used 1.4, a match.",
+  "next_step": "Gates match, inspection is completed and the warning was sent before the gate move at 11:30. Nothing is outstanding.",
+  "trigger_tier": "Level 101.51 is at the 101.5 action trigger. Whether the calculated 100.4 counts as a licence breach (tier 3) is open.",
+  "parties_needed": "Action-tier level plus a possible licence exceedance would likely involve many parties, such as operations, a senior engineer, regulator, downstream and dam safety."
+ },
+ "request": "rec-F429-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009729
+}

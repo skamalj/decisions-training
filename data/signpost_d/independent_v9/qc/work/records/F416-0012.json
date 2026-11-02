@@ -1,0 +1,158 @@
+{
+ "id": "F416-0012",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "station": "S4",
+   "date": "2025-06-14",
+   "signoff": "G9"
+  },
+  "roster": [
+   {
+    "id": "G3",
+    "on": "08:00",
+    "off": "18:00",
+    "qual": "2025-06-14"
+   },
+   {
+    "id": "G5",
+    "on": "08:00",
+    "off": "18:00",
+    "qual": "2026-02-01"
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "t": "10:20",
+    "type": "water_rescue",
+    "r": [
+     "G3",
+     "G5"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I2",
+    "t": "12:05",
+    "type": "water_rescue",
+    "r": [
+     "G3",
+     "G5"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I3",
+    "t": "14:40",
+    "type": "water_rescue",
+    "r": [
+     "G5",
+     "G3"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I4",
+    "t": "15:10",
+    "type": "swimmer_assist",
+    "r": [
+     "G5"
+    ],
+    "out": "released"
+   }
+  ],
+  "handover": {
+   "rescues": 3,
+   "first_aid": 0,
+   "kit_defects": 0
+  }
+ },
+ "factors": {
+  "rescue_count": 3,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": true,
+  "decoy_load": "medium"
+ },
+ "factors_sampled": {
+  "rescue_count": 3,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "conveyed",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "kit_outage": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 54,
+ "deciding": {
+  "two_guard_cover": "Each rescue lists G3 and G5, but G3's qual expiry equals the shift date 2025-06-14, which leaves the in-date status open.",
+  "totals_reconcile": "Handover rescues=3 matches the three water_rescue entries, but a fourth swimmer_assist incident could be read as a rescue.",
+  "next_step": "Sign-off present, nothing missing, no kit outage, no flag issue; only the expiry-date boundary gives slight doubt about filing as is.",
+  "outcome_severity": "All outcomes are released; no ambulance_ref or AED.",
+  "kit_outage": "No equipment entries, so no outage."
+ },
+ "request": "rec-F416-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00993
+}

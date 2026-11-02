@@ -1,0 +1,171 @@
+{
+ "id": "F419-0007",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "16/34",
+   "survey_dt": "2024-05-07T05:50",
+   "test_speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": null
+  },
+  "device": {
+   "serial": "SF-3307",
+   "cal_cert_date": "2024-01-16",
+   "cal_expiry": "2025-01-15",
+   "tyre_pressure_kpa": null,
+   "tyre_spec_kpa": [
+    190,
+    210
+   ],
+   "water_depth_mm": 0.5
+  },
+  "runs": [
+   {
+    "dir": "16",
+    "mean_speed_kmh": 65,
+    "thirds": [
+     0.58,
+     0.57,
+     0.59
+    ],
+    "t2_segments_100m": [
+     0.39,
+     0.62,
+     0.69
+    ]
+   },
+   {
+    "dir": "34",
+    "mean_speed_kmh": 65,
+    "thirds": [
+     0.59,
+     0.58,
+     0.6
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.62,
+    0.61,
+    0.63
+   ],
+   "mtd_threshold_mm": 0.6,
+   "contaminant": "none"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-04-21",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start_date": "2024-05-15"
+    }
+   ],
+   "cross_checks": [
+    {
+     "serial": "SF-0912",
+     "date": "2024-05-07",
+     "thirds": [
+      0.66,
+      0.65,
+      0.67
+     ]
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2024-02-02",
+     "lowest_third": 0.57
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-05-07T08:30",
+   "role": "duty engineer"
+  }
+ },
+ "factors": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 382,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 2,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate (just above threshold)",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 382,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 4,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold_retest",
+   "second": "restrict_ops",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "contested",
+   "target": "rubber_deposits",
+   "second": "surface_texture",
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 83,
+ "deciding": {
+  "genuine_deficit": "Thirds of 0.57-0.60 against a 0.72 design level and a 0.39 segment point to a real deficit. The cross-check device reads 0.65-0.67 and tyre pressure is null, which leaves room for doubt.",
+  "next_step": "A segment of 0.39 is below the 0.42 minimum, which favours restriction. The cross-check is about 0.08-0.10 higher and two inputs are null, which favours holding for retest.",
+  "deficit_driver": "Uniform lows with texture barely above threshold (0.61-0.63 against 0.60) suggest surface texture. Removal is 382 days old with an order only now pending, which suggests rubber deposits.",
+  "friction_severity": "The t2 segment of 0.39 is below the 0.42 minimum, which settles level 3.",
+  "evidence_completeness": "Exactly two elements are null (tyre_pressure_kpa and weather). Calibration is valid and the sign-off is present, so level 2."
+ },
+ "request": "rec-F419-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014812
+}

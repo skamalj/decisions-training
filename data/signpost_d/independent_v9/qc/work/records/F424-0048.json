@@ -1,0 +1,114 @@
+{
+ "id": "F424-0048",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B303",
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014
+  },
+  "readings": [
+   {
+    "ts": "2024-06-10",
+    "gravity_sg": 1.016
+   },
+   {
+    "ts": "2024-06-11",
+    "gravity_sg": 1.014
+   }
+  ],
+  "lab": {
+   "diacetyl_mgl": 0.1,
+   "micro_plate": {
+    "result": "presumptive",
+    "cfu_ml": 40
+   }
+  },
+  "release_request": {
+   "note": "Routine."
+  }
+ },
+ "factors": {
+  "gravity_status": "at_upper_band_edge",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.1,
+  "discrepancy_count": 0,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.2,
+  "discrepancy_count": 5,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "contamination_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 38,
+ "deciding": {
+  "terminal_gravity": "Last reading 1.014 sits exactly at band max, but the prior 1.016 means it is still falling, so stability is unconfirmed.",
+  "contamination_supported": "Plate presumptive at 40 cfu/ml with no negative retest or explanation.",
+  "batch_disposition": "Routine request, diacetyl 0.1, no breach; the presumptive plate is the doubt.",
+  "deviation_severity": "No reading or lab value beyond a limit.",
+  "record_discrepancies": "Few corresponding fields exist and none conflict."
+ },
+ "request": "rec-F424-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009075
+}

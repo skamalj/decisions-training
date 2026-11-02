@@ -1,0 +1,117 @@
+{
+ "id": "F421-0037",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-77302",
+   "contents": "espresso machine",
+   "qty": 1,
+   "weight_kg": 6.2,
+   "declared_value_gbp": 2113.3
+  },
+  "handling_events": [
+   {
+    "ts": "2024-05-11T09:00",
+    "site": "THIS",
+    "code": "INB"
+   },
+   {
+    "ts": "2024-05-11T09:30",
+    "site": "THIS",
+    "code": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-05-11T08:20",
+   "observed_item": "espresso machine",
+   "qty_found": 1,
+   "weight_kg": 6.1,
+   "condition": "cracked housing",
+   "photos": [],
+   "repair_est_gbp": 640
+  },
+  "claim": {
+   "claimed_gbp": 441.6
+  }
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "none",
+  "inspection_state": "photos_missing",
+  "loss_pct": 30.28,
+  "declared_value": 2113.3,
+  "scan_order_anomaly": true,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 0.69
+ },
+ "factors_sampled": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "photos_missing",
+  "loss_pct": 30.28,
+  "declared_value": 2113.3,
+  "scan_order_anomaly": true,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 0.69
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_repack",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "depot_fault": "Damage coded at the depot SORT event after INB, though inspected_ts precedes the inbound scan.",
+  "contents_match": "Manifest and report both say espresso machine, qty 1, weight 6.2 vs 6.1.",
+  "next_step": "Depot damage with report and repair estimate supports accepting liability and repacking despite the missing photos.",
+  "loss_share": "Repair 640 of 2113.3 is 30%, not a major or total loss.",
+  "parties_needed": "Photos, repair, claim payment and supervisor review point to several teams."
+ },
+ "request": "rec-F421-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005158
+}

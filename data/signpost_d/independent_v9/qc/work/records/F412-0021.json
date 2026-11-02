@@ -1,0 +1,147 @@
+{
+ "id": "F412-0021",
+ "family": "F412",
+ "state": {
+  "premises": {
+   "ref": "P101",
+   "type": "cafe"
+  },
+  "inspection": {
+   "date": "2025-02-03",
+   "contraventions": [
+    {
+     "ref": "C1",
+     "area": "FAB",
+     "due_date": "2025-02-27"
+    },
+    {
+     "ref": "C2",
+     "area": "REC",
+     "due_date": "2025-02-27"
+    }
+   ]
+  },
+  "revisit": {
+   "date": "2025-03-21",
+   "items": [
+    {
+     "ref": "C1",
+     "status": "part_remedied"
+    },
+    {
+     "ref": "C2",
+     "status": "remedied"
+    }
+   ]
+  },
+  "correspondence": {
+   "extensions": [
+    {
+     "ref": "C1",
+     "agreed": true,
+     "new_due_date": "2025-03-21"
+    }
+   ],
+   "evidence": [
+    {
+     "ref": "C7",
+     "type": "engineer job sheet",
+     "verified": null
+    }
+   ]
+  },
+  "history": {
+   "enforcement": [
+    {
+     "year": 2022,
+     "type": "warning letter"
+    },
+    {
+     "year": 2023,
+     "type": "warning letter"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "contravention_count": 2,
+  "resolution_share": "about_half",
+  "worst_open_area": "fabric_cleaning",
+  "food_handling_open_count": 0,
+  "cross_section_mismatch": "ref_mismatch",
+  "days_past_original_due": 22,
+  "extension_agreed": true,
+  "benign_explanation": true,
+  "operator_evidence": "none_submitted",
+  "adverse_sample": false,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 2,
+  "boundary_case": true,
+  "reassuring_note_decoy": false
+ },
+ "factors_sampled": {
+  "contravention_count": 2,
+  "resolution_share": "all_resolved",
+  "worst_open_area": "records",
+  "food_handling_open_count": 3,
+  "cross_section_mismatch": "ref_mismatch",
+  "days_past_original_due": 22,
+  "extension_agreed": true,
+  "benign_explanation": true,
+  "operator_evidence": "none_submitted",
+  "adverse_sample": false,
+  "complaint_since_inspection": "related_unsubstantiated",
+  "prior_enforcement_count": 2,
+  "boundary_case": true,
+  "reassuring_note_decoy": false
+ },
+ "plan": {
+  "all_remedied": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "issue_notice",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "worst_hazard": {
+   "clarity": "contested",
+   "target": "premises_fabric",
+   "second": "no_open_item",
+   "targets": []
+  },
+  "overdue_extent": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "residual_risk": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "all_remedied": "C1 is part_remedied at revisit; the only evidence cites C7, which is not an inspection ref, and is unverified.",
+  "next_step": "A fabric item is still open after an extension with no verified proof, and there are two prior enforcement actions, so the case calls for a notice.",
+  "worst_hazard": "C1 is a FAB item only part remedied, with an engineer job sheet that explains but does not remedy it; whether it still counts as open is arguable.",
+  "overdue_extent": "Original due 2025-02-27 is 22 days before the revisit, but the agreed extension for C1 runs to the revisit date itself, so it is not clearly late.",
+  "residual_risk": "Only a fabric item remains open (low), with a repeat enforcement history that could push the judgment higher."
+ },
+ "request": "rec-F412-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009876
+}

@@ -1,0 +1,154 @@
+{
+ "id": "F435-0029",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E415",
+   "zone_id": "SEAT7",
+   "zone_type": "seated_tier",
+   "doors_open": "2025-07-19T19:00",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 500,
+   "variation": {
+    "ref": "V5",
+    "new_limit": 550,
+    "status": "approved",
+    "approved_on": "2025-07-19T19:10"
+   },
+   "stewards_required": 20,
+   "exit_routes": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 550,
+   "issued": 495,
+   "scanned_in": 488
+  },
+  "ingress": {
+   "device_status": "ok",
+   "raw_peak": 497,
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 18,
+   "signed_in": 15,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "A",
+    "checked_at": "2025-07-19T17:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "C",
+    "checked_at": null,
+    "status": "pending"
+   },
+   {
+    "route_id": "D",
+    "checked_at": "2025-07-19T18:20",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "E",
+    "checked_at": "2025-07-19T19:20",
+    "status": "clear"
+   },
+   {
+    "route_id": "F",
+    "checked_at": "2025-07-19T18:50",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "F",
+    "checked_at": "2025-07-19T19:01",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "seated_tier",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.995,
+  "counter_status": "ok",
+  "counter_inflation": 0.04,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_late",
+  "tickets_issued_ratio": 0.99,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.25,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "seated_tier",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.84,
+  "counter_status": "ok",
+  "counter_inflation": 0.04,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_late",
+  "tickets_issued_ratio": 0.86,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.24,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 3,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "balanced",
+   "target": "none",
+   "second": "limit_mismatch",
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "verified_exceedance": "The variation was approved at 19:10, after doors at 19:00, so the effective limit is the base of 500. The ok counter shows 497, just under it, so false leads. The 550 limit that ticketing used keeps doubt alive.",
+  "disposition": "The event is over with no verified breach, but 5 routes lack a pre-doors clear and stewards are short. Holding for exit confirmation is more likely than approving, though not certain.",
+  "discrepancy_source": "Issued 495 and the 497 peak are both under the effective limit of 500, so none leads. Ticketing used the late 550 limit, which supports the limit_mismatch reading.",
+  "steward_shortfall": "15 of 20 signed in is exactly 25% short, on the level 2/3 boundary; rostered 18 is a decoy.",
+  "unconfirmed_exits": "B has no entry, C has a null checked_at, D is obstructed with no later clear, E was checked clear only after doors, and F cleared at 19:01, one minute after doors. That is 5 routes, with F marginal."
+ },
+ "request": "rec-F435-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013993
+}

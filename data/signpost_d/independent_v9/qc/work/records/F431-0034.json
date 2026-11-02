@@ -1,0 +1,119 @@
+{
+ "id": "F431-0034",
+ "family": "F431",
+ "state": {
+  "period_read": {
+   "read_date": "2024-06-30",
+   "reg_kwh": 8690,
+   "src_code": "AMR"
+  },
+  "history": [
+   {
+    "date": "2024-05-31",
+    "reg_kwh": 7800,
+    "src": "EST"
+   },
+   {
+    "date": "2024-05-31",
+    "reg_kwh": 7800,
+    "src": "EST"
+   },
+   {
+    "date": "2024-06-15",
+    "reg_kwh": 8000,
+    "src": "EST",
+    "ly_kwh": 500
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW",
+    "E_AIR"
+   ],
+   "flow_temp_c": 70,
+   "return_temp_c": 45
+  },
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2024-06-10",
+   "hdd_current": 120,
+   "hdd_prior_year": 100
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.15,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.2,
+  "diagnostic_error_count": 2,
+  "meter_works_order": false,
+  "consecutive_estimates": 2,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.53,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.2,
+  "diagnostic_error_count": 2,
+  "meter_works_order": false,
+  "consecutive_estimates": 2,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "meter_fault": "E_FLOW and E_AIR codes point toward a device issue, but delta-T is normal (70/45) and the occupancy change offers a benign explanation.",
+  "billable_actual": "AMR read follows two estimated entries and the tenancy change (2024-06-10) sits in the period, with E_FLOW and E_AIR codes; doubt leans against validity.",
+  "next_step": "Read is an in-sequence AMR actual with intact seal, and no dispute or works order.",
+  "staff_effort": "A tenancy and error-code check could take a few hours up to a couple of days.",
+  "consumption_deviation": "Consumption 690 kWh vs expected 500*120/100=600 kWh, ratio 1.15, exactly at the 15% boundary between levels 0 and 1."
+ },
+ "request": "rec-F431-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009692
+}

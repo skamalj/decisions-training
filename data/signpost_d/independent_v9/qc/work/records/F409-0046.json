@@ -1,0 +1,157 @@
+{
+ "id": "F409-0046",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "A. Rahman",
+   "submitted_on": "2024-05-20",
+   "app_type": "change_of_address",
+   "message": "I have lived here since 2019."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-04-06",
+     "address_line": "12 Mill Lane",
+     "verified": null
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2021-02-01",
+     "address_line": "12 Mill Lane",
+     "verified": false
+    }
+   ],
+   "tenancy_start": "2024-04-15",
+   "note": "Tenancy agreement not uploaded."
+  },
+  "vehicle": {
+   "plate": "KT19 BXA",
+   "keeper_name": "A. Rahman",
+   "supporting_letters": [
+    {
+     "type": "lease_agreement",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "B2",
+   "address": "12 Mill Lane",
+   "plate_entered": "KT19 BAX"
+  },
+  "account_history": {
+   "live_permits": [
+    "P101",
+    "P102"
+   ],
+   "max_per_household": 2,
+   "past_permits": [
+    {
+     "permit_no": "P077",
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    }
+   ],
+   "exceptions": [
+    {
+     "type": "carer",
+     "approved_on": "2023-09-01"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "change_of_address",
+  "address_match_level": "exact",
+  "proof_age_days": 44,
+  "docs_missing": 2,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "contradicting_claim",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "change_of_address",
+  "address_match_level": "exact",
+  "proof_age_days": 44,
+  "docs_missing": 2,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "contradicting_claim",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "vehicle_keeper",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 76,
+ "deciding": {
+  "residency_shown": "Council tax bill verified null and id_card verified false, so no verified in-date document matches the address; the 2019 claim contradicts tenancy_start 2024-04-15.",
+  "disposition": "Plan has approve; the cap is covered by the approved carer exception and the plate typo by the lease letter, but the cloned prior permit and unverified documents sit against it.",
+  "main_issue": "Entered plate KT19 BAX differs from registered KT19 BXA, and a lease letter is on file; that is the keeper discrepancy.",
+  "misuse_strength": "Past permit P077 seized with reason 'cloned copy found on different vehicle' (confirmed misuse); three open PCNs and the contradicted claim also appear.",
+  "document_gaps": "Council tax bill unverified and id_card failed verification; the tenancy agreement is not uploaded but tenancy_start is given, so it is two or three gaps."
+ },
+ "request": "rec-F409-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009577
+}

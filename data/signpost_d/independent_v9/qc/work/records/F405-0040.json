@@ -1,0 +1,160 @@
+{
+ "id": "F405-0040",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-5017",
+   "detected_on": "2025-02-10",
+   "term_start": "2025-03-10",
+   "room": "SC3.02"
+  },
+  "booking_a": {
+   "module": "CSC230",
+   "dept": "CSC",
+   "day": "Tue",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "headcount": 65,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "ECO140",
+   "dept": "ECO",
+   "room": "SC3.02B",
+   "day": "Tue",
+   "start": "11:30",
+   "end": "13:30",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "headcount": 60,
+   "required_features": [],
+   "status": "provisional",
+   "approved_at": "2025-02-01",
+   "approver": "K.Lowe"
+  },
+  "room": {
+   "code": "SC3.02",
+   "aliases": [
+    "SC302"
+   ],
+   "capacity": 70,
+   "features": [
+    "lecture_capture"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "SC1.10",
+    "capacity": 70,
+    "features": [
+     "lecture_capture"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": true,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 29,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.08,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 1
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": true,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 41,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.08,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 1
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "dismiss",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "genuine_clash": "Times overlap 11:30-12:00 in weeks 1-6, but B's room is SC3.02B, which is not in the room's aliases ['SC302']. It could be a typo for SC3.02 or a different room.",
+  "alt_room_fits": "SC1.10 has capacity 70 against headcount 65 and lecture_capture, but is free only in weeks 1-5 while the clash runs weeks 1-6. Most of the fit is there, but one week is missing.",
+  "resolution": "The unrecognised room code SC3.02B suggests a different room, so dismiss is somewhat favoured. B is provisional and the overlap is only 30 minutes.",
+  "urgency": "The first shared Tuesday is 2025-03-11, 29 days after detection, one day past the 28-day line between upcoming and distant.",
+  "parties_needed": "Resolving may need only the officer to dismiss, or a second party such as ECO to confirm B's room code. The provisional status makes both plausible."
+ },
+ "request": "rec-F405-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010228
+}

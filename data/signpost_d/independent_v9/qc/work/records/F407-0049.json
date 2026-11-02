@@ -1,0 +1,107 @@
+{
+ "id": "F407-0049",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "PR-7002",
+   "channel": "utility_contractor",
+   "claim_ref": "CL-2291"
+  },
+  "location": {
+   "road_class": "local_access",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "depth_mm": 45
+  },
+  "works_history": [
+   {
+    "offset_m": 4,
+    "guarantee_end": "2026-01-01"
+   }
+  ],
+  "current_order": {
+   "completed_items": 2,
+   "total_items": 5
+  }
+ },
+ "factors": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 3,
+  "reporter_source": "utility_contractor",
+  "injury_or_claim": true,
+  "order_status": "partially_complete",
+  "defect_width_mm": 1037.67,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "well_below",
+  "inspection_state": "not_done",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 3,
+  "reporter_source": "utility_contractor",
+  "injury_or_claim": true,
+  "order_status": "partially_complete",
+  "defect_width_mm": 1037.67,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_engineer",
+   "second": "order_repair",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "meets_threshold": "Depth 45 mm vs threshold 40 mm; the inspection carries no date, leaving slight doubt.",
+  "repeat_failure": "Completed prior job at offset 4 m with guarantee running to 2026.",
+  "next_step": "Claim CL-2291 and a repeat failure favour engineer referral, while a partially complete order makes order_repair defensible.",
+  "staff_effort": "Claim handling plus repeat failure and an unfinished order: roughly a few days, possibly over five.",
+  "response_timescale": "Planned scheme and temporary measure could remove the need for repair, but routine repair remains plausible."
+ },
+ "request": "rec-F407-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007324
+}

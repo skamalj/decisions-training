@@ -1,0 +1,146 @@
+{
+ "id": "F411-0027",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "P3317",
+   "type": "private_hire",
+   "expiry": "2025-04-15",
+   "review_date": "2025-04-01"
+  },
+  "vehicle": {
+   "reg": "LD13XYZ",
+   "make": "Toyota",
+   "model": "Prius",
+   "first_reg": "2013-06-20",
+   "seats": 4,
+   "odometer_km": 96200
+  },
+  "inspection": {
+   "station": "TS12",
+   "date": "2025-03-25",
+   "result_code": "PA",
+   "brake_efficiency_pct": 58
+  },
+  "defects": [
+   {
+    "code": "LT2",
+    "grade": "minor",
+    "rectify_by": "2025-03-30",
+    "repaired_on": "2025-03-28",
+    "retest_on": "2025-03-31",
+    "retest_result": "fail"
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-02-20"
+   },
+   {
+    "type": "dbs",
+    "expires_on": "2025-01-15"
+   },
+   {
+    "type": "medical",
+    "expires_on": "2024-12-31"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-09-10",
+     "result": "F",
+     "odometer_km": 93100
+    },
+    {
+     "date": "2024-03-12",
+     "result": "F",
+     "odometer_km": 97900
+    },
+    {
+     "date": "2023-09-14",
+     "result": "F",
+     "odometer_km": 88000
+    }
+   ],
+   "replacements": []
+  }
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "retest_failed",
+  "deadline_passed": true,
+  "documents_missing_count": 3,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 3,
+  "vehicle_age_years": 12
+ },
+ "factors_sampled": {
+  "worst_defect_found": "minor",
+  "rectification_state": "retest_failed",
+  "deadline_passed": true,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": true,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 3,
+  "vehicle_age_years": 12
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "balanced",
+   "target": "minor_fail",
+   "second": "clean_pass",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 144,
+ "deciding": {
+  "odometer_consistent": "Current 96200 km is below the earlier 97900 km reading and no instrument cluster replacement is logged.",
+  "next_step": "Three expired documents and a failed retest mean renewal cannot simply proceed; the planned renew answer is not supported.",
+  "inspection_outcome": "Result code PA looks like a near pass, but the only defect item is graded minor; this holds minor_fail against clean_pass.",
+  "document_gaps": "Insurance, DBS and medical all have expires_on before the review date of 2025-04-01, with no cover notes.",
+  "outstanding_severity": "Minor item LT2 failed its retest and is past its 2025-03-30 deadline; level 3 sits against a possible level 4 reading of the unresolved failure."
+ },
+ "request": "rec-F411-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009362
+}

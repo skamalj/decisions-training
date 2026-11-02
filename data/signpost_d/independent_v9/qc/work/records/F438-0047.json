@@ -1,0 +1,155 @@
+{
+ "id": "F438-0047",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E20418",
+   "specialty": "general_surgery",
+   "los": 4,
+   "admission_method": "elective"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "K80.2"
+   },
+   "comorbidities": [
+    {
+     "code": "I10"
+    },
+    {
+     "code": "E11.9"
+    }
+   ],
+   "theatre_log": [
+    {
+     "proc": "J18.3",
+     "date": "2024-05-11",
+     "side": null
+    }
+   ],
+   "documents_present": {
+    "discharge_summary": true,
+    "operation_note": true,
+    "pathology_report": true
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "K80.2"
+   },
+   "secondary_dx": [
+    {
+     "code": "I10"
+    },
+    {
+     "code": "E11.9"
+    },
+    {
+     "code": "N18.3"
+    }
+   ],
+   "procedures": [
+    {
+     "code": "J18.3",
+     "date": "2024-05-11",
+     "side": null
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "GB10C",
+   "hrg_regrouped": "GB10C",
+   "tariff_submitted": 2950,
+   "tariff_regrouped": 2950,
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "audit_context": {
+   "sample_id": "S-771",
+   "local_conventions_applied": [],
+   "queries": []
+  },
+  "coder_history": {
+   "coder_id": "c-5530",
+   "prior_audits": 9,
+   "error_rate": 0.18,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.18,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.18,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "amend_codes",
+   "second": "accept_as_coded",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 119,
+ "deciding": {
+  "primary_supported": "K80.2 matches documentation exactly, but the coder's failed last audit leaves some doubt.",
+  "hrg_shift": "hrg_submitted and hrg_regrouped are both GB10C with equal tariffs.",
+  "next_step": "Extra secondary N18.3 is undocumented, so amending is likely, but HRG is unchanged and the sample could be accepted.",
+  "error_count": "One mismatch: N18.3 appears in secondary_dx with no comorbidity entry.",
+  "error_severity": "N18.3 is coded with no documentation entry, a billed-code-without-support pattern, though the tariff is unchanged so the severity is less certain."
+ },
+ "request": "rec-F438-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006864
+}

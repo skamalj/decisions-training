@@ -1,0 +1,174 @@
+{
+ "id": "F440-0031",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "GB-4471",
+   "review": "2025-03-10",
+   "arr": "2025-03-14",
+   "dep": "2025-03-16",
+   "pax": {
+    "13_17": 18,
+    "adult": 2
+   },
+   "amend": []
+  },
+  "roster": [
+   {
+    "role": "participant",
+    "dob": "2009-06-01",
+    "sex": "F",
+    "n": 10
+   },
+   {
+    "role": "participant",
+    "dob": "2009-09-12",
+    "sex": "M",
+    "n": 10
+   },
+   {
+    "role": "leader",
+    "dob": "1981-02-03",
+    "sex": "F",
+    "id": "L1"
+   },
+   {
+    "role": "leader",
+    "dob": "1988-07-19",
+    "sex": "M",
+    "id": "L2"
+   }
+  ],
+  "allocation": [
+   {
+    "room": "D1",
+    "sex": "F",
+    "beds": 9,
+    "nights": [
+     "2025-03-14",
+     "2025-03-15"
+    ],
+    "warden_cover": [
+     "2025-03-14",
+     "2025-03-15"
+    ]
+   },
+   {
+    "room": "D2",
+    "sex": "M",
+    "beds": 11,
+    "nights": [
+     "2025-03-14",
+     "2025-03-15"
+    ]
+   }
+  ],
+  "payment": {
+   "total": 1760,
+   "deposit_due": 440,
+   "paid_total": 0,
+   "sched": [
+    {
+     "due": "2025-03-12",
+     "amt": 440
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "id": "L1",
+    "status": "verified",
+    "exp": "2026-01-10"
+   },
+   {
+    "id": "L2",
+    "status": "verified",
+    "exp": "2025-03-15"
+   }
+  ],
+  "history": {
+   "org": "O-88",
+   "trusted": true,
+   "stays": 12,
+   "no_shows": 3
+  }
+ },
+ "factors": {
+  "pax_mismatch": "two_to_four",
+  "night_mismatch": "none",
+  "amendment_logged": false,
+  "supervision_level": "exactly_at_ratio",
+  "extra_cover_logged": true,
+  "deposit_position": "nothing_paid",
+  "instalment_approved": true,
+  "days_to_arrival": 4,
+  "dorm_fit": "needs_one_swap",
+  "leader_checks": "one_pending",
+  "trusted_organiser": true,
+  "prior_no_shows": 3,
+  "diet_count_drift": "none"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "two_to_four",
+  "night_mismatch": "none",
+  "amendment_logged": false,
+  "supervision_level": "exactly_at_ratio",
+  "extra_cover_logged": true,
+  "deposit_position": "nothing_paid",
+  "instalment_approved": true,
+  "days_to_arrival": 84,
+  "dorm_fit": "needs_one_swap",
+  "leader_checks": "one_pending",
+  "trusted_organiser": true,
+  "prior_no_shows": 3,
+  "diet_count_drift": "none"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 87,
+ "deciding": {
+  "ratio_met": "20 minors aged 13-17 with 2 leaders is exactly 1:10, plus warden cover both nights; but L2's check expires 2025-03-15 before departure and the roster has 2 more people than booked, so doubt remains.",
+  "deposit_covered": "Nothing paid, but a schedule lists a 440 instalment due 2025-03-12, after the review date, so it is not yet overdue.",
+  "disposition": "One specific item is outstanding: L2's safeguarding check lapses before departure. Other issues are smaller, so hold is favoured over referral.",
+  "urgency": "Review 2025-03-10 and arrival 2025-03-14 are 4 days apart, the edge of pressing (4-14 days) and immediate (within 3 days).",
+  "conflict_count": "Unexplained with no amendments: booked 20 vs roster 22, dorm beds 9F/11M vs 10F/10M, and L2's expiry before departure (arguable). That is 3, or 2 if the expiry is not counted."
+ },
+ "request": "rec-F440-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015588
+}

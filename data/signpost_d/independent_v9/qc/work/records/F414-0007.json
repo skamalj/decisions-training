@@ -1,0 +1,153 @@
+{
+ "id": "F414-0007",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "B20",
+   "equip_type": "spring_rocker"
+  },
+  "inspection": {
+   "insp_date": "2024-06-10",
+   "insp_grade": "operational",
+   "fall_height_m": 1.2,
+   "surf_type_found": "chip",
+   "surf_depth_mm": 180,
+   "surf_req_table": [
+    {
+     "max_h": 1.5,
+     "type": "chip",
+     "min_depth_mm": 200
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "torso",
+     "opening_id": "O2",
+     "result": "fail"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "SEAT_GAP",
+     "component_id": "C2",
+     "injury_mech": "serious"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W3",
+    "asset_id": "B20",
+    "component_id": "C2",
+    "defect_ref": "D3",
+    "status": "open"
+   },
+   {
+    "wo_id": "W4",
+    "asset_id": "B20",
+    "component_id": "C2",
+    "defect_ref": "D11",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 1
+  },
+  "history": [
+   {
+    "date": "2024-03-02",
+    "defect_refs": [
+     "D3"
+    ]
+   },
+   {
+    "date": "2024-05-20",
+    "component_id": "C2",
+    "result": "pass"
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -20.0,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "medium",
+  "incident_reports_90d": 1
+ },
+ "factors_sampled": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 21.2,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 3,
+  "work_orders_closed_fraction": 0.43,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "medium",
+  "incident_reports_90d": 1
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "clear",
+   "target": "sign_off_actions",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "prior_defects_cleared": "D3 work order W3 is still open, but a later check on component C2 shows pass; the two point opposite ways.",
+  "surfacing_adequate": "Depth 180 mm vs 200 mm required for chip at 1.2 m: short, though not by a large margin.",
+  "asset_disposition": "Use continues with the seat gap and surfacing repairs raised as work orders; no entrapment fail on the head probe and no closure basis.",
+  "remedial_progress": "Both work orders W3 and W4 are open; none closed.",
+  "hazard_severity": "SEAT_GAP rated serious injury (level 3), but a failed torso probe at O2 could be read as an entrapment hazard (level 4)."
+ },
+ "request": "rec-F414-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012908
+}

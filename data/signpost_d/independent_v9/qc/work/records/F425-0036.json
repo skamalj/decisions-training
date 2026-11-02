@@ -1,0 +1,123 @@
+{
+ "id": "F425-0036",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "declared_eggs": 1200,
+   "lay_dates": [
+    "2024-05-02"
+   ]
+  },
+  "grading_run": {
+   "eggs_in": 1200,
+   "by_size": {
+    "S": 90,
+    "M": 410,
+    "L": 520,
+    "XL": 118
+   },
+   "outgrades": {
+    "cracks": 40,
+    "dirties": 12,
+    "blood_spots": 6,
+    "leakers": 3,
+    "misshapen": 1
+   },
+   "class_a_total": 1138
+  },
+  "checks": {
+   "candling_sample": {
+    "n": 100,
+    "sampled_at": "2024-05-12T09:00"
+   }
+  },
+  "flock": {
+   "age_weeks": 73
+  },
+  "packing": {
+   "pack_date": "2024-05-13",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "none",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 11,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 5.17,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 73
+ },
+ "factors_sampled": {
+  "count_gap_size": "none",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 2,
+  "mixed_lay_dates": false,
+  "missing_check": "candling_null",
+  "swab_positive": false,
+  "outgrade_rate_pct": 6.46,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 73
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "downgrade_class_b",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "balanced",
+   "target": "no_anomaly",
+   "second": "count_error",
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "counts_reconcile": "declared 1200 = eggs_in 1200; sizes 1138 + outgrades 62 = 1200.",
+  "batch_disposition": "Lay 2024-05-02 to pack 2024-05-13 is 11 days, past the ten-day Class A limit; other checks are complete.",
+  "anomaly_cause": "Counts agree and no calibration or temperature flag, but outgrades of 62 are around 5%, so a reviewer could see a mild anomaly.",
+  "lay_to_pack": "Oldest lay 05-02 to pack 05-13 is 11 days, one day over the level 2 boundary, so inclusive counting could put it at 10.",
+  "outgrade_share": "62 outgrades of 1200 eggs_in is 5.17%, just above the 5% boundary between levels 1 and 2."
+ },
+ "request": "rec-F425-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009825
+}

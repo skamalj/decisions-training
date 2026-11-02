@@ -1,0 +1,168 @@
+{
+ "id": "F432-0014",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E21",
+   "risk_cat": 3,
+   "roster": [
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+   ],
+   "temp_range_c": [
+    18,
+    28
+   ],
+   "doors": [
+    "D1"
+   ]
+  },
+  "shift": {
+   "end": "18:00",
+   "opening_count": 5,
+   "closing_count": 6
+  },
+  "movements": [
+   {
+    "animal_id": "a9",
+    "direction": "in",
+    "time": "11:20",
+    "from": "E4"
+   }
+  ],
+  "feeding": {
+   "items": [
+    {
+     "sheet_g": 2000,
+     "offered_g": 2000,
+     "leftover_g": 1500,
+     "unit": "g",
+     "scatter_flag": true
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched_time": "09:00",
+    "logged": true,
+    "entry_time": "09:01",
+    "temp_c": 22
+   },
+   {
+    "sched_time": "11:00",
+    "logged": false,
+    "cctv_reviewed": true,
+    "reviewer_id": "V4"
+   },
+   {
+    "sched_time": "13:00",
+    "logged": true,
+    "entry_time": "13:04",
+    "temp_c": 23
+   },
+   {
+    "sched_time": "15:00",
+    "logged": true,
+    "entry_time": "15:02",
+    "temp_c": 23
+   },
+   {
+    "sched_time": "17:00",
+    "logged": true,
+    "entry_time": "17:05",
+    "temp_c": 22
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "D1",
+     "time": "17:03"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none_arithmetically_but_incoming_id_not_on_roster",
+  "barrier_fault": "none",
+  "lock_check_timing": "2_minutes_before_last_round_entry",
+  "intake_ratio": 0.25,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 1,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "animal_id_not_on_roster",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "unexplained_off_by_one",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.54,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 3,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "animal_id_not_on_roster",
+  "behaviour_codes": 3,
+  "vet_case_open": false,
+  "missing_section": "close_check_absent",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "sign_off",
+   "second": "keeper_action",
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "count_reconciles": "Opening 5 plus one logged in gives 6, matching closing, but the incoming a9 is not on the roster.",
+  "secure_at_close": "The only door check is at 17:03, two minutes before the last round entry at 17:05, which is close to the offset decoy range.",
+  "next_step": "The counts and records look otherwise in order, but the lock-check timing and unrostered a9 could justify a keeper visit.",
+  "intake_shortfall": "Offered 2000 g, leftover 1500 g gives 25%, at the level 2/3 boundary, with scatter_flag making leftover uncertain.",
+  "missed_rounds": "One round (11:00) has logged false, with CCTV review by V4 but no keeper entry."
+ },
+ "request": "rec-F432-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013783
+}

@@ -1,0 +1,123 @@
+{
+ "id": "F433-0030",
+ "family": "F433",
+ "state": {
+  "gate": {
+   "loop": 3,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "13:00",
+   "departed_at": null
+  },
+  "vet_card": {
+   "presented_at": "13:12",
+   "pulse_bpm": 48,
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 3
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 2
+    },
+    {
+     "surface": "soft",
+     "grade": 2
+    }
+   ],
+   "vet_signed_at": "13:11"
+  },
+  "treatment": [
+   {
+    "type": "cold_water",
+    "vet": "Dr Ames"
+   }
+  ],
+  "notes": {
+   "rider_note": "spooked at a dog"
+  }
+ },
+ "factors": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "none",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": false,
+  "metabolic_flags": 1,
+  "cri_rise": 0.0,
+  "missing_items": 0,
+  "out_of_sequence": true,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "none",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 13.25,
+  "missing_items": 3,
+  "out_of_sequence": true,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "eliminate_ftq",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "balanced",
+   "target": "ftq_gait",
+   "second": "ftq_combined",
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "pulse_met": "Pulse 48 against a limit of 64, presented 12 minutes after the 13:00 arrival, well inside the window.",
+  "next_step": "Grade 2 on both trot-ups is a clear gait failure, so the horse is stopped with FTQ; the approved cold water does not change that.",
+  "outcome_code": "Gait is clearly irregular, while crt_s 3 is borderline and may or may not count as a metabolic failure, so ftq_gait and ftq_combined are both defensible.",
+  "welfare_risk": "Gait is outside limits and crt_s 3 is borderline, which fits level 2; the horse is not on course, so level 3 is a minor possibility.",
+  "record_completeness": "All readings are present, but vet_signed_at 13:11 is one minute before presented_at 13:12, which could be clock drift or an out-of-sequence time."
+ },
+ "request": "rec-F433-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011214
+}

@@ -1,0 +1,117 @@
+{
+ "id": "F426-0028",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B4",
+   "crop": "apple",
+   "planted_area_ha": 10
+  },
+  "applications": [
+   {
+    "date": "2024-02-01",
+    "product_code": "MQ3",
+    "qty_applied": 7.2,
+    "qty_unit": "L",
+    "area_treated_ha": 6
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "MQ3",
+    "max_rate_per_ha": 1,
+    "rate_unit": "L",
+    "phi_days": 7
+   }
+  ],
+  "equipment": {
+   "calibration_valid_to": "2024-01-20",
+   "nozzle_dev_pct": 12
+  },
+  "harvest": {
+   "first_pick_date": "2024-02-07",
+   "residue_test": {
+    "sampled": true,
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "10_to_25",
+  "partial_block_spray": true,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "expired_under_30d_high_dev",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "breached_short",
+  "rate_overrun_band": "up_to_10",
+  "partial_block_spray": true,
+  "clerical_mismatch": "unit_ml_vs_l",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "expired_under_30d_high_dev",
+  "missing_item": "operator_cert_null",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 3,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "interval_breach",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "phi_cleared": "Spray 2024-02-01 and first pick 2024-02-07 are 6 days apart against phi_days 7. Inclusive counting would give 7 days, so the answer is debatable.",
+  "next_step": "The residue test is sampled and below limit. That supports release despite the one-day shortfall, the expired calibration and the high nozzle deviation.",
+  "finding_class": "The gap of 6 days is shorter than phi_days 7, so the picking date falls inside the withholding period. Inclusive counting is the only doubt.",
+  "reversal_time": "Fruit picked inside the interval can't be recalled or re-spaced. Whether the clear residue test shortens the follow-up to under three months or not is arguable.",
+  "rate_overrun": "7.2 L over the 6 ha treated is 1.2 L/ha against a max of 1, which is 20% over. Dividing by the planted 10 ha would give 0.72, which is a decoy."
+ },
+ "request": "rec-F426-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010079
+}

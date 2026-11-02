@@ -1,0 +1,103 @@
+{
+ "id": "F434-0010",
+ "family": "F434",
+ "state": {
+  "post": {
+   "km_marker": 73,
+   "off_post_at": "14:00"
+  },
+  "incidents": [
+   {
+    "km": 73,
+    "type": "mechanical",
+    "bibs": [
+     5
+    ]
+   }
+  ],
+  "control_record": {
+   "incident_log": [
+    {
+     "km": 73,
+     "type": "animal_on_course",
+     "bibs": []
+    }
+   ]
+  },
+  "sweep": null
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 14.05,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 14.05,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "query_marshal",
+   "second": null,
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "mechanical_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "coverage_held": "sweep is null so passage cannot be verified against off_post_at 14:00.",
+  "next_step": "Control animal entry is absent from the post list, a mismatch the marshal can correct directly.",
+  "incident_class": "Post list shows only a mechanical stop for bib 5, meeting mechanical_only; the control animal entry is the mismatch.",
+  "reversal_time": "Unverified sweep and unreported animal entry make the lasting remedy uncertain, level 3 or 2.",
+  "consequence_severity": "Animal on course with no rider outcome recorded, so level 2 or 3 depends on unconfirmed medical follow-up."
+ },
+ "request": "rec-F434-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005011
+}

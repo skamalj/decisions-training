@@ -1,0 +1,162 @@
+{
+ "id": "F427-0036",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V101",
+   "visit_date": "2024-06-12",
+   "surveyor_grade": "accredited"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 5,
+   "dams_total": 6
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "W1",
+     "depth_cm": 24
+    },
+    {
+     "id": "W2",
+     "depth_cm": 27
+    },
+    {
+     "id": "W3",
+     "depth_cm": 26
+    },
+    {
+     "id": "W4",
+     "depth_cm": 27
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 20,
+     "prev_depth_cm": 21
+    }
+   ],
+   "rain_30d_pct_normal": 114
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D4",
+     "pool_level_cm": 4,
+     "design_pool_cm": 30,
+     "defect_code": "BRCH",
+     "remark": "Centre breach, shallow pool held behind peat lip."
+    }
+   ],
+   "open_work_orders": [
+    {
+     "dam_id": "D4",
+     "status": "raised"
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 6
+    },
+    {
+     "q": 2,
+     "score": 5
+    }
+   ],
+   "photos_uploaded": 12,
+   "photos_expected": 12,
+   "grazing_signs": true
+  },
+  "notes": {
+   "prior_visits": [
+    {
+     "date": "2023-09-04",
+     "entry": "D4 breach"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.8,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "partial_breach",
+  "water_table_offset_cm": 1.0,
+  "rainfall_pct_normal": 114.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.71,
+  "photos_status": "full",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "partial_breach",
+  "water_table_offset_cm": 1.05,
+  "rainfall_pct_normal": 113.73,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "leaning",
+   "target": "below_band",
+   "second": null,
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 99,
+ "deciding": {
+  "dam_caused_drop": "Wells average 26 cm, only 1 cm below floor, with wet 30-day rain and a stable control, against a breached dam D4 with a prior breach; both causes are plausible.",
+  "next_step": "A repair order for D4 is already raised, so the record is filed with no new action needed.",
+  "hydro_state": "Mean depth 26 cm against band floor 25 cm, slightly below the band.",
+  "dam_severity": "D4 has a BRCH code but still holds a 4 cm pool against 30 cm design; it reads as failed or as partial.",
+  "evidence_completeness": "Photos and quadrats are complete and the inspection is logged, but only 4 of 5 scheduled dipwells were read."
+ },
+ "request": "rec-F427-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011596
+}

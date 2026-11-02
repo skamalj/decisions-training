@@ -1,0 +1,147 @@
+{
+ "id": "F431-0045",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM71288",
+   "type": "ultrasonic",
+   "last_verified_date": "2020-09-14",
+   "seal_state": "broken",
+   "seal_checked_date": "2023-10-02"
+  },
+  "period_read": {
+   "read_date": "2024-04-01",
+   "reg_kwh": 22907,
+   "vol_m3": 290.5,
+   "src_code": "AMR",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2023-10-02",
+    "reg_kwh": 21400,
+    "src": "ENG"
+   },
+   {
+    "date": "2023-11-01",
+    "reg_kwh": 21500,
+    "src": "EST"
+   },
+   {
+    "date": "2023-12-01",
+    "reg_kwh": 21600,
+    "src": "EST"
+   },
+   {
+    "date": "2024-01-01",
+    "reg_kwh": 21700,
+    "src": "EST"
+   },
+   {
+    "date": "2024-02-01",
+    "reg_kwh": 21800,
+    "src": "EST"
+   },
+   {
+    "date": "2024-03-01",
+    "reg_kwh": 22000,
+    "src": "EST",
+    "same_period_ly_kwh": 1000
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW",
+    "E_TPROBE",
+    "E_AIR",
+    "E_COMMS"
+   ],
+   "flow_temp_c": 41,
+   "return_temp_c": 39,
+   "battery_pct": 30
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 108,
+   "hdd_prior_year": 100,
+   "works_orders": [],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "photo_ref_missing",
+  "consumption_ratio": 0.84,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.08,
+  "diagnostic_error_count": 4,
+  "meter_works_order": false,
+  "consecutive_estimates": 5,
+  "delta_t_implausible": true,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "photo_ref_missing",
+  "consumption_ratio": 0.7,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.08,
+  "diagnostic_error_count": 4,
+  "meter_works_order": false,
+  "consecutive_estimates": 5,
+  "delta_t_implausible": true,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "billable_actual": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_photo_read",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 132,
+ "deciding": {
+  "meter_fault": "Four error codes including E_TPROBE and a delta-T of only 2 K point to a fault, but the broken seal matches the ENG visit on 2023-10-02 and the consumption is near expected.",
+  "billable_actual": "An AMR actual read in sequence after five estimates with plausible consumption, but the odd diagnostics leave some doubt.",
+  "next_step": "Five trailing estimates and an implausible delta-T mean the AMR value should be corroborated with a dated meter photo before release.",
+  "staff_effort": "Verifying the faulty-looking diagnostics and reconciling five estimates likely takes one to five days.",
+  "consumption_deviation": "Consumption 907 kWh against expected 1000x108/100=1080 kWh is about 16% below, just over the 15% boundary."
+ },
+ "request": "rec-F431-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009937
+}

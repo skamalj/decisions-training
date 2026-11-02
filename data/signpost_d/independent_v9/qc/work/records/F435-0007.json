@@ -1,0 +1,156 @@
+{
+ "id": "F435-0007",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E-2291",
+   "zone_id": "T3",
+   "zone_type": "seated_tier",
+   "doors_open": "2025-05-10T18:30",
+   "check_filed_at": "2025-05-10T20:10",
+   "phase": "live"
+  },
+  "licence": {
+   "base_limit": 2200,
+   "variation": {
+    "ref": "V-7",
+    "new_limit": 2000,
+    "status": "approved",
+    "approved_on": "2025-05-08"
+   },
+   "stewards_required": 30,
+   "exit_routes": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 2200,
+   "issued": 2060,
+   "comps_included": 90,
+   "scanned_in": 2031
+  },
+  "ingress": {
+   "device_id": "C-14",
+   "device_status": "ok",
+   "raw_peak": 2008,
+   "peak_at": "2025-05-10T19:40",
+   "manual_recount": {
+    "count": 1998,
+    "at": "2025-05-10T19:55"
+   }
+  },
+  "stewarding": {
+   "rostered": 31,
+   "signed_in": 28,
+   "relief": {
+    "called_at": "2025-05-10T19:00",
+    "eta_min": 20
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "A",
+    "checked_at": "2025-05-10T17:50",
+    "status": "clear"
+   },
+   {
+    "route_id": "B",
+    "checked_at": "2025-05-10T17:55",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "C",
+    "checked_at": "2025-05-10T18:41",
+    "status": "clear"
+   },
+   {
+    "route_id": "D",
+    "checked_at": null,
+    "status": "pending"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "seated_tier",
+  "event_phase": "live",
+  "occupancy_ratio": 1.004,
+  "counter_status": "ok",
+  "counter_inflation": 0.04,
+  "manual_recount_present": true,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 1.03,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.07,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "seated_tier",
+  "event_phase": "live",
+  "occupancy_ratio": 0.9,
+  "counter_status": "ok",
+  "counter_inflation": 0.04,
+  "manual_recount_present": true,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.97,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.07,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 4,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "sign_off",
+   "second": "hold",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "limit_mismatch",
+   "second": null,
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 135,
+ "deciding": {
+  "verified_exceedance": "The variation was approved before doors, so the effective limit is 2000. Counter is ok with raw_peak 2008, but the recount of 1998 disagrees by 10 people, near the boundary.",
+  "disposition": "Occupancy is at the limit and relief is on its way, which favours sign-off. Several exits are unconfirmed and the counts disagree, which supports a hold.",
+  "discrepancy_source": "Issued 2060 exceeds the effective 2000 but not the 2200 base limit that ticketing used.",
+  "steward_shortfall": "signed_in 28 of 30 required is 6.7% under, slight. The roster of 31 and the relief call invite a view that it is met.",
+  "unconfirmed_exits": "Of 6 routes, only A was clear before doors. B is obstructed with no later clear, C was checked after doors, D has a null time, and E and F are absent, so 5 are unconfirmed. The post-doors clear on C is a decoy."
+ },
+ "request": "rec-F435-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01568
+}

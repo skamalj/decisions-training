@@ -1,0 +1,112 @@
+{
+ "id": "F421-0036",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-48121",
+   "contents": "ceramic tiles",
+   "qty": 12,
+   "weight_kg": 18.4,
+   "declared_value_gbp": 1170.57
+  },
+  "handling_events": [
+   {
+    "ts": "2024-03-02T08:10",
+    "site": "HUB-N",
+    "code": "DMG"
+   },
+   {
+    "ts": "2024-03-03T06:40",
+    "site": "THIS",
+    "code": "INB"
+   }
+  ],
+  "damage_report": {
+   "observed_item": "ceramic tiles",
+   "qty_found": 11,
+   "weight_kg": 17.9,
+   "condition": "tape cut and resealed",
+   "photos": [],
+   "repair_est_gbp": 662.7
+  },
+  "claim": {
+   "claimed_gbp": 1292.3
+  }
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "quantity",
+  "inspection_state": "photos_missing",
+  "loss_pct": 56.61,
+  "declared_value": 1170.57,
+  "scan_order_anomaly": false,
+  "tamper_signs": true,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 1.95
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "quantity",
+  "inspection_state": "photos_missing",
+  "loss_pct": 56.61,
+  "declared_value": 1170.57,
+  "scan_order_anomaly": false,
+  "tamper_signs": true,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 1.95
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "depot_fault": "Upstream DMG precedes the inbound scan, but the tape cut and resealed condition leaves custody uncertain.",
+  "contents_match": "Same item described, but qty_found 11 vs manifest 12 with resealed tape could be tampering or a miscount.",
+  "next_step": "Report is filled in and damage predates intake, so closing is leaned toward, though the missing photos and resealing leave doubt.",
+  "loss_share": "Repair estimate 662.7 is 56.6% of declared value, near the boundary with the claim of 1292.3 inflating it.",
+  "parties_needed": "Missing photos, tampering, upstream hub, claim and supervisor sit between 3-4 and 5+ teams."
+ },
+ "request": "rec-F421-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005158
+}

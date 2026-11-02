@@ -1,0 +1,139 @@
+{
+ "id": "F407-0011",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "PR-20418",
+   "received_at": "2025-03-04T08:12:00Z",
+   "channel": "public_app",
+   "photo_ref": "IMG-8841",
+   "linked_reports": [
+    "PR-20391",
+    "PR-20402"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "usrn": 21003377,
+   "road_class": "main_distributor",
+   "intervention_depth_mm": 40,
+   "speed_limit": 30
+  },
+  "inspection": {
+   "inspector": "HI-07",
+   "inspected_at": "2025-03-06",
+   "depth_mm": 40,
+   "width_mm": 1224,
+   "offset_m": 120
+  },
+  "works_history": [
+   {
+    "job": "J-5530",
+    "completed": "2024-11-12",
+    "offset_m": null,
+    "guarantee_end": "2025-11-12"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "id": "S-77",
+     "start": "2025-03-24",
+     "from_m": 80,
+     "to_m": 300
+    }
+   ],
+   "temp_measures": []
+  },
+  "current_order": {
+   "id": "WO-9912",
+   "raised": "2025-03-06",
+   "status": "completed",
+   "completed_items": 1,
+   "total_items": 1
+  }
+ },
+ "factors": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "on_boundary",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": true,
+  "duplicate_count": 2,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "completed",
+  "defect_width_mm": 1224.0,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": true,
+  "duplicate_count": 2,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "raised",
+  "defect_width_mm": 1224.28,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "response_timescale": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 100,
+ "deciding": {
+  "meets_threshold": "inspection.depth_mm 40 equals intervention_depth_mm 40: at the threshold, though measured before the completed order.",
+  "repeat_failure": "works_history offset_m is null (street-level only), so same-spot recurrence is unconfirmed.",
+  "next_step": "current_order WO-9912 is completed 1/1 after the inspection, so the defect looks already repaired.",
+  "staff_effort": "Nothing outstanding; closing the report takes minutes.",
+  "response_timescale": "Order already completed; no further repair is required."
+ },
+ "request": "rec-F407-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008011
+}

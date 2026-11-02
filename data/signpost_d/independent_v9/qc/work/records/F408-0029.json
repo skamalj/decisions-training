@@ -1,0 +1,126 @@
+{
+ "id": "F408-0029",
+ "family": "F408",
+ "state": {
+  "report": {
+   "logged_at": "2024-07-09T15:00",
+   "stream": "refuse",
+   "claimed_date": "2024-07-09",
+   "photo_attached": false
+  },
+  "property": {
+   "assisted_collection": true,
+   "assisted_since": "2023-09-01"
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled_date": "2024-07-09"
+  },
+  "round_log": {
+   "round_completed_at": "2024-07-09T13:00",
+   "stops": [
+    {
+     "gps_stop": false,
+     "photo_ref": null
+    }
+   ]
+  },
+  "history": [
+   {
+    "outcome": "upheld",
+    "logged_on": "2024-06-20"
+   },
+   {
+    "outcome": "upheld",
+    "logged_on": "2024-05-02"
+   },
+   {
+    "outcome": "upheld",
+    "logged_on": "2024-04-15"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "no_stop_at_address",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 1,
+  "assisted_miss_breach": true
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 4,
+  "history_decoys": 1,
+  "assisted_miss_breach": true
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (assisted_miss_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 25,
+ "deciding": {
+  "crew_missed": "The stop has gps_stop false, no exception code and no photo, so the crew likely missed the bin; the resident supplied no photo, which leaves some doubt.",
+  "report_matches": "Stream and claimed date equal the schedule, and the report was logged after the round completed.",
+  "next_step": "The resident has no photo attached, so a specific item could be requested before booking a return.",
+  "return_urgency": "The address is assisted since 2023-09-01 and the stop has gps_stop false, an assisted-collection breach pointing to same day.",
+  "repeat_failures": "Upheld 2024-06-20 and 2024-05-02 are within 84 days; the 2024-04-15 entry is 85 days before logging, just outside, so two or three is arguable."
+ },
+ "request": "rec-F408-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009869
+}

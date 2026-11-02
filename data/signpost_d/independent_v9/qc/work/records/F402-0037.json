@@ -1,0 +1,121 @@
+{
+ "id": "F402-0037",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-2210",
+   "source": "ward",
+   "received": "2025-04-02",
+   "priority": "soon",
+   "site": {
+    "part": "knee",
+    "side": "R"
+   },
+   "onset": "2025-01-08"
+  },
+  "patient": {
+   "consent_to_refer": true,
+   "aid": "frame"
+  },
+  "clinical": {
+   "dx": "Z96.65",
+   "red_flags": [
+    "night_pain_weight_loss"
+   ],
+   "neuro_signs": {},
+   "function_index": 6.81,
+   "surgery_date": "2025-02-04",
+   "weight_bearing": "partial"
+  },
+  "gp_record": {
+   "weight_change_kg": -6,
+   "reviews": []
+  },
+  "attachments": [],
+  "history": {
+   "episodes": 3,
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "post_op_protocol",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 12,
+  "function_index": 6.81,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 4,
+  "post_op_days": 57,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "post_op_protocol",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 12,
+  "function_index": 6.81,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 4,
+  "post_op_days": 57,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "specialist_rehab",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 68,
+ "deciding": {
+  "red_flag_unresolved": "red_flags has night_pain_weight_loss, weight_change -6 kg, no reviews and no MRI.",
+  "next_step": "Attachments are empty so the op protocol is missing, but surgery date and weight-bearing are present, so accepting is defensible.",
+  "pathway": "Surgery 57 days ago, frame use and function index 6.81 call for specialist rehab.",
+  "reversal_time": "A waiting-list placement is undone in a day, but a delayed-flag follow-up could take a few days.",
+  "clinical_urgency": "Post-op status at 57 days supports contact within six weeks, while the unresolved flag could argue for a quicker slot."
+ },
+ "request": "rec-F402-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007313
+}

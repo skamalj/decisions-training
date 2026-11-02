@@ -1,0 +1,143 @@
+{
+ "id": "F411-0006",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "HC118",
+   "type": "hackney",
+   "expiry": "2025-03-31",
+   "review_date": "2025-03-20"
+  },
+  "vehicle": {
+   "odometer_km": 41050
+  },
+  "inspection": {
+   "result_code": "F",
+   "brake_efficiency_pct": 62
+  },
+  "defects": [
+   {
+    "code": "TY3",
+    "grade": "major",
+    "rectify_by": "2025-03-16",
+    "repaired_on": "2025-03-10",
+    "retest_on": "2025-03-12",
+    "retest_result": "pass"
+   },
+   {
+    "code": "WP1",
+    "grade": "advisory",
+    "rectify_by": null,
+    "repaired_on": null,
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-03-20",
+    "cover_note_ref": null
+   },
+   {
+    "type": "mot",
+    "expires_on": "2025-09-01"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-03-18",
+     "result": "P",
+     "odometer_km": 41200
+    }
+   ],
+   "replacements": [
+    {
+     "type": "instrument_cluster",
+     "date": "2024-11-02",
+     "old_km": 41230,
+     "new_km": 41000
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_defect_found": "major",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": true,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 1
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "retest_passed",
+  "deadline_passed": true,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": true,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 1
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "conditional_renewal",
+   "second": "refer_committee",
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "major_fail",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "odometer_consistent": "Current 41050 is below the highest history reading 41200, but a documented cluster replacement (old 41230, new 41000) mostly accounts for it; the new-cluster start is below the old reading, which keeps doubt.",
+  "next_step": "Major defect repaired and retested pass, only an advisory left and one boundary document favour a conditional renewal; the odometer drop with a replacement that only roughly fits leaves referral to committee plausible.",
+  "inspection_outcome": "Defect TY3 is graded major at inspection (result F), whatever its later repair.",
+  "document_gaps": "Insurance expires_on equals review_date 2025-03-20 with no cover note, probably one gap; the MOT is in date.",
+  "outstanding_severity": "Major was retested pass; only advisory WP1 remains unrectified, which is level 1, though one could say nothing is outstanding."
+ },
+ "request": "rec-F411-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015553
+}

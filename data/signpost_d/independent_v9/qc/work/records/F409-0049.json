@@ -1,0 +1,128 @@
+{
+ "id": "F409-0049",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "submitted_on": "2024-07-01",
+   "app_type": "renewal"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-04-02",
+     "address_line": "5 Dene St",
+     "verified": true
+    }
+   ],
+   "ct_liability_from": "2024-07-15"
+  },
+  "request": {
+   "address": "5 Dene St"
+  },
+  "account_history": {
+   "live_permits": [
+    "P8"
+   ],
+   "pcns": [
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open",
+     "note": "cancellation pending"
+    },
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 90,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 1,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 6,
+  "pcns_cancelled": false,
+  "date_order_anomaly": true,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 165,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 1,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 6,
+  "pcns_cancelled": true,
+  "date_order_anomaly": true,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve_temporary",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 36,
+ "deciding": {
+  "residency_shown": "The verified bill matches the address exactly and is 90 days old, but ct_liability_from 2024-07-15 is later than submitted_on.",
+  "disposition": "Only one live permit and the documents are verified, so a time-limited permit pending the date issue is the lean.",
+  "main_issue": "Plate, keeper and address all match and there is one live permit, so no check clearly fails.",
+  "misuse_strength": "ct_liability_from after submission is one indicator; three open PCNs would be a second, but one has cancellation pending.",
+  "document_gaps": "The only required document is received and verified (true)."
+ },
+ "request": "rec-F409-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009577
+}

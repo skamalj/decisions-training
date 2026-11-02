@@ -1,0 +1,130 @@
+{
+ "id": "F401-0037",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P202",
+   "planned_discharge_at": "2025-04-02T11:00"
+  },
+  "medications": {
+   "discharge_rx": null
+  },
+  "function_social": {
+   "care_arrangement": {
+    "type": "care_home",
+    "status": "confirmed",
+    "start_date": "2025-04-04"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "s": "pending"
+    },
+    {
+     "t": "transport",
+     "s": "pending"
+    },
+    {
+     "t": "handover",
+     "s": "pending"
+    },
+    {
+     "t": "obs chart",
+     "s": "done",
+     "completed_at": "2025-04-02T08:00",
+     "signed_by": null
+    },
+    {
+     "t": "bed",
+     "s": "done",
+     "completed_at": "2025-04-02T08:30",
+     "signed_by": "RN2"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "discharge_rx_absent",
+  "outstanding_task_count": 4,
+  "false_completion": true,
+  "care_need": "rehab",
+  "care_arrangement_status": "confirmed_on_time",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "discharge_rx_absent",
+  "outstanding_task_count": 5,
+  "false_completion": true,
+  "care_need": "rehab",
+  "care_arrangement_status": "confirmed_on_time",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "discharge_now",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "care_home",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "rx_matches": "medications.discharge_rx is null.",
+  "next_step": "No clinical, identity or capacity concern is recorded, and the placement is confirmed; the missing prescription and open tasks give some doubt.",
+  "destination": "care_arrangement is a confirmed care_home placement with a start date.",
+  "outstanding_tasks": "Three items pending plus 'obs chart' done with null signed_by gives four; a reader could count only three.",
+  "discharge_delay": "Care home start 2025-04-04 is two days after the planned 2025-04-02."
+ },
+ "request": "rec-F401-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010614
+}

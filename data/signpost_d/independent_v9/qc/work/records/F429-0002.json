@@ -1,0 +1,166 @@
+{
+ "id": "F429-0002",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "operator_id": "op62",
+   "log_version": 3,
+   "licence_q_max_m3s": 150,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "datum": "site",
+   "rainfall_mm_24h": 38,
+   "triggers": {
+    "alert_m": 90.0,
+    "action_m": 90.6
+   },
+   "readings": [
+    {
+     "t": "08:30",
+     "level_m": 90.4
+    },
+    {
+     "t": "10:00",
+     "level_m": 90.61
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "08:50",
+    "open_before_m": 0.2,
+    "open_after_m": 0.4
+   },
+   {
+    "gate": "G1",
+    "t": "09:00",
+    "open_before_m": 0.4,
+    "open_after_m": 0.9
+   },
+   {
+    "gate": "G2",
+    "t": "08:55",
+    "open_before_m": 0.0,
+    "open_after_m": 0.6
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 0.9
+    },
+    {
+     "gate": "G2",
+     "opening_m": 0.61
+    }
+   ],
+   "calc_peak_m3s": 80,
+   "gauged_peak_m3s": 61.35,
+   "tailwater_m": [
+    {
+     "t": "09:20",
+     "m": 101.2
+    },
+    {
+     "t": "09:40",
+     "m": 101.9
+    }
+   ]
+  },
+  "instruments": {
+   "piezometers": [
+    {
+     "id": "P1",
+     "t": "09:30",
+     "kpa": 140,
+     "alert_kpa": 180
+    }
+   ],
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "2024-06-11T12:20"
+   }
+  }
+ },
+ "factors": {
+  "reservoir_tier": "action",
+  "near_boundary": true,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 23.31,
+  "datum_mismatch": false,
+  "missing_section": "notifications_missing",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": true
+ },
+ "factors_sampled": {
+  "reservoir_tier": "action",
+  "near_boundary": true,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "large",
+  "discharge_discrepancy_pct": 23.31,
+  "datum_mismatch": false,
+  "missing_section": "notifications_missing",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_log",
+   "second": "query_operator",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 171,
+ "deciding": {
+  "within_licence": "calc peak 80 and gauged 61.35 are both under the 150 limit; doubt only from the 23% gap.",
+  "gates_reconciled": "G1 0.9 vs 0.9 and G2 0.6 vs 0.61 match within 0.01 m.",
+  "next_step": "Inspection is completed and sections agree, but the notifications section is absent; this leaves accept vs query operator close.",
+  "trigger_tier": "G1 went 0.4 to 0.9 m in 10 minutes against a 0.3 m limit; the level is also at the action trigger.",
+  "parties_needed": "Ramp breach and missing notification trail could involve operator, senior engineer, comms and downstream contacts; it is unclear whether a fourth or fifth party is needed."
+ },
+ "request": "rec-F429-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009701
+}

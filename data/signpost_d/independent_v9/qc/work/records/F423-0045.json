@@ -1,0 +1,122 @@
+{
+ "id": "F423-0045",
+ "family": "F423",
+ "state": {
+  "job": {
+   "run_qty": 59000,
+   "overs_pct": 3.33,
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "ok_sheet_no": 2,
+   "signed_at": null,
+   "concession": {
+    "accepted_max_de": 4.0
+   }
+  },
+  "colour_readings": {
+   "calibrated_on": "2024-05-16",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 3.8
+    },
+    {
+     "ink": "K",
+     "delta_e": 4.0
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.2,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "first_production_at": "2024-08-20T13:10",
+   "sheets_production": 1968
+  }
+ },
+ "factors": {
+  "colour_deviation": "marginal",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 1968,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 3.33,
+  "register_offset_mm": 0.2,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 96,
+  "customer_tier": "trade",
+  "prior_stoppages": 1
+ },
+ "factors_sampled": {
+  "colour_deviation": "marginal",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 1968,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 3.33,
+  "register_offset_mm": 0.07,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 96,
+  "customer_tier": "trade",
+  "prior_stoppages": 1
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "adjust_and_recheck",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "colour_in_tolerance": "Patches read 3.8 and 4.0 against a concession limit of 4.0, so they are within it, with the K patch at the limit. The spectro was calibrated 96 days before the check, past the 90-day mark, so the readings are open to doubt.",
+  "run_before_signoff": "signed_at is null while 1968 production sheets are logged, so production ran without a signature. An ok_sheet_no is listed, which leaves a little room for an unrecorded signature.",
+  "next_step": "The 0.2 mm offset is on a target with in_image true, which is over the 0.15 mm limit. Register must be corrected and the sheet re-pulled before anything else, including the missing signature.",
+  "staff_effort": "A register correction and re-pull is a short job. Obtaining the missing signature and dealing with the printed sheets could add a few hours.",
+  "scrap_exposure": "1968 misregistered production sheets against an overs allowance of 3.33% of 59000, about 1965 sheets. The count sits right at the overs boundary, which is well under 10% of the run. That leaves level 1 and level 2 both defensible."
+ },
+ "request": "rec-F423-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011407
+}

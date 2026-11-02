@@ -1,0 +1,171 @@
+{
+ "id": "F404-0039",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "P4",
+   "date": "2025-06-03",
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty",
+   "places": 30
+  },
+  "children": {
+   "booked": 24,
+   "slots": [
+    {
+     "t": "07:30",
+     "signed_in": 5
+    },
+    {
+     "t": "08:00",
+     "signed_in": 9
+    },
+    {
+     "t": "08:30",
+     "signed_in": 14
+    },
+    {
+     "t": "09:00",
+     "signed_in": 20
+    },
+    {
+     "t": "09:30",
+     "signed_in": 26
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S-201",
+    "q": 6,
+    "ratio": true,
+    "start": "07:30"
+   },
+   {
+    "id": "S-202",
+    "q": 3,
+    "ratio": true,
+    "start": "07:30"
+   },
+   {
+    "id": "S-203",
+    "q": 3,
+    "ratio": true,
+    "start": "07:30"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S201",
+    "in": "09:30",
+    "status": "ok",
+    "q": 6
+   },
+   {
+    "id": "S202",
+    "in": "09:30",
+    "status": "ok",
+    "q": 3
+   },
+   {
+    "id": "S203",
+    "in": "07:30",
+    "age": 16,
+    "status": "ok",
+    "q": 2
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F03",
+    "from": "09:00",
+    "to": "09:30",
+    "room": "P4",
+    "cosign": "Mgr Hale"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 4,
+   "last_audit_outcome": "satisfactory"
+  }
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 26,
+  "staff_signin_variance": "late_arrival",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 90,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": true,
+  "prior_breaches_90d": 4
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 26,
+  "staff_signin_variance": "late_arrival",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 120,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": true,
+  "prior_breaches_90d": 4
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "file_no_action",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "clear",
+   "target": "paperwork_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (zero_eligible_adult_slot = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 139,
+ "deciding": {
+  "below_ratio": "From 07:30 the only person signed in is S203, aged 16 with qual 2, so he is not eligible; 5 or more children had no eligible adult, and cover for 09:00-09:30 does not fill the earlier window.",
+  "disposition": "Uncovered time from 07:30 to 09:00 plus a partly covered 09:00 slot comes to about 90 minutes, over sixty, with a slot of 5 children and no eligible adult, so it goes to the safeguarding lead.",
+  "primary_cause": "S201 and S202 signed in at 09:30 against a 07:30 rota start, so eligible staff on duty fell below rota; bookings were 24 against 26 children in the peak slot.",
+  "shortfall_duration": "The 07:30-09:00 slots are uncovered and the 09:00-09:30 floater is one adult against 3 needed, giving about 90 minutes, over sixty.",
+  "breach_severity": "The 07:30 slot has 5 children with no eligible adult, and the slot at 08:30 has 14, so at least 4 children are beyond cover."
+ },
+ "request": "rec-F404-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014659
+}

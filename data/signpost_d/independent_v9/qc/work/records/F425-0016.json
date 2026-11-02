@@ -1,0 +1,164 @@
+{
+ "id": "F425-0016",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "farm_ref": "F-2210",
+   "producer_code": "1UK-4F17",
+   "method": 1,
+   "lay_dates": [
+    "2024-05-06",
+    "2024-05-02"
+   ],
+   "declared_eggs": 3000,
+   "trays": 100
+  },
+  "grading_run": {
+   "run_start": "2024-05-10T07:00",
+   "run_end": "2024-05-10T09:30",
+   "eggs_in": 2996,
+   "by_size": {
+    "S": 200,
+    "M": 1100,
+    "L": 1100,
+    "XL": 465
+   },
+   "outgrades": {
+    "cracks": 20,
+    "dirties": 80,
+    "blood_spots": 8,
+    "leakers": 15,
+    "misshapen": 8
+   },
+   "class_a_total": 2865
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-02-01",
+    "interval_days": 90
+   },
+   "candling_sample": {
+    "sampled_at": "2024-05-10T11:00",
+    "n": 100
+   },
+   "scale_check": {
+    "ok": true
+   },
+   "store_temp": {
+    "minutes_above_limit": 0,
+    "max_c": 6.1
+   }
+  },
+  "flock": {
+   "age_weeks": 76,
+   "salmonella_vaccinated": true,
+   "last_swab": {
+    "date": "2024-04-20",
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2024-05-13",
+   "packs": [
+    {
+     "size": "S",
+     "count": 200
+    },
+    {
+     "size": "M",
+     "count": 1100
+    },
+    {
+     "size": "L",
+     "count": 1100
+    },
+    {
+     "size": "XL",
+     "count": 300
+    }
+   ],
+   "stamp_code": "2UK-4F17",
+   "best_before": "2024-06-03",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "large",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": true,
+  "lay_to_pack_days": 11,
+  "mixed_lay_dates": true,
+  "missing_check": "candling_after_run",
+  "swab_positive": false,
+  "outgrade_rate_pct": 4.38,
+  "dominant_defect": "dirties",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 76
+ },
+ "factors_sampled": {
+  "count_gap_size": "none",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 5,
+  "mixed_lay_dates": true,
+  "missing_check": "candling_after_run",
+  "swab_positive": false,
+  "outgrade_rate_pct": 4.38,
+  "dominant_defect": "dirties",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 76
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "balanced",
+   "target": "reject_withdraw",
+   "second": "hold_pending",
+   "targets": []
+  },
+  "anomaly_cause": {
+   "clarity": "balanced",
+   "target": "shell_quality",
+   "second": "equipment_fault",
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "counts_reconcile": "packs sum to 2700 against class_a_total 2865, a gap of about 5.8%.",
+  "batch_disposition": "stamp_code 2UK-4F17 differs from producer_code 1UK-4F17 (reject argument), while candling sampled_at is after run_end (hold argument).",
+  "anomaly_cause": "flock age 76 weeks with dirties dominant favours shell_quality; calibration was due 2024-05-01 with no recheck, which keeps equipment_fault plausible.",
+  "lay_to_pack": "oldest lay 2024-05-02, pack_date 2024-05-13 gives 11 days.",
+  "outgrade_share": "131 outgrades of 2996 eggs_in is 4.4%, near the upper edge of the 2 to 5% level."
+ },
+ "request": "rec-F425-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011715
+}

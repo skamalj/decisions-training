@@ -1,0 +1,112 @@
+{
+ "id": "F426-0039",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B8",
+   "planted_area_ha": 6.0
+  },
+  "applications": [
+   {
+    "date": "2024-05-01",
+    "product_code": "P4",
+    "qty_applied": 5.4,
+    "qty_unit": "kg",
+    "area_treated_ha": 5.0,
+    "sprayer_id": "S2"
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "P4",
+    "max_rate_per_ha": 1.0,
+    "rate_unit": "kg",
+    "phi_days": 14
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-05-10",
+   "residue_test": {
+    "sampled": false
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "breached_short",
+  "rate_overrun_band": "up_to_10 (changed from over_25)",
+  "partial_block_spray": true,
+  "clerical_mismatch": "none (changed)",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "none (changed)",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "breached_short",
+  "rate_overrun_band": "over_25",
+  "partial_block_spray": true,
+  "clerical_mismatch": "product_code_typo",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "product_ref_entry_missing",
+  "season_count_excess": false,
+  "off_label_crop": true,
+  "num_applications": 9,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_and_test",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "phi_cleared": "Applied 2024-05-01, picked from 2024-05-10: 9 days against phi_days 14.",
+  "next_step": "Breach is short and no residue test taken (sampled false); test before release, though escalation is arguable.",
+  "finding_class": "A no_finding plan cannot coexist with the 9-day gap versus 14; the record shows an interval breach.",
+  "reversal_time": "Holding and sampling takes days to a week or so to resolve.",
+  "rate_overrun": "5.4 kg / 5.0 ha treated = 1.08 kg/ha vs max 1.0, 8% over (dividing by planted 6.0 ha gives a misleading 0.9)."
+ },
+ "request": "rec-F426-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010292
+}

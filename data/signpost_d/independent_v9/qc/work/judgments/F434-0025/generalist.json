@@ -1,0 +1,36 @@
+{
+ "persona": "generalist",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "coverage_held": {
+   "true": 0.75,
+   "false": 0.25
+  },
+  "next_step": {
+   "file": 0.05,
+   "query_marshal": 0.1,
+   "hold_confirm": 0.25,
+   "safety_review": 0.6
+  },
+  "incident_class": {
+   "no_incident": 0.03,
+   "mechanical_only": 0.2,
+   "rider_fall": 0.02,
+   "course_intrusion": 0.75
+  },
+  "reversal_time": {
+   "0": 0.5,
+   "1": 0.15,
+   "2": 0.05,
+   "3": 0.3
+  },
+  "consequence_severity": {
+   "0": 0.8,
+   "1": 0.06,
+   "2": 0.03,
+   "3": 0.11
+  }
+ },
+ "cost": 0.000424
+}

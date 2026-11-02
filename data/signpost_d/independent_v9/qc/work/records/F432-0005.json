@@ -1,0 +1,166 @@
+{
+ "id": "F432-0005",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E08",
+   "sp": "TAPR",
+   "risk_cat": 3,
+   "temp_range_c": [
+    14,
+    28
+   ],
+   "maint_window": "06:00-15:00",
+   "active_vet_case": "VC118"
+  },
+  "shift": {
+   "date": "2024-07-22",
+   "keeper_id": "K09",
+   "start": "06:00",
+   "end": "16:30",
+   "opening_count": 6,
+   "closing_count": 6
+  },
+  "movements": [
+   {
+    "animal_id": "c7",
+    "dir": "in",
+    "time": "16:31",
+    "from": "E12"
+   }
+  ],
+  "feeding": {
+   "items": [
+    {
+     "item": "browse",
+     "sheet_g": 3500,
+     "offered_g": 3500,
+     "leftover_g": 1500,
+     "unit": "g"
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "t": "06:30",
+    "logged": true,
+    "entry": "06:33",
+    "temp_c": 9,
+    "beh": [
+     "STER"
+    ]
+   },
+   {
+    "t": "10:00",
+    "logged": false,
+    "entry": null
+   },
+   {
+    "t": "13:00",
+    "logged": true,
+    "entry": "13:02",
+    "temp_c": 10,
+    "beh": [
+     "LAME"
+    ]
+   },
+   {
+    "t": "16:10",
+    "logged": true,
+    "entry": "16:12",
+    "temp_c": 12
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "id": "D1",
+     "time": "16:08"
+    }
+   ],
+   "ticket": "BF402",
+   "ticket_state": "repaired",
+   "retest_due": "2024-07-25"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "repaired_retest_pending",
+  "lock_check_timing": "logged_just_before_last_round",
+  "intake_ratio": 0.57,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 1,
+  "cctv_cover": false,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": true,
+  "field_mismatch": "none",
+  "behaviour_codes": 2,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "fault_unresolved",
+  "lock_check_timing": "logged_before_last_round",
+  "intake_ratio": 0.46,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 0,
+  "cctv_cover": true,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": true,
+  "field_mismatch": "none",
+  "behaviour_codes": 2,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "sign_off",
+   "second": "keeper_action",
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 54,
+ "deciding": {
+  "count_reconciles": "Opening and closing are both 6; the one movement in is timed 16:31, a minute after the 16:30 end, so it probably falls outside the shift.",
+  "secure_at_close": "The D1 check at 16:08 precedes the 16:12 round entry, and ticket BF402 is only repaired with a retest due 2024-07-25, not confirmed closed.",
+  "next_step": "Low-risk enclosure with counts equal, an open vet case, temps low during the maintenance window and a repair awaiting retest, so filing or a keeper visit are both defensible.",
+  "intake_shortfall": "Intake is 2000 of 3500 g (57%), just under the 60% line with no fast or scatter flag.",
+  "missed_rounds": "Only the 10:00 round is logged false with a null entry; the other three rounds have entries."
+ },
+ "request": "rec-F432-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.016225
+}

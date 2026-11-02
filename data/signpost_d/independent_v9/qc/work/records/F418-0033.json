@@ -1,0 +1,149 @@
+{
+ "id": "F418-0033",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "KNT",
+   "plat": 3,
+   "date": "2025-05-20",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S31",
+    "planned_start": "05:30"
+   },
+   {
+    "staff_id": "S32",
+    "planned_start": "05:30"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S31",
+    "sign_on": "05:35",
+    "safety_comp_exp": "2026-02-01",
+    "dispatch_comp_exp": "2026-02-01"
+   },
+   {
+    "staff_id": "S32",
+    "sign_on": "05:32",
+    "safety_comp_exp": "2026-03-01",
+    "dispatch_comp_exp": "2026-03-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "23:10"
+   },
+   {
+    "type": "cover_start",
+    "time": "23:40",
+    "staff_id": "S33"
+   },
+   {
+    "type": "gap_end",
+    "time": "00:56"
+   }
+  ],
+  "controls": {
+   "disp_ref": null,
+   "possession_from": "23:00",
+   "possession_to": "05:00",
+   "prior_shortfalls_30d": 3
+  },
+  "remarks": [
+   "Relief S33 stepped in, all covered."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 106,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 106,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 82,
+ "deciding": {
+  "headcount_verified": "Remarks name relief S33 who has no attendance row, though S31 and S32 match; this leaves slight doubt.",
+  "next_step": "The gap 23:10-00:56 is after service_to 23:00 and within the possession, so nothing needs action.",
+  "coverage_outcome": "The gap is entirely outside service hours; rostered S31 and S32 filled all service.",
+  "reversal_time": "No in-service consequence exists, so a log note can be fixed within a day.",
+  "exposure_severity": "The gap starts after service_to 23:00 and lies inside the possession, so no period below minimum in service. The S33 note adds slight doubt."
+ },
+ "request": "rec-F418-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006704
+}

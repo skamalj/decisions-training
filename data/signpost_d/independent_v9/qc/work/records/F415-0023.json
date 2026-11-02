@@ -1,0 +1,154 @@
+{
+ "id": "F415-0023",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": [
+    {
+     "from": "09:05",
+     "to": "14:00",
+     "reason": "plumbing repair",
+     "approved_by": "OFF118"
+    }
+   ]
+  },
+  "shift": {
+   "date": "2024-07-19",
+   "start": "07:55",
+   "end": "16:30",
+   "sched_slots": [
+    "08:00",
+    "12:00",
+    "16:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "start": "08:03",
+    "end": "08:30",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "restock": true
+    }
+   },
+   {
+    "slot": "12:00",
+    "start": "12:05",
+    "end": "12:30",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "restock": false
+    }
+   },
+   {
+    "slot": "16:00",
+    "start": "16:02",
+    "end": "16:25",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "restock": true
+    }
+   }
+  ],
+  "faults": [
+   {
+    "type": "no_soap_or_paper",
+    "reported_at": "2024-07-19T09:00:00",
+    "remedied_at": "2024-07-19T14:03:00",
+    "source": "public_app",
+    "remedy_note": "restocked after repair"
+   }
+  ],
+  "sign_off": {
+   "signer": "S12",
+   "signer_role": "supervisor",
+   "signed_at": "2024-07-19T16:12:00",
+   "comment": "signed"
+  },
+  "history": {
+   "prior_defaults_90d": 2,
+   "complaints_90d": 4,
+   "audits_passed": 1
+  }
+ },
+ "factors": {
+  "scheduled_slots": 3,
+  "missed_slots": "0",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "signed_before_last_visit",
+  "fault_type": "no_soap_or_paper",
+  "fault_open_minutes": 303.23,
+  "block_closed_during_fault": true,
+  "checklist_completion": "partial",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 2
+ },
+ "factors_sampled": {
+  "scheduled_slots": 3,
+  "missed_slots": "0",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "no_soap_or_paper",
+  "fault_open_minutes": 303.23,
+  "block_closed_during_fault": true,
+  "checklist_completion": "partial",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 2
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "missed_clean": "All three slots (08:00, 12:00, 16:00) have done visits, so no slot is missing.",
+  "sign_off_valid": "signed_at 16:12 is before the final visit ended at 16:25, although the signer is a supervisor.",
+  "next_step": "The sign-off timing is one specific item to confirm, and the 12:00 restock task is false. No service failure is shown, so a hold is the leaning answer.",
+  "staff_effort": "Confirming the sign-off time is about an hour of work. The partial checklist could add a little more.",
+  "fault_exposure": "The fault ran 09:00-14:03, but the approved closure 09:05-14:00 covers nearly all of it. Only about 5 minutes before and 3 minutes after were open to the public, which is near the level 0/1 boundary."
+ },
+ "request": "rec-F415-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012855
+}

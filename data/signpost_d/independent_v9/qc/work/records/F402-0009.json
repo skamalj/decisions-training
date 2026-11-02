@@ -1,0 +1,112 @@
+{
+ "id": "F402-0009",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "urgent",
+   "received": "2025-04-07",
+   "onset": "2023-10-09",
+   "site": "shoulder L"
+  },
+  "clinical": {
+   "red_flags": [
+    "RF_NEURO"
+   ],
+   "neuro_signs": {
+    "progression": "worsening"
+   },
+   "function_index": 77
+  },
+  "gp_record": {
+   "falls_3m": 5,
+   "reviews": [
+    {
+     "date": "2025-03-20",
+     "type": "urgent"
+    }
+   ]
+  },
+  "attachments": []
+ },
+ "factors": {
+  "red_flag_type": "progressive_neuro_deficit",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "imaging_report",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 79,
+  "function_index": 76.83,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 5,
+  "post_op_days": 99,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "progressive_neuro_deficit",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "imaging_report",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 79,
+  "function_index": 76.83,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 5,
+  "post_op_days": 99,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_lead",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "community_msk",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "red_flag_unresolved": "Urgent GP review dated before flag documentation might explain it, but no imaging and neuro signs worsening.",
+  "next_step": "Worsening neuro sign with no imaging needs medical review via the lead.",
+  "pathway": "Function index 77, shoulder MSK problem, no surgery: community MSK.",
+  "reversal_time": "Referral routing is reversible within a day or within a week; levels 0 and 1 split.",
+  "clinical_urgency": "Worsening neuro deficit with no imaging requires medical review within 48 hours."
+ },
+ "request": "rec-F402-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004429
+}

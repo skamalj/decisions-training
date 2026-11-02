@@ -1,0 +1,132 @@
+{
+ "id": "F437-0045",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": 4,
+   "glossary_version": "g4",
+   "target_locale": "pt-BR",
+   "due_at": "2025-04-14T07:00",
+   "terms": {
+    "variant_accepted": true
+   },
+   "workflow": [
+    {
+     "step": "review",
+     "done_at": "2025-04-09T09:50"
+    }
+   ]
+  },
+  "source": {
+   "version": 4,
+   "segment_count": 260,
+   "word_count": 3300
+  },
+  "deliverable": {
+   "built_from_version": 4,
+   "target_locale": "pt-PT",
+   "segments_translated": 260,
+   "word_count": 3300,
+   "glossary_version_used": null,
+   "delivered_at": "2025-04-09T10:00"
+  },
+  "qa_report": null,
+  "review": {
+   "reviewer_id": "R-08",
+   "completed_at": "2025-04-09T10:20",
+   "signed_off": true,
+   "errors": [
+    {
+     "cat": "number_accuracy",
+     "sev": "major",
+     "status": "open"
+    },
+    {
+     "cat": "number_accuracy",
+     "sev": "critical",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [],
+   "reassignments": 4
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": true,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_after_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": false,
+  "qa_false_positive_share": 0.19,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": 117,
+  "client_waiver": true,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": true,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_after_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": false,
+  "qa_false_positive_share": 0.19,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": 117,
+  "client_waiver": true,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "scope_matches": "Version 4 matches throughout and segments are 260/260 with equal word counts; the null glossary version leaves slight doubt.",
+  "reviewed_in_time": "review.completed_at 10:20 is after delivered_at 10:00, but the workflow review step shows done_at 09:50, which is before delivery, so the order is unclear.",
+  "next_step": "Versions and segments agree, the pt-BR vs pt-PT difference is covered by the variant_accepted term, and the due date is 117 hours away; the open error and late sign-off leave doubt.",
+  "open_severity": "An open major number_accuracy error sits beside a closed critical error in the same category, so whether the open one is really critical is arguable.",
+  "parties_needed": "history shows 4 reassignments, and the open number error, null glossary record and pt-PT locale could involve translator, reviewer, terminologist, PM and account manager, so 5 or more is likely."
+ },
+ "request": "rec-F437-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013189
+}

@@ -1,0 +1,154 @@
+{
+ "id": "F427-0033",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V318",
+   "visit_date": "2024-08-20",
+   "surveyor_grade": "senior"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 4,
+   "dams_total": 7
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "DW1",
+     "depth_cm": 12
+    },
+    {
+     "id": "DW2",
+     "depth_cm": 16
+    },
+    {
+     "id": "DW4",
+     "depth_cm": 93
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 14,
+     "prev_depth_cm": 14
+    }
+   ],
+   "rain_30d_pct_normal": 100
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D5",
+     "pool_level_cm": 26,
+     "design_pool_cm": 30,
+     "defect_code": "SEEP",
+     "remark": "Water passing round east end, light overtopping at spillway."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": null,
+   "photos_uploaded": null,
+   "photos_expected": 10
+  },
+  "notes": {
+   "surveyor_note": "D5 looks like it is going again!",
+   "prior_visits": [
+    {
+     "date": "2023-10-05",
+     "dam_id": "D5",
+     "event": "breach"
+    },
+    {
+     "date": "2024-02-14",
+     "dam_id": "D5",
+     "event": "breach"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.75,
+  "photos_status": "none",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -15.3,
+  "rainfall_pct_normal": 100.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 2,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "alarmed",
+  "grazing_signs": true
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.72,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "failed",
+  "water_table_offset_cm": -3.13,
+  "rainfall_pct_normal": 134.23,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "alarmed",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_lead",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "contested",
+   "target": "within_band",
+   "second": "well_below",
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 62,
+ "deciding": {
+  "dam_caused_drop": "Control well steady and rain at 100% of normal rule out weather, while D5 has pool 4 cm under design with water passing, so the dam is the cause.",
+  "next_step": "Two earlier breaches on the same dam D5 in prior_visits make this a repeat failure for the programme lead; no work order exists yet.",
+  "hydro_state": "Mean of 12, 16, 93 is about 40 cm, over 15 below the floor of 25 (well_below), but two of three wells sit in band, so within_band is defensible.",
+  "dam_severity": "Coded SEEP with a pool 4 cm under design, but the remark mentions overtopping, which sits between seepage and partial breach.",
+  "evidence_completeness": "3 of 4 wells read (75%, partly recorded) plus the dam inspection; quadrats and photos null. Counting partial wells gives two elements, otherwise one."
+ },
+ "request": "rec-F427-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012532
+}

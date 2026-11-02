@@ -1,0 +1,123 @@
+{
+ "id": "F424-0025",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2433",
+   "volume_hl": 22,
+   "og_target": 1.05,
+   "fg_target_max": 1.012
+  },
+  "readings": [
+   {
+    "gravity_sg": 1.0532
+   },
+   {
+    "gravity_sg": 1.02
+   },
+   {
+    "gravity_sg": 1.019
+   }
+  ],
+  "events": [
+   {
+    "type": "blend",
+    "vessel_id": "FV9",
+    "ts": "2024-06-18",
+    "note": "Blended to FV9, all good."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2443",
+   "micro_plate": {
+    "result": "positive",
+    "cfu_ml": 300
+   }
+  },
+  "release_request": {
+   "volume_hl": 20.8
+  }
+ },
+ "factors": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": "not reported",
+  "discrepancy_count": 3,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.17,
+  "discrepancy_count": 2,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": true,
+  "release_pressure": "rush",
+  "operator_note_tone": "reassuring"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contamination_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (hard_limit_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 46,
+ "deciding": {
+  "terminal_gravity": "Readings of 1.020 and 1.019 are well above the 1.012 maximum and still moving slightly.",
+  "contamination_supported": "Positive plate at 300 cfu/ml with no retest or explanation.",
+  "batch_disposition": "A positive plate, gravity stuck high and a pre-sign-off blend rule out release_conditional. This record points to dump, so the planned option could not be reconciled with it.",
+  "deviation_severity": "The blend into FV9 was logged with no QA sign-off, an irreversible step, so the level is Critical.",
+  "record_discrepancies": "Volume 22 vs 20.8 and batch_ref B2433 vs B2443 are clear. First gravity 1.0532 vs og 1.050 is 0.0032, just past the 0.003 tolerance, so the count is two or three."
+ },
+ "request": "rec-F424-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01201
+}

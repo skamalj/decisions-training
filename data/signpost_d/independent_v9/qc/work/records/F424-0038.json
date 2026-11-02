@@ -1,0 +1,137 @@
+{
+ "id": "F424-0038",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2260",
+   "vessel_id": "FV4",
+   "volume_hl": 25,
+   "og_target": 1.06,
+   "fg_target_min": 1.012,
+   "fg_target_max": 1.015,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-07-01",
+    "gravity_sg": 1.061,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-07-06",
+    "gravity_sg": 1.019,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-07-08",
+    "gravity_sg": 1.014,
+    "temp_c": 18.5
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-07-09",
+    "note": "Warning: possible infection, plate came back positive!"
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2260",
+   "abv_pct": 6.2,
+   "abv_label_band": 5.5,
+   "diacetyl_mgl": 0.17,
+   "micro_plate": {
+    "result": "positive",
+    "cfu_ml": 15
+   },
+   "retest": [
+    {
+     "result": "negative"
+    }
+   ],
+   "lab_note": "Retest negative; panel could not confirm off-flavour."
+  },
+  "release_request": {
+   "vessel_id": "FV6",
+   "volume_hl": 24.5,
+   "note": "Routine."
+  }
+ },
+ "factors": {
+  "gravity_status": "last reading in band, prior reading outside and falling",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.17,
+  "discrepancy_count": "vessel mismatch plus volume 0.5 hl apart, borderline 1 or 2",
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.17,
+  "discrepancy_count": 3,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": true,
+  "release_pressure": "routine",
+  "operator_note_tone": "alarmed"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "balanced",
+   "target": "release_conditional",
+   "second": "release",
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (hard_limit_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 62,
+ "deciding": {
+  "terminal_gravity": "Only the final 1.014 is in the 1.012-1.015 band; the prior 1.019 was outside and still falling, so stability is unconfirmed.",
+  "contamination_supported": "Positive plate at 15 cfu/ml against a negative retest and an unconfirmed panel, with an alarmed operator note on the other side.",
+  "batch_disposition": "Results are complete and there is no pending item, but the ABV and record fixes are needed; conditional release or release are both arguable.",
+  "deviation_severity": "ABV 6.2 exceeds the 5.5 label band by 0.7 (more than 0.5), a hard limit breach.",
+  "record_discrepancies": "Vessel FV4 vs FV6 is clear; volume 25 vs 24.5 is exactly 0.5 hl, at the threshold, so one or two."
+ },
+ "request": "rec-F424-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009129
+}

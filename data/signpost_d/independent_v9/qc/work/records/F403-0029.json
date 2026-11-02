@@ -1,0 +1,160 @@
+{
+ "id": "F403-0029",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P9051",
+   "declared_allergens": [
+    "milk",
+    "egg",
+    "soy",
+    "wheat"
+   ],
+   "auto_injector": {
+    "prescribed": false,
+    "anaphylaxis_risk": false
+   },
+   "plan_start": "2025-01-13"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2024-10-01",
+   "expires": "2026-10-01",
+   "allergens": [
+    "milk",
+    "egg",
+    "soy",
+    "wheat"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-01-06",
+   "dishes": [
+    {
+     "dish": "pasta",
+     "contains": [
+      "wheat",
+      "egg",
+      "soy"
+     ],
+     "recipe_version_date": "2024-12-01",
+     "substitute": "GF pasta",
+     "spec_checked_on": "2025-01-03"
+    },
+    {
+     "dish": "custard",
+     "contains": [
+      "milk",
+      "egg"
+     ],
+     "recipe_version_date": "2024-12-01",
+     "substitute": "oat custard",
+     "spec_checked_on": "2025-01-03"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "last_trained": "2024-11-05"
+  },
+  "history": {
+   "review_date": "2025-02-24",
+   "packed_lunch_until": null,
+   "incidents": [
+    {
+     "date": "2025-02-03",
+     "dish": "custard",
+     "contains": [
+      "milk",
+      "egg"
+     ],
+     "note": "dairy custard served in error"
+    }
+   ],
+   "messages": [
+    "Cook: wrong tray used."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": -30,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 17,
+  "packed_lunch_interim": true,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_restricted",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "no_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "evidence_allergens_covered": "All four evidence allergens appear in dishes with substitutes, though the custard substitution failed in practice; true is favoured only modestly.",
+  "next_step": "The record shows a served-allergen incident after plan_start, so it points to referral to the safety lead rather than release; no approve_restricted case exists.",
+  "first_gap_stage": "The evidence is current, every dish is substituted with spec checks after the recipe dates, and the controls are verified, so no field-level gap exists.",
+  "exposure_proximity": "The 2025-02-03 custard incident is dated after plan_start 2025-01-13 and contains milk and egg, both declared.",
+  "meal_urgency": "plan_start 2025-01-13 is past with no packed-lunch deferral, and a meal was served on 2025-02-03, so the pupil is already eating school meals."
+ },
+ "request": "rec-F403-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013105
+}

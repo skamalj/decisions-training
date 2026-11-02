@@ -1,0 +1,131 @@
+{
+ "id": "F403-0024",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "egg",
+    "nut",
+    "sesame",
+    "soy"
+   ],
+   "plan_start": "2025-09-01"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-05-01",
+   "allergens": [
+    "egg",
+    "nut",
+    "sesame",
+    "soy"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-08-15",
+   "dishes": [
+    {
+     "dish": "noodles",
+     "contains": [
+      "egg",
+      "soy"
+     ],
+     "recipe_version_date": "2025-08-01",
+     "substitute": "rice",
+     "spec_checked_on": "2025-08-10"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "staff_trained": "2025-04-01",
+   "cleaning_log_complete": true
+  },
+  "history": {
+   "review_date": "2025-09-02",
+   "packed_lunch_until": "2025-09-30",
+   "incidents": [],
+   "messages": [
+    "Cook says all is in hand."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 21,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 13,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "no_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "evidence_allergens_covered": "Evidence allergens equal declared ones, and the only listed dish has a substitute; the sparse menu list leaves slight doubt.",
+  "next_step": "Current evidence, a substituted dish with spec check after recipe date, and verified controls support release unchanged.",
+  "first_gap_stage": "Evidence is unexpired, the dish is mapped and checked, and training dates (2025-04-01) are within 12 months.",
+  "exposure_proximity": "The sole allergen dish is substituted, controls are verified, and there are no incidents.",
+  "meal_urgency": "Packed lunch until 2025-09-30 puts the first meal on 2025-10-01, about 21 school days from review 2025-09-02, at the boundary between levels 0 and 1."
+ },
+ "request": "rec-F403-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009392
+}

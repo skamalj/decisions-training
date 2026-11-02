@@ -1,0 +1,156 @@
+{
+ "id": "F419-0046",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "09/27",
+   "date": "2024-05-14",
+   "speed_kmh": 65,
+   "thr": {
+    "design": 0.72,
+    "maint": 0.52,
+    "min": 0.42
+   },
+   "weather": {
+    "precip_mm": 0,
+    "wind_kt": 6
+   }
+  },
+  "device": {
+   "serial": "CFM-218",
+   "cal_expiry": "2024-03-31",
+   "tyre_kpa": null,
+   "water_mm": null
+  },
+  "runs": [
+   {
+    "dir": "09",
+    "thirds": [
+     0.4,
+     0.6,
+     0.66
+    ],
+    "seg_min": 0.37
+   },
+   {
+    "dir": "27",
+    "thirds": [
+     0.67,
+     0.61,
+     0.5
+    ],
+    "seg_min": 0.46
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.52,
+    0.58,
+    0.51
+   ],
+   "mtd_thr": 0.5,
+   "contaminant": "dry"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-08-14",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start": "2024-05-22"
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2023-11-08",
+     "lowest_third": 0.55
+    },
+    {
+     "date": "2024-02-06",
+     "lowest_third": 0.48
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-05-15T09:10Z",
+   "role": "engineer"
+  }
+ },
+ "factors": {
+  "min_third_band": "below_minimum",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 274,
+  "removal_scheduled": true,
+  "calibration_status": "expired",
+  "missing_elements_count": 2,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "marginal",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_minimum",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 274,
+  "removal_scheduled": true,
+  "calibration_status": "expired",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_retest",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deficit_driver": {
+   "clarity": "balanced",
+   "target": "rubber_deposits",
+   "second": "surface_texture",
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 54,
+ "deciding": {
+  "genuine_deficit": "Lowest thirds 0.40 and 0.50 and a 0.37 segment are below thresholds with a declining prior trend, but the calibration expired 2024-03-31 so the readings carry some doubt.",
+  "next_step": "device.cal_expiry 2024-03-31 is before survey date 2024-05-14, and tyre pressure and water depth are null, so the survey is not valid as it stands; hold for retest.",
+  "deficit_driver": "Low thirds are at the touchdown ends and the last removal was 274 days ago (rubber), but mtd 0.51-0.58 sits only just above the 0.50 threshold (texture); balanced.",
+  "friction_severity": "Third 0.40 and segment 0.37 are below the 0.42 minimum, so level 3, though the expired calibration leaves some doubt.",
+  "evidence_completeness": "Tyre pressure and water depth are null and the calibration is expired, so three elements are missing; level 1 with slight doubt."
+ },
+ "request": "rec-F419-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012925
+}

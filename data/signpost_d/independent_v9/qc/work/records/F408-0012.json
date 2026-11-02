@@ -1,0 +1,119 @@
+{
+ "id": "F408-0012",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "M201",
+   "uprn": 1004,
+   "stream": "refuse",
+   "claimed": "2024-05-07",
+   "logged_at": "2024-05-07T11:50",
+   "photo": true
+  },
+  "property": {
+   "uprn": 1004,
+   "assisted": true,
+   "since": "2023-05-01"
+  },
+  "schedule": {
+   "streams": [
+    "refuse"
+   ],
+   "date": "2024-05-07"
+  },
+  "round_log": {
+   "completed_at": "2024-05-07T11:58",
+   "stops": [
+    {
+     "uprn": 1004,
+     "exc": "contaminated",
+     "photo_ref": null,
+     "gps_stop": null
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 1004,
+    "logged": "2024-04-20",
+    "outcome": "pending"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "just_before_round_complete",
+  "crew_exception": "contaminated",
+  "exception_supported": false,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 0,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "contaminated",
+  "exception_supported": true,
+  "telematics_pass": "street_not_visited",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 0,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "close_no_action",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "crew_missed": "Contaminated exception has photo_ref null and gps_stop null, so it is weakly supported; the resident's photo points the other way.",
+  "report_matches": "Stream and date match, but logged_at 11:50 is 8 minutes before round completed_at 11:58.",
+  "next_step": "The crew exception lacks a photo, so asking for it is defensible; the resident's own photo and the minimal gap leave closing defensible too.",
+  "return_urgency": "assisted true with a since date but a non-breach stop (gps null, code contaminated); same day or standard are both arguable.",
+  "repeat_failures": "No upheld entries; one pending entry on 2024-04-20 could become a first upheld miss."
+ },
+ "request": "rec-F408-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009806
+}

@@ -1,0 +1,123 @@
+{
+ "id": "F407-0017",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-2207",
+   "received_at": "2025-04-02T14:00",
+   "channel": "public_app",
+   "photo_ref": "IMG-5531",
+   "linked_reports": [],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "strategic",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "depth_mm": null,
+   "scheduled_for": "2025-04-20",
+   "offset_m": 60
+  },
+  "works_history": [
+   {
+    "completed": "2022-09-10",
+    "offset_m": 58,
+    "guarantee_end": "2023-09-10"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "start": "2025-04-14",
+     "from_m": 0,
+     "to_m": 200
+    }
+   ]
+  },
+  "current_order": null
+ },
+ "factors": {
+  "road_category": "strategic",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "scheduled",
+  "prior_repair_match": "same_spot_out_guarantee",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": true,
+  "duplicate_count": 0,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 206.51,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "strategic",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "scheduled",
+  "prior_repair_match": "same_spot_out_guarantee",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": true,
+  "duplicate_count": 0,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 206.51,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "repeat_failure": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "response_timescale": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 33,
+ "deciding": {
+  "meets_threshold": "inspection depth_mm is null with the inspection only scheduled for 2025-04-20, so there is no valid measurement against the 40 mm threshold.",
+  "repeat_failure": "A completed 2022 job at offset 58 m is within 10 m of the inspection offset 60 m.",
+  "next_step": "A scheme starting 2025-04-14 covers 0-200 m, which includes the defect offset, so no separate action is needed; close.",
+  "staff_effort": "Nothing to do beyond closing the report, under an hour.",
+  "response_timescale": "No measured depth meeting criteria, and the scheme will cover the area, so no repair is required under policy."
+ },
+ "request": "rec-F407-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007742
+}

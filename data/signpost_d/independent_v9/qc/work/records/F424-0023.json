@@ -1,0 +1,130 @@
+{
+ "id": "F424-0023",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2405",
+   "vessel_id": "FV1",
+   "volume_hl": 18,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.012,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-06-14",
+    "gravity_sg": 1.016,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-06-15",
+    "gravity_sg": 1.013,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-06-16",
+    "gravity_sg": 1.012,
+    "temp_c": 19
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2405",
+   "abv_pct": 4.9,
+   "abv_label_band": 5.0,
+   "diacetyl_mgl": 0.04,
+   "micro_plate": {
+    "result": "negative",
+    "cfu_ml": 0
+   }
+  },
+  "release_request": {
+   "volume_hl": 18,
+   "vessel_id": "FV1"
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.04,
+  "discrepancy_count": 0,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "sustained_major",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.03,
+  "discrepancy_count": 2,
+  "decoy_mismatch": false,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "contamination_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 62,
+ "deciding": {
+  "terminal_gravity": "Only the last reading, 1.012, is in band; the prior 1.013 is outside and still falling, so there is no confirmed stable pair.",
+  "contamination_supported": "The micro plate is negative at 0 cfu/ml and there are no sensory notes.",
+  "batch_disposition": "All lab results are in and within spec, with abv 4.9 inside the band and diacetyl 0.04, so package as requested.",
+  "deviation_severity": "Temperatures stay at 19 C against a 24 C maximum and the lab values are all in range.",
+  "record_discrepancies": "Vessel, volume and batch_ref agree across sections."
+ },
+ "request": "rec-F424-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01201
+}

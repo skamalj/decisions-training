@@ -1,0 +1,193 @@
+{
+ "id": "F405-0006",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-2291",
+   "detected_on": "2025-09-29",
+   "term_start": "2025-09-29",
+   "room": "HB-2.14"
+  },
+  "booking_a": {
+   "module": "ECO201",
+   "dept": "ECON",
+   "day": "Mon",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "headcount": 60,
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "ECO215",
+   "dept": "ECON",
+   "day": "Mon",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "headcount": 100,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "pending_approval",
+   "approved_at": null,
+   "approver": null
+  },
+  "room": {
+   "code": "HB-2.14",
+   "capacity": 110,
+   "features": [
+    "lecture_capture"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "HB-1.03",
+    "capacity": 100,
+    "features": [
+     "lecture_capture"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   {
+    "code": "HB-0.12",
+    "capacity": 60,
+    "features": [],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-06-10"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-07-22"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "pending_approval",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "fits_partial_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.0,
+  "required_feature": "lecture_capture",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "pending_approval",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 41,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.25,
+  "required_feature": "lecture_capture",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "balanced",
+   "target": "relocate",
+   "second": "hold_confirm",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 112,
+ "deciding": {
+  "genuine_clash": "Same room, day, times and weeks 1-10, but booking_b is still pending approval, which leaves some doubt.",
+  "alt_room_fits": "HB-1.03 matches headcount 100 and has lecture_capture, but is free only weeks 1-9 against clashing weeks 1-10.",
+  "resolution": "A listed room nearly fits, which points to relocate, but booking_b is unconfirmed (null approval), which points to hold_confirm.",
+  "urgency": "detected_on equals term_start and the slot is Monday of week 1, so the first clash is today; the boundary with level 2 keeps it two-sided.",
+  "parties_needed": "Two module convenors plus the pending approver and the officer: three or four parties."
+ },
+ "request": "rec-F405-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013884
+}

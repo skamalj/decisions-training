@@ -1,0 +1,167 @@
+{
+ "id": "F414-0009",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "D88",
+   "equip_type": "spring_rocker",
+   "crit_fall_height_m": 1.0,
+   "surf_type": "bark"
+  },
+  "inspection": {
+   "insp_date": "2024-05-06",
+   "insp_grade": "annual_main",
+   "fall_height_m": 1.0,
+   "surf_type_found": "wood_chip",
+   "surf_depth_mm": 174,
+   "surf_req_table": [
+    {
+     "max_h": 1.5,
+     "type": "wood_chip",
+     "min_depth_mm": 200
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "LABEL",
+     "component_id": "C1",
+     "injury_mech": "none"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "asset_id": "D88",
+    "component_id": "C2",
+    "defect_ref": "D1",
+    "status": "closed",
+    "closed_date": "2024-02-20"
+   },
+   {
+    "asset_id": "D88",
+    "component_id": "C3",
+    "defect_ref": "D2",
+    "status": "closed",
+    "closed_date": "2024-03-01"
+   },
+   {
+    "asset_id": "D88",
+    "component_id": "C4",
+    "defect_ref": "D3",
+    "status": "closed",
+    "closed_date": "2024-05-08"
+   },
+   {
+    "asset_id": "D88",
+    "component_id": "C1",
+    "defect_ref": "D8",
+    "status": "open"
+   },
+   {
+    "asset_id": "D88",
+    "component_id": "C5",
+    "defect_ref": "D9",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "low",
+   "incident_reports_90d": 2
+  },
+  "history": [
+   {
+    "date": "2024-01-15",
+    "defect_refs": [
+     "D1",
+     "D2",
+     "D3"
+    ]
+   },
+   {
+    "date": "2024-05-10",
+    "component_id": "C4",
+    "result": "pass"
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": -26.0,
+  "worst_defect_class": "no_mechanism",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.5,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "low",
+  "incident_reports_90d": 2
+ },
+ "factors_sampled": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": -25.71,
+  "worst_defect_class": "no_mechanism",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 3,
+  "work_orders_closed_fraction": 0.81,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "low",
+  "incident_reports_90d": 2
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "close_asset",
+   "second": null,
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 74,
+ "deciding": {
+  "prior_defects_cleared": "D3 work order closed 2024-05-08, after the 2024-05-06 visit, but a later C4 follow-up passed; D1 and D2 closed earlier.",
+  "surfacing_adequate": "Depth 174 mm vs 200 mm required for wood_chip at 1.0 m: clearly short.",
+  "asset_disposition": "Inadequate surfacing with two incident reports in 90 days favours taking the asset out of use, though usage is low and there is no component hazard.",
+  "remedial_progress": "Two of five orders closed before the visit, with D3 closed only after it; the count straddles half.",
+  "hazard_severity": "Only a LABEL finding with injury_mech none; no injury hazard, though a logged defect could be read as level 1."
+ },
+ "request": "rec-F414-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012908
+}

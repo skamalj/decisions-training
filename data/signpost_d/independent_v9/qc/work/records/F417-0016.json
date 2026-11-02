@@ -1,0 +1,113 @@
+{
+ "id": "F417-0016",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "MV-A",
+   "loa_m": 12.2,
+   "draught_m": 3.4,
+   "draught_src": "owner"
+  },
+  "berth": {
+   "id": "P4",
+   "max_loa_m": 12.6,
+   "fender_allow_m": 0.4,
+   "depth_lat_m": 3.3,
+   "waiver_ref": null
+  },
+  "booking": {
+   "arr": "2025-07-08",
+   "dep": "2025-07-14",
+   "next_on_berth": "2025-07-14"
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 13.1,
+    "draught_m": null
+   },
+   "insurance_expiry": "2025-12-01",
+   "inspection_date": null,
+   "inspection_booked": false
+  },
+  "account": {
+   "dues_outstanding_gbp": 1398,
+   "plan_id": null
+  }
+ },
+ "factors": {
+  "loa_mismatch_pct": 7.38,
+  "berth_length_fit": "marginally_over_limit_plus_fender",
+  "ukc_margin_m": -0.1,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "missing",
+  "arrears_amount": 1398,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": true
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 7.32,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 1.22,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "missing",
+  "arrears_amount": 1398,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": true
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "allocate_with_conditions",
+   "second": "request_document",
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "balanced",
+   "target": "dimension_mismatch",
+   "second": "date_conflict",
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "length_fits": "Survey loa 13.1 vs max 12.6 plus fender 0.4 = 13.0; just over, with no waiver, but the fender allowance leaves some doubt.",
+  "next_step": "Inspection date null and not booked (document could be requested), but length overrun and negative clearance suggest conditions instead.",
+  "primary_issue": "Declared 12.2 vs survey 13.1 and draught above depth point to dimension mismatch; departure equals next arrival date keeps date conflict plausible.",
+  "ukc_band": "Berth depth 3.3 minus declared draught 3.4 is below zero; draught is only owner-declared.",
+  "unresolved_count": "Length mismatch, arrears 1398 with no plan, and missing inspection give three; the length mismatch and over-limit length could be counted as one, giving two."
+ },
+ "request": "rec-F417-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009729
+}

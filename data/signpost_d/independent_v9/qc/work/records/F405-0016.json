@@ -1,0 +1,159 @@
+{
+ "id": "F405-0016",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C101",
+   "detected_on": "2025-10-15",
+   "term_start": "2025-10-06",
+   "room": "LT2B"
+  },
+  "booking_a": {
+   "dept": "PHY",
+   "room": "LT2B",
+   "day": "Mon",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "headcount": 100,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "dept": "HIS",
+   "room": "LT-2B",
+   "day": "Mon",
+   "start": "11:00",
+   "end": "13:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-08-20",
+   "approver": "jk"
+  },
+  "room": {
+   "code": "LT2B",
+   "aliases": [
+    "LT2B/1"
+   ],
+   "capacity": 110
+  },
+  "alternatives": [
+   {
+    "code": "LT4A",
+    "capacity": 106,
+    "features": [
+     "lecture_capture"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-06-02"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-07-11"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": true,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": -9,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.06,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": true,
+  "booking_b_status": "pending_approval",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": -9,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.06,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "relocate",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 41,
+ "deciding": {
+  "genuine_clash": "Weeks and times overlap, but booking_b room LT-2B is not in room.aliases (LT2B/1), so it may be a different room.",
+  "alt_room_fits": "LT4A capacity 106 vs headcount 100, has lecture_capture, free in weeks 1-5.",
+  "resolution": "Both bookings confirmed and LT4A fits, pointing to relocate; the unreconciled room code leaves some doubt.",
+  "urgency": "Detected 2025-10-15, shared week 1 Monday is 2025-10-06, nine days earlier, so already passed.",
+  "parties_needed": "Two departments (PHY, HIS), approver jk and prior clash history; the count of actors is modest, between 3-4 and 5+."
+ },
+ "request": "rec-F405-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009361
+}

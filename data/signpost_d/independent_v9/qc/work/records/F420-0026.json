@@ -1,0 +1,126 @@
+{
+ "id": "F420-0026",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PMC41277",
+   "flight": "XQ218",
+   "dest": "LHR",
+   "tare_kg": 110,
+   "planned_gross_kg": 1410,
+   "straps_required": 4,
+   "contour_max_cm": 163
+  },
+  "manifest_lines": [
+   {
+    "awb": "176-55012001",
+    "dest": "LHR",
+    "pcs": 12,
+    "weight_kg": 1300
+   }
+  ],
+  "build_measured": {
+   "scale_gross_kg": 1400,
+   "max_height_cm": 160,
+   "pcs_counted": {
+    "176-55012001": 12
+   },
+   "straps_fitted": 4,
+   "net_fitted": true,
+   "uld_serial_scanned": "41277"
+  },
+  "dg_notoc": null,
+  "approvals": {
+   "part_shipments": [],
+   "contour_waivers": []
+  },
+  "checks_log": {
+   "scale_cal_due": "2025-09-01"
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": -0.71,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "within_2cm",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "no_dg_null",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 200,
+  "prior_rebuilds": 3
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -0.71,
+  "piece_count_gap": 3,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "within_2cm",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "pcs_differ",
+  "securing_state": "net_not_logged",
+  "scale_cal_overdue": true,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "dest_code_differs",
+  "minutes_to_cutoff": 200,
+  "prior_rebuilds": 3
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "weight_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "rework_extent": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 45,
+ "deciding": {
+  "pieces_reconciled": "pcs_counted 12 equals manifest 12.",
+  "disposition": "Nothing outstanding: straps, net, scale calibration, documents all in order.",
+  "worst_discrepancy": "No section disagrees; no DG, serials match.",
+  "weight_deviation": "1400 vs planned 1410 is -0.7%.",
+  "rework_extent": "Straps 4/4, net fitted, height under limit, counts match."
+ },
+ "request": "rec-F420-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00563
+}

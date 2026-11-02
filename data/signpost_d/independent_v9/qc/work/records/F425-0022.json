@@ -1,0 +1,175 @@
+{
+ "id": "F425-0022",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "farm_ref": "F-2291",
+   "flock_id": "FL-88",
+   "producer_code": "1UK-4F17",
+   "method": "free_range",
+   "lay_dates": [
+    "2024-06-04",
+    "2024-06-02"
+   ],
+   "received_at": "2024-06-04T15:00",
+   "declared_eggs": 2400,
+   "trays": 80
+  },
+  "grading_run": {
+   "grader_id": "G2",
+   "run_start": "2024-06-05T09:00",
+   "run_end": "2024-06-05T12:30",
+   "eggs_in": 2364,
+   "by_size": {
+    "S": 130,
+    "M": 700,
+    "L": 900,
+    "XL": 400
+   },
+   "outgrades": {
+    "cracks": 40,
+    "dirties": 152,
+    "blood_spots": 20,
+    "leakers": 14,
+    "misshapen": 8
+   },
+   "class_a_total": 2130
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-02-20",
+    "interval_days": 90,
+    "manual_recheck": {
+     "n": 200,
+     "cracks_found": 3
+    }
+   },
+   "candling_sample": {
+    "sampled_at": "2024-06-05T10:00",
+    "n": 100,
+    "defects": 2
+   },
+   "scale_check": {
+    "checked_at": "2024-06-05T08:45",
+    "ok": true
+   },
+   "store_temp": {
+    "minutes_above_limit": 0,
+    "max_c": 6.5
+   }
+  },
+  "flock": {
+   "age_weeks": 45,
+   "salmonella_vaccinated": true,
+   "last_swab": {
+    "date": "2024-05-20",
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2024-06-06",
+   "packs": [
+    {
+     "size": "S",
+     "pack": 10,
+     "count": 13
+    },
+    {
+     "size": "M",
+     "pack": 10,
+     "count": 70
+    },
+    {
+     "size": "L",
+     "pack": 10,
+     "count": 90
+    },
+    {
+     "size": "XL",
+     "pack": 10,
+     "count": 40
+    }
+   ],
+   "stamp_code": "1UK-4F17",
+   "best_before": "2024-07-02",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "moderate",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 4,
+  "mixed_lay_dates": true,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 9.9,
+  "dominant_defect": "dirties",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 45
+ },
+ "factors_sampled": {
+  "count_gap_size": "moderate",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": true,
+  "lay_to_pack_days": 8,
+  "mixed_lay_dates": false,
+  "missing_check": "candling_after_run",
+  "swab_positive": false,
+  "outgrade_rate_pct": 1.47,
+  "dominant_defect": "dirties",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 76
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "balanced",
+   "target": "release_class_a",
+   "second": "hold_pending",
+   "targets": []
+  },
+  "anomaly_cause": {
+   "clarity": "leaning",
+   "target": "no_anomaly",
+   "second": null,
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 116,
+ "deciding": {
+  "counts_reconcile": "declared_eggs 2400 vs eggs_in 2364 is a 1.5% gap; sizes plus outgrades equal eggs_in and packs equal class_a_total.",
+  "batch_disposition": "All checks are present and stamp matches producer code, favouring release; the 1.5% intake gap leaves a hold defensible.",
+  "anomaly_cause": "Calibration is past its interval but a manual recheck found 3 cracks in 200, and there is no temperature excursion; the intake gap is minor, so mostly no anomaly, though the dirties count gives some doubt.",
+  "lay_to_pack": "Oldest lay date 2024-06-02, pack date 2024-06-06 is 4 days (level 1), but with a newer lay date of 06-04 listed first, level 0 is arguable.",
+  "outgrade_share": "Outgrades total 234 of 2364, 9.9%, right at the 10% boundary between levels 2 and 3."
+ },
+ "request": "rec-F425-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012296
+}

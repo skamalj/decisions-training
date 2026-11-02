@@ -1,0 +1,115 @@
+{
+ "id": "F424-0034",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2414",
+   "vessel_id": "FV6",
+   "volume_hl": 15,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.013
+  },
+  "readings": [
+   {
+    "ts": "05-09",
+    "gravity_sg": 1.014
+   },
+   {
+    "ts": "05-10",
+    "gravity_sg": 1.0115
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2414",
+   "diacetyl_mgl": 0.07,
+   "abv_pct": null,
+   "pending": true
+  },
+  "release_request": {
+   "volume_hl": 15,
+   "vessel_id": "FV6"
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.07,
+  "discrepancy_count": 0,
+  "decoy_mismatch": false,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.07,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 50,
+ "deciding": {
+  "terminal_gravity": "Only the last reading 1.0115 is in band; prior 1.014 still falling, no confirming reading.",
+  "contamination_supported": "No micro data at all; absence of signal, but no plate result either.",
+  "batch_disposition": "Results look fine; pending ABV is minor, so release with some doubt.",
+  "deviation_severity": "No out-of-spec value; diacetyl 0.07 is normal.",
+  "record_discrepancies": "Vessel, volume and batch_ref all agree across sections."
+ },
+ "request": "rec-F424-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005221
+}

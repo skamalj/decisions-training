@@ -1,0 +1,134 @@
+{
+ "id": "F407-0046",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "PR-4410",
+   "received_at": "2025-03-12T08:40:00Z",
+   "channel": "public_app",
+   "photo_ref": "IMG-8821",
+   "linked_reports": [
+    "PR-4402",
+    "PR-4407"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "usrn": 21003417,
+   "road_class": "footway",
+   "intervention_depth_mm": 25,
+   "speed_limit": null
+  },
+  "inspection": {
+   "inspector": "HI-07",
+   "inspected_at": "2025-03-10",
+   "depth_mm": 48,
+   "width_mm": 346.3,
+   "offset_m": 0
+  },
+  "works_history": [
+   {
+    "job": "J-1190",
+    "completed": "2024-11-05",
+    "offset_m": 10,
+    "guarantee_end": "2025-11-05"
+   }
+  ],
+  "programme": {
+   "schemes": [],
+   "temp_measures": [
+    {
+     "type": "cone_barrier",
+     "installed": "2025-03-10",
+     "expires": "2025-03-24"
+    }
+   ]
+  },
+  "current_order": {
+   "id": "WO-7731",
+   "raised": "2025-03-11",
+   "status": "raised",
+   "completed_items": 0,
+   "total_items": 14
+  }
+ },
+ "factors": {
+  "road_category": "footway",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "same_spot_boundary",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 2,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "raised",
+  "defect_width_mm": 346.3,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "footway",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "scheduled",
+  "prior_repair_match": "none",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 2,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "raised",
+  "defect_width_mm": 346.3,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 100,
+ "deciding": {
+  "meets_threshold": "inspection depth 48 mm vs threshold 25 mm, but the inspection predates the report, which leaves slight doubt.",
+  "repeat_failure": "Prior job J-1190 sits at offset 10 m, exactly on the ten-metre boundary, with guarantee still running.",
+  "next_step": "Works order WO-7731 is already raised and a temporary barrier is in place, so the report is covered and can be closed.",
+  "staff_effort": "Order has 14 items, none completed; work may be about five days, so level 2 or 3 is plausible.",
+  "response_timescale": "Depth well above threshold on a footway with temporary barrier expiring 24 March; make safe versus priority repair is balanced."
+ },
+ "request": "rec-F407-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007324
+}

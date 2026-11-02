@@ -1,0 +1,147 @@
+{
+ "id": "F433-0002",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H42",
+   "name": "Sahara Dun",
+   "passport": "GB-88213",
+   "age": 11,
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "pulse_bpm": 58,
+     "trot": "regular"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 30
+   },
+   "arrived_at": "09:30",
+   "departed_at": null,
+   "ambient_temp_c": 27
+  },
+  "vet_card": {
+   "presented_at": "09:44",
+   "pulse_bpm": 56,
+   "cri": {
+    "first_bpm": 56,
+    "second_bpm": 58
+   },
+   "metabolic": {
+    "mm": "pale",
+    "crt_s": 3,
+    "gut_sounds": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "skin_tent_s": 1
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 1
+    },
+    {
+     "surface": "soft",
+     "grade": null
+    }
+   ],
+   "tack": {
+    "site": null,
+    "finding": "none"
+   },
+   "vet_signed_at": "09:41"
+  },
+  "treatment": null,
+  "notes": {
+   "rider_note": "Nearly lost a shoe on the road section.",
+   "vet_remark": "Busy gate, long queue."
+  }
+ },
+ "factors": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": false,
+  "metabolic_flags": 2,
+  "cri_rise": 2.11,
+  "missing_items": 1,
+  "out_of_sequence": true,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "none",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": false,
+  "metabolic_flags": 2,
+  "cri_rise": 2.11,
+  "missing_items": 1,
+  "out_of_sequence": true,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_recheck",
+   "second": "eliminate_ftq",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "balanced",
+   "target": "ftq_metabolic",
+   "second": "ftq_gait",
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 154,
+ "deciding": {
+  "pulse_met": "Pulse 56 was taken at 09:44, 14 min after arrival at 09:30, inside the 20 min window and under the 64 limit. The out-of-order signature time adds slight doubt.",
+  "next_step": "The soft-surface trot-up grade is null, so a recheck is justified. Pale mucous membranes with a 3 s CRT make elimination defensible.",
+  "outcome_code": "The metabolic signs (pale mm, CRT 3 s, quiet gut) lead. The grade 1 hard trot-up leaves ftq_gait plausible.",
+  "welfare_risk": "The metabolic parameters are out of limits while pulse is good and the gait is only grade 1, which suggests one parameter group outside limits.",
+  "record_completeness": "The second trot-up grade is missing (level 1), but vet_signed_at 09:41 precedes presented_at 09:44 (level 2). Both readings are defensible."
+ },
+ "request": "rec-F433-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013306
+}

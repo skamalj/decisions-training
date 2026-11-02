@@ -1,0 +1,158 @@
+{
+ "id": "F422-0040",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT5",
+   "site": "S12",
+   "delivered_at": "2024-08-12T10:00",
+   "received_at": "2024-08-14T09:00",
+   "review_date": "2024-09-20",
+   "lines": [
+    {
+     "gtin": "G5",
+     "qty_claimed": 48
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "D9",
+   "lines": [
+    {
+     "gtin": "G5",
+     "batch": "R6",
+     "expiry": "2025-04-30",
+     "qty_dispatched": 48
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G5",
+     "batch": "R6",
+     "expiry": "2025-04-30",
+     "qty_counted": 40,
+     "packs_damaged": 1,
+     "seals_intact": 39
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "active"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "cold_2_8",
+   "labelled_range": "2-8C",
+   "logger_id": "L7",
+   "logger_start": "2024-08-12T08:00",
+   "logger_end": "2024-08-14T11:00",
+   "min_c": 2.4,
+   "max_c": 9.1,
+   "minutes_out_of_range": 82,
+   "stability_ref": {
+    "max_hours": 2,
+    "max_c": 12
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-02-01",
+   "declaration_received": true
+  },
+  "quarantine_control": {
+   "location": "Q5",
+   "hold_limit_days": 30,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2024-09-20"
+   },
+   "max_days_out_of_control": 5,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "full",
+  "excursion_minutes": 82,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 8,
+  "damaged_pack_fraction": 0.03,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 2,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 0,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 7
+ },
+ "factors_sampled": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "full",
+  "excursion_minutes": 82,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 8,
+  "damaged_pack_fraction": 0.86,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 2,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": -4,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 7
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_stock",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "storage_maintained": "The logger covers delivery to receipt. The 82-minute excursion to 9.1 C is inside the stability allowance of 2 hours up to 12 C.",
+  "batch_traceable": "Batch R6 and its expiry match dispatch D9. Only 40 of 48 packs returned, and no counted pack lies outside the dispatch, so true is modestly favoured.",
+  "next_step": "There is no missing document and the batch is traceable. The UID is active, the audit is valid, storage is within the allowance and shelf life is 7 months against a 6-month minimum. One pack is damaged, which leaves a partial release as the alternative.",
+  "resaleable_share": "39 of 40 seals are intact and 1 pack is damaged. If that pack fails the share is level 2; if the damage is cosmetic it is level 3.",
+  "disposition_urgency": "The extension sets the effective limit to 2024-09-20, the review date. Zero days remain, which is the edge between urgent and overdue."
+ },
+ "request": "rec-F422-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014519
+}

@@ -1,0 +1,107 @@
+{
+ "id": "F421-0048",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "contents": "ceramic planter",
+   "qty": 1,
+   "declared_value_gbp": 368.88
+  },
+  "handling_events": [
+   {
+    "site": "HUB-A",
+    "exc": "ADDR"
+   },
+   {
+    "site": "HUB-B",
+    "exc": "WET"
+   },
+   {
+    "site": "DEPOT",
+    "code": "IN",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "observed_item": "glazed pot",
+   "qty_found": 1,
+   "repair_est_gbp": 180.75
+  }
+ },
+ "factors": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 49.0,
+  "declared_value": 368.88,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": "0 (2 decoy codes ADDR, WET)",
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": "not applicable"
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 19.56,
+  "declared_value": 368.88,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 1.92
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "close_no_action",
+   "second": "approve_repack",
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "depot_fault": "Upstream codes are ADDR and WET (non-damage); DMG first appears on the depot inbound scan, so timing is ambiguous.",
+  "contents_match": "Ceramic planter vs glazed pot: plausibly the same item but described differently.",
+  "next_step": "Loss near the half mark with ambiguous timing; closing and repacking are both defensible.",
+  "loss_share": "Repair 180.75 of 368.88 is 49%, right at the 50% boundary.",
+  "parties_needed": "Sparse record with a disputed liability and a large loss; the number of teams needed is open between three-four and five or more."
+ },
+ "request": "rec-F421-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00817
+}

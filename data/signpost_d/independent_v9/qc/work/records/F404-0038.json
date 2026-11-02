@@ -1,0 +1,142 @@
+{
+ "id": "F404-0038",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "K3",
+   "date": "2025-05-14",
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty",
+   "places": 20
+  },
+  "children": {
+   "booked": 5,
+   "slots": [
+    {
+     "t": "09:00",
+     "signed_in": 5
+    },
+    {
+     "t": "09:15",
+     "signed_in": 6
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S-088",
+    "q": 3,
+    "ratio": true
+   },
+   {
+    "id": "S-089",
+    "q": 3,
+    "ratio": true
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S088",
+    "in": "08:30",
+    "out": "17:30",
+    "status": "ok"
+   },
+   {
+    "id": "S089",
+    "in": "08:32",
+    "out": "17:30",
+    "status": "ok"
+   }
+  ],
+  "cover_log": [],
+  "history": {
+   "prior_breaches_90d": 4,
+   "last_audit_outcome": "satisfactory"
+  }
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 6,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 0,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 6,
+  "staff_signin_variance": "absent",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 49,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "file_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "clear",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 58,
+ "deciding": {
+  "below_ratio": "Peak of 6 children at 1:8 needs 1 eligible adult; S088 and S089 are both signed in all day with status ok, so every slot meets ratio.",
+  "disposition": "Staff signed in match rota apart from an id format difference and a 2-minute offset, cover_log is empty and not needed, so nothing is outstanding.",
+  "primary_cause": "Rota and sign-in agree, and 2 eligible staff exceed the 1 needed, so no cause of any ratio gap is found.",
+  "shortfall_duration": "Two eligible staff are present for all logged slots, so there is no time below ratio.",
+  "breach_severity": "6 children are covered by one eligible adult at 1:8, with two present, so no child is beyond cover; prior_breaches_90d is only history."
+ },
+ "request": "rec-F404-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014659
+}

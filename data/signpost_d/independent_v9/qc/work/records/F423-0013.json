@@ -1,0 +1,129 @@
+{
+ "id": "F423-0013",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-30955",
+   "product": "flyer",
+   "stock_spec": "GL-150",
+   "run_qty": 6000,
+   "overs_pct": 2.63,
+   "customer_tier": "key_account",
+   "spec_max_de": 2.5
+  },
+  "proof_signoff": {
+   "ok_sheet_no": 4,
+   "signed_at": "2025-05-20T07:30",
+   "concession": {
+    "accepted_max_de": 3.0
+   }
+  },
+  "colour_readings": {
+   "calibrated_on": "2025-02-03",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 1.8
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.0
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.01,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "GL-150",
+   "first_production_at": "2025-05-20T07:55",
+   "sheets_production": 150,
+   "sheets_makeready": 180
+  }
+ },
+ "factors": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_before_production",
+  "sheets_before_check": 150,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.63,
+  "register_offset_mm": 0.01,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 106,
+  "customer_tier": "key_account",
+  "prior_stoppages": 1
+ },
+ "factors_sampled": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "some_patches_null",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 150,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.63,
+  "register_offset_mm": 0.01,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 106,
+  "customer_tier": "key_account",
+  "prior_stoppages": 1
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_run",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "scrap_exposure": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 44,
+ "deciding": {
+  "colour_in_tolerance": "M reads 3.0, exactly at the concession limit 3.0 and above spec 2.5. The instrument was calibrated 106 days before the check, so the reading is marginal and either verdict can be defended.",
+  "run_before_signoff": "signed_at 07:30 is earlier than first_production_at 07:55, so the signature precedes production.",
+  "next_step": "Readings are complete and within the concession, register is 0.01 mm and the sheet was signed before production, so the run continues.",
+  "staff_effort": "Nothing is outstanding, so only a short sign-off is needed, well under an hour.",
+  "scrap_exposure": "Only 150 production sheets are logged, below the overs allowance of about 158 sheets, and no failure is shown for them."
+ },
+ "request": "rec-F423-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010077
+}

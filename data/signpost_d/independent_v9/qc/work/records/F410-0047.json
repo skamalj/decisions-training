@@ -1,0 +1,159 @@
+{
+ "id": "F410-0047",
+ "family": "F410",
+ "state": {
+  "application": {
+   "holder_ref": "H4812",
+   "term_end": "2026-06-30",
+   "pitch_req": {
+    "width_m": 3.99
+   },
+   "commodities": [
+    "coffee"
+   ],
+   "docs_pending": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  "licence_current": {
+   "holder_ref": "H4821",
+   "pitch": {
+    "width_m": 3.0
+   },
+   "commodities": [
+    "hot drinks"
+   ],
+   "conditions": {
+    "min_attendance_pct": 70
+   },
+   "variations": [
+    {
+     "type": "width",
+     "approved": true
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-06-30",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": true,
+    "new_end": "2026-06-30"
+   },
+   "food_reg": {
+    "registered": true,
+    "fhrs_rating": 4
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2025",
+     "amount_gbp": 200
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2025-06-01",
+     "amount_gbp": 156.88
+    }
+   ],
+   "payment_plan": null
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 28,
+   "absence_notices": [],
+   "complaints": [
+    {
+     "category": "safety",
+     "upheld": true,
+     "status": "open"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": true,
+  "commodity_change": "synonym_only",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.99,
+  "variation_approved": true,
+  "fee_arrears_gbp": 43.12,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.56,
+  "absences_notified": false,
+  "complaint_profile": "upheld_open_safety",
+  "holder_ref_mismatch": "transcription_error",
+  "docs_outstanding": 3
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": true,
+  "commodity_change": "synonym_only",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.99,
+  "variation_approved": true,
+  "fee_arrears_gbp": 43.12,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.56,
+  "absences_notified": false,
+  "complaint_profile": "upheld_open_safety",
+  "holder_ref_mismatch": "transcription_error",
+  "docs_outstanding": 3
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "defer",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "balanced",
+   "target": "urgent_visit",
+   "second": "none_needed",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "pli_term_covered": "pli.end equals term_end and indemnity equals required, with broker_conf new_end matching; cover runs exactly to the last day with no margin.",
+  "renewal_disposition": "Three docs_pending, so the application should be held until documents arrive.",
+  "inspection_level": "An open upheld safety complaint points to urgent_visit, but food_reg is current at rating 4 and width change is approved, so none_needed is arguable.",
+  "reversal_time": "A deferral is easily lifted when documents arrive, likely within a day, but could take a few days; nothing fixes it.",
+  "discrepancy_count": "holder_ref digits swapped (H4812 vs H4821), attendance 28/50 against 70% with no absence notices, and arrears of 43.12 without a plan; coffee vs hot drinks is only a synonym and width is approved. Three versus two depends on whether the ref swap is counted."
+ },
+ "request": "rec-F410-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009247
+}

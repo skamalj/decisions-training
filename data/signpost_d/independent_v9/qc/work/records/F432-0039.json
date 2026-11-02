@@ -1,0 +1,147 @@
+{
+ "id": "F432-0039",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E09",
+   "risk_cat": 2,
+   "doors": [
+    "D1"
+   ]
+  },
+  "shift": {
+   "end": "16:00",
+   "opening_count": 4,
+   "closing_count": 4
+  },
+  "movements": null,
+  "feeding": [
+   {
+    "sheet_g": 3000,
+    "offered_g": 3000,
+    "leftover_g": 1260,
+    "unit": "g"
+   }
+  ],
+  "rounds": [
+   {
+    "sched": "09:00",
+    "logged": true,
+    "entry_time": "09:01"
+   },
+   {
+    "sched": "11:00",
+    "logged": false,
+    "entry_time": null,
+    "cctv_reviewed": true,
+    "reviewer_id": "R05"
+   },
+   {
+    "sched": "13:00",
+    "logged": false,
+    "entry_time": null
+   },
+   {
+    "sched": "15:00",
+    "logged": true,
+    "entry_time": "15:02",
+    "beh": [
+     "LETH",
+     "LAME"
+    ]
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "D1",
+     "time": "15:40"
+    }
+   ],
+   "ticket": "T310",
+   "ticket_state": "closed"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.58,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 2,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 2,
+  "vet_case_open": false,
+  "missing_section": "movements_absent",
+  "risk_category": "cat_2_medium"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.23,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 2,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 2,
+  "vet_case_open": false,
+  "missing_section": "movements_absent",
+  "risk_category": "cat_2_medium"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "keeper_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "count_reconciles": "Opening 4 equals closing 4; the movements section is null, so there is no logged movement to contradict the match.",
+  "secure_at_close": "The D1 lock check at 15:40 is after the last round at 15:02 and the barrier ticket is closed.",
+  "next_step": "The last round logged LETH and LAME codes, so a keeper should go and check the animals on site now.",
+  "intake_shortfall": "Offered 3000 g with 1260 g left gives 58% intake, just under the 60% boundary between minor and marked.",
+  "missed_rounds": "Two rounds have no entry, but one has a CCTV review by R05, so one or two missing is arguable."
+ },
+ "request": "rec-F432-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009666
+}

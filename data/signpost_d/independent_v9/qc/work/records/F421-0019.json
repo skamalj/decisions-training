@@ -1,0 +1,130 @@
+{
+ "id": "F421-0019",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-12098",
+   "service": "std",
+   "fragile": false,
+   "contents": "office chair",
+   "qty": 1,
+   "weight_kg": 14.0,
+   "declared_value_gbp": 2379.52
+  },
+  "handling_events": [
+   {
+    "ts": "2024-07-08T05:40",
+    "site": "HUB-S",
+    "code": "SCAN",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-07-09T07:00",
+    "site": "DEP-R",
+    "code": "INB",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-07-09T09:30",
+   "inspector": "L.Park",
+   "observed_item": "office chair",
+   "qty_found": 1,
+   "weight_kg": 14.0,
+   "condition": "tape cut and resealed, scuffed arm",
+   "photos": [
+    "c1.jpg",
+    "c2.jpg"
+   ],
+   "repair_est_gbp": 120
+  },
+  "claim": null,
+  "notes": [
+   "Logged on arrival, no action needed."
+  ]
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "none",
+  "inspection_state": "complete",
+  "loss_pct": 5.04,
+  "declared_value": 2379.52,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.0
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 91.37,
+  "declared_value": 2379.52,
+  "scan_order_anomaly": false,
+  "tamper_signs": true,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.06
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 58,
+ "deciding": {
+  "depot_fault": "DMG already at HUB-S and on inbound scan; the depot's own handling is not shown damaging it.",
+  "contents_match": "Office chair, qty 1 and 14.0 kg match manifest exactly.",
+  "next_step": "Report complete with photos, no claim, minor cosmetic damage; nothing further required.",
+  "loss_share": "Repair 120 of 2379.52 is about 5%, near the 5% boundary but leaning negligible.",
+  "parties_needed": "No claim or onward action; the assessor alone can close."
+ },
+ "request": "rec-F421-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005509
+}

@@ -1,0 +1,141 @@
+{
+ "id": "F413-0012",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "id": "S-2087",
+   "tier": "care_home",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ]
+  },
+  "visit": {
+   "id": "V-5120",
+   "type": "routine",
+   "licence_expiry": "2025-03-01",
+   "start": "2024-06-03T10:00",
+   "end": "2024-06-03T11:00",
+   "client_signoff": "2024-06-03"
+  },
+  "treatments": [
+   {
+    "product": "GEL-1",
+    "area_m2": 60,
+    "qty": 480,
+    "unit": "g",
+    "label_max_per_m2": 10
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S3",
+    "activity": true
+   },
+   {
+    "id": "S1",
+    "activity": false
+   },
+   {
+    "id": "S4",
+    "activity": true
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product": "GEL-1",
+    "qty": 0.5,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 2,
+   "actions": []
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 1,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "flat",
+  "previous_visit_available": true,
+  "dose_overage_pct": 0.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "care_home"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "moderate_5_to_25pct",
+  "stock_return_logged": false,
+  "station_count_gap": 4,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 60.27,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "care_home"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 48,
+ "deciding": {
+  "usage_reconciled": "0.5 kg withdrawn with no return against 480 g applied. The difference is a rounding artefact.",
+  "activity_increased": "2 active stations now against 2 previously, flat. Station S2 was not checked, so a rise cannot be ruled out.",
+  "next_step": "Sign-off date is present, the licence is valid, and the dose and stock are in order. No actions are open.",
+  "breach_severity": "Applied 8 g/m2 against a 10 g/m2 label maximum. The licence is valid and no banned product was used.",
+  "parties_needed": "Nothing is outstanding, so no one needs to act."
+ },
+ "request": "rec-F413-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009791
+}

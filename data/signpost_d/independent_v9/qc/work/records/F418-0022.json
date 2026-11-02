@@ -1,0 +1,156 @@
+{
+ "id": "F418-0022",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "DRB",
+   "platform": 3,
+   "date": "2024-07-09",
+   "start": "10:00",
+   "end": "16:00",
+   "service_from": "06:30",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S21",
+    "planned_start": "10:00",
+    "planned_end": "16:00"
+   },
+   {
+    "staff_id": "S22",
+    "planned_start": "10:00",
+    "planned_end": "16:00",
+    "overtime": true
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S21",
+    "sign_on": "10:00",
+    "sign_off": "15:10",
+    "safety_comp_exp": "2025-03-01",
+    "dispatch_comp_exp": "2025-03-01"
+   },
+   {
+    "staff_id": "S29",
+    "sign_on": "10:20",
+    "sign_off": "16:00",
+    "safety_comp_exp": "2025-02-01",
+    "dispatch_comp_exp": "2025-02-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "10:00",
+    "staff_id": "S22"
+   },
+   {
+    "type": "cover_start",
+    "time": "10:00",
+    "staff_id": "S29"
+   },
+   {
+    "type": "cover_end",
+    "time": "11:24",
+    "staff_id": "S29"
+   },
+   {
+    "type": "gap_end",
+    "time": "11:24"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-218",
+   "disp_platform": 3,
+   "valid_from": "2024-06-01",
+   "valid_to": "2024-12-31",
+   "approved_by": "AOM",
+   "prior_shortfalls_30d": 5
+  },
+  "remarks": [
+   "Cover arranged, some roster changes made."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 84,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 5,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 84,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 5,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "cover_arranged",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 108,
+ "deciding": {
+  "headcount_verified": "Rostered S22 has no attendance row. S29 signed on 10:20 but is logged as covering from 10:00, and there is no redeploy event. S21's sign_off 15:10 differs from the roster's 16:00.",
+  "next_step": "The records are complete but the roster and attendance disagree, and the remarks are vague. Correct the log and brief; there is no missing item or breach that calls for escalation.",
+  "coverage_outcome": "The cover_start 10:00 to cover_end 11:24 span for S29 matches gap_start 10:00 to gap_end 11:24, so the gap was filled by relief.",
+  "reversal_time": "The shortfall and its mismatched records are in the past, and the 5 prior shortfalls add weight. A reviewer could put it at 3 months or more, or at 8 days to 3 months, hence the balance.",
+  "exposure_severity": "The 84-minute S22 gap is in off-peak service, and D-218 is valid for platform 3 with approver AOM through 2024-12-31. Cover timing is uncertain, which leaves some doubt."
+ },
+ "request": "rec-F418-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013499
+}

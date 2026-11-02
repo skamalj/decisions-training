@@ -1,0 +1,124 @@
+{
+ "id": "F426-0037",
+ "family": "F426",
+ "state": {
+  "applications": [
+   {
+    "date": "2024-02-10",
+    "product_code": "P2",
+    "qty_applied": 5.2,
+    "qty_unit": "mL",
+    "area_treated_ha": 2.5,
+    "sprayer_id": "S1",
+    "wind_kmh": 20
+   },
+   {
+    "date": null,
+    "product_code": "P2",
+    "qty_applied": 2.0,
+    "qty_unit": "L",
+    "area_treated_ha": 2.5,
+    "sprayer_id": "S1",
+    "wind_kmh": 8
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "P2",
+    "max_rate_per_ha": 2.0,
+    "rate_unit": "L",
+    "phi_days": 21
+   }
+  ],
+  "equipment": {
+   "sprayer_type": "tunnel_recycling",
+   "calibration_valid_to": "2024-03-01",
+   "nozzle_dev_pct": 3
+  },
+  "harvest": {
+   "first_pick_date": "2024-03-20",
+   "residue_test": {
+    "sampled": true,
+    "result_date": null,
+    "below_limit": null
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "cannot be confirmed (one application date null; changed from breached_short so a breach does not fix the finding class)",
+  "rate_overrun_band": "near maximum; first entry unit mL vs L ambiguous, about 4% over if read as L",
+  "partial_block_spray": true,
+  "clerical_mismatch": "unit_ml_vs_l",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "expired_under_30d_low_dev",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 2,
+  "high_wind_decoy": true
+ },
+ "factors_sampled": {
+  "phi_status": "breached_short",
+  "rate_overrun_band": "up_to_10",
+  "partial_block_spray": true,
+  "clerical_mismatch": "unit_ml_vs_l",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "expired_under_30d_low_dev",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 4,
+  "high_wind_decoy": true
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_and_test",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "contested",
+   "target": "label_deviation",
+   "second": "clerical_only",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "phi_cleared": "Second application has date null, so its 21-day withholding period cannot be confirmed against pick date 2024-03-20.",
+  "next_step": "Residue sampled but result_date and below_limit null, plus an unconfirmable date: hold and test.",
+  "finding_class": "First entry qty 5.2 mL for 2.5 ha looks like a unit slip (clerical) yet read as L gives 2.08 L/ha over the 2.0 max (label deviation); both defensible.",
+  "reversal_time": "Unresolved withholding and pending residue result would take weeks to resolve.",
+  "rate_overrun": "5.2 mL read literally is far below max (level 0); read as L it is 2.08 L/ha, about 4% over (level 1)."
+ },
+ "request": "rec-F426-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010292
+}

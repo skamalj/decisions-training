@@ -1,0 +1,160 @@
+{
+ "id": "F409-0035",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A-1186",
+   "full_name": "P. Danvers",
+   "submitted_on": "2024-08-05",
+   "app_type": "new",
+   "message": "Is the permit valid for visitors on weekends?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2024-06-04",
+     "address_line": "21 Quay Street",
+     "verified": null
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2019-09-17",
+     "address_line": "21 Quay Street",
+     "verified": false
+    }
+   ],
+   "note": "Bill scan is low quality and could not be checked. ID card appears expired."
+  },
+  "vehicle": {
+   "plate": "LM21 XYZ",
+   "keeper_name": "Delta Fleet Ltd",
+   "keeper_postcode": "QY1 4TT",
+   "supporting_letters": [
+    {
+     "type": "employer_letter",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "E1",
+   "address": "21 Quay Street",
+   "plate_entered": "LM21 XZY",
+   "duration_months": 12,
+   "fee_band": "standard"
+  },
+  "account_history": {
+   "live_permits": [
+    {
+     "permit_no": "P-8801"
+    }
+   ],
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "past_permits": [
+    {
+     "permit_no": "P-7010",
+     "status": "expired",
+     "seize_reason": null
+    }
+   ],
+   "pcns": [
+    {
+     "issued_on": "2023-10-02",
+     "contravention_code": "12",
+     "status": "paid"
+    },
+    {
+     "issued_on": "2024-01-15",
+     "contravention_code": "12",
+     "status": "paid"
+    },
+    {
+     "issued_on": "2024-05-20",
+     "contravention_code": "01",
+     "status": "open"
+    }
+   ],
+   "exceptions": [],
+   "officer_note": "Applicant emailed twice about delivery times."
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 62,
+  "docs_missing": 2,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 62,
+  "docs_missing": 2,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 3,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve_temporary",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "contested",
+   "target": "vehicle_keeper",
+   "second": "residence_proof",
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 141,
+ "deciding": {
+  "residency_shown": "The address matches exactly and is 62 days old, but the bill is unverified (null) and the ID card is verified false, so no verified document shows residence.",
+  "disposition": "The address matches and the plate difference looks like a typo with an employer letter present. A time-limited permit is defensible, but the unverified documents make a hold possible.",
+  "main_issue": "The plate entered (LM21 XZY) differs from the lookup (LM21 XYZ) and the keeper is a company. The unverified bill also competes for being the main issue.",
+  "misuse_strength": "There are 3 uncancelled PCNs (two paid, one open), which may count as one indicator. The keeper difference is covered by the employer letter and the plate is a typo.",
+  "document_gaps": "Two documents are unverified: the utility bill (verified null) and the ID card (verified false)."
+ },
+ "request": "rec-F409-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011454
+}

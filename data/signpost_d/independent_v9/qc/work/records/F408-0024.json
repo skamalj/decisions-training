@@ -1,0 +1,130 @@
+{
+ "id": "F408-0024",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "MB-4417",
+   "uprn": 100504,
+   "logged_at": "2024-07-17T08:45",
+   "stream": "refuse",
+   "claimed_date": "2024-07-16",
+   "photo_attached": true
+  },
+  "schedule": {
+   "week_pattern": "A",
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled_date": "2024-07-16"
+  },
+  "round_log": {
+   "completed_at": "2024-07-16T15:20",
+   "disruption_code": "WX_SUSP",
+   "catch_up_date": null,
+   "stops": [
+    {
+     "uprn": 100505,
+     "exception_code": null,
+     "gps_stop": true
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 100504,
+    "logged_on": "2024-06-20",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100504,
+    "logged_on": "2024-05-30",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100504,
+    "logged_on": "2024-05-02",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "overweight",
+  "exception_supported": true,
+  "telematics_pass": "street_not_visited",
+  "round_disruption": "weather_suspension",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "after_round_complete",
+  "crew_exception": "overweight",
+  "exception_supported": true,
+  "telematics_pass": "street_not_visited",
+  "round_disruption": "weather_suspension",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 4,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_conditional",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "crew_missed": "No stop entry for this UPRN and no catch-up after the weather suspension, so the street appears skipped.",
+  "report_matches": "Stream and claimed date equal the scheduled refuse date, logged after round completion.",
+  "next_step": "The resident supplied a photo, so a return after fixing presentation is clear.",
+  "return_urgency": "Unassisted, no deadline field, standard two-day return.",
+  "repeat_failures": "Three upheld entries within 84 days sit at the boundary between level two and three."
+ },
+ "request": "rec-F408-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005721
+}

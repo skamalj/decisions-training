@@ -1,0 +1,122 @@
+{
+ "id": "F418-0019",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "plat": 5,
+   "date": "2025-06-03",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   "S1",
+   "S2"
+  ],
+  "attendance": [
+   {
+    "staff_id": "S1",
+    "safety_comp_exp": "2026-03-01"
+   },
+   {
+    "staff_id": "S2",
+    "safety_comp_exp": "2026-04-01"
+   }
+  ],
+  "controls": {
+   "possession_from": "01:00",
+   "possession_to": "04:00",
+   "prior_shortfalls_30d": 2
+  },
+  "remarks": [
+   "Normal shift."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 23,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 23,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 32,
+ "deciding": {
+  "headcount_verified": "Both rostered staff have attendance rows with in-date safety competence.",
+  "next_step": "Nothing open; no gap events, remarks normal.",
+  "coverage_outcome": "Roster fully staffed, no gap or cover events.",
+  "reversal_time": "No gap occurred, so nothing to undo.",
+  "exposure_severity": "No gap events during service; possession is outside it."
+ },
+ "request": "rec-F418-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005159
+}

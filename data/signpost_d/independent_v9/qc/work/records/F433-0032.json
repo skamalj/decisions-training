@@ -1,0 +1,135 @@
+{
+ "id": "F433-0032",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H22",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "ok": true
+    }
+   ]
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "11:00",
+   "departed_at": "11:22"
+  },
+  "vet_card": {
+   "presented_at": "11:20",
+   "pulse_bpm": 64,
+   "cri": {
+    "first_bpm": 64,
+    "second_bpm": null
+   },
+   "metabolic": {
+    "mm": "injected",
+    "crt_s": 3,
+    "gut_sounds": [
+     0,
+     0,
+     1,
+     0
+    ]
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 1
+    }
+   ],
+   "vet_signed_at": "11:30"
+  },
+  "treatment": [
+   {
+    "time": "11:25",
+    "type": "electrolytes"
+   }
+  ],
+  "notes": {
+   "rider": "nearly lost a shoe on the road"
+  }
+ },
+ "factors": {
+  "pulse_status": "met_at_boundary",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": false,
+  "metabolic_flags": 3,
+  "cri_rise": 15.02,
+  "missing_items": 1,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": true,
+  "note_tone": "alarming_irrelevant"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_at_boundary",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": false,
+  "metabolic_flags": 3,
+  "cri_rise": 15.02,
+  "missing_items": 1,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": true,
+  "note_tone": "alarming_irrelevant"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_recheck",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "leaning",
+   "target": "ftq_metabolic",
+   "second": null,
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (departed_before_clearance = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 47,
+ "deciding": {
+  "pulse_met": "Pulse 64 equals the limit, presented 11:20 exactly at window end; boundary on both.",
+  "next_step": "cri.second_bpm is null, a specific missing reading to obtain.",
+  "outcome_code": "Injected mm, crt 3 and quiet gut sounds are metabolic flags; gait only grade 1.",
+  "welfare_risk": "Departed 11:22 before vet signature 11:30, uncleared on course.",
+  "record_completeness": "One reading missing (second CRI) while signature present; times in order apart from departure."
+ },
+ "request": "rec-F433-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006071
+}

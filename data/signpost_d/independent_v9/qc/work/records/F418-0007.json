@@ -1,0 +1,141 @@
+{
+ "id": "F418-0007",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "BRD",
+   "plat": 1,
+   "date": "2025-04-02",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "attendance": [
+   {
+    "staff_id": "S12",
+    "sign_on": "05:55",
+    "sign_off": "15:00",
+    "safety_comp_exp": "2026-01-10",
+    "dispatch_comp_exp": "2026-01-10"
+   },
+   {
+    "staff_id": "S30",
+    "sign_on": "10:10",
+    "sign_off": "15:00",
+    "safety_comp_exp": "2025-02-28",
+    "dispatch_comp_exp": null
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "10:00"
+   },
+   {
+    "type": "dispatch",
+    "time": "10:25",
+    "staff_id": "S30"
+   },
+   {
+    "type": "gap_end",
+    "time": "11:20"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-311",
+   "disp_platform": 3,
+   "valid_to": "2025-04-01",
+   "approved_by": null,
+   "prior_shortfalls_30d": 2
+  },
+  "remarks": [
+   "Late start for S30, no cover found."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 80,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": true,
+  "competence_lapse": true,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 80,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": true,
+  "competence_lapse": true,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "correct_and_brief",
+   "second": "request_records",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "partial_cover",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unqualified_dispatch = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 54,
+ "deciding": {
+  "headcount_verified": "Changed benign_closure to false as no possession is shown. Both S12 and S30 have sign-on records, so each logged person has a matching sign-on. S30's lapsed competence is a contrary point, but the plan leads true.",
+  "next_step": "Dispensation D-311 is for another platform, expired and unapproved, which supports correct and brief; the lapsed competence and dispatch could also justify requesting records.",
+  "coverage_outcome": "Gap 10:00-11:20 had no cover events and S30 signed on at 10:10, so only part of the gap was filled while an open period remained.",
+  "reversal_time": "A dispatch made by staff without dispatch competence cannot be undone.",
+  "exposure_severity": "Dispatch at 10:25 by S30 with null dispatch_comp_exp inside the gap in staff mode."
+ },
+ "request": "rec-F418-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005837
+}

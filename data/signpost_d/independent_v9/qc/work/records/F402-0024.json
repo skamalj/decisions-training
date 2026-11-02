@@ -1,0 +1,113 @@
+{
+ "id": "F402-0024",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "routine",
+   "site": "hip",
+   "onset": "2024-03-20",
+   "received": "2025-06-02"
+  },
+  "clinical": {
+   "dx": "hip_pain",
+   "red_flags": [
+    "night_pain_weight_loss"
+   ],
+   "anticoagulant": false,
+   "fi": 29.7
+  },
+  "gp_record": {
+   "meds": [
+    "warfarin"
+   ],
+   "weight_change_kg": -6,
+   "falls_3m": 4,
+   "reviews": [
+    "2025-04-10 urgent"
+   ]
+  },
+  "attachments": [],
+  "history": {
+   "episodes": 1,
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": true,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "major",
+  "missing_item": "imaging_report",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 63,
+  "function_index": 29.72,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "routine",
+  "falls_last_3m": 4,
+  "post_op_days": 48,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": true,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "major",
+  "missing_item": "imaging_report",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 63,
+  "function_index": 29.72,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "routine",
+  "falls_last_3m": 4,
+  "post_op_days": 48,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_as_referred",
+   "second": "escalate_lead",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "contested",
+   "target": "redirect_out",
+   "second": "community_msk",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "red_flag_unresolved": "Urgent GP review dated 2025-04-10 exists but no imaging, and 6 kg weight loss remains unexplained.",
+  "next_step": "Urgent review supports accepting, but anticoagulant false vs warfarin and missing imaging make escalation plausible.",
+  "pathway": "Night pain and weight loss without imaging could mean redirect, yet a hip problem with 63 weeks of duration fits community MSK.",
+  "reversal_time": "Missed diagnosis or delayed care could take a few days to months to undo; the record is split.",
+  "clinical_urgency": "Reviewed flag and chronic course allow waiting, but weight loss and falls suggest within six weeks."
+ },
+ "request": "rec-F402-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00483
+}

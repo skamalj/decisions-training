@@ -1,0 +1,150 @@
+{
+ "id": "F427-0049",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V-4120",
+   "visit_date": "2024-09-02",
+   "surveyor_grade": "accredited"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 10
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 3
+    },
+    {
+     "depth_cm": 5
+    },
+    {
+     "depth_cm": 6
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 18,
+     "prev_depth_cm": 12
+    }
+   ],
+   "rain_30d_pct_normal": 106
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam": "D4",
+     "pool_level_cm": 32,
+     "design_pool_cm": 40,
+     "defect_code": "SEEP",
+     "remark": "Water passing at east edge."
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "id": "Q1",
+     "score": 6
+    },
+    {
+     "id": "Q2",
+     "score": null
+    }
+   ],
+   "photos_uploaded": null
+  },
+  "notes": {
+   "surveyor_note": "D4 looks bad, worried it will go.",
+   "prior_visits": [
+    {
+     "date": "2023-10-11",
+     "dam": "D4",
+     "event": "breach"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.3,
+  "photos_status": "none",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": "about 4.7 cm depth, near band top",
+  "rainfall_pct_normal": 105.83,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "alarmed",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.3,
+  "photos_status": "none",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -5.45,
+  "rainfall_pct_normal": 105.83,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 2,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "alarmed",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "recheck_next_visit",
+   "second": "accept_record",
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "balanced",
+   "target": "within_band",
+   "second": "above_band",
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "dam_caused_drop": "Control well deepened 12 to 18 cm, yet D4 pool is 8 cm under design with a past breach; a drop is arguable either way.",
+  "next_step": "SEEP code with a low pool and an earlier breach argues for a recheck; no work order and a minor code argue for filing.",
+  "hydro_state": "Mean depth about 4.7 cm against band top 5 cm sits right at the top boundary of the band.",
+  "dam_severity": "Code SEEP, but pool 32 against design 40 sits near the partial-breach anchor.",
+  "evidence_completeness": "3 of 10 wells read, one quadrat score null, photos null, inspection logged; two or three elements recorded."
+ },
+ "request": "rec-F427-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009663
+}

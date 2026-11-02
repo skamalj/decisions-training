@@ -1,0 +1,137 @@
+{
+ "id": "F426-0021",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B14",
+   "crop": "apple",
+   "planted_area_ha": 4.0,
+   "lot_id": "L201"
+  },
+  "applications": [
+   {
+    "date": "2024-09-02",
+    "product_code": "FUN110",
+    "qty_applied": 6.0,
+    "qty_unit": "L",
+    "area_treated_ha": 4.0
+   },
+   {
+    "date": "2024-09-20",
+    "product_code": "INS330",
+    "qty_applied": 2.0,
+    "qty_unit": "kg",
+    "area_treated_ha": 4.0
+   },
+   {
+    "date": "2024-09-28",
+    "product_code": "FUN110",
+    "qty_applied": 6.0,
+    "qty_unit": "L",
+    "area_treated_ha": 4.0
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "FUN110",
+    "max_rate_per_ha": 2.0,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "approved_crops": [
+     "apple"
+    ]
+   }
+  ],
+  "harvest": {
+   "lot_id": "L201",
+   "first_pick_date": "2024-11-05",
+   "residue_test": {
+    "sampled": true,
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "product_ref_entry_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 3,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "up_to_10",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "expired_under_30d_high_dev",
+  "missing_item": "product_ref_entry_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 3,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "rate_overrun": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 52,
+ "deciding": {
+  "phi_cleared": "INS330 is used on 2024-09-20 but has no product_ref entry, so its withholding period cannot be confirmed. The pick is 46 days later, so it very likely cleared. FUN110 (14 days) cleared easily.",
+  "next_step": "FUN110 is within its rate, the pick is far after every application, and the residue test is below the limit. The only gap is the missing INS330 reference, which a wide interval makes minor.",
+  "finding_class": "Every present field agrees: FUN110 is at 1.5 L/ha against a 2.0 maximum, the intervals are long, and the residue test is clear. No discrepancy is visible.",
+  "reversal_time": "Releasing a lot that is already tested clear is easily undone, since the lot is simply held again if the INS330 reference raises a problem. This is a day or so of effort.",
+  "rate_overrun": "FUN110 is 6.0 L over 4.0 ha = 1.5 L/ha, below the 2.0 maximum. INS330 has no reference to compare against, but nothing exceeds a maximum."
+ },
+ "request": "rec-F426-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013782
+}

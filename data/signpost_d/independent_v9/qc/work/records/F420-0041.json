@@ -1,0 +1,130 @@
+{
+ "id": "F420-0041",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PMC41207",
+   "position": "21L",
+   "contour_max_cm": 163,
+   "tare_kg": 100,
+   "planned_gross_kg": 1000,
+   "straps_required": 4
+  },
+  "manifest_lines": [
+   {
+    "awb": "176-44100",
+    "pcs": 12,
+    "weight_kg": 900
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2024-05-14T06:10Z",
+   "scale_gross_kg": 1004,
+   "max_height_cm": 150,
+   "pcs_counted": {
+    "176-44100": 8
+   },
+   "straps_fitted": 4,
+   "net_fitted": null
+  },
+  "dg_notoc": null,
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "176-44100",
+     "pcs_this_flight": 8
+    }
+   ],
+   "contour_waivers": [
+    {
+     "uld": "PMC41207",
+     "position": "21L",
+     "max_cm": 170
+    }
+   ]
+  },
+  "checks_log": {
+   "scale_cal_due": "2024-05-01",
+   "reweigh": {
+    "scale": "S9",
+    "kg": 989
+   }
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": -1.1,
+  "piece_count_gap": 4,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "well_within",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "net_not_logged",
+  "scale_cal_overdue": true,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 355,
+  "prior_rebuilds": 0
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -0.57,
+  "piece_count_gap": 4,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "well_within",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "pcs_differ",
+  "securing_state": "complete",
+  "scale_cal_overdue": true,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 355,
+  "prior_rebuilds": 0
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "release",
+   "second": "release_conditional",
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "leaning",
+   "target": "physical_build",
+   "second": null,
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "pieces_reconciled": "Counted 8 of 12 pcs, but a part shipment shows pcs_this_flight 8 for the same AWB.",
+  "disposition": "Net not logged is a small ramp-side item; the overdue build scale is superseded by the reweigh, so release and release_conditional both fit.",
+  "worst_discrepancy": "The only open item is the securing record (net_fitted null); no DG and no document mismatch.",
+  "weight_deviation": "Reweigh 989 kg against planned 1000 kg is -1.1%, just over the 1% line (the build scale's 1004 would be 0.4%).",
+  "rework_extent": "Net_fitted null: at most a net confirmation, otherwise nothing physical to change."
+ },
+ "request": "rec-F420-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010665
+}

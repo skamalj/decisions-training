@@ -1,0 +1,151 @@
+{
+ "id": "F401-0025",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P505",
+   "planned_discharge_at": "2025-03-10T13:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "spo2": 96,
+     "hr": 72,
+     "recorded_at": "2025-03-10T06:00"
+    }
+   ],
+   "reviews": [
+    {
+     "role": "reg",
+     "outcome": "fit_for_discharge",
+     "reviewed_at": "2025-03-10T08:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P505",
+   "reconciled": [
+    {
+     "drug": "paracetamol",
+     "dose": 1,
+     "unit": "g"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "paracetamol",
+     "dose": 1000,
+     "unit": "mg"
+    }
+   ]
+  },
+  "function_social": {
+   "social": null,
+   "care_arrangement": {
+    "type": "home care",
+    "status": "requested",
+    "start_date": null
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "done",
+     "completed_at": null
+    },
+    {
+     "t": "letter",
+     "status": "pending"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-03-11",
+    "pickup_time": "10:00"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "unit_expression_only",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "social_history_null",
+  "outstanding_task_count": 2,
+  "false_completion": true,
+  "care_need": "none",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "next_day",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "unit_expression_only",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "social_history_null",
+  "outstanding_task_count": 2,
+  "false_completion": true,
+  "care_need": "none",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "next_day",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_senior",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "home_with_package",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "rx_matches": "1 g vs 1000 mg is a unit expression only; still the same dose.",
+  "next_step": "Home care requested with no start date and social history null; the plan treats this as needing senior decision.",
+  "destination": "Home care package requested, so home with a package.",
+  "outstanding_tasks": "Pending letter plus TTO done with null completed_at: two outstanding, at the 2/3 boundary.",
+  "discharge_delay": "Transport booked 2025-03-11 (one day later) while care has no start date, which leaves it between level 1 and 2."
+ },
+ "request": "rec-F401-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005411
+}

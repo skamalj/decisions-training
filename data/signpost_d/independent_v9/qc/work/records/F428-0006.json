@@ -1,0 +1,117 @@
+{
+ "id": "F428-0006",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-114",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 300,
+   "seal_type": "J_bulb"
+  },
+  "inspection": {
+   "asset_id": "VL-114",
+   "insp_date": "2025-03-11",
+   "closure_test": {
+    "performed": true,
+    "closure_s": 204,
+    "leakage_l_min": 18,
+    "leakage_limit_l_min": 10,
+    "result": null
+   }
+  },
+  "defects": [
+   {
+    "code": "D7",
+    "component": "hoist",
+    "grade": 1,
+    "status": "open"
+   }
+  ]
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.68,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 0,
+  "mismatch_location": "seal_type",
+  "test_status": "leaking_over_limit",
+  "repair_progress": "completed_tested",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 54,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.68,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 0,
+  "mismatch_location": "seal_type",
+  "test_status": "passed_current",
+  "repair_progress": "completed_tested",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 54,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 28,
+ "deciding": {
+  "closure_test_valid": "closure_test leakage_l_min 18 exceeds leakage_limit_l_min 10, so the gate does not seal within limits.",
+  "next_step": "Only a grade 1 open defect and the closure time is well inside rated; nothing else calls for action, though the leakage figure leaves some doubt.",
+  "defect_class": "The only open defect is grade 1 (hoist), so no open defect above grade 1 exists.",
+  "section_discrepancies": "asset_id VL-114 matches in both sections and no other cross-section values conflict; few values are available to compare.",
+  "flood_risk": "closure_s 204 against rated_closure_s 300 is within rated time and the highest open defect is grade 1."
+ },
+ "request": "rec-F428-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009068
+}

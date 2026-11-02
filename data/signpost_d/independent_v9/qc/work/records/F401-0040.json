@@ -1,0 +1,173 @@
+{
+ "id": "F401-0040",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P505",
+   "planned_discharge_at": "2025-07-08T15:00",
+   "capacity_assessment": {
+    "status": "pending"
+   }
+  },
+  "clinical": {
+   "targets": {
+    "spo2": "94-98"
+   },
+   "obs": [
+    {
+     "rr": 24,
+     "spo2": 90,
+     "hr": 112,
+     "at": "2025-07-07T20:00"
+    },
+    {
+     "rr": 22,
+     "spo2": 91,
+     "hr": 108,
+     "at": "2025-07-08T04:00"
+    }
+   ],
+   "reviews": [
+    {
+     "role": "registrar",
+     "outcome": "fit_for_discharge",
+     "reviewed_at": "2025-07-07T16:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P505",
+   "reconciled": [
+    {
+     "drug": "bisoprolol",
+     "dose": 2.5,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "bisoprolol",
+     "dose": 2.5,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ]
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": "frame",
+    "transfer_assist_count": 1,
+    "adl_score": 15
+   },
+   "social": null
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "s": "pending"
+    },
+    {
+     "t": "letter",
+     "s": "pending"
+    },
+    {
+     "t": "med review",
+     "s": "pending"
+    },
+    {
+     "t": "transport",
+     "s": "pending"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-07-08",
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "social_history_null",
+  "outstanding_task_count": 4,
+  "false_completion": false,
+  "care_need": "uncertain_package",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "pickup_null_on_planned_date",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": true
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "social_history_null",
+  "outstanding_task_count": 3,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": true
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_senior",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "destination": {
+   "clarity": "contested",
+   "target": "home_independent",
+   "second": "home_with_package",
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 42,
+ "deciding": {
+  "rx_matches": "Bisoprolol 2.5 mg od is identical on both lists.",
+  "next_step": "Capacity assessment is pending, and two abnormal obs sets (SpO2 90 and 91, HR above 100) come after the 16:00 senior review.",
+  "destination": "Frame, one-person assist and ADL 15, but social history is null so the home situation is unknown; home_independent and home_with_package are both plausible.",
+  "outstanding_tasks": "All four checklist items are pending.",
+  "discharge_delay": "Transport is booked for the planned date but pickup_time is null, and no pharmacy time is given; the boundary between on-time and same-day-late."
+ },
+ "request": "rec-F401-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010614
+}

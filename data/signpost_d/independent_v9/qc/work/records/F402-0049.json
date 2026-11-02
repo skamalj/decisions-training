@@ -1,0 +1,125 @@
+{
+ "id": "F402-0049",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-4470",
+   "received": "2025-03-03",
+   "priority": "urgent",
+   "site": "knee",
+   "onset": "2024-02-26"
+  },
+  "clinical": {
+   "dx": "M23.2",
+   "red_flags": [
+    "night_pain_weight_loss"
+   ],
+   "function_index": 99.87,
+   "surgery_date": "2024-12-27",
+   "weight_bearing": "full"
+  },
+  "gp_record": {
+   "first_presented": "2023-09-12",
+   "falls_3m": 1
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-02-10",
+    "result": "no_sinister"
+   },
+   {
+    "type": "surgical_letter",
+    "date": "2025-02-20",
+    "result": "surgical_opinion_recommended"
+   }
+  ],
+  "history": {
+   "episodes": [
+    {},
+    {},
+    {},
+    {}
+   ],
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": true,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "major",
+  "missing_item": "none",
+  "condition_group": "non_physio_surgical",
+  "symptom_duration_weeks": 53,
+  "function_index": 99.87,
+  "prior_episodes_12m": 4,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 1,
+  "post_op_days": 66,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": true,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "major",
+  "missing_item": "weight_bearing_status",
+  "condition_group": "non_physio_surgical",
+  "symptom_duration_weeks": 53,
+  "function_index": 99.87,
+  "prior_episodes_12m": 4,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 1,
+  "post_op_days": 66,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_as_referred",
+   "second": "book_amended",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "balanced",
+   "target": "redirect_out",
+   "second": "community_msk",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "red_flag_unresolved": "The MRI dated 2025-02-10 is within 8 weeks with result no_sinister, which explains the night_pain_weight_loss flag.",
+  "next_step": "Accepting works since nothing is missing and the surgical letter is on file, but the 5-month onset gap versus first_presented and the surgical advice make amended booking plausible.",
+  "pathway": "A surgical_letter with surgical_opinion_recommended favours redirect_out, while a function index of 99.87 and prior physio episodes keep community_msk plausible.",
+  "reversal_time": "A recommended surgical opinion on a 53-week problem already post-op may mean lasting joint outcomes; level 3 or level 2 both defensible.",
+  "clinical_urgency": "Urgent priority and surgical advice versus a cleared MRI and near-normal function split first contact between 48 hours and two weeks."
+ },
+ "request": "rec-F402-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00817
+}

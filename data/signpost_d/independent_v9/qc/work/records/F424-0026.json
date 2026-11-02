@@ -1,0 +1,126 @@
+{
+ "id": "F424-0026",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2411",
+   "vessel_id": "FV3",
+   "volume_hl": 20,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.013
+  },
+  "readings": [
+   {
+    "ts": "2024-05-10",
+    "gravity_sg": 1.0135
+   },
+   {
+    "ts": "2024-05-11",
+    "gravity_sg": 1.012
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-05-11",
+    "vessel_id": "FV4",
+    "note": "Slight sour note."
+   }
+  ],
+  "lab": {
+   "diacetyl_mgl": 0.16,
+   "micro_plate": {
+    "result": null,
+    "pending": true
+   },
+   "retest": [
+    {
+     "result": "neg"
+    }
+   ]
+  },
+  "release_request": {
+   "volume_hl": 20,
+   "note": "Rush, truck Friday."
+  }
+ },
+ "factors": {
+  "gravity_status": "still_dropping",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "sensory_note_only",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.16,
+  "discrepancy_count": 2,
+  "decoy_mismatch": false,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "still_dropping",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "sensory_note_only",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.16,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "hold_retest",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "terminal_gravity": "Last reading 1.0120 is inside band but the prior 1.0135 was above, so only one in-band reading.",
+  "contamination_supported": "Sensory sour note vs a negative retest, while the plate is still pending.",
+  "batch_disposition": "Micro plate result is null and pending, so one confirming retest is needed despite the rush.",
+  "deviation_severity": "Diacetyl 0.16 is far over the usual ~0.10, but whether the vessel mismatch counts as an irreversible step is arguable.",
+  "record_discrepancies": "Batch vessel FV3 vs event FV4 is one; the second candidate is the missing lab batch_ref, so one or two."
+ },
+ "request": "rec-F424-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005293
+}

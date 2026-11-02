@@ -1,0 +1,136 @@
+{
+ "id": "F431-0006",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "sn": "HM7731",
+   "seal_state": null,
+   "seal_checked_date": null
+  },
+  "period_read": {
+   "read_date": "2024-03-31",
+   "reg_kwh": 13855,
+   "src_code": "AMR",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "d": "2023-12-31",
+    "kwh": 10500,
+    "src": "EST"
+   },
+   {
+    "d": "2024-01-31",
+    "kwh": 11200,
+    "src": "EST"
+   },
+   {
+    "d": "2024-02-29",
+    "kwh": 12000,
+    "src": "EST",
+    "same_period_ly_kwh": 1000
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_TPROBE",
+    "E_FLOW"
+   ],
+   "flow_temp_c": 41,
+   "return_temp_c": 40,
+   "battery_pct": 18
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 318,
+   "hdd_prior_year": 300,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "open",
+     "date": "2024-03-12"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.75,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.06,
+  "diagnostic_error_count": 2,
+  "meter_works_order": true,
+  "consecutive_estimates": 3,
+  "delta_t_implausible": true,
+  "seal_status": "not_recorded",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "diagnostics_null",
+  "consumption_ratio": 2.11,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.06,
+  "diagnostic_error_count": 2,
+  "meter_works_order": true,
+  "consecutive_estimates": 3,
+  "delta_t_implausible": true,
+  "seal_status": "not_recorded",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_photo_read",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "meter_fault": "Flow 41 C vs return 40 C (delta-T 1 K) plus E_TPROBE and E_FLOW codes and an open RECAL order corroborate a device fault.",
+  "billable_actual": "AMR read in date order after three estimates, but the diagnostics fault and open recalibration order make it only modestly likely to be a valid actual.",
+  "next_step": "Photo_ref is null on a high read with device faults; a dated photo would settle it before any estimate or visit.",
+  "staff_effort": "Open RECAL order and three prior estimates leave one to eight hours, possibly a few days if the meter needs a visit.",
+  "consumption_deviation": "Period 1855 kWh vs expected 1000*318/300=1060 gives a ratio of about 1.75, a deviation of about 75%, though the fault doubt leaves some uncertainty."
+ },
+ "request": "rec-F431-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009154
+}

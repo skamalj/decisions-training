@@ -1,0 +1,129 @@
+{
+ "id": "F421-0025",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P5",
+   "fragile": true,
+   "contents": "laptop",
+   "qty": 1,
+   "weight_kg": 2.5,
+   "declared_value_gbp": 2118.51
+  },
+  "handling_events": [
+   {
+    "ts": "2024-09-03T05:45",
+    "site": "DEP",
+    "ev": "INB"
+   },
+   {
+    "ts": "2024-09-03T07:30",
+    "site": "DEP",
+    "ev": "CONV-STD"
+   },
+   {
+    "ts": "2024-09-03T07:52",
+    "site": "DEP",
+    "ev": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-09-03T10:00",
+   "observed_item": "notebook computer",
+   "qty_found": 1,
+   "weight_kg": 2.2,
+   "condition": "written_off",
+   "photos": [
+    "p1",
+    "p2"
+   ],
+   "repair_est_gbp": 2118.51
+  },
+  "claim": {
+   "claimed_gbp": 3580.4
+  },
+  "notes": [
+   "Dropped at our sort, our fault."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "complete",
+  "loss_pct": 100.0,
+  "declared_value": 2118.51,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": true,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 1.69
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "none",
+  "inspection_state": "photos_missing",
+  "loss_pct": 45.2,
+  "declared_value": 2118.51,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": true,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 1.69
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_repack",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "depot_fault": "Clean inbound scan, then a DMG code at the depot sort after the fragile parcel went onto CONV-STD.",
+  "contents_match": "Laptop versus notebook computer is a synonym, but the weight is 12% lower (2.2 versus 2.5 kg), which leaves some doubt.",
+  "next_step": "The depot caused the damage, the note admits it, and the item is written off, so accept liability and write it off.",
+  "loss_share": "Condition written_off with estimate equal to declared value.",
+  "parties_needed": "Assessor, claims for the 3580.4 claim and sort operations; a fourth or fifth team (finance, sender) is possible, so level 2 and 3 are both defensible."
+ },
+ "request": "rec-F421-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007513
+}

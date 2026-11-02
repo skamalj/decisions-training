@@ -1,0 +1,118 @@
+{
+ "id": "F402-0002",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-2093",
+   "received": "2025-05-06",
+   "priority": "soon",
+   "site": {
+    "part": "shoulder",
+    "side": "R"
+   },
+   "onset": "2024-01-29"
+  },
+  "clinical": {
+   "red_flags": [
+    "NPWL"
+   ],
+   "fi": 68,
+   "surgery_date": null
+  },
+  "gp_record": {
+   "weight_change_kg": -6,
+   "falls_3m": 0,
+   "reviews": [
+    {
+     "type": "urgent",
+     "date": "2025-04-02"
+    }
+   ]
+  },
+  "attachments": [],
+  "history": {
+   "episodes": 3,
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": true,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "imaging_report",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 68,
+  "function_index": 68.0,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 0,
+  "post_op_days": "null",
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "imaging_report",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 68,
+  "function_index": 17.16,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 5,
+  "post_op_days": 8,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_lead",
+   "second": "request_info",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "red_flag_unresolved": "NPWL flag with -6 kg weight change: an urgent GP review dated after onset gives partial cover, but no imaging report is attached, so it is balanced.",
+  "next_step": "The missing imaging report (request_info) is weighed against the weight loss with only a partial review (escalate_lead).",
+  "pathway": "No surgery, FI 68, no falls and a 68-week stable shoulder problem after a failed self-management trial point to self_management.",
+  "reversal_time": "If the flag is overlooked, correction takes days to months depending on the underlying cause: level 1 versus level 2.",
+  "clinical_urgency": "A partly reviewed weight-loss flag gives level 1 against a long-standing stable problem at level 0."
+ },
+ "request": "rec-F402-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008417
+}

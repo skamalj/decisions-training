@@ -1,0 +1,148 @@
+{
+ "id": "F411-0010",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "HC0731",
+   "type": "hackney",
+   "expiry": "2025-09-30",
+   "review_date": "2025-09-08"
+  },
+  "vehicle": {
+   "first_reg": "2016-02-11",
+   "odometer_km": 118640
+  },
+  "inspection": {
+   "date": "2025-08-26",
+   "result_code": "F",
+   "brake_efficiency_pct": 66
+  },
+  "defects": [
+   {
+    "code": "STR2",
+    "grade": "minor",
+    "rectify_by": "2025-09-02",
+    "repaired_on": null,
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-08-15",
+    "cover_note_ref": null
+   },
+   {
+    "type": "mot",
+    "expires_on": "2025-09-01",
+    "cover_note_ref": null
+   },
+   {
+    "type": "dbs",
+    "expires_on": "2025-07-31",
+    "cover_note_ref": null
+   },
+   {
+    "type": "fire_ext",
+    "expires_on": "2025-09-01",
+    "cover_note_ref": "CN-309",
+    "cover_until": "2025-10-15"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-10-03",
+     "result": "F",
+     "odometer_km": 118640
+    },
+    {
+     "date": "2025-01-22",
+     "result": "F",
+     "odometer_km": 118640
+    },
+    {
+     "date": "2025-04-15",
+     "result": "F",
+     "odometer_km": 118640
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "not_started",
+  "deadline_passed": true,
+  "documents_missing_count": 3,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 3,
+  "vehicle_age_years": 9
+ },
+ "factors_sampled": {
+  "worst_defect_found": "major",
+  "rectification_state": "not_started",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 3,
+  "vehicle_age_years": 9
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "refuse_renewal",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "minor_fail",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 152,
+ "deciding": {
+  "odometer_consistent": "Same 118640 km at three inspections from 2024-10 to 2025-04 and again now, nearly a year with no movement on a working hackney; suggests a stuck or faulty reading.",
+  "next_step": "Insurance, MOT and DBS are all expired without cover notes: three gaps, plus an unstarted defect past its deadline.",
+  "inspection_outcome": "Only item STR2 is graded minor; no major or dangerous grade appears, though steering is a safety area.",
+  "document_gaps": "Insurance, MOT and DBS expires_on all before 2025-09-08 with no cover; fire_ext covered by note CN-309 until 2025-10-15, so three gaps.",
+  "outstanding_severity": "STR2 is minor, rectify_by 2025-09-02 is before review_date and nothing has been repaired (level 3); a steering item might be thought more serious (level 4)."
+ },
+ "request": "rec-F411-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015553
+}

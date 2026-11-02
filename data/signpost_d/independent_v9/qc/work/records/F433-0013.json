@@ -1,0 +1,134 @@
+{
+ "id": "F433-0013",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H303",
+   "earlier_gates": [
+    "pass"
+   ]
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "13:00",
+   "departed_at": "13:25"
+  },
+  "vet_card": {
+   "arrival_copied": "13:02",
+   "presented_at": "13:12",
+   "pulse_bpm": 52,
+   "cri": {
+    "first_bpm": 50,
+    "second_bpm": 48
+   },
+   "metabolic": {
+    "mm": "injected",
+    "crt_s": 3,
+    "gut_sounds": [
+     0,
+     0,
+     1,
+     0
+    ]
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 0
+    }
+   ],
+   "vet_signed_at": null
+  },
+  "treatment": [
+   {
+    "time": "13:15",
+    "type": "electrolytes",
+    "vet": "Dr K"
+   }
+  ]
+ },
+ "factors": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "regular",
+  "gait_mitigation": false,
+  "metabolic_flags": 3,
+  "cri_rise": 4.94,
+  "missing_items": 1,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": true,
+  "note_tone": "none"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "regular",
+  "gait_mitigation": false,
+  "metabolic_flags": 3,
+  "cri_rise": 4.94,
+  "missing_items": 2,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": true,
+  "note_tone": "none"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "clear_to_continue",
+   "second": "request_recheck",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "balanced",
+   "target": "ftq_metabolic",
+   "second": "ftq_combined",
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (departed_before_clearance = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 33,
+ "deciding": {
+  "pulse_met": "Pulse 52 presented 12 min after arrival, well within the limit and window.",
+  "next_step": "Horse already departed with no vet signature; recheck or continue are both arguable.",
+  "outcome_code": "Injected mm, CRT 3 s and gut sounds are metabolic failures; gait is regular, though the unsigned card leaves the gait doubtful.",
+  "welfare_risk": "departed_at 13:25 and vet_signed_at null means the horse is on course uncleared.",
+  "record_completeness": "The signature is null and the card is close to missing a second item, so level 0 or 1."
+ },
+ "request": "rec-F433-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005885
+}

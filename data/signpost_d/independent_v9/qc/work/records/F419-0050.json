@@ -1,0 +1,155 @@
+{
+ "id": "F419-0050",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "06/24",
+   "date": "2024-04-20",
+   "speed_kmh": 65,
+   "thr": {
+    "design": 0.72,
+    "maint": 0.52,
+    "min": 0.42
+   },
+   "weather": {
+    "precip_mm": 0
+   }
+  },
+  "device": {
+   "cal_cert_date": "2024-04-25",
+   "cal_expiry": "2025-04-25",
+   "tyre_kpa": 172,
+   "tyre_spec_kpa": [
+    160,
+    180
+   ],
+   "water_mm": 0.5
+  },
+  "runs": [
+   {
+    "dir": "06",
+    "thirds": [
+     0.58,
+     0.7,
+     0.72
+    ],
+    "seg_min": 0.4
+   },
+   {
+    "dir": "24",
+    "thirds": [
+     0.73,
+     0.69,
+     0.6
+    ],
+    "seg_min": 0.49
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.64,
+    0.62,
+    0.65
+   ],
+   "mtd_thr": 0.5
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-09-30",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start": "2024-04-30"
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2023-10-12",
+     "lowest_third": 0.58
+    }
+   ],
+   "cross_checks": []
+  },
+  "review": {
+   "signed_at": "2024-04-21T08:00Z"
+  }
+ },
+ "factors": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 203,
+  "removal_scheduled": true,
+  "calibration_status": "post_dated",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 203,
+  "removal_scheduled": true,
+  "calibration_status": "post_dated",
+  "missing_elements_count": 3,
+  "test_condition_anomaly": "tyre_pressure_off",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "monitor_closely",
+   "second": "restrict_ops",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "rubber_deposits",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 47,
+ "deciding": {
+  "genuine_deficit": "All thirds are above planning 0.52 (lowest 0.58) and the calibration certificate is dated 2024-04-25, after the survey, but the 0.40 segment is real; balanced.",
+  "next_step": "A 0.40 segment is below minimum, which argues for restriction, but removal is scheduled for 2024-04-30 and the lowest third is 0.58 with a stable trend; monitor_closely and restrict_ops are both defensible.",
+  "deficit_driver": "Lows are at the touchdown ends, removal was 203 days ago, and mtd 0.62-0.65 is above its 0.5 threshold, so rubber deposits.",
+  "friction_severity": "Segment 0.40 is below the 0.42 minimum, so level 3.",
+  "evidence_completeness": "cal_cert_date 2024-04-25 is after the survey date 2024-04-20 (misdated), and every other element is present, so level 3."
+ },
+ "request": "rec-F419-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012925
+}

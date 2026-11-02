@@ -1,0 +1,148 @@
+{
+ "id": "F432-0030",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E11",
+   "species": "TOR",
+   "risk_cat": 2,
+   "temp_range_c": [
+    20,
+    28
+   ],
+   "roster": [
+    "t1",
+    "t2"
+   ]
+  },
+  "shift": {
+   "date": "2025-04-09",
+   "start": "08:00",
+   "end": "16:00",
+   "opening_count": 2,
+   "closing_count": 2
+  },
+  "movements": [],
+  "feeding": [
+   {
+    "item": "greens",
+    "sheet_g": 800,
+    "offered_g": 800,
+    "leftover_g": 100,
+    "fast_flag": false
+   }
+  ],
+  "rounds": [
+   {
+    "sched_time": "10:00",
+    "logged": true,
+    "entry_time": "10:01",
+    "temp_c": 24
+   },
+   {
+    "sched_time": "13:00",
+    "logged": true,
+    "entry_time": "13:02",
+    "temp_c": 25
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "id": "D1",
+     "time": "15:41"
+    }
+   ],
+   "ticket_state": null
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.875,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 0,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.37,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 0,
+  "cctv_cover": false,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 3,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "missed_rounds": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 82,
+ "deciding": {
+  "count_reconciles": "Opening 2 equals closing 2 with empty movements, though no door detail is given.",
+  "secure_at_close": "Lock check 15:41 follows last round 13:02, no ticket.",
+  "next_step": "All sections present and consistent, so file.",
+  "intake_shortfall": "700 of 800 g eaten is 87.5%, just under the 90% line.",
+  "missed_rounds": "Both scheduled rounds have entry times."
+ },
+ "request": "rec-F432-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005823
+}

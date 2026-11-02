@@ -1,0 +1,132 @@
+{
+ "id": "F416-0032",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "S03",
+   "date": "2025-02-14",
+   "signoff": "G31"
+  },
+  "roster": [
+   {
+    "id": "G31",
+    "on": "08:00",
+    "off": "17:00",
+    "qual_exp": "2025-02-14"
+   },
+   {
+    "id": "G32",
+    "on": "08:00",
+    "off": "17:00",
+    "qual_exp": "2025-11-30"
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-02-14",
+    "time": "13:15",
+    "type": "water_rescue",
+    "resp": [
+     "G31",
+     "G32"
+    ],
+    "out": "released",
+    "referral_ref": "RF-204"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jetski",
+    "unit": "JS1",
+    "out_from": "09:30",
+    "out_to": "12:33",
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 1,
+   "first_aid": 0,
+   "kit_defects": 2,
+   "chk": "CS-41"
+  }
+ },
+ "factors": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "kit_defect_unlisted",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "over_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": true,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "kit_defect_unlisted",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": true,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_log",
+   "second": "amend_and_file",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "two_guard_cover": "I1 has two responders both on roster at 13:15; G31 qual_exp equals the shift date, which is still in date, though borderline.",
+  "totals_reconcile": "handover.kit_defects is 2 but only one equipment entry has out_from set.",
+  "next_step": "The kit_defects count is a clerical difference that supports amend_and_file, but the record is otherwise complete, and the 183-minute unsubstituted jetski outage keeps plain acceptance plausible.",
+  "outcome_severity": "Outcome is released, but a referral_ref RF-204 is also present, which could read as directed to a clinic.",
+  "kit_outage": "JS1 out 09:30 to 12:33 is 183 minutes with sub null, just over the 180-minute boundary."
+ },
+ "request": "rec-F416-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010774
+}

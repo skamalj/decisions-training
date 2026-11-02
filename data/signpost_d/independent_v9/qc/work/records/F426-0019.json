@@ -1,0 +1,115 @@
+{
+ "id": "F426-0019",
+ "family": "F426",
+ "state": {
+  "block": {
+   "planted_area_ha": 5
+  },
+  "applications": [
+   {
+    "date": "2024-02-10",
+    "product_code": "TB9",
+    "qty_applied": 3.35,
+    "qty_unit": "L",
+    "area_treated_ha": 2,
+    "wind_kmh": 20
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "TB9",
+    "max_rate_per_ha": 1.5,
+    "rate_unit": "L",
+    "phi_days": 21,
+    "minor_use_auth_ref": "MU-5"
+   }
+  ],
+  "equipment": {
+   "sprayer_type": "tunnel_recycling",
+   "calibration_valid_to": "2024-02-01",
+   "nozzle_dev_pct": 3
+  },
+  "harvest": {
+   "first_pick_date": "2024-04-01",
+   "residue_test": {
+    "sampled": false
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "near_10_boundary",
+  "partial_block_spray": true,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": false,
+  "calibration_state": "expired_under_30d_low_dev",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": true
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": true,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "expired_under_30d_low_dev",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 6,
+  "high_wind_decoy": true
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold_and_test",
+   "second": "escalate",
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "contested",
+   "target": "label_deviation",
+   "second": "no_finding",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "phi_cleared": "Application 2024-02-10 and first pick 2024-04-01 give 51 days against phi_days 21.",
+  "next_step": "Treated-area rate is above max with only a minor-use reference, calibration expired and no residue test, so a test hold or escalation are both plausible.",
+  "finding_class": "1.675 L/ha on treated area against max 1.5 is a deviation, but minor_use_auth_ref 'MU-5' may authorise it.",
+  "reversal_time": "The spray is already on the fruit and cannot be undone; any outcome rests on that.",
+  "rate_overrun": "3.35 L over 2 treated ha is 1.675 L/ha, about 12% over 1.5, near the 10% boundary; dividing by planted 5 ha is a decoy."
+ },
+ "request": "rec-F426-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009483
+}

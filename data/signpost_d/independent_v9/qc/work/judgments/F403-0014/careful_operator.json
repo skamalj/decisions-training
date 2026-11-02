@@ -1,0 +1,38 @@
+{
+ "persona": "careful_operator",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "evidence_allergens_covered": {
+   "true": 0.7,
+   "false": 0.3
+  },
+  "next_step": {
+   "approve_plan": 0.03,
+   "request_evidence": 0.05,
+   "approve_restricted": 0.05,
+   "return_for_rework": 0.17,
+   "escalate_to_lead": 0.7
+  },
+  "first_gap_stage": {
+   "no_gap": 0.08,
+   "evidence_gap": 0.03,
+   "menu_gap": 0.8,
+   "kitchen_gap": 0.09
+  },
+  "exposure_proximity": {
+   "0": 0.01,
+   "1": 0.02,
+   "2": 0.12,
+   "3": 0.85
+  },
+  "meal_urgency": {
+   "0": 0.01,
+   "1": 0.03,
+   "2": 0.1,
+   "3": 0.76,
+   "4": 0.1
+  }
+ },
+ "cost": 0.000466
+}

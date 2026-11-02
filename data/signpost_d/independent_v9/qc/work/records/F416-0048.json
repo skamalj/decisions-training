@@ -1,0 +1,166 @@
+{
+ "id": "F416-0048",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "station_id": "S5",
+   "date": "2025-05-21",
+   "signoff": "G1",
+   "signoff_time": "17:00"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-03-01"
+   },
+   {
+    "id": "G2",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-01-15"
+   },
+   {
+    "id": "G3",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-04-09"
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-05-21",
+    "time": "10:30",
+    "type": "water_rescue",
+    "responders": [
+     "G1",
+     "G2"
+    ],
+    "outcome": "released"
+   },
+   {
+    "id": "I2",
+    "date": "2025-05-21",
+    "time": "14:10",
+    "type": "water_rescue",
+    "responders": [
+     "G3"
+    ],
+    "outcome": "released"
+   },
+   {
+    "id": "I3",
+    "date": "2025-05-21",
+    "time": "15:00",
+    "type": "first_aid",
+    "responders": [
+     "G2"
+    ],
+    "outcome": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "oxygen_kit",
+    "out_from": "2025-05-21T13:00",
+    "out_to": "2025-05-21T14:30",
+    "substitute_unit_id": "O3"
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 1,
+   "kit_defects": 1,
+   "check_sheet_ref": "CS-52"
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "date_misentered",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "kit_outage": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 57,
+ "deciding": {
+  "two_guard_cover": "Rescue I2 lists only G3 as responder, so it had one guard.",
+  "totals_reconcile": "Rescues 2, first_aid 1 and kit_defects 1 match the itemised entries and all incident dates equal the shift date; small residual doubt only.",
+  "next_step": "The log is complete, signed and has a check sheet ref, and all outcomes are released.",
+  "outcome_severity": "All outcomes are released, with no ambulance or AED.",
+  "kit_outage": "The oxygen kit was out for 90 minutes but substitute O3 is logged, so no unsubstituted outage."
+ },
+ "request": "rec-F416-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013069
+}

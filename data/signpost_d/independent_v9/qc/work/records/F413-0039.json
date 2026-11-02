@@ -1,0 +1,155 @@
+{
+ "id": "F413-0039",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "food_production",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+   ],
+   "zones": [
+    {
+     "z": "Dry store",
+     "toxic_bait_permitted": false
+    }
+   ]
+  },
+  "visit": {
+   "start": "2025-07-01T09:00",
+   "end": "2025-07-01T11:30",
+   "lic_exp": "2026-04-01",
+   "signoff": "2025-07-01"
+  },
+  "treatments": [
+   {
+    "p": "BR4",
+    "zone": "Dry store",
+    "area_m2": 40,
+    "qty": 2.66,
+    "unit": "kg",
+    "label_max_per_m2": 0.05
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "act": true
+   },
+   {
+    "id": "S2",
+    "act": true
+   },
+   {
+    "id": "S3",
+    "act": true
+   },
+   {
+    "id": "S4",
+    "act": false
+   }
+  ],
+  "van_stock": [
+   {
+    "p": "BR4",
+    "mv": "out",
+    "qty": 3,
+    "unit": "kg"
+   },
+   {
+    "p": "BR4",
+    "mv": "return",
+    "qty": 0.4,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_active": 1
+  }
+ },
+ "factors": {
+  "stock_mismatch": "trivial_under_5pct",
+  "stock_return_logged": true,
+  "station_count_gap": 4,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 32.81,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "food_production"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "trivial_under_5pct",
+  "stock_return_logged": true,
+  "station_count_gap": 4,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 32.81,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "food_production"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (restricted_product_used = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 88,
+ "deciding": {
+  "usage_reconciled": "Net withdrawal is 2.6 kg against 2.66 kg applied, a small gap of about 2%, which could be rounding.",
+  "activity_increased": "3 active stations against 1 previously, but 4 of 8 stations were not checked, which leaves the comparison uncertain.",
+  "next_step": "Toxic bait BR4 was applied in the Dry store zone where toxic_bait_permitted is false.",
+  "breach_severity": "A toxic bait treatment in a no-toxic-bait zone is a prohibited use; the dose is also over the limit, but that matters less.",
+  "parties_needed": "A manager, the technician and the client notification are needed, and a revisit may also require a scheduler."
+ },
+ "request": "rec-F413-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005519
+}

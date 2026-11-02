@@ -1,0 +1,146 @@
+{
+ "id": "F403-0012",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "egg",
+    "soy",
+    "nut",
+    "milk"
+   ],
+   "auto_injector": true,
+   "plan_start": "2025-02-03"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2025-02-14",
+   "allergens": [
+    "egg",
+    "soy",
+    "nut",
+    "milk"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-01-20",
+   "dishes": [
+    {
+     "dish": "nut crumble",
+     "contains": [
+      "nut",
+      "egg",
+      "soy",
+      "milk"
+     ],
+     "recipe_version_date": "2025-02-10",
+     "substitute": "fruit crumble",
+     "spec_checked_on": "2025-02-10"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "cleaning_log_complete": false,
+   "exceptions": [
+    {
+     "signed": "2025-01-30",
+     "covers": "cleaning log"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-02-14",
+   "packed_lunch_until": "2025-03-14",
+   "incidents": [
+    {
+     "date": "2025-02-11",
+     "dish": "nut crumble",
+     "note": "served at breakfast club"
+    }
+   ],
+   "messages": [
+    "Parent: all fine now, thanks."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 20,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 11,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_evidence",
+   "second": "approve_plan",
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "balanced",
+   "target": "menu_gap",
+   "second": "evidence_gap",
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 43,
+ "deciding": {
+  "evidence_allergens_covered": "All four evidence allergens appear in the nut crumble entry, which has a fruit crumble substitute. The spec check falls on the recipe date, which leaves slight doubt.",
+  "next_step": "Evidence expires on the review date, so it is only just current. A served-nut incident on 2025-02-11 argues for chasing fresh evidence, while the dish has a substitute and the exception is signed, which supports approving. Both are defensible.",
+  "first_gap_stage": "Evidence expires 2025-02-14, the same day as the review, so it is borderline. The recipe changed 2025-02-10 and the spec was checked the same day rather than later, leaving the menu borderline too.",
+  "exposure_proximity": "The history incident dated 2025-02-11, after plan_start, is a nut crumble that contains a declared allergen, so exposure has been reached. Possibly it was a one-off club serving, which leaves a little doubt.",
+  "meal_urgency": "Packed lunch runs until 2025-03-14, so the first meal is about 20 school days from the review. That sits on the boundary between level 0 and level 1."
+ },
+ "request": "rec-F403-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014234
+}

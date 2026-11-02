@@ -1,0 +1,132 @@
+{
+ "id": "F433-0044",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H44",
+   "age": 10,
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "pulse": 57
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 30
+   },
+   "arrived_at": "12:00",
+   "departed_at": null
+  },
+  "vet_card": {
+   "presented_at": "12:23",
+   "pulse_bpm": 62,
+   "cri": {
+    "first_bpm": 62,
+    "second_bpm": null
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 3,
+    "gut_sounds": "normal"
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 0
+    }
+   ],
+   "tack": {
+    "site": "girth",
+    "finding": "superficial gall, 2cm"
+   },
+   "vet_signed_at": null
+  },
+  "notes": {
+   "rider_note": "Girth slipped on the climb, rub is old.",
+   "vet_remark": "Signature to follow at desk."
+  }
+ },
+ "factors": {
+  "pulse_status": "met_after_window",
+  "time_mismatch": "none",
+  "gait_grade": "regular",
+  "gait_mitigation": false,
+  "metabolic_flags": 1,
+  "cri_rise": "unknown (second_bpm null)",
+  "missing_items": 2,
+  "out_of_sequence": false,
+  "tack_wound": "superficial_girth_gall",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_after_window",
+  "time_mismatch": "none",
+  "gait_grade": "regular",
+  "gait_mitigation": false,
+  "metabolic_flags": 1,
+  "cri_rise": 12.28,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "eliminate_ftq",
+   "second": "clear_to_continue",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "leaning",
+   "target": "ftq_other",
+   "second": null,
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "pulse_met": "Pulse 62 is under the limit but presented 12:23, 3 min after the 20 min window.",
+  "next_step": "Superficial girth gall (a tack wound) and late presentation versus a horse otherwise sound; eliminate or continue both defensible.",
+  "outcome_code": "Gait grade 0 and only crt 3 s marginal; the only distinct fault is the tack finding, so ftq_other.",
+  "welfare_risk": "Gall plus crt 3 s (two outside) against only mild findings, with the horse not signed off and no departure.",
+  "record_completeness": "cri.second_bpm null and vet_signed_at null, though the remark says signature will follow at the desk."
+ },
+ "request": "rec-F433-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009112
+}

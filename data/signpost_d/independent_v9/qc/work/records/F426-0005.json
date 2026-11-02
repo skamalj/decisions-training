@@ -1,0 +1,116 @@
+{
+ "id": "F426-0005",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B9",
+   "crop": "cherry"
+  },
+  "applications": [
+   {
+    "date": "2024-06-01",
+    "product_code": "N2",
+    "qty_applied": 4.5,
+    "qty_unit": "L",
+    "area_treated_ha": 2
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "N2",
+    "max_rate_per_ha": 1.5,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "minor_use_auth_ref": "MU-77"
+   }
+  ],
+  "equipment": null,
+  "harvest": {
+   "lot_id": "L5",
+   "block_id": "B8",
+   "first_pick_date": "2024-06-15",
+   "residue_test": {
+    "sampled": true,
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "over_25",
+  "partial_block_spray": false,
+  "clerical_mismatch": "lot_block_id_mismatch",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "missing",
+  "missing_item": "equipment_section_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "over_25",
+  "partial_block_spray": false,
+  "clerical_mismatch": "lot_block_id_mismatch",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "equipment_section_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 7,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "phi_cleared": "Gap 2024-06-01 to 2024-06-15 is exactly 14 days = PHI; counting is debatable.",
+  "next_step": "Residue clear; minor use ref present.",
+  "finding_class": "Block id B9 vs B8 mismatch in harvest.",
+  "reversal_time": "Packing and sale vs recall; weeks to months.",
+  "rate_overrun": "4.5/2=2.25 L/ha; authorised rate not stated, so 50% over base maximum; authorisation rate unclear."
+ },
+ "request": "rec-F426-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004458
+}

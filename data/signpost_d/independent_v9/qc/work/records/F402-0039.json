@@ -1,0 +1,117 @@
+{
+ "id": "F402-0039",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-4093",
+   "source": "hospital",
+   "received": "2025-06-03",
+   "priority": "urgent",
+   "site": {
+    "part": "shoulder",
+    "side": "L"
+   },
+   "onset": "2024-03-25"
+  },
+  "patient": {
+   "dob": "1951-08-14",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "red_flags": [
+    "constant_night_pain"
+   ],
+   "function_index": 31.45,
+   "surgery_date": "2025-04-12"
+  },
+  "gp_record": {
+   "dob": "1951-08-15",
+   "reviews": []
+  },
+  "attachments": [
+   {
+    "type": "surgical_opinion_advised",
+    "date": "2025-05-20"
+   }
+  ]
+ },
+ "factors": {
+  "red_flag_type": "constant_night_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "date_of_birth",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "post_op_protocol",
+  "condition_group": "non_physio_surgical",
+  "symptom_duration_weeks": 63,
+  "function_index": 31.45,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 3,
+  "post_op_days": 52,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "date_of_birth",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "post_op_protocol",
+  "condition_group": "non_physio_surgical",
+  "symptom_duration_weeks": 63,
+  "function_index": 31.45,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 3,
+  "post_op_days": 52,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "contested",
+   "target": "self_management",
+   "second": "redirect_out",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 51,
+ "deciding": {
+  "red_flag_unresolved": "red_flags lists constant_night_pain with no MRI, no review and no oncology discharge.",
+  "next_step": "The one-day DOB gap is trivial, so accepting is reasonable; the op protocol is absent.",
+  "pathway": "The surgical opinion attachment supports redirect_out, while the long duration suggests self-management.",
+  "reversal_time": "Placement is quickly reversible, but a redirect might take a few days to undo.",
+  "clinical_urgency": "A 63-week history favours waiting, while the unresolved night pain and surgery 52 days ago suggest sooner contact."
+ },
+ "request": "rec-F402-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007313
+}

@@ -1,0 +1,141 @@
+{
+ "id": "F430-0031",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S114",
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "C",
+     "normal_band": [
+      40,
+      75
+     ],
+     "alarm_limit": 90,
+     "trip_limit": 105,
+     "customers_fed": 23736,
+     "partner_id": "T2"
+    }
+   ]
+  },
+  "round": {
+   "date": "2025-03-04",
+   "scheduled_assets": [
+    "T1"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 82,
+    "unit": "C",
+    "timestamp": "2025-03-04T10:40"
+   }
+  ],
+  "defects": [
+   {
+    "id": "D1",
+    "asset_id": "T1",
+    "photo_ref": "IMG201",
+    "note": "Oil temp running warm."
+   }
+  ],
+  "history": {
+   "previous_round": null,
+   "permits": [
+    {
+     "id": "PTW31",
+     "asset": "T1",
+     "desc": "cooler fan work",
+     "valid": [
+      "2025-03-04T08:00",
+      "2025-03-04T11:00"
+     ]
+    }
+   ]
+  },
+  "network": {
+   "partner_status": "in_service"
+  }
+ },
+ "factors": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 23736,
+  "trivial_discrepancies": 0,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "none_logged",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": true,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 23736,
+  "trivial_discrepancies": 0,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "follow_up": {
+   "clarity": "leaning",
+   "target": "file_closed",
+   "second": null,
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "defect_corroborated": "Warm note with photo matches 82 C above the 75 C band top, but only modestly.",
+  "benign_explanation": "Permit PTW31 on T1 cooler fan work, valid 08:00-11:00, covers the 10:40 reading, though it is not stated to explain the temperature.",
+  "follow_up": "Reading below alarm, permit active, partner in service; accept as filed.",
+  "limit_deviation": "82 C is above normal 75 and below alarm 90.",
+  "supply_exposure": "T2 in service carries load, but 23736 customers on T1 leave doubt about a small residual exposure."
+ },
+ "request": "rec-F430-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008903
+}

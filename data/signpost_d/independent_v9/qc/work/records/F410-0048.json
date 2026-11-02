@@ -1,0 +1,137 @@
+{
+ "id": "F410-0048",
+ "family": "F410",
+ "state": {
+  "application": {
+   "holder_ref": "H3306",
+   "term_end": "2026-03-31",
+   "pitch_req": {
+    "width_m": 4.28
+   }
+  },
+  "licence_current": {
+   "holder_ref": "H3360",
+   "pitch": {
+    "width_m": 3.0
+   },
+   "variations": [
+    {
+     "type": "width",
+     "approved": true
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-05-31",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000
+  },
+  "account": {
+   "fees_due": [
+    {
+     "amount_gbp": 400
+    }
+   ],
+   "ledger": [
+    {
+     "amount_gbp": 116.23
+    }
+   ]
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 31,
+   "absence_notices": [
+    {
+     "accepted": true
+    }
+   ],
+   "complaints": [
+    {
+     "category": "noise",
+     "upheld": true,
+     "status": "open"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": false,
+  "commodity_change": "none",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 1.28,
+  "variation_approved": true,
+  "fee_arrears_gbp": 283.77,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.61,
+  "absences_notified": true,
+  "complaint_profile": "upheld_open_non_safety",
+  "holder_ref_mismatch": "transcription_error",
+  "docs_outstanding": 0
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": false,
+  "commodity_change": "none",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 1.28,
+  "variation_approved": true,
+  "fee_arrears_gbp": 283.77,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.61,
+  "absences_notified": true,
+  "complaint_profile": "upheld_open_non_safety",
+  "holder_ref_mismatch": "transcription_error",
+  "docs_outstanding": 0
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "leaning",
+   "target": "grant_conditional",
+   "second": null,
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "balanced",
+   "target": "scheduled_visit",
+   "second": "none_needed",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 29,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-05-31 is after term_end 2026-03-31 and indemnity meets the required sum.",
+  "renewal_disposition": "No documents outstanding; arrears of 283.77, an open non-safety complaint and a ref swap are issues to be handled by conditions rather than refusal.",
+  "inspection_level": "Open upheld complaint and a large width increase suggest a visit, but the width variation is approved and there is no food stall, so none_needed is plausible.",
+  "reversal_time": "Conditional renewal of a licence term with arrears and complaint conditions would take weeks to unwind.",
+  "discrepancy_count": "Ref swap H3306 vs H3360 and unpaid arrears are clear; attendance 31/50 is partly offset by an accepted absence notice, and the width gap is covered by the approved variation. Whether attendance remains short decides three versus four."
+ },
+ "request": "rec-F410-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009247
+}

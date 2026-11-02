@@ -1,0 +1,131 @@
+{
+ "id": "F432-0035",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E9",
+   "doors": [
+    "A"
+   ]
+  },
+  "shift": {
+   "end": "18:00",
+   "opening_count": 3,
+   "closing_count": 3
+  },
+  "feeding": [
+   {
+    "sheet_g": 500,
+    "offered_g": 500,
+    "leftover_g": 20
+   }
+  ],
+  "rounds": [
+   {
+    "sched": "10:00",
+    "logged": true
+   },
+   {
+    "sched": "14:00",
+    "logged": true
+   },
+   {
+    "sched": "17:59",
+    "logged": true,
+    "entry_time": "17:59"
+   }
+  ],
+  "close_check": {
+   "A": "17:57"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_just_before_last_round",
+  "intake_ratio": 0.96,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 0,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.69,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 4,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": true,
+  "field_mismatch": "animal_id_not_on_roster",
+  "behaviour_codes": 1,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "missed_rounds": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 40,
+ "deciding": {
+  "count_reconciles": "Opening 3 equals closing 3 and no movements are listed.",
+  "secure_at_close": "Door A was checked at 17:57, two minutes before the final round entry at 17:59; this is possibly timing noise, so it is balanced and leans toward not confirmed after the last round.",
+  "next_step": "The counts reconcile, every round is logged, intake is nearly complete and there are no faults, so the log can be filed.",
+  "intake_shortfall": "Offered 500 g minus 20 g leftover is 480 g, 96% of the sheet.",
+  "missed_rounds": "All three scheduled rounds have logged true."
+ },
+ "request": "rec-F432-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010348
+}

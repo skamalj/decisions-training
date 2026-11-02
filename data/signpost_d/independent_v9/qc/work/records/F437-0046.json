@@ -1,0 +1,123 @@
+{
+ "id": "F437-0046",
+ "family": "F437",
+ "state": {
+  "job": {
+   "ordered_words": 1200,
+   "source_version": "v2",
+   "glossary_version": "g3",
+   "due_at": "2025-03-10T09:00"
+  },
+  "source": {
+   "version": "v2",
+   "segment_count": 80,
+   "word_count": 1200
+  },
+  "deliverable": {
+   "built_from_version": "v2",
+   "segments_translated": 80,
+   "word_count": 1195,
+   "glossary_version_used": null,
+   "delivered_at": "2025-03-10T16:00"
+  },
+  "qa_report": {
+   "flags": 17,
+   "false_positive_marked": 10,
+   "number_mismatches": []
+  },
+  "review": {
+   "completed_at": "2025-03-10T16:20",
+   "signed_off": true,
+   "errors": []
+  },
+  "history": {
+   "revision_rounds": []
+  }
+ },
+ "factors": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_after_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.59,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": -7,
+  "client_waiver": false,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_after_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.59,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": -7,
+  "client_waiver": false,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 30,
+ "deciding": {
+  "scope_matches": "Versions all v2 and segments 80/80; word count differs by only 5 of 1200.",
+  "reviewed_in_time": "review.completed_at 16:20 is 20 minutes after delivered_at 16:00, but signed_off is true and no errors; defensible either way.",
+  "next_step": "Counts, versions, empty errors and number_mismatches, and sign-off all consistent; nothing open.",
+  "open_severity": "Review errors empty and QA flags marked false positive; no open errors, small doubt from glossary version being null.",
+  "parties_needed": "Nothing to resolve; no open items or pending steps."
+ },
+ "request": "rec-F437-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005927
+}

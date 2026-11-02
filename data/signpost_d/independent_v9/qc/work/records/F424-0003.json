@@ -1,0 +1,140 @@
+{
+ "id": "F424-0003",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2413",
+   "brew_date": "2024-06-10",
+   "vessel_id": "FV5",
+   "volume_hl": 60,
+   "yeast_strain": "S-04",
+   "yeast_gen": 1,
+   "og_target": 1.05,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-06-10",
+    "gravity_sg": 1.05,
+    "temp_c": 18
+   },
+   {
+    "ts": "2024-06-16",
+    "gravity_sg": 1.014,
+    "temp_c": 18
+   },
+   {
+    "ts": "2024-06-17",
+    "gravity_sg": 1.013,
+    "temp_c": 18
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-06-10",
+    "type": "pitch",
+    "vessel_id": "FV5",
+    "note": "Pitched S-04 gen 1."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2413",
+   "abv_pct": 5.2,
+   "abv_label_band": 5.0,
+   "diacetyl_mgl": 0.11,
+   "micro_plate": {
+    "result": "negative",
+    "cfu_ml": 0
+   },
+   "lab_note": "Diacetyl above 0.10 target; extend conditioning 3 days before packaging."
+  },
+  "release_request": {
+   "requested_date": "2024-06-18",
+   "volume_hl": 60.5,
+   "vessel_id": "FV6",
+   "note": "Customer launch Friday, please release today."
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.11,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.11,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "rework",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 95,
+ "deciding": {
+  "terminal_gravity": "Readings of 1.014 then 1.013 are inside the band but the second one is still dropping slightly, so stability is arguable.",
+  "contamination_supported": "Plate is negative with 0 cfu and there is no sensory note.",
+  "batch_disposition": "The lab note calls for 3 more days of conditioning because diacetyl is above target; that is a correctable defect and the rush request does not outweigh it.",
+  "deviation_severity": "Diacetyl 0.11 against the 0.10 target is exactly 10% over, on the line between nil and minor.",
+  "record_discrepancies": "Vessel FV5 vs release FV6 is a clear mismatch. Volume 60 vs 60.5 is exactly 0.5 hl, on the line of the tolerance."
+ },
+ "request": "rec-F424-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012309
+}

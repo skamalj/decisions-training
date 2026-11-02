@@ -1,0 +1,133 @@
+{
+ "id": "F429-0031",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 200,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 101.5,
+    "action_m": 102.2
+   },
+   "readings": [
+    {
+     "level_m": 100.4,
+     "datum": "site"
+    },
+    {
+     "level_m": 100.6,
+     "datum": "gauge_zero"
+    }
+   ],
+   "gauge_zero_offset_m": 0.12
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "2024-05-02T06:00",
+    "open_after_m": 0.5
+   },
+   {
+    "gate": "G1",
+    "t": "2024-05-02T06:10",
+    "open_after_m": 1.2
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.2
+    }
+   ],
+   "calc_peak_m3s": 196,
+   "gauged_peak_m3s": 144
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "pending",
+    "completed_at": null
+   }
+  }
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 35.84,
+  "datum_mismatch": true,
+  "missing_section": "notifications_missing",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": true
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 35.84,
+  "datum_mismatch": true,
+  "missing_section": "notifications_missing",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": true
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "accept_log",
+   "second": "query_operator",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (ramp_limit_breached = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 34,
+ "deciding": {
+  "within_licence": "Calculated 196 and gauged 144 are both under the 200 limit, though the calculation is within 2% of it.",
+  "gates_reconciled": "G1 open_after 1.2 matches calc opening 1.2, but the 36% calc vs gauged gap leaves some doubt.",
+  "next_step": "Inspection is pending and notifications are absent, but the record could be accepted or queried; the ramp breach and missing notifications pull toward query.",
+  "trigger_tier": "G1 moved 0.7 m in 10 min against a 0.3 limit, which is a ramp breach, even though levels stay below the alert trigger.",
+  "parties_needed": "Ramp breach, pending inspection, missing notifications and the discharge gap involve several teams, and the count is uncertain between four and five or more."
+ },
+ "request": "rec-F429-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005425
+}

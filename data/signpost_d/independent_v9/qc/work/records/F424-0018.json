@@ -1,0 +1,114 @@
+{
+ "id": "F424-0018",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2413",
+   "vessel_id": "FV2",
+   "volume_hl": 10,
+   "yeast_strain": "US-05",
+   "fg_target_min": 1.008,
+   "fg_target_max": 1.012,
+   "strain_max_temp_c": 22
+  },
+  "readings": [
+   {
+    "ts": "2024-07-01",
+    "gravity_sg": 1.01,
+    "temp_c": 22.3
+   },
+   {
+    "ts": "2024-07-02",
+    "gravity_sg": 1.01,
+    "temp_c": 20
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2413",
+   "diacetyl_mgl": 0.19,
+   "abv_pct": null,
+   "pending": true
+  },
+  "release_request": {
+   "vessel_id": "FV4",
+   "volume_hl": 11,
+   "note": "Truck leaves Friday."
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.19,
+  "discrepancy_count": 2,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.19,
+  "discrepancy_count": 1,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "balanced",
+   "target": "release_conditional",
+   "second": "rework",
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "terminal_gravity": "Two consecutive 1.010 readings inside 1.008-1.012.",
+  "contamination_supported": "No micro or sensory signal; the result is pending.",
+  "batch_disposition": "ABV pending, diacetyl 0.19 high, rush; fix versus rework is arguable.",
+  "deviation_severity": "Brief 22.3 C against a 22 C max, within 10%; diacetyl is also high.",
+  "record_discrepancies": "Vessel FV2 vs FV4 and volume 10 vs 11 hl; two or three mismatches."
+ },
+ "request": "rec-F424-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005879
+}

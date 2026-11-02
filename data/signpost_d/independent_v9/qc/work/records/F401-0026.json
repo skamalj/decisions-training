@@ -1,0 +1,150 @@
+{
+ "id": "F401-0026",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P101",
+   "planned_discharge_at": "2025-03-10T11:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 16,
+     "spo2": 96,
+     "sbp": 124,
+     "hr": 72,
+     "temp": 36.7,
+     "avpu": "A",
+     "at": "2025-03-10T06:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P101",
+   "reconciled": [
+    {
+     "drug": "paracetamol",
+     "dose": 1,
+     "unit": "g",
+     "freq": "qid"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "paracetamol",
+     "dose": 1000,
+     "unit": "mg",
+     "freq": "qid"
+    }
+   ]
+  },
+  "function_social": {
+   "therapy": {
+    "transfer_assist_count": 2,
+    "adl_score": 3
+   },
+   "social": {
+    "lives_alone": true
+   },
+   "care_arrangement": {
+    "type": "care_home",
+    "status": "funding_approved",
+    "start_date": "2025-03-12"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "done",
+     "completed_at": "2025-03-09T16:00",
+     "signed_by": "RN"
+    }
+   ],
+   "transport": {
+    "booked_date": null,
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "permanent_care",
+  "care_arrangement_status": "confirmed_with_start_date_2_days_after",
+  "logistics_delay": "transport_unbooked",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 5,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "conditional_discharge",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "care_home",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "rx_matches": "Only difference is 1 g vs 1000 mg paracetamol, a unit-only decoy, so it modestly favours a match.",
+  "next_step": "Obs and tasks are clean, but the placement starts days later, so discharge only proceeds once that is in place.",
+  "destination": "Care home placement with funding approved; 2-person transfers, ADL 3, lives alone.",
+  "outstanding_tasks": "The one checklist item is done, with completed_at and signed_by.",
+  "discharge_delay": "Care start is 2 days after the planned date, but transport is unbooked with null date, so level 2 or 3 are both plausible."
+ },
+ "request": "rec-F401-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009629
+}

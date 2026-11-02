@@ -1,0 +1,160 @@
+{
+ "id": "F414-0033",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SW-08",
+   "site_id": "P05",
+   "equip_type": "swing",
+   "install_date": "2017-04-12",
+   "std_ref": "EN1176-2",
+   "crit_fall_height_m": 1.5,
+   "surf_type": "wood_chip",
+   "variance_ref": null
+  },
+  "inspection": {
+   "insp_date": "2025-05-20",
+   "insp_grade": "annual_main",
+   "inspector_id": "I-44",
+   "fall_height_m": 1.5,
+   "surf_type_found": "wood_chip",
+   "surf_depth_mm": 217,
+   "surf_req_table": [
+    {
+     "max_h_m": 3.0,
+     "type": "wood_chip",
+     "min_depth_mm": 200
+    }
+   ],
+   "chain_wear_pct": 12,
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "O1",
+     "result": "pass"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "PT-01",
+     "component_id": "C2",
+     "injury_mech": "cosmetic"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W9",
+    "asset_id": "SW-08",
+    "component_id": "C2",
+    "defect_ref": "D14",
+    "raised_date": "2025-05-20",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "low",
+   "closure_status": "open",
+   "incident_reports_90d": 2,
+   "last_vandalism_date": null
+  },
+  "history": [
+   {
+    "date": "2024-05-15",
+    "grade": "annual_main",
+    "defect_refs": [],
+    "component_results": {
+     "C2": "pass"
+    }
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "swing",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 17.46,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "low",
+  "incident_reports_90d": 2
+ },
+ "factors_sampled": {
+  "equipment_type": "swing",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 17.46,
+  "worst_defect_class": "no_mechanism",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 4,
+  "work_orders_closed_fraction": 0.02,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "low",
+  "incident_reports_90d": 2
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 136,
+ "deciding": {
+  "prior_defects_cleared": "The latest history entry has an empty defect_refs list, so nothing was left to clear.",
+  "surfacing_adequate": "217 mm measured against a 200 mm wood_chip requirement at 1.5 m; a small margin.",
+  "asset_disposition": "Only a cosmetic paint finding, probe passes, and no hazards; two incident reports are a minor doubt.",
+  "remedial_progress": "The one raised work order W9 is open, so none are closed.",
+  "hazard_severity": "The only finding has injury_mech cosmetic."
+ },
+ "request": "rec-F414-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01002
+}

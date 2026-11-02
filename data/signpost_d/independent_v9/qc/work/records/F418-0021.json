@@ -1,0 +1,155 @@
+{
+ "id": "F418-0021",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "KLW",
+   "platform": 2,
+   "date": "2024-05-14",
+   "start": "04:30",
+   "end": "13:00",
+   "service_from": "07:00",
+   "service_to": "23:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S11",
+    "planned_start": "04:30"
+   },
+   {
+    "staff_id": "S14",
+    "planned_start": "04:30"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S11",
+    "sign_on": "04:28",
+    "safety_comp_exp": "2025-01-10",
+    "dispatch_comp_exp": "2025-01-10"
+   },
+   {
+    "staff_id": "S14",
+    "sign_on": "06:30",
+    "safety_comp_exp": "2025-03-02",
+    "dispatch_comp_exp": "2025-03-02"
+   },
+   {
+    "staff_id": "S19",
+    "sign_on": "04:40",
+    "safety_comp_exp": "2024-11-20",
+    "dispatch_comp_exp": "2024-11-20"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "04:30"
+   },
+   {
+    "type": "cover_start",
+    "time": "04:30",
+    "staff_id": "S19"
+   },
+   {
+    "type": "cover_end",
+    "time": "05:30",
+    "staff_id": "S19"
+   },
+   {
+    "type": "gap_end",
+    "time": "06:30"
+   }
+  ],
+  "controls": {
+   "disp_ref": null,
+   "prior_shortfalls_30d": 4
+  },
+  "remarks": [
+   "S14 delayed by train. S19 covered until 05:30, then nobody until S14 arrived."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 120,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": false,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 120,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": false,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": true
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "partial_cover",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "headcount_verified": "All three have attendance rows and in-date competence, but S19 signed on 04:40 against cover_start 04:30, a small mismatch that holds the answer in balance.",
+  "next_step": "Gap 04:30-06:30 with cover only to 05:30 is a found shortfall; no dispensation is needed or missing, and the remarks agree, so amend and brief.",
+  "coverage_outcome": "cover_start 04:30 to cover_end 05:30 fills part of the gap, leaving 05:30-06:30 open.",
+  "reversal_time": "The gap is over, so only the log entries and a briefing need fixing. That could take a day or a few days, which keeps level 0 and level 1 in contest.",
+  "exposure_severity": "The whole gap (04:30-06:30) falls before service_from 07:00, so no period was below minimum during passenger service."
+ },
+ "request": "rec-F418-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013499
+}

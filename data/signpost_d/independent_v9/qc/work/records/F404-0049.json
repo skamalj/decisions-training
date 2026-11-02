@@ -1,0 +1,137 @@
+{
+ "id": "F404-0049",
+ "family": "F404",
+ "state": {
+  "session": {
+   "age_band": "three_plus",
+   "ratio_rule": "1:8"
+  },
+  "children": {
+   "booked": 16,
+   "slots": [
+    {
+     "t": "10:00",
+     "signed_in": 17
+    },
+    {
+     "t": "10:15",
+     "signed_in": 17
+    },
+    {
+     "t": "10:30",
+     "signed_in": 17
+    },
+    {
+     "t": "10:45",
+     "signed_in": 17
+    }
+   ]
+  },
+  "rota": [
+   {
+    "staff_id": "S1"
+   },
+   {
+    "staff_id": "S2"
+   },
+   {
+    "staff_id": "S3"
+   }
+  ],
+  "staff_signin": [
+   {
+    "staff_id": "S1",
+    "time_in": "08:00"
+   },
+   {
+    "staff_id": "S2",
+    "time_in": "08:00"
+   },
+   {
+    "staff_id": "S3",
+    "time_in": "10:45"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 2
+  }
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 17,
+  "staff_signin_variance": "late_arrival",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 45,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 2
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 17,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 74,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 2
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "corrective_plan",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "clear",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "below_ratio": "17 children need 3 staff; only S1 and S2 eligible until S3 time_in 10:45, with no cover logged.",
+  "disposition": "Confirmed shortfall of about 45 minutes, under sixty, with one child beyond cover: agree a corrective plan.",
+  "primary_cause": "Rota lists 3 staff but S3 arrived 10:45; the children are only 1 above booked 16, so staff shortfall is the main cause.",
+  "shortfall_duration": "Slots 10:00-10:45 lack the third staff: 45 minutes, level 2, rather than the planned level 3.",
+  "breach_severity": "2 staff cover 16 of 17 children, so 1 beyond cover; a reviewer could round up to 2 given the overrun."
+ },
+ "request": "rec-F404-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008014
+}

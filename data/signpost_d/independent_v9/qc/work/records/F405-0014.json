@@ -1,0 +1,153 @@
+{
+ "id": "F405-0014",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-4472",
+   "detected_on": "2025-09-01",
+   "term_start": "2025-10-13",
+   "room": "A0.07"
+  },
+  "booking_a": {
+   "module": "MTH101",
+   "dept": "MTH",
+   "day": "Thu",
+   "start": "14:00",
+   "end": "15:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 60,
+   "features": [],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "ART105",
+   "dept": "ART",
+   "day": "Thu",
+   "start": "14:00",
+   "end": "15:00",
+   "weeks": [
+    5,
+    6
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-08-20",
+   "approver": "s.lin"
+  },
+  "room": {
+   "code": "A0.07",
+   "capacity": 61
+  },
+  "alternatives": [
+   {
+    "code": "A0.09",
+    "capacity": 60,
+    "features": [
+     "projector"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "change_request",
+    "state": "open",
+    "target_room": "A0.12"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 46,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.99,
+  "required_feature": "none",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 0
+ },
+ "factors_sampled": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 46,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.99,
+  "required_feature": "none",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 0
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 52,
+ "deciding": {
+  "genuine_clash": "Weeks [1-4] and [5,6] do not intersect, so the plan's leaning true is not met; the overlap type was changed to disjoint weeks.",
+  "alt_room_fits": "A0.09 fits capacity 60 and is free; no feature is required. The listed projector is a different feature, so fit is weakly balanced.",
+  "resolution": "No shared weeks, so dismiss; the open change_request adds slight doubt.",
+  "urgency": "Detection 2025-09-01, term starts 2025-10-13, so any occurrence is 42+ days out.",
+  "parties_needed": "The report can be dismissed by the officer alone; one person suffices."
+ },
+ "request": "rec-F405-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006018
+}

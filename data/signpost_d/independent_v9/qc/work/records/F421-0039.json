@@ -1,0 +1,130 @@
+{
+ "id": "F421-0039",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-93160",
+   "contents": "monitor",
+   "qty": 1,
+   "weight_kg": 5.5,
+   "declared_value_gbp": 1991.31
+  },
+  "handling_events": [
+   {
+    "ts": "2024-07-09T10:00",
+    "site": "HUB-S",
+    "code": "ADDR"
+   },
+   {
+    "ts": "2024-07-10T06:10",
+    "site": "THIS",
+    "code": "INB"
+   },
+   {
+    "ts": "2024-07-10T07:40",
+    "site": "THIS",
+    "code": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-07-10T09:00",
+   "observed_item": "display monitor",
+   "qty_found": 1,
+   "weight_kg": 5500,
+   "unit": "g",
+   "condition": "written_off",
+   "photos": [
+    "a.jpg",
+    "b.jpg"
+   ],
+   "repair_est_gbp": 1952.4
+  },
+  "claim": {
+   "claimed_gbp": 3826.5,
+   "packaging_desc": "thin box, no void fill"
+  },
+  "notes": [
+   "Shipper says it was crushed upstream."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "complete",
+  "loss_pct": 98.05,
+  "declared_value": 1991.31,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.96
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "complete",
+  "loss_pct": 98.05,
+  "declared_value": 1991.31,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.96
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_repack",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 77,
+ "deciding": {
+  "depot_fault": "Damage coded after clean INB here, but the poor packaging and upstream blame note keep it open.",
+  "contents_match": "Monitor vs display monitor and 5.5 kg vs 5500 g are synonym or unit differences.",
+  "next_step": "Complete report with photos and the damage code after clean INB support accepting liability and writing off.",
+  "loss_share": "Condition written_off with repair 1952.4 of 1991.31 is 98%, borderline between major and total.",
+  "parties_needed": "Single-site write-off needs the assessor plus claims or finance, so two."
+ },
+ "request": "rec-F421-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005158
+}

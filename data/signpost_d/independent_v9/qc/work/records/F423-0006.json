@@ -1,0 +1,141 @@
+{
+ "id": "F423-0006",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-5521",
+   "stock_spec": "GL135",
+   "run_qty": 4690,
+   "overs_pct": 5.49,
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "P-5521",
+   "ok_sheet_no": 212,
+   "signed_at": null,
+   "concession": null
+  },
+  "colour_readings": {
+   "calibrated_on": "2025-03-03",
+   "patches": [
+    {
+     "ink": "K",
+     "target_lab": [
+      18,
+      0,
+      0
+     ],
+     "delta_e": 2.6
+    },
+    {
+     "ink": "M",
+     "target_lab": [
+      48,
+      74,
+      -3
+     ],
+     "delta_e": 3.0
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "unit_pair": "1-2",
+     "offset_mm": 0.24,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P3",
+   "stock_loaded": "GL135",
+   "first_production_at": "2025-05-02T07:40",
+   "sheets_production": 469,
+   "sheets_makeready": 180,
+   "stoppages": [
+    {
+     "min": 12
+    }
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "marginal",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 469,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 5.49,
+  "register_offset_mm": 0.24,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 60,
+  "customer_tier": "trade",
+  "prior_stoppages": 1
+ },
+ "factors_sampled": {
+  "colour_deviation": "marginal",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 469,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 5.49,
+  "register_offset_mm": 0.24,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 60,
+  "customer_tier": "trade",
+  "prior_stoppages": 1
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate_manager",
+   "second": "hold_for_signoff",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "colour_in_tolerance": "Worst patch delta_e 3.0 sits exactly on spec_max_de 3.0 with no concession; calibration is 60 days old.",
+  "run_before_signoff": "signed_at is null while 469 production sheets are logged, so it ran with no signature; a reader could still see it as merely pending.",
+  "next_step": "Unsigned (hold_for_signoff) versus 469 suspect sheets from in-image 0.24 mm misregister, against an allowance of about 258 (escalate).",
+  "staff_effort": "Either a quick chase of the signature (under an hour) or a short manager decision on the run (a few hours); nothing points clearly to one.",
+  "scrap_exposure": "469 production sheets with in-image offset 0.24 mm over 0.15 against run_qty 4690: exactly 10%, at the level 3 edge with level 2 plausible."
+ },
+ "request": "rec-F423-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009152
+}

@@ -1,0 +1,192 @@
+{
+ "id": "F405-0044",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-7710",
+   "detected_on": "2025-09-16",
+   "term_start": "2025-10-06",
+   "room": "E3.01"
+  },
+  "booking_a": {
+   "module": "ENG150",
+   "dept": "ENG",
+   "day": "Wed",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "headcount": 72,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "MAT140",
+   "dept": "MAT",
+   "room": "E301",
+   "day": "Wed",
+   "start": "11:00",
+   "end": "13:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "status": "provisional",
+   "approved_at": null,
+   "approver": null
+  },
+  "room": {
+   "code": "E3.01",
+   "aliases": [
+    "E301"
+   ],
+   "capacity": 100,
+   "features": [
+    "lecture_capture"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "E3.09",
+    "capacity": 100,
+    "features": [],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-02-03"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-03-14"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-05-06"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-07-01"
+   },
+   {
+    "type": "change_request",
+    "state": "open",
+    "booking": "MAT140",
+    "target_slot": "Wed 10:00-12:00"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 20,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.72,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 4
+ },
+ "factors_sampled": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "cancelled_not_released",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 62,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.72,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 4
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "genuine_clash": "booking_a ends 11:00 exactly when booking_b starts 11:00 in the same room, so the current times do not overlap.",
+  "alt_room_fits": "E3.09 has capacity 100 but an empty feature list, while ENG150 requires lecture_capture; the open change could displace MAT140 instead.",
+  "resolution": "booking_b is provisional with null approval and an open change_request moving it to Wed 10:00-12:00, which would create overlap, so confirmation is outstanding.",
+  "urgency": "Detected 2025-09-16 and the first Wednesday is 2025-10-08, 22 days later, within 8-28 days.",
+  "parties_needed": "Two departments, timetabling, approver and AV or capture support, plus the change requester, would plausibly total five or more."
+ },
+ "request": "rec-F405-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01201
+}

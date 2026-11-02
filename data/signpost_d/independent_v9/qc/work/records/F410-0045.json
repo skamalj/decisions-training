@@ -1,0 +1,142 @@
+{
+ "id": "F410-0045",
+ "family": "F410",
+ "state": {
+  "application": {
+   "term_end": "2026-02-28",
+   "commodities": [
+    "vegetables"
+   ],
+   "pitch_req": {
+    "width_m": 3.16
+   },
+   "docs_pending": []
+  },
+  "licence_current": {
+   "commodities": [
+    "veg"
+   ],
+   "pitch": {
+    "width_m": 3.0
+   },
+   "conditions": {
+    "min_attendance_pct": 80
+   },
+   "variations": [
+    {
+     "type": "size",
+     "approved": true
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2025-10-31",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": null
+  },
+  "account": {
+   "fees_due": [
+    {
+     "amount_gbp": 800
+    }
+   ],
+   "ledger": [
+    {
+     "amount_gbp": 537.81
+    }
+   ]
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 48,
+   "absence_notices": [
+    {
+     "accepted": true
+    }
+   ],
+   "complaints": []
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_more_than_14d_early",
+  "broker_confirmation_held": false,
+  "commodity_change": "synonym_only",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.16,
+  "variation_approved": true,
+  "fee_arrears_gbp": 262.19,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.96,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "ends_more_than_14d_early",
+  "broker_confirmation_held": false,
+  "commodity_change": "synonym_only",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.16,
+  "variation_approved": true,
+  "fee_arrears_gbp": 262.19,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.96,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "refuse",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "contested",
+   "target": "scheduled_visit",
+   "second": "desk_check",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "pli_term_covered": "pli.end 2025-10-31 is four months before term_end 2026-02-28 with no broker_conf, so cover is not evidenced for the whole term.",
+  "renewal_disposition": "Unmitigated cover lapse plus arrears of 262.19 with no plan; refuse.",
+  "inspection_level": "Size delta 0.16 with an approved variation suggests desk check, but arrears and the lapse could prompt a visit; contested.",
+  "reversal_time": "A refusal could be undone same day by a corrected cover document or take days; contested.",
+  "discrepancy_count": "The cover gap and arrears are unresolved; the size and commodity wording are explained, so 1 versus 2."
+ },
+ "request": "rec-F410-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00521
+}

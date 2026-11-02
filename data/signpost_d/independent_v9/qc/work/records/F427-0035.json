@@ -1,0 +1,149 @@
+{
+ "id": "F427-0035",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V505",
+   "visit_date": "2024-09-10",
+   "surveyor_grade": "accredited"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 6,
+   "dams_total": 4
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "DW1",
+     "depth_cm": 44
+    },
+    {
+     "id": "DW2",
+     "depth_cm": 49
+    },
+    {
+     "id": "DW3",
+     "depth_cm": 52
+    },
+    {
+     "id": "DW4",
+     "depth_cm": 46
+    },
+    {
+     "id": "DW5",
+     "depth_cm": 50
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 33,
+     "prev_depth_cm": 33
+    }
+   ],
+   "rain_30d_pct_normal": 61
+  },
+  "structures": {
+   "inspections": null,
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": null,
+   "photos_uploaded": null,
+   "photos_expected": 9
+  },
+  "notes": {
+   "surveyor_note": "Routine visit, dry underfoot.",
+   "prior_visits": []
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.83,
+  "photos_status": "none",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": false,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": -22.0,
+  "rainfall_pct_normal": 61.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.82,
+  "photos_status": "full",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": false,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": -12.66,
+  "rainfall_pct_normal": 61.04,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "leaning",
+   "target": "well_below",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 44,
+ "deciding": {
+  "dam_caused_drop": "Rain is dry at 61% of normal, which favours weather, but the control well is steady while the site wells are deep, which leaves a dam cause possible; no dam data is logged.",
+  "next_step": "Nothing flags a defect, no work orders and no history, so filing is favoured, though the missing elements leave doubt.",
+  "hydro_state": "Mean of the five wells is 48.2 cm against floor 25, about 23 cm below, which is well_below.",
+  "dam_severity": "Inspections are null so no defect is logged and no open orders or history exist; intact is the default, with doubt as nothing was inspected.",
+  "evidence_completeness": "5 of 6 wells read is partial, while photos and quadrats are null and inspections are null, so at most one element."
+ },
+ "request": "rec-F427-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012532
+}

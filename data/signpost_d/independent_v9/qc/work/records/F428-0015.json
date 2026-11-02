@@ -1,0 +1,113 @@
+{
+ "id": "F428-0015",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "gate_type": "radial",
+   "rated_closure_s": 120
+  },
+  "inspection": {
+   "closure_test": {
+    "performed": true,
+    "closure_s": 185,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "component": "trunnion_motor",
+    "grade": 3,
+    "status": "open"
+   }
+  ],
+  "operations": {
+   "outage": {
+    "status": "out_of_service",
+    "permit_expiry": "2025-01-05"
+   },
+   "flood_alert_active": true
+  }
+ },
+ "factors": {
+  "gate_type": "radial",
+  "closure_time_ratio": 1.54,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 3,
+  "mismatch_location": "rated_closure_time",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 49,
+  "borderline_case": false,
+  "outage_beyond_permit": true
+ },
+ "factors_sampled": {
+  "gate_type": "radial",
+  "closure_time_ratio": 1.54,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 1,
+  "mismatch_location": "rated_closure_time",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 49,
+  "borderline_case": false,
+  "outage_beyond_permit": true
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_engineer",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "drive_actuation",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (outage_beyond_permit = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 40,
+ "deciding": {
+  "closure_test_valid": "result pass but closure 185 s exceeds rated 120 s, so valid vs not is balanced.",
+  "next_step": "out_of_service with permit_expiry 2025-01-05 earlier than the visit and flood alert active; escalate to engineer.",
+  "defect_class": "Only open defect is trunnion_motor grade 3.",
+  "section_discrepancies": "Sections are sparse and the rated closure time and other values conflict across sections, leaning to three or more.",
+  "flood_risk": "Outage past permit expiry with flood alert active is Critical per the rule, but sparse detail leaves doubt."
+ },
+ "request": "rec-F428-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005501
+}

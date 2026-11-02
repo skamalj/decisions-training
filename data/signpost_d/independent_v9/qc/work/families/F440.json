@@ -1,0 +1,338 @@
+{
+ "id": "F440",
+ "domain": "youth hostel booking reviews",
+ "role": "Group bookings officer at a regional youth hostel network, checking each school or youth-group booking before it is confirmed",
+ "setting": "Incoming group bookings for youth hostels arrive as structured records combining the booking request, the submitted group roster, the provisional room allocation, payment status, safeguarding checks for adult leaders and the organiser's booking history. The officer reviews one record at a time and decides whether supervision cover is adequate, whether the deposit position is acceptable, what to do with the booking, how urgent it is and how many unexplained inconsistencies it contains. Policy requires 1 adult per 10 minors aged 13 to 17 and 1 adult per 8 minors under 13 on every night, with ratios computed from roster dates of birth against the arrival date. Female and male minors sleep in separate dorms.",
+ "questions": {
+  "ratio_met": {
+   "type": "noul",
+   "instructions": "Supervision ratio meets policy on every night of the stay.",
+   "criteria": {
+    "true": "Required adult cover present on all booked nights",
+    "false": "At least one night falls below required cover"
+   }
+  },
+  "deposit_covered": {
+   "type": "noul",
+   "instructions": "Deposit received covers the amount due under agreed payment terms.",
+   "criteria": {
+    "true": "Paid amount meets amount due or approved instalment",
+    "false": "Paid amount short with no approved instalment plan"
+   }
+  },
+  "disposition": {
+   "type": "choice",
+   "instructions": "What should happen to this group booking next?",
+   "criteria": {
+    "confirm": "All checks satisfied; booking released for arrival without conditions.",
+    "confirm_conditional": "Confirmable now; one named item must clear before arrival.",
+    "hold": "Cannot confirm until one specific missing confirmation is received.",
+    "refer_manager": "Several open issues or a policy breach need manager decision.",
+    "decline": "Group cannot be accommodated safely; cancel and refund deposit."
+   }
+  },
+  "urgency": {
+   "type": "score",
+   "instructions": "How soon must this booking be resolved before arrival?",
+   "criteria": [
+    "Routine: arrival more than 30 days away",
+    "Soon: arrival between 15 and 30 days away",
+    "Pressing: arrival between 4 and 14 days away",
+    "Immediate: arrival within 3 days or already today"
+   ]
+  },
+  "conflict_count": {
+   "type": "score",
+   "instructions": "How many cross-section conflicts lack a logged amendment explaining them?",
+   "criteria": [
+    "No unexplained conflicts between any sections",
+    "Exactly one unexplained conflict between sections",
+    "Two or three unexplained conflicts between sections",
+    "Four or more unexplained conflicts between sections"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "pax_mismatch",
+   "description": "Difference between booked headcount and number of people on the roster",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "one_person",
+    "two_to_four",
+    "five_plus"
+   ],
+   "weights": [
+    0.35,
+    0.25,
+    0.25,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "night_mismatch",
+   "description": "Booked arrival/departure nights versus nights covered in the room allocation",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "one_night_short",
+    "one_night_extra",
+    "different_dates"
+   ],
+   "weights": [
+    0.5,
+    0.2,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "amendment_logged",
+   "description": "A booking amendment entry exists that accounts for any pax or night mismatch",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S1",
+    "S3"
+   ]
+  },
+  {
+   "name": "supervision_level",
+   "description": "Adult cover relative to the age-banded ratio computed from roster dates of birth",
+   "kind": "categorical",
+   "values": [
+    "comfortable",
+    "exactly_at_ratio",
+    "short_one_night",
+    "short_all_nights"
+   ],
+   "weights": [
+    0.35,
+    0.2,
+    0.25,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "extra_cover_logged",
+   "description": "Additional adult cover exists elsewhere (late-joining leader in amendments or hostel warden booked in allocation) that may close a ratio gap",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "deposit_position",
+   "description": "Deposit paid compared with the deposit due under the booking terms",
+   "kind": "categorical",
+   "values": [
+    "paid_full",
+    "overpaid",
+    "partial",
+    "nothing_paid"
+   ],
+   "weights": [
+    0.35,
+    0.1,
+    0.35,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "instalment_approved",
+   "description": "An approved instalment schedule exists whose current due amount is met by the partial payment",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "days_to_arrival",
+   "description": "Days between the record's review date and the booked arrival date",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 120,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S6"
+   ]
+  },
+  {
+   "name": "dorm_fit",
+   "description": "Whether roster sex split fits the allocated single-sex dorm beds",
+   "kind": "categorical",
+   "values": [
+    "fits",
+    "needs_one_swap",
+    "cannot_fit"
+   ],
+   "weights": [
+    0.55,
+    0.3,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "leader_checks",
+   "description": "Status of safeguarding background checks for adults listed on the roster",
+   "kind": "categorical",
+   "values": [
+    "all_verified",
+    "one_pending",
+    "several_missing"
+   ],
+   "weights": [
+    0.5,
+    0.3,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S3"
+   ]
+  },
+  {
+   "name": "trusted_organiser",
+   "description": "Organiser holds trusted status from several clean past stays",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "prior_no_shows",
+   "description": "Count of past bookings by this organiser that ended as no-shows or late cancellations",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "diet_count_drift",
+   "description": "Decoy: dietary requirement totals in booking versus roster flags differ slightly",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "minor"
+   ],
+   "weights": [
+    0.6,
+    0.4
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "booking",
+   "description": "Booking reference, review date, arrival and departure dates, booked pax by age band, dietary totals, amendments list"
+  },
+  {
+   "name": "roster",
+   "description": "List of group members with role, date of birth, sex, dietary flag"
+  },
+  {
+   "name": "allocation",
+   "description": "Provisional rooms with type, sex designation, beds, nights covered, optional warden cover"
+  },
+  {
+   "name": "payment",
+   "description": "Total price, deposit due, amount paid, payment dates, instalment schedule or null"
+  },
+  {
+   "name": "safeguarding",
+   "description": "Per-adult background check status, check date and expiry"
+  },
+  {
+   "name": "history",
+   "description": "Organiser id, trusted flag, past stays count, no-show count, last stay date"
+  }
+ ],
+ "rendering_notes": "pax_mismatch: booking.pax_by_band totals differ from roster entry count; never stated as a difference. night_mismatch: booking.arrival/departure versus allocation[].nights date lists. amendment_logged: booking.amendments[] entries with type codes (pax_change, date_change), delta and logged_at that exactly account for the mismatch when true; when false amendments is empty or holds an unrelated entry (e.g. diet_change). supervision_level: computed only from roster roles (leader/participant) and dates of birth against arrival; adults leaving early shown by roster[].depart_date, giving one-night shortfall. extra_cover_logged: a leader_add amendment with a new adult or allocation.warden_cover listing nights; when true it may close the gap only for the nights it lists, so sometimes it covers only part. deposit_position and instalment_approved: payment.deposit_due vs payment.paid_total; instalment schedule lists due dates and amounts, and the current due instalment may be met. days_to_arrival: booking.review_date versus booking.arrival. dorm_fit: allocation room sex designation and bed counts versus roster sex counts. leader_checks: safeguarding[] status verified/pending/missing with expiry dates; an expiry before departure counts as pending. trusted_organiser and prior_no_shows: history fields; these are decoys for ratio and deposit questions but bear on disposition in balanced cases. diet_count_drift: booking.diet_totals vs roster diet flags, a trivial conflict that still counts for conflict_count unless amended. No field may state compliance, risk, urgency, conflict counts or a recommended disposition; no status like ratio_ok or deposit_ok. Use null for unknown payment dates or missing check dates. No free-text fields.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": null,
+ "aggravating_factor": null,
+ "design_cost": 0.120848
+}

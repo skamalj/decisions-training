@@ -1,0 +1,341 @@
+{
+ "id": "F416",
+ "domain": "coastal lifeguard station logs",
+ "role": "Area lifeguard supervisor reviewing each station's daily shift log before it is filed",
+ "setting": "A coastal council lifeguard service runs patrolled beaches from towers along a stretch of coast. Each tower submits one structured shift log per day covering roster, hourly sea conditions and flags, incidents, rescue equipment status and handover totals. The area supervisor reviews each log on its own and decides whether rescues had proper guard cover, whether the figures reconcile, how serious the day's worst casualty outcome was, how long essential kit was out of service, and what to do with the log now.",
+ "questions": {
+  "two_guard_cover": {
+   "type": "noul",
+   "instructions": "Every logged water rescue had at least two qualified guards present.",
+   "criteria": {
+    "true": "Each rescue lists two in-date qualified responders.",
+    "false": "Some rescue had fewer than two qualified responders."
+   }
+  },
+  "totals_reconcile": {
+   "type": "noul",
+   "instructions": "Handover totals agree with the itemised incidents and equipment entries.",
+   "criteria": {
+    "true": "Rescue, first-aid and kit-defect totals match itemised entries.",
+    "false": "At least one total differs from itemised entries."
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the area supervisor do with this shift log now?",
+   "criteria": {
+    "accept_log": "Log consistent and complete; file without further action.",
+    "request_item": "One specific supporting record missing; request it before filing.",
+    "amend_and_file": "Only minor clerical discrepancy; supervisor corrects entry and files.",
+    "corrective_order": "Operational lapse found; order station fix before next shift.",
+    "escalate_review": "Serious outcome or uncovered rescue; refer to area safety manager."
+   }
+  },
+  "outcome_severity": {
+   "type": "score",
+   "instructions": "How serious was the worst casualty outcome recorded this shift?",
+   "criteria": [
+    "None: no casualty, or on-site first aid only",
+    "Referred: casualty directed to own doctor or clinic",
+    "Conveyed: ambulance called and casualty taken to hospital",
+    "Critical: CPR, AED shock or fatality recorded"
+   ]
+  },
+  "kit_outage": {
+   "type": "score",
+   "instructions": "How long was essential rescue kit out of service without substitute?",
+   "criteria": [
+    "No essential kit out of service unsubstituted",
+    "Unsubstituted outage totalling under 60 minutes",
+    "Unsubstituted outage totalling 60 to 180 minutes",
+    "Unsubstituted outage totalling over 180 minutes"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "rescue_count",
+   "description": "Number of water rescues itemised in the incidents list; zero makes two_guard_cover vacuously true and lowers attention.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 5,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S1"
+   ]
+  },
+  {
+   "name": "rescue_cover_shortfall",
+   "description": "Whether one rescue lacked a second qualified guard: none, only one responder listed, a responder whose qualification had lapsed, or a responder not rostered on at that time.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "single_guard",
+    "responder_qual_expired",
+    "responder_off_roster"
+   ],
+   "weights": [
+    0.55,
+    0.2,
+    0.12,
+    0.13
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "mutual_aid_logged",
+   "description": "A guard from a neighbouring tower, with in-date qualification, appears among the rescue responders, restoring two-guard presence when the shortfall is single_guard or off_roster.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "totals_mismatch",
+   "description": "Discrepancy between handover totals and itemised entries: none, rescue count off by one, first-aid count off by one, a defect counted but not listed in equipment, an incident dated to another day, or several at once.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "rescue_off_by_one",
+    "first_aid_off_by_one",
+    "kit_defect_unlisted",
+    "date_misentered",
+    "multiple"
+   ],
+   "weights": [
+    0.4,
+    0.15,
+    0.12,
+    0.13,
+    0.1,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "worst_outcome",
+   "description": "Most serious casualty disposition among incidents, shown through outcome codes, ambulance references and AED usage fields.",
+   "kind": "categorical",
+   "values": [
+    "none_first_aid",
+    "referred",
+    "conveyed",
+    "critical"
+   ],
+   "weights": [
+    0.45,
+    0.25,
+    0.2,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S4"
+   ]
+  },
+  {
+   "name": "kit_gap_band",
+   "description": "Total time an essential item (AED, oxygen, rescue board, tube) was logged out of service; end_time_null leaves the return time unknown.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "under_60",
+    "60_to_180",
+    "over_180",
+    "end_time_null"
+   ],
+   "weights": [
+    0.35,
+    0.2,
+    0.2,
+    0.12,
+    0.13
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "kit_substitute_logged",
+   "description": "A spare unit identifier is recorded against the outage for its whole duration, so the gap does not count as unsubstituted.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "missing_record",
+   "description": "One supporting reference absent: AED daily check sheet, ambulance job reference for a conveyed casualty, or qualification record for a listed responder.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "aed_check_sheet",
+    "ambulance_ref",
+    "qual_record"
+   ],
+   "weights": [
+    0.6,
+    0.15,
+    0.13,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S5"
+   ]
+  },
+  {
+   "name": "flag_lag",
+   "description": "At least one hourly reading shows rip_risk high while the flag field still shows red_yellow rather than red.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.35,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "zone_relocated",
+   "description": "The same reading has bathing_zone_moved true, meaning flags were shifted away from the rip, which mitigates the flag lag.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "signoff_present",
+   "description": "Senior guard sign-off identifier and time present in the shift section; absence pushes towards request or amend.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.8,
+   "skills": [
+    "S4"
+   ]
+  },
+  {
+   "name": "boundary_placement",
+   "description": "Places a value on a scale or claim boundary: outage of exactly 60 or 180 minutes from rounded times, or a responder qualification expiring on the shift date.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S6"
+   ]
+  },
+  {
+   "name": "decoy_load",
+   "description": "Amount of alarming but irrelevant detail: very high beach-user estimate, strong offshore wind, cold water, many advisory contacts.",
+   "kind": "categorical",
+   "values": [
+    "low",
+    "medium",
+    "high"
+   ],
+   "weights": [
+    0.4,
+    0.35,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "shift",
+   "description": "Station id, tower code, shift date, start and end times, sign-off guard id and time."
+  },
+  {
+   "name": "roster",
+   "description": "List of guards with id, role, on and off times, qualification expiry date, home station."
+  },
+  {
+   "name": "conditions",
+   "description": "Hourly readings: time, wave_m, wind_kt, wind_dir, water_c, rip_risk, flag, bathing_zone_moved."
+  },
+  {
+   "name": "incidents",
+   "description": "List of incidents: id, date, time, type, responder ids, outcome code, aed_used, ambulance_ref, referral_ref."
+  },
+  {
+   "name": "equipment",
+   "description": "Essential kit items: item, unit id, last_check date, out_from, out_to, substitute_unit_id."
+  },
+  {
+   "name": "handover",
+   "description": "Totals: rescues, first_aid, kit_defects, advisories, beach_users_est, check_sheet_ref."
+  }
+ ],
+ "rendering_notes": "rescue_count sets the number of incidents with type water_rescue. rescue_cover_shortfall is shown only indirectly: single_guard gives one responder id; responder_qual_expired gives a responder whose roster qual_expiry precedes the shift date; responder_off_roster gives a responder whose roster on/off times exclude the incident time. mutual_aid_logged adds a responder whose roster home_station differs from shift.station_id with in-date qualification; it does not fix an expired qualification. two_guard_cover is true only if every rescue has two responders who are rostered at that time with qual_expiry on or after the shift date; with boundary_placement, expiry equals shift date, leaving it contested. totals_mismatch is never announced: handover.rescues or first_aid differs by one from the itemised count, handover.kit_defects exceeds equipment entries with out_from set, or an incident date differs from shift.date; totals_reconcile is true only when none apply. worst_outcome appears via outcome codes (released, gp_advised, conveyed, cpr_commenced, deceased), aed_used and ambulance_ref; a conveyed casualty with ambulance_ref null corresponds to missing_record ambulance_ref, but outcome code still decides severity. kit_gap_band is computed from out_from and out_to; end_time_null sets out_to null, making kit_outage contested between adjacent levels; kit_substitute_logged fills substitute_unit_id, and a fully substituted outage scores the lowest level. missing_record nulls handover.check_sheet_ref, ambulance_ref or a roster qual_expiry. flag_lag shows rip_risk high with flag red_yellow in a reading; zone_relocated sets bathing_zone_moved true in that same reading. Next step: escalate_review when outcome is critical, or a rescue lacked two qualified guards and outcome is conveyed or worse; corrective_order for an unmitigated cover shortfall, an unmitigated flag lag, or unsubstituted outage of 60 minutes or more; request_item when only a missing_record is present (or sign-off missing); amend_and_file when only a trivial totals mismatch or date misentry exists; accept_log otherwise. Decoys: beach_users_est, wind_kt, water_c, advisories and wave_m are alarming-looking but decide nothing alone. No field ever states compliance, severity, risk or a recommended action; no free-text notes are included.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_item"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.168324
+}

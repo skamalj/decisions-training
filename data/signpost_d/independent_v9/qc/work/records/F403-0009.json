@@ -1,0 +1,129 @@
+{
+ "id": "F403-0009",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "egg",
+    "soy"
+   ],
+   "plan_start": "2025-09-17"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-06-01",
+   "allergens": [
+    "egg",
+    "soy"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-08-20",
+   "dishes": [
+    {
+     "dish": "quiche",
+     "contains": [
+      "egg"
+     ],
+     "recipe_version_date": "2025-09-02",
+     "substitute": "veg tart",
+     "spec_checked_on": null
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "cleaning_log_complete": false,
+   "exceptions": [
+    {
+     "covers": "cleaning log",
+     "signed": "Mgr",
+     "date": "2025-09-05"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-09-15",
+   "messages": [
+    "Parent: all fine."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 2,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 2,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 2,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 2,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "menu_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 37,
+ "deciding": {
+  "evidence_allergens_covered": "Soy is in the evidence but has no mapped dish or substitute, and the egg substitute is unconfirmed after a recipe change. Leans false.",
+  "next_step": "The evidence is current and the cleaning log gap is covered by a signed exception. Only the quiche is in doubt, so the plan is released with one dish at most affected. Plan leans approve_plan.",
+  "first_gap_stage": "Evidence is current, but the quiche recipe_version_date (2025-09-02) is later than mapped_on (2025-08-20) and spec_checked_on is null, so the menu stage fails first.",
+  "exposure_proximity": "The quiche has a substitute (level 1 reading) but, with a recipe change and no spec check, it counts as unsubstituted (level 2). The cleaning log gap is covered by a signed exception.",
+  "meal_urgency": "Plan_start 2025-09-17 is two school days after the 2025-09-15 review."
+ },
+ "request": "rec-F403-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013191
+}

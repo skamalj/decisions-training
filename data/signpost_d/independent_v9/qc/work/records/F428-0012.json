@@ -1,0 +1,112 @@
+{
+ "id": "F428-0012",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "gate_type": "flap",
+   "seal_type": "music_note"
+  },
+  "inspection": {
+   "closure_test": {
+    "performed": false
+   }
+  },
+  "defects": [
+   {
+    "component": "seal_bulb",
+    "grade": 3,
+    "status": "open"
+   },
+   {
+    "component": "hinge_pin",
+    "grade": 3,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "status": "in_progress",
+     "grade_raised": 2
+    }
+   ]
+  }
+ },
+ "factors": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.43,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 3,
+  "mismatch_location": "seal_type",
+  "test_status": "not_performed",
+  "repair_progress": "in_progress",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 25,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.43,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 2,
+  "mismatch_location": "seal_type",
+  "test_status": "not_performed",
+  "repair_progress": "in_progress",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 25,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_engineer",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "contested",
+   "target": "structural",
+   "second": "drive_actuation",
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 29,
+ "deciding": {
+  "closure_test_valid": "performed false, so no logged test within limits.",
+  "next_step": "Repair in progress while two grade 3 defects sit open on different components with no test; engineer escalation expected.",
+  "defect_class": "Grade 3 seal and hinge defects tie; the hinge component sits between drive and structural readings, so contested.",
+  "section_discrepancies": "Register music_note seal vs seal_bulb defect and work order grade 2 vs defect grade 3; third mismatch is arguable, so 2 vs 3.",
+  "flood_risk": "Grade 3 defects with no closure test and in-progress repair; High leaning, since no grade 4 and closure is unproven."
+ },
+ "request": "rec-F428-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005501
+}

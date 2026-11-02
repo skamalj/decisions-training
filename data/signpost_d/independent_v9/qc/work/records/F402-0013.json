@@ -1,0 +1,118 @@
+{
+ "id": "F402-0013",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-3318",
+   "priority": "soon",
+   "received": "2024-06-10",
+   "onset": "2022-08-15"
+  },
+  "clinical": {
+   "diagnosis_code": "M48.0",
+   "red_flags": [
+    "cancer_hx_new_spinal_pain"
+   ],
+   "function_index": 81.5,
+   "surgery_date": "2024-02-27"
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2024-05-02",
+    "result": "no_sinister"
+   },
+   {
+    "type": "surgical_opinion_recommended",
+    "date": "2024-05-10"
+   },
+   {
+    "type": "op_protocol",
+    "date": "2024-02-27"
+   }
+  ],
+  "gp_record": {
+   "falls_3m": 1
+  },
+  "history": {
+   "episodes": 3,
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": true,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "non_physio_surgical",
+  "symptom_duration_weeks": 94,
+  "function_index": 81.51,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 1,
+  "post_op_days": 104,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": true,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "non_physio_surgical",
+  "symptom_duration_weeks": 94,
+  "function_index": 81.51,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 1,
+  "post_op_days": 104,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "book_amended",
+   "second": "request_info",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "balanced",
+   "target": "specialist_rehab",
+   "second": "self_management",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 51,
+ "deciding": {
+  "red_flag_unresolved": "Recent MRI no_sinister largely explains the flag, though the surgical opinion attachment leaves some doubt.",
+  "next_step": "Surgical opinion recommendation with soon priority: book with amended precautions or request the opinion detail.",
+  "pathway": "Post-op and surgical opinion suggest specialist rehab, but high function 81.5 and no episodes of benefit suggest self-management.",
+  "reversal_time": "Surgical pathway decisions may be irreversible beyond three months, or take eight days to three months.",
+  "clinical_urgency": "Cancer-history flag with surgical recommendation versus benign MRI: 48-hour review versus two weeks is split."
+ },
+ "request": "rec-F402-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004905
+}

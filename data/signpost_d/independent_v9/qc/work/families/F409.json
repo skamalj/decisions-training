@@ -1,0 +1,308 @@
+{
+ "id": "F409",
+ "domain": "residents' parking permit applications",
+ "role": "Residents' parking permit officer at a district council parking services team, reviewing one permit application at a time",
+ "setting": "A council parking services back office processes residents' parking permit applications for controlled zones. Each application record combines what the applicant submitted, the residence evidence they uploaded, the vehicle registration lookup, the permit being requested and the account's permit and penalty history. The officer decides whether the applicant lives in the zone, what to do with the application, which issue drives the outcome, how strong any sign of permit misuse is, and how many required documents are still outstanding.",
+ "questions": {
+  "residency_shown": {
+   "type": "noul",
+   "instructions": "Applicant is shown to reside at the address within the zone.",
+   "criteria": null
+  },
+  "disposition": {
+   "type": "choice",
+   "instructions": "What should happen to this permit application at this stage?",
+   "criteria": {
+    "approve": "All eligibility checks met; issue the full annual permit.",
+    "approve_temporary": "Residency proven, one non-residency document outstanding; issue time-limited permit.",
+    "hold": "Residency or keeper proof missing or conflicting; issue nothing yet.",
+    "refuse": "Fails a stated eligibility rule; reject with written reasons."
+   }
+  },
+  "main_issue": {
+   "type": "choice",
+   "instructions": "Which single issue most determines this application's outcome?",
+   "criteria": {
+    "no_issue": "No check fails; outcome follows standard eligibility rules.",
+    "vehicle_keeper": "Registered keeper or plate differs from applicant or request.",
+    "residence_proof": "Address evidence absent, stale, mismatched or dated out of order.",
+    "household_cap": "Address already holds the zone's maximum permit allowance.",
+    "misuse_record": "Account history shows cloned, altered or sold permits."
+   }
+  },
+  "misuse_strength": {
+   "type": "score",
+   "instructions": "How strong is the evidence of permit misuse on this account?",
+   "criteria": [
+    "Clear: no unmitigated misuse indicator anywhere in record",
+    "Low: exactly one unmitigated misuse indicator present",
+    "Elevated: two or more unmitigated misuse indicators present",
+    "Confirmed: prior permit recorded as cloned, altered or sold"
+   ]
+  },
+  "document_gaps": {
+   "type": "score",
+   "instructions": "How many required documents are missing or unverified?",
+   "criteria": [
+    "All required documents received and verified",
+    "One required document missing or unverified",
+    "Two required documents missing or unverified",
+    "Three or more required documents missing or unverified"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "application_type",
+   "description": "Kind of application, which changes which documents are required (new needs residence and keeper proof; renewal needs only current proof if unchanged; change of vehicle needs keeper proof; change of address needs residence proof).",
+   "kind": "categorical",
+   "values": [
+    "new",
+    "renewal",
+    "change_of_vehicle",
+    "change_of_address"
+   ],
+   "weights": [
+    0.35,
+    0.35,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S2"
+   ]
+  },
+  {
+   "name": "address_match_level",
+   "description": "How the address on the residence evidence compares with the address on the application and the zone gazetteer entry.",
+   "kind": "categorical",
+   "values": [
+    "exact",
+    "format_only",
+    "different_flat",
+    "different_street"
+   ],
+   "weights": [
+    0.45,
+    0.25,
+    0.18,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "proof_age_days",
+   "description": "Age in days of the residence document at submission; the scheme accepts documents up to 90 days old. Values near 85 to 95 create boundary cases.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 3,
+   "max": 200,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S2",
+    "S6"
+   ]
+  },
+  {
+   "name": "docs_missing",
+   "description": "Number of required documents (residence proof, V5C or keeper letter, ID) not uploaded or uploaded but not yet verified.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "keeper_mismatch",
+   "description": "How the vehicle registration lookup compares with the applicant and the plate typed on the request.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "plate_typo",
+    "different_keeper"
+   ],
+   "weights": [
+    0.6,
+    0.15,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "keeper_letter_on_file",
+   "description": "A lease agreement or employer company-car letter naming the applicant as main user is on file, which mitigates a different registered keeper.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "household_permits_held",
+   "description": "Number of live residents' permits already held at the same address; the zone cap is 2 per household.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "cap_exception_approved",
+   "description": "An approved exception (carer for a blue badge holder, or medical exception) is recorded, allowing a permit beyond the household cap.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.45,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "zone_pcn_count",
+   "description": "Penalty charge notices in the zone against the vehicle or account in the last 12 months; three or more uncancelled counts as a misuse indicator.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 6,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S3"
+   ]
+  },
+  {
+   "name": "pcns_cancelled",
+   "description": "Most of the zone PCNs were cancelled on appeal (signage fault or suspension error), which mitigates a high PCN count.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "date_order_anomaly",
+   "description": "Tenancy or council tax start date falls after the application submission date, or the residence document is dated after the request date, showing an out-of-order sequence.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S2",
+    "S5"
+   ]
+  },
+  {
+   "name": "message_claim",
+   "description": "What the applicant's free-text message claims relative to the structured records: nothing relevant, a consistent explanation of a mismatch, or a claim the records contradict.",
+   "kind": "categorical",
+   "values": [
+    "nothing_relevant",
+    "consistent_explanation",
+    "contradicting_claim"
+   ],
+   "weights": [
+    0.5,
+    0.3,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "prior_permit_cloned",
+   "description": "Aggravating fact: account history records a previous permit for this address or vehicle seized as cloned, altered or sold within the last 24 months. When true, misuse_strength is Confirmed and refusal follows.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S7",
+    "S5"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "applicant",
+   "description": "Applicant identity, application date, application type and a free-text message."
+  },
+  {
+   "name": "residence_evidence",
+   "description": "List of uploaded documents with type, issue date, address line, verification state, plus an evidence note."
+  },
+  {
+   "name": "vehicle",
+   "description": "Registration lookup result: plate, registered keeper name, keeper address, supporting letters."
+  },
+  {
+   "name": "request",
+   "description": "Permit requested: zone code, address, plate entered, duration, fee band."
+  },
+  {
+   "name": "account_history",
+   "description": "Live household permits, past permits with status, zone PCNs, exceptions and an officer note."
+  }
+ ],
+ "rendering_notes": "applicant: {applicant_id, full_name, submitted_on (ISO), app_type (application_type), message (free text)}. message renders message_claim: nothing_relevant gives an unrelated sentence (e.g. asking about visitor vouchers); consistent_explanation explains a mismatch the records support (e.g. 'Car is a company lease, letter attached' when keeper_letter_on_file is true); contradicting_claim asserts something the records refute (e.g. 'I have lived here since 2019' when tenancy_start is last month). residence_evidence: docs list of {doc_type (council_tax_bill, tenancy_agreement, utility_bill, id_card), issued_on, address_line, verified (true/false/null)}, plus tenancy_start or ct_liability_from date and note (one sentence from the scanning team). address_match_level shows only by comparing docs[].address_line with request.address: format_only differs in punctuation or 'Flat 3' vs '3/'; different_flat changes the flat number; different_street changes the street. proof_age_days shows only as the gap between docs[].issued_on and applicant.submitted_on; never print the age. docs_missing shows as required documents absent from the list or present with verified null/false; the set of required documents depends on app_type, and a residence document older than 90 days counts as unverified. date_order_anomaly shows as tenancy_start/ct_liability_from or issued_on later than submitted_on. vehicle: {plate, keeper_name, keeper_postcode, supporting_letters: [] or [{type: lease_agreement|employer_letter, names_applicant: true}]}; keeper_mismatch shows by comparing vehicle.plate with request.plate_entered (plate_typo is one transposed or wrong character) and keeper_name with applicant.full_name; keeper_letter_on_file renders as a supporting_letters entry. request: {zone_code, address, plate_entered, duration_months, fee_band}; fee_band and emission-based pricing are decoys. account_history: live_permits list at address (count = household_permits_held; cap of 2 shown in zone_rules.max_per_household), past_permits [{permit_no, status: expired|surrendered|seized, seize_reason or null}] where prior_permit_cloned renders as status seized with seize_reason such as 'cloned copy found on different vehicle'; decoy surrendered permits appear on clean records. pcns list [{issued_on, contravention_code, status: paid|cancelled|open}] of length zone_pcn_count; pcns_cancelled sets most to cancelled with a reason. exceptions list (cap_exception_approved renders as an approved carer or medical exception with approved_on date) or empty. officer_note: short free-text, often a decoy (e.g. 'called applicant re payment, no answer'). Misuse indicators for misuse_strength: different_keeper without a supporting letter; three or more uncancelled zone PCNs; different_street address; date_order_anomaly; contradicting_claim. Mitigated indicators do not count. Main issue precedence when several apply: misuse_record, household_cap (only if cap reached and no exception), residence_proof, vehicle_keeper. Residency is shown only when a verified residence document dated within 90 days matches the address (exact or format_only) with no date-order anomaly. Contested cases arise when proof age sits at 88 to 92 days, when the address differs only by flat number with a consistent explanation, or when household permits equal the cap on a renewal. Never include fields such as eligible, risk, misuse_level, recommended_action or missing_count; verified flags per document are allowed because a real system shows them.",
+ "skills": [
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": null,
+ "aggravating_factor": "prior_permit_cloned",
+ "design_cost": 0.15044
+}

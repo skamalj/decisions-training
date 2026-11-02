@@ -1,0 +1,122 @@
+{
+ "id": "F402-0023",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "soon",
+   "site": "back",
+   "side": "L",
+   "onset": "2024-04-01",
+   "received": "2025-06-02"
+  },
+  "clinical": {
+   "dx": "mech_back_pain",
+   "red_flags": [
+    "cancer_history_new_spinal_pain"
+   ],
+   "fi": 75.6
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "side": "R",
+    "date": "2025-05-10",
+    "result": "no_sinister"
+   }
+  ],
+  "gp_record": {
+   "falls_3m": 2
+  },
+  "history": {
+   "episodes": 2,
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 61,
+  "function_index": 75.59,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "soon",
+  "falls_last_3m": 2,
+  "post_op_days": 83,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": true,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 61,
+  "function_index": 75.59,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "soon",
+  "falls_last_3m": 2,
+  "post_op_days": 83,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 44,
+ "deciding": {
+  "red_flag_unresolved": "Cancer-history spinal pain flag with no MRI, review or oncology discharge in the record.",
+  "next_step": "Stable 61-week presentation with high function leans to accepting.",
+  "pathway": "Function index 75.6, long stable duration and no self-management trial lean to self_management.",
+  "reversal_time": "Waiting list placement is undone within a day.",
+  "clinical_urgency": "Chronic 61-week stable problem with good function can wait; the flag adds slight doubt."
+ },
+ "request": "rec-F402-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00483
+}

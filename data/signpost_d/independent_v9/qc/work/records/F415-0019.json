@@ -1,0 +1,162 @@
+{
+ "id": "F415-0019",
+ "family": "F415",
+ "state": {
+  "site": {
+   "id": "TB-31",
+   "closures": [
+    {
+     "from": "10:00",
+     "to": "14:00",
+     "reason": "vandalism repair",
+     "approved_by": null
+    }
+   ]
+  },
+  "shift": {
+   "date": "2024-08-03",
+   "start": "07:00",
+   "end": "19:00",
+   "sched_slots": [
+    "07:30",
+    "09:00",
+    "10:30",
+    "11:30",
+    "13:00",
+    "14:30",
+    "16:30",
+    "18:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "07:30",
+    "status": "done"
+   },
+   {
+    "slot": "09:00",
+    "status": "done"
+   },
+   {
+    "slot": "10:30",
+    "status": "done",
+    "op_note": "block shut, cleaned anyway"
+   },
+   {
+    "slot": "11:30",
+    "status": "done"
+   },
+   {
+    "slot": "13:00",
+    "status": "done"
+   },
+   {
+    "slot": "14:30",
+    "status": "done"
+   },
+   {
+    "slot": "16:30",
+    "status": "done"
+   },
+   {
+    "slot": "18:00",
+    "status": "done",
+    "end": "2024-08-03T18:20:00",
+    "photo_ref": "IMG-5530"
+   }
+  ],
+  "faults": [
+   {
+    "type": "blocked_pan",
+    "reported_at": "2024-08-03T10:20:00",
+    "remedied_at": null,
+    "remedy_note": "pan cleared 10:40"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "operative",
+   "signed_at": "2024-08-03T18:50:00"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 8,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "unauthorised_signer",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 500.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 0
+ },
+ "factors_sampled": {
+  "scheduled_slots": 8,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "unauthorised_signer",
+  "fault_type": "none",
+  "fault_open_minutes": 220.1,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 0
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_noted",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "missed_clean": "Every slot is marked done and none lacks a visit, but 10:30 and 11:30 fall in an unapproved closure, so whether they count is two-sided.",
+  "sign_off_valid": "signer_role is operative, so the sign-off is unauthorised; stated plainly.",
+  "next_step": "Cleans were done, the failure is recording and sign-off lapse only; accept_noted.",
+  "staff_effort": "Fault remedied_at is null against a note saying cleared 10:40 plus an unapproved closure, needing long investigation; days versus over five days is arguable.",
+  "fault_exposure": "remedied_at is null and the fault was reported 10:20, so it is open beyond 240 minutes; the note claiming cleared is the only doubt."
+ },
+ "request": "rec-F415-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005972
+}

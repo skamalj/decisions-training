@@ -1,0 +1,160 @@
+{
+ "id": "F403-0001",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-4417",
+   "allergens": [
+    "milk",
+    "egg",
+    "peanut",
+    "sesame"
+   ],
+   "auto_injector": true,
+   "plan_start": "2025-01-06"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2024-09-02",
+   "expires": "2025-09-02",
+   "allergens": [
+    "milk",
+    "egg",
+    "peanut",
+    "sesame"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2024-12-10",
+   "dishes": [
+    {
+     "dish": "sesame flatbread",
+     "contains": [
+      "sesame"
+     ],
+     "recipe_version_date": "2024-12-20",
+     "substitute": null,
+     "spec_checked_on": "2025-01-02"
+    },
+    {
+     "dish": "egg noodles",
+     "contains": [
+      "egg"
+     ],
+     "recipe_version_date": "2024-11-01",
+     "substitute": "rice noodles",
+     "spec_checked_on": "2024-12-05"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "staff_trained": [
+    "2024-01-08",
+    "2024-01-08"
+   ],
+   "exceptions": [
+    {
+     "covers": "training refresh",
+     "signed": "2025-01-10"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-01-20",
+   "packed_lunch_until": "2025-03-14",
+   "incidents": [
+    {
+     "date": "2025-01-15",
+     "dish": "sesame flatbread",
+     "contains": [
+      "sesame"
+     ],
+     "note": "pilot tasting, no reaction observed"
+    }
+   ],
+   "messages": [
+    "Flatbread recipe changed in December."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current clinician letter",
+  "allergen_count": 4,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "training past refresh, covered by signed exception",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 39,
+  "packed_lunch_interim": true,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "expired",
+  "allergen_count": 4,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 8,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_restricted",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "balanced",
+   "target": "kitchen_gap",
+   "second": "no_gap",
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "evidence_allergens_covered": "Sesame flatbread has substitute null, so sesame, which is in the evidence, has no mapped substitution.",
+  "next_step": "Exactly one dish (flatbread) lacks a substitute, which points to release with that dish withheld; the pilot incident adds doubt.",
+  "first_gap_stage": "Evidence is current and training dates are past 12 months but covered by a signed exception, so no_gap is plausible; kitchen_gap is the alternative. The flatbread gap muddies it.",
+  "exposure_proximity": "Incident dated 2025-01-15, after plan_start 2025-01-06, with a dish containing declared sesame.",
+  "meal_urgency": "packed_lunch_until 2025-03-14 against review_date 2025-01-20 puts the first meal well over 20 school days away; the January incident adds doubt."
+ },
+ "request": "rec-F403-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010549
+}

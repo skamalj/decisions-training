@@ -1,0 +1,161 @@
+{
+ "id": "F434-0007",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 3,
+   "closure_start": "10:00",
+   "closure_end": "14:00",
+   "riders_started": 120
+  },
+  "post": {
+   "km_marker": 27,
+   "post_type": "descent",
+   "on_post_from": "10:05",
+   "off_post_at": "13:20",
+   "marshals_rostered": 2,
+   "marshals_signed_in": 2,
+   "relief": [
+    {
+     "marshal_ref": "M7",
+     "signed_in": "12:40",
+     "signed_out": "13:20"
+    }
+   ]
+  },
+  "incidents": [
+   {
+    "inc_ref": "I1",
+    "time": "11:42",
+    "km": 27,
+    "type": "fall",
+    "bibs": [
+     64
+    ],
+    "medic_called": true,
+    "medic_arrival_min": 6.36,
+    "rider_status": "continued"
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:30",
+     "ok": false
+    },
+    {
+     "time": "11:00",
+     "ok": false
+    },
+    {
+     "time": "11:30",
+     "ok": false
+    },
+    {
+     "time": "12:00",
+     "ok": false
+    }
+   ],
+   "backup_phone": [
+    {
+     "time": "11:05",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C9",
+     "time": "11:42",
+     "km": 27,
+     "type": "fall",
+     "bibs": [
+      64
+     ]
+    }
+   ],
+   "medical_handovers": [],
+   "abandonments": []
+  },
+  "sweep": {
+   "passed_at": "13:48",
+   "last_rider_bib": 120,
+   "post_cleared_at": "13:50"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": 6.36,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "none",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "hospital",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": 6.36,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "query_marshal",
+   "second": "file",
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "rider_fall",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 102,
+ "deciding": {
+  "coverage_held": "off_post_at 13:20 is before sweep passed_at 13:48, and the relief entry ends at 13:20, so coverage ended early.",
+  "next_step": "Four failed radio checks are a clerical gap the marshal could explain, yet incident matches control with no open item, so filing is also defensible.",
+  "incident_class": "Fall at km 27 for bib 64 appears in both post and control logs, with no vehicle or animal.",
+  "reversal_time": "Rider continued, medic called and arrived in 6.36 min, no handover, so nothing lasting; level 0 or a short level 1.",
+  "consequence_severity": "Rider continued, not abandoned and no handover, but medic_called true leaves doubt between level 0 and level 1."
+ },
+ "request": "rec-F434-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005011
+}

@@ -1,0 +1,152 @@
+{
+ "id": "F417-0043",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V303",
+   "type": "ketch",
+   "home_port": "Brixham",
+   "loa_m": 11.2,
+   "beam_m": 3.9,
+   "draught_m": 2.42,
+   "draught_src": "owner"
+  },
+  "berth": {
+   "id": "Q4",
+   "max_loa_m": 12.0,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 3.6,
+   "waiver_ref": "W-318",
+   "waiver_expiry": "2025-12-31"
+  },
+  "booking": {
+   "arrival": "2025-07-14",
+   "departure": "2025-07-21",
+   "nights": 7,
+   "next_on_berth": "2025-07-24"
+  },
+  "documents": {
+   "survey": {
+    "date": "2022-03-09",
+    "loa_m": 12.34,
+    "draught_m": null
+   },
+   "insurance_expiry": "2026-02-14",
+   "inspection_date": "2025-08-05",
+   "inspection_booked": true
+  },
+  "account": {
+   "dues_outstanding_gbp": 0,
+   "deposit_paid": true,
+   "plan_id": null,
+   "credit_balance_gbp": 140
+  },
+  "history": [
+   {
+    "d": "2021-07-10",
+    "berth": "Q4",
+    "inc": 0
+   },
+   {
+    "d": "2022-07-12",
+    "berth": "Q4",
+    "inc": 0
+   },
+   {
+    "d": "2023-07-15",
+    "berth": "Q2",
+    "inc": 1
+   },
+   {
+    "d": "2024-07-13",
+    "berth": "Q4",
+    "inc": 0
+   },
+   {
+    "d": "2024-09-02",
+    "berth": "P1",
+    "inc": 0
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 10.18,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 1.18,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 0,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": true
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 10.18,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 1.18,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 262,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "one_night",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": true
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "confirm_allocation",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "clear",
+   "target": "dimension_mismatch",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "ukc_band": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 180,
+ "deciding": {
+  "length_fits": "Survey loa 12.34 exceeds max_loa 12.0 and fits only within the 0.5 fender allowance; a waiver is on file.",
+  "next_step": "Waiver W-318 covers the stay, insurance is valid, dues are nil and history is regular; the booked inspection is the only loose end.",
+  "primary_issue": "Declared loa 11.2 vs survey 12.34 (about 10%) over the berth max is the dominant mismatch; everything else is in order.",
+  "ukc_band": "Depth 3.6 minus draught 2.42 is 1.18 m, which is ample.",
+  "unresolved_count": "Declared vs survey loa and survey loa above max_loa are clear; the inspection date after departure is a possible third, so two or three."
+ },
+ "request": "rec-F417-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012082
+}

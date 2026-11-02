@@ -1,0 +1,158 @@
+{
+ "id": "F410-0039",
+ "family": "F410",
+ "state": {
+  "application": {
+   "licence_no": "ML-5120",
+   "holder_ref": "H-3194",
+   "holder_name": "R. Haddad",
+   "term_end": "2026-09-30",
+   "pitch_req": {
+    "width_m": 4.06
+   },
+   "commodities": [
+    "hot drinks"
+   ],
+   "docs_pending": []
+  },
+  "licence_current": {
+   "holder_ref": "H-3149",
+   "holder_name": "R. Haddad",
+   "pitch": {
+    "width_m": 3.0
+   },
+   "commodities": [
+    "coffee"
+   ],
+   "variations": [
+    {
+     "type": "width",
+     "detail": "4.06 m",
+     "approved": true,
+     "approved_on": "2025-11-20"
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-09-22",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": "2026-02-01",
+    "new_end": "2026-10-31"
+   },
+   "food_reg": {
+    "registered": true,
+    "fhrs_rating": 5,
+    "inspected_on": "2024-09-10"
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2026",
+     "amount_gbp": 350
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2026-01-10",
+     "amount_gbp": 350,
+     "method": "bacs"
+    }
+   ]
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 48,
+   "complaints": [
+    {
+     "date": "2025-06-12",
+     "category": "hygiene",
+     "upheld": true,
+     "status": "closed"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_within_14d_of_term_end",
+  "broker_confirmation_held": true,
+  "commodity_change": "synonym_only",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 1.06,
+  "variation_approved": true,
+  "fee_arrears_gbp": 0.0,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.96,
+  "absences_notified": false,
+  "complaint_profile": "upheld_closed",
+  "holder_ref_mismatch": "transcription_error",
+  "docs_outstanding": 0
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "ends_within_14d_of_term_end",
+  "broker_confirmation_held": true,
+  "commodity_change": "synonym_only",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 1.06,
+  "variation_approved": true,
+  "fee_arrears_gbp": 179.83,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.96,
+  "absences_notified": false,
+  "complaint_profile": "upheld_closed",
+  "holder_ref_mismatch": "transcription_error",
+  "docs_outstanding": 0
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "grant",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "balanced",
+   "target": "scheduled_visit",
+   "second": "desk_check",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 90,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-09-22 is before term_end 2026-09-30, but broker_conf.new_end 2026-10-31 covers it. The broker letter is a confirmation rather than a policy document, which leaves slight doubt.",
+  "renewal_disposition": "Fees are paid in full, attendance is 48/50, the width is approved, the complaint is closed and nothing is pending. The minor ref and wording differences do not block a grant.",
+  "inspection_level": "The width change is approved, which favours a desk check, but the food hygiene inspection dates from 2024-09-10 and a hygiene complaint was upheld in 2025. This leaves a scheduled visit slightly ahead.",
+  "reversal_time": "A grant with no pending conditions can be withdrawn administratively within a day, though a small doubt remains.",
+  "discrepancy_count": "The holder_ref digits are swapped (3194 against 3149) with a matching name. Whether that counts as one discrepancy or as a harmless typo holds the balance, while the coffee and hot drinks wording is only a synonym."
+ },
+ "request": "rec-F410-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009793
+}

@@ -1,0 +1,132 @@
+{
+ "id": "F421-0007",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P2207",
+   "service": "standard",
+   "fragile": false,
+   "contents": "laptop",
+   "qty": 1,
+   "weight_kg": 2.4,
+   "declared_value_gbp": 2160.96
+  },
+  "handling_events": [
+   {
+    "ts": "2024-06-11T22:40",
+    "site": "HUB-W",
+    "code": "SORT",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-06-12T05:15",
+    "site": "DEP-S",
+    "code": "INB",
+    "exc": null
+   },
+   {
+    "ts": "2024-06-12T09:30",
+    "site": "DEP-S",
+    "code": "SORT",
+    "exc": null
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-06-12T10:05",
+   "inspector": "JT",
+   "observed_item": "laptop computer",
+   "qty_found": 1,
+   "weight_kg": 2.4,
+   "condition": "corner scuff on lid, functions normally",
+   "photos": [
+    "img_5531.jpg",
+    "img_5532.jpg"
+   ],
+   "repair_est_gbp": 48
+  },
+  "claim": null,
+  "notes": null
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "complete",
+  "loss_pct": 2.22,
+  "declared_value": 2160.96,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 1.43
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 86.61,
+  "declared_value": 2160.96,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 1.43
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 118,
+ "deciding": {
+  "depot_fault": "DMG code at HUB-W before the clean inbound scan at DEP-S; later events clean.",
+  "contents_match": "'laptop' vs 'laptop computer', same qty and weight; wording differs slightly, so some doubt.",
+  "next_step": "Inspection complete with photos, claim is null, damage only cosmetic and upstream; nothing to action.",
+  "loss_share": "repair_est 48 / 2160.96 = 2.2%, under 5%.",
+  "parties_needed": "Complete record, no claim; the assessor can close it alone."
+ },
+ "request": "rec-F421-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007462
+}

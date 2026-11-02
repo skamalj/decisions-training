@@ -1,0 +1,191 @@
+{
+ "id": "F405-0004",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-3388",
+   "detected_on": "2025-08-02",
+   "term_start": "2025-09-22",
+   "room": "BH-201",
+   "slot": "Wed 14:00-16:00"
+  },
+  "booking_a": {
+   "module": "LAW230",
+   "department": "LAW",
+   "weekday": "Wed",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    1,
+    3,
+    5,
+    7,
+    9
+   ],
+   "headcount": 50,
+   "required_features": [
+    "accessible_entry"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "POL115",
+   "department": "POL",
+   "room": "BH201",
+   "weekday": "Wed",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    2,
+    4,
+    6,
+    8,
+    10
+   ],
+   "headcount": 45,
+   "status": "provisional",
+   "approved_at": null,
+   "approver": null
+  },
+  "room": {
+   "code": "BH-201",
+   "aliases": [
+    "BH201"
+   ],
+   "capacity": 55,
+   "features": [
+    "accessible_entry"
+   ],
+   "building": "BH"
+  },
+  "alternatives": [
+   {
+    "code": "BH-305",
+    "capacity": 60,
+    "features": [
+     "accessible_entry"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "date": "2023-10-05"
+   },
+   {
+    "type": "clash_report",
+    "date": "2024-02-12"
+   },
+   {
+    "type": "clash_report",
+    "date": "2024-10-08"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-03-03"
+   },
+   {
+    "type": "change_request",
+    "state": "open",
+    "target_slot": "Thu 14:00-16:00"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 51,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.2,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 4
+ },
+ "factors_sampled": {
+  "overlap_type": "full",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 51,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": true,
+  "headcount_ratio": 1.21,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 4
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 98,
+ "deciding": {
+  "genuine_clash": "B's room BH201 is an alias of BH-201 and times match, but weeks are odd [1,3,5,7,9] vs even [2,4,6,8,10], so no shared week; plan said true but the weeks disjoint make this doubtful.",
+  "alt_room_fits": "BH-305 capacity 60 vs 50 with accessible_entry, but free weeks 1-9 miss week 10; the displaced booking's own weeks are disjoint, so which weeks matter is arguable.",
+  "resolution": "Weeks are fully disjoint after reconciling the alias and times, so no overlap remains: dismiss.",
+  "urgency": "First occurrence 2025-09-22, 51 days after detection on 2025-08-02.",
+  "parties_needed": "Nothing to resolve; the officer alone closes the report."
+ },
+ "request": "rec-F405-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012791
+}

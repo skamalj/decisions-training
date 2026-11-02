@@ -1,0 +1,126 @@
+{
+ "id": "F421-0044",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-61588",
+   "service": "std",
+   "fragile": true,
+   "contents": "ceramic mugs",
+   "qty": 6,
+   "weight_kg": 5.4,
+   "declared_value_gbp": 406.88
+  },
+  "handling_events": [
+   {
+    "ts": "2024-08-20T07:00",
+    "site": "THIS-DEPOT",
+    "ev": "INBOUND",
+    "exc": null
+   },
+   {
+    "ts": "2024-08-20T09:30",
+    "site": "THIS-DEPOT",
+    "ev": "CONV-STD",
+    "exc": null
+   },
+   {
+    "ts": "2024-08-20T09:42",
+    "site": "THIS-DEPOT",
+    "ev": "SORT",
+    "exc": "CRUSH"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-08-20T11:15",
+   "observed_item": "stoneware mugs",
+   "qty_found": 5,
+   "weight_kg": 4.7,
+   "condition": "crushed, box split, beyond economic repair",
+   "photos": [],
+   "repair_est_gbp": 291.5
+  },
+  "claim": {
+   "claim_id": "C-8832",
+   "claimed_gbp": 195.31
+  },
+  "notes": null
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "quantity",
+  "inspection_state": "photos_missing",
+  "loss_pct": 71.64,
+  "declared_value": 406.88,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": true,
+  "note_slant": "absent",
+  "claim_amount_gap": 0.67
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "none",
+  "inspection_state": "photos_missing",
+  "loss_pct": 71.64,
+  "declared_value": 406.88,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": true,
+  "note_slant": "absent",
+  "claim_amount_gap": 0.67
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "contents_match": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_supervisor",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 41,
+ "deciding": {
+  "depot_fault": "Clean inbound, then fragile parcel put on CONV-STD and CRUSH at depot sort.",
+  "contents_match": "Six mugs declared but five found with lower weight; item is similar but quantity differs, with a box split rather than tamper.",
+  "next_step": "Missing quantity, no photos and claim differing from repair estimate point to supervisor referral.",
+  "loss_share": "Repair 291.50 of 406.88 is 71.6%, but 'beyond economic repair' also supports total loss.",
+  "parties_needed": "Photos, supervisor, claims and the missing mug could need three or four, or more with the conveyor error review; no note gives a count."
+ },
+ "request": "rec-F421-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009441
+}

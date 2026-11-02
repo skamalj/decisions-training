@@ -1,0 +1,146 @@
+{
+ "id": "F425-0035",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "flock_id": "F-455",
+   "producer_code": "1UK-6E90",
+   "lay_dates": [
+    "2024-07-01"
+   ],
+   "declared_eggs": 2000
+  },
+  "grading_run": {
+   "run_start": "2024-07-04T06:00",
+   "run_end": "2024-07-04T09:00",
+   "eggs_in": 1988,
+   "by_size": {
+    "S": 150,
+    "M": 600,
+    "L": 700,
+    "XL": 339
+   },
+   "outgrades": {
+    "cracks": 40,
+    "dirties": 130,
+    "blood_spots": 15,
+    "leakers": 8,
+    "misshapen": 6
+   },
+   "class_a_total": 1789
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-04-01",
+    "interval_days": 60
+   },
+   "candling_sample": {
+    "sampled_at": "2024-07-04T10:15"
+   },
+   "scale_check": {
+    "ok": true
+   },
+   "store_temp": {
+    "minutes_above_limit": 95,
+    "max_c": 12.8,
+    "defrost_logged": true
+   }
+  },
+  "flock": {
+   "age_weeks": 30,
+   "last_swab": {
+    "date": "2024-06-10",
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2024-07-04",
+   "packs": [
+    {
+     "size": "all",
+     "count": 1789
+    }
+   ],
+   "stamp_code": "1UK-6E90"
+  }
+ },
+ "factors": {
+  "count_gap_size": "small",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 3,
+  "mixed_lay_dates": false,
+  "missing_check": "candling_after_run",
+  "swab_positive": false,
+  "outgrade_rate_pct": 10.01,
+  "dominant_defect": "dirties",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "sustained",
+  "temp_mitigated": true,
+  "flock_age_weeks": 30
+ },
+ "factors_sampled": {
+  "count_gap_size": "none",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 9,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 3.88,
+  "dominant_defect": "dirties",
+  "calibration_overdue": false,
+  "calibration_mitigated": true,
+  "temp_excursion": "sustained",
+  "temp_mitigated": true,
+  "flock_age_weeks": 30
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "hold_pending",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "leaning",
+   "target": "equipment_fault",
+   "second": null,
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "counts_reconcile": "declared_eggs 2000 vs eggs_in 1988 is 0.6%, just over the half-percent limit.",
+  "batch_disposition": "candling sampled_at 10:15 is after run_end 09:00, so the candling check is not valid for this run; the batch should be held.",
+  "anomaly_cause": "Calibration was last done 2024-04-01 with a 60-day interval, overdue by run_start 2024-07-04, with no manual_recheck; the temperature excursion is explained by a logged defrost.",
+  "lay_to_pack": "Lay 2024-07-01 to pack 2024-07-04 is 3 days, at the Prompt/Standard boundary.",
+  "outgrade_share": "199 outgrades of 1988 eggs_in = 10.01%, right at the 10% boundary."
+ },
+ "request": "rec-F425-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010645
+}

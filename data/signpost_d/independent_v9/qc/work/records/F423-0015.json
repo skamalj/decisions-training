@@ -1,0 +1,140 @@
+{
+ "id": "F423-0015",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-63390",
+   "product": "poster",
+   "stock_spec": "GL-200",
+   "run_qty": 13700,
+   "overs_pct": 1.13,
+   "due_date": "2025-06-13",
+   "customer_tier": "trade",
+   "spec_max_de": 2.0
+  },
+  "proof_signoff": {
+   "proof_id": "CP-8841",
+   "ok_sheet_no": 15,
+   "signed_at": null,
+   "customer_present": false,
+   "concession": null
+  },
+  "colour_readings": {
+   "instrument": "SP-3",
+   "calibrated_on": "2025-03-06",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 3.1
+    },
+    {
+     "ink": "M",
+     "delta_e": 2.8
+    },
+    {
+     "ink": "K",
+     "delta_e": 1.5
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "pair": "C/K",
+     "offset_mm": 0.36,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P4",
+   "stock_loaded": "GL-200",
+   "first_production_at": "2025-06-11T06:40",
+   "sheets_production": 1372,
+   "sheets_makeready": 300,
+   "stoppages": [
+    "jam",
+    "jam",
+    "wash",
+    "plate change"
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "multiple_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 1372,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.13,
+  "register_offset_mm": 0.36,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 97,
+  "customer_tier": "trade",
+  "prior_stoppages": 4
+ },
+ "factors_sampled": {
+  "colour_deviation": "multiple_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 1372,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.13,
+  "register_offset_mm": 0.36,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 97,
+  "customer_tier": "trade",
+  "prior_stoppages": 4
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "run_before_signoff": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_run",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 86,
+ "deciding": {
+  "colour_in_tolerance": "C reads 3.1 and M 2.8 against spec_max_de 2.0 with concession null. The 97-day-old calibration leaves only slight room for doubt.",
+  "run_before_signoff": "signed_at is null while 1372 production sheets are logged since 06:40, so the run went ahead without any signature. Because no signature exists, there is no signing time to compare against.",
+  "next_step": "Colour is over spec with no concession and the in-image offset is 0.36 mm, so the record does not pass. The run is unsigned, and suspect sheets exceed the overs.",
+  "staff_effort": "Reprint planning, customer contact and the missing signature across about 1372 suspect sheets could take one to five days or more. The record does not fix it.",
+  "scrap_exposure": "1372 suspect production sheets on a run of 13700 is 10.01%, right at the 10% line and well over the overs of about 155 sheets."
+ },
+ "request": "rec-F423-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010077
+}

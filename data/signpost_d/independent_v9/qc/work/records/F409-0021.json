@@ -1,0 +1,116 @@
+{
+ "id": "F409-0021",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "submitted_on": "2024-05-10",
+   "app_type": "new",
+   "message": "Do visitor vouchers cost extra?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2024-03-06",
+     "address_line": "Flat 4, 12 Mill Rd",
+     "verified": true
+    }
+   ]
+  },
+  "request": {
+   "address": "Flat 2, 12 Mill Rd"
+  },
+  "account_history": {
+   "past_permits": [
+    {
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "exceptions": [
+    {
+     "type": "carer",
+     "approved_on": "2023-09-01"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "different_flat",
+  "proof_age_days": 65,
+  "docs_missing": 2,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 3,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "different_flat",
+  "proof_age_days": 65,
+  "docs_missing": 2,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 3,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "approve_temporary",
+   "second": "hold",
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 30,
+ "deciding": {
+  "residency_shown": "Verified bill is recent but for Flat 4 versus requested Flat 2; only the flat differs.",
+  "disposition": "Flat mismatch with one document supplied: temporary issue or hold both defensible.",
+  "main_issue": "Note: the record as built lists the cloned seizure, yet the plan expects no_issue; the cap exception covers the 3 permits, and the plan is followed with the seizure shown plainly.",
+  "misuse_strength": "Past permit seized for a cloned copy on a different vehicle.",
+  "document_gaps": "Only a single utility bill is present; other required new-application documents are absent, so two or three are missing."
+ },
+ "request": "rec-F409-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004824
+}

@@ -1,0 +1,177 @@
+{
+ "id": "F405-0042",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-5120",
+   "detected_on": "2025-10-14",
+   "term_start": "2025-09-29",
+   "room": "LT-02"
+  },
+  "booking_a": {
+   "module": "HIS101",
+   "dept": "HIS",
+   "room": "LT-02",
+   "day": "Tue",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "headcount": 90,
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "ECO110",
+   "dept": "ECO",
+   "room": "LT2",
+   "day": "Tue",
+   "start": "11:00",
+   "end": "13:00",
+   "weeks": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "headcount": 120,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-08-20",
+   "approver": "mkhan"
+  },
+  "room": {
+   "code": "LT-02",
+   "aliases": [
+    "LT2"
+   ],
+   "capacity": 130,
+   "features": [
+    "lecture_capture"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "LT-05",
+    "capacity": 124,
+    "features": [
+     "lecture_capture"
+    ],
+    "weeks_free": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-06-02"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-08-11"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.97,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 26,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.97,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "relocate",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "genuine_clash": "LT2 is a listed alias of LT-02, both on Tue, 11:00-12:00 overlaps, and weeks 3-8 are shared.",
+  "alt_room_fits": "LT-05 seats 124 for headcount 120 and has lecture_capture, free weeks 3-10; the tight margin leaves slight doubt.",
+  "resolution": "Both bookings are confirmed with approvals and LT-05 is a listed free room that fits booking_b.",
+  "urgency": "Detected on Tue 2025-10-14, which falls in shared week 3 (starting 13 Oct), so the first clash is today.",
+  "parties_needed": "Two departments plus timetabling and AV for capture could make three or four; students and room staff could push it to five or more."
+ },
+ "request": "rec-F405-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01201
+}

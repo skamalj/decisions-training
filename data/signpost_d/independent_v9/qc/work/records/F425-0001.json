@@ -1,0 +1,138 @@
+{
+ "id": "F425-0001",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "lay_dates": [
+    "2024-05-10",
+    "2024-05-08"
+   ],
+   "declared_eggs": 9600
+  },
+  "grading_run": {
+   "run_start": "2024-05-16T08:00",
+   "run_end": "2024-05-16T10:00",
+   "eggs_in": 9600,
+   "by_size": {
+    "S": 600,
+    "M": 3000,
+    "L": 4400,
+    "XL": 1400
+   },
+   "outgrades": {
+    "cracks": 150,
+    "dirties": 50
+   },
+   "class_a_total": 9400
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-03-01",
+    "interval_days": 30,
+    "manual_recheck": {
+     "n": 60,
+     "cracks_found": 1
+    }
+   },
+   "candling_sample": {
+    "sampled_at": "2024-05-16T11:30",
+    "n": 60,
+    "rejects": 9
+   },
+   "store_temp": {
+    "minutes_above_limit": 0,
+    "max_c": 11
+   }
+  },
+  "packing": {
+   "pack_date": "2024-05-16",
+   "packs": [
+    {
+     "size": "mixed",
+     "pack": 10,
+     "count": 934
+    }
+   ]
+  }
+ },
+ "factors": {
+  "count_gap_size": "marginal",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 8,
+  "mixed_lay_dates": true,
+  "missing_check": "candling_after_run",
+  "swab_positive": false,
+  "outgrade_rate_pct": 2.08,
+  "dominant_defect": "cracks",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 31
+ },
+ "factors_sampled": {
+  "count_gap_size": "moderate",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 4,
+  "mixed_lay_dates": true,
+  "missing_check": "candling_after_run",
+  "swab_positive": false,
+  "outgrade_rate_pct": 6.96,
+  "dominant_defect": "cracks",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 31
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "downgrade_class_b",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "clear",
+   "target": "no_anomaly",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "lay_to_pack": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "counts_reconcile": "Packs sum 9340 eggs against class_a_total 9400, a gap of about 0.64%, just over the half percent line; intake and grader agree at 9600.",
+  "batch_disposition": "Candling sample 9 rejects in 60, taken after run_end, shows a quality failure on a batch still fit for processing; counts and timing do not call for rejection.",
+  "anomaly_cause": "Outgrades are only 200 of 9600, mostly cracks, the overdue calibration has a passing manual recheck (1 crack in 60), and there is no temperature excursion.",
+  "lay_to_pack": "Oldest lay date 2024-05-08 against pack date 2024-05-16 is 8 days; the newer date 2024-05-10 would give 6 days, which keeps level 1 plausible.",
+  "outgrade_share": "Outgrades of 200 against eggs_in 9600 is 2.08%, right at the 2% boundary between levels 0 and 1."
+ },
+ "request": "rec-F425-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013095
+}

@@ -1,0 +1,169 @@
+{
+ "id": "F405-0005",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-9020",
+   "detected_on": "2025-09-29",
+   "term_start": "2025-09-29",
+   "room": "SC-12",
+   "slot": "Mon 16:00-18:00"
+  },
+  "booking_a": {
+   "module": "BIO101",
+   "department": "BIO",
+   "weekday": "Mon",
+   "start": "16:00",
+   "end": "18:00",
+   "weeks": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "headcount": 100,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "MKT300",
+   "department": "BUS",
+   "external_hire": true,
+   "room": "SC-12",
+   "weekday": "Mon",
+   "start": "16:00",
+   "end": "18:00",
+   "weeks": [
+    1,
+    2,
+    4,
+    6
+   ],
+   "status": "provisional",
+   "approved_at": null,
+   "approver": null
+  },
+  "room": {
+   "code": "SC-12",
+   "aliases": [],
+   "capacity": 120,
+   "features": [
+    "lecture_capture"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "SC-20",
+    "capacity": 108,
+    "features": [
+     "lecture_capture"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "change_request",
+    "state": "open",
+    "target_slot": "Tue 16:00-18:00",
+    "requested_by": "BUS"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-03-03"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-05-12"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.08,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 22,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.08,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "contested",
+   "target": "dismiss",
+   "second": "hold_confirm",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 36,
+ "deciding": {
+  "genuine_clash": "Same room and time; weeks mostly alternate but share week 1, so overlap is real yet narrow, and B is provisional with an open move request.",
+  "alt_room_fits": "SC-20 capacity 108 vs 100, has lecture_capture, free weeks 1-7 cover BIO101's weeks.",
+  "resolution": "Only week 1 overlaps and B is unapproved with an open change request to Tuesday; dismiss and hold_confirm are both defensible.",
+  "urgency": "Detected on term_start; shared week 1 Monday is the same day, so live, though a late-afternoon slot could read as imminent.",
+  "parties_needed": "BIO, BUS, the external hirer, an absent approver and the change request owner all have to act."
+ },
+ "request": "rec-F405-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012791
+}

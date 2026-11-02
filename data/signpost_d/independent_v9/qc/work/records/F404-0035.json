@@ -1,0 +1,160 @@
+{
+ "id": "F404-0035",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "Willow",
+   "date": "2024-02-20",
+   "age_band": "two_year",
+   "ratio_rule": "1:4"
+  },
+  "children": {
+   "booked": 8,
+   "slots": [
+    {
+     "t": "12:45",
+     "signed_in": 11
+    },
+    {
+     "t": "13:00",
+     "signed_in": 11
+    },
+    {
+     "t": "13:30",
+     "signed_in": 11
+    },
+    {
+     "t": "14:00",
+     "signed_in": 11
+    },
+    {
+     "t": "14:15",
+     "signed_in": 11
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S1",
+    "ratio": true,
+    "out": "17:00"
+   },
+   {
+    "id": "S2",
+    "ratio": true,
+    "out": "17:00"
+   },
+   {
+    "id": "S3",
+    "ratio": true,
+    "out": "17:00"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S1",
+    "out": "13:00"
+   },
+   {
+    "id": "S2",
+    "out": "13:00"
+   },
+   {
+    "id": "S3",
+    "check_status": "pending"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F7",
+    "from": "13:00",
+    "to": "14:27",
+    "room": "Willow",
+    "countersigned_by": null
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 4
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 11,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 3,
+  "shortfall_minutes": 87,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 11,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 3,
+  "shortfall_minutes": 87,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "file_no_action",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (zero_eligible_adult_slot = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 89,
+ "deciding": {
+  "below_ratio": "11 children need 3 staff. From 13:00 S1 and S2 are signed out, S3 is pending and counted in the rota, and floater F7 has countersigned_by null, so no eligible adult is present.",
+  "disposition": "The plan's file_no_action cannot stand with an unsigned-cover gap of 87 minutes (over 60) and no eligible adult, so this record points to escalating to the safeguarding lead.",
+  "primary_cause": "S1 and S2 left at 13:00 against a rota to 17:00, so eligible staff on duty fell below rota. The unsigned cover and pending S3 do not close the gap, and the 11 against 8 booked is secondary.",
+  "shortfall_duration": "The window 13:00-14:27 is 87 minutes with the cover unsigned, which is over 60.",
+  "breach_severity": "From 13:00 no eligible adult is signed in with 11 children, so none are covered (level 3). A reader crediting part of the unsigned F7 cover might say 2 or 3 beyond."
+ },
+ "request": "rec-F404-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011351
+}

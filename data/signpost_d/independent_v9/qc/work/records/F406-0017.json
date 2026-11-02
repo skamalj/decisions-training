@@ -1,0 +1,148 @@
+{
+ "id": "F406-0017",
+ "family": "F406",
+ "state": {
+  "session": {
+   "gallery_code": "GAL-W1",
+   "session_date": "2025-04-08",
+   "open": "13:00",
+   "close": "15:00",
+   "certified_limit": 100
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "13:00",
+     "occupancy": 60
+    },
+    {
+     "start": "13:15",
+     "occupancy": 82
+    },
+    {
+     "start": "13:30",
+     "occupancy": 90
+    },
+    {
+     "start": "13:45",
+     "occupancy": 84
+    }
+   ],
+   "ticket_scans": 171,
+   "manual_tally_peak": 116,
+   "summary_peak": 118
+  },
+  "variations": [
+   {
+    "gallery_code": "GAL-W1",
+    "valid_from": "2025-04-01",
+    "valid_to": "2025-04-08",
+    "uplift_to": 105,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "maintenance": [
+    {
+     "gate": "W-2",
+     "raised_at": "2025-04-08T09:10",
+     "summary": "W-2 counter spiking"
+    }
+   ],
+   "gates": [
+    "W-2"
+   ]
+  },
+  "staff_log": {
+   "egress_check": {
+    "state": "partial",
+    "routes_checked": "2 of 3"
+   },
+   "notes": [
+    "Counter spiked mid-session."
+   ]
+  },
+  "history": {
+   "overages_30d": 6
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 1.18,
+  "intervals_over_limit": 0,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "matches, valid_to equals session date",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "partial",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.9,
+  "intervals_over_limit": 1,
+  "section_mismatch": "none",
+  "variation_present": false,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "partial",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "none",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "amend_and_file",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 84,
+ "deciding": {
+  "variation_applies": "Approved, same gallery, window ends on session date; edge date gives some doubt.",
+  "fault_explains_overage": "Ticket on gate W-2, the session's gate, raised 09:10 before the 13:00 open on the session date.",
+  "next_step": "Tally 116 and summary 118 differ from interval peak 90; a documented annotation then filing fits, though partial egress adds doubt.",
+  "peak_excess": "Summary peak 118 and tally 116 exceed the 100 limit (and 105 uplift) by more than 10%.",
+  "intervals_over": "No listed interval exceeds 90 against limit 100."
+ },
+ "request": "rec-F406-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009814
+}

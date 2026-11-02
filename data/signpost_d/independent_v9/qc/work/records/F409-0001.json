@@ -1,0 +1,168 @@
+{
+ "id": "F409-0001",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A-41872",
+   "full_name": "Marta Holloway",
+   "submitted_on": "2025-03-10",
+   "app_type": "renewal",
+   "message": "Car is a company lease, letter attached."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-12-28",
+     "address_line": "14 Orchard Row",
+     "verified": true
+    },
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2025-01-15",
+     "address_line": "14 Orchard Row",
+     "verified": null
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": null,
+     "address_line": null,
+     "verified": false
+    }
+   ],
+   "note": "Utility bill awaiting check; ID scan unreadable."
+  },
+  "vehicle": {
+   "plate": "KX19 ABC",
+   "keeper_name": "Brightway Leasing Ltd",
+   "supporting_letters": [
+    {
+     "type": "lease_agreement",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "C4",
+   "address": "14 Orchard Row",
+   "plate_entered": "KX19 ABC",
+   "duration_months": 12,
+   "fee_band": "B"
+  },
+  "account_history": {
+   "live_permits": [
+    "P-30211",
+    "P-30388"
+   ],
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "past_permits": [
+    {
+     "permit_no": "P-20917",
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "pcns": [
+    {
+     "issued_on": "2024-09-02",
+     "contravention_code": "01",
+     "status": "cancelled"
+    },
+    {
+     "issued_on": "2024-11-19",
+     "contravention_code": "02",
+     "status": "cancelled"
+    }
+   ],
+   "exceptions": [
+    {
+     "type": "carer",
+     "approved_on": "2024-06-02"
+    }
+   ],
+   "officer_note": "Called applicant re payment, no answer."
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 72,
+  "docs_missing": 2,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 2,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 72,
+  "docs_missing": 2,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 2,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "residence_proof",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 187,
+ "deciding": {
+  "residency_shown": "Council tax bill verified true, exact address match, issued 72 days before submission; other documents are not residence proof.",
+  "disposition": "Utility bill unverified and ID scan unverified, plus a seized cloned permit in history, so nothing should be issued yet.",
+  "main_issue": "The outstanding utility bill and ID evidence are the visible blockers; the keeper difference is covered by the lease letter and the cap by the approved exception.",
+  "misuse_strength": "Past permit P-20917 seized for 'cloned copy found on different vehicle'.",
+  "document_gaps": "Utility bill verified null and id_card verified false give two; a reader may also count the thin residence set as a third."
+ },
+ "request": "rec-F409-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01161
+}

@@ -1,0 +1,134 @@
+{
+ "id": "F411-0030",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H4472",
+   "type": "hackney",
+   "expiry": "2025-08-31",
+   "review_date": "2025-08-11"
+  },
+  "vehicle": {
+   "reg": "RF17KLM",
+   "first_reg": "2017-03-14",
+   "odometer_km": 88650
+  },
+  "inspection": {
+   "station": "TS05",
+   "date": "2025-07-28",
+   "result_code": "PA",
+   "brake_efficiency_pct": 63
+  },
+  "defects": [
+   {
+    "code": "WP1",
+    "grade": "minor",
+    "rectify_by": "2025-08-04",
+    "repaired_on": null,
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-08-08",
+    "cover_note_ref": "CN-7731",
+    "cover_until": "2025-08-14"
+   },
+   {
+    "type": "dbs",
+    "expires_on": "2026-02-01"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2025-01-20",
+     "result": "F",
+     "odometer_km": 88950
+    },
+    {
+     "date": "2024-07-22",
+     "result": "F",
+     "odometer_km": 80200
+    }
+   ],
+   "replacements": []
+  }
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "not_started",
+  "deadline_passed": true,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 8
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "not_started",
+  "deadline_passed": true,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 8
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "conditional_renewal",
+   "second": "refer_committee",
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "balanced",
+   "target": "minor_fail",
+   "second": "advisory_only",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 94,
+ "deciding": {
+  "odometer_consistent": "Current 88650 km is 300 km below the 2025-01-20 reading of 88950 km, with no replacement logged.",
+  "next_step": "A small unexplained odometer drop (committee referral) is set against a single minor defect that could take a dated condition; this holds the choice in balance.",
+  "inspection_outcome": "Result code PA suggests advisory only, but item WP1 is graded minor with a rectify_by date.",
+  "document_gaps": "Insurance expired 2025-08-08 before the review date, but cover note CN-7731 runs to 2025-08-14, only three days past review; one gap or none.",
+  "outstanding_severity": "WP1 is minor, unrepaired, and its rectify_by 2025-08-04 is before the review date 2025-08-11."
+ },
+ "request": "rec-F411-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009362
+}

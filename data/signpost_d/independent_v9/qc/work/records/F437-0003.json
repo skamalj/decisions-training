@@ -1,0 +1,134 @@
+{
+ "id": "F437-0003",
+ "family": "F437",
+ "state": {
+  "job": {
+   "job_id": "J-22640",
+   "target_locale": "it-IT",
+   "source_version": "v1",
+   "glossary_version": "2",
+   "due_at": "2025-06-20T12:00:00Z"
+  },
+  "source": {
+   "version": "v1",
+   "segment_count": 150
+  },
+  "deliverable": {
+   "target_locale": "it-IT",
+   "built_from_version": "v1",
+   "segments_translated": 150,
+   "glossary_version_used": "2",
+   "delivered_at": "2025-06-16T05:00:00Z"
+  },
+  "qa_report": {
+   "flags": 11,
+   "false_positive_marked": 5,
+   "unresolved": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0
+   }
+  },
+  "review": {
+   "completed_at": "2025-06-15T16:00:00Z",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "minor",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-06-10"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.45,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 103,
+  "client_waiver": false,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "section_missing",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.45,
+  "number_mismatch_count": 4,
+  "deadline_slack_hours": 103,
+  "client_waiver": false,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": true
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 52,
+ "deciding": {
+  "scope_matches": "Versions are v1 throughout and segments are 150 of 150.",
+  "reviewed_in_time": "Review completed_at 2025-06-15T16:00 is before delivered_at 2025-06-16T05:00 and signed_off is true.",
+  "next_step": "All checks agree: zero unresolved QA flags, a signed-off review and 103 hours of slack.",
+  "open_severity": "qa_report.unresolved is all zeros and the only review error is a closed minor.",
+  "parties_needed": "Nothing is open and no fix is needed, so no one has to act."
+ },
+ "request": "rec-F437-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01067
+}

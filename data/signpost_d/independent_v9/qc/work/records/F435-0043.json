@@ -1,0 +1,169 @@
+{
+ "id": "F435-0043",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E330",
+   "zone_id": "H2",
+   "zone_type": "hospitality_deck",
+   "doors_open": "2025-06-21T18:30",
+   "check_filed_at": "2025-06-21T23:55",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 300,
+   "variation": {
+    "ref": "V1",
+    "new_limit": 320,
+    "status": "approved",
+    "approved_on": "2025-06-19"
+   },
+   "stewards_required": 12,
+   "exit_routes": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 320,
+   "issued": 304,
+   "comps_included": 30,
+   "scanned_in": 300
+  },
+  "ingress": {
+   "device_id": "D9",
+   "device_status": "ok",
+   "raw_peak": 282,
+   "peak_at": "2025-06-21T20:10",
+   "manual_recount": {
+    "count": 282,
+    "at": "2025-06-21T20:15"
+   }
+  },
+  "stewarding": {
+   "rostered": 12,
+   "signed_in": 12,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "a",
+    "checked_at": "2025-06-21T17:50",
+    "status": "clear"
+   },
+   {
+    "route_id": "b",
+    "checked_at": "2025-06-21T17:52",
+    "status": "clear"
+   },
+   {
+    "route_id": "c",
+    "checked_at": "2025-06-21T17:55",
+    "status": "clear"
+   },
+   {
+    "route_id": "d",
+    "checked_at": "2025-06-21T18:00",
+    "status": "clear"
+   },
+   {
+    "route_id": "e",
+    "checked_at": "2025-06-21T18:05",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "hospitality_deck",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.88,
+  "counter_status": "ok",
+  "counter_inflation": 0.02,
+  "manual_recount_present": true,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.95,
+  "limit_mismatch": false,
+  "steward_gap_pct": -0.03,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "hospitality_deck",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.88,
+  "counter_status": "ok",
+  "counter_inflation": 0.02,
+  "manual_recount_present": true,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.95,
+  "limit_mismatch": false,
+  "steward_gap_pct": -0.03,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "unconfirmed_exits": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 61,
+ "deciding": {
+  "verified_exceedance": "The variation was approved on 2025-06-19, before doors, so the limit is 320. Counter and recount agree at a peak of 282, well under the limit.",
+  "disposition": "Counts, stewards 12 of 12 and all five exits clear before doors all reconcile, so approve with no follow-up.",
+  "discrepancy_source": "Issued 304 and verified peak 282 are both under the effective limit of 320, and the limit used by ticketing matches it.",
+  "steward_shortfall": "signed_in 12 equals the 12 required.",
+  "unconfirmed_exits": "All five routes have clear checks between 17:50 and 18:05, before doors at 18:30."
+ },
+ "request": "rec-F435-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015789
+}

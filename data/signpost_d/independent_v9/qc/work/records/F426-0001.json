@@ -1,0 +1,124 @@
+{
+ "id": "F426-0001",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B12",
+   "crop": "apple",
+   "planted_area_ha": 2.0
+  },
+  "applications": [
+   {
+    "date": "2024-09-01",
+    "product_code": "FX100",
+    "qty_applied": 2.0,
+    "qty_unit": "L",
+    "area_treated_ha": 2.0
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "FX100",
+    "max_rate_per_ha": 1.5,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "approved_crops": [
+     "apple"
+    ],
+    "minor_use_auth_ref": null
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-10-20",
+   "residue_test": {
+    "sampled": true,
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "missing",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "missing",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 4,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "rate_overrun": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 57,
+ "deciding": {
+  "phi_cleared": "Single application 2024-09-01, PHI 14 days, first pick 2024-10-20: wide margin. Plan wanted modest doubt, but only the thin one-application record leaves any.",
+  "next_step": "Residue below limit and no discrepancies; equipment section absent leaves slight doubt only.",
+  "finding_class": "Rate 1.0 L/ha under 1.5 max, crop approved, interval met, no mismatches.",
+  "reversal_time": "Routine release, nothing to undo; trivially reversible.",
+  "rate_overrun": "2.0 L / 2.0 ha = 1.0 L/ha, below 1.5 max."
+ },
+ "request": "rec-F426-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004458
+}

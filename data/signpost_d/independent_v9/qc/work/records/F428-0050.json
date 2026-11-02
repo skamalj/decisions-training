@@ -1,0 +1,137 @@
+{
+ "id": "F428-0050",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "FL-9",
+   "gate_type": "flap",
+   "rated_closure_s": 60,
+   "seal_type": "music_note"
+  },
+  "inspection": {
+   "asset_id": "FL-9",
+   "insp_date": "2025-08-14",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-08-14",
+    "closure_s": 83,
+    "leakage_l_min": 4,
+    "leakage_limit_l_min": 8,
+    "result": null
+   }
+  },
+  "defects": [
+   {
+    "code": "S1",
+    "component": "seal_J_bulb",
+    "grade": 4,
+    "status": "open"
+   },
+   {
+    "code": "M2",
+    "component": "hoist",
+    "grade": 4,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W7",
+     "component": "hoist",
+     "defect_code": "M2",
+     "grade_raised": 3,
+     "status": "complete",
+     "completed": "2025-08-01",
+     "retest_insp_id": null,
+     "rated_closure_s": 45
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "out_of_service",
+    "permit_expiry": "2025-08-14"
+   },
+   "flood_alert_active": true
+  }
+ },
+ "factors": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.39,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 3,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "late",
+  "repair_progress": "completed_untested",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 28,
+  "borderline_case": true,
+  "outage_beyond_permit": true
+ },
+ "factors_sampled": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.39,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 3,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "passed_current",
+  "repair_progress": "completed_untested",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 28,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_engineer",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "balanced",
+   "target": "seal",
+   "second": "drive_actuation",
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "closure_test_valid": "closure_s 83 exceeds the rated 60 s, so the gate closes late.",
+  "next_step": "Two grade 4 defects, a hoist repair not retested, and an outage at its permit expiry date with a flood alert active point to the duty engineer.",
+  "defect_class": "Two grade 4 defects tie: a seal_J_bulb seal defect and a hoist defect. A hoist defect with a completed but untested repair order could be seen as already addressed, which favours the seal.",
+  "section_discrepancies": "The register seal is music_note but the defect names a J_bulb seal. The W7 grade_raised of 3 differs from the defect grade 4. W7 quotes a rated closure of 45 against the register 60.",
+  "flood_risk": "Closure is late and there are grade 4 defects, which is High. The outage is at its permit expiry date with an alert active, which could be read as Critical."
+ },
+ "request": "rec-F428-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010367
+}

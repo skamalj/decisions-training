@@ -1,0 +1,159 @@
+{
+ "id": "F403-0006",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-4417",
+   "yr": 3,
+   "school": "S112",
+   "declared_allergens": [
+    "milk",
+    "egg",
+    "soy",
+    "sesame"
+   ],
+   "auto_injector": false,
+   "plan_start": "2025-04-07"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2025-01-20",
+   "expires": "2026-01-20",
+   "allergens": [
+    "milk",
+    "egg",
+    "soy",
+    "sesame"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-02-24",
+   "dishes": [
+    {
+     "dish": "custard",
+     "contains": [
+      "milk",
+      "egg"
+     ],
+     "recipe_version_date": "2025-02-10",
+     "substitute": "oat custard",
+     "spec_checked_on": "2025-02-20"
+    },
+    {
+     "dish": "stir fry",
+     "contains": [
+      "soy"
+     ],
+     "recipe_version_date": "2025-02-10",
+     "substitute": "soy-free sauce",
+     "spec_checked_on": "2025-02-20"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "trained": {
+    "count": 3,
+    "last": "2025-01-15"
+   },
+   "cleaning_log_complete": true,
+   "exceptions": []
+  },
+  "history": {
+   "review_date": "2025-03-03",
+   "packed_lunch_until": null,
+   "incidents": [],
+   "messages": [
+    "Cook: all routine, nothing to flag."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 25,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "missing",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "training_lapsed",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 15,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "no_gap",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 74,
+ "deciding": {
+  "evidence_allergens_covered": "Sesame is in the evidence but no dish contains it, so it has no substitution entry; milk, egg and soy are substituted. Defensible either way.",
+  "next_step": "Evidence is current, every allergen dish is substituted, controls are complete and there are no incidents, so the plan can be released.",
+  "first_gap_stage": "Clinician letter is valid to 2026, all dishes have substitutes and spec checks, and training, segregation and cleaning log are all verified.",
+  "exposure_proximity": "Every allergen dish has a substitute and all controls are verified; there are no incidents.",
+  "meal_urgency": "Plan start 2025-04-07 is about 25 school days after the 2025-03-03 review, with no packed-lunch deferral."
+ },
+ "request": "rec-F403-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013191
+}

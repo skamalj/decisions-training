@@ -1,0 +1,159 @@
+{
+ "id": "F430-0003",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "SS-031",
+   "name": "Northgate",
+   "voltage": "33/11kV",
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "C",
+     "normal_band": [
+      30,
+      80
+     ],
+     "alarm_limit": 95,
+     "trip_limit": 105,
+     "partner_id": "T2",
+     "customers_fed": 13203
+    }
+   ]
+  },
+  "round": {
+   "id": "RD-5520",
+   "date": "2024-07-19",
+   "inspector": "A.K.",
+   "scheduled_assets": [
+    "T1"
+   ],
+   "inspector_note": "Winding temp high, cooling fans running."
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 104,
+    "unit": "C",
+    "timestamp": "2024-07-19T10:05:00"
+   }
+  ],
+  "defects": [
+   {
+    "defect_id": "D7",
+    "asset_id": "T1",
+    "category": "overtemp",
+    "photo_ref": "IMG-9021",
+    "note": "Oil temperature indicator reads very high."
+   }
+  ],
+  "history": {
+   "previous_round": [
+    {
+     "asset_id": "T1",
+     "param": "oil_temp",
+     "value": 111
+    }
+   ],
+   "open_work_orders": [],
+   "permits": [
+    {
+     "asset_id": "T2",
+     "desc": "cooling maintenance",
+     "valid_from": "2024-07-18",
+     "valid_to": "2024-07-20"
+    }
+   ],
+   "load_events": []
+  },
+  "network": {
+   "outage_plan": [
+    {
+     "asset_id": "T2",
+     "from": "2024-07-18",
+     "to": "2024-07-20"
+    }
+   ],
+   "partner_status": {
+    "T2": "in_service"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "improving",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 13203,
+  "trivial_discrepancies": 3,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "trip",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "improving",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 13203,
+  "trivial_discrepancies": 3,
+  "near_boundary": true
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "follow_up": {
+   "clarity": "contested",
+   "target": "urgent_attendance",
+   "second": "work_order",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 200,
+ "deciding": {
+  "defect_corroborated": "Defect note of very high oil temperature matches 104 C reading against 95 alarm.",
+  "benign_explanation": "The permit is for T2 cooling work, a neighbouring asset, not T1; it only arguably explains the heat.",
+  "follow_up": "104 C is just under the 105 trip and improving from 111, so urgent attendance versus work order is contested.",
+  "limit_deviation": "104 C is beyond the 95 alarm but 1 C below the 105 trip limit, level 1 or 2 by boundary.",
+  "supply_exposure": "T1 feeds 13203 customers but the partner status is conflicting with the outage plan, leaving level 4 versus 3 open."
+ },
+ "request": "rec-F430-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006385
+}

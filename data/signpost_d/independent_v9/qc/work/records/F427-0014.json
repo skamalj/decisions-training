@@ -1,0 +1,147 @@
+{
+ "id": "F427-0014",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V-5560",
+   "site_ref": "BB-03",
+   "visit_date": "2024-09-09",
+   "surveyor_grade": "senior"
+  },
+  "site_targets": {
+   "band_top_cm": 10,
+   "band_floor_cm": 30,
+   "dipwells_scheduled": 2,
+   "dams_total": 3
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 36
+    },
+    {
+     "depth_cm": 40
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 20,
+     "prev_depth_cm": 20
+    }
+   ],
+   "rain_30d_pct_normal": 104
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam": "D1",
+     "pool_level_cm": 40,
+     "design_pool_cm": 40,
+     "defect_code": "SEEP",
+     "remark": "Minor seep at east end."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "score": 4
+    }
+   ],
+   "photos_uploaded": 5,
+   "photos_expected": 6
+  },
+  "notes": {
+   "prior_visits": [
+    {
+     "date": "2024-03-01",
+     "event": "breach D1"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 1.0,
+  "photos_status": "partial",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -8.0,
+  "rainfall_pct_normal": 104.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.87,
+  "photos_status": "partial",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": 7.69,
+  "rainfall_pct_normal": 104.04,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "recheck_next_visit",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "below_band",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "dam_caused_drop": "The control dipwell is unchanged (20 to 20) and rain is normal at 104%, while D1 seeps and has a prior breach, so the drop points to the dam.",
+  "next_step": "Minor seep with pool at design, no work order and no repeat failure: add a check at the next routine visit.",
+  "hydro_state": "Mean depth of 38 cm against a band floor of 30 is 8 cm below the floor.",
+  "dam_severity": "D1 is coded SEEP but its pool is at the 40 cm design level; a reader could still call it intact.",
+  "evidence_completeness": "All dipwells read, quadrats and inspection present; photos are 5 of 6, so full or only slightly partial."
+ },
+ "request": "rec-F427-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011059
+}

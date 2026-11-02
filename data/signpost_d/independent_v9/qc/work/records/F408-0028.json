@@ -1,0 +1,143 @@
+{
+ "id": "F408-0028",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 3003,
+   "logged_at": "2024-08-20T10:00",
+   "stream": "refuse",
+   "claimed_date": "2024-08-20",
+   "photo_attached": true
+  },
+  "property": {
+   "uprn": 3003,
+   "assisted_collection": true,
+   "assisted_since": "2023-11-05"
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled_date": "2024-08-20"
+  },
+  "round_log": {
+   "round_completed_at": "2024-08-20T15:00",
+   "disruption_code": "road_closure",
+   "catch_up_date": "2024-08-21",
+   "stops": [
+    {
+     "uprn": 3003,
+     "exception_code": null,
+     "photo_ref": null,
+     "gps_stop": false
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 3003,
+    "outcome": "upheld",
+    "logged_on": "2024-07-12"
+   },
+   {
+    "uprn": 3003,
+    "outcome": "upheld",
+    "logged_on": "2024-06-03"
+   },
+   {
+    "uprn": 3003,
+    "outcome": "rejected",
+    "logged_on": "2024-07-30"
+   },
+   {
+    "uprn": 3003,
+    "outcome": "pending",
+    "logged_on": "2024-08-10"
+   },
+   {
+    "uprn": 3003,
+    "outcome": "upheld",
+    "logged_on": "2024-02-01"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "before_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "no_stop_at_address",
+  "round_disruption": "road_closure",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 3,
+  "assisted_miss_breach": true
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "street_not_visited",
+  "round_disruption": "road_closure",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 3,
+  "assisted_miss_breach": true
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_supervisor",
+   "second": "return_conditional",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (assisted_miss_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 54,
+ "deciding": {
+  "crew_missed": "The stop has gps_stop false, no exception and no photo, which suggests a miss, but a road_closure disruption with catch_up 2024-08-21 gives some doubt.",
+  "report_matches": "Logged 2024-08-20T10:00, before the round completed at 15:00, so the report came before the round finished.",
+  "next_step": "An assisted address with gps_stop false and two upheld misses supports escalation; an open catch-up date could support a conditional return instead.",
+  "return_urgency": "assisted_collection is true with assisted_since, and the stop shows gps_stop false, which is an assisted-collection breach and requires same day.",
+  "repeat_failures": "Two upheld entries (2024-07-12, 2024-06-03) are within 84 days; the rejected, pending and 2024-02-01 entries do not count."
+ },
+ "request": "rec-F408-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009869
+}

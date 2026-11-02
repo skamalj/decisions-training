@@ -1,0 +1,173 @@
+{
+ "id": "F440-0046",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "B-4410",
+   "review": "2025-03-01",
+   "arr": "2025-03-10",
+   "dep": "2025-03-13",
+   "pax": {
+    "13-17": 19,
+    "adult": 2
+   },
+   "diet": {
+    "veg": 3
+   },
+   "amend": [
+    {
+     "type": "pax_change",
+     "delta": 1,
+     "logged_at": "2025-02-20"
+    }
+   ]
+  },
+  "roster": [
+   {
+    "role": "leader",
+    "n": 2
+   },
+   {
+    "role": "participant",
+    "n": 20,
+    "dob": "2008-02-01..2011-09-30",
+    "f": 9,
+    "m": 11,
+    "veg": 4
+   }
+  ],
+  "allocation": [
+   {
+    "room": "D1",
+    "sex": "F",
+    "beds": 8,
+    "nights": [
+     "2025-03-10",
+     "2025-03-11"
+    ]
+   },
+   {
+    "room": "D2",
+    "sex": "M",
+    "beds": 12,
+    "nights": [
+     "2025-03-10",
+     "2025-03-11",
+     "2025-03-12"
+    ]
+   }
+  ],
+  "payment": {
+   "total": 2310,
+   "deposit_due": 462,
+   "paid": 231,
+   "sched": [
+    {
+     "due": "2025-02-15",
+     "amt": 231
+    },
+    {
+     "due": "2025-03-08",
+     "amt": 231
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "adult": "L1",
+    "status": "verified",
+    "exp": "2026-01-10"
+   },
+   {
+    "adult": "L2",
+    "status": "verified",
+    "exp": "2026-02-02"
+   }
+  ],
+  "history": {
+   "trusted": true,
+   "stays": 6,
+   "no_shows": 1
+  }
+ },
+ "factors": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "one_night_short on girls' dorm",
+  "amendment_logged": false,
+  "supervision_level": "exactly_at_ratio",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 9,
+  "dorm_fit": "girls 9 vs 8 beds",
+  "leader_checks": "all_verified",
+  "trusted_organiser": true,
+  "prior_no_shows": 1,
+  "diet_count_drift": "one"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 88,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": true,
+  "prior_no_shows": 1,
+  "diet_count_drift": "none"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "decline",
+   "second": "refer_manager",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 54,
+ "deciding": {
+  "ratio_met": "20 minors aged 13-17 with exactly 2 leaders meets 1:10 with no margin and no cover logged.",
+  "deposit_covered": "Paid 231 of 462, but a two-instalment schedule is listed and the first 231 instalment is met; approval is not explicit.",
+  "disposition": "Girls' bed shortage, a missing night and a diet drift on a borderline-ratio booking support decline or referral.",
+  "urgency": "Review 2025-03-01 against arrival 2025-03-10 is 9 days.",
+  "conflict_count": "Three unexplained conflicts: D1 lacks the 03-12 night, girls 9 vs 8 beds, and veg 4 vs 3. A fourth is arguable: price built on 21 pax vs 22."
+ },
+ "request": "rec-F440-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.016602
+}

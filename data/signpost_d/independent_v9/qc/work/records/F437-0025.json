@@ -1,0 +1,156 @@
+{
+ "id": "F437-0025",
+ "family": "F437",
+ "state": {
+  "job": {
+   "job_id": "J-9302",
+   "target_locale": "pt-BR",
+   "source_version": "v6",
+   "glossary_version": "g7",
+   "due_at": "2025-07-14T12:00",
+   "terms": {
+    "variant_accepted": true
+   },
+   "workflow": [
+    {
+     "step": "dtp",
+     "done_at": null
+    }
+   ]
+  },
+  "source": {
+   "version": "v6",
+   "segment_count": 320,
+   "word_count": 5100,
+   "repetitions": {
+    "words": 30
+   }
+  },
+  "deliverable": {
+   "built_from_version": "v6",
+   "target_locale": "pt-BR",
+   "segments_translated": 320,
+   "word_count": 5058,
+   "glossary_version_used": "g7",
+   "delivered_at": "2025-07-09T13:00"
+  },
+  "qa_report": {
+   "flags": 18,
+   "false_positive_marked": 2,
+   "number_mismatches": [],
+   "unresolved": {
+    "critical": 0,
+    "major": 0,
+    "minor": 3
+   }
+  },
+  "review": {
+   "signed_off": true,
+   "completed_at": "2025-07-09T09:00",
+   "errors": [
+    {
+     "sev": "minor",
+     "status": "open"
+    },
+    {
+     "sev": "major",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    {
+     "round": 1
+    },
+    {
+     "round": 2
+    },
+    {
+     "round": 3
+    },
+    {
+     "round": 4
+    }
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.11,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 119,
+  "client_waiver": true,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": true
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.11,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 119,
+  "client_waiver": true,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": true
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold_for_item",
+   "second": "return_for_fix",
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "scope_matches": "Versions and 320 segments match; word count 5100 vs 5058 is under 1% but only partly covered by 30 repeated words.",
+  "reviewed_in_time": "signed_off true, completed 4h before delivered_at; four prior rounds leave slight doubt.",
+  "next_step": "DTP step with done_at null is a named pending item, but open minor errors could equally be fixed first with 119h slack.",
+  "open_severity": "Open review error is minor and QA unresolved are minor 3, though four earlier rounds and a closed major leave a major arguable.",
+  "parties_needed": "The DTP owner and translator for minor fixes make two parties, a reviewer re-check might make three."
+ },
+ "request": "rec-F437-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010678
+}

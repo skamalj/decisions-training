@@ -1,0 +1,183 @@
+{
+ "id": "F412-0022",
+ "family": "F412",
+ "state": {
+  "premises": {
+   "ref": "P202",
+   "type": "takeaway"
+  },
+  "inspection": {
+   "date": "2024-12-02",
+   "contraventions": [
+    {
+     "ref": "C1",
+     "area": "CLN",
+     "due_date": "2025-01-10"
+    },
+    {
+     "ref": "C2",
+     "area": "FAB",
+     "due_date": "2025-01-10"
+    },
+    {
+     "ref": "C3",
+     "area": "CLN",
+     "due_date": "2025-01-10"
+    },
+    {
+     "ref": "C4",
+     "area": "TMP",
+     "due_date": "2025-01-10"
+    },
+    {
+     "ref": "C5",
+     "area": "REC",
+     "due_date": "2025-01-10"
+    }
+   ]
+  },
+  "revisit": {
+   "date": "2025-02-21",
+   "items": [
+    {
+     "ref": "C1",
+     "status": "remedied"
+    },
+    {
+     "ref": "C2",
+     "status": "remedied"
+    },
+    {
+     "ref": "C3",
+     "status": "remedied"
+    },
+    {
+     "ref": "C4",
+     "status": "not_checked"
+    },
+    {
+     "ref": "C5",
+     "status": "not_checked"
+    }
+   ],
+   "officer_note": "All works completed, good progress noted."
+  },
+  "correspondence": {
+   "extensions": [
+    {
+     "ref": "C5",
+     "agreed": true,
+     "new_due_date": "2025-01-20"
+    }
+   ],
+   "evidence": [
+    {
+     "ref": "c4",
+     "type": "temp logs",
+     "verified": true
+    },
+    {
+     "ref": "C5",
+     "type": "HACCP draft",
+     "verified": null
+    }
+   ]
+  },
+  "history": {
+   "enforcement": [
+    {
+     "year": 2021
+    },
+    {
+     "year": 2023
+    }
+   ],
+   "complaints": [
+    {
+     "summary": "noisy extractor",
+     "outcome": "closed"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "contravention_count": 5,
+  "resolution_share": "most_resolved",
+  "worst_open_area": "records",
+  "food_handling_open_count": 0,
+  "cross_section_mismatch": "trivial_format",
+  "days_past_original_due": 42,
+  "extension_agreed": true,
+  "benign_explanation": false,
+  "operator_evidence": "submitted_partial",
+  "adverse_sample": false,
+  "complaint_since_inspection": "unrelated",
+  "prior_enforcement_count": 2,
+  "boundary_case": false,
+  "reassuring_note_decoy": true
+ },
+ "factors_sampled": {
+  "contravention_count": 5,
+  "resolution_share": "all_resolved",
+  "worst_open_area": "food_handling",
+  "food_handling_open_count": 1,
+  "cross_section_mismatch": "trivial_format",
+  "days_past_original_due": 42,
+  "extension_agreed": true,
+  "benign_explanation": false,
+  "operator_evidence": "submitted_partial",
+  "adverse_sample": false,
+  "complaint_since_inspection": "unrelated",
+  "prior_enforcement_count": 2,
+  "boundary_case": false,
+  "reassuring_note_decoy": true
+ },
+ "plan": {
+  "all_remedied": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "close_case",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "worst_hazard": {
+   "clarity": "balanced",
+   "target": "records_only",
+   "second": "no_open_item",
+   "targets": []
+  },
+  "overdue_extent": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "residual_risk": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "all_remedied": "C4 was not checked but has verified temp-log evidence (ref in lower case); C5 is not checked and its evidence is unverified, so the remedied status is only modestly supported.",
+  "next_step": "The reassuring note and verified C4 evidence favour closing, but the unverified C5 HACCP draft is a specific missing proof that supports requesting evidence.",
+  "worst_hazard": "The only item without verified proof is C5, a REC record; if the C4 and C5 evidence is accepted, nothing remains open.",
+  "overdue_extent": "Original due 2025-01-10 is 42 days before the revisit (the boundary), while the agreed C5 extension to 2025-01-20 is 32 days before it.",
+  "residual_risk": "C4 is a TMP item whose verified log may or may not be accepted; if open it is a single food-handling item with no adverse sample, and the plan leaves higher risk arguable."
+ },
+ "request": "rec-F412-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009876
+}

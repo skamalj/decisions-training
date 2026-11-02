@@ -1,0 +1,129 @@
+{
+ "id": "F433-0020",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H31",
+   "passport_remark": "known right hind irregularity, regular at loop 1",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "result": "recheck_then_pass"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 15
+   },
+   "arrived_at": "08:40"
+  },
+  "vet_card": {
+   "presented_at": "09:00",
+   "pulse_bpm": 64,
+   "cri": {
+    "first_bpm": 64,
+    "second_bpm": 61
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 3,
+    "gut_sounds": "normal"
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 2
+    },
+    {
+     "surface": "soft",
+     "grade": "regular"
+    }
+   ],
+   "vet_signed_at": "09:08"
+  }
+ },
+ "factors": {
+  "pulse_status": "met_at_boundary",
+  "time_mismatch": "none",
+  "gait_grade": "mixed_mitigated",
+  "gait_mitigation": true,
+  "metabolic_flags": 1,
+  "cri_rise": 3.35,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "none"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_after_window",
+  "time_mismatch": "none",
+  "gait_grade": "regular",
+  "gait_mitigation": true,
+  "metabolic_flags": 3,
+  "cri_rise": 3.35,
+  "missing_items": 1,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "none"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "refer_president",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "balanced",
+   "target": "ftq_metabolic",
+   "second": "ftq_gait",
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "pulse_met": "Presented at exactly 20 min after arrival with pulse 64 equal to the limit, so it meets the criterion only just.",
+  "next_step": "The hard-surface grade 2 against the regular soft trot-up, with a passport remark, is a gait dispute that favours referral, though the record is otherwise complete.",
+  "outcome_code": "CRT 3 s is a borderline metabolic finding and the hard grade 2 is a borderline gait finding, so ftq_metabolic and ftq_gait are both defensible.",
+  "welfare_risk": "The borderline CRT is one parameter, and the irregular hard trot-up, mitigated by the soft regular one, may count as a second.",
+  "record_completeness": "All readings are present, signed 09:08, and times run in sequence."
+ },
+ "request": "rec-F433-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010552
+}

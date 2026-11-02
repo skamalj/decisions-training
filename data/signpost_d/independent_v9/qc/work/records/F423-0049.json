@@ -1,0 +1,131 @@
+{
+ "id": "F423-0049",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-52644",
+   "stock_spec": "GL150",
+   "run_qty": 75000,
+   "overs_pct": 2.41,
+   "customer_tier": "trade",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "CP-7710",
+   "signed_at": null,
+   "customer_present": false,
+   "concession": {
+    "accepted_max_de": 3.6
+   }
+  },
+  "colour_readings": {
+   "calibrated_on": "2025-04-29",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.8
+    },
+    {
+     "ink": "Y",
+     "delta_e": 3.6
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.07,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "GL150",
+   "first_production_at": "2025-06-10T05:20:00",
+   "sheets_production": 1810,
+   "stoppages": [
+    "jam"
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "marginal",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 1810,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.41,
+  "register_offset_mm": 0.07,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 42,
+  "customer_tier": "trade",
+  "prior_stoppages": 1
+ },
+ "factors_sampled": {
+  "colour_deviation": "marginal",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 1810,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.41,
+  "register_offset_mm": 0.07,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 42,
+  "customer_tier": "trade",
+  "prior_stoppages": 1
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_for_signoff",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "colour_in_tolerance": "Yellow 3.6 is over spec_max_de 3.0 but exactly equals concession accepted_max_de 3.6, so it passes only at the concession boundary.",
+  "run_before_signoff": "signed_at is null while 1810 production sheets are logged.",
+  "next_step": "Readings and register pass, but signed_at is null, so the press waits for the signed OK sheet.",
+  "staff_effort": "The unsigned 75000-run with 1810 sheets printed could need days of customer chasing and sorting; whether it exceeds five days is open.",
+  "scrap_exposure": "1810 sheets against overs of about 1808 (2.41% of 75000) is right at the allowance line, far below 10% of run, if the colour is judged suspect."
+ },
+ "request": "rec-F423-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009381
+}

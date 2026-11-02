@@ -1,0 +1,118 @@
+{
+ "id": "F417-0050",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "loa_m": 10.46,
+   "draught_m": 1.2
+  },
+  "berth": {
+   "max_loa_m": 11.2,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 2.5
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 11.7,
+    "draught_m": 1.45
+   },
+   "insurance_expiry": "2027-03-01",
+   "inspection_date": "2026-07-10"
+  },
+  "account": {
+   "dues_outstanding_gbp": 2092,
+   "plan_id": "PP-9",
+   "plan_status": "approved"
+  },
+  "booking": {
+   "departure": "2026-08-14",
+   "next_on_berth": {
+    "arrival": "2026-08-13"
+   }
+  },
+  "history": [
+   {
+    "d": "2025-08-01",
+    "inc": 1
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 11.82,
+  "berth_length_fit": "boundary",
+  "ukc_margin_m": 1.05,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 2092,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "one_night",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 11.82,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 1.29,
+  "draught_source": "survey_certificate",
+  "insurance_status": "null",
+  "inspection_state": "missing",
+  "arrears_amount": 2092,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "confirm_allocation",
+   "second": "refer_harbourmaster",
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "date_conflict",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "length_fits": "Survey loa 11.7 equals max 11.2 + fender 0.5 exactly.",
+  "next_step": "A one-night overlap and large dues under an approved plan could be accepted or sent to the harbour master.",
+  "primary_issue": "Departure 08-14 falls after the next arrival 08-13.",
+  "ukc_band": "Depth 2.5 minus surveyed draught 1.45 = 1.05 m, just above the 1 m anchor.",
+  "unresolved_count": "Date overlap, loa 10.46 vs survey 11.7, draught 1.2 vs 1.45 and large dues under a plan: two or three depending on counting."
+ },
+ "request": "rec-F417-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008586
+}

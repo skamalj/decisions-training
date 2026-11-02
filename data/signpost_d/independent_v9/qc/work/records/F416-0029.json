@@ -1,0 +1,183 @@
+{
+ "id": "F416-0029",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "date": "2025-03-02",
+   "signoff": "G1"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-01-01",
+    "home": "ST-22"
+   },
+   {
+    "id": "G2",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2025-03-02",
+    "home": "ST-22"
+   },
+   {
+    "id": "G9",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2025-12-01",
+    "home": "ST-05"
+   }
+  ],
+  "conditions": [
+   {
+    "time": "12:00",
+    "wave_m": 2.8,
+    "wind_kt": 30,
+    "rip_risk": "high",
+    "flag": "red_yellow",
+    "bathing_zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "date": "2025-03-02",
+    "time": "10:00",
+    "type": "water_rescue",
+    "responders": [
+     "G1",
+     "G2"
+    ],
+    "outcome": "released"
+   },
+   {
+    "date": "2025-03-02",
+    "time": "12:30",
+    "type": "water_rescue",
+    "responders": [
+     "G1",
+     "G9"
+    ],
+    "outcome": "released"
+   },
+   {
+    "date": "2025-03-02",
+    "time": "15:00",
+    "type": "water_rescue",
+    "responders": [
+     "G2",
+     "G9"
+    ],
+    "outcome": "released"
+   },
+   {
+    "date": "2025-03-02",
+    "time": "15:40",
+    "type": "first_aid",
+    "responders": [
+     "G1"
+    ],
+    "outcome": "released",
+    "ambulance_ref": null,
+    "referral_ref": "CL-88"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_board",
+    "out_from": "10:00",
+    "out_to": "10:50",
+    "substitute_unit_id": null
+   }
+  ],
+  "handover": {
+   "rescues": 4,
+   "first_aid": 1,
+   "kit_defects": 1,
+   "beach_users_est": 6100,
+   "advisories": 9,
+   "check_sheet_ref": "C-9"
+  }
+ },
+ "factors": {
+  "rescue_count": 3,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "rescue_off_by_one",
+  "worst_outcome": "first_aid_with_referral_ref",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": false,
+  "missing_record": "ambulance_ref",
+  "flag_lag": true,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": true,
+  "decoy_load": "high"
+ },
+ "factors_sampled": {
+  "rescue_count": 3,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "rescue_off_by_one",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": true,
+  "missing_record": "ambulance_ref",
+  "flag_lag": true,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_review",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "two_guard_cover": "Every rescue lists two rostered responders; G9 is mutual aid with in-date qual, but G2's expiry equals the shift date, which leaves slight doubt.",
+  "totals_reconcile": "handover.rescues is 4 but only three incidents are typed water_rescue.",
+  "next_step": "The rescue total is overstated by one, the ambulance_ref field is null, and a high rip risk with red_yellow flag appears, so the log needs more than a plain filing and goes up for review.",
+  "outcome_severity": "The only casualty is first_aid with outcome released, but a referral_ref CL-88 is also present, which could read as a referral.",
+  "kit_outage": "The board was out 10:00 to 10:50, which is 50 minutes with no substitute, so level 1 leads and level 0 is a modest alternative."
+ },
+ "request": "rec-F416-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.017717
+}

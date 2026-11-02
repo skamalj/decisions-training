@@ -1,0 +1,112 @@
+{
+ "id": "F407-0010",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-5009",
+   "received_at": "2024-09-03T11:00",
+   "channel": "utility_contractor",
+   "linked_reports": [
+    "R-4999",
+    "R-5001"
+   ]
+  },
+  "location": {
+   "road_class": "footway",
+   "intervention_depth_mm": 20
+  },
+  "inspection": {
+   "inspected_at": "2024-09-04",
+   "depth_mm": 21,
+   "width_mm": 644.4,
+   "offset_m": 5
+  },
+  "works_history": [
+   {
+    "completed": "2024-06-01",
+    "offset_m": 6,
+    "guarantee_end": "2025-06-01"
+   }
+  ]
+ },
+ "factors": {
+  "road_category": "footway",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 2,
+  "reporter_source": "utility_contractor",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 644.4,
+  "photo_attached": false
+ },
+ "factors_sampled": {
+  "road_category": "footway",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "none",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 2,
+  "reporter_source": "utility_contractor",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 644.4,
+  "photo_attached": false
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_engineer",
+   "second": "request_inspection",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "meets_threshold": "depth 21 mm vs threshold 20 mm, above.",
+  "repeat_failure": "completed job 2024-06-01 at offset 6 m vs defect 5 m, within 10 m.",
+  "next_step": "in-guarantee repeat suggests engineer referral; a contractor-sourced margin of 1 mm could justify re-inspection.",
+  "staff_effort": "recurring failure within guarantee likely needs long investigation.",
+  "response_timescale": "1 mm over threshold on a footway with a repeat; priority within five days or urgent make safe both defensible."
+ },
+ "request": "rec-F407-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004728
+}

@@ -1,0 +1,144 @@
+{
+ "id": "F415-0039",
+ "family": "F415",
+ "state": {
+  "site": {
+   "hours": "07:00-20:00",
+   "closures": [
+    {
+     "from": "2024-08-21T09:00",
+     "to": "2024-08-21T11:15",
+     "reason": "water main repair",
+     "approved_by": "OFF07"
+    }
+   ]
+  },
+  "shift": {
+   "start": "2024-08-21T08:00",
+   "end": "2024-08-21T15:30",
+   "sched_slots": [
+    "08:00",
+    "11:30",
+    "15:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "end": "2024-08-21T08:25",
+    "status": "done",
+    "checklist": null,
+    "photo_ref": null
+   },
+   {
+    "slot": "11:30",
+    "status": "not_recorded",
+    "op_note": "block shut 11:20-11:50 for police incident"
+   },
+   {
+    "slot": "15:00",
+    "end": "2024-08-21T15:20",
+    "status": "done",
+    "checklist": null,
+    "photo_ref": null
+   }
+  ],
+  "faults": [
+   {
+    "type": "blocked_pan",
+    "reported_at": "2024-08-21T09:00",
+    "remedied_at": "2024-08-21T11:49",
+    "source": "staff"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2024-08-21T15:22",
+   "comment": "signed remotely from depot on crew phone report"
+  },
+  "history": {
+   "prior_defaults_90d": 0
+  }
+ },
+ "factors": {
+  "scheduled_slots": 3,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 169.0,
+  "block_closed_during_fault": true,
+  "checklist_completion": "absent",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "explains_gap_unbacked",
+  "prior_defaults_90d": 0
+ },
+ "factors_sampled": {
+  "scheduled_slots": 3,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 168.83,
+  "block_closed_during_fault": true,
+  "checklist_completion": "absent",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "explains_gap_unbacked",
+  "prior_defaults_90d": 0
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_noted",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 81,
+ "deciding": {
+  "missed_clean": "The 11:30 slot is not_recorded. The approved closure ends at 11:15 and the police-incident closure in the note has no closures entry.",
+  "sign_off_valid": "A supervisor signed at 15:22, after the last visit ended at 15:20, which meets the formal test. But the comment says it was signed remotely on a phone report, and there is no checklist or photo evidence.",
+  "next_step": "The one unbacked gap and absent checklists and photos are recording lapses. The block was reportedly shut and the fault was brief for the public, so a noted lapse fits better than a default.",
+  "staff_effort": "The police-incident claim, the missing checklists and photos, and the remote sign-off need chasing. That is one to eight hours, possibly one to five days.",
+  "fault_exposure": "The fault ran 09:00-11:49, but the approved closure covered 09:00-11:15. Only about 34 minutes were open to the public, which is within 60."
+ },
+ "request": "rec-F415-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012138
+}

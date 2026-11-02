@@ -1,0 +1,136 @@
+{
+ "id": "F433-0025",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H31",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "result": "pass"
+    }
+   ]
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "14:00"
+  },
+  "vet_card": {
+   "arrival_copied": "14:01",
+   "presented_at": "14:21",
+   "pulse_bpm": 62,
+   "cri": {
+    "first_bpm": 60,
+    "second_bpm": 60
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 1.5,
+    "gut_sounds": [
+     "reduced",
+     "normal",
+     "normal",
+     "normal"
+    ]
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 1
+    },
+    {
+     "surface": "grass",
+     "grade": 1
+    }
+   ],
+   "vet_signed_at": "14:25"
+  },
+  "notes": {
+   "rider_note": "Stone bruise from last loop, shod fresh."
+  }
+ },
+ "factors": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": false,
+  "metabolic_flags": 1,
+  "cri_rise": "none",
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": 3,
+  "cri_rise": 1.31,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "clear_to_continue",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "clear",
+   "target": "ftq_gait",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "welfare_risk": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "pulse_met": "Presented 14:21 is 21 min after gate arrival 14:00 but exactly 20 min after copied 14:01; pulse 62 is under limit.",
+  "next_step": "Every reading is recorded and signed 14:25, with no missing item, treatment or breach, so no further information is needed.",
+  "outcome_code": "Grade 1 trot-ups on both surfaces while pulse, CRI and mm are acceptable point to a gait fail.",
+  "welfare_risk": "Gait is one parameter outside limits; reduced gut sound in one quadrant is a borderline second.",
+  "record_completeness": "All readings and signature present; the one-minute difference between arrival times is the only doubt on sequence."
+ },
+ "request": "rec-F433-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010225
+}

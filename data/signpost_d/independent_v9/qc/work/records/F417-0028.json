@@ -1,0 +1,125 @@
+{
+ "id": "F417-0028",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V-5531",
+   "type": "motor yacht",
+   "loa_m": 12.0,
+   "beam_m": 4.4,
+   "draught_m": 2.0,
+   "draught_src": null,
+   "home_port": "Cowes"
+  },
+  "berth": {
+   "id": "Q3",
+   "max_loa_m": 12.0,
+   "fender_allow_m": 0.3,
+   "depth_lat_m": 3.05,
+   "waiver_ref": null
+  },
+  "booking": {
+   "arrival": "2025-08-05",
+   "departure": "2025-08-09",
+   "nights": 4,
+   "next_on_berth": {
+    "arrival": "2025-08-15"
+   },
+   "note": "Berth reserved for HM allocation."
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 12.15,
+    "draught_m": null
+   },
+   "insurance_expiry": "2026-02-14",
+   "inspection_date": "2025-04-02"
+  },
+  "account": {
+   "dues_outstanding_gbp": 1489,
+   "deposit_paid": true,
+   "plan_id": "PP-331",
+   "plan_status": "approved"
+  },
+  "history": []
+ },
+ "factors": {
+  "loa_mismatch_pct": 1.25,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 1.05,
+  "draught_source": "null",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 1489,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": true
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 8.95,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 1.05,
+  "draught_source": "null",
+  "insurance_status": "missing",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 1489,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": true
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "refer_harbourmaster",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 103,
+ "deciding": {
+  "length_fits": "Survey loa 12.15 exceeds max_loa 12.0 but is inside the 0.3 fender allowance; no waiver, so the answer is borderline and leans false.",
+  "next_step": "Booking note says the berth is reserved for harbour master allocation, so the decision is beyond the officer.",
+  "primary_issue": "Insurance, inspection and dates are in order, and dues are covered by an approved plan PP-331.",
+  "ukc_band": "Depth 3.05 minus declared draught 2.0 = 1.05, just above the 1 m boundary; declared-only draught keeps doubt.",
+  "unresolved_count": "Declared 12.0 versus surveyed 12.15 loa is a tiny gap that may or may not count; everything else agrees."
+ },
+ "request": "rec-F417-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011897
+}

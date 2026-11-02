@@ -1,0 +1,141 @@
+{
+ "id": "F422-0006",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "delivered_at": "2025-03-01",
+   "received_at": "2025-03-06",
+   "review_date": "2025-03-10",
+   "lines": [
+    {
+     "qty_claimed": 27
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "lines": [
+    {
+     "batch": "A1",
+     "expiry": "2027-06-30"
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "batch": "A1",
+     "expiry": "2027-06-30",
+     "qty_counted": 20,
+     "packs_damaged": 0
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "unknown",
+     "pack": 1
+    }
+   ]
+  },
+  "temperature": {
+   "labelled_range": "15-25",
+   "logger_start": "2025-03-01",
+   "logger_end": "2025-03-06",
+   "min_c": 17,
+   "max_c": 23,
+   "minutes_out_of_range": 0
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2024-12-31",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "hold_limit_days": 25,
+   "max_days_out_of_control": 10,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 0,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 7,
+  "damaged_pack_fraction": 0.0,
+  "uid_alert": true,
+  "uid_alert_explained": false,
+  "days_out_of_control": 5,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 21,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 27
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 455,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "no_dispatch_link",
+  "count_discrepancy_packs": 7,
+  "damaged_pack_fraction": 0.61,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 5,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 12,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 27
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_qp",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "storage_maintained": "Logger covers the full period and min/max 17-23 sit inside 15-25; doubt only from the lapsed audit and missing declaration.",
+  "batch_traceable": "Counted batch A1 and expiry match the dispatch line exactly.",
+  "next_step": "A scanned pack has UID status 'unknown' with no decommission data, an unexplained authenticity failure.",
+  "resaleable_share": "Of 20 packs counted, one is the UID-unknown pack; the rest are intact, so half or more but not all fit.",
+  "disposition_urgency": "Received 03-06 plus 25 days gives 03-31 against review 03-10: 21 days, just over the 20-day boundary."
+ },
+ "request": "rec-F422-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01102
+}

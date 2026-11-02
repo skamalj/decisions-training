@@ -1,0 +1,128 @@
+{
+ "id": "F412-0035",
+ "family": "F412",
+ "state": {
+  "inspection": {
+   "contraventions": [
+    {
+     "ref": "C1",
+     "area": "REC",
+     "due_date": "2024-04-03"
+    },
+    {
+     "ref": "C2",
+     "area": "REC",
+     "due_date": "2024-05-10"
+    }
+   ]
+  },
+  "revisit": {
+   "date": "2024-05-20",
+   "items": [
+    {
+     "ref": "C1",
+     "status": "not_remedied"
+    },
+    {
+     "ref": "C2",
+     "status": "remedied"
+    }
+   ],
+   "officer_note": "Good progress noted."
+  },
+  "correspondence": {
+   "extensions": [
+    {
+     "ref": "C1",
+     "agreed": true,
+     "new_due_date": "2024-04-17"
+    }
+   ],
+   "operator_reply": "C1 log updated."
+  }
+ },
+ "factors": {
+  "contravention_count": 2,
+  "resolution_share": "few_resolved",
+  "worst_open_area": "records",
+  "food_handling_open_count": 0,
+  "cross_section_mismatch": "reply_contradicts_revisit",
+  "days_past_original_due": 47,
+  "extension_agreed": true,
+  "benign_explanation": false,
+  "operator_evidence": "submitted_unverified",
+  "adverse_sample": false,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 0,
+  "boundary_case": false,
+  "reassuring_note_decoy": true
+ },
+ "factors_sampled": {
+  "contravention_count": 4,
+  "resolution_share": "few_resolved",
+  "worst_open_area": "records",
+  "food_handling_open_count": 0,
+  "cross_section_mismatch": "reply_contradicts_revisit",
+  "days_past_original_due": 47,
+  "extension_agreed": true,
+  "benign_explanation": false,
+  "operator_evidence": "submitted_unverified",
+  "adverse_sample": false,
+  "complaint_since_inspection": "related_unsubstantiated",
+  "prior_enforcement_count": 0,
+  "boundary_case": false,
+  "reassuring_note_decoy": true
+ },
+ "plan": {
+  "all_remedied": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "issue_notice",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "worst_hazard": {
+   "clarity": "clear",
+   "target": "records_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "overdue_extent": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "residual_risk": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "all_remedied": "C1 is not_remedied at revisit while the operator reply says the log is updated, which is unverified; the officer note is only a general remark.",
+  "next_step": "C1 is a records item still open after the agreed extension; a notice with a deadline is the fit step.",
+  "worst_hazard": "The only open item is C1, area REC (records).",
+  "overdue_extent": "C1 original due 2024-04-03 is 47 days before revisit 2024-05-20 (level 3), but its agreed new due 2024-04-17 is 33 days before (level 2).",
+  "residual_risk": "Only a records item is open, with no food handling items and no samples, which fits low risk."
+ },
+ "request": "rec-F412-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012462
+}

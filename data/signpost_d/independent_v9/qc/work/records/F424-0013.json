@@ -1,0 +1,125 @@
+{
+ "id": "F424-0013",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2413",
+   "vessel_id": "FV5",
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-05-05",
+    "gravity_sg": 1.012,
+    "temp_c": 23,
+    "probe_id": "P1"
+   },
+   {
+    "ts": "2024-05-06",
+    "gravity_sg": 1.012,
+    "temp_c": 23,
+    "probe_id": "P1"
+   }
+  ],
+  "events": [
+   {
+    "note": "Sour smell on sampling, worried."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2413",
+   "micro_plate": {
+    "result": "presumptive"
+   },
+   "diacetyl_mgl": 0.1
+  },
+  "release_request": {
+   "vessel_id": "FV5",
+   "note": "Need it today."
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.1,
+  "discrepancy_count": 0,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.1,
+  "discrepancy_count": 3,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "alarmed"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "hold_retest",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "terminal_gravity": "Two consecutive readings of 1.012 are inside the band.",
+  "contamination_supported": "A presumptive plate plus a sour-smell note corroborate each other, with no negative retest.",
+  "batch_disposition": "The presumptive plate needs a confirming retest before release despite the rush request.",
+  "deviation_severity": "A presumptive plate with no temp breach could be Major or Critical, which is open.",
+  "record_discrepancies": "batch_ref, vessel, and the other fields all agree, so there are none."
+ },
+ "request": "rec-F424-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00502
+}

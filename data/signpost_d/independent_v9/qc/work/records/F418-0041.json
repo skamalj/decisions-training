@@ -1,0 +1,138 @@
+{
+ "id": "F418-0041",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "KDW",
+   "plat": 2,
+   "date": "2025-03-11",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "attendance": [
+   {
+    "staff_id": "S41",
+    "sign_on": "05:45",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2026-01-10",
+    "dispatch_comp_exp": "2026-02-01"
+   },
+   {
+    "staff_id": "S77",
+    "sign_on": "05:50",
+    "sign_off": "17:30",
+    "safety_comp_exp": "2026-05-02",
+    "dispatch_comp_exp": null
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "08:02",
+    "staff_id": "S41"
+   },
+   {
+    "type": "dispatch",
+    "time": "08:20",
+    "staff_id": "S77"
+   },
+   {
+    "type": "gap_end",
+    "time": "08:50"
+   }
+  ],
+  "controls": {
+   "disp_ref": null,
+   "prior_shortfalls_30d": 3
+  },
+  "remarks": [
+   "Busy morning, sorted eventually."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 48,
+  "shortfall_timing": "peak",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 48,
+  "shortfall_timing": "peak",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "vague",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "uncovered",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unqualified_dispatch = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 67,
+ "deciding": {
+  "headcount_verified": "Both staff have sign-on rows and in-date safety competence; only S77's dispatch competence is null, leaving some doubt.",
+  "next_step": "Gap 08:02-08:50 with no dispensation and a dispatch by S77 with null dispatch competence in dispatch_mode staff: amend the log and brief the team.",
+  "coverage_outcome": "gap_start 08:02 to gap_end 08:50 has no cover_start/cover_end events, so the gap went entirely unfilled.",
+  "reversal_time": "A single 48-minute historical gap with no lasting record or equipment consequence; the log can be corrected within a day.",
+  "exposure_severity": "Dispatch event at 08:20 falls inside the gap, by S77 whose dispatch_comp_exp is null while dispatch_mode is staff."
+ },
+ "request": "rec-F418-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009965
+}

@@ -1,0 +1,326 @@
+{
+ "id": "F435",
+ "domain": "concert venue crowd capacity checks",
+ "role": "Venue safety officer reviewing zone capacity check records",
+ "setting": "A large concert venue's event safety office. After doors open, every audience zone at each event produces one capacity check record. It holds the zone's licence terms and limits, ticketing figures, ingress counter readings, steward sign-ins and the exit route inspection log. The safety officer reviews one zone record at a time. They decide whether occupancy was verifiably over limit, what to do next, what drove any discrepancy, how short stewarding was, and how many exit routes went unconfirmed before doors.",
+ "questions": {
+  "verified_exceedance": {
+   "type": "noul",
+   "instructions": "A zone's verified occupancy exceeded its effective licensed limit during this event.",
+   "criteria": null
+  },
+  "disposition": {
+   "type": "choice",
+   "instructions": "What should the safety officer do with this zone check?",
+   "criteria": {
+    "sign_off": "Counts, staffing and exits all reconcile; approve with no follow-up.",
+    "conditional_sign_off": "Approve now; only minor gaps already being remedied are logged.",
+    "hold": "Withhold approval until one missing confirmation or recount arrives.",
+    "restrict_entry": "Event live with verified risk; pause admissions to the zone.",
+    "escalate": "Event ended with verified breach; refer to licensing authority."
+   }
+  },
+  "discrepancy_source": {
+   "type": "choice",
+   "instructions": "What is the main source of any over-limit discrepancy?",
+   "criteria": {
+    "none": "Verified counts and tickets issued stay within effective limit.",
+    "counter_fault": "Only a device flagged faulty shows counts above the limit.",
+    "ticket_overissue": "Tickets issued exceed even the limit ticketing itself used.",
+    "limit_mismatch": "Ticketing applied a zone limit differing from the effective licence."
+   }
+  },
+  "steward_shortfall": {
+   "type": "score",
+   "instructions": "How far below the required steward count was signed-in deployment?",
+   "criteria": [
+    "Met: signed-in stewards equal or exceed the required number",
+    "Slight: under 10% below the required number",
+    "Marked: 10% to under 25% below required",
+    "Severe: 25% or more below, or roster absent"
+   ]
+  },
+  "unconfirmed_exits": {
+   "type": "score",
+   "instructions": "How many exit routes lacked a clear check before doors?",
+   "criteria": [
+    "Every exit route checked clear before doors opened",
+    "Exactly one exit route lacked a pre-doors clear check",
+    "Exactly two exit routes lacked a pre-doors clear check",
+    "Three or four exit routes lacked a clear check",
+    "Five or more routes, or no exit log"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "zone_type",
+   "description": "Kind of audience zone. Changes typical limits, steward requirements and number of exit routes without changing the decision logic.",
+   "kind": "categorical",
+   "values": [
+    "standing_floor",
+    "seated_tier",
+    "balcony",
+    "hospitality_deck"
+   ],
+   "weights": [
+    0.4,
+    0.3,
+    0.2,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "event_phase",
+   "description": "Whether the check was filed while the event is still live or after it ended. Separates restrict_entry from escalate.",
+   "kind": "categorical",
+   "values": [
+    "live",
+    "post_event"
+   ],
+   "weights": [
+    0.55,
+    0.45
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "occupancy_ratio",
+   "description": "True peak occupancy divided by the effective zone limit. Values near 1.0 sit on the boundary.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.8,
+   "max": 1.15,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "counter_status",
+   "description": "State of the ingress counter device. calibration_due is a decoy, as the reading remains valid. fault_logged makes the raw reading unverified.",
+   "kind": "categorical",
+   "values": [
+    "ok",
+    "calibration_due",
+    "fault_logged"
+   ],
+   "weights": [
+    0.6,
+    0.2,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "counter_inflation",
+   "description": "Fractional over-read added to the raw counter peak, applied only when counter_status is fault_logged. It can push a within-limit zone apparently over.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0.12,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "manual_recount_present",
+   "description": "Whether a timestamped manual clicker recount exists. It gives the true occupancy and can rescue a faulty counter reading.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4",
+    "S2"
+   ]
+  },
+  {
+   "name": "capacity_variation",
+   "description": "Temporary raised limit. Only approved_in_time changes the effective limit. approved_late has an approval date after doors_open. pending has no approval date.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "approved_in_time",
+    "approved_late",
+    "pending"
+   ],
+   "weights": [
+    0.4,
+    0.3,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S3",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "tickets_issued_ratio",
+   "description": "Tickets issued for the zone, including complimentary tickets, divided by the effective limit.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.85,
+   "max": 1.1,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "limit_mismatch",
+   "description": "Ticketing configured the zone with a limit different from the effective licence limit, such as a stale base limit or an unapproved variation figure.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "steward_gap_pct",
+   "description": "Signed-in stewards below the required number, as a fraction of required. Negative values mean a surplus. Values cluster near the 10% and 25% anchors.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": -0.1,
+   "max": 0.35,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "relief_called",
+   "description": "Relief stewards have been called with an ETA. This mitigates disposition only; it never changes the signed-in count.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "roster_missing",
+   "description": "The stewarding section is null, so deployment cannot be shown.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.08,
+   "skills": [
+    "S2"
+   ]
+  },
+  {
+   "name": "exits_unconfirmed",
+   "description": "Number of listed exit routes with no clear check timestamped before doors. Causes are a missing entry, a null checked_at, a check after doors_open, or an obstructed status with no clear recheck before doors.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 5,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "exit_log_missing",
+   "description": "The exit_checks section is null, so every route counts as unconfirmed.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.08,
+   "skills": [
+    "S2"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "event",
+   "description": "event_id, zone_id, zone_type, doors_open and check_filed_at timestamps, phase."
+  },
+  {
+   "name": "licence",
+   "description": "base_limit, variation object or null, stewards_required, exit_routes list of route ids."
+  },
+  {
+   "name": "ticketing",
+   "description": "zone_limit_used, issued, comps_included, scanned_in."
+  },
+  {
+   "name": "ingress",
+   "description": "device_id, device_status, raw_peak, peak_at, manual_recount object or null."
+  },
+  {
+   "name": "stewarding",
+   "description": "rostered, signed_in, relief object or null; whole section may be null."
+  },
+  {
+   "name": "exit_checks",
+   "description": "List of route checks with route_id, checked_at, status; may be null."
+  }
+ ],
+ "rendering_notes": "event: phase is live or post_event; doors_open and check_filed_at are ISO datetimes. licence: base_limit is an integer. variation is null for none; otherwise {ref, new_limit, status, approved_on}. approved_in_time has approved_on before doors_open. approved_late has approved_on after doors_open, often the same day, which is out-of-order evidence that the variation does not apply. pending has status \"pending\" and approved_on null. The effective limit is new_limit only for approved_in_time, otherwise base_limit; the reader must derive it. stewards_required is an integer; exit_routes lists 3 to 8 route ids. ticketing: zone_limit_used equals the effective limit unless limit_mismatch, in which case it shows base_limit or the late or pending new_limit. issued = round(tickets_issued_ratio x effective limit). comps_included is a decoy subset already inside issued. scanned_in is a decoy, slightly below issued because of no-shows and re-entries. Source rule: ticket_overissue applies when issued exceeds zone_limit_used. limit_mismatch applies when issued exceeds the effective limit but not zone_limit_used. counter_fault applies when only a fault_logged raw_peak exceeds the limit. ingress: raw_peak = true occupancy, times (1 + counter_inflation) when device_status is fault_logged. calibration_due is a decoy and still valid. manual_recount is {count, at} with count equal to true occupancy, or null. Verified occupancy is raw_peak when the device is ok or calibration_due. When the device is fault_logged, verified occupancy is the recount; with no recount it is unverified, so the exceedance claim is false and the record usually needs hold. stewarding: signed_in = round(stewards_required x (1 - steward_gap_pct)). rostered is a decoy and is always at least signed_in. relief is {called_at, eta_min} or null; it mitigates disposition only. The section is null when roster_missing. exit_checks: one entry per checked route. Unconfirmed routes show as an absent route_id, a null checked_at, a checked_at after doors_open, or status \"obstructed\" with no later \"clear\" entry before doors. Some unconfirmed routes have a decoy \"clear\" recheck after doors. The section is null when exit_log_missing. Contested cases: verified occupancy within 1% of the limit; recount disagreeing with an ok-status counter by a few people; steward gaps that round onto 10% or 25%; approved_on minutes after doors. No field may state the answers: never include breach, verified_occupancy, effective_limit, shortfall, unconfirmed_count, risk or recommendation fields. Every answer must be derived by comparing values across sections.",
+ "skills": [
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": null,
+ "aggravating_factor": null,
+ "design_cost": 0.221892
+}

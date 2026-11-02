@@ -1,0 +1,142 @@
+{
+ "id": "F424-0021",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2411",
+   "vessel_id": "FV3",
+   "volume_hl": 20,
+   "og_target": 1.052,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.012,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-05-09",
+    "gravity_sg": 1.02,
+    "temp_c": 19.5
+   },
+   {
+    "ts": "2024-05-10",
+    "gravity_sg": 1.014,
+    "temp_c": 22.5
+   },
+   {
+    "ts": "2024-05-11",
+    "gravity_sg": 1.011,
+    "temp_c": 19.5
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-05-10",
+    "type": "temp_change",
+    "vessel_id": "FV3",
+    "note": "Approved free-rise to 22.5 for 6h."
+   },
+   {
+    "ts": "2024-05-11",
+    "type": "blend",
+    "vessel_id": "FV5",
+    "note": "Blended into FV5 before QA, smells off, worried!"
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2411",
+   "micro_plate": {
+    "result": "positive",
+    "cfu_ml": 120,
+    "plated_on": "2024-05-11"
+   },
+   "lab_note": "Possible plating error; retest requested."
+  },
+  "release_request": {
+   "volume_hl": 20.5,
+   "vessel_id": "FV3"
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": true,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": true,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.07,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": true,
+  "release_pressure": "routine",
+  "operator_note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": true,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": true,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.07,
+  "discrepancy_count": 3,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": true,
+  "release_pressure": "routine",
+  "operator_note_tone": "alarmed"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "dump",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (hard_limit_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 77,
+ "deciding": {
+  "terminal_gravity": "Last reading 1.011 is in band, but the prior 1.014 was still falling, so stability is unconfirmed.",
+  "contamination_supported": "Plate positive at 120 cfu/ml plus an off smell note, against a lab note suggesting plating error and a requested retest.",
+  "batch_disposition": "Blend into FV5 logged before QA sign-off is a hard-limit breach, so the batch is dumped.",
+  "deviation_severity": "The pre-sign-off blend event is an irreversible step, so the level is Critical.",
+  "record_discrepancies": "Only volume_hl 20 vs release 20.5 differs, exactly at the 0.5 hl tolerance, so it is one or none."
+ },
+ "request": "rec-F424-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01201
+}

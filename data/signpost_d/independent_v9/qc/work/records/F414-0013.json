@@ -1,0 +1,130 @@
+{
+ "id": "F414-0013",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SL-07",
+   "equip_type": "slide",
+   "crit_fall_height_m": 2.4,
+   "surf_type": "rubber_tile"
+  },
+  "inspection": {
+   "insp_date": "2024-06-03",
+   "insp_grade": "routine_visual",
+   "fall_height_m": 2.4,
+   "surf_type_found": "wood_chip",
+   "surf_depth_mm": 200,
+   "surf_req_table": [
+    {
+     "max_h": 2.5,
+     "type": "wood_chip",
+     "min_depth_mm": 300
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "finger",
+     "opening_id": "O1",
+     "result": "fail"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "SF3",
+     "component_id": "C-bed",
+     "injury_mech": "minor"
+    }
+   ]
+  },
+  "maintenance": [],
+  "history": [
+   {
+    "date": "2023-06-01",
+    "defect_refs": [
+     "D7"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "slide",
+  "register_mismatch": "large",
+  "surfacing_depth_margin_mm": -100.0,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": "none raised",
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "low",
+  "incident_reports_90d": 2
+ },
+ "factors_sampled": {
+  "equipment_type": "slide",
+  "register_mismatch": "large",
+  "surfacing_depth_margin_mm": 4.89,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.78,
+  "temporary_measure_in_place": true,
+  "approved_variance": true,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "low",
+  "incident_reports_90d": 2
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "sign_off_actions",
+   "second": null,
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (head_neck_entrapment_fail = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 44,
+ "deciding": {
+  "prior_defects_cleared": "The previous inspection raised D7. The maintenance list is empty and there is no follow-up check, so nothing shows it closed.",
+  "surfacing_adequate": "Depth 200 mm against a 300 mm minimum for wood chip at 2.4 m. The register lists rubber_tile but wood_chip was found.",
+  "asset_disposition": "The only finding is a minor-mechanism defect on C-bed, with no head-neck failure (the failed probe is a finger probe). Use can continue with repairs and surfacing top-up scheduled.",
+  "remedial_progress": "The maintenance list is empty, so no orders were raised, which is level 3.",
+  "hazard_severity": "The worst finding SF3 is injury_mech minor, and the finger-probe failure is a decoy. This is level 2."
+ },
+ "request": "rec-F414-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015177
+}

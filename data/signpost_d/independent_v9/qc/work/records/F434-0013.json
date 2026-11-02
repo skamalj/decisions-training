@@ -1,0 +1,117 @@
+{
+ "id": "F434-0013",
+ "family": "F434",
+ "state": {
+  "post": {
+   "km_marker": 55,
+   "on_post_from": "09:00",
+   "off_post_at": "11:32"
+  },
+  "incidents": [],
+  "comms": {
+   "radio_checks": [
+    {
+     "ok": false
+    },
+    {
+     "ok": false
+    },
+    {
+     "ok": false
+    },
+    {
+     "ok": false
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [],
+   "road_reopened_at": {
+    "50-60": "11:20"
+   }
+  },
+  "sweep": {
+   "passed_at": "11:30",
+   "last_rider_bib": 131
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": true,
+  "incident_mix": "none",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": "none",
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": true,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "time_offset_minor",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": 4.97,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "safety_review",
+   "second": null,
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "no_incident",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (reopen_before_sweep = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 40,
+ "deciding": {
+  "coverage_held": "Post held 09:00 to 11:32, past sweep passage at 11:30.",
+  "next_step": "Road reopened 11:20 before sweep 11:30 while a rider was still to pass: a confirmed failure for review.",
+  "incident_class": "Neither post nor control logs list any incident.",
+  "reversal_time": "Exposure cannot be undone but a review and fix could take days to months; balanced.",
+  "consequence_severity": "Reopening preceded sweep with last rider bib 131 passing after, implying riders met traffic, though no injury is recorded."
+ },
+ "request": "rec-F434-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005621
+}

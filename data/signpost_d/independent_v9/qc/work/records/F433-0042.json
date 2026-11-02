@@ -1,0 +1,135 @@
+{
+ "id": "F433-0042",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H32",
+   "age": 12,
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "pulse": 56
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 30
+   },
+   "arrived_at": "11:00",
+   "departed_at": "11:25"
+  },
+  "vet_card": {
+   "arrival_copied": "11:01",
+   "presented_at": "11:12",
+   "pulse_bpm": 56,
+   "cri": {
+    "first_bpm": 60,
+    "second_bpm": 56
+   },
+   "metabolic": {
+    "mm": "injected",
+    "crt_s": 3,
+    "gut_sounds": "normal"
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 3
+    }
+   ],
+   "tack": null,
+   "vet_signed_at": "11:30"
+  },
+  "notes": {
+   "rider_note": "Tired on the hills but ate well."
+  }
+ },
+ "factors": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": false,
+  "metabolic_flags": 2,
+  "cri_rise": 3.81,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": true,
+  "note_tone": "benign_explanation"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": false,
+  "metabolic_flags": 2,
+  "cri_rise": 3.81,
+  "missing_items": 1,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": true,
+  "note_tone": "benign_explanation"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "eliminate_ftq",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "leaning",
+   "target": "ftq_combined",
+   "second": null,
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (departed_before_clearance = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 70,
+ "deciding": {
+  "pulse_met": "Presented 11:12 (within 20 min under either arrival time) with pulse 56 against limit 64.",
+  "next_step": "Grade 3 trot-up plus injected mm and crt 3 s are clear failures; eliminate rather than refer, with the early departure the only doubt.",
+  "outcome_code": "Gait grade 3 irregular and two metabolic flags (injected mm, crt 3 s) give a combined failure.",
+  "welfare_risk": "departed_at 11:25 is earlier than vet_signed_at 11:30, so the horse is on course uncleared.",
+  "record_completeness": "All readings and signature present and times in order of presentation then signature; no nulls."
+ },
+ "request": "rec-F433-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009112
+}

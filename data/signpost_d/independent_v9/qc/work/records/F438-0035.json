@@ -1,0 +1,143 @@
+{
+ "id": "F438-0035",
+ "family": "F438",
+ "state": {
+  "coded_record": {
+   "primary_dx": {
+    "code": "I21.4"
+   },
+   "secondary_dx": [
+    "N18.3"
+   ],
+   "procedures": [
+    {
+     "code": "K49.1",
+     "date": "2024-06-02"
+    },
+    {
+     "code": "U21.1"
+    }
+   ]
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "I50.1"
+   },
+   "comorbidities": [
+    "N18.3",
+    "E11.9"
+   ],
+   "theatre_log": [
+    {
+     "code": "K49.1",
+     "date": "2024-06-01"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "EB10A",
+   "hrg_regrouped": "EB03B",
+   "submitted_to_commissioner": true
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    {
+     "code_pair": [
+      "Z86.7",
+      "Z95.1"
+     ]
+    }
+   ],
+   "queries": [
+    {
+     "target_code": "I50.1",
+     "status": "closed",
+     "response": "confirms"
+    }
+   ]
+  },
+  "coder_history": {
+   "error_rate": 0.29,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "different",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "date_or_side_differs",
+  "regroup_outcome": "diff_hrg",
+  "missing_source": "none",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.29,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "date_or_side_differs",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.29,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unsupported_billable_code = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 25,
+ "deciding": {
+  "primary_supported": "The coded primary I21.4 differs from the documented I50.1, and the closed query confirms I50.1. The only convention listed is an unrelated pair.",
+  "hrg_shift": "EB10A is regrouped to EB03B.",
+  "next_step": "The record is submitted with a wrong primary, an HRG change and a coded procedure (U21.1) that has no documentation. That calls for referral to the coding lead. The plan's accept answer cannot hold.",
+  "error_count": "The primary is wrong. E11.9 is documented but not coded. K49.1 has a different date. U21.1 is coded with no log entry. That is four errors.",
+  "error_severity": "U21.1 has no documentation entry, so the severity is critical. The wrong primary and the HRG change would be major."
+ },
+ "request": "rec-F438-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01254
+}

@@ -1,0 +1,112 @@
+{
+ "id": "F438-0011",
+ "family": "F438",
+ "state": {
+  "coded_record": {
+   "primary_dx": "I50.1",
+   "secondary_dx": [
+    "E11.9",
+    "N18.3",
+    "I10"
+   ],
+   "procedures": []
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "I50.0"
+   },
+   "comorbidities": [
+    "E11.9",
+    "N18.4"
+   ],
+   "theatre_log": [
+    {
+     "code": "K65.1",
+     "date": "2024-03-02"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "EB03Z",
+   "hrg_regrouped": "EB03Z"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 2,
+  "procedure_mismatch": "documented_not_coded",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.23,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 2,
+  "procedure_mismatch": "documented_not_coded",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.23,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "amend_codes",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "primary_supported": "I50.1 vs I50.0 share the first three characters and differ in the fourth, so the same condition with a specificity difference; supported only modestly.",
+  "hrg_shift": "hrg_submitted and hrg_regrouped are both EB03Z.",
+  "next_step": "Source is complete and the HRG is unchanged, so local correction fits, although the many discrepancies leave some doubt.",
+  "error_count": "Specificity slip, N18.3 vs N18.4, undocumented I10 and the theatre_log procedure with no coded counterpart give three or four errors, depending on whether the specificity slip counts.",
+  "error_severity": "Secondary code wrong and procedure missing with the HRG unchanged point to minor; the primary slip is only specificity."
+ },
+ "request": "rec-F438-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009309
+}

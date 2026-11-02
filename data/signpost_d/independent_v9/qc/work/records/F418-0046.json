@@ -1,0 +1,161 @@
+{
+ "id": "F418-0046",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "KRB",
+   "plat": 2,
+   "date": "2025-03-11",
+   "svc_from": "06:00",
+   "svc_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S41",
+    "planned_start": "06:00"
+   },
+   {
+    "staff_id": "S52",
+    "planned_start": "06:00"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S41",
+    "sign_on": "06:00",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2026-01-10",
+    "dispatch_comp_exp": "2026-01-10"
+   },
+   {
+    "staff_id": "S52",
+    "sign_on": "06:09",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2026-02-01",
+    "dispatch_comp_exp": "2026-02-01"
+   },
+   {
+    "staff_id": "S60",
+    "sign_on": "10:05",
+    "sign_off": "11:37",
+    "safety_comp_exp": "2025-12-01",
+    "dispatch_comp_exp": "2025-12-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "10:00",
+    "plat": 2
+   },
+   {
+    "type": "redeploy",
+    "time": "10:05",
+    "staff_id": "S60",
+    "plat": 2
+   },
+   {
+    "type": "cover_start",
+    "time": "10:12",
+    "staff_id": "S60",
+    "plat": 2
+   },
+   {
+    "type": "cover_end",
+    "time": "11:37",
+    "staff_id": "S60",
+    "plat": 2
+   },
+   {
+    "type": "gap_end",
+    "time": "11:37",
+    "plat": 2
+   }
+  ],
+  "controls": null,
+  "remarks": [
+   "Short-staffed late morning, dispensation applied, ref to follow. Relief came across."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 97,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 5,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 97,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 5,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_records",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "leaning",
+   "target": "cover_arranged",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "headcount_verified": "All three attendance rows have sign-ons and in-date competence; S52 only 9 minutes late, S60 matches the redeploy event.",
+  "next_step": "controls is null while remarks say the dispensation ref is to follow: a named dispensation reference is missing.",
+  "coverage_outcome": "Redeploy and cover events by S60 run to gap_end, so no gap is left open, though cover starts 12 minutes after gap_start.",
+  "reversal_time": "A past shift's staffing exposure cannot be undone, and no record correction applies.",
+  "exposure_severity": "Below minimum 10:00-11:37 in service; the remark claims a dispensation but controls is null, so validity is doubtful."
+ },
+ "request": "rec-F418-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011548
+}

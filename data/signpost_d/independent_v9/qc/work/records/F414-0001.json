@@ -1,0 +1,168 @@
+{
+ "id": "F414-0001",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "MP-0412",
+   "equip_type": "multi_play",
+   "crit_fall_height_m": 2.0,
+   "surf_type": "bark"
+  },
+  "inspection": {
+   "insp_date": "2024-06-10",
+   "insp_grade": "routine_visual",
+   "fall_height_m": 2.0,
+   "surf_type_found": "bark",
+   "surf_depth_mm": 320,
+   "surf_req_table": [
+    {
+     "band": "<=3.0",
+     "type": "bark",
+     "min_depth_mm": 300
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "O3",
+     "result": "fail"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "EN1",
+     "component_id": "C7",
+     "injury_mech": "serious"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W81",
+    "asset_id": "MP-0412",
+    "component_id": "C2",
+    "defect_ref": "D14",
+    "status": "closed",
+    "closed_date": "2024-05-20"
+   },
+   {
+    "wo_id": "W82",
+    "asset_id": "MP-0412",
+    "component_id": "C9",
+    "defect_ref": "D15",
+    "status": "closed",
+    "closed_date": "2024-05-22",
+    "temp_measure": {
+     "type": "opening_blocked",
+     "date": "2024-06-10"
+    }
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 3
+  },
+  "history": [
+   {
+    "date": "2024-04-02",
+    "defect_refs": [
+     "D14",
+     "D15"
+    ],
+    "components": [
+     {
+      "component_id": "C2",
+      "result": "fail"
+     },
+     {
+      "component_id": "C4",
+      "result": "fail"
+     }
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "multi_play",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": 20.0,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 1.0,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "medium",
+  "incident_reports_90d": 3
+ },
+ "factors_sampled": {
+  "equipment_type": "multi_play",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": -60.62,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.82,
+  "temporary_measure_in_place": true,
+  "approved_variance": true,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "medium",
+  "incident_reports_90d": 3
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "clear",
+   "target": "restrict_use",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (head_neck_entrapment_fail = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 53,
+ "deciding": {
+  "prior_defects_cleared": "History defect D15 was on component C4, but the only closed order for D15 is against C9, so the C4 defect is not shown closed.",
+  "surfacing_adequate": "Bark depth 320 mm against a 300 mm minimum for 2.0 m fall height.",
+  "asset_disposition": "Head-neck probe fails at opening O3 and a temporary measure blocks the opening; the rest of the asset is unaffected, so restrict use.",
+  "remedial_progress": "Both raised work orders are closed, so every raised order is closed.",
+  "hazard_severity": "Head-neck probe fail points to critical, but the finding is coded serious injury and the opening is blocked, which keeps level 3 plausible."
+ },
+ "request": "rec-F414-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011782
+}

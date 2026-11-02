@@ -1,0 +1,174 @@
+{
+ "id": "F425-0047",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "farm_ref": "F-1940",
+   "flock_id": "FL-72B",
+   "producer_code": "2UK-6H08",
+   "method": "2",
+   "lay_dates": [
+    "2024-06-03"
+   ],
+   "declared_eggs": 2400,
+   "trays": 80
+  },
+  "grading_run": {
+   "grader_id": "G1",
+   "run_start": "2024-06-09T06:30",
+   "run_end": "2024-06-09T09:00",
+   "eggs_in": 2400,
+   "by_size": {
+    "S": 150,
+    "M": 900,
+    "L": 800,
+    "XL": 272
+   },
+   "outgrades": {
+    "cracks": 230,
+    "dirties": 25,
+    "blood_spots": 12,
+    "leakers": 6,
+    "misshapen": 3
+   },
+   "class_a_total": 2122
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-05-28",
+    "interval_days": 30
+   },
+   "candling_sample": {
+    "n": 100,
+    "sampled_at": "2024-06-09T07:45"
+   },
+   "scale_check": {
+    "ok": true
+   },
+   "store_temp": {
+    "minutes_above_limit": 12,
+    "max_c": 14.1,
+    "defrost_logged": true
+   }
+  },
+  "flock": {
+   "age_weeks": 72,
+   "last_swab": {
+    "date": "2024-05-20",
+    "result": null
+   },
+   "swab_pending": true
+  },
+  "packing": {
+   "pack_date": "2024-06-09",
+   "packs": [
+    {
+     "size": "S",
+     "pack_size": 10,
+     "count": 15
+    },
+    {
+     "size": "M",
+     "pack_size": 10,
+     "count": 90
+    },
+    {
+     "size": "L",
+     "pack_size": 10,
+     "count": 80
+    },
+    {
+     "size": "XL",
+     "pack_size": 2,
+     "count": 136
+    }
+   ],
+   "stamp_code": "2UK-6H08",
+   "best_before": "2024-07-01",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 6,
+  "mixed_lay_dates": false,
+  "missing_check": "swab_pending",
+  "swab_positive": false,
+  "outgrade_rate_pct": 11.5,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "brief",
+  "temp_mitigated": true,
+  "flock_age_weeks": 72
+ },
+ "factors_sampled": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 6,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 2.45,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "brief",
+  "temp_mitigated": true,
+  "flock_age_weeks": 54
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "hold_pending",
+   "second": null,
+   "targets": []
+  },
+  "anomaly_cause": {
+   "clarity": "clear",
+   "target": "shell_quality",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "lay_to_pack": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outgrade_share": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "counts_reconcile": "Declared 2400 equals eggs_in 2400; bins 2122 plus outgrades 276 is 2398, a 2 egg gap; packs sum to 2122 equal to class_a_total.",
+  "batch_disposition": "flock.swab_pending is true with last_swab.result null, so a swab result is outstanding; everything else is in order, so hold pending that result.",
+  "anomaly_cause": "Counts agree, calibration is current and the brief temperature excursion has defrost_logged true, while 230 cracks on a 72 week flock account for the raised outgrades.",
+  "lay_to_pack": "Lay 2024-06-03 and pack 2024-06-09 is 6 days, squarely standard.",
+  "outgrade_share": "276 outgrades of 2400 eggs_in is 11.5%, above 10%, though a reader could weigh the 2398 total or the nearby boundary."
+ },
+ "request": "rec-F425-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013775
+}

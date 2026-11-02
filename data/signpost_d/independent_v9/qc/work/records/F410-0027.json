@@ -1,0 +1,159 @@
+{
+ "id": "F410-0027",
+ "family": "F410",
+ "state": {
+  "application": {
+   "term_end": "2026-05-31",
+   "pitch_req": {
+    "width_m": 4.0
+   },
+   "commodities": [
+    "bread",
+    "hot pies"
+   ],
+   "docs_pending": [
+    "food reg cert"
+   ]
+  },
+  "licence_current": {
+   "pitch": {
+    "width_m": 2.92
+   },
+   "commodities": [
+    "bread",
+    "hot pies"
+   ],
+   "conditions": {
+    "min_attendance_pct": 60,
+    "max_width_m": 4.0
+   },
+   "variations": [
+    {
+     "type": "width",
+     "detail": "4.0m",
+     "approved": true,
+     "approved_on": "2025-02-10"
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-06-30",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "food_reg": {
+    "registered": false,
+    "inspected_on": null
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "amount_gbp": 520
+    }
+   ],
+   "ledger": [
+    {
+     "amount_gbp": 481.26
+    }
+   ]
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 27,
+   "absence_notices": [
+    {
+     "reason": "illness",
+     "accepted": true
+    }
+   ],
+   "complaints": [
+    {
+     "category": "noise",
+     "upheld": false
+    }
+   ],
+   "enforcement_notices": 2
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": false,
+  "commodity_change": "none",
+  "food_registration_state": "not_registered",
+  "stall_size_delta_m": 1.08,
+  "variation_approved": true,
+  "fee_arrears_gbp": 38.74,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.54,
+  "absences_notified": true,
+  "complaint_profile": "not_upheld_only",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 1
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": true,
+  "commodity_change": "none",
+  "food_registration_state": "not_registered",
+  "stall_size_delta_m": 1.08,
+  "variation_approved": true,
+  "fee_arrears_gbp": 38.74,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.54,
+  "absences_notified": true,
+  "complaint_profile": "not_upheld_only",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 1
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "refuse",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "contested",
+   "target": "urgent_visit",
+   "second": "scheduled_visit",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-06-30 is after term_end 2026-05-31 and indemnity equals the required 5,000,000.",
+  "renewal_disposition": "Two enforcement notices plus food sold with food_reg registered false are two serious breaches, so refuse.",
+  "inspection_level": "Hot pies sold with food_reg.registered false and no inspection date points to urgent_visit, but the registration certificate is listed as pending, so a scheduled visit is also defensible.",
+  "reversal_time": "A refusal means reapplying after the breaches are cleared, probably weeks to a couple of months.",
+  "discrepancy_count": "The width gap of 1.08 m is covered by an approved variation; the only open item is a 38.74 fee balance, small enough to count or disregard."
+ },
+ "request": "rec-F410-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012333
+}

@@ -1,0 +1,154 @@
+{
+ "id": "F432-0037",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E22",
+   "risk_cat": 2,
+   "doors": [
+    "D1"
+   ],
+   "active_vet_case": {
+    "id": "V77",
+    "pre_fast": false
+   }
+  },
+  "shift": {
+   "start": "07:00",
+   "end": "15:00",
+   "opening_count": 4,
+   "closing_count": 4
+  },
+  "movements": [],
+  "feeding": [
+   {
+    "sheet_g": 5000,
+    "offered_g": 5000,
+    "leftover": 0.5,
+    "unit": "kg"
+   }
+  ],
+  "rounds": [
+   {
+    "sched": "08:00",
+    "logged": true,
+    "entry_time": "08:03",
+    "beh": [
+     "LAME"
+    ]
+   },
+   {
+    "sched": "10:00",
+    "logged": false,
+    "entry_time": null,
+    "cctv_reviewed": true,
+    "reviewer_id": "R12"
+   },
+   {
+    "sched": "12:00",
+    "logged": false,
+    "entry_time": null
+   },
+   {
+    "sched": "14:00",
+    "logged": true,
+    "entry_time": "14:02",
+    "beh": [
+     "STER"
+    ]
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "D1",
+     "time": "13:20"
+    }
+   ],
+   "ticket": "T402",
+   "ticket_state": "closed"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_before_last_round",
+  "intake_ratio": 0.9,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 2,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "unit_kg_vs_g",
+  "behaviour_codes": 2,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "unexplained_off_by_one",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_before_last_round",
+  "intake_ratio": 0.57,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 4,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "unit_kg_vs_g",
+  "behaviour_codes": 2,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "keeper_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "count_reconciles": "Opening 4 equals closing 4 and there are no movements.",
+  "secure_at_close": "The only lock check is at 13:20, before the last round entry at 14:02 and well before shift end 15:00.",
+  "next_step": "The early lock check means the door was never confirmed at close, so a keeper needs to go and secure and check it; behaviour codes and the open vet case add weight.",
+  "intake_shortfall": "Leftover 0.5 kg is 500 g, so intake is 4500 of 5000 g, exactly 90%, on the boundary between none and minor.",
+  "missed_rounds": "Two rounds have logged false, but one is cctv_reviewed true, so it is either two missing entries or one."
+ },
+ "request": "rec-F432-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009666
+}

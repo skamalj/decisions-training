@@ -1,0 +1,152 @@
+{
+ "id": "F437-0012",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v5",
+   "target_locale": "de-DE",
+   "glossary_version": "g2",
+   "due_at": "2024-06-10T12:00",
+   "terms": {
+    "due_revised_to": "2024-06-14"
+   }
+  },
+  "source": {
+   "version": "v5",
+   "segment_count": 300
+  },
+  "deliverable": {
+   "target_locale": "de-DE",
+   "built_from_version": "v5",
+   "segments_translated": 300,
+   "glossary_version_used": "g2",
+   "delivered_at": "2024-06-12T03:00"
+  },
+  "qa_report": {
+   "flags": 22,
+   "false_positive_marked": 16,
+   "number_mismatches": [
+    {
+     "source": "12,500",
+     "target": "1,250"
+    },
+    {
+     "source": "7.5",
+     "target": "7,5"
+    }
+   ],
+   "unresolved": {
+    "minor": 2,
+    "major": 0,
+    "critical": 0
+   }
+  },
+  "review": {
+   "reviewer_id": "rv14",
+   "assigned_at": "2024-06-09T10:00",
+   "completed_at": "2024-06-11T16:00",
+   "signed_off": true,
+   "errors": [
+    {
+     "id": "E1",
+     "severity": "minor",
+     "status": "open"
+    },
+    {
+     "id": "E2",
+     "type": "number",
+     "severity": null,
+     "status": "open"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2024-05-20",
+    "2024-05-29",
+    "2024-06-04"
+   ],
+   "reassignments": 2
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.73,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": -39,
+  "client_waiver": true,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "not_assigned",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.73,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": -39,
+  "client_waiver": true,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_for_item",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 93,
+ "deciding": {
+  "scope_matches": "job.source_version, source.version and built_from_version are all v5; segments are 300/300.",
+  "reviewed_in_time": "review.completed_at 2024-06-11T16:00 with signed_off true precedes delivered_at 2024-06-12T03:00.",
+  "next_step": "Open error E2 has severity null, a specific missing item; lateness is covered by due_revised_to 2024-06-14, so no escalation.",
+  "open_severity": "Open E1 is minor and QA unresolved is minor only, but E2 is an open number error with no severity, and the 12,500 vs 1,250 mismatch looks major.",
+  "parties_needed": "Three revision rounds and 2 reassignments, plus open number errors needing translator, reviewer, PM and perhaps client, put it between 3-4 and 5 or more parties."
+ },
+ "request": "rec-F437-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010095
+}

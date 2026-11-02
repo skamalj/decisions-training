@@ -1,0 +1,324 @@
+{
+ "id": "F407",
+ "domain": "council pothole repair reports",
+ "role": "Highways defect triage officer at a district council, reviewing one pothole report at a time",
+ "setting": "A council highways team receives pothole reports from the public, councillors, its own inspectors and utility contractors. For each report the triage officer checks the logged location against the asset register, any site inspection, past works at the same spot, planned schemes and temporary measures, and any works order already raised. The officer then decides whether the defect meets intervention criteria, whether it is a failed earlier repair, what to do with the report now, and how quickly policy requires a response.",
+ "questions": {
+  "meets_threshold": {
+   "type": "noul",
+   "instructions": "Inspected defect depth meets the intervention depth for this road.",
+   "criteria": {
+    "true": "Recorded inspection depth at or above the listed threshold",
+    "false": "Depth below threshold, or no valid inspection measurement"
+   }
+  },
+  "repeat_failure": {
+   "type": "noul",
+   "instructions": "This defect is a recurrence of an earlier completed repair here.",
+   "criteria": {
+    "true": "Completed prior repair confirmed within ten metres of defect",
+    "false": "No prior repair matched, or match only approximate"
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the triage officer do with this report now?",
+   "criteria": {
+    "close_no_action": "Close the report: below criteria, duplicate, or already repaired.",
+    "request_inspection": "Obtain a valid site measurement before deciding on any repair.",
+    "order_repair": "Raise or confirm a works order, timed around planned schemes.",
+    "escalate_engineer": "Refer to a highways engineer for claims, injury or recurring failure."
+   }
+  },
+  "staff_effort": {
+   "type": "score",
+   "instructions": "How much staff time would fully resolving this record require?",
+   "criteria": [
+    "Under one hour of staff time needed",
+    "One to eight hours of staff time",
+    "One to five working days of staff time",
+    "More than five working days of staff time"
+   ]
+  },
+  "response_timescale": {
+   "type": "score",
+   "instructions": "Within what timescale does policy require the defect to be addressed?",
+   "criteria": [
+    "No repair required under current intervention policy",
+    "Routine repair within 28 days of inspection",
+    "Priority repair within five working days",
+    "Make safe within 24 hours of report"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "road_category",
+   "description": "Hierarchy class of the road from the asset register; sets the intervention depth and the response bands",
+   "kind": "categorical",
+   "values": [
+    "strategic",
+    "main_distributor",
+    "local_access",
+    "footway"
+   ],
+   "weights": [
+    0.15,
+    0.3,
+    0.4,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "depth_vs_threshold",
+   "description": "How the inspected depth compares with the category intervention depth, including values within 2 mm of the boundary",
+   "kind": "categorical",
+   "values": [
+    "well_below",
+    "just_below",
+    "on_boundary",
+    "just_above",
+    "well_above"
+   ],
+   "weights": [
+    0.2,
+    0.15,
+    0.15,
+    0.2,
+    0.3
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "inspection_state",
+   "description": "Whether a valid site inspection exists: done after the report, only scheduled, never done, or dated before the report was received, so it measured an earlier condition",
+   "kind": "categorical",
+   "values": [
+    "completed_valid",
+    "scheduled",
+    "not_done",
+    "dated_before_report"
+   ],
+   "weights": [
+    0.5,
+    0.2,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "prior_repair_match",
+   "description": "Past completed repair near the defect: none, the same spot within guarantee, the same spot after guarantee expired, or nearby with only an approximate location",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "same_spot_in_guarantee",
+    "same_spot_out_guarantee",
+    "nearby_unconfirmed"
+   ],
+   "weights": [
+    0.45,
+    0.15,
+    0.15,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "temporary_make_safe",
+   "description": "A temporary fill or barrier is already in place and in date; it lowers urgency without removing the need for a permanent repair",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "planned_scheme_soon",
+   "description": "Resurfacing or patching that covers the defect location is programmed to start within 28 days",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.45,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "duplicate_count",
+   "description": "Number of other open reports logged against the same location; alarming on its face but often just duplicates",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 6,
+   "p_true": 0,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "reporter_source",
+   "description": "Origin of the report; own-inspector reports carry measurements, public reports often lack them",
+   "kind": "categorical",
+   "values": [
+    "public_app",
+    "councillor",
+    "own_inspector",
+    "utility_contractor"
+   ],
+   "weights": [
+    0.5,
+    0.15,
+    0.25,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S2"
+   ]
+  },
+  {
+   "name": "injury_or_claim",
+   "description": "An injury, vehicle damage or a compensation claim is linked to the location",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.15,
+   "skills": [
+    "S7",
+    "S6"
+   ]
+  },
+  {
+   "name": "order_status",
+   "description": "State of any existing works order: none, raised, partially complete, or completed but awaiting sign-off",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "raised",
+    "partially_complete",
+    "completed_awaiting_signoff"
+   ],
+   "weights": [
+    0.5,
+    0.2,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S2"
+   ]
+  },
+  {
+   "name": "defect_width_mm",
+   "description": "Surface width of the defect; a decoy that looks alarming but does not drive policy thresholds",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 60,
+   "max": 1400,
+   "p_true": 0,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "photo_attached",
+   "description": "Whether the report carries a photo reference; absent photos weaken public-only reports",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.55,
+   "skills": [
+    "S2"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "report",
+   "description": "Report id, received timestamp, source channel, photo reference, linked duplicate ids, claim flag"
+  },
+  {
+   "name": "location",
+   "description": "USRN, road category, intervention_depth_mm from the asset register, grid reference, speed limit"
+  },
+  {
+   "name": "inspection",
+   "description": "Inspector id, inspected_at date, depth_mm, width_mm, position offset; null when no inspection exists"
+  },
+  {
+   "name": "works_history",
+   "description": "List of past completed jobs at the street: job id, completed date, offset, guarantee_end"
+  },
+  {
+   "name": "programme",
+   "description": "Planned schemes with start dates and extents, plus temporary measures with installed and expiry dates"
+  },
+  {
+   "name": "current_order",
+   "description": "Existing works order id, raised date, status, completed_items and total_items; null if none"
+  }
+ ],
+ "rendering_notes": "road_category appears as location.road_class, and the threshold as location.intervention_depth_mm; the record never says whether the threshold is met, so the reader must compare it with inspection.depth_mm. depth_vs_threshold sets inspection.depth_mm relative to that threshold, with boundary cases differing by 0 to 2 mm. inspection_state: completed_valid gives a full inspection object dated after report.received_at; scheduled gives inspection with depth_mm null and a future inspected_at labelled scheduled_for; not_done gives inspection: null; dated_before_report gives a full object whose inspected_at precedes received_at. prior_repair_match puts a works_history entry whose offset_m is within 10 m (same spot) or given only as a street-level null offset (nearby_unconfirmed), and guarantee_end falls after or before the report date. temporary_make_safe adds a programme.temp_measures entry covering the offset with an expiry date in the future (or omits it); planned_scheme_soon adds a programme.schemes entry whose extent covers the offset and whose start date falls within 28 days, while decoy schemes on other extents or starting later appear in both cases. duplicate_count is the length of report.linked_reports, which is a decoy for urgency. reporter_source is report.channel; own_inspector reports usually come with inspection filled. injury_or_claim is report.claim_ref (string id or null). order_status fills current_order with status and completed_items/total_items (partial when completed_items < total_items), and there is no priority field. defect_width_mm is inspection.width_mm and is a decoy. photo_attached is report.photo_ref or null. No field ever states urgency, priority, repeat-failure status, recommended action or whether criteria are met; all must be inferred by comparing fields across sections.",
+ "skills": [
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "staff_effort",
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_inspection"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.104176
+}

@@ -1,0 +1,152 @@
+{
+ "id": "F440-0028",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "YH-3317",
+   "review_date": "2025-03-01",
+   "arrival": "2025-03-16",
+   "departure": "2025-03-19",
+   "pax_by_band": {
+    "13-17": 15,
+    "adult": 2
+   },
+   "amendments": []
+  },
+  "roster": [
+   {
+    "role": "participant",
+    "dob": "2009-09-01",
+    "sex": "F",
+    "n": 9
+   },
+   {
+    "role": "participant",
+    "dob": "2009-09-01",
+    "sex": "M",
+    "n": 6
+   },
+   {
+    "role": "leader",
+    "n": 2
+   }
+  ],
+  "allocation": [
+   {
+    "type": "dorm",
+    "sex": "F",
+    "beds": 8,
+    "nights": [
+     "2025-03-16",
+     "2025-03-17"
+    ]
+   },
+   {
+    "type": "dorm",
+    "sex": "M",
+    "beds": 8,
+    "nights": [
+     "2025-03-16",
+     "2025-03-17"
+    ]
+   }
+  ],
+  "payment": {
+   "total": 1000,
+   "deposit_due": 300,
+   "paid_total": 280,
+   "instalments": null
+  },
+  "safeguarding": [
+   {
+    "status": "verified",
+    "expiry": "2026-02-01"
+   },
+   {
+    "status": "verified",
+    "expiry": "2026-02-01"
+   }
+  ],
+  "history": {
+   "trusted": false,
+   "stays": 3,
+   "no_shows": 2
+  }
+ },
+ "factors": {
+  "pax_mismatch": "none",
+  "night_mismatch": "one_night_short",
+  "amendment_logged": false,
+  "supervision_level": "exactly_at_ratio",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 15,
+  "dorm_fit": "cannot_fit",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 2,
+  "diet_count_drift": "none"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "none",
+  "night_mismatch": "one_night_short",
+  "amendment_logged": false,
+  "supervision_level": "short_all_nights",
+  "extra_cover_logged": false,
+  "deposit_position": "overpaid",
+  "instalment_approved": false,
+  "days_to_arrival": 15,
+  "dorm_fit": "cannot_fit",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 2,
+  "diet_count_drift": "none"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "ratio_met": "The roster has 15 participants aged 15 and 2 leaders, which is exactly 1:10 with both leaders checked, and no early departures. Exactly at the limit leaves some doubt.",
+  "deposit_covered": "Paid_total 280 is 20 short of deposit_due 300 and instalments is null, so no plan applies. The shortfall is small, which keeps the answer close.",
+  "disposition": "Allocation covers only nights 16 and 17 of a 16-19 stay, and 9 girls have only 8 female beds. A specific fix must be confirmed before release, which points to hold.",
+  "urgency": "Review 2025-03-01 against arrival 2025-03-16 is 15 days, exactly on the boundary between level 1 and level 2.",
+  "conflict_count": "Two unexplained conflicts: the allocation nights stop a night short of the departure, and 9 girls exceed the 8 female beds. Amendments is empty."
+ },
+ "request": "rec-F440-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.016424
+}

@@ -1,0 +1,163 @@
+{
+ "id": "F403-0035",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P4590",
+   "declared_allergens": [
+    "wheat",
+    "fish"
+   ],
+   "auto_injector": false,
+   "plan_start": "2025-02-10"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2024-10-14",
+   "expires": "2025-10-14",
+   "allergens": [
+    "wheat",
+    "fish"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-01-28",
+   "cycle_weeks": 3,
+   "dishes": [
+    {
+     "dish": "fish pie",
+     "contains": [
+      "fish"
+     ],
+     "recipe_version_date": "2025-01-05",
+     "substitute": null,
+     "spec_checked_on": "2025-01-27"
+    },
+    {
+     "dish": "fish fingers",
+     "contains": [
+      "fish",
+      "wheat"
+     ],
+     "recipe_version_date": "2025-01-05",
+     "substitute": null,
+     "spec_checked_on": "2025-01-27"
+    },
+    {
+     "dish": "pasta bolognese",
+     "contains": [
+      "wheat"
+     ],
+     "recipe_version_date": "2025-01-05",
+     "substitute": null,
+     "spec_checked_on": "2025-01-27"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "staff_trained": [
+    "2024-09-12",
+    "2024-09-12"
+   ],
+   "exceptions": []
+  },
+  "history": {
+   "review_date": "2025-03-03",
+   "packed_lunch_until": "2025-03-31",
+   "incidents": [
+    {
+     "date": "2025-02-20",
+     "dish": "fish pie",
+     "contains": [
+      "fish"
+     ],
+     "note": "plate withdrawn at hatch, pupil not served"
+    }
+   ],
+   "messages": [
+    "Cook: all looks fine to me.",
+    "Parent: no worries from our side."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 2,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 21,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 2,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": -5,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "return_for_rework",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "menu_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 128,
+ "deciding": {
+  "evidence_allergens_covered": "Fish and wheat both appear only in dishes with substitute null, so neither allergen has a mapped substitution. The incident entry hints at some other handling, which leaves a little doubt.",
+  "next_step": "Three dishes have substitute null, so two or more need remapping and the plan is returned for rework. The withdrawn plate leaves doubt whether the incident should force escalation.",
+  "first_gap_stage": "Evidence is current, the specs are checked and the kitchen controls are verified, but three allergen dishes are unsubstituted, so the first shortfall is the menu.",
+  "exposure_proximity": "The 2025-02-20 incident is after plan_start and the dish contains fish, a declared allergen, which counts as Reached. The note says the plate was withdrawn at the hatch, which makes Open plausible.",
+  "meal_urgency": "Packed lunches run until Monday 2025-03-31, so the first meal is 2025-04-01, 21 school days after review on 2025-03-03. That is right at the 20-day boundary."
+ },
+ "request": "rec-F403-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014493
+}

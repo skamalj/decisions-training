@@ -1,0 +1,141 @@
+{
+ "id": "F426-0033",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B12",
+   "crop": "cherry",
+   "planted_area_ha": 3.0,
+   "lot_id": "L33"
+  },
+  "applications": [
+   {
+    "app_id": 1,
+    "date": "2024-05-10",
+    "product_code": "MN3",
+    "qty_applied": 0.8,
+    "qty_unit": "kg",
+    "area_treated_ha": 2.0
+   },
+   {
+    "app_id": 2,
+    "date": "2024-06-02",
+    "product_code": "KL8",
+    "qty_applied": 2.1,
+    "qty_unit": "L",
+    "area_treated_ha": 2.0,
+    "sprayer_id": "S2"
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "MN3",
+    "max_rate_per_ha": 0.5,
+    "rate_unit": "kg",
+    "phi_days": 14,
+    "approved_crops": [
+     "cherry"
+    ]
+   },
+   {
+    "product_code": "KL8",
+    "max_rate_per_ha": 1.0,
+    "rate_unit": "L",
+    "phi_days": 10,
+    "approved_crops": [
+     "cherry"
+    ]
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "S2",
+   "calibration_valid_to": "2023-12-31",
+   "nozzle_dev_pct": 4
+  },
+  "harvest": {
+   "first_pick_date": "2024-06-12",
+   "residue_test": {
+    "sampled": true,
+    "result_date": null,
+    "below_limit": null
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "up_to_10pct",
+  "partial_block_spray": true,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "expired_long",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 2,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "none",
+  "partial_block_spray": true,
+  "clerical_mismatch": "unit_ml_vs_l",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "expired_long",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 8,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_and_test",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 74,
+ "deciding": {
+  "phi_cleared": "KL8 on 2024-06-02, phi 10, first pick 2024-06-12: gap exactly 10 days, and the pending residue result cannot confirm it, so false is slightly favoured.",
+  "next_step": "Residue test sampled but result_date and below_limit are null, calibration expired 2023-12-31, and the boundary interval is unconfirmed: hold and test.",
+  "finding_class": "Identifiers and codes are consistent; the issues are the pending test and small rate excess on the treated area, nothing categorical beyond that.",
+  "reversal_time": "A hold is lifted when the pending residue result arrives, within days, or even the same day; a day versus a week is open.",
+  "rate_overrun": "KL8 2.1 L / 2.0 ha = 1.05 L/ha vs max 1.0, 5% over; MN3 0.4 kg/ha is under max 0.5. Dividing by planted area would wrongly give under max."
+ },
+ "request": "rec-F426-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01124
+}

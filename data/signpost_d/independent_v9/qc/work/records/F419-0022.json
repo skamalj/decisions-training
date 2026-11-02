@@ -1,0 +1,142 @@
+{
+ "id": "F419-0022",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "survey_date": "2024-08-20",
+   "test_speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": null
+  },
+  "device": {
+   "cal_cert_date": "2024-02-01",
+   "cal_expiry": "2025-02-01",
+   "tyre_pressure_kpa": 690,
+   "tyre_spec_kpa": [
+    650,
+    750
+   ],
+   "water_depth_mm": 1.0
+  },
+  "runs": [
+   {
+    "dir": "18",
+    "mean_speed_kmh": 72,
+    "thirds": [
+     0.71,
+     0.78,
+     0.8
+    ]
+   },
+   {
+    "dir": "36",
+    "mean_speed_kmh": 71,
+    "thirds": [
+     0.8,
+     0.77,
+     0.72
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.9,
+    1.0,
+    0.9
+   ],
+   "mtd_threshold_mm": 0.6
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-08-23",
+   "works_orders": [],
+   "prior_surveys": [
+    {
+     "date": "2024-02-12",
+     "lowest_third": 0.75
+    }
+   ],
+   "cross_checks": []
+  },
+  "review": {
+   "signed_at": "2024-08-21T09:00Z"
+  }
+ },
+ "factors": {
+  "min_third_band": "at_design_boundary",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 363,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 1,
+  "test_condition_anomaly": "speed_off",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "factors_sampled": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 363,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "speed_off",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "schedule_works",
+   "second": null,
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 28,
+ "deciding": {
+  "genuine_deficit": "Lowest third 0.71 is well above the 0.52 planning level; only the declining trend and 363 days since removal hint at a deficit, and test speed is off.",
+  "next_step": "No works order exists, removal is 363 days old and the trend is declining, so works are the leading step; the null weather block adds some doubt.",
+  "deficit_driver": "No third or segment falls below 0.52, with texture adequate at 0.9-1.0 mm.",
+  "friction_severity": "Lowest third 0.71 is just under the 0.72 design level in touchdown thirds, with the opposite end at exactly 0.72, while runs at 71-72 km/h are off the 65 km/h test speed, so level 0 and level 1 are both defensible.",
+  "evidence_completeness": "Only weather is null; calibration is valid and signed_at is present."
+ },
+ "request": "rec-F419-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013244
+}

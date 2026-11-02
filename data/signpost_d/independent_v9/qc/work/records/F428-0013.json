@@ -1,0 +1,150 @@
+{
+ "id": "F428-0013",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "FL-207",
+   "gate_type": "flap",
+   "rated_closure_s": 60,
+   "seal_type": "J_bulb",
+   "clear_width": 1200,
+   "clear_width_unit": "mm",
+   "consequence_class": "medium"
+  },
+  "inspection": {
+   "insp_id": "I-5530",
+   "asset_id": "FL-207",
+   "insp_date": "2025-02-18",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-01-20",
+    "closure_s": 76.2,
+    "leakage_l_min": 12,
+    "leakage_limit_l_min": 30,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D3",
+    "component": "hinge_pin",
+    "grade": 2,
+    "status": "open",
+    "first_seen": "2024-12-01"
+   },
+   {
+    "code": "D9",
+    "component": "paint",
+    "grade": 1,
+    "status": "open",
+    "first_seen": "2024-06-11"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W-77",
+     "component": "hinge_pin",
+     "grade_raised": 3,
+     "status": "complete",
+     "completed": "2025-02-05",
+     "retest_insp_id": null
+    }
+   ],
+   "last_service": "2024-08-20"
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "temp_barrier_deployed": false,
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2025-03-22",
+    "peak_level_mAOD": 2.2,
+    "sill_level_mAOD": 1.9
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.27,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 2,
+  "mismatch_location": "test_date_vs_repair",
+  "test_status": "passed_current",
+  "repair_progress": "none_needed",
+  "mitigation_present": false,
+  "mitigation_kind": "approved_outage_permit",
+  "days_to_forecast_peak": 32,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.27,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 3,
+  "mismatch_location": "test_date_vs_repair",
+  "test_status": "passed_current",
+  "repair_progress": "none_needed",
+  "mitigation_present": false,
+  "mitigation_kind": "approved_outage_permit",
+  "days_to_forecast_peak": 32,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "drive_actuation",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 119,
+ "deciding": {
+  "closure_test_valid": "Test result pass, leakage 12 under 30, but closure 76.2 s vs rated 60 s and test predates repair completion, so leaning true is shaky.",
+  "next_step": "Only grade 2 hinge defect and grade 1 paint open, in service, no alert; sign-off.",
+  "defect_class": "Highest open defect is hinge_pin grade 2.",
+  "section_discrepancies": "Test 2025-01-20 before WO completion 2025-02-05, and WO grade 3 vs defect grade 2; mm unit is consistent, so 2 vs 1.",
+  "flood_risk": "Closure 76.2 s exceeds the rated 60 s, which is High; the grade 3 work order and test predating repair leave Critical arguable."
+ },
+ "request": "rec-F428-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005501
+}

@@ -1,0 +1,155 @@
+{
+ "id": "F418-0034",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "BRK",
+   "plat": 4,
+   "date": "2025-06-03",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S61"
+   },
+   {
+    "staff_id": "S62"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S61",
+    "sign_on": "05:40",
+    "safety_comp_exp": "2026-01-10",
+    "dispatch_comp_exp": "2026-01-10"
+   },
+   {
+    "staff_id": "S62",
+    "sign_on": "05:42",
+    "safety_comp_exp": "2026-04-02",
+    "dispatch_comp_exp": "2026-04-02"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "08:05",
+    "staff_id": "S62",
+    "platform": 4
+   },
+   {
+    "type": "cover_start",
+    "time": "08:05",
+    "staff_id": "S70",
+    "platform": 4
+   },
+   {
+    "type": "redeploy",
+    "time": "08:05",
+    "staff_id": "S70",
+    "platform": 4
+   },
+   {
+    "type": "cover_end",
+    "time": "09:08",
+    "staff_id": "S70",
+    "platform": 4
+   },
+   {
+    "type": "gap_end",
+    "time": "09:08",
+    "platform": 4
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-41",
+   "disp_platform": 6,
+   "valid_to": "2025-12-31",
+   "approved_by": "ROM",
+   "prior_shortfalls_30d": 2
+  },
+  "remarks": [
+   "S62 unwell at 08:05, S70 redeployed from platform 5 immediately."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 63,
+  "shortfall_timing": "peak",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 63,
+  "shortfall_timing": "peak",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "balanced",
+   "target": "fully_rostered",
+   "second": "cover_arranged",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 94,
+ "deciding": {
+  "headcount_verified": "S70 appears in events as cover and redeploy but has no attendance sign-on row.",
+  "next_step": "Cover starts at gap_start and ends at gap_end, so the log reconciles and nothing is left open.",
+  "coverage_outcome": "S70 covered 08:05-09:08 from a redeploy, which is cover_arranged. The rostered posts were otherwise held, so fully_rostered is also plausible.",
+  "reversal_time": "The gap was fully covered, so the record is a simple log amendment (about a day); a missing S70 sign-on may take a few days to chase.",
+  "exposure_severity": "Immediate cover leaves nominal exposure; dispensation D-41 is for platform 6, not 4, so a below-minimum period without valid dispensation is arguable but covered."
+ },
+ "request": "rec-F418-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006704
+}

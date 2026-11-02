@@ -1,0 +1,138 @@
+{
+ "id": "F429-0048",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 250,
+   "ramp_max_m_per_10min": 0.4
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "t": "13:00",
+     "level_m": 64.19,
+     "datum": "site"
+    }
+   ],
+   "triggers": {
+    "alert_m": 64.2,
+    "action_m": 65.0
+   }
+  },
+  "gate_ops": [
+   {
+    "gate_id": "G1",
+    "t": "14:00",
+    "open_before_m": 0,
+    "open_after_m": 0.3
+   },
+   {
+    "gate_id": "G3",
+    "t": "14:00",
+    "open_before_m": 0,
+    "open_after_m": 0.3
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate_id": "G1",
+     "opening_m": 0.3
+    },
+    {
+     "gate_id": "G3",
+     "opening_m": 0.4
+    }
+   ],
+   "calc_peak_m3s": 243,
+   "gauged_peak_m3s": null
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "pending",
+    "completed_at": null
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "13:30",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": true,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "material",
+  "discharge_discrepancy_pct": "not computable (gauged peak null)",
+  "datum_mismatch": false,
+  "missing_section": "downstream_gauge_null",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 13.45,
+  "datum_mismatch": false,
+  "missing_section": "downstream_gauge_null",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_for_inspection",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "trigger_tier": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 79,
+ "deciding": {
+  "within_licence": "gauged_peak_m3s is null, so only the calc 243 (within 3% of 250) exists; measured discharge is unavailable.",
+  "gates_reconciled": "G3 open_after 0.3 vs calc opening 0.4, a 0.1 m gap; G1 matches.",
+  "next_step": "post_op_inspection status pending, completed_at null.",
+  "trigger_tier": "Level 64.19 is 0.01 m under alert 64.20, so Normal vs Alert is a matter of how the margin is read.",
+  "parties_needed": "Inspector and operator needed; gauge team for the missing gauged peak and a senior check on the gate discrepancy may add to that, so two or three parties."
+ },
+ "request": "rec-F429-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011386
+}

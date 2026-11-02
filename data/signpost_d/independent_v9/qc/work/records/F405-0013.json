@@ -1,0 +1,145 @@
+{
+ "id": "F405-0013",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-3318",
+   "detected_on": "2025-09-01",
+   "term_start": "2025-10-01",
+   "room": "L3.02"
+  },
+  "booking_a": {
+   "module": "CHM130",
+   "dept": "CHM",
+   "day": "Wed",
+   "start": "13:00",
+   "end": "16:00",
+   "weeks": [
+    1,
+    2,
+    3
+   ],
+   "headcount": 69,
+   "features": [
+    "lab_benches"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "ENG115",
+   "dept": "ENG",
+   "day": "Wed",
+   "start": "15:00",
+   "end": "17:00",
+   "weeks": [
+    2,
+    3
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-10-08",
+   "approver": "m.ortiz"
+  },
+  "room": {
+   "code": "L3.02",
+   "capacity": 80
+  },
+  "alternatives": [
+   {
+    "code": "L3.05",
+    "capacity": 80,
+    "features": [
+     "lab_benches"
+    ],
+    "weeks_free": [
+     1
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": true,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 35,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.69,
+  "required_feature": "lab_benches",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 1
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": true,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 32,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.69,
+  "required_feature": "lab_benches",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 1
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "genuine_clash": "Same room, Wednesday 15:00-16:00 overlap, weeks 2 and 3 shared.",
+  "alt_room_fits": "L3.05 matches capacity and lab_benches but is free only in week 1, not the clashing weeks 2-3; this is weak support, so a no is more likely and the plan's leaning true is not met.",
+  "resolution": "The overlap is real and booking_b approved_at 2025-10-08 is after the first occurrence, so approval is out of order; this does not match the plan's dismiss.",
+  "urgency": "Detection 2025-09-01, first shared occurrence week 2 Wednesday 2025-10-08 is 37 days; the 28-day boundary is not tight.",
+  "parties_needed": "Two departments, an approver, a room owner and the lab technician are all involved; 4 or 5 people is the split."
+ },
+ "request": "rec-F405-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006018
+}

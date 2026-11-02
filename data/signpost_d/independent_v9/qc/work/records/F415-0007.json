@@ -1,0 +1,145 @@
+{
+ "id": "F415-0007",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": [
+    {
+     "from": "11:30",
+     "to": "17:55",
+     "reason": "basin repair",
+     "approved_by": "OFF207"
+    }
+   ]
+  },
+  "shift": {
+   "sched_slots": [
+    "06:00",
+    "08:00",
+    "10:00",
+    "12:00",
+    "14:00",
+    "18:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "06:00",
+    "status": "done",
+    "checklist": null,
+    "photo_ref": null
+   },
+   {
+    "slot": "08:00",
+    "status": "done"
+   },
+   {
+    "slot": "10:00",
+    "status": "done"
+   },
+   {
+    "slot": "18:00",
+    "status": "done",
+    "end": "18:20"
+   }
+  ],
+  "faults": [
+   {
+    "type": "vandalised_basin",
+    "reported_at": "11:40",
+    "remedied_at": "17:52",
+    "remedy_note": "basin smashed, replaced"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "18:30",
+   "comment": "signed by phone"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 6,
+  "missed_slots": "2",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "vandalised_basin",
+  "fault_open_minutes": 372.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "absent",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 1
+ },
+ "factors_sampled": {
+  "scheduled_slots": 6,
+  "missed_slots": "2",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "vandalised_basin",
+  "fault_open_minutes": 372.61,
+  "block_closed_during_fault": true,
+  "checklist_completion": "absent",
+  "photo_evidence": false,
+  "timestamp_out_of_order": true,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 1
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 37,
+ "deciding": {
+  "missed_clean": "12:00 and 14:00 have no visits, but the approved closure 11:30-17:55 spans both.",
+  "sign_off_valid": "Supervisor signed 18:30 after the last visit ended 18:20, but the comment says signed by phone, which leaves slight doubt.",
+  "next_step": "Gaps are covered by an approved closure and the fault is remedied; nothing outstanding.",
+  "staff_effort": "Everything reconciles with the closure; only a quick check is needed, though checklist and photo are absent.",
+  "fault_exposure": "Fault 11:40-17:52 lies entirely inside the closure 11:30-17:55, so the block was shut throughout."
+ },
+ "request": "rec-F415-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010082
+}

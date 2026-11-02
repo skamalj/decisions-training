@@ -1,0 +1,170 @@
+{
+ "id": "F401-0011",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P101",
+   "planned_discharge_at": "2025-03-10T12:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "recorded_at": "2025-03-09T22:00",
+     "spo2": 86,
+     "rr": 18
+    },
+    {
+     "recorded_at": "2025-03-10T06:00",
+     "spo2": 91,
+     "rr": 16
+    }
+   ],
+   "targets": {
+    "spo2": "88-92"
+   },
+   "reviews": [
+    {
+     "role": "registrar",
+     "outcome": "fit_for_discharge",
+     "reviewed_at": "2025-03-10T08:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P101",
+   "reconciled": [
+    {
+     "drug": "ramipril",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "ramipril",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "pharmacy_ready_at": "2025-03-10T10:30"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": "frame",
+    "transfer_assist_count": 1,
+    "adl_score": 11
+   },
+   "care_arrangement": {
+    "type": "reablement_bed",
+    "status": "confirmed",
+    "start_date": "2025-03-10"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "done",
+     "completed_at": "2025-03-10T09:50",
+     "signed_by": "RN"
+    },
+    {
+     "t": "equipment",
+     "status": "pending"
+    },
+    {
+     "t": "handover",
+     "status": "done",
+     "completed_at": "2025-03-10T09:55",
+     "signed_by": null
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-03-10",
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 2,
+  "false_completion": true,
+  "care_need": "rehab",
+  "care_arrangement_status": "confirmed_on_time",
+  "logistics_delay": "pickup_time_null_on_planned_date",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "drug_omitted",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "rehab",
+  "care_arrangement_status": "declined",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": true
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "discharge_now",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "intermediate_care",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 66,
+ "deciding": {
+  "rx_matches": "Ramipril 5 mg od is identical in medications.reconciled and discharge_rx; no other drugs differ.",
+  "next_step": "The abnormal SpO2 of 86 at 22:00 was followed by a registrar fit_for_discharge review at 08:00 and a normal set at 06:00. No open capacity, safeguarding or results issue and IDs match, so discharge proceeds.",
+  "destination": "Therapy shows a frame and assisted transfer, and the arrangement is a reablement_bed with confirmed start 2025-03-10, which supports intermediate_care.",
+  "outstanding_tasks": "Equipment is pending, and the handover is marked done but signed_by is null so it counts as outstanding, giving two. A reader might count only the plainly pending item, giving one.",
+  "discharge_delay": "Bed start and pharmacy 10:30 are before the planned 12:00. Transport is booked for the planned date with a null pickup_time, which is the boundary between ready on time and same-day late."
+ },
+ "request": "rec-F401-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013802
+}

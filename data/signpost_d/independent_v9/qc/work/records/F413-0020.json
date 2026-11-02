@@ -1,0 +1,162 @@
+{
+ "id": "F413-0020",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "care_home",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "zones": [
+    {
+     "z": "store",
+     "toxic_bait_permitted": true,
+     "banned_products": [
+      "BR-30"
+     ]
+    }
+   ]
+  },
+  "visit": {
+   "type": "call-out",
+   "tech_licence_expiry": "2026-04-15",
+   "start": "2025-08-05T07:45",
+   "end": "2025-08-05T09:30",
+   "client_signoff": "2025-08-05",
+   "weather": "rain"
+  },
+  "treatments": [
+   {
+    "product": "BR-30P",
+    "ai": "bromadiolone",
+    "zone": "store",
+    "area_m2": 10,
+    "qty_applied": 400,
+    "unit": "g",
+    "label_max_per_m2": 30.55,
+    "batch": "K204"
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product": "BR-30P",
+    "qty": 400,
+    "unit": "g",
+    "batch": "K204"
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "zone": "store",
+    "activity": true,
+    "bait_taken_pct": 40
+   },
+   {
+    "id": "S2",
+    "zone": "store",
+    "activity": false,
+    "bait_taken_pct": 5
+   },
+   {
+    "id": "S3",
+    "zone": "store",
+    "activity": false,
+    "bait_taken_pct": 0
+   },
+   {
+    "id": "S5",
+    "zone": "store",
+    "activity": false,
+    "bait_taken_pct": 0
+   }
+  ],
+  "follow_up": {
+   "prev_visit": null,
+   "prev_active_stations": null,
+   "actions": []
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 1,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": false,
+  "dose_overage_pct": 30.9,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "care_home"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 1,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": false,
+  "dose_overage_pct": 30.92,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "care_home"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 148,
+ "deciding": {
+  "usage_reconciled": "400 g withdrawn and 400 g applied for BR-30P, same batch K204, with no returns.",
+  "activity_increased": "One active station but prev_active_stations is null and S4 was not checked, so no rise can be shown, though a first-visit baseline of one is arguably a rise.",
+  "next_step": "Product BR-30P is close to the zone's banned BR-30; the record is otherwise complete, which points to manager referral.",
+  "breach_severity": "Banned BR-30 versus applied BR-30P (a variant code, so the ban may or may not apply) against a clear 30.9% over-label dose (level 2 if the ban is read narrowly).",
+  "parties_needed": "Technician, technical manager and client are certain; stock/product identity checks and a revisit team could make it four, so two to four parties."
+ },
+ "request": "rec-F413-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010903
+}

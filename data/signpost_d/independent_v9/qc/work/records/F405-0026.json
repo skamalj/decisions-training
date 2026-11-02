@@ -1,0 +1,168 @@
+{
+ "id": "F405-0026",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-4417",
+   "detected_on": "2025-09-01",
+   "term_start": "2025-09-29",
+   "room": "LT2",
+   "slot": "Wed 11:00"
+  },
+  "booking_a": {
+   "module": "CHM101",
+   "dept": "CHEM",
+   "room": "LT2",
+   "day": "Wed",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "headcount": 75,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "CHM240",
+   "dept": "CHEM",
+   "room": "LT2",
+   "day": "Wed",
+   "start": "11:00",
+   "end": "13:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "headcount": 60,
+   "required_features": [],
+   "status": "confirmed",
+   "approved_at": "2025-06-12",
+   "approver": "J. Hale"
+  },
+  "alternatives": [
+   {
+    "code": "LT5",
+    "capacity": 120,
+    "features": [
+     "lecture_capture"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-03-10"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-04-02"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-05-19"
+   },
+   {
+    "type": "change_request",
+    "state": "open",
+    "booking": "CHM240",
+    "target_slot": "Thu 11:00",
+    "filed": "2025-08-28"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 30,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.63,
+  "required_feature": "lecture_capture",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 3
+ },
+ "factors_sampled": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 64,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.63,
+  "required_feature": "lecture_capture",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 3
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "genuine_clash": "Both bookings are in LT2 on Wed, 10:00-12:00 and 11:00-13:00, in identical weeks 1-6, so the overlap is plain.",
+  "alt_room_fits": "LT5 has capacity 120 for 75 people and has lecture_capture, but is free only in weeks 1-4 against clashing weeks 1-6. This is the balance.",
+  "resolution": "Both bookings are confirmed, but an open change_request on CHM240 targets a different slot, so the overlap may disappear. That points to hold_confirm.",
+  "urgency": "The first shared occurrence is Wed 2025-10-01, 30 days after detection on 2025-09-01. This sits just past the 28-day boundary between levels 0 and 1.",
+  "parties_needed": "Both bookings are in CHEM and one open change request is pending. It could be settled by one officer or take a second person to confirm."
+ },
+ "request": "rec-F405-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01658
+}

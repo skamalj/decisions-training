@@ -1,0 +1,125 @@
+{
+ "id": "F431-0004",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM9912",
+   "seal_state": "broken",
+   "seal_checked_date": "2024-02-14"
+  },
+  "period_read": {
+   "read_date": "2024-04-02",
+   "reg_kwh": 3561,
+   "src_code": "CUS",
+   "photo_ref": "IMG-7104"
+  },
+  "history": [
+   {
+    "date": "2024-01-10",
+    "reg_kwh": 3000,
+    "src": "AMR",
+    "ly_kwh": 600
+   },
+   {
+    "date": "2024-02-14",
+    "reg_kwh": null,
+    "src": "ENG"
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW",
+    "E_COMMS"
+   ]
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 550,
+   "hdd_prior_year": 500,
+   "works_orders": [
+    {
+     "type": "METER_EXCH",
+     "status": "open",
+     "date": "2024-02-14"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "previous_read_null",
+  "consumption_ratio": 0.85,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.1,
+  "diagnostic_error_count": 2,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "previous_read_null",
+  "consumption_ratio": 0.16,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.1,
+  "diagnostic_error_count": 2,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "bill_estimate",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "meter_fault": "Broken seal matched by ENG visit and open METER_EXCH plus E_FLOW, but the visit was logged and temperatures are not abnormal.",
+  "billable_actual": "Customer read with photo, but the immediately preceding period read is missing and the meter exchange is open.",
+  "next_step": "Gap in history and an open exchange mean the read is unreliable, so replace with a flagged estimate.",
+  "staff_effort": "Missing period, pending exchange and a seal history to untangle; likely multiple days, possibly over a week.",
+  "consumption_deviation": "561 kWh against 600*550/500=660 expected is 15% below, at the boundary, and the missing period blurs it."
+ },
+ "request": "rec-F431-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007098
+}

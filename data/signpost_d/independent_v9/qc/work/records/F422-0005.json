@@ -1,0 +1,171 @@
+{
+ "id": "F422-0005",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-2087",
+   "site": "H-18",
+   "delivered_at": "2025-02-03T09:00",
+   "received_at": "2025-03-11T14:30",
+   "review_date": "2025-03-14",
+   "reason": "OVERSTOCK",
+   "lines": [
+    {
+     "gtin": "G6",
+     "qty_claimed": 10
+    },
+    {
+     "gtin": "G7",
+     "qty_claimed": 25
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "D-233",
+   "lines": [
+    {
+     "gtin": "G6",
+     "batch": "A310",
+     "expiry": "2027-04-30",
+     "qty_dispatched": 10
+    },
+    {
+     "gtin": "G7",
+     "batch": "B5120",
+     "expiry": "2027-04-30",
+     "qty_dispatched": 25
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G6",
+     "batch": "A310",
+     "expiry": "2027-04-30",
+     "qty_counted": 6,
+     "packs_damaged": 0,
+     "seals_intact": 6
+    },
+    {
+     "gtin": "G7",
+     "batch": "B5210",
+     "expiry": "2027-04-30",
+     "qty_counted": 20,
+     "packs_damaged": 1,
+     "seals_intact": 19
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "active"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": "L5",
+   "logger_start": "2025-02-03T08:00",
+   "logger_end": "2025-03-11T14:00",
+   "min_c": 15.8,
+   "max_c": 27.6,
+   "minutes_out_of_range": 390,
+   "stability_ref": null
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-10-01",
+   "declaration_received": true
+  },
+  "quarantine_control": {
+   "location": "Q5",
+   "hold_limit_days": 27,
+   "extension": {
+    "approved": false,
+    "new_limit_date": null
+   },
+   "max_days_out_of_control": 14,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 390,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "one_foreign_batch",
+  "count_discrepancy_packs": 9,
+  "damaged_pack_fraction": 0.01,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 36,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 24,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 25
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 390,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "one_foreign_batch",
+  "count_discrepancy_packs": 9,
+  "damaged_pack_fraction": 0.01,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 36,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 0,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 25
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_traceable": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "release_stock",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 72,
+ "deciding": {
+  "storage_maintained": "max_c 27.6 over 25C for 390 minutes with no stability_ref, but the excursion is moderate and the logger covers the whole period.",
+  "batch_traceable": "G7 counted batch B5210 does not match dispatched B5120. This could be a digit transposition but it is not an exact match, which holds the answer close to balance.",
+  "next_step": "Two items are open: no stability data for the excursion, and the B5210 versus B5120 batch query. Obtaining them (request_evidence) competes with an outright release, which is plausible only if the batch was a keying slip. The lead moves to request_evidence because the excursion is unresolved.",
+  "resaleable_share": "If the excursion fails all packs the share is level 0. If storage is accepted, only the 6 matching G6 packs of 26 (about 23%) are fit, giving level 1. The two readings split.",
+  "disposition_urgency": "Received 2025-03-11 plus 27 days gives 2025-04-07, which is 24 days after the 2025-03-14 review, so more than 20 days remain (level 0)."
+ },
+ "request": "rec-F422-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.017261
+}

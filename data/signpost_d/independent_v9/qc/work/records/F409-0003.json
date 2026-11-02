@@ -1,0 +1,126 @@
+{
+ "id": "F409-0003",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "app_type": "change_of_address",
+   "submitted_on": "2025-05-20"
+  },
+  "residence_evidence": {
+   "tenancy_start": "2025-06-01",
+   "docs": [
+    {
+     "doc_type": "tenancy_agreement",
+     "issued_on": "2025-05-13",
+     "address_line": "5 Kiln Road",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "verified": null
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "LD21 XYZ",
+   "supporting_letters": [
+    {
+     "type": "employer_letter",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "address": "12 Alder Street",
+   "plate_entered": "LD21 XYS"
+  },
+  "account_history": {
+   "live_permits": [
+    "P-771",
+    "P-802"
+   ],
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "pcns": [
+    {
+     "status": "cancelled"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "change_of_address",
+  "address_match_level": "different_street",
+  "proof_age_days": 7,
+  "docs_missing": 1,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": true,
+  "date_order_anomaly": true,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "change_of_address",
+  "address_match_level": "different_street",
+  "proof_age_days": 7,
+  "docs_missing": 0,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": true,
+  "date_order_anomaly": true,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "refuse",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "contested",
+   "target": "misuse_record",
+   "second": "household_cap",
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "residency_shown": "Verified tenancy agreement is for 5 Kiln Road, not the requested 12 Alder Street, and tenancy_start is after submission.",
+  "disposition": "Different street plus tenancy dated after submission fails the residence rule, supporting a refusal.",
+  "main_issue": "Address and date anomalies point to misuse, but two live permits at the address against a cap of 2 with no exception also stand.",
+  "misuse_strength": "Different street and tenancy_start later than submitted_on are two indicators; the one PCN is cancelled and the plate typo has a letter.",
+  "document_gaps": "id_card verified null is one gap; the tenancy agreement for another address could count as a second."
+ },
+ "request": "rec-F409-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01161
+}

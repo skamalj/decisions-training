@@ -1,0 +1,151 @@
+{
+ "id": "F404-0018",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "K4",
+   "date": "2024-05-02",
+   "age_band": "two_year",
+   "ratio_rule": "1:5",
+   "open": "08:00"
+  },
+  "children": {
+   "booked": 3,
+   "slots": [
+    {
+     "t": "08:00",
+     "signed_in": 6
+    },
+    {
+     "t": "08:15",
+     "signed_in": 6
+    },
+    {
+     "t": "08:30",
+     "signed_in": 6
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S031",
+    "qual": 3,
+    "counts_in_ratio": true
+   },
+   {
+    "id": "S032",
+    "qual": 6,
+    "counts_in_ratio": true
+   },
+   {
+    "id": "S033",
+    "qual": 3,
+    "start": "08:00",
+    "counts_in_ratio": true
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S031",
+    "time_in": "08:00",
+    "check_status": "pending"
+   },
+   {
+    "id": "S033",
+    "time_in": "08:25",
+    "check_status": "cleared"
+   }
+  ],
+  "cover_log": [
+   {
+    "staff_id": "F07",
+    "from": "08:00",
+    "to": "08:30",
+    "room_id": "K2",
+    "countersigned_by": null
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 1
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 6,
+  "staff_signin_variance": "late_arrival",
+  "attendance_overrun": 3,
+  "shortfall_minutes": 25,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": true,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "absent",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 1
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 6,
+  "staff_signin_variance": "late_arrival",
+  "attendance_overrun": 3,
+  "shortfall_minutes": 25,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": true,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "absent",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 1
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "file_no_action",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "balanced",
+   "target": "child_overrun",
+   "second": "none_found",
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (zero_eligible_adult_slot = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 89,
+ "deciding": {
+  "below_ratio": "From 08:00 to 08:25 six children had only S031 on duty, whose check is pending, and the only cover entry is for room K2.",
+  "disposition": "A breach of 25 minutes with zero eligible adults and unsigned cover for another room means it cannot be filed with no action.",
+  "primary_cause": "Six children signed in on three bookings points to overrun, but the late arrival and pending-check staff also fit a staff problem.",
+  "shortfall_duration": "The gap 08:00 to 08:25 is 25 minutes, which is 16 to 60 minutes, so level 2 on these figures.",
+  "breach_severity": "Six children had no eligible staff, so all were beyond cover; two at 1:5 on the late arrival's cover would be a lower reading."
+ },
+ "request": "rec-F404-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010241
+}

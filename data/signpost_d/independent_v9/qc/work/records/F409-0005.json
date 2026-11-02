@@ -1,0 +1,134 @@
+{
+ "id": "F409-0005",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "app_type": "renewal",
+   "submitted_on": "2025-06-10"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2025-03-12",
+     "address_line": "21 Beech Avenue",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "verified": null
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "FG68 HJK"
+  },
+  "request": {
+   "address": "21 Beech Avenue",
+   "plate_entered": "FG68 HJK"
+  },
+  "account_history": {
+   "live_permits": [
+    "P-9012"
+   ],
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "past_permits": [
+    {
+     "permit_no": "P-3381",
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "pcns": [],
+   "exceptions": [
+    {
+     "type": "medical",
+     "approved_on": "2024-02-20"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 90,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 1,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "different_street",
+  "proof_age_days": 96,
+  "docs_missing": 3,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 1,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "refuse",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 83,
+ "deciding": {
+  "residency_shown": "Verified council tax bill with exact address, issued exactly 90 days before submission, right at the limit.",
+  "disposition": "Past permit P-3381 seized as cloned fails the eligibility rule, so refusal leads.",
+  "main_issue": "Plate, address and cap all pass (one permit of 2, medical exception); no check fails on the current application.",
+  "misuse_strength": "P-3381 status seized with reason 'cloned copy found on different vehicle'.",
+  "document_gaps": "id_card verified null is one gap; the bill at the 90-day edge could be counted as a second."
+ },
+ "request": "rec-F409-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01161
+}

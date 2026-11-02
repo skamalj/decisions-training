@@ -1,0 +1,158 @@
+{
+ "id": "F416-0039",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "date": "2025-06-20",
+   "end": "15:00",
+   "signoff": "G2"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "exp": "2026-01-05"
+   },
+   {
+    "id": "G2",
+    "exp": "2026-01-05"
+   },
+   {
+    "id": "G3",
+    "exp": "2026-01-05"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "11:00",
+    "rip_risk": "high",
+    "flag": "red_yellow"
+   },
+   {
+    "t": "12:00",
+    "rip_risk": "high",
+    "flag": "red"
+   }
+  ],
+  "incidents": [
+   {
+    "date": "2025-06-20",
+    "type": "water_rescue",
+    "resp": [
+     "G1",
+     "G2"
+    ],
+    "outcome": "released"
+   },
+   {
+    "date": "2025-06-20",
+    "type": "water_rescue",
+    "resp": [
+     "G2",
+     "G3"
+    ],
+    "outcome": "conveyed",
+    "aed_used": true,
+    "ambulance_ref": "A-33"
+   },
+   {
+    "date": "2025-06-20",
+    "type": "first_aid",
+    "outcome": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_board",
+    "out_from": "14:00",
+    "out_to": null
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 2,
+   "kit_defects": 1,
+   "check_sheet_ref": "C9"
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "conveyed with aed_used true",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "referred",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_log",
+   "second": "corrective_order",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 84,
+ "deciding": {
+  "two_guard_cover": "Each of the two rescues lists two rostered responders whose qual_exp in 2026 is after the shift date.",
+  "totals_reconcile": "Handover first_aid is 2 but only one first_aid incident is itemised.",
+  "next_step": "The 11:00 reading shows high rip risk with red_yellow, a flag lag corrected by the red flag an hour later, and the board is out with no substitute; against that, the log is signed and otherwise complete.",
+  "outcome_severity": "The outcome is conveyed with ambulance_ref A-33, but aed_used is true, which could mean an AED shock and so critical.",
+  "kit_outage": "The board went out at 14:00 with out_to null and the shift ended at 15:00, so the outage is about 60 minutes, right at the boundary."
+ },
+ "request": "rec-F416-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01015
+}

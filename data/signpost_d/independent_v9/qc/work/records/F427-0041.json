@@ -1,0 +1,152 @@
+{
+ "id": "F427-0041",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V101",
+   "site_ref": "HM-07",
+   "visit_date": "2024-07-09",
+   "surveyor_grade": "senior",
+   "weather_on_day": "dry"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 20,
+   "dipwells_scheduled": 10,
+   "dams_total": 2
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "W3",
+     "depth_cm": 52
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "depth_cm": 48,
+     "prev_depth_cm": 35
+    }
+   ],
+   "logger_download_at": "2024-07-09T14:00",
+   "rain_30d_pct_normal": 45
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D1",
+     "pool_level_cm": 40,
+     "design_pool_cm": 40,
+     "defect_code": "OK",
+     "remark": "Holding water well."
+    },
+    {
+     "dam_id": "D2",
+     "pool_level_cm": 35,
+     "design_pool_cm": 35,
+     "defect_code": "OK",
+     "remark": "No issues."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": null,
+   "photos_uploaded": null,
+   "photos_expected": 8,
+   "grazing_signs": false
+  },
+  "notes": {
+   "surveyor_note": "Dams all sound; site dry after a dry spell.",
+   "prior_visits": []
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.1,
+  "photos_status": "none",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": -32.0,
+  "rainfall_pct_normal": 45.0,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.47,
+  "photos_status": "none",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": -32.32,
+  "rainfall_pct_normal": 45.33,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": true,
+  "surveyor_grade": "senior",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "leaning",
+   "target": "well_below",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 91,
+ "deciding": {
+  "dam_caused_drop": "Control dipwell fell 35 to 48 cm and rain is 45% of normal, while both dams are OK at design pool: dry weather explains the drop.",
+  "next_step": "No defects, no work orders, no repeat failures; nothing flags action.",
+  "hydro_state": "Single read well at 52 cm against band floor 20 cm, about 32 cm below the floor.",
+  "dam_severity": "Both dams code OK with pool equal to design pool.",
+  "evidence_completeness": "Only 1 of 10 wells read, photos null, quadrats null; only the dam inspection is recorded."
+ },
+ "request": "rec-F427-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010228
+}

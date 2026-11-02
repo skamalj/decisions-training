@@ -1,0 +1,151 @@
+{
+ "id": "F430-0008",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "CB1",
+     "param": "sf6",
+     "unit": "bar",
+     "normal_band": [
+      5.4,
+      6.0
+     ],
+     "alarm_limit": 5.0,
+     "trip_limit": 4.6,
+     "partner_id": null,
+     "customers_fed": 40
+    },
+    {
+     "id": "TR1",
+     "param": "oil_temp",
+     "unit": "C",
+     "normal_band": [
+      40,
+      85
+     ],
+     "alarm_limit": 95,
+     "trip_limit": 105,
+     "partner_id": null,
+     "customers_fed": 40
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-08-21",
+   "scheduled_assets": [
+    "CB1",
+    "TR1"
+   ],
+   "inspector": "J.R.",
+   "inspector_note": "Gauge on CB1 looks low again."
+  },
+  "readings": [
+   {
+    "asset_id": "CB1",
+    "param": "sf6",
+    "value": 4.62,
+    "unit": "bar",
+    "timestamp": "2024-08-21T10:05"
+   }
+  ],
+  "defects": [],
+  "history": {
+   "previous_round": [
+    {
+     "asset_id": "CB1",
+     "param": "sf6",
+     "value": 4.63,
+     "unit": "bar"
+    }
+   ],
+   "open_work_orders": [
+    {
+     "id": "WO88",
+     "desc": "SF6 gauge on cb1 reading low, replacement ordered"
+    }
+   ]
+  },
+  "network": {
+   "outage_plan": [],
+   "supply": "single feed"
+  }
+ },
+ "factors": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": true,
+  "defect_claim": "none_logged",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 40,
+  "trivial_discrepancies": 2,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": true,
+  "defect_claim": "none_logged",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 22502,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "balanced",
+   "target": "recheck_next_round",
+   "second": "urgent_attendance",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 123,
+ "deciding": {
+  "defect_corroborated": "No defects are logged, though the inspector note about a low gauge and the low reading loosely support one.",
+  "benign_explanation": "Open work order WO88 says the CB1 gauge reads low and a replacement is ordered, but the reading is below alarm and could still be a real leak.",
+  "follow_up": "The reading is stable against last round and the gauge fault is known, which favours a recheck, but it sits at the trip limit with no partner, which argues for attendance.",
+  "limit_deviation": "4.62 bar is below the 5.0 alarm limit and just above the 4.6 trip limit, so it could be read as either level.",
+  "supply_exposure": "CB1 has no partner and feeds 40 customers, but no defect is logged, so it is unclear whether any exposure applies."
+ },
+ "request": "rec-F430-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009217
+}

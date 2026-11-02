@@ -1,0 +1,125 @@
+{
+ "id": "F429-0044",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 220,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 72.0,
+    "action_m": 72.5
+   },
+   "readings": [
+    {
+     "t": "2024-08-09T04:00",
+     "level_m": 72.9,
+     "datum": "site"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "2024-08-09T03:00",
+    "open_after_m": 1.6
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.63
+    }
+   ],
+   "calc_peak_m3s": 196,
+   "gauged_peak_m3s": 149.8,
+   "tailwater_m": 31.0
+  },
+  "instruments": {
+   "piezometer": {
+    "kpa": 82,
+    "alert_kpa": 75
+   }
+  }
+ },
+ "factors": {
+  "reservoir_tier": "action",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "borderline (0.03 m)",
+  "discharge_discrepancy_pct": 30.85,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "large",
+  "discharge_discrepancy_pct": 30.85,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "accept_log",
+   "second": "escalate",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "within_licence": "Calc 196 and gauged 149.8 are both under the 220 limit. The large gap between them leaves some doubt.",
+  "gates_reconciled": "G1 open_after_m 1.6 against calc opening_m 1.63 is a 0.03 m gap, borderline.",
+  "next_step": "The reading of 72.9 m is above action_m 72.5 and the piezometer is above its alert, which supports escalating. Accepting is arguable because the gates match and the discharge is under the limit.",
+  "trigger_tier": "The level of 72.9 m is clearly above action_m 72.5, and nothing shows a ramp or discharge breach.",
+  "parties_needed": "A senior engineer is needed for the action-level reading and the piezometer rise. The operator might resolve the rest alone."
+ },
+ "request": "rec-F429-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009197
+}

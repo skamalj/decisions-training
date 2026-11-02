@@ -1,0 +1,107 @@
+{
+ "id": "F421-0050",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-77120",
+   "contents": "camera lens kit",
+   "qty": 2,
+   "declared_value_gbp": 2160.89
+  },
+  "handling_events": [
+   {
+    "site": "DEPOT",
+    "code": "IN"
+   },
+   {
+    "site": "DEPOT",
+    "code": "SORT"
+   }
+  ],
+  "damage_report": null,
+  "notes": [
+   "Outer label scuffed; no damage seen at sort."
+  ]
+ },
+ "factors": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "none",
+  "inspection_state": "report_null",
+  "loss_pct": 0.0,
+  "declared_value": 2160.89,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": "not applicable"
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "none",
+  "inspection_state": "report_null",
+  "loss_pct": 44.1,
+  "declared_value": 2160.89,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.71
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 28,
+ "deciding": {
+  "depot_fault": "No damage code in any event and no report; damage in custody is not shown.",
+  "contents_match": "No damage report exists, so nothing supports a match; the manifest is uncontradicted.",
+  "next_step": "No damage, no claim, nothing outstanding: close.",
+  "loss_share": "No report or estimate and the note says no damage seen; negligible loss is the lean.",
+  "parties_needed": "Nothing to resolve; one person can close it."
+ },
+ "request": "rec-F421-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00817
+}

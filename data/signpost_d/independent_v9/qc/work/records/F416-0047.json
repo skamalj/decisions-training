@@ -1,0 +1,164 @@
+{
+ "id": "F416-0047",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "station_id": "S6",
+   "date": "2025-06-02",
+   "signoff": "G2",
+   "signoff_time": "17:05"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2025-06-01",
+    "home": "S6"
+   },
+   {
+    "id": "G2",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-02-11",
+    "home": "S6"
+   },
+   {
+    "id": "A7",
+    "on": "10:00",
+    "off": "16:00",
+    "qual_expiry": "2026-03-01",
+    "home": "S9"
+   }
+  ],
+  "conditions": [
+   {
+    "time": "12:00",
+    "wave_m": 2.1,
+    "wind_kt": 28,
+    "rip_risk": "moderate",
+    "flag": "yellow",
+    "bathing_zone_moved": false
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-06-02",
+    "time": "11:40",
+    "type": "water_rescue",
+    "responders": [
+     "G1",
+     "A7"
+    ],
+    "outcome": "gp_advised",
+    "aed_used": false
+   },
+   {
+    "id": "I2",
+    "date": "2025-06-02",
+    "time": "11:55",
+    "type": "water_assist",
+    "responders": [
+     "G2"
+    ],
+    "outcome": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jet_ski",
+    "unit": "J1",
+    "out_from": "2025-06-02T13:00",
+    "out_to": "2025-06-02T14:00",
+    "substitute_unit_id": null
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "beach_users_est": 4200,
+   "check_sheet_ref": "CS-88"
+  }
+ },
+ "factors": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "responder_qual_expired",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "rescue_off_by_one",
+  "worst_outcome": "referred",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "factors_sampled": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "responder_qual_expired",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "rescue_off_by_one",
+  "worst_outcome": "critical",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": true,
+  "missing_record": "ambulance_ref",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "amend_and_file",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 113,
+ "deciding": {
+  "two_guard_cover": "Responder G1's qual_expiry 2025-06-01 is one day before the shift date, but mutual-aid guard A7 (home S9) is in date and on roster; this holds the answer in balance.",
+  "totals_reconcile": "handover.rescues is 2 against one water_rescue itemised, and I2 'water_assist' could count as a second rescue; kit_defects matches.",
+  "next_step": "Only a minor rescue-count discrepancy needs a clerical correction; signoff and check_sheet_ref are present and no outcome is serious.",
+  "outcome_severity": "I1 is gp_advised after on-site care, with no ambulance and no AED; it could be read as referred (1) or as first aid only (0).",
+  "kit_outage": "The jet ski J1 was out 13:00 to 14:00, exactly 60 minutes, with no substitute, which sits on the boundary between levels 1 and 2."
+ },
+ "request": "rec-F416-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013069
+}

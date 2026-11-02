@@ -1,0 +1,148 @@
+{
+ "id": "F411-0042",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "P882",
+   "type": "private_hire",
+   "expiry": "2025-09-30",
+   "review_date": "2025-09-10"
+  },
+  "vehicle": {
+   "reg": "MB24XYZ",
+   "make": "Toyota",
+   "model": "Prius",
+   "first_reg": "2024-04-15",
+   "seats": 4,
+   "odometer_km": 9800
+  },
+  "inspection": {
+   "station": "ST03",
+   "date": "2025-09-03",
+   "result_code": "P",
+   "brake_efficiency_pct": 71,
+   "emissions": "pass",
+   "lighting": "pass"
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "ref": "INS-9012",
+    "expires_on": "2026-03-01"
+   },
+   {
+    "type": "mot_cert",
+    "ref": "M-640",
+    "expires_on": "2026-09-02"
+   },
+   {
+    "type": "v5",
+    "ref": "V-77",
+    "expires_on": "2030-01-01"
+   }
+  ],
+  "history": [
+   {
+    "date": "2024-09-12",
+    "result": "F",
+    "odometer_km": 24800
+   },
+   {
+    "date": "2024-12-05",
+    "result": "F",
+    "odometer_km": 31200
+   },
+   {
+    "date": "2025-03-04",
+    "result": "P",
+    "odometer_km": 41300
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "none_needed",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "large",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 1
+ },
+ "factors_sampled": {
+  "worst_defect_found": "advisory",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": false,
+  "documents_missing_count": 3,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "large",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 1
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 103,
+ "deciding": {
+  "odometer_consistent": "Current 9800 km against earlier history readings up to 41300 km, with no instrument_cluster replacement logged.",
+  "next_step": "Inspection, defects and documents are all clean; the only open point is the unexplained odometer drop, which a reader might route to committee, hence only a lean toward renew.",
+  "inspection_outcome": "Defects list is empty and nothing is noted at inspection.",
+  "document_gaps": "Insurance, mot_cert and v5 are all listed with expiry dates after review_date 2025-09-10.",
+  "outstanding_severity": "Empty defects list, so nothing is outstanding."
+ },
+ "request": "rec-F411-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010601
+}

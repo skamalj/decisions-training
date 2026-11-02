@@ -1,0 +1,150 @@
+{
+ "id": "F409-0015",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "submitted_on": "2024-07-01",
+   "app_type": "new",
+   "full_name": "Tom Reyes",
+   "message": "Car is a company lease, letter attached."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-04-06",
+     "address_line": "7 Harbour Way",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2020-05-11",
+     "address_line": "7 Harbour Way",
+     "verified": true
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "GH70 ABC",
+   "keeper_name": "Norvale Fleet Ltd",
+   "supporting_letters": [
+    {
+     "type": "lease_agreement",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "E1",
+   "address": "7 Harbour Way",
+   "plate_entered": "GH70 ABC",
+   "duration_months": 12
+  },
+  "account_history": {
+   "live_permits": [
+    {
+     "permit_no": "P771"
+    }
+   ],
+   "past_permits": [],
+   "pcns": [
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 86,
+  "docs_missing": 0,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 86,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 71,
+ "deciding": {
+  "residency_shown": "The council tax bill is verified and 86 days old, within 90, and it matches 7 Harbour Way exactly.",
+  "disposition": "All documents are verified and the lease letter explains the company keeper. The bill is nearing the 90-day limit, which leaves slight doubt.",
+  "main_issue": "The keeper differs, but the lease letter names the applicant. The address matches, and the household holds 1 permit against a cap of 2.",
+  "misuse_strength": "The keeper difference is covered by the lease letter. All three PCNs are cancelled and there are no past permits.",
+  "document_gaps": "Both required documents are verified. The only doubt is that the bill is at 86 days, close to the 90-day limit."
+ },
+ "request": "rec-F409-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009388
+}

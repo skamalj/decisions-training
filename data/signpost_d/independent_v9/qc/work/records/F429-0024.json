@@ -1,0 +1,129 @@
+{
+ "id": "F429-0024",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 300,
+   "ramp_max_m_per_10min": 0.4
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 72.0,
+    "action_m": 73.0
+   },
+   "readings": [
+    {
+     "level_m": 72.6,
+     "datum": "site"
+    },
+    {
+     "level_m": 73.1,
+     "datum": "site"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G3",
+    "ts": "09:00",
+    "open_after_m": 1.4
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G3",
+     "opening_m": 1.4
+    }
+   ],
+   "calc_peak_m3s": 360,
+   "gauged_peak_m3s": 228
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "pending",
+    "completed_at": null
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "09:20"
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "action",
+  "near_boundary": false,
+  "discharge_vs_licence": "above_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 36.67,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": true,
+  "inspection_status": "pending",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "above_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 36.67,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_for_inspection",
+   "second": null,
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 60,
+ "deciding": {
+  "within_licence": "Calc peak 360 exceeds the 300 limit.",
+  "gates_reconciled": "G3 1.4 matches, but the 37% gap to gauged 228 hints at a hidden conflict.",
+  "next_step": "Post-op inspection is pending with completed_at null.",
+  "trigger_tier": "A reading of 73.1 is above the 73.0 action trigger, with no ramp breach.",
+  "parties_needed": "Licence excess, pending inspection and data gap involve a few teams, and the count is uncertain."
+ },
+ "request": "rec-F429-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005114
+}

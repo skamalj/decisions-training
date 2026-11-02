@@ -1,0 +1,129 @@
+{
+ "id": "F404-0030",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "T5",
+   "date": "2025-07-09",
+   "age_band": "two_year",
+   "ratio_rule": "1:4"
+  },
+  "children": {
+   "booked": 7,
+   "slots": [
+    {
+     "t": "10:00-10:59",
+     "in": 7
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S51",
+    "q": 3,
+    "ratio": true
+   },
+   {
+    "id": "S52",
+    "q": 3,
+    "ratio": true
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S51",
+    "in": "08:00",
+    "out": "10:00"
+   },
+   {
+    "id": "S52",
+    "in": "08:00",
+    "out": "16:00"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F03",
+    "room": "T5",
+    "from": "10:00",
+    "to": "11:00",
+    "by": "mgr"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 4
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 7,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 0,
+  "shortfall_minutes": 59,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 7,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 0,
+  "shortfall_minutes": 59,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "balanced",
+   "target": "staff_shortfall",
+   "second": "paperwork_only",
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "below_ratio": "7 children need 2 staff; S51 leaves at 10:00 but floater F03 is logged for room T5, 10:00-11:00 and countersigned, so ratio is likely met.",
+  "disposition": "Cover appears to resolve it, but 4 prior breaches and the need to check F03's actual presence leave a confirmation step.",
+  "primary_cause": "Eligible staff fell below rota when S51 left, pointing to staff_shortfall, but cover makes the miss a paperwork matter.",
+  "shortfall_duration": "The 59-minute window is fully inside F03's cover (level 0); if cover is not counted it is 59 minutes (level 2), and level 1 sits between.",
+  "breach_severity": "Without cover, S52 covers 4 of 7 children so 3 are beyond cover (level 2), while someone may see all 7 as unverified, level 3."
+ },
+ "request": "rec-F404-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010685
+}

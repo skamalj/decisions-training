@@ -1,0 +1,107 @@
+{
+ "id": "F436-0019",
+ "family": "F436",
+ "state": {
+  "article": {
+   "headline": "14 buses cancelled on Route 9",
+   "first_published_at": "2024-07-08T06:00",
+   "channels": [
+    "web"
+   ]
+  },
+  "complaint": {
+   "received_at": "2024-07-09T04:00"
+  },
+  "desk_check": {
+   "source_doc": "timetable notice: 12 cancelled",
+   "reporter_notes": "spokesman said 14",
+   "filed_copy": "14"
+  },
+  "history": [
+   "2024-07-09T03:30 headline changed to 12, no note"
+  ]
+ },
+ "factors": {
+  "error_status": "confirmed_by_source",
+  "error_origin_stage": "source_supplied",
+  "discrepancy_field": "headline",
+  "discrepancy_size": "small",
+  "claim_type": "incidental_count",
+  "hours_live": 22,
+  "distribution_channels": "online_only",
+  "mitigation_present": true,
+  "missing_evidence": false,
+  "legal_signal": false,
+  "legal_cleared": false,
+  "draft_fix_mismatch": false,
+  "prior_corrections": 1,
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "error_status": "confirmed_by_source",
+  "error_origin_stage": "none",
+  "discrepancy_field": "headline",
+  "discrepancy_size": "moderate",
+  "claim_type": "wrongdoing_implication",
+  "hours_live": 5,
+  "distribution_channels": "print",
+  "mitigation_present": false,
+  "missing_evidence": false,
+  "legal_signal": false,
+  "legal_cleared": false,
+  "draft_fix_mismatch": false,
+  "prior_corrections": 1,
+  "boundary_case": true
+ },
+ "plan": {
+  "error_confirmed": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "no_action",
+   "second": "escalate",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_origin": {
+   "clarity": "clear",
+   "target": "source_supplied",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "spread": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "harm_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 42,
+ "deciding": {
+  "error_confirmed": "Headline says 14 while the timetable notice says 12.",
+  "next_step": "A silent fix to 12 is already logged, so no_action is possible, but it carries no correction note, which could call for escalation.",
+  "error_origin": "Notes record the spokesman's 14 and filed copy matches the notes; the divergence starts at the source (notice says 12).",
+  "spread": "Web only, about 22 hours live, just under the 24-hour line.",
+  "harm_severity": "An incidental bus count with no named party, but it was in the headline."
+ },
+ "request": "rec-F436-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008553
+}

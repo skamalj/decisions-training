@@ -1,0 +1,156 @@
+{
+ "id": "F434-0044",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 3,
+   "first_rider_at": "10:12"
+  },
+  "post": {
+   "km_marker": 77,
+   "post_type": "junction",
+   "marshals_rostered": 2,
+   "marshals_signed_in": 1,
+   "on_post_from": "10:09",
+   "off_post_at": "12:24",
+   "relief": [
+    {
+     "marshal_ref": "M3",
+     "signed_in": "10:14",
+     "signed_out": "12:24"
+    }
+   ]
+  },
+  "incidents": [
+   {
+    "inc_ref": "P1",
+    "time": "11:10",
+    "km": 77,
+    "type": "mechanical",
+    "bibs": [
+     88
+    ],
+    "medic_called": true,
+    "medic_arrival_min": 7.84,
+    "rider_status": "transferred"
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:30",
+     "ok": false
+    },
+    {
+     "time": "11:00",
+     "ok": false
+    },
+    {
+     "time": "11:30",
+     "ok": false
+    },
+    {
+     "time": "12:00",
+     "ok": false
+    }
+   ],
+   "backup_phone": [
+    {
+     "time": "11:02",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C6",
+     "time": "11:10",
+     "km": 77,
+     "type": "mechanical",
+     "bibs": [
+      88
+     ]
+    }
+   ],
+   "medical_handovers": []
+  },
+  "sweep": {
+   "passed_at": "12:20",
+   "last_rider_bib": 140,
+   "post_cleared_at": "12:24"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "medic_attended",
+  "staffing_gap": "late_before_first_rider",
+  "relief_swap_logged": true,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": 7.84,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "medic_attended",
+  "staffing_gap": "late_before_first_rider",
+  "relief_swap_logged": true,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": 7.84,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "file",
+   "second": "safety_review",
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "leaning",
+   "target": "mechanical_only",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "coverage_held": "On post from 10:09, three minutes before first rider at 10:12, but only one of two marshals signed in until the relief arrived at 10:14; coverage is arguably thin rather than absent.",
+  "next_step": "Logs agree and the sweep passed before sign-off, but all four radio checks failed and the transferred rider has no medical handover entry.",
+  "incident_class": "Post and control list a mechanical stop for bib 88, but the medic call and transfer leave doubt about whether there was a fall.",
+  "reversal_time": "A medic-attended mechanical stop with an unconfirmed outcome could be settled within a day or take a few days to resolve.",
+  "consequence_severity": "Medic attended for 7.84 minutes and the rider status is transferred, but no handover destination is recorded, so it is unclear whether this was a hospital transfer."
+ },
+ "request": "rec-F434-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00934
+}

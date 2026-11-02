@@ -1,0 +1,127 @@
+{
+ "id": "F421-0021",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P1",
+   "fragile": false,
+   "contents": "laptop",
+   "qty": 1,
+   "weight_kg": 6.2,
+   "declared_value_gbp": 2724.92
+  },
+  "handling_events": [
+   {
+    "ts": "2024-05-02T08:10",
+    "site": "HUB-N",
+    "ev": "SORT",
+    "exc": "ADDR"
+   },
+   {
+    "ts": "2024-05-03T06:40",
+    "site": "DEP",
+    "ev": "INB",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-05-03T09:00",
+   "observed_item": "tablet",
+   "qty_found": 1,
+   "weight_kg": 6.2,
+   "condition": "cracked",
+   "photos": [
+    "a",
+    "b",
+    "c"
+   ],
+   "repair_est_gbp": 817.48
+  },
+  "claim": {
+   "claimed_gbp": 1079.07,
+   "packaging_desc": "single-wall box, no void fill"
+  },
+  "notes": [
+   "Likely upstream hub damage."
+  ]
+ },
+ "factors": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 30.0,
+  "declared_value": 2724.92,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.32
+ },
+ "factors_sampled": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "complete",
+  "loss_pct": 84.99,
+  "declared_value": 2724.92,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.32
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_supervisor",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "depot_fault": "Damage code appears on the inbound scan itself, so the timing is ambiguous, while the note blames upstream and the upstream scan has no damage code.",
+  "contents_match": "Manifest says laptop, report says tablet; weights are equal, so a mislabel is possible but the product differs.",
+  "next_step": "Claim of 1079.07 is well above the repair estimate of 817.48, and liability is unclear, so it goes to the supervisor.",
+  "loss_share": "Repair estimate 817.48 against declared 2724.92 is 30%, which is partial.",
+  "parties_needed": "Needs inspector, claims and upstream hub, with a possible extra party (sender or carrier) for the inflated claim, so three or four versus five is close."
+ },
+ "request": "rec-F421-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007513
+}

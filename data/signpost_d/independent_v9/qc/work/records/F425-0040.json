@@ -1,0 +1,120 @@
+{
+ "id": "F425-0040",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "declared_eggs": 1000,
+   "lay_dates": [
+    "2024-07-08",
+    "2024-07-04"
+   ]
+  },
+  "grading_run": {
+   "eggs_in": 1000,
+   "by_size": {
+    "S": 100,
+    "M": 400,
+    "L": 400
+   },
+   "outgrades": {
+    "dirties": 62,
+    "cracks": 30,
+    "blood_spots": 6,
+    "misshapen": 2
+   }
+  },
+  "checks": {
+   "store_temp": {
+    "minutes_above_limit": 95,
+    "max_c": 14
+   }
+  },
+  "flock": {
+   "age_weeks": 72
+  },
+  "packing": {
+   "pack_date": "2024-07-09"
+  }
+ },
+ "factors": {
+  "count_gap_size": "none",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 5,
+  "mixed_lay_dates": true,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 10.0,
+  "dominant_defect": "dirties",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "sustained",
+  "temp_mitigated": false,
+  "flock_age_weeks": 72
+ },
+ "factors_sampled": {
+  "count_gap_size": "large",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 3,
+  "mixed_lay_dates": true,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 4.88,
+  "dominant_defect": "blood_spots",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 72
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "balanced",
+   "target": "downgrade_class_b",
+   "second": "release_class_a",
+   "targets": []
+  },
+  "anomaly_cause": {
+   "clarity": "balanced",
+   "target": "storage_temperature",
+   "second": "shell_quality",
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outgrade_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "counts_reconcile": "declared 1000 = eggs_in 1000; sizes 900 + outgrades 100 = 1000.",
+  "batch_disposition": "Outgrades at 10% and an unexplained store temperature excursion argue for downgrade, while the 5 day lay to pack and complete counts argue for release.",
+  "anomaly_cause": "95 minutes above limit (max 14C) with no defrost or door note and dirties as top defect favour storage temperature; flock age 72 weeks and 30 cracks keep shell quality plausible.",
+  "lay_to_pack": "Oldest lay 07-04 to pack 07-09 is 5 days, within the 4 to 7 day range.",
+  "outgrade_share": "100 of 1000 eggs_in is exactly 10.0%, on the boundary between levels 2 and 3."
+ },
+ "request": "rec-F425-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009825
+}

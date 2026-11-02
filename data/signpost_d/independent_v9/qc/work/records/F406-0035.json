@@ -1,0 +1,190 @@
+{
+ "id": "F406-0035",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-6618",
+   "gallery_code": "E3",
+   "session_date": "2025-09-20",
+   "open": "09:30",
+   "close": "12:15",
+   "certified_limit": 90
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "09:30",
+     "in": 85,
+     "out": 0,
+     "occupancy": 85
+    },
+    {
+     "start": "09:45",
+     "in": 22,
+     "out": 5,
+     "occupancy": 102
+    },
+    {
+     "start": "10:00",
+     "in": 11,
+     "out": 7,
+     "occupancy": 106
+    },
+    {
+     "start": "10:15",
+     "in": 12,
+     "out": 7,
+     "occupancy": 111
+    },
+    {
+     "start": "10:30",
+     "in": 6,
+     "out": 9,
+     "occupancy": 108
+    },
+    {
+     "start": "10:45",
+     "in": 5,
+     "out": 6,
+     "occupancy": 107
+    },
+    {
+     "start": "11:00",
+     "in": 4,
+     "out": 6,
+     "occupancy": 105
+    },
+    {
+     "start": "11:15",
+     "in": 4,
+     "out": 5,
+     "occupancy": 104
+    },
+    {
+     "start": "11:30",
+     "in": 3,
+     "out": 4,
+     "occupancy": 103
+    },
+    {
+     "start": "11:45",
+     "in": 3,
+     "out": 5,
+     "occupancy": 101
+    },
+    {
+     "start": "12:00",
+     "in": 2,
+     "out": 6,
+     "occupancy": 97
+    }
+   ],
+   "manual_tally_peak": 109,
+   "summary_peak": 111
+  },
+  "variations": [
+   {
+    "ref": "CV-402",
+    "gallery_code": "E3",
+    "valid_from": "2025-09-15",
+    "valid_to": "2025-09-21",
+    "uplift_to": 100,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "maintenance": [
+    {
+     "gate": "E3-S",
+     "raised_at": "2025-09-20T09:10",
+     "summary": "turnstile counter intermittent over-read"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": null,
+   "notes": "Busy but felt comfortable throughout."
+  },
+  "history": {
+   "overages_30d": 4
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 1.1,
+  "intervals_over_limit": 9,
+  "section_mismatch": "manual_tally_peak_differs_from_counter_peak",
+  "variation_present": true,
+  "variation_scope": "matches_approved",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "not_recorded",
+  "prior_overages_30d": 4,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.87,
+  "intervals_over_limit": 10,
+  "section_mismatch": "none",
+  "variation_present": false,
+  "variation_scope": "approval_pending",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": true,
+  "egress_check": "not_recorded",
+  "prior_overages_30d": 4,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_safety_lead",
+   "second": "request_counter_data",
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "variation_applies": "CV-402 matches gallery E3 and is approved. Its window of 15 to 21 September covers the session date, so it most likely applies, raising the limit to 100. A ticket on the same gate keeps some doubt.",
+  "fault_explains_overage": "A ticket on gate E3-S was raised 09:10 on the session date, before the 09:30 open, and reports over-read. The steward tally of 109 is close to the counter peak of 111, so the fault explains the overage only partly.",
+  "next_step": "egress_check is null and the overage runs on for many intervals, which supports escalating. The fault ticket leaves open asking for corrected counter data first.",
+  "peak_excess": "Against the 100 uplift, the counter peak of 111 is above 10% and the tally of 109 is under 10%. The two figures split across level 2 and level 3.",
+  "intervals_over": "Nine intervals are above 100, but the ninth is only 101, so counting it gives level 4 and discounting it gives level 3."
+ },
+ "request": "rec-F406-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01535
+}

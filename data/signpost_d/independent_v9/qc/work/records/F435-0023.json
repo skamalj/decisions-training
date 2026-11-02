@@ -1,0 +1,166 @@
+{
+ "id": "F435-0023",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "EV-5544",
+   "zone_id": "F1",
+   "zone_type": "standing_floor",
+   "doors_open": "2025-05-10T19:00",
+   "check_filed_at": "2025-05-11T00:20",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 2000,
+   "variation": null,
+   "stewards_required": 40,
+   "exit_routes": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 2000,
+   "issued": 1960,
+   "comps_included": 80,
+   "scanned_in": 1931
+  },
+  "ingress": {
+   "device_id": "C-03",
+   "device_status": "ok",
+   "raw_peak": 2008,
+   "peak_at": "2025-05-10T21:10",
+   "manual_recount": {
+    "count": 1998,
+    "at": "2025-05-10T21:20"
+   }
+  },
+  "stewarding": {
+   "rostered": 41,
+   "signed_in": 40,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "A",
+    "checked_at": "2025-05-10T17:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "B",
+    "checked_at": "2025-05-10T17:35",
+    "status": "clear"
+   },
+   {
+    "route_id": "C",
+    "checked_at": "2025-05-10T17:40",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "C",
+    "checked_at": "2025-05-10T18:10",
+    "status": "clear"
+   },
+   {
+    "route_id": "D",
+    "checked_at": "2025-05-10T17:50",
+    "status": "clear"
+   },
+   {
+    "route_id": "E",
+    "checked_at": "2025-05-10T17:55",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.004,
+  "counter_status": "ok",
+  "counter_inflation": 0.0,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.98,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.0,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.0,
+  "counter_status": "ok",
+  "counter_inflation": 0.09,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 1.02,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.25,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 1,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "unconfirmed_exits": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 37,
+ "deciding": {
+  "verified_exceedance": "Counter ok with raw_peak 2008 vs limit 2000 (0.4% over), but the manual recount of 1998 sits just under the limit.",
+  "disposition": "Issued, staffing and exits all reconcile and the peak margin is within a few people, so approval is likely despite the 8-person counter reading.",
+  "discrepancy_source": "Issued 1960 is under zone_limit_used 2000 and the counter is ok.",
+  "steward_shortfall": "signed_in 40 equals required 40.",
+  "unconfirmed_exits": "Route C was obstructed at 17:40 but cleared at 18:10, before doors at 19:00; all others clear."
+ },
+ "request": "rec-F435-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011385
+}

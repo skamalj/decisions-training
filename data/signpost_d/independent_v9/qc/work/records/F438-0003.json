@@ -1,0 +1,131 @@
+{
+ "id": "F438-0003",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E3310",
+   "los": 4,
+   "adm": "emergency"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "J18.9"
+   },
+   "comorbidities": [],
+   "theatre_log": [],
+   "documents_present": {
+    "discharge_summary": false,
+    "operation_note": true,
+    "pathology_report": true
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "J18.9"
+   },
+   "secondary_dx": [
+    "I10",
+    "N18.3"
+   ],
+   "procedures": []
+  },
+  "grouping": {
+   "hrg_submitted": "DZ11B",
+   "hrg_regrouped": null,
+   "regroup_status": "blocked_missing_source",
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "audit_context": {
+   "queries": [
+    {
+     "target_code": "N18.3",
+     "status": "open",
+     "response": null
+    }
+   ]
+  },
+  "coder_history": {
+   "prior_audits": 8,
+   "error_rate": 0.29,
+   "audits_failed_last_5": 3,
+   "last_audit_result": "pass"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 2,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "not_regroupable",
+  "missing_source": "discharge_summary",
+  "clinician_query": "outstanding",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.29,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 2,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "not_regroupable",
+  "missing_source": "discharge_summary",
+  "clinician_query": "outstanding",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.29,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_to_lead",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 95,
+ "deciding": {
+  "primary_supported": "Coded J18.9 equals documented J18.9.",
+  "hrg_shift": "hrg_regrouped is null and regroup_status is blocked_missing_source, so no shift can be shown.",
+  "next_step": "Repeat audit failures (3 of the last 5, error_rate 0.29) point to the coding lead; the open query and missing summary leave a records request plausible.",
+  "error_count": "Two coded secondaries (I10, N18.3) have no comorbidity entry because the summary is missing; one open query targets N18.3, so one or two errors.",
+  "error_severity": "Nothing is proven wrong and the primary and HRG are unaffected; the unsupported secondaries could be a specificity slip."
+ },
+ "request": "rec-F438-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010259
+}

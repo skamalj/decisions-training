@@ -1,0 +1,138 @@
+{
+ "id": "F409-0008",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A5518",
+   "full_name": "Tomasz Brandt",
+   "submitted_on": "2024-07-02",
+   "app_type": "renewal",
+   "message": "Query about visitor vouchers."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-05-15",
+     "address_line": "22 Orchard Way",
+     "verified": null
+    },
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2024-05-20",
+     "address_line": "22 Orchard Way",
+     "verified": false
+    },
+    {
+     "doc_type": "id_card",
+     "verified": null
+    }
+   ],
+   "note": "Scans unreadable; awaiting resubmission."
+  },
+  "vehicle": {
+   "plate": "RT68 PLK",
+   "keeper_name": "Dana Whitlock",
+   "supporting_letters": []
+  },
+  "request": {
+   "zone_code": "Z2",
+   "address": "22 Orchard Way",
+   "plate_entered": "RT68 PLK",
+   "duration_months": 12
+  },
+  "account_history": {
+   "live_permits": [],
+   "pcns": [
+    {
+     "status": "open"
+    },
+    {
+     "status": "paid"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "cancelled",
+     "reason": "permit displayed"
+    }
+   ],
+   "officer_note": "Applicant says keeper is a relative."
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 48,
+  "docs_missing": 3,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 48,
+  "docs_missing": 3,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "hold",
+   "second": "approve",
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "residency_shown": "Council tax bill and utility bill match exactly and are recent but verified null and false, so no verified residence document exists.",
+  "disposition": "Unverified documents and a keeper differing from applicant with no supporting letter favour hold; recent matching address and renewal status leave approval defensible.",
+  "main_issue": "Plate matches request, household count is 0 and address matches, so no single check dominates; keeper name differs and documents are unverified, which leaves some doubt.",
+  "misuse_strength": "Keeper name differs from applicant with empty supporting_letters, and three uncancelled PCNs sit exactly at the threshold of three.",
+  "document_gaps": "council_tax_bill verified null, utility_bill verified false and id_card verified null give three unverified documents."
+ },
+ "request": "rec-F409-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014286
+}

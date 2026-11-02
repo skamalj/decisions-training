@@ -1,0 +1,153 @@
+{
+ "id": "F401-0043",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P3310",
+   "planned_discharge_at": "2025-03-10T13:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 14,
+     "spo2": 98,
+     "sbp": 122,
+     "hr": 70,
+     "avpu": "A"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P3310",
+   "reconciled": [
+    {
+     "drug": "paracetamol",
+     "dose": 1,
+     "unit": "g",
+     "freq": "qds"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "paracetamol",
+     "dose": 1000,
+     "unit": "mg",
+     "freq": "qds"
+    }
+   ],
+   "pharmacy_ready_at": "2025-03-10T11:00"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": null,
+    "adl_score": 20
+   },
+   "social": {
+    "lives_alone": false
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "TTO",
+     "status": "done",
+     "completed_at": "2025-03-10T10:30",
+     "signed_by": "RN Obi"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-03-10",
+    "pickup_time": "13:00"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "unit_expression_only",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "function_assessment_null",
+  "outstanding_task_count": 3,
+  "false_completion": false,
+  "care_need": "permanent_care",
+  "care_arrangement_status": "confirmed_on_time",
+  "logistics_delay": "transport_time_unknown",
+  "identifier_consistency": "mismatch",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "discharge_now",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "home_independent",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "discharge_delay": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 40,
+ "deciding": {
+  "rx_matches": "1 g vs 1000 mg paracetamol qds is only a unit expression difference.",
+  "next_step": "Normal obs, matching ids, pharmacy ready before the planned time, no open items.",
+  "destination": "No mobility aid, ADL 20, does not live alone, no care arrangement needed.",
+  "outstanding_tasks": "The only checklist item is done with completed_at and signed_by.",
+  "discharge_delay": "Pharmacy 11:00 and pickup 13:00 on the planned date at the planned time."
+ },
+ "request": "rec-F401-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010808
+}

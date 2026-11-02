@@ -1,0 +1,129 @@
+{
+ "id": "F417-0036",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V-101",
+   "loa_m": 11.6,
+   "draught_src": "survey"
+  },
+  "berth": {
+   "id": "P4",
+   "max_loa_m": 12.0,
+   "fender_allow_m": 0.3,
+   "depth_lat_m": 2.98,
+   "waiver_ref": "W-17",
+   "waiver_expiry": "2025-12-31"
+  },
+  "booking": {
+   "arrival": "2025-06-02",
+   "departure": "2025-06-05"
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 12.3,
+    "draught_m": 2.5
+   },
+   "insurance_expiry": "2026-01-01",
+   "inspection_date": "2025-06-20"
+  },
+  "account": {
+   "dues_outstanding_gbp": 2527,
+   "plan_id": null
+  },
+  "history": [
+   {
+    "date": "2024-07-01",
+    "berth": "P4",
+    "incidents": 1
+   },
+   {
+    "date": "2023-07-03",
+    "berth": "P4",
+    "incidents": 0
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 5.7,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 0.48,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 2527,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 5.73,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 1.5,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 2527,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_document",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "clear",
+   "target": "account_arrears",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "length_fits": "Survey loa 12.3 equals max 12.0 plus fender 0.3 exactly, and a waiver is on file: it fits only at the limit.",
+  "next_step": "Inspection date 2025-06-20 is after departure 2025-06-05 with no valid inspection shown; the inspection record is what is needed.",
+  "primary_issue": "dues_outstanding_gbp 2527 with plan_id null; no other problem is as prominent.",
+  "ukc_band": "Depth 2.98 minus survey draught 2.5 = 0.48 m, just under the 0.5 m boundary between tight and adequate.",
+  "unresolved_count": "Two discrepancies: declared loa 11.6 vs survey 12.3, and inspection dated after departure."
+ },
+ "request": "rec-F417-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01351
+}

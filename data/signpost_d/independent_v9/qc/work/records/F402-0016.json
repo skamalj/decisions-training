@@ -1,0 +1,137 @@
+{
+ "id": "F402-0016",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-4471",
+   "source": "GP",
+   "received": "2025-03-10",
+   "priority": "routine",
+   "site": {
+    "part": "lower_limb",
+    "side": "L"
+   },
+   "onset_date": "2024-01-15"
+  },
+  "patient": {
+   "id": "p-5120",
+   "dob": "1958-06-02",
+   "aid": "none",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx": "G62.9",
+   "red_flags": [
+    "numb_feet_chronic"
+   ],
+   "neuro_signs": {
+    "progression": "stable"
+   },
+   "function_index": 72,
+   "anticoagulant": false,
+   "surgery_date": null
+  },
+  "gp_record": {
+   "dob": "1958-06-02",
+   "falls_3m": 0,
+   "reviews": []
+  },
+  "attachments": [],
+  "history": {
+   "episodes": [
+    {
+     "date": "2024-09-01",
+     "discharge": "goals_met"
+    }
+   ],
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "neuro_deficit_stable (chronic numb feet, stable)",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "none",
+  "missing_item": "none",
+  "condition_group": "neurological",
+  "symptom_duration_weeks": 60,
+  "function_index": 72.0,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "routine",
+  "falls_last_3m": 0,
+  "post_op_days": "none",
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "neurological",
+  "symptom_duration_weeks": 60,
+  "function_index": 24.53,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "routine",
+  "falls_last_3m": 4,
+  "post_op_days": 83,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 76,
+ "deciding": {
+  "red_flag_unresolved": "A chronic numbness code is listed with no MRI or urgent review, but neuro_signs are stable over 60 weeks, so a benign reading is plausible.",
+  "next_step": "The record is consistent and complete (consent true, DOB matches), with a routine priority and no corrections needed.",
+  "pathway": "Stable signs, function index 72, no falls and no surgery suit advice and exercise, though the neurological code leaves some doubt.",
+  "reversal_time": "Adding a routine referral to the list is undone within a day.",
+  "clinical_urgency": "Stable for 60 weeks, 0 falls, good function and routine priority mean safe waiting beyond six weeks."
+ },
+ "request": "rec-F402-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00919
+}

@@ -1,0 +1,111 @@
+{
+ "id": "F415-0043",
+ "family": "F415",
+ "state": {
+  "shift": {
+   "sched_slots": [
+    "08:00",
+    "10:30",
+    "13:00",
+    "15:30",
+    "18:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "10:30",
+    "checklist": {
+     "floor": true,
+     "pans": false
+    },
+    "op_note": "strong smell, traced to sewer works on road outside; utility report due in 8 weeks"
+   }
+  ],
+  "faults": [],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2024-07-09T18:40"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 5,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "none",
+  "fault_open_minutes": 0.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "partial",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 2
+ },
+ "factors_sampled": {
+  "scheduled_slots": 5,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "missing",
+  "fault_type": "none",
+  "fault_open_minutes": 0.02,
+  "block_closed_during_fault": false,
+  "checklist_completion": "partial",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 2
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "sign_off_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "missed_clean": "The visits list holds only the 10:30 slot with no other entries, yet the note blames outside sewer works, so the other slots are probably logged elsewhere.",
+  "sign_off_valid": "A supervisor signed at 18:40 after the last slot at 18:00.",
+  "next_step": "The smell note depends on a utility report that is still outstanding, so one item needs evidence before deciding.",
+  "staff_effort": "The utility report is not due for 8 weeks, so resolving the record means a long investigation of more than five working days.",
+  "fault_exposure": "The faults list is empty, so no fault was open, though the smell note leaves slight doubt."
+ },
+ "request": "rec-F415-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007844
+}

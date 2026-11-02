@@ -1,0 +1,121 @@
+{
+ "id": "F417-0042",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V202",
+   "loa_m": 11.8,
+   "draught_m": 1.6,
+   "draught_src": null
+  },
+  "berth": {
+   "id": "B3",
+   "max_loa_m": 12.2,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 1.75,
+   "tidal_access": "HW+-2h only"
+  },
+  "booking": {
+   "arrival": "2025-08-04",
+   "departure": "2025-08-08",
+   "next_on_berth": "2025-08-12"
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 12.56,
+    "draught_m": null
+   },
+   "insurance_expiry": "2026-03-01",
+   "inspection_date": "2025-04-10"
+  },
+  "account": {
+   "dues_outstanding_gbp": 0
+  },
+  "history": [
+   {
+    "d": "2024-08-02",
+    "berth": "B3",
+    "inc": 1
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 6.44,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 0.15,
+  "draught_source": "null",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 0,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 6.46,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": -0.1,
+  "draught_source": "null",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 1434,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "multiple_nights",
+  "trusted_regular": false,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "allocate_with_conditions",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "length_fits": "Survey loa 12.56 exceeds max_loa 12.2 but is within 12.2+0.5 fender allowance.",
+  "next_step": "berth.tidal_access limits the berth to HW+-2h while depth 1.75 vs draught 1.6 is thin, so allocation with tide conditions fits; nothing is missing.",
+  "primary_issue": "Insurance valid, inspection done, no dues, no date overlap; the length gap is covered by the fender allowance.",
+  "ukc_band": "Depth 1.75 minus unverified draught 1.6 is 0.15 (tight), with a null draught source leaving grounding plausible.",
+  "unresolved_count": "Declared 11.8 vs survey 12.56 is the only possible discrepancy, and it is absorbed by the fender allowance."
+ },
+ "request": "rec-F417-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012082
+}

@@ -1,0 +1,128 @@
+{
+ "id": "F409-0011",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "submitted_on": "2024-06-10",
+   "app_type": "new",
+   "message": "Do you sell visitor vouchers?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-03-09",
+     "address_line": "14 Mill Lane",
+     "verified": true
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "C2",
+   "address": "14 Orchard Road"
+  },
+  "account_history": {
+   "live_permits": [
+    {
+     "permit_no": "P311"
+    }
+   ],
+   "past_permits": [
+    {
+     "permit_no": "P190",
+     "status": "seized",
+     "seize_reason": "altered expiry date suspected, unconfirmed"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "different_street",
+  "proof_age_days": 93,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "different_street",
+  "proof_age_days": 93,
+  "docs_missing": 3,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "residence_proof",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 30,
+ "deciding": {
+  "residency_shown": "The only document gives 14 Mill Lane, while the request is for 14 Orchard Road. The bill is also 93 days old.",
+  "disposition": "The plan says approve, but the record shows a street mismatch and a stale bill. This is the one decision the record does not support. Read plainly, it is a hold or refusal, not an approval.",
+  "main_issue": "The address on the bill is on a different street and the bill is past 90 days, so the residence proof fails.",
+  "misuse_strength": "Different street and three open PCNs are two indicators. The seized permit for suspected, unconfirmed alteration could push it to confirmed.",
+  "document_gaps": "The one required bill is marked verified but is 93 days old, past the 90-day limit. Whether that makes it 0 or 1 gap is a matter of judgement."
+ },
+ "request": "rec-F409-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009388
+}

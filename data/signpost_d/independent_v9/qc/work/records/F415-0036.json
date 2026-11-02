@@ -1,0 +1,144 @@
+{
+ "id": "F415-0036",
+ "family": "F415",
+ "state": {
+  "site": {
+   "hours": "07:00-20:00",
+   "closures": [
+    {
+     "from": "2024-05-14T10:00",
+     "to": "2024-05-14T10:30",
+     "reason": "water off",
+     "approved_by": "OFF14"
+    }
+   ]
+  },
+  "shift": {
+   "start": "2024-05-14T08:00",
+   "end": "2024-05-14T14:30",
+   "sched_slots": [
+    "08:00",
+    "10:15",
+    "12:00",
+    "14:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "start": "2024-05-14T07:52",
+    "end": "2024-05-14T08:20",
+    "status": "done",
+    "checklist": {
+     "wc": true,
+     "floor": true,
+     "bins": true
+    },
+    "photo_ref": "P881"
+   },
+   {
+    "slot": "10:15",
+    "status": "not_recorded"
+   },
+   {
+    "slot": "12:00",
+    "end": "2024-05-14T12:25",
+    "status": "done"
+   },
+   {
+    "slot": "14:00",
+    "end": "2024-05-14T14:20",
+    "status": "done"
+   }
+  ],
+  "faults": [
+   {
+    "type": "sharps_find",
+    "reported_at": "2024-05-14T08:00",
+    "remedied_at": "2024-05-14T13:00",
+    "source": "staff"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2024-05-14T13:40"
+  },
+  "history": {
+   "prior_defaults_90d": 1
+  }
+ },
+ "factors": {
+  "scheduled_slots": 4,
+  "missed_slots": "0",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "signed_before_last_visit",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 300.0,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "routine",
+  "prior_defaults_90d": 1
+ },
+ "factors_sampled": {
+  "scheduled_slots": 4,
+  "missed_slots": "0",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 215.93,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "routine",
+  "prior_defaults_90d": 1
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "sign_off_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_noted",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 66,
+ "deciding": {
+  "missed_clean": "The 10:15 slot is not_recorded, but an approved closure (OFF14) spans 10:00-10:30. The first visit starting before shift start adds some doubt about the log's reliability.",
+  "sign_off_valid": "Signed 13:40 by a supervisor, but the final visit ended 14:20, so the sign-off came before the last visit.",
+  "next_step": "The service looks delivered, but the early sign-off and out-of-order timestamp are recording lapses to note against the contractor.",
+  "staff_effort": "The contractor must be queried on sign-off and timestamps, and the 10:15 gap and the sharps fault checked against the closure. That is one to eight hours, and could stretch to days.",
+  "fault_exposure": "The fault ran 08:00-13:00 (300 min) and the closure covered only 30 min, leaving about 270 min open to the public, over 240."
+ },
+ "request": "rec-F415-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012138
+}

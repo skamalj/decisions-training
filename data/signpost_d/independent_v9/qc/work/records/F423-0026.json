@@ -1,0 +1,126 @@
+{
+ "id": "F423-0026",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-4471",
+   "run_qty": 90000,
+   "overs_pct": 1.57,
+   "stock_spec": "GL90",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "ok_sheet_no": 3,
+   "signed_at": "2025-03-11T08:10"
+  },
+  "colour_readings": {
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 1.8
+    },
+    {
+     "ink": "K",
+     "delta_e": 2.1
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.08,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "GL90",
+   "first_production_at": "2025-03-11T08:10",
+   "sheets_production": 1734
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 1734,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.57,
+  "register_offset_mm": 0.08,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 55,
+  "customer_tier": "standard",
+  "prior_stoppages": 0
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 1734,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.57,
+  "register_offset_mm": 0.39,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 55,
+  "customer_tier": "standard",
+  "prior_stoppages": 0
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_run",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "scrap_exposure": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 61,
+ "deciding": {
+  "colour_in_tolerance": "Patch delta_e 1.8 and 2.1 are both under spec_max_de 3.0.",
+  "run_before_signoff": "signed_at and first_production_at are the same minute (08:10), so order is ambiguous.",
+  "next_step": "Readings pass, register 0.08 mm is within limit, and a signature is on file at about the production start.",
+  "staff_effort": "Nothing is outstanding; the run just continues.",
+  "scrap_exposure": "Colour, register and stock all pass, so no production sheets are suspect."
+ },
+ "request": "rec-F423-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006663
+}

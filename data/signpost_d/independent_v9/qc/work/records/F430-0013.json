@@ -1,0 +1,136 @@
+{
+ "id": "F430-0013",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "CB2",
+     "param": "sf6",
+     "unit": "bar",
+     "normal_band": [
+      5.8,
+      6.5
+     ],
+     "alarm": 5.6,
+     "trip": 5.2,
+     "customers_fed": 985,
+     "partner_id": "CB3"
+    }
+   ]
+  },
+  "round": {
+   "date": "2025-06-20",
+   "scheduled_assets": [
+    "CB2",
+    "CB3"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "cb2",
+    "value": 5.5,
+    "unit": "bar"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "CB2",
+    "photo_ref": "P3",
+    "note": "Gas low."
+   }
+  ],
+  "history": {
+   "previous_round": 5.7,
+   "permits": [
+    {
+     "asset_id": "CB2",
+     "valid_to": "2025-06-30"
+    }
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "CB3": "outage"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 985,
+  "trivial_discrepancies": 4,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "none_logged",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 2269,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "balanced",
+   "target": "recheck_next_round",
+   "second": "work_order",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 28,
+ "deciding": {
+  "defect_corroborated": "Note 'Gas low' fits SF6 of 5.5 below the 5.6 alarm and down from 5.7, but the note is terse.",
+  "benign_explanation": "A permit on CB2 is valid to 2025-06-30 and covers the round date, but it does not state it explains gas loss.",
+  "follow_up": "The reading is in alarm and worsening with the permit open; recheck versus work order is balanced. CB3 has no reading.",
+  "limit_deviation": "5.5 bar is below the 5.6 alarm and above the 5.2 trip, so level 2, with a normal band edge of 5.8 making level 1 arguable.",
+  "supply_exposure": "CB2 feeds 985 customers, just under 1,000, and partner CB3 is on outage, so level 2 versus 3."
+ },
+ "request": "rec-F430-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010711
+}

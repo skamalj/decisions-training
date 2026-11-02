@@ -1,0 +1,139 @@
+{
+ "id": "F438-0025",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E5126",
+   "spec": "resp",
+   "los": 8
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "J18.9"
+   },
+   "comorbidities": [
+    "I10",
+    "E11.9",
+    "N18.3"
+   ],
+   "theatre_log": []
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "J18.9"
+   },
+   "secondary_dx": [
+    "I10",
+    "E11.9",
+    "N18.3",
+    "J96.0",
+    "E43",
+    "G93.4"
+   ],
+   "procedures": [
+    {
+     "code": "E85.1",
+     "date": "2024-06-20"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "DZ11K",
+   "hrg_regrouped": "DZ11K",
+   "tariff_submitted": 4100,
+   "tariff_regrouped": 2950,
+   "submitted_to_commissioner": false
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    "R07.4/R07.9"
+   ],
+   "queries": []
+  },
+  "coder_history": {
+   "prior_audits": 12,
+   "error_rate": 0.09,
+   "last_audit_result": "pass"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 3,
+  "procedure_mismatch": "coded_not_documented",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.09,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 2,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.09,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_to_lead",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unsupported_billable_code = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 60,
+ "deciding": {
+  "primary_supported": "J18.9 equals the documented principal; other discrepancies cast slight doubt.",
+  "hrg_shift": "DZ11K is identical in both groupings even though the tariff drops 4100 to 2950.",
+  "next_step": "Coded E85.1 has no theatre log entry and carries a tariff difference, an integrity concern that goes to the coding lead.",
+  "error_count": "Three undocumented secondary codes (J96.0, E43, G93.4) plus unsupported E85.1 give four errors.",
+  "error_severity": "E85.1 is billed with no documentation (critical), but the unchanged HRG leaves level 3 plausible."
+ },
+ "request": "rec-F438-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007746
+}

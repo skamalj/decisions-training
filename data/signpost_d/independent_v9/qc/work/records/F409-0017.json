@@ -1,0 +1,113 @@
+{
+ "id": "F409-0017",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "submitted_on": "2024-05-31",
+   "app_type": "renewal",
+   "message": "I have lived here since 2019."
+  },
+  "residence_evidence": {
+   "tenancy_start": "2023-11-01",
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-03-03",
+     "address_line": "Flat 2, 8 Quay St",
+     "verified": true
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "LK21 ABX",
+   "supporting_letters": [
+    {
+     "type": "employer_letter",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "address": "Flat 4, 8 Quay St",
+   "plate_entered": "LK21 AXB"
+  },
+  "account_history": {
+   "live_permits": [],
+   "pcns": []
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "different_flat",
+  "proof_age_days": 89,
+  "docs_missing": 0,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "contradicting_claim",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "different_flat",
+  "proof_age_days": 89,
+  "docs_missing": 1,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 0,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "contradicting_claim",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "balanced",
+   "target": "residence_proof",
+   "second": "no_issue",
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "residency_shown": "The verified bill names Flat 2 but the request is for Flat 4, and it is 89 days old, just inside the 90-day limit; the match is weak but the same building.",
+  "disposition": "The bill is verified, the plate typo is covered by the employer letter, and there are no permit or PCN problems, so approval leads.",
+  "main_issue": "The flat number mismatch and the 89-day age put the residence proof at the margin; otherwise nothing fails.",
+  "misuse_strength": "The claim 'since 2019' contradicts tenancy_start 2023-11-01, which is the only unmitigated indicator; the plate typo is mitigated.",
+  "document_gaps": "The only document is verified and 89 days old, just inside the 90-day limit, so 0 or 1 depending on how the borderline age is read."
+ },
+ "request": "rec-F409-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008687
+}

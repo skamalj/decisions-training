@@ -1,0 +1,148 @@
+{
+ "id": "F413-0032",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "food_production",
+   "stations": [
+    "S1",
+    "S2",
+    "S3"
+   ]
+  },
+  "visit": {
+   "type": "routine",
+   "start": "2025-06-02T08:30",
+   "end": "2025-06-02T09:20",
+   "client_signoff": null,
+   "tech_licence_expiry": "2026-01-15"
+  },
+  "treatments": [
+   {
+    "product_code": "GL3",
+    "zone": "Z1",
+    "area_m2": 50,
+    "qty_applied": 1.3,
+    "unit": "kg",
+    "label_max_per_m2": 0.03
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S2",
+    "zone": "Z1",
+    "activity": true
+   },
+   {
+    "id": "S1",
+    "zone": "Z1",
+    "activity": true
+   },
+   {
+    "id": "S3",
+    "zone": "Z1",
+    "activity": false
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product_code": "GL3",
+    "qty": 2.0,
+    "unit": "kg"
+   },
+   {
+    "movement": "return",
+    "product_code": "GL3",
+    "qty": 0.7,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 2,
+   "actions": [
+    {
+     "id": "CA1",
+     "status": "raised",
+     "booked": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "large_over_25pct",
+  "stock_return_logged": true,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "stable",
+  "previous_visit_available": true,
+  "dose_overage_pct": 0.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "food_production"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "large_over_25pct",
+  "stock_return_logged": true,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "stable",
+  "previous_visit_available": true,
+  "dose_overage_pct": 65.02,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "food_production"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "sign_off",
+   "second": "book_revisit",
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "usage_reconciled": "Withdrew 2.0 kg and returned 0.7 kg, a net of 1.3 kg that matches the 1.3 kg applied.",
+  "activity_increased": "Two stations active against prev_active_stations 2, so no change.",
+  "next_step": "The visit is otherwise complete and could be signed off, but corrective action CA1 is raised with no booked date, which could justify a revisit.",
+  "breach_severity": "client_signoff is null, a possible paperwork gap (level 1), while the dose of 0.026/m2 is within the 0.03 limit and the signoff may simply be pending (level 0).",
+  "parties_needed": "The missing signoff and the unbooked corrective action involve the technician, client, scheduler and manager, so three or four parties, but it could stretch to five."
+ },
+ "request": "rec-F413-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010861
+}

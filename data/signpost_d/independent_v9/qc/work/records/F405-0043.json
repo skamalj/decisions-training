@@ -1,0 +1,172 @@
+{
+ "id": "F405-0043",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-6032",
+   "detected_on": "2025-10-21",
+   "detected_at": "15:40",
+   "term_start": "2025-09-29",
+   "room": "S1.03"
+  },
+  "booking_a": {
+   "module": "LAW210",
+   "dept": "LAW",
+   "day": "Tue",
+   "start": "16:00",
+   "end": "18:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "headcount": 60,
+   "required_features": [
+    "hearing_loop"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "LAW305",
+   "dept": "LAW",
+   "day": "Tue",
+   "start": "17:00",
+   "end": "19:00",
+   "weeks": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "status": "cancelled",
+   "released": false,
+   "approved_at": "2025-07-01",
+   "approver": "rpatel"
+  },
+  "room": {
+   "code": "S1.03",
+   "aliases": [],
+   "capacity": 70,
+   "features": [
+    "hearing_loop"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "S1.08",
+    "capacity": 76,
+    "features": [
+     "hearing_loop"
+    ],
+    "weeks_free": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-05-12"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-09-02"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "cancelled_not_released",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.79,
+  "required_feature": "hearing_loop",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "cancelled_not_released",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 28,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": true,
+  "headcount_ratio": 1.27,
+  "required_feature": "hearing_loop",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "genuine_clash": "Times overlap 17:00-18:00 in shared weeks 4-8 and the slot is still held, but booking_b status is cancelled, which leaves doubt.",
+  "alt_room_fits": "S1.08 seats 76 for headcount 60 and lists hearing_loop, free for weeks 4-10.",
+  "resolution": "booking_b is cancelled so no live overlap remains; only the slot release is outstanding.",
+  "urgency": "Week 4 Tuesday is the detection date (15:40) and the sessions start at 16:00 and 17:00, so it is today or imminent; boundary between levels 3 and 2.",
+  "parties_needed": "Only the releasing department and timetabling are visible, but the live session and hearing loop could involve more people; boundary between three-four and five or more."
+ },
+ "request": "rec-F405-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01201
+}

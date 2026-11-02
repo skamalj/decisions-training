@@ -1,0 +1,141 @@
+{
+ "id": "F413-0004",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "food_production",
+   "stations": [
+    "F1",
+    "F2"
+   ],
+   "zones": [
+    {
+     "id": "line",
+     "toxic_bait_permitted": true
+    }
+   ]
+  },
+  "visit": {
+   "id": "V412",
+   "type": "routine",
+   "start": "2024-08-05T07:00",
+   "end": "2024-08-05T08:00",
+   "client_signoff": "2024-08-05",
+   "tech_licence_expiry": "2025-06-30"
+  },
+  "treatments": [
+   {
+    "product": "RB-3",
+    "zone": "line",
+    "area_m2": 20,
+    "qty_applied": 0.89,
+    "unit": "kg",
+    "label_max_per_m2": 0.05
+   }
+  ],
+  "monitoring": [
+   {
+    "station": "F1",
+    "activity": true
+   },
+   {
+    "station": "F2",
+    "activity": false
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdrawal",
+    "product": "RB-3",
+    "qty": 1.0,
+    "unit": "kg"
+   },
+   {
+    "movement": "return",
+    "product": "RB-3",
+    "qty": 0.05,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 1,
+   "actions": []
+  }
+ },
+ "factors": {
+  "stock_mismatch": "moderate_5_to_25pct",
+  "stock_return_logged": true,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "stable",
+  "previous_visit_available": true,
+  "dose_overage_pct": 78.16,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "food_production"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "moderate_5_to_25pct",
+  "stock_return_logged": true,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "stable",
+  "previous_visit_available": true,
+  "dose_overage_pct": 78.16,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "food_production"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "sign_off",
+   "second": "book_revisit",
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 59,
+ "deciding": {
+  "usage_reconciled": "Net 0.95 kg vs 0.89 kg applied, about 6%; near-match but not exact.",
+  "activity_increased": "One active station now against prev_active_stations 1, same count.",
+  "next_step": "Records complete with no actions, but the small stock gap could justify a revisit.",
+  "breach_severity": "Dose 0.0445 kg/m2 is under label max 0.05, so level 0, though the small stock gap might read as paperwork.",
+  "parties_needed": "Nothing missing, the technician could resolve any query alone, but a manager might also check."
+ },
+ "request": "rec-F413-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005474
+}

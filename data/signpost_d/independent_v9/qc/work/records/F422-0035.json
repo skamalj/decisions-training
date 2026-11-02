@@ -1,0 +1,163 @@
+{
+ "id": "F422-0035",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-8802",
+   "site": "S-415",
+   "delivered_at": "2025-03-01T09:00",
+   "received_at": "2025-04-05T09:00",
+   "review_date": "2025-05-12",
+   "reason": "OVERSTOCK",
+   "lines": [
+    {
+     "gtin": "G5",
+     "qty_claimed": 40
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "D-300",
+   "date": "2025-02-27",
+   "lines": [
+    {
+     "gtin": "G5",
+     "batch": "P12",
+     "expiry": "2025-09-12",
+     "qty_dispatched": 40
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G5",
+     "batch": "P12",
+     "expiry": "2025-09-12",
+     "qty_counted": 33,
+     "packs_damaged": 16,
+     "seals_intact": 17
+    }
+   ],
+   "uid_scans": [
+    {
+     "uid": "u3",
+     "status": "decommissioned",
+     "decommission_site": "S-415",
+     "decommission_at": "2025-05-06"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": "L-5",
+   "logger_start": "2025-03-03T10:00",
+   "logger_end": "2025-04-05T08:00",
+   "min_c": 14.8,
+   "max_c": 26.3,
+   "minutes_out_of_range": 18,
+   "stability_ref": {
+    "max_hours": 24,
+    "max_c": 30
+   }
+  },
+  "customer_compliance": {
+   "last_audit": "2023-09-30",
+   "audit_valid_until": "2024-09-30",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "location": "Q-4",
+   "hold_limit_days": 30,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-05-12"
+   },
+   "max_days_out_of_control": 14,
+   "min_shelf_life_months": 3
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 18,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 7,
+  "damaged_pack_fraction": 0.48,
+  "uid_alert": true,
+  "uid_alert_explained": true,
+  "days_out_of_control": 35,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 0,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 4
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 18,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 7,
+  "damaged_pack_fraction": 0.91,
+  "uid_alert": true,
+  "uid_alert_explained": true,
+  "days_out_of_control": 35,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 10,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 4
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "release_stock",
+   "second": "reject_destroy",
+   "targets": [
+    "T1"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "storage_maintained": "35 days out of control against a limit of 14, logger starts 2 days after delivery, and the stability allowance (24h) is far exceeded.",
+  "batch_traceable": "P12 and its expiry match dispatch D-300; the decommissioned UID is at the customer's own site S-415 on 2025-05-06; 7 packs short in count leave slight doubt.",
+  "next_step": "Plan conflict: release_stock is not supportable given the storage failure, 16 of 33 packs damaged and the 35 days away; record points toward destruction or partial release.",
+  "resaleable_share": "17 of 33 sealed packs (about 52%) would be fit, but the storage failure puts even these in doubt; level 1 versus level 2 is contested.",
+  "disposition_urgency": "Extension new_limit_date 2025-05-12 equals review_date, so the limit is today or has just passed; overdue versus 0 days left is balanced."
+ },
+ "request": "rec-F422-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015865
+}

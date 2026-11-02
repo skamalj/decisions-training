@@ -1,0 +1,133 @@
+{
+ "id": "F424-0029",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2414",
+   "vessel_id": "FV5",
+   "volume_hl": 18,
+   "brew_date": "2024-08-01",
+   "yeast_strain": "WLP001",
+   "yeast_gen": 3,
+   "og_target": 1.05,
+   "fg_target_min": 1.008,
+   "fg_target_max": 1.012,
+   "strain_max_temp_c": 23
+  },
+  "readings": [
+   {
+    "ts": "2024-08-04",
+    "gravity_sg": 1.0075,
+    "temp_c": 23.4
+   },
+   {
+    "ts": "2024-08-05",
+    "gravity_sg": 1.007
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-08-01",
+    "vessel_id": "FV6",
+    "note": "Pitched WLP002 gen 5."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2414",
+   "diacetyl_mgl": 0.19,
+   "abv_pct": 5.6,
+   "micro_plate": {
+    "result": "presumptive",
+    "retest": [
+     "negative"
+    ]
+   },
+   "lab_note": "Retest negative, plate error."
+  },
+  "release_request": {
+   "volume_hl": 17,
+   "vessel_id": "FV5"
+  }
+ },
+ "factors": {
+  "gravity_status": "over_attenuated",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.19,
+  "discrepancy_count": 4,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "over_attenuated",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.19,
+  "discrepancy_count": 5,
+  "decoy_mismatch": false,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "terminal_gravity": "1.0075 and 1.0070 are stable but fall below the 1.008 minimum, only marginally.",
+  "contamination_supported": "Presumptive plate only, with a negative retest and a lab note citing plating error.",
+  "batch_disposition": "Results complete and only record fixes are needed at packaging, so release_conditional.",
+  "deviation_severity": "Temperature 23.4 vs 23 C is under 2%, but diacetyl 0.19 is high; minor or major is arguable.",
+  "record_discrepancies": "Vessel FV5 vs FV6 in the event, strain WLP001 vs WLP002, gen 3 vs 5 and volume 18 vs 17 hl; the pitch event counts as one or as several."
+ },
+ "request": "rec-F424-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005293
+}

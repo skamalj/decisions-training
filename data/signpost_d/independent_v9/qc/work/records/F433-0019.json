@@ -1,0 +1,147 @@
+{
+ "id": "F433-0019",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H08",
+   "passport_remark": "known left fore irregularity, regular at loops 1-2",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "result": "pass"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 3,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 15
+   },
+   "arrived_at": "13:00",
+   "departed_at": "13:40"
+  },
+  "vet_card": {
+   "presented_at": "13:18",
+   "pulse_bpm": 62,
+   "cri": {
+    "first_bpm": 62,
+    "second_bpm": 60
+   },
+   "metabolic": {
+    "mm": "pale",
+    "crt_s": 3.5,
+    "gut_sounds": "normal"
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": "regular"
+    },
+    {
+     "surface": "soft",
+     "grade": "regular"
+    }
+   ],
+   "tack": {
+    "site": null,
+    "finding": "none"
+   },
+   "vet_signed_at": "13:52"
+  },
+  "treatment": [
+   {
+    "time": "13:30",
+    "type": "electrolyte_paste",
+    "approved_by": "Dr Hale"
+   }
+  ],
+  "notes": {
+   "rider_note": "girth slipped on the climb, rub is old"
+  }
+ },
+ "factors": {
+  "pulse_status": "met_within_window",
+  "time_mismatch": "none",
+  "gait_grade": "regular",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 2.27,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": true,
+  "note_tone": "benign_explanation"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_after_window",
+  "time_mismatch": "none",
+  "gait_grade": "regular",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 2.27,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": true,
+  "note_tone": "benign_explanation"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "clear_to_continue",
+   "second": "refer_president",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "clear",
+   "target": "ftq_metabolic",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "welfare_risk": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (departed_before_clearance = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 60,
+ "deciding": {
+  "pulse_met": "Presented 13:18, 18 min after 13:00 arrival, pulse 62 under 64.",
+  "next_step": "Parameters are mostly acceptable and the treatment is minor and approved, but departed_at 13:40 precedes vet_signed_at 13:52, which supports referral to the president.",
+  "outcome_code": "Pale mucous membranes and CRT 3.5 s are metabolic failures while both trot-ups are regular.",
+  "welfare_risk": "The horse left at 13:40 before the 13:52 clearance with two metabolic flags, so it was on course uncleared.",
+  "record_completeness": "Everything is present, but departure precedes the signature, which can be read as a missing clearance (level 1) or as a time out of sequence (level 2)."
+ },
+ "request": "rec-F433-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010552
+}

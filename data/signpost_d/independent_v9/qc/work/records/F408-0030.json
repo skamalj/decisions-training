@@ -1,0 +1,129 @@
+{
+ "id": "F408-0030",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 5005,
+   "postcode": "QR5 6ST",
+   "logged_at": "2024-09-06T08:00",
+   "stream": "garden",
+   "claimed_date": "2024-09-03",
+   "photo_attached": false
+  },
+  "property": {
+   "uprn": 5005,
+   "postcode": "QR5 6ST"
+  },
+  "schedule": {
+   "streams_due": [
+    "garden"
+   ],
+   "scheduled_date": "2024-09-02"
+  },
+  "round_log": {
+   "disruption_code": "vehicle_breakdown",
+   "catch_up_date": "2024-09-12",
+   "stops": [
+    {
+     "uprn": 5005,
+     "exception_code": "contaminated",
+     "photo_ref": null,
+     "gps_stop": true
+    }
+   ]
+  },
+  "history": [
+   {
+    "outcome": "upheld",
+    "logged_on": "2024-08-14"
+   },
+   {
+    "outcome": "upheld",
+    "logged_on": "2024-07-10"
+   },
+   {
+    "outcome": "upheld",
+    "logged_on": "2024-06-14"
+   },
+   {
+    "outcome": "pending",
+    "logged_on": "2024-09-01"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "beyond_window",
+  "crew_exception": "contaminated",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "postcode_typo",
+  "prior_upheld_misses": 3,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "beyond_window",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "postcode_typo",
+  "prior_upheld_misses": 4,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "report_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_conditional",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "crew_missed": "The crew stop shows contaminated with gps_stop true but photo_ref null, so the exception is unsupported; the breakdown with a future catch-up of 2024-09-12 offsets that.",
+  "report_matches": "Claimed date 2024-09-03 is one day after the scheduled 2024-09-02, and the report was logged more than 48 hours later, on 2024-09-06.",
+  "next_step": "The crew coded the stop contaminated, so a return should wait until the resident fixes presentation.",
+  "return_urgency": "The date does not match and a catch-up is pending 2024-09-12, which points to the next round; the contamination may justify a standard return within two working days.",
+  "repeat_failures": "Upheld 2024-08-14, 2024-07-10 and 2024-06-14 (84 days before logging, on the boundary) with a pending entry: three upheld or two is arguable."
+ },
+ "request": "rec-F408-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009869
+}

@@ -1,0 +1,187 @@
+{
+ "id": "F440-0039",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "B4",
+   "review_date": "2025-11-05",
+   "arrival": "2025-11-20",
+   "departure": "2025-11-23",
+   "pax": {
+    "13-17": 19,
+    "u13": 1,
+    "adult": 2
+   },
+   "diet": {
+    "gf": 2
+   },
+   "amendments": []
+  },
+  "roster": [
+   {
+    "role": "leader",
+    "dob": "1981-09-14",
+    "sex": "F"
+   },
+   {
+    "role": "leader",
+    "dob": "1986-03-30",
+    "sex": "M"
+   },
+   {
+    "role": "participant",
+    "n": 10,
+    "dob": "2010",
+    "sex": "F",
+    "gf": 2
+   },
+   {
+    "role": "participant",
+    "n": 9,
+    "dob": "2010",
+    "sex": "M",
+    "gf": 1
+   },
+   {
+    "role": "participant",
+    "n": 1,
+    "dob": "2012-12-04",
+    "sex": "F"
+   }
+  ],
+  "allocation": [
+   {
+    "room": "D1",
+    "sex": "F",
+    "beds": 12,
+    "nights": [
+     "2025-11-20",
+     "2025-11-21",
+     "2025-11-22"
+    ]
+   },
+   {
+    "room": "D2",
+    "sex": "M",
+    "beds": 10,
+    "nights": [
+     "2025-11-20",
+     "2025-11-21",
+     "2025-11-22"
+    ]
+   }
+  ],
+  "payment": {
+   "total": 2000,
+   "deposit_due": 500,
+   "paid_total": 0,
+   "schedule": [
+    {
+     "due": "2025-11-12",
+     "amt": 250
+    },
+    {
+     "due": "2025-12-10",
+     "amt": 250
+    }
+   ],
+   "approved_by": "mgr3"
+  },
+  "safeguarding": [
+   {
+    "adult": "L1",
+    "status": "verified",
+    "expiry": "2027-01-01"
+   },
+   {
+    "adult": "L2",
+    "status": "verified",
+    "expiry": "2026-12-01"
+   }
+  ],
+  "history": {
+   "trusted": false,
+   "stays": 5,
+   "no_shows": 4
+  }
+ },
+ "factors": {
+  "pax_mismatch": "none",
+  "night_mismatch": "none",
+  "amendment_logged": false,
+  "supervision_level": "exactly_at_ratio",
+  "extra_cover_logged": false,
+  "deposit_position": "nothing_paid",
+  "instalment_approved": true,
+  "days_to_arrival": 15,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 4,
+  "diet_count_drift": "minor"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "two_to_four",
+  "night_mismatch": "one_night_extra",
+  "amendment_logged": false,
+  "supervision_level": "exactly_at_ratio",
+  "extra_cover_logged": false,
+  "deposit_position": "nothing_paid",
+  "instalment_approved": true,
+  "days_to_arrival": 96,
+  "dorm_fit": "needs_one_swap",
+  "leader_checks": "several_missing",
+  "trusted_organiser": false,
+  "prior_no_shows": 4,
+  "diet_count_drift": "minor"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "confirm",
+   "second": "confirm_conditional",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 74,
+ "deciding": {
+  "ratio_met": "19 teens need 1.9 adults and the one 12-year-old (dob 2012-12-04) adds 1/8, for 2.025, against exactly 2 leaders; borderline.",
+  "deposit_covered": "Nothing is paid, but an approved instalment schedule (approved_by mgr3) has its first instalment due 11-12, which is not yet due.",
+  "disposition": "All checks are verified and the payment plan is approved, favouring confirm, but 4 no-shows, an untrusted organiser and the borderline ratio make a named condition plausible.",
+  "urgency": "Review 11-05 to arrival 11-20 is 15 days, at the line between soon and pressing.",
+  "conflict_count": "Only diet totals differ (booked gf 2 vs roster 3) with no amendment. Pax, nights and dorms match, and the drift is trivial, so the count is 1 or arguably 0."
+ },
+ "request": "rec-F440-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.018845
+}

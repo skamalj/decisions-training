@@ -1,0 +1,130 @@
+{
+ "id": "F406-0028",
+ "family": "F406",
+ "state": {
+  "session": {
+   "gallery_code": "G7",
+   "session_date": "2025-06-14",
+   "certified_limit": 100
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "11:00",
+     "occupancy": 72
+    },
+    {
+     "start": "11:15",
+     "occupancy": 80
+    }
+   ],
+   "summary_peak": 80
+  },
+  "variations": [
+   {
+    "gallery_code": "G7",
+    "valid_from": "2025-06-01",
+    "valid_to": "2025-06-14",
+    "uplift_to": 120,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "tickets": [
+    {
+     "gate": "A1",
+     "raised_at": "2025-06-14T08:30",
+     "summary": "counter reset"
+    }
+   ]
+  },
+  "history": {
+   "overages_30d": 0
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.8,
+  "intervals_over_limit": 0,
+  "section_mismatch": "none",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.09,
+  "intervals_over_limit": 12,
+  "section_mismatch": "scans_vs_counter_major",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "other_gate",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 5,
+  "staff_note_tone": "factual",
+  "boundary_case": true
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 39,
+ "deciding": {
+  "variation_applies": "Variation gallery G7 matches, approved, window ends on the session date itself, a last-day edge.",
+  "fault_explains_overage": "A reset ticket for gate A1 exists before the session, but no overage appears in the counts.",
+  "next_step": "Peak 80 is well under the limit, history shows no overages and nothing is missing, so file.",
+  "peak_excess": "Summary peak 80 against limit 100 (or 120) is 80% or less, below 90%.",
+  "intervals_over": "Both intervals (72, 80) are below the limit; the log is brief, giving slight doubt."
+ },
+ "request": "rec-F406-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01046
+}

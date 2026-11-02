@@ -1,0 +1,148 @@
+{
+ "id": "F414-0032",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "CF-31",
+   "equip_type": "climbing_frame",
+   "crit_fall_height_m": 2.0,
+   "surf_type": "rubber"
+  },
+  "inspection": {
+   "insp_date": "2025-03-03",
+   "fall_height_m": 2.0,
+   "surf_type_found": "rubber",
+   "surf_depth_mm": null,
+   "findings": [
+    {
+     "defect_code": "EN-12",
+     "component_id": "C4",
+     "injury_mech": "minor"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "asset_id": "CF-31",
+    "component_id": "C2",
+    "defect_ref": "D5",
+    "status": "open"
+   },
+   {
+    "asset_id": "CF-31",
+    "component_id": "C4",
+    "defect_ref": "D6",
+    "status": "open"
+   },
+   {
+    "asset_id": "CF-31",
+    "component_id": "C6",
+    "defect_ref": "D7",
+    "status": "open"
+   },
+   {
+    "asset_id": "CF-31",
+    "component_id": "C1",
+    "defect_ref": "D8",
+    "status": "closed",
+    "closed_date": "2025-02-01"
+   }
+  ],
+  "history": [
+   {
+    "date": "2024-03-01",
+    "defect_refs": [
+     "D5",
+     "D8"
+    ],
+    "component_results": {
+     "C1": "pass"
+    }
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": "unmeasured",
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.25,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": true,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 0
+ },
+ "factors_sampled": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -82.99,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.22,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": true,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 0
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "clear",
+   "target": "sign_off_actions",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "prior_defects_cleared": "History ref D5 still has an open work order on C2; only D8 is closed.",
+  "surfacing_adequate": "surf_depth_mm is null, so depth is unmeasured at 2.0 m fall height.",
+  "asset_disposition": "Only a minor-injury finding on C4 with open work orders; use continues with scheduled repairs.",
+  "remedial_progress": "One of four work orders is closed, so fewer than half, which is level 1.",
+  "hazard_severity": "Single EN-12 finding with injury_mech minor on C4, with no severe finding; whether it counts as moderate or low is open."
+ },
+ "request": "rec-F414-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01002
+}

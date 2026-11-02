@@ -1,0 +1,185 @@
+{
+ "id": "F419-0028",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "06/24",
+   "date": "2024-06-10",
+   "speed": 65,
+   "thr": {
+    "65": [
+     0.72,
+     0.52,
+     0.42
+    ],
+    "95": [
+     0.66,
+     0.47,
+     0.36
+    ]
+   },
+   "weather": null,
+   "wind_kph": 9
+  },
+  "device": {
+   "serial": "G-1932",
+   "cal_date": "2024-01-12",
+   "cal_expiry": "2025-01-12",
+   "tyre_kpa": 69,
+   "tyre_spec_kpa": [
+    66,
+    72
+   ],
+   "water_mm": 0.5
+  },
+  "runs": [
+   {
+    "dir": "06",
+    "mean_speed_kmh": 65,
+    "thirds": [
+     0.58,
+     0.66,
+     0.69
+    ],
+    "segments_100m": {
+     "third1": [
+      0.4,
+      0.66,
+      0.68
+     ]
+    }
+   },
+   {
+    "dir": "24",
+    "mean_speed_kmh": 64,
+    "thirds": [
+     0.7,
+     0.67,
+     0.6
+    ],
+    "segments_100m": {
+     "third3": [
+      0.56,
+      0.62,
+      0.63
+     ]
+    }
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.51,
+    0.52,
+    0.55
+   ],
+   "mtd_threshold_mm": 0.5,
+   "contaminant": "dry"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-11-09",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start": "2022-11-02",
+     "status": "closed"
+    },
+    {
+     "type": "resurfacing",
+     "loc": "TWY C",
+     "start": "2024-06-20"
+    }
+   ],
+   "prior_surveys": [
+    {
+     "d": "2023-10-05",
+     "lowest_third": 0.64
+    },
+    {
+     "d": "2024-01-20",
+     "lowest_third": 0.61
+    }
+   ],
+   "cross_checks": []
+  },
+  "review": {
+   "signed_at": "2024-06-11T08:15Z",
+   "role": "engineer"
+  }
+ },
+ "factors": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 214,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 1,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "marginal",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "factors_sampled": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 214,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 3,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "marginal",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold_retest",
+   "second": "file_routine",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 144,
+ "deciding": {
+  "genuine_deficit": "All thirds average 0.58 or higher, above planning 0.52, but a 100 m touchdown segment reads 0.40, below the 0.42 minimum, with a declining trend.",
+  "next_step": "Weather is null, which casts doubt on validity and supports a retest. Thirds above planning with a valid device and signed record also support filing.",
+  "deficit_driver": "No third falls below planning, and texture is marginal but above its threshold, so none_found; the lone touchdown segment adds slight doubt.",
+  "friction_severity": "Segment 0.40 is below minimum 0.42 while the third average stays at 0.58, so level 3.",
+  "evidence_completeness": "Only test_meta.weather is null; calibration is valid and the record is signed after the survey, so one element is missing."
+ },
+ "request": "rec-F419-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012755
+}

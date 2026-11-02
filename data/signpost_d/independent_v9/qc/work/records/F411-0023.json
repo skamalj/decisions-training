@@ -1,0 +1,138 @@
+{
+ "id": "F411-0023",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H502",
+   "type": "hackney",
+   "expiry": "2025-05-31",
+   "review_date": "2025-05-06"
+  },
+  "vehicle": {
+   "odometer_km": 96000,
+   "first_reg": "2017-04-10"
+  },
+  "inspection": {
+   "station": "TS12",
+   "date": "2025-04-22",
+   "result_code": "PA",
+   "brake_efficiency_pct": 71,
+   "emissions": "ok",
+   "lighting": "ok"
+  },
+  "defects": [
+   {
+    "code": "WPR1",
+    "grade": "minor",
+    "rectify_by": "2025-05-22",
+    "repaired_on": "2025-04-25",
+    "retest_on": "2025-04-28",
+    "retest_result": "pass"
+   },
+   {
+    "code": "TYR0",
+    "grade": "advisory",
+    "rectify_by": "2025-05-22",
+    "repaired_on": null,
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-09-01"
+   },
+   {
+    "type": "badge",
+    "expires_on": "2025-04-30",
+    "cover_note_ref": "CN19",
+    "cover_until": "2025-05-06"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-02-20",
+     "result": "P",
+     "odometer_km": 94800
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": true,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 8
+ },
+ "factors_sampled": {
+  "worst_defect_found": "minor",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 8
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "conditional_renewal",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "balanced",
+   "target": "minor_fail",
+   "second": "clean_pass",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 112,
+ "deciding": {
+  "odometer_consistent": "There is no drop, but only 1,200 km has been added in 14 months for a hackney, which is implausibly low.",
+  "next_step": "The minor item is repaired and retested; the remaining advisory is within its 2025-05-22 deadline, so a dated condition fits better than an unconditional renewal.",
+  "inspection_outcome": "WPR1 is a minor item with a passed retest, so a reviewer may call it a minor fail or a clean pass; the advisory is also recorded.",
+  "document_gaps": "Badge expired 2025-04-30; its cover note runs only until 2025-05-06, which equals the review date and is not after it, so it counts as a gap or not.",
+  "outstanding_severity": "The only open item is the TYR0 advisory with no repair, an advisory-level outstanding item; a reviewer could instead treat it as negligible, so level 1 against 0."
+ },
+ "request": "rec-F411-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012187
+}

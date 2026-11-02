@@ -1,0 +1,114 @@
+{
+ "id": "F439-0027",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T2210",
+   "end": "14:20",
+   "conditions": "heavy rain"
+  },
+  "candidate": {
+   "id_check": null
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "observation",
+     "driving": 2
+    },
+    {
+     "item": "speed",
+     "serious": 1
+    }
+   ],
+   "driving_fault_total": 2
+  },
+  "outcome": {
+   "result": "pass",
+   "intervention": true,
+   "debrief": true,
+   "examiner_signoff_at": "14:35",
+   "examiner_note": "Candidate drove adequately."
+  },
+  "review_trail": {
+   "countersigned_by": "SE4",
+   "upheld_complaints_12m": 2
+  }
+ },
+ "factors": {
+  "fault_profile": "clear_pass",
+  "result_mismatch": true,
+  "tally_error": false,
+  "documentation_gap": "id_check_null",
+  "intervention_recorded": true,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": true,
+  "note_alignment": "vague",
+  "examiner_complaints_12m": 2,
+  "post_submission_edit": "no_edit"
+ },
+ "factors_sampled": {
+  "fault_profile": "clear_pass",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "id_check_null",
+  "intervention_recorded": true,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": true,
+  "note_alignment": "vague",
+  "examiner_complaints_12m": 2,
+  "post_submission_edit": "no_edit"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "report_complete": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "amend_record",
+   "second": "accept",
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "issue_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 68,
+ "deciding": {
+  "result_supported": "Result is pass but the sheet has a serious fault, which contradicts a pass.",
+  "report_complete": "candidate.id_check is null, though sign-off and debrief are present; the ID check might be recorded elsewhere.",
+  "disposition": "Possible clerical error (result or serious mark) could be corrected, or the report filed; the vague note leaves both open.",
+  "staff_effort": "A single fix is probably under an hour, though confirming the intervention may take longer.",
+  "issue_severity": "Intervention true with a serious speed fault and no explanation: a safety procedure breach versus a discrepancy that could change the result."
+ },
+ "request": "rec-F439-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005068
+}

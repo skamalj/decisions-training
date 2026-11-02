@@ -1,0 +1,152 @@
+{
+ "id": "F418-0049",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "PNR",
+   "plat": 3,
+   "date": "2025-05-06",
+   "svc_from": "06:00",
+   "svc_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S30",
+    "planned_start": "14:00",
+    "planned_end": "23:54"
+   },
+   {
+    "post": "B",
+    "staff_id": "S34",
+    "planned_start": "14:00",
+    "planned_end": "22:10",
+    "overtime": false
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S30",
+    "sign_on": "14:00",
+    "sign_off": "23:54",
+    "safety_comp_exp": "2026-01-30",
+    "dispatch_comp_exp": "2026-01-30"
+   },
+   {
+    "staff_id": "S34",
+    "sign_on": "14:00",
+    "sign_off": "22:10",
+    "safety_comp_exp": "2025-12-12",
+    "dispatch_comp_exp": "2025-12-12"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "22:10",
+    "staff_id": "S34",
+    "plat": 3
+   },
+   {
+    "type": "gap_end",
+    "time": "23:54",
+    "staff_id": "S30",
+    "plat": 3
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-5530",
+   "disp_platform": 1,
+   "valid_from": "2025-05-01",
+   "valid_to": "2025-05-31",
+   "approved_by": "OPS-14",
+   "prior_shortfalls_30d": 5
+  },
+  "remarks": [
+   "Platform fully covered all night, no action needed."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 104,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 5,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 104,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": false,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 5,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_ops",
+   "second": "accept_log",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "leaning",
+   "target": "uncovered",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 94,
+ "deciding": {
+  "headcount_verified": "Both attendance rows match the roster with sign-ons and in-date competence.",
+  "next_step": "Five prior shortfalls and a remark contradicting the open gap favour escalation; the gap lies after svc_to 22:00, so accepting is defensible.",
+  "coverage_outcome": "gap_start 22:10 to gap_end 23:54 with no cover events; only the post-service timing leaves doubt.",
+  "reversal_time": "With five repeats and a wrong-platform dispensation, correcting the staffing pattern and approvals would take weeks.",
+  "exposure_severity": "The whole gap is after service end at 22:00, which suggests level 0, but disp_platform 1 differs from platform 3 and a reviewer might count it as level 1."
+ },
+ "request": "rec-F418-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011548
+}

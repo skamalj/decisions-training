@@ -1,0 +1,133 @@
+{
+ "id": "F406-0042",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S202",
+   "gallery_code": "B2",
+   "date": "2025-04-02",
+   "close": "16:00",
+   "limit": 100
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "14:00",
+     "occupancy": 110
+    },
+    {
+     "start": "14:15",
+     "occupancy": 150
+    },
+    {
+     "start": "14:30",
+     "occupancy": 120
+    }
+   ]
+  },
+  "variations": [
+   {
+    "gallery_code": "B2",
+    "valid_from": "2025-04-01",
+    "valid_to": "2025-04-30",
+    "uplift_to": 130,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "tickets": [
+    {
+     "gate": "E1",
+     "raised_at": "2025-04-02T16:20",
+     "summary": "east counter double-counting"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": null,
+   "notes": "Gallery felt packed!"
+  }
+ },
+ "factors": {
+  "true_peak_ratio": "1.15 of uplifted limit",
+  "intervals_over_limit": 1,
+  "section_mismatch": "none",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date_after_close",
+  "interval_export_missing": false,
+  "egress_check": "not_recorded",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "alarmed_unsupported",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.71,
+  "intervals_over_limit": 11,
+  "section_mismatch": "scans_vs_counter_minor",
+  "variation_present": false,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "not_recorded",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "alarmed_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "variation_applies": "Approved variation, matching gallery B2, window covers 2025-04-02.",
+  "fault_explains_overage": "Ticket same date but raised 16:20, after the 16:00 close, so not before the session; the summary does describe a counting error.",
+  "next_step": "Variation is in force and no missing item; the alarmed note is unsupported.",
+  "peak_excess": "Peak 150 against uplift 130 is about 15%, above 10%.",
+  "intervals_over": "Only the 14:15 interval (150) exceeds 130; 110 and 120 are under it."
+ },
+ "request": "rec-F406-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010923
+}

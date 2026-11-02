@@ -1,0 +1,149 @@
+{
+ "id": "F419-0008",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "05/23",
+   "survey_dt": "2024-06-18",
+   "test_speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": {
+    "wind_kt": 6
+   }
+  },
+  "device": {
+   "serial": "RT-5521",
+   "cal_cert_date": "2024-02-01",
+   "cal_expiry": "2025-02-01",
+   "tyre_pressure_kpa": 205,
+   "tyre_spec_kpa": [
+    195,
+    215
+   ],
+   "water_depth_mm": 0.5
+  },
+  "runs": [
+   {
+    "dir": "05",
+    "thirds": [
+     0.78,
+     0.76,
+     0.77
+    ]
+   },
+   {
+    "dir": "23",
+    "thirds": [
+     0.77,
+     0.75,
+     0.78
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.48,
+    0.5,
+    0.49
+   ],
+   "mtd_threshold_mm": 0.6,
+   "contaminant": "none"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-05-16",
+   "works_orders": [],
+   "cross_checks": [],
+   "prior_surveys": [
+    {
+     "date": "2023-12-01",
+     "lowest_third": 0.84
+    },
+    {
+     "date": "2023-09-04",
+     "lowest_third": 0.9
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-06-18T10:00"
+  }
+ },
+ "factors": {
+  "min_third_band": "above_design",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "none (uniform, no deficit)",
+  "days_since_rubber_removal": 399,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": "0 (weather has no precip_mm entry)",
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "low",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "factors_sampled": {
+  "min_third_band": "above_design",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 399,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 3,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "low",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "file_routine",
+   "second": "monitor_closely",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "genuine_deficit": "Every third (0.75-0.78) is above the 0.72 design level, so the statement is only weakly supportable. The doubt comes from the declining priors (0.90 to 0.84 to 0.75) and the low texture (0.48-0.50 against 0.60). Plan and record conflict here.",
+  "next_step": "All values are above planning, favouring routine filing. The declining trend, low texture, no works order and a 399-day-old rubber removal favour monitoring.",
+  "deficit_driver": "No third or segment is below planning level. Low texture and the old rubber removal leave slight doubt.",
+  "friction_severity": "Lowest third 0.75 is at or above the 0.72 design level, which gives level 0. The downward trend is the only source of doubt.",
+  "evidence_completeness": "The weather block has wind only, with no precip_mm. Whether that counts as a missing element is contested between level 4 and level 3."
+ },
+ "request": "rec-F419-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014812
+}

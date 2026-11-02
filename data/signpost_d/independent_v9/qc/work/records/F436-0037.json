@@ -1,0 +1,117 @@
+{
+ "id": "F436-0037",
+ "family": "F436",
+ "state": {
+  "article": {
+   "slug": "arson-charge",
+   "first_published_at": "2024-05-02T09:00",
+   "channels": [
+    "web"
+   ],
+   "disputed_passage": "Dale Smyth, 41, was charged with arson"
+  },
+  "complaint": {
+   "received_at": "2024-05-03T20:00",
+   "complainant_type": "reader",
+   "summary": "Defendant is Dale Smith; a Dale Smyth lives locally."
+  },
+  "desk_check": {
+   "source_doc": "Dale Smith (court list)",
+   "reporter_notes": "Smyth per police statement",
+   "filed_copy": "Smyth"
+  },
+  "history": {
+   "edits": [
+    "2024-05-02T10:15 sub edit par 2",
+    "wire feed status unknown"
+   ],
+   "legal_review": null,
+   "prior_corrections": 3
+  },
+  "draft_correction": {
+   "stated_value": "Smythe",
+   "drafted_by": "night desk"
+  }
+ },
+ "factors": {
+  "error_status": "confirmed_by_source",
+  "error_origin_stage": "source_supplied",
+  "discrepancy_field": "name",
+  "discrepancy_size": "trivial",
+  "claim_type": "wrongdoing_implication",
+  "hours_live": 35,
+  "distribution_channels": "online_only",
+  "mitigation_present": false,
+  "missing_evidence": false,
+  "legal_signal": false,
+  "legal_cleared": false,
+  "draft_fix_mismatch": true,
+  "prior_corrections": 3,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "error_status": "matches_source",
+  "error_origin_stage": "editing_stage",
+  "discrepancy_field": "name",
+  "discrepancy_size": "trivial",
+  "claim_type": "wrongdoing_implication",
+  "hours_live": 35,
+  "distribution_channels": "online_only",
+  "mitigation_present": false,
+  "missing_evidence": false,
+  "legal_signal": false,
+  "legal_cleared": false,
+  "draft_fix_mismatch": true,
+  "prior_corrections": 3,
+  "boundary_case": false
+ },
+ "plan": {
+  "error_confirmed": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_origin": {
+   "clarity": "balanced",
+   "target": "source_supplied",
+   "second": "editing_stage",
+   "targets": []
+  },
+  "spread": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "harm_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "error_confirmed": "Article says Smyth; court list source_doc says Smith.",
+  "next_step": "Names a person in an arson charge, no legal review entry, and the draft says Smythe, which does not match the source.",
+  "error_origin": "Notes already carry Smyth from the police statement, but a sub edit after filing leaves editing_stage open.",
+  "spread": "Channels show web only at 35 hours, but the wire feed status is unknown, so one more channel is possible.",
+  "harm_severity": "Passage wrongly ties a named person to an arson charge."
+ },
+ "request": "rec-F436-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009237
+}

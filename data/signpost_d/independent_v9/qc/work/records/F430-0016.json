@@ -1,0 +1,137 @@
+{
+ "id": "F430-0016",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S114",
+   "assets": [
+    {
+     "id": "CB2",
+     "param": "sf6",
+     "unit": "bar",
+     "normal_band": [
+      6.0,
+      7.0
+     ],
+     "alarm_limit": 5.5,
+     "trip_limit": 5.0,
+     "customers_fed": 5882,
+     "partner_id": "CB3"
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-05-14",
+   "scheduled_assets": [
+    "CB2"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "CB2",
+    "param": "sf6",
+    "value": 5.6,
+    "unit": "bar"
+   }
+  ],
+  "defects": [
+   {
+    "id": "D1",
+    "asset_id": "CB2",
+    "photo_ref": "P7",
+    "note": "Oil seep at CB2 base."
+   }
+  ],
+  "history": {
+   "previous_round": {
+    "CB2": 5.8
+   },
+   "open_work_orders": [
+    "SF6 gauge on CB2 reading low, replacement ordered"
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "CB3": "in_service"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": true,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 5882,
+  "trivial_discrepancies": 2,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": true,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 5882,
+  "trivial_discrepancies": 2,
+  "near_boundary": true
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "contested",
+   "target": "recheck_next_round",
+   "second": "hold_return",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "defect_corroborated": "Oil seep note names oil, never recorded; only SF6 is slightly low, so partial support.",
+  "benign_explanation": "Work order cites CB2 gauge low, but reading is worsening and may be real.",
+  "follow_up": "Recheck after gauge replacement versus return for oil level reading.",
+  "limit_deviation": "5.6 bar sits just above 5.5 alarm, below the 6.0 band.",
+  "supply_exposure": "5882 customers, but partner CB3 is in service, so exposure is arguable."
+ },
+ "request": "rec-F430-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006034
+}

@@ -1,0 +1,114 @@
+{
+ "id": "F420-0027",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "planned_gross_kg": 1000,
+   "straps_required": 4,
+   "contour_max_cm": 160,
+   "uld": "AKE7",
+   "pos": "12L"
+  },
+  "build_measured": {
+   "max_height_cm": 164,
+   "straps_fitted": 2,
+   "pcs_counted": {
+    "A": 9
+   }
+  },
+  "checks_log": {
+   "reweigh": {
+    "kg": 1076
+   }
+  },
+  "approvals": {
+   "contour_waivers": [
+    {
+     "uld": "AKE7",
+     "pos": "12L",
+     "max_cm": 165
+    }
+   ]
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 7.57,
+  "piece_count_gap": -1,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "over_up_to_5cm",
+  "contour_waiver": true,
+  "dg_state": "dg_compatible",
+  "notoc_match": "matched",
+  "securing_state": "two_or_more_straps_short",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 142,
+  "prior_rebuilds": 3
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 7.57,
+  "piece_count_gap": -1,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "over_up_to_5cm",
+  "contour_waiver": true,
+  "dg_state": "dg_compatible",
+  "notoc_match": "matched",
+  "securing_state": "two_or_more_straps_short",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "dest_code_differs",
+  "minutes_to_cutoff": 142,
+  "prior_rebuilds": 3
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "release_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "clear",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "weight_deviation": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "pieces_reconciled": "Counted 9 for AWB A; manifest pcs absent here, leaving it ambiguous.",
+  "disposition": "Straps 2 of 4 fitted.",
+  "worst_discrepancy": "Straps short.",
+  "weight_deviation": "Reweigh 1076 vs 1000.",
+  "rework_extent": "Two straps short and heavy."
+ },
+ "request": "rec-F420-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00563
+}

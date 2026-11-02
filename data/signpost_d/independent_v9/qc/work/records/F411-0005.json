@@ -1,0 +1,134 @@
+{
+ "id": "F411-0005",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H551",
+   "type": "hackney",
+   "review_date": "2025-06-01"
+  },
+  "vehicle": {
+   "reg": "GN12 XYZ",
+   "first_reg": "2012-04-02",
+   "seats": 5,
+   "odometer_km": 203500
+  },
+  "inspection": {
+   "station_id": "ST-07",
+   "date": "2025-04-22",
+   "result_code": "F",
+   "brake_efficiency_pct": 55
+  },
+  "defects": [
+   {
+    "code": "brake_pipe_corrosion",
+    "grade": "minor",
+    "rectify_by": "2025-05-15",
+    "repaired_on": null,
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-05-20"
+   },
+   {
+    "type": "medical",
+    "expires_on": "2025-04-30"
+   },
+   {
+    "type": "dbs",
+    "expires_on": "2025-06-01"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-06-03",
+     "result": "F",
+     "odometer_km": 171000
+    }
+   ],
+   "replacements": []
+  }
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "not_started",
+  "deadline_passed": true,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": true,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 13
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "not_started",
+  "deadline_passed": false,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 13
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "renew",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "minor_fail",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 102,
+ "deciding": {
+  "odometer_consistent": "203500 km is above the earlier 171000 km; no drop.",
+  "next_step": "An unrepaired, overdue defect and document gaps bear on renewal, but the file shows no single specific missing item, so renew versus request_evidence stays open.",
+  "inspection_outcome": "The only defect is graded minor, with no major or dangerous item.",
+  "document_gaps": "Insurance and medical expired before review; dbs expires on the review date with no cover note, which holds 2 against 3.",
+  "outstanding_severity": "brake_pipe_corrosion is minor, unrepaired and past rectify_by 2025-05-15; its brake-related nature could make it count as major."
+ },
+ "request": "rec-F411-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008944
+}

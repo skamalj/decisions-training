@@ -1,0 +1,138 @@
+{
+ "id": "F407-0007",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-2210",
+   "received_at": "2024-06-11T14:20",
+   "channel": "public_app",
+   "photo_ref": "IMG-4471",
+   "linked_reports": [
+    "R-2201",
+    "R-2205"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "main_distributor",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "scheduled_for": "2024-06-14",
+   "depth_mm": null,
+   "width_mm": 1227.71
+  },
+  "works_history": [
+   {
+    "job": "J-310",
+    "completed": "2023-09-01",
+    "offset_m": null,
+    "guarantee_end": "2024-09-01"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "start": "2024-06-25",
+     "extent_m": [
+      0,
+      200
+     ]
+    }
+   ],
+   "temp_measures": [
+    {
+     "offset_m": 30,
+     "installed": "2024-06-11",
+     "expiry": "2024-07-11"
+    }
+   ]
+  },
+  "current_order": null
+ },
+ "factors": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "well_below",
+  "inspection_state": "scheduled",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 2,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 1227.71,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "well_below",
+  "inspection_state": "scheduled",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 2,
+  "reporter_source": "public_app",
+  "injury_or_claim": true,
+  "order_status": "none",
+  "defect_width_mm": 1227.71,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "response_timescale": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 98,
+ "deciding": {
+  "meets_threshold": "inspection depth_mm is null (scheduled), so no valid measurement; threshold 40 mm.",
+  "repeat_failure": "J-310 has null offset, street level only, so no confirmed match within 10 m.",
+  "next_step": "temporary measure in place and scheme starts 2024-06-25 covering the site; nothing further to do.",
+  "staff_effort": "closing needs under an hour; the scheduled inspection may need cancelling.",
+  "response_timescale": "no measured depth over threshold, no claim, temporary measure in place: no repair required."
+ },
+ "request": "rec-F407-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004728
+}

@@ -1,0 +1,148 @@
+{
+ "id": "F403-0019",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "egg",
+    "milk",
+    "fish",
+    "sesame"
+   ],
+   "plan_start": "2025-05-19"
+  },
+  "medical_evidence": {
+   "doc_type": "parent_letter",
+   "issued": "2025-04-20",
+   "expires": "2026-04-20",
+   "allergens": [
+    "egg",
+    "milk",
+    "fish",
+    "sesame"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-05-01",
+   "dishes": [
+    {
+     "dish": "noodle bowl",
+     "contains": [
+      "egg",
+      "sesame"
+     ],
+     "substitute": null,
+     "spec_checked_on": "2025-05-02"
+    },
+    {
+     "dish": "fish fingers",
+     "contains": [
+      "fish"
+     ],
+     "substitute": "chicken strips"
+    },
+    {
+     "dish": "custard",
+     "contains": [
+      "milk"
+     ],
+     "substitute": "oat custard"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "exceptions": [
+    {
+     "signed": "2025-05-02",
+     "covers": "noodle bowl not served to pupil"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-05-12",
+   "packed_lunch_until": "2025-05-16",
+   "incidents": []
+  }
+ },
+ "factors": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 5,
+  "packed_lunch_interim": true,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 28,
+  "packed_lunch_interim": true,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_restricted",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "evidence_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "evidence_allergens_covered": "Noodle bowl (egg, sesame) has substitute null, but a signed exception covers it, so the claim is balanced and leans false.",
+  "next_step": "Exactly one dish (noodle bowl) is unsubstituted, so release with that dish withheld.",
+  "first_gap_stage": "The only evidence is a parent_letter with no clinician confirmation, so the plan first falls short at evidence.",
+  "exposure_proximity": "Noodle bowl has no substitute (Open), but the signed exception withholding it and verified controls support Guarded.",
+  "meal_urgency": "packed_lunch_until 2025-05-16 puts the first meal on 2025-05-19, 5 school days after review_date 2025-05-12, at the 5/6 boundary."
+ },
+ "request": "rec-F403-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011976
+}

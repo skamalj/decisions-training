@@ -1,0 +1,145 @@
+{
+ "id": "F418-0047",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "MWD",
+   "plat": 1,
+   "date": "2025-04-02",
+   "svc_from": "05:30",
+   "svc_to": "23:30",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S12",
+    "planned_start": "06:00",
+    "planned_end": "14:00"
+   },
+   {
+    "post": "B",
+    "staff_id": "S19",
+    "planned_start": "06:00",
+    "planned_end": "14:00"
+   }
+  ],
+  "attendance": null,
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "08:10",
+    "staff_id": "S19",
+    "plat": 1
+   },
+   {
+    "type": "cover_start",
+    "time": "08:10",
+    "staff_id": "S23",
+    "plat": 1
+   },
+   {
+    "type": "cover_end",
+    "time": "08:35",
+    "staff_id": "S23",
+    "plat": 1
+   },
+   {
+    "type": "gap_end",
+    "time": "09:01",
+    "staff_id": "S19",
+    "plat": 1
+   }
+  ],
+  "controls": {
+   "disp_ref": null,
+   "possession_from": "08:20",
+   "possession_to": "09:30",
+   "prior_shortfalls_30d": 2
+  },
+  "remarks": [
+   "S19 off the platform 08:10 to 09:01. S23 helped until 08:35. Adjacent line blocked for possession."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 51,
+  "shortfall_timing": "peak",
+  "dispensation_present": false,
+  "dispensation_fit": "not_applicable",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 51,
+  "shortfall_timing": "peak",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "accept_log",
+   "second": "escalate_ops",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "partial_cover",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 76,
+ "deciding": {
+  "headcount_verified": "attendance is null, so no sign-on or competence can be matched to the people logged.",
+  "next_step": "Open gap with no dispensation and missing attendance argues for escalation; the possession overlapping the gap and consistent remarks support accepting.",
+  "coverage_outcome": "Cover 08:10-08:35 ends before gap_end 09:01, leaving 26 minutes open.",
+  "reversal_time": "Attendance is missing, which would take weeks to reconstruct; a lasting record gap could also become permanent.",
+  "exposure_severity": "Possession from 08:20 to 09:30 overlaps the gap and may mean no real passenger exposure, but disp_ref is null and the gap falls at peak."
+ },
+ "request": "rec-F418-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011548
+}

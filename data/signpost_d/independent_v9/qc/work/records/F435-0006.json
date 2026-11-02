@@ -1,0 +1,139 @@
+{
+ "id": "F435-0006",
+ "family": "F435",
+ "state": {
+  "event": {
+   "zone_type": "standing_floor",
+   "doors_open": "2025-06-07T19:00",
+   "phase": "live"
+  },
+  "licence": {
+   "base_limit": 1000,
+   "variation": {
+    "ref": "V-12",
+    "new_limit": 1100,
+    "status": "pending",
+    "approved_on": null
+   },
+   "stewards_required": 30,
+   "exit_routes": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 1100,
+   "issued": 1050
+  },
+  "ingress": {
+   "device_status": "fault_logged",
+   "raw_peak": 959,
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 32,
+   "signed_in": 30
+  },
+  "exit_checks": [
+   {
+    "route_id": "A",
+    "checked_at": "2025-06-07T18:20",
+    "status": "clear"
+   },
+   {
+    "route_id": "B",
+    "checked_at": "2025-06-07T18:25",
+    "status": "clear"
+   },
+   {
+    "route_id": "C",
+    "checked_at": null,
+    "status": "pending"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "live",
+  "occupancy_ratio": 0.94,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.02,
+  "manual_recount_present": false,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 1.05,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.0,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "live",
+  "occupancy_ratio": 0.94,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.02,
+  "manual_recount_present": false,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.87,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.03,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 3,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "sign_off",
+   "second": "conditional_sign_off",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "limit_mismatch",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "verified_exceedance": "Device is fault_logged with no manual recount, so occupancy is unverified; the raw peak of 959 is under the 1000 limit anyway.",
+  "disposition": "Raw peak is below the limit and staffing is met, favouring sign-off. The unrecounted faulty counter and the open exit checks make a conditional sign-off defensible.",
+  "discrepancy_source": "The variation is pending, so the effective limit is 1000. Issued 1050 exceeds it but not the 1100 that ticketing used.",
+  "steward_shortfall": "signed_in 30 equals stewards_required 30; the larger roster is a decoy.",
+  "unconfirmed_exits": "Of 4 routes, A and B are clear. C has a null checked_at and D has no entry, so 2 are unconfirmed."
+ },
+ "request": "rec-F435-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01568
+}

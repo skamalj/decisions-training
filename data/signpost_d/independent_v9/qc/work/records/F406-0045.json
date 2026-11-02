@@ -1,0 +1,109 @@
+{
+ "id": "F406-0045",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S505",
+   "gallery_code": "G2",
+   "limit": 100
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "14:00",
+     "occupancy": 84
+    },
+    {
+     "start": "14:15",
+     "occupancy": 90
+    }
+   ],
+   "manual_tally_peak": 90
+  },
+  "variations": [],
+  "history": {
+   "overages_30d": 1
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.9,
+  "intervals_over_limit": 0,
+  "section_mismatch": "none",
+  "variation_present": false,
+  "variation_scope": "matches",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 1,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.9,
+  "intervals_over_limit": 8,
+  "section_mismatch": "none",
+  "variation_present": false,
+  "variation_scope": "matches",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 1,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "fault_explains_overage": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 25,
+ "deciding": {
+  "variation_applies": "The variations list is empty, so no variation is attached.",
+  "fault_explains_overage": "No maintenance tickets and no overage to explain.",
+  "next_step": "Counter peak 90 and tally 90 agree and are within limit 100; nothing to follow up.",
+  "peak_excess": "Peak 90 of limit 100 sits at the 90% anchor, not above.",
+  "intervals_over": "Both intervals (84, 90) are below 100."
+ },
+ "request": "rec-F406-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010923
+}

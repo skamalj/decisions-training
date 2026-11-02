@@ -1,0 +1,139 @@
+{
+ "id": "F427-0037",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V207",
+   "visit_date": "2024-07-03",
+   "surveyor_grade": "accredited",
+   "weather_on_day": "dry"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 9,
+   "dams_total": 4
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "W1",
+     "depth_cm": 45
+    },
+    {
+     "id": "W5",
+     "depth_cm": 48
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 41,
+     "prev_depth_cm": 30
+    }
+   ],
+   "rain_30d_pct_normal": 93
+  },
+  "structures": {
+   "inspections": null,
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": null,
+   "photos_uploaded": 10,
+   "photos_expected": 10,
+   "grazing_signs": true
+  },
+  "notes": {
+   "surveyor_note": "Dams walked, pools looked full.",
+   "prior_visits": []
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.22,
+  "photos_status": "full",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": false,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": 21.5,
+  "rainfall_pct_normal": 93.0,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.56,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": false,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": 0.88,
+  "rainfall_pct_normal": 92.88,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "well_below",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 88,
+ "deciding": {
+  "dam_caused_drop": "The control well also dropped and rain was slightly under normal, which points to weather; no dam defect is logged, though the inspection log is null.",
+  "next_step": "No defect, order or history exists, so the record is filed as routine.",
+  "hydro_state": "The two wells read average 46.5 cm against floor 25 cm, over 15 cm below.",
+  "dam_severity": "No defect, order or breach history; the note says pools looked full.",
+  "evidence_completeness": "2 of 9 wells read, no quadrats and no dam log; only photos are complete, so at most one element is recorded."
+ },
+ "request": "rec-F427-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011596
+}

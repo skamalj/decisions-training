@@ -1,0 +1,186 @@
+{
+ "id": "F405-0030",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-2790",
+   "detected_on": "2025-08-04",
+   "term_start": "2025-10-13",
+   "room": "ENG-1.07",
+   "slot": "Mon 14:00"
+  },
+  "booking_a": {
+   "module": "MEC150",
+   "dept": "MECH",
+   "room": "ENG-1.07",
+   "day": "Mon",
+   "start": "13:00",
+   "end": "15:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "headcount": 58,
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "EXT-WS1",
+   "dept": "EXT",
+   "external_hire": true,
+   "room": "E1.07",
+   "day": "Mon",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-07-15",
+   "approver": "S. Pike"
+  },
+  "room": {
+   "code": "ENG-1.07",
+   "aliases": [
+    "E1.07"
+   ],
+   "capacity": 70,
+   "building": "Engineering"
+  },
+  "alternatives": [
+   {
+    "code": "ENG-1.09",
+    "capacity": 60,
+    "features": [],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-01-13"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-02-24"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-03-31"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-05-12"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 70,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.97,
+  "required_feature": "none",
+  "owning_departments": "external_hire",
+  "prior_clash_count": 4
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 7,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.03,
+  "required_feature": "none",
+  "owning_departments": "external_hire",
+  "prior_clash_count": 4
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 64,
+ "deciding": {
+  "genuine_clash": "E1.07 is listed in ENG-1.07's aliases, so both bookings are in one room on Mon, 13:00-15:00 and 14:00-16:00, across weeks 1-10. The overlap is real.",
+  "alt_room_fits": "ENG-1.09 holds 60 for headcount 58, but is free only in weeks 1-8 against clashing weeks 1-10. The two missing weeks tip it modestly to no.",
+  "resolution": "The plan says dismiss, but the record shows a real overlap in one room with both bookings confirmed. This plan answer conflicts with the clear genuine_clash answer and cannot be fully met.",
+  "urgency": "The first shared Monday is 2025-10-13, 70 days after detection on 2025-08-04. That is well beyond 28 days.",
+  "parties_needed": "Both bookings are confirmed and approved, with only an internal and an external booking and no open requests. One officer could probably handle it."
+ },
+ "request": "rec-F405-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01658
+}

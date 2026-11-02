@@ -1,0 +1,172 @@
+{
+ "id": "F401-0030",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P505",
+   "planned_discharge_at": "2025-07-08T13:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 16,
+     "spo2": 97,
+     "sbp": 122,
+     "hr": 74,
+     "temp": 36.5,
+     "avpu": "A",
+     "at": "2025-07-08T07:30"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P505",
+   "reconciled": [
+    {
+     "drug": "amlodipine",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "atorvastatin",
+     "action": "start",
+     "reason": "raised lipids",
+     "by": "Dr Hale",
+     "changed_at": "2025-07-08T09:20"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "amlodipine",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "od"
+    },
+    {
+     "drug": "atorvastatin",
+     "dose": 20,
+     "unit": "mg",
+     "freq": "nocte"
+    }
+   ],
+   "signed_at": "2025-07-08T09:10",
+   "pharmacy_ready_at": "2025-07-08T11:00"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": null,
+    "transfer_assist_count": 0,
+    "adl_score": 19
+   },
+   "social": {
+    "lives_alone": true
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "done",
+     "completed_at": "2025-07-08T10:00",
+     "signed_by": "RN"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-07-08",
+    "pickup_time": "13:00",
+    "dest": "own home"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "drug_added",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "drug_added",
+  "rx_change_documented": true,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "discharge_rx_absent",
+  "outstanding_task_count": 4,
+  "false_completion": true,
+  "care_need": "permanent_care",
+  "care_arrangement_status": "confirmed_on_time",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "discharge_now",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "home_independent",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "discharge_delay": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 53,
+ "deciding": {
+  "rx_matches": "Atorvastatin was added in discharge_rx; the change entry is at 09:20, after the 09:10 signing, so it does not cover it.",
+  "next_step": "Obs normal, task done, transport and pharmacy on time, so nothing blocks leaving as planned.",
+  "destination": "No aid, ADL 19 and own-home transport point home, though the patient lives alone.",
+  "outstanding_tasks": "The one checklist item is done, completed and signed.",
+  "discharge_delay": "Pharmacy ready 11:00 and pickup 13:00 equals the planned time, with no care start pending."
+ },
+ "request": "rec-F401-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009629
+}

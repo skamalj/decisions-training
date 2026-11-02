@@ -1,0 +1,169 @@
+{
+ "id": "F401-0048",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P303",
+   "planned_discharge_at": "2025-04-01T11:00",
+   "capacity_assessment": {
+    "status": "pending"
+   }
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 22,
+     "spo2": 93,
+     "sbp": 118,
+     "hr": 98,
+     "at": "2025-03-31T20:00"
+    },
+    {
+     "rr": 16,
+     "spo2": 95,
+     "at": "2025-04-01T06:00"
+    }
+   ],
+   "targets": {
+    "spo2": "92+"
+   },
+   "reviews": [
+    {
+     "role": "consultant",
+     "outcome": "fit_for_discharge",
+     "at": "2025-04-01T09:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P303",
+   "reconciled": [
+    {
+     "drug": "apixaban",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ],
+   "discharge_rx": null
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": "frame",
+    "transfer_assist_count": 2,
+    "adl_score": 6
+   },
+   "social": {
+    "lives_alone": true,
+    "carer_available": false
+   },
+   "care_arrangement": {
+    "type": "care_home",
+    "status": "accepted_pending_funding",
+    "start_date": "2025-04-04"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "pending"
+    },
+    {
+     "t": "care home handover",
+     "status": "in_progress"
+    },
+    {
+     "t": "belongings",
+     "status": "done",
+     "completed_at": "2025-03-31T17:00",
+     "signed_by": "HCA Roy"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-04-04",
+    "pickup_time": "2025-04-04T10:00"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "discharge_rx_absent",
+  "outstanding_task_count": 2,
+  "false_completion": false,
+  "care_need": "care_home",
+  "care_arrangement_status": "confirmed_later_start",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": true
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "discharge_rx_absent",
+  "outstanding_task_count": 2,
+  "false_completion": false,
+  "care_need": "rehab",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": true
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "conditional_discharge",
+   "second": "escalate_senior",
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "care_home",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 105,
+ "deciding": {
+  "rx_matches": "medications.discharge_rx is null, so there is no discharge prescription to match the reconciled apixaban.",
+  "next_step": "The capacity assessment is pending, which favours senior escalation. Obs recovered after one abnormal set and a consultant fit review followed, and only two tasks remain, which keeps conditional discharge plausible.",
+  "destination": "The patient has an ADL score of 6, needs 2-person transfers with a frame, lives alone and has no carer. A care home placement is accepted with start 2025-04-04.",
+  "outstanding_tasks": "The TTO is pending and the care home handover is only in progress; whether the in-progress handover counts as a third outstanding task is open.",
+  "discharge_delay": "The care start and transport are on 2025-04-03/04, about three days after 04-01. The funding is still pending, which leaves two days plausible."
+ },
+ "request": "rec-F401-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012737
+}

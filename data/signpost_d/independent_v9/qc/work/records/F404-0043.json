@@ -1,0 +1,132 @@
+{
+ "id": "F404-0043",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "B2",
+   "date": "2024-05-14",
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty"
+  },
+  "children": {
+   "booked": 6,
+   "slots": [
+    {
+     "t": "14:30",
+     "n": 10
+    },
+    {
+     "t": "14:45",
+     "n": 10
+    }
+   ]
+  },
+  "staff_signin": [
+   {
+    "id": "S210",
+    "in": "08:00",
+    "out": "17:00",
+    "q": 3
+   },
+   {
+    "id": "S211",
+    "in": "08:00",
+    "out": "14:50",
+    "q": 3
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F07",
+    "from": "14:50",
+    "to": "15:00",
+    "room": "B2",
+    "countersigned_by": "M.Reid"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 3
+  }
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 10,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 10,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 3
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 10,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 10,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 3
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "file_no_action",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 37,
+ "deciding": {
+  "below_ratio": "S211 left at 14:50 with 10 children signed in (two staff needed), but countersigned floater F07 for room B2 covers 14:50 to 15:00 exactly.",
+  "disposition": "Countersigned cover spans the only gap, so ratio is met in every slot; prior_breaches_90d of 3 is background only.",
+  "primary_cause": "Sections agree and cover fills the 10-minute gap; the 10 children against 6 booked are covered by the two staff plus floater.",
+  "shortfall_duration": "The 10-minute window 14:50 to 15:00 is fully covered by F07 with matching room and countersignature, so no uncovered minutes remain.",
+  "breach_severity": "Staff plus signed floater always cover all 10 children at 1:8, so none are beyond cover."
+ },
+ "request": "rec-F404-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012256
+}

@@ -1,0 +1,150 @@
+{
+ "id": "F419-0013",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "18/36",
+   "date": "2024-06-02",
+   "speed_kmh": 80,
+   "thresholds": {
+    "design": 0.69,
+    "maint_planning": 0.5,
+    "minimum": 0.4
+   },
+   "weather": {
+    "precip_mm": 1.4,
+    "wind_kmh": 20
+   }
+  },
+  "device": {
+   "cal_cert": "2024-02-15",
+   "cal_expiry": "2025-02-15",
+   "tyre_kpa": null,
+   "tyre_spec_kpa": [
+    200,
+    240
+   ],
+   "water_mm": null
+  },
+  "runs": [
+   {
+    "dir": "18",
+    "mean_speed_kmh": 80,
+    "thirds": [
+     0.66,
+     0.57,
+     0.65
+    ],
+    "seg_100m_t2": [
+     0.72,
+     0.37,
+     0.62
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.45,
+    0.38,
+    0.47
+   ],
+   "mtd_threshold_mm": 0.6,
+   "contaminant": "wet"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-12-13",
+   "works_orders": [
+    {
+     "id": "WO-305",
+     "type": "apron_markings",
+     "start_date": "2024-06-10"
+    }
+   ],
+   "prior_surveys": [],
+   "cross_checks": []
+  },
+  "review": {
+   "signed_at": null,
+   "role": null
+  }
+ },
+ "factors": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "mid_section",
+  "days_since_rubber_removal": 172,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 4,
+  "test_condition_anomaly": "natural_rain",
+  "macrotexture_band": "low",
+  "cross_check_result": "none",
+  "prior_survey_trend": "no_prior"
+ },
+ "factors_sampled": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "mid_section",
+  "days_since_rubber_removal": 172,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 4,
+  "test_condition_anomaly": "natural_rain",
+  "macrotexture_band": "low",
+  "cross_check_result": "none",
+  "prior_survey_trend": "no_prior"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file_routine",
+   "second": null,
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "surface_texture",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 122,
+ "deciding": {
+  "genuine_deficit": "Mid-third segment at 0.37 is below the 0.40 minimum and texture is low everywhere (0.38-0.47 vs 0.6), so a deficit is shown.",
+  "next_step": "Thirds are all above the 0.50 planning level, which favours filing, but a segment below minimum, rain during testing and four gaps pull against it; doubt is strong.",
+  "deficit_driver": "Low mtd in all thirds (0.38-0.47 below 0.6) with the low value mid-runway, and removal only 172 days ago, so texture is the driver.",
+  "friction_severity": "Segment 0.37 is below the 0.40 minimum, though the thirds lowest of 0.57 sits between planning and design.",
+  "evidence_completeness": "Tyre pressure and water depth are null, the reverse run is absent and sign-off is null: four missing elements."
+ },
+ "request": "rec-F419-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011885
+}

@@ -1,0 +1,151 @@
+{
+ "id": "F416-0031",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "N12",
+   "date": "2025-03-08",
+   "signoff": "G14",
+   "signed_at": "18:05"
+  },
+  "roster": [
+   {
+    "id": "G14",
+    "on": "09:00",
+    "off": "18:00",
+    "qual_exp": "2026-01-10"
+   },
+   {
+    "id": "G15",
+    "on": "09:00",
+    "off": "18:00",
+    "qual_exp": "2025-03-07"
+   },
+   {
+    "id": "G16",
+    "on": "09:00",
+    "off": "18:00",
+    "qual_exp": "2026-02-01"
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-03-08",
+    "time": "11:20",
+    "type": "water_rescue",
+    "resp": [
+     "G14",
+     "G16"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I2",
+    "date": "2025-03-08",
+    "time": "14:10",
+    "type": "water_rescue",
+    "resp": [
+     "G14",
+     "G15"
+    ],
+    "out": "gp_advised",
+    "amb": "A771"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_board",
+    "unit": "RB2",
+    "out_from": "12:00",
+    "out_to": "12:05",
+    "sub": "RB4"
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 0,
+   "kit_defects": 2,
+   "chk": "CS-88"
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "responder_qual_expired",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "kit_defect_unlisted",
+  "worst_outcome": "referred",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "responder_qual_expired",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "referred",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "aed_check_sheet",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "totals_reconcile": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 54,
+ "deciding": {
+  "two_guard_cover": "I2 responder G15 has qual_exp 2025-03-07, one day before shift date; I1 is fully in date. Only a one-day lapse, so both answers are plausible.",
+  "totals_reconcile": "handover.kit_defects is 2 but only one equipment entry has out_from set.",
+  "next_step": "Sign-off and check sheet are present, no flag problem, and the short outage is substituted; nothing further is required.",
+  "outcome_severity": "I2 outcome gp_advised (referred) but an ambulance ref A771 is also logged, which leaves conveyed plausible.",
+  "kit_outage": "RB2 was out 12:00-12:05 with substitute RB4 logged; the substitute makes it level 0, while the 5 minutes keeps level 1 arguable."
+ },
+ "request": "rec-F416-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010774
+}

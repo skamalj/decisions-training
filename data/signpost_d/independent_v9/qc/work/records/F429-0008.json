@@ -1,0 +1,140 @@
+{
+ "id": "F429-0008",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 100,
+   "ramp_max_m_per_10min": 0.5
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "t": "03:30",
+     "level_m": 100.51
+    }
+   ],
+   "triggers": {
+    "alert_m": 100.5,
+    "action_m": 101.5
+   }
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "03:00",
+    "open_before_m": 0.9,
+    "open_after_m": 1.1
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.03
+    }
+   ],
+   "calc_peak_m3s": 94.1,
+   "gauged_peak_m3s": 78.4,
+   "tailwater_m": [
+    {
+     "t": "03:20",
+     "m": 41.0
+    },
+    {
+     "t": "03:45",
+     "m": 41.5
+    }
+   ]
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "05:00"
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "02:40",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "alert",
+  "near_boundary": true,
+  "discharge_vs_licence": "below",
+  "gate_position_mismatch": "material",
+  "discharge_discrepancy_pct": 19.99,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": true,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 19.99,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "query_operator",
+   "second": "accept_log",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "within_licence": "Calculated 94.1 and gauged 78.4 are both clearly under the 100 limit.",
+  "gates_reconciled": "G1 open_after_m is 1.1 but the calculation used 1.03, a 0.07 m gap.",
+  "next_step": "Only a single gate figure needs confirming, which fits a query. Inspection and notice are complete, so accepting is also defensible.",
+  "trigger_tier": "Level 100.51 is just above the 100.5 alert trigger and far below the 101.5 action trigger.",
+  "parties_needed": "The operator can fix the gate figure alone. The calculation owner might also need to re-run the numbers."
+ },
+ "request": "rec-F429-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009729
+}

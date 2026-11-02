@@ -1,0 +1,174 @@
+{
+ "id": "F429-0047",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 400,
+   "ramp_max_m_per_10min": 0.5,
+   "operator_id": "OP-318",
+   "log_version": 3
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "t": "06:00",
+     "level_m": 88.2,
+     "datum": "site"
+    },
+    {
+     "t": "10:00",
+     "level_m": 88.4,
+     "datum": "site"
+    }
+   ],
+   "triggers": {
+    "alert_m": 90.0,
+    "action_m": 91.0
+   },
+   "rainfall_mm_24h": 4
+  },
+  "gate_ops": [
+   {
+    "gate_id": "G2",
+    "t": "07:00",
+    "open_before_m": 0.0,
+    "open_after_m": 0.4
+   },
+   {
+    "gate_id": "G2",
+    "t": "07:10",
+    "open_before_m": 0.4,
+    "open_after_m": 0.8
+   },
+   {
+    "gate_id": "G2",
+    "t": "07:20",
+    "open_before_m": 0.8,
+    "open_after_m": 1.0
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate_id": "G2",
+     "opening_m": 1.01
+    }
+   ],
+   "calc_peak_m3s": 396,
+   "gauged_peak_m3s": null,
+   "tailwater_m": [
+    {
+     "t": "07:30",
+     "v": 2.1
+    },
+    {
+     "t": "09:00",
+     "v": 2.1
+    }
+   ]
+  },
+  "instruments": {
+   "piezometer": [
+    {
+     "t": "09:00",
+     "kpa": 41,
+     "alert_kpa": 60
+    }
+   ],
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "2024-05-14T11:20"
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "06:30",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": "not computable (gauged peak null)",
+  "datum_mismatch": false,
+  "missing_section": "downstream_gauge_null",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 19.78,
+  "datum_mismatch": false,
+  "missing_section": "downstream_gauge_null",
+  "notice_after_release": true,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "trigger_tier": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 108,
+ "deciding": {
+  "within_licence": "gauged_peak_m3s is null, so no measured discharge figure is available; calc 396 is within 3% of the 400 limit.",
+  "gates_reconciled": "G2 open_after 1.0 vs calc opening 1.01, a 0.01 m difference.",
+  "next_step": "Inspection completed, warning sent before gate movement, no instrument alerts, ramps within limit.",
+  "trigger_tier": "Levels 88.2-88.4 are below alert 90.0; ramp steps 0.4, 0.4, 0.2 per 10 min under 0.5.",
+  "parties_needed": "Nothing outstanding; the duty engineer can close the log alone."
+ },
+ "request": "rec-F429-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011386
+}

@@ -1,0 +1,107 @@
+{
+ "id": "F439-0009",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T-6032",
+   "end_time": "15:10"
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "signals",
+     "driving": 3,
+     "serious": 1,
+     "dangerous": 0
+    }
+   ],
+   "driving_fault_total": 3
+  },
+  "outcome": {
+   "result": "fail",
+   "debrief": true,
+   "examiner_signoff_at": null,
+   "examiner_note": "Some errors during drive."
+  },
+  "review_trail": {
+   "countersigned_by": "SE09",
+   "upheld_complaints_12m": 4
+  }
+ },
+ "factors": {
+  "fault_profile": "serious_fail",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "signoff_missing",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": false,
+  "note_alignment": "vague",
+  "examiner_complaints_12m": 4,
+  "post_submission_edit": "no_edit"
+ },
+ "factors_sampled": {
+  "fault_profile": "serious_fail",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "signoff_missing",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": false,
+  "note_alignment": "vague",
+  "examiner_complaints_12m": 4,
+  "post_submission_edit": "no_edit"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_complete": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "amend_record",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "issue_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "result_supported": "Fail agrees with the serious fault; the note is vague but the sheet decides.",
+  "report_complete": "examiner_signoff_at is null.",
+  "disposition": "The missing timestamp is a clerical gap the examiner can fix from the existing report.",
+  "staff_effort": "One timestamp to add, under an hour.",
+  "issue_severity": "Only a paperwork omission, with no effect on the result or safety; the complaints count is a decoy."
+ },
+ "request": "rec-F439-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00529
+}

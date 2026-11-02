@@ -1,0 +1,134 @@
+{
+ "id": "F421-0017",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-70455",
+   "service": "std",
+   "fragile": false,
+   "contents": "espresso machine",
+   "qty": 1,
+   "weight_kg": 9.0,
+   "declared_value_gbp": 1418.98
+  },
+  "handling_events": [
+   {
+    "ts": "2024-05-11T06:30",
+    "site": "HUB-E",
+    "code": "SCAN"
+   },
+   {
+    "ts": "2024-05-12T07:15",
+    "site": "DEP-R",
+    "code": "INB"
+   },
+   {
+    "ts": "2024-05-12T10:05",
+    "site": "DEP-R",
+    "code": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-05-12T13:00",
+   "inspector": "J.Moy",
+   "observed_item": "espresso machine",
+   "qty_found": 1,
+   "weight_kg": 6.8,
+   "condition": "crushed casing, boiler split",
+   "photos": [
+    "a.jpg",
+    "b.jpg"
+   ],
+   "repair_est_gbp": 1370
+  },
+  "claim": {
+   "claim_id": "C-901",
+   "claimed_gbp": 2397.5,
+   "item_desc": "espresso machine",
+   "submitted": "2024-05-14"
+  },
+  "notes": [
+   "Dropped at sort belt, ours."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "complete",
+  "loss_pct": 96.55,
+  "declared_value": 1418.98,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 1.75
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "complete",
+  "loss_pct": 96.55,
+  "declared_value": 1418.98,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 1.75
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 64,
+ "deciding": {
+  "depot_fault": "Clean inbound at DEP-R then DMG at depot sort; no upstream exceptions.",
+  "contents_match": "Item name and qty match, but weight 9.0 vs 6.8 kg (over 20% lower) keeps it open.",
+  "next_step": "Report complete with photos and estimate; depot admits fault, so record can be closed, though claim exists.",
+  "loss_share": "Repair est 1370 against declared 1418.98 is 96.6%, near the 100% boundary between major and total.",
+  "parties_needed": "Claim payment and repair handling suggest two teams."
+ },
+ "request": "rec-F421-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005509
+}

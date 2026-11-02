@@ -1,0 +1,348 @@
+{
+ "id": "F402",
+ "domain": "community physiotherapy referral reviews",
+ "role": "Community physiotherapy triage clinician reviewing incoming referrals one at a time",
+ "setting": "A community physiotherapy service receives referrals from GPs, hospital wards and first-contact practitioners. Each referral arrives as a structured record that joins the referral form, patient demographics, coded clinical findings, an extract from the GP record, attachments and service history. The triage clinician checks the record against itself and decides on the next step, the service pathway, whether red flags remain open, and how soon the patient must be seen. Codes and flags only; there are no free-text notes.",
+ "questions": {
+  "red_flag_unresolved": {
+   "type": "noul",
+   "instructions": "The referral contains a red-flag finding with no documented benign explanation.",
+   "criteria": {
+    "true": "Red flag recorded and nothing in record explains it.",
+    "false": "No red flag, or one explained by documented review."
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the triage clinician do with this referral now?",
+   "criteria": {
+    "accept_as_referred": "Add to waiting list at stated priority without any queries.",
+    "request_info": "Ask referrer for one named missing item before triaging.",
+    "book_amended": "Book now with corrected priority, side or stated precautions.",
+    "escalate_lead": "Pass to clinical lead or GP for urgent medical review."
+   }
+  },
+  "pathway": {
+   "type": "choice",
+   "instructions": "Which service pathway best fits this patient's confirmed presentation?",
+   "criteria": {
+    "self_management": "Stable, low-impact symptoms suited to advice and exercise resources.",
+    "community_msk": "Musculoskeletal problem needing face-to-face physiotherapy in community clinic.",
+    "specialist_rehab": "Neurological, frailty or post-operative needs requiring specialist rehabilitation team.",
+    "redirect_out": "Problem outside physiotherapy scope; needs medical or surgical service."
+   }
+  },
+  "reversal_time": {
+   "type": "score",
+   "instructions": "How long would it take to fully undo this outcome?",
+   "criteria": [
+    "Could be fully undone within one day",
+    "Needs one to seven days to undo",
+    "Needs eight days to three months to undo",
+    "Cannot be undone within three months"
+   ]
+  },
+  "clinical_urgency": {
+   "type": "score",
+   "instructions": "How soon must this patient have first clinical contact?",
+   "criteria": [
+    "Can safely wait more than six weeks",
+    "First contact needed within six weeks",
+    "First contact needed within two weeks",
+    "Medical review needed within 48 hours"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "red_flag_type",
+   "description": "Which serious-pathology indicator, if any, is coded in the clinical findings",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "night_pain_weight_loss",
+    "saddle_anaesthesia_bladder",
+    "progressive_neuro_deficit",
+    "cancer_history_new_spinal_pain"
+   ],
+   "weights": [
+    0.5,
+    0.14,
+    0.08,
+    0.12,
+    0.16
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S5",
+    "S7"
+   ]
+  },
+  {
+   "name": "red_flag_mitigated",
+   "description": "Whether a benign explanation is documented for the red flag, such as a recent normal MRI, a dated GP or emergency review, or an oncology discharge with clear surveillance",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "mismatch_field",
+   "description": "Which corresponding value disagrees between sections, if any",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "laterality",
+    "date_of_birth",
+    "symptom_onset",
+    "anticoagulant_status",
+    "surgery_date"
+   ],
+   "weights": [
+    0.3,
+    0.18,
+    0.1,
+    0.16,
+    0.14,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "mismatch_magnitude",
+   "description": "Size of the disagreement: trivial (typo-level, e.g. one day, matching NHS number), moderate (weeks of onset, wrong side on one of two documents), major (wrong patient identifiers, anticoagulant omitted, months apart)",
+   "kind": "categorical",
+   "values": [
+    "trivial",
+    "moderate",
+    "major"
+   ],
+   "weights": [
+    0.35,
+    0.4,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "missing_item",
+   "description": "One item the service needs that is absent or null",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "imaging_report",
+    "post_op_protocol",
+    "weight_bearing_status",
+    "consent_to_refer"
+   ],
+   "weights": [
+    0.45,
+    0.15,
+    0.15,
+    0.13,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "condition_group",
+   "description": "Underlying presentation category as shown by coded diagnosis and findings",
+   "kind": "categorical",
+   "values": [
+    "simple_msk",
+    "post_op_orthopaedic",
+    "neurological",
+    "frailty_falls",
+    "non_physio_surgical"
+   ],
+   "weights": [
+    0.4,
+    0.18,
+    0.14,
+    0.16,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "symptom_duration_weeks",
+   "description": "Weeks since symptom onset per referral; values near 6 and 12 sit on service boundaries",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 1,
+   "max": 104,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "function_index",
+   "description": "Patient-reported disability index, 0 best to 100 worst; values around 40 and 60 are borderline",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 100,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "prior_episodes_12m",
+   "description": "Number of previous physiotherapy episodes for the same problem in the last 12 months",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  },
+  {
+   "name": "referrer_priority",
+   "description": "Priority ticked by referrer; a decoy that often disagrees with the clinical picture",
+   "kind": "categorical",
+   "values": [
+    "routine",
+    "soon",
+    "urgent"
+   ],
+   "weights": [
+    0.5,
+    0.3,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "falls_last_3m",
+   "description": "Number of falls in last three months recorded in the GP extract",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 5,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S6"
+   ]
+  },
+  {
+   "name": "post_op_days",
+   "description": "Days since surgery when condition is post-operative; drives protocol timing",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 120,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "self_mgmt_tried",
+   "description": "Whether a documented trial of advice or exercise resources has already been completed",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "referral",
+   "description": "Referral id, source, received date, referrer priority, body site and side, onset date"
+  },
+  {
+   "name": "patient",
+   "description": "Pseudonymous id, NHS number, date of birth, mobility aid, consent flag"
+  },
+  {
+   "name": "clinical",
+   "description": "Coded diagnosis, red-flag codes, neuro signs, function index, anticoagulant boolean, surgery date, weight-bearing status"
+  },
+  {
+   "name": "gp_record",
+   "description": "GP extract: DOB, medication codes, first-presented date, falls count, recent review dates"
+  },
+  {
+   "name": "attachments",
+   "description": "List of documents with type, date, side and result code, e.g. imaging or op protocol"
+  },
+  {
+   "name": "history",
+   "description": "Prior physiotherapy episodes with dates, discharge reason codes and self-management trial flag"
+  }
+ ],
+ "rendering_notes": "red_flag_type appears only as codes in clinical.red_flags (list, empty when none) and clinical.neuro_signs (e.g. {\"progression\":\"worsening\"}); gp_record.weight_change_kg may support night_pain_weight_loss. red_flag_mitigated shows indirectly: an attachments entry of type MRI dated within 8 weeks with result \"no_sinister\", gp_record.reviews containing a dated urgent review after the flag's onset, or history containing an oncology_discharge code; when false these are absent, dated before onset, or show result \"pending\". mismatch_field renders as disagreeing corresponding values: referral.site.side vs attachments[].side (laterality); patient.dob vs gp_record.dob (date_of_birth); referral.onset_date vs gp_record.first_presented (symptom_onset); clinical.anticoagulant=false while gp_record.meds lists an anticoagulant code (anticoagulant_status); clinical.surgery_date vs attachments op_protocol date (surgery_date). mismatch_magnitude sets the gap size; trivial mismatches are decoys that should not change the decision. Mismatches are never flagged by any field. missing_item renders as null or absent: attachments lacks the imaging or op_protocol entry, clinical.weight_bearing is null, patient.consent_to_refer is null. condition_group is inferred from clinical.diagnosis_code plus neuro signs, surgery date and falls; non_physio_surgical shows as e.g. a diagnosis code with an attachment recommending surgical opinion. symptom_duration_weeks is derived from referral.onset_date relative to referral.received; function_index sits in clinical.function_index; prior_episodes_12m is the count of history.episodes within 12 months; self_mgmt_tried is history.self_mgmt_trial (true/false/null). referrer_priority sits in referral.priority and is a decoy, often contradicted by findings or mitigation. falls_last_3m sits in gp_record.falls_3m; post_op_days derived from clinical.surgery_date. No field ever states triage outcome, pathway, urgency band, red-flag status or a recommended action; there is no free-text note anywhere. Balance roughly half of red-flag records with mitigation, and place some values on boundaries (onset near 6 weeks, function index near 40 or 60, one fall) so judges may split.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "reversal_time",
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_info"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.138236
+}

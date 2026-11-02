@@ -1,0 +1,151 @@
+{
+ "id": "F434-0023",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 2,
+   "date": "2024-07-09",
+   "riders_started": 150
+  },
+  "post": {
+   "post_id": "P05",
+   "km_marker": 27,
+   "post_type": "roundabout",
+   "marshals_rostered": 3,
+   "marshals_signed_in": 3,
+   "on_post_from": "09:40",
+   "off_post_at": "12:59:30",
+   "relief": []
+  },
+  "incidents": [
+   {
+    "inc_ref": "I1",
+    "time": "11:48",
+    "km": 27,
+    "type": "pedestrian_on_course",
+    "bibs": [],
+    "medic_called": false,
+    "escort_present": true,
+    "riders_held": true,
+    "rider_status": "continued"
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:30",
+     "ok": true
+    },
+    {
+     "time": "12:00",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C2",
+     "time": "11:50",
+     "km": 27,
+     "type": "pedestrian_on_course",
+     "bibs": []
+    }
+   ],
+   "medical_handovers": [
+    {
+     "ref": "H1",
+     "bib": 88,
+     "km": 61,
+     "destination": "St Mary Hospital"
+    }
+   ],
+   "abandonments": [
+    88
+   ]
+  },
+  "sweep": {
+   "passed_at": "13:00:10",
+   "last_rider_bib": 140,
+   "post_cleared_at": "13:00:40"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "time_offset_minor",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": "none",
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "time_offset_minor",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 7.36,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "course_intrusion",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 154,
+ "deciding": {
+  "coverage_held": "off_post_at 12:59:30 is 40 seconds before sweep passed_at 13:00:10, and no relief entry covers it.",
+  "next_step": "Post and control agree apart from a 2 minute offset on the same incident. The only hospital handover is for bib 88 at km 61, and no medic call or open item remains at this post.",
+  "incident_class": "A pedestrian on the course at km 27 appears in both the post list and the control log.",
+  "reversal_time": "Nothing at this post shows lasting harm, but the early sign-off and the intrusion leave the record open to a lasting-effect reading, so level 2 and 3 are both defensible.",
+  "consequence_severity": "Escort present and riders held, no fall, no medic and no bibs involved at km 27; the hospital handover is at another km. A slight doubt remains from the intrusion."
+ },
+ "request": "rec-F434-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010094
+}

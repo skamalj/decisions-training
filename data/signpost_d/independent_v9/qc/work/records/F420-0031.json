@@ -1,0 +1,127 @@
+{
+ "id": "F420-0031",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PMC41127",
+   "serial": "41127",
+   "tare_kg": 120,
+   "planned_gross_kg": 1000,
+   "straps_required": 4,
+   "contour_max_cm": 162
+  },
+  "manifest_lines": [
+   {
+    "awb": "176-11112221",
+    "pcs": 10,
+    "weight_kg": 600
+   },
+   {
+    "awb": "176-33334444",
+    "pcs": 4,
+    "weight_kg": 280
+   }
+  ],
+  "build_measured": {
+   "scale_gross_kg": 975.3,
+   "max_height_cm": 160,
+   "pcs_counted": {
+    "176-11112221": 9,
+    "176-33334444": 4
+   },
+   "straps_fitted": 4,
+   "net_fitted": null,
+   "uld_serial_scanned": "41172"
+  },
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "176-11112221",
+     "pcs_this_flight": 9
+    }
+   ]
+  },
+  "dg_notoc": null
+ },
+ "factors": {
+  "weight_deviation_pct": -2.47,
+  "piece_count_gap": 1,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "within_2cm",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "net_not_logged",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "uld_serial_differs",
+  "minutes_to_cutoff": 25,
+  "prior_rebuilds": 1
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -2.47,
+  "piece_count_gap": 1,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "within_2cm",
+  "contour_waiver": false,
+  "dg_state": "dg_compatible",
+  "notoc_match": "matched",
+  "securing_state": "net_not_logged",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "awb_digits_transposed",
+  "minutes_to_cutoff": 25,
+  "prior_rebuilds": 1
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "release_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "clear",
+   "target": "paperwork_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "weight_deviation": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "pieces_reconciled": "AWB 176-11112221 counted 9 of 10, and the part shipment shows pcs_this_flight 9 for the same AWB.",
+  "disposition": "Only a net_fitted null (net not logged) is outstanding; the weight and height are within limits, so a single securing confirmation lets it go.",
+  "worst_discrepancy": "Scanned serial 41172 differs from header serial 41127, an identifier-only disagreement; no DG.",
+  "weight_deviation": "975.3 against planned 1000 is -2.47%, which is over 1% to 3%.",
+  "rework_extent": "Net not logged is a single securing item, which is minor; nothing else needs physical change, though an unconfirmed net could be read as more."
+ },
+ "request": "rec-F420-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011153
+}

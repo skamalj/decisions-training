@@ -1,0 +1,337 @@
+{
+ "id": "F427",
+ "domain": "peatland restoration monitoring visits",
+ "role": "Monitoring data reviewer for a regional upland peatland restoration programme, checking each submitted field visit record",
+ "setting": "Field surveyors visit rewetted blanket bog sites to read dipwells, inspect peat dams, photograph fixed points and score vegetation quadrats. Each visit record arrives as a small JSON object. The reviewer reads one record at a time and decides several things. Did any water table drop come from failing dams? What should happen to the record next? Where does the water table sit against the site's target band? How bad is the worst dam defect? How complete is the required evidence?",
+ "questions": {
+  "dam_caused_drop": {
+   "type": "noul",
+   "instructions": "Recorded water table drop stems from dam defects, not dry weather.",
+   "criteria": null
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should happen to this visit record now?",
+   "criteria": {
+    "accept_record": "Record complete, no defect needing action; file as routine.",
+    "request_data": "A required element is missing; ask surveyor for it first.",
+    "recheck_next_visit": "Minor issue only; add a targeted check to next routine visit.",
+    "schedule_repair": "Dam defect needs works; raise repair order with contractor now.",
+    "escalate_lead": "Dam failed or failure repeats; refer to programme lead."
+   }
+  },
+  "hydro_state": {
+   "type": "choice",
+   "instructions": "Where does the mean water table sit against the target band?",
+   "criteria": {
+    "well_below": "Mean depth more than 15 cm below target band floor.",
+    "below_band": "Mean depth up to 15 cm below target band floor.",
+    "within_band": "Mean depth inside the site's target water table band.",
+    "above_band": "Mean level above the band top, surface ponding likely."
+   }
+  },
+  "dam_severity": {
+   "type": "score",
+   "instructions": "How severe is the worst dam defect recorded this visit?",
+   "criteria": [
+    "Intact: every inspected dam holding water, no defect logged",
+    "Seepage: water passing around dam, pool level maintained",
+    "Partial breach: overtopping or side-cut, pool below design level",
+    "Failed: dam breached, no water held behind it"
+   ]
+  },
+  "evidence_completeness": {
+   "type": "score",
+   "instructions": "How complete is the required monitoring evidence for this visit?",
+   "criteria": [
+    "At most one of four required elements recorded",
+    "Two of four required elements recorded",
+    "Three of four required elements recorded",
+    "All four recorded, at least one only partly",
+    "All four required elements recorded in full"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "dipwell_coverage",
+   "description": "Fraction of scheduled dipwells with a reading this visit; below 1.0 counts as partly recorded, below 0.25 as not recorded",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.0,
+   "max": 1.0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "photos_status",
+   "description": "Whether fixed-point photographs were uploaded: full set, partial set or none (photos field null)",
+   "kind": "categorical",
+   "values": [
+    "full",
+    "partial",
+    "none"
+   ],
+   "weights": [
+    0.6,
+    0.2,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "quadrats_status",
+   "description": "Vegetation quadrat survey state: all quadrats scored, some scored, or section null because the survey was not done",
+   "kind": "categorical",
+   "values": [
+    "complete",
+    "partial",
+    "missing"
+   ],
+   "weights": [
+    0.55,
+    0.25,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "dam_inspection_logged",
+   "description": "Whether the dam inspection list is present; when false the structures.inspections list is null and dam severity cannot be confirmed",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.82,
+   "skills": [
+    "S2",
+    "S6"
+   ]
+  },
+  {
+   "name": "worst_dam_defect",
+   "description": "True condition of the worst inspected dam, shown only through per-dam pool_level_cm compared with design_pool_cm and a defect code",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "seepage",
+    "partial_breach",
+    "failed"
+   ],
+   "weights": [
+    0.35,
+    0.3,
+    0.22,
+    0.13
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "water_table_offset_cm",
+   "description": "Mean dipwell depth relative to the target band from site_targets; negative is below the band floor, positive is above the band top, and values near -15 or 0 are boundary cases",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": -35,
+   "max": 8,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "rainfall_pct_normal",
+   "description": "30-day rainfall as percentage of the long-term normal; low values offer a benign weather explanation for any water table drop",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 30,
+   "max": 150,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "control_dipwells_dropped",
+   "description": "Whether reference dipwells away from any dam also fell since the last visit, which points to weather rather than dam leakage",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "repair_order_open",
+   "description": "An existing open works order already covers the defective dam, which mitigates the need to raise a new repair",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "prior_failure_same_dam",
+   "description": "Count of earlier visits logging a breach at the same dam; two or more is a repeat failure",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S6"
+   ]
+  },
+  {
+   "name": "date_sequence_fault",
+   "description": "The logger download timestamp or dam inspection date falls before visit_date, so those readings may belong to an earlier visit",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.15,
+   "skills": [
+    "S2",
+    "S5"
+   ]
+  },
+  {
+   "name": "surveyor_grade",
+   "description": "Surveyor accreditation level; an accredited surveyor's remark that seepage is minor is more trusted than a trainee's",
+   "kind": "categorical",
+   "values": [
+    "trainee",
+    "accredited",
+    "senior"
+   ],
+   "weights": [
+    0.3,
+    0.5,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "note_tone",
+   "description": "Tone of the free-text surveyor note, which may overstate or play down the actual dam and water readings (decoy)",
+   "kind": "categorical",
+   "values": [
+    "alarmed",
+    "neutral",
+    "reassuring"
+   ],
+   "weights": [
+    0.3,
+    0.4,
+    0.3
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "grazing_signs",
+   "description": "Sheep or deer trampling and dung noted on the bog surface; irrelevant to hydrology and dam questions (decoy)",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.35,
+   "skills": [
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "visit",
+   "description": "Visit id, site_ref, visit_date, surveyor_id, surveyor_grade, weather_on_day."
+  },
+  {
+   "name": "site_targets",
+   "description": "Target water table band (band_top_cm, band_floor_cm), dipwells_scheduled, dams_total, last_visit_date."
+  },
+  {
+   "name": "hydrology",
+   "description": "List of dipwell readings, control dipwell readings with previous values, logger_download_at, rain_30d_pct_normal."
+  },
+  {
+   "name": "structures",
+   "description": "Dam inspection list with pool levels, defect codes and remarks, plus open_work_orders list."
+  },
+  {
+   "name": "vegetation",
+   "description": "Quadrat scores or null, photo set count, grazing_signs flag."
+  },
+  {
+   "name": "notes",
+   "description": "Free-text surveyor_note and a prior_visits history list of dated dam breach entries."
+  }
+ ],
+ "rendering_notes": "There are four required elements: dipwell readings, fixed-point photos, vegetation quadrats and the dam inspection log. Dipwell readings come from dipwell_coverage: hydrology.dipwells lists only the read wells, and site_targets.dipwells_scheduled is the expected count, so the reviewer must compare the two. Under 25% read counts as not recorded; under 100% counts as partly recorded. Photos come from photos_status as vegetation.photos_uploaded against photos_expected, null when none. Quadrats come from quadrats_status: vegetation.quadrats is a list with some score fields null when partial, and the whole field is null when missing. When dam_inspection_logged is false, structures.inspections is null. worst_dam_defect appears per dam as pool_level_cm against design_pool_cm, a defect_code (OK, SEEP, OVTP, SIDE, BRCH) and a one-sentence remark; the severity is never stated as a label. water_table_offset_cm is never shown directly. Each dipwell shows depth_cm below the surface, which the reviewer must average and compare with band_top_cm and band_floor_cm; negative depths mean water above the surface. rainfall_pct_normal is hydrology.rain_30d_pct_normal. control_dipwells_dropped appears as hydrology.controls, each with depth_cm and prev_depth_cm. repair_order_open appears as an entry in structures.open_work_orders naming the dam_id with status 'raised' or 'contractor_booked'. prior_failure_same_dam appears as dated entries in notes.prior_visits. date_sequence_fault makes logger_download_at or an inspection's inspected_on earlier than visit.visit_date. note_tone shapes notes.surveyor_note, a sentence or two that can sound alarmed even when the dams are intact, or reassuring over a partial breach. Decoys are the surveyor note tone, grazing_signs, weather_on_day and photo counts; none of these bear on the hydrology or dam questions. Records must never contain fields such as severity, hydro_state, completeness, action_required or cause_of_drop. Answers must be inferred by comparing values across sections.",
+ "skills": [
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_data"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.1649
+}

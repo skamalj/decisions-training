@@ -1,0 +1,177 @@
+{
+ "id": "F422-0028",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "delivered_at": "2025-03-01T09:00",
+   "received_at": "2025-04-03T07:30",
+   "review_date": "2025-04-08",
+   "reason": "DAMAGED_IN_TRANSIT",
+   "lines": [
+    {
+     "gtin": "G7",
+     "qty_claimed": 50
+    },
+    {
+     "gtin": "G8",
+     "qty_claimed": 50
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "lines": [
+    {
+     "gtin": "G7",
+     "batch": "C31",
+     "expiry": "2027-07-31",
+     "qty_dispatched": 50
+    },
+    {
+     "gtin": "G8",
+     "batch": "D18",
+     "expiry": "2027-07-31",
+     "qty_dispatched": 50
+    },
+    {
+     "gtin": "G9",
+     "batch": "E02",
+     "expiry": "2027-05-31",
+     "qty_dispatched": 30
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G7",
+     "batch": "C31",
+     "expiry": "2027-07-31",
+     "qty_counted": 45,
+     "packs_damaged": 0,
+     "seals_intact": 45
+    },
+    {
+     "gtin": "G8",
+     "batch": "D18",
+     "expiry": "2027-07-31",
+     "qty_counted": 45,
+     "packs_damaged": 4,
+     "seals_intact": 41
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "active"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "cold_2_8",
+   "labelled_range": "2-8C",
+   "logger_id": "L5",
+   "logger_start": "2025-03-01T20:00",
+   "logger_end": "2025-04-03T08:00",
+   "min_c": 1.2,
+   "max_c": 11.8,
+   "minutes_out_of_range": 308,
+   "stability_ref": {
+    "max_hours": 4,
+    "max_c": 12
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-01-31",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "hold_limit_days": 10,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-04-16"
+   },
+   "max_days_out_of_control": 28,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 308,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 10,
+  "damaged_pack_fraction": 0.05,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 33,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 8,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 27
+ },
+ "factors_sampled": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 308,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 10,
+  "damaged_pack_fraction": 0.05,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 33,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 30,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 27
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_traceable": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 140,
+ "deciding": {
+  "storage_maintained": "Logger starts 11 hours after delivery, and 308 minutes out of range exceeds the 4-hour stability allowance, though max_c 11.8 stays under 12.",
+  "batch_traceable": "Counted C31 and D18 both appear on dispatch; the extra G9 dispatch line was not returned and is irrelevant.",
+  "next_step": "declaration_received is false and the audit expired 2025-01-31, so the storage declaration is the specific missing item.",
+  "resaleable_share": "The 45 G7 packs are intact and G8 has 4 damaged, but the storage doubt could make the sound packs unfit, putting the share near the half line.",
+  "disposition_urgency": "Extension new_limit_date 2025-04-16 is 8 days after the 2025-04-08 review."
+ },
+ "request": "rec-F422-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015173
+}

@@ -1,0 +1,116 @@
+{
+ "id": "F406-0029",
+ "family": "F406",
+ "state": {
+  "session": {
+   "gallery_code": "G3",
+   "session_date": "2025-04-19",
+   "close": "17:00",
+   "certified_limit": 80
+  },
+  "counts": {
+   "intervals": null,
+   "summary_peak": 72,
+   "manual_tally_peak": 76
+  },
+  "variations": [
+   {
+    "gallery_code": "G3",
+    "valid_from": "2025-04-19",
+    "valid_to": "2025-04-19",
+    "uplift_to": 100,
+    "status": "pending"
+   }
+  ],
+  "equipment": {
+   "tickets": [
+    {
+     "gate": "W2",
+     "raised_at": "2025-04-19T17:20",
+     "summary": "gate reading high"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": "done",
+   "notes": "Packed! Over cap two or three times."
+  },
+  "history": {
+   "overages_30d": 3
+  }
+ },
+ "factors": {
+  "true_peak_ratio": "0.90 to 0.95",
+  "intervals_over_limit": "1 or 2, unverifiable",
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "approval_pending",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": true,
+  "egress_check": "completed",
+  "prior_overages_30d": 3,
+  "staff_note_tone": "alarmed_unsupported",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.24,
+  "intervals_over_limit": 6,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "approval_pending",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": true,
+  "egress_check": "completed",
+  "prior_overages_30d": 3,
+  "staff_note_tone": "alarmed_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "fault_explains_overage": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_counter_data",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 62,
+ "deciding": {
+  "variation_applies": "Variation status is pending, not approved, though gallery and date match.",
+  "fault_explains_overage": "Ticket on gate W2 for the date was raised 17:20, after the 17:00 close, and says only gate reading high.",
+  "next_step": "counts.intervals is null with only summary_peak, so the interval export must be requested from the site team.",
+  "peak_excess": "Summary peak 72 is 90% of limit 80, while tally 76 is 95%, straddling the 90% line.",
+  "intervals_over": "No interval data; the note says over cap two or three times while peaks stay at or below the limit, so one or two intervals is plausible."
+ },
+ "request": "rec-F406-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01046
+}

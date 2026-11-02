@@ -1,0 +1,128 @@
+{
+ "id": "F423-0042",
+ "family": "F423",
+ "state": {
+  "job": {
+   "run_qty": 15000,
+   "overs_pct": 1.33,
+   "stock_spec": "C250",
+   "spec_max_de": 4.0,
+   "due_date": "2024-07-02"
+  },
+  "proof_signoff": {
+   "proof_id": "P-7731",
+   "ok_sheet_no": 3,
+   "signed_at": "2024-06-18T09:41",
+   "customer_present": false,
+   "concession": null
+  },
+  "colour_readings": {
+   "instrument": "X1",
+   "calibrated_on": "2024-04-04",
+   "patches": [
+    {
+     "ink": "K",
+     "delta_e": 3.9
+    },
+    {
+     "ink": "Y",
+     "delta_e": 4.0
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.07,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press_id": "P4",
+   "stock_loaded": "C250",
+   "first_production_at": "2024-06-18T09:12",
+   "sheets_production": 1518,
+   "sheets_makeready": 220,
+   "stoppages": []
+  }
+ },
+ "factors": {
+  "colour_deviation": "marginal",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 1518,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.33,
+  "register_offset_mm": 0.07,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 75,
+  "customer_tier": "standard",
+  "prior_stoppages": 1
+ },
+ "factors_sampled": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 1518,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.33,
+  "register_offset_mm": 0.07,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 75,
+  "customer_tier": "standard",
+  "prior_stoppages": 1
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_run",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "colour_in_tolerance": "Patches read 3.9 and 4.0 against spec_max_de 4.0 with no concession, so one patch is exactly at the limit and not over it. Whether that counts as passing is a close call.",
+  "run_before_signoff": "first_production_at 09:12 is before signed_at 09:41, and 1518 production sheets are logged. Production sheets therefore precede the signature.",
+  "next_step": "Colour is at the limit and register is 0.07 mm, so the readings pass. The late signature leaves some doubt, but the check is otherwise acceptable and the run can continue.",
+  "staff_effort": "The record needs a short confirmation and a note about the late signature, which is under an hour. Checking the sheets printed before the signature could take a few hours.",
+  "scrap_exposure": "1518 production sheets against run_qty 15000 is about 10.1%, versus an overs allowance of about 200 sheets. Sheets printed before signature with colour at the limit are suspect only if the limit is judged breached. That leaves level 3 and level 2 both defensible."
+ },
+ "request": "rec-F423-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011407
+}

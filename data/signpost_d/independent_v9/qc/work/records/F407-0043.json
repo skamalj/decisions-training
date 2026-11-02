@@ -1,0 +1,128 @@
+{
+ "id": "F407-0043",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-3307",
+   "received_at": "2025-05-12",
+   "channel": "public_app",
+   "photo_ref": "IMG-552",
+   "linked_reports": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "local_access",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspected_at": "2025-05-02",
+   "depth_mm": 75,
+   "width_mm": 766.44
+  },
+  "works_history": [
+   {
+    "completed": "2025-05-09",
+    "offset_m": 10,
+    "guarantee_end": "2026-05-09"
+   }
+  ],
+  "current_order": {
+   "status": "completed",
+   "completed_items": 1,
+   "total_items": 1
+  },
+  "programme": {
+   "temp_measures": [
+    {
+     "offset_m": 10,
+     "expiry": "2025-06-30"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "same_spot_boundary",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 5,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "completed",
+  "defect_width_mm": 766.44,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "none",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 5,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 766.44,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 29,
+ "deciding": {
+  "meets_threshold": "inspection depth 75 vs threshold 40, but the inspection predates the report by ten days.",
+  "repeat_failure": "Job completed 2025-05-09 at offset 10 m, exactly on the ten-metre limit, in guarantee.",
+  "next_step": "Order completed 1/1 after the inspection and before the report; five linked reports are duplicates, so close.",
+  "staff_effort": "If the repeat is real, recheck and rework could run beyond five days; otherwise one to five days.",
+  "response_timescale": "Depth far above threshold points to priority repair within five days, with the temp measure covering the spot."
+ },
+ "request": "rec-F407-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007261
+}

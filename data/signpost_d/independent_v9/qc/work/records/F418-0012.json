@@ -1,0 +1,135 @@
+{
+ "id": "F418-0012",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "WDH",
+   "plat": 3,
+   "date": "2025-04-02",
+   "shift_start": "10:00",
+   "shift_end": "18:00",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S12",
+    "role": "dispatcher",
+    "planned_start": "10:00",
+    "planned_end": "18:00"
+   },
+   {
+    "post": "B",
+    "staff_id": "S19",
+    "role": "platform",
+    "planned_start": "10:00",
+    "planned_end": "18:00"
+   }
+  ],
+  "attendance": null,
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "13:10",
+    "staff_id": null,
+    "platform": 3
+   },
+   {
+    "type": "gap_end",
+    "time": "14:38",
+    "staff_id": null,
+    "platform": 3
+   }
+  ],
+  "controls": {
+   "disp_ref": "DSP-2291",
+   "disp_platform": 3,
+   "valid_from": "2025-03-01",
+   "valid_to": "2025-06-30",
+   "approved_by": null,
+   "prior_shortfalls_30d": 6
+  },
+  "remarks": [
+   "S19 left for welfare break, nobody sent. Sign-on sheet to follow."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 88,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 6,
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 88,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 6,
+  "boundary_case": true
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_records",
+   "second": "correct_and_brief",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "contested",
+   "target": "uncovered",
+   "second": "partial_cover",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 145,
+ "deciding": {
+  "headcount_verified": "attendance is null, remarks say sign-on sheet to follow; rostered staff are unverified but plausibly present.",
+  "next_step": "Missing sign-on sheet points to request_records, but the dispensation has approved_by null and a gap needing correction, so correct_and_brief is also defensible.",
+  "coverage_outcome": "Gap 13:10-14:38 with no cover events; remarks show no cover sent, though the S19 break could imply partial presence.",
+  "reversal_time": "Unapproved dispensation and repeat shortfalls (6 in 30 days) take weeks to months to resolve.",
+  "exposure_severity": "Dispensation disp_ref DSP-2291 matches platform and dates but approved_by is null; whether it counts as valid divides level 1 against level 2."
+ },
+ "request": "rec-F418-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005605
+}

@@ -1,0 +1,133 @@
+{
+ "id": "F411-0028",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H1188",
+   "type": "hackney",
+   "expiry": "2025-06-30",
+   "review_date": "2025-06-10"
+  },
+  "vehicle": {
+   "reg": "GN14DEF",
+   "first_reg": "2014-02-11",
+   "odometer_km": 141900
+  },
+  "inspection": {
+   "station": "TS03",
+   "date": "2025-06-03",
+   "result_code": "PA",
+   "brake_efficiency_pct": 61
+  },
+  "defects": [
+   {
+    "code": "TY1",
+    "grade": "minor",
+    "rectify_by": "2025-07-03",
+    "repaired_on": "2025-06-06",
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2026-01-10"
+   },
+   {
+    "type": "dbs",
+    "expires_on": "2026-03-01"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-12-04",
+     "result": "F",
+     "odometer_km": 133500
+    }
+   ],
+   "replacements": []
+  }
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 11
+ },
+ "factors_sampled": {
+  "worst_defect_found": "advisory",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 11
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "conditional_renewal",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "minor_fail",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 72,
+ "deciding": {
+  "odometer_consistent": "Current 141900 km exceeds the previous 133500 km reading; a steady rise with no replacements.",
+  "next_step": "Single minor item repaired and inside its 2025-07-03 deadline points to a dated condition, though the retest is still pending.",
+  "inspection_outcome": "Defect TY1 is graded minor and nothing is graded higher.",
+  "document_gaps": "Both listed documents expire after the review date; the list is short, so a missing type cannot be fully excluded.",
+  "outstanding_severity": "TY1 is minor, repaired but not retested, and rectify_by 2025-07-03 is after the review date 2025-06-10."
+ },
+ "request": "rec-F411-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009362
+}

@@ -1,0 +1,147 @@
+{
+ "id": "F434-0037",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 2,
+   "first_rider_at": "10:12",
+   "riders_started": 150
+  },
+  "post": {
+   "km_marker": 41.5,
+   "post_type": "junction",
+   "marshals_rostered": 2,
+   "marshals_signed_in": 2,
+   "on_post_from": "09:30",
+   "off_post_at": "12:18:40"
+  },
+  "incidents": [],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:30",
+     "ok": false
+    },
+    {
+     "time": "11:30",
+     "ok": true
+    }
+   ],
+   "backup_phone": [
+    {
+     "time": "10:31",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C9",
+     "time": "10:44",
+     "km": 41.5,
+     "type": "vehicle_on_course",
+     "note": "official commissaire car"
+    }
+   ],
+   "medical_handovers": [
+    {
+     "ref": "M2",
+     "bib": 88,
+     "km": 63.0,
+     "destination": "race_medical_tent"
+    }
+   ],
+   "road_reopened_at": {
+    "35-50": "12:40"
+   }
+  },
+  "sweep": {
+   "passed_at": "12:19:20",
+   "last_rider_bib": 149,
+   "post_cleared_at": "12:20"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "none",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "early_departure_40s",
+  "relief_swap_logged": false,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": 33.23,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 33.23,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "leaning",
+   "target": "no_incident",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 79,
+ "deciding": {
+  "coverage_held": "off_post_at 12:18:40 is 40 seconds before sweep passed_at 12:19:20; otherwise signed in from 09:30. A near-boundary early departure that readers can weigh either way, leaning false.",
+  "next_step": "Post and control are consistent, there are no incidents, the road reopens after sweep, and the one handover is confirmed at another km. Nothing is open.",
+  "incident_class": "Post incidents are empty. Control shows only a vehicle labelled as an official commissaire car at the same km, which some readers might count as a vehicle on course.",
+  "reversal_time": "No fall, injury or handover at this post, so nothing to undo.",
+  "consequence_severity": "No rider incident here. The only handover is for bib 88 at km 63.0, a decoy at another km."
+ },
+ "request": "rec-F434-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011139
+}

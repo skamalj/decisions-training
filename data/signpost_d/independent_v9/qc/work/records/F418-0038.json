@@ -1,0 +1,138 @@
+{
+ "id": "F418-0038",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "HRD",
+   "plat": 3,
+   "date": "2025-05-06",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S3"
+   },
+   {
+    "staff_id": "S8"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S3",
+    "sign_on": "05:50",
+    "safety_comp_exp": "2026-01-10",
+    "dispatch_comp_exp": null
+   },
+   {
+    "staff_id": "S8",
+    "sign_on": "05:52",
+    "sign_off": "14:20",
+    "safety_comp_exp": "2026-03-01",
+    "dispatch_comp_exp": "2026-03-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "14:20",
+    "staff_id": "S8"
+   },
+   {
+    "type": "dispatch",
+    "time": "14:24",
+    "staff_id": "S3"
+   },
+   {
+    "type": "gap_end",
+    "time": "14:24",
+    "staff_id": "S8"
+   }
+  ],
+  "controls": {
+   "disp_ref": null,
+   "prior_shortfalls_30d": 3
+  },
+  "remarks": [
+   "Brief changeover gap, sorted."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 4,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": false,
+  "dispensation_fit": "none",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 4,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "contested",
+   "target": "fully_rostered",
+   "second": "uncovered",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 37,
+ "deciding": {
+  "headcount_verified": "S3's dispatch_comp_exp is null and S3 has no sign_off, so one logged person lacks valid dispatch competence.",
+  "next_step": "The log has the sign-on records and the dispensation is plainly absent. The gap and the vague remark call for correction and a briefing, not records chasing.",
+  "coverage_outcome": "The 4-minute gap 14:20 to 14:24 has no cover events. Readers may call it effectively fully rostered because the gap is tiny, or uncovered because nothing filled it.",
+  "reversal_time": "The 14:24 dispatch by S3, who has a null dispatch_comp_exp, cannot be undone.",
+  "exposure_severity": "The dispatch at 14:24 falls exactly at gap_end, on the boundary of the gap. A reader can count it as a safety-critical duty by uncertified staff (level 3) or as just after the gap (level 2)."
+ },
+ "request": "rec-F418-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012319
+}

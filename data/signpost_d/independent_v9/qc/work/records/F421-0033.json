@@ -1,0 +1,133 @@
+{
+ "id": "F421-0033",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P3",
+   "contents": "espresso machine",
+   "qty": 1,
+   "kg": 9.5,
+   "value_gbp": 1058.64
+  },
+  "handling_events": [
+   {
+    "ts": "2024-06-10T07:00",
+    "site": "HubC",
+    "ev": "SCAN",
+    "exc": "CRUSH"
+   },
+   {
+    "ts": "2024-06-11T05:40",
+    "site": "DEP",
+    "ev": "INBOUND",
+    "exc": null
+   },
+   {
+    "ts": "2024-06-11T08:15",
+    "site": "DEP",
+    "ev": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-06-11T09:00",
+   "observed_item": "espresso machine",
+   "qty_found": 1,
+   "kg": 9.5,
+   "condition": "casing split, boiler cracked",
+   "photos": [
+    "c1.jpg",
+    "c2.jpg"
+   ],
+   "repair_est_gbp": 1040
+  },
+  "claim": {
+   "claim_id": "C3",
+   "claimed_gbp": 2069.6,
+   "packaging_desc": "single-wall box, no void fill"
+  },
+  "notes": [
+   "Needs repack team, carrier recovery, finance write-off, sender contact; insurer maybe."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "none",
+  "inspection_state": "complete",
+  "loss_pct": 98.2,
+  "declared_value": 1058.64,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.99
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "none",
+  "inspection_state": "complete",
+  "loss_pct": 17.34,
+  "declared_value": 1058.64,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.99
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_repack",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 102,
+ "deciding": {
+  "depot_fault": "Clean inbound and DMG at DEP sort favour depot, but the upstream CRUSH at HubC and the poor packaging keep it balanced.",
+  "contents_match": "Item, quantity and weight identical across manifest and report.",
+  "next_step": "Inspection complete with photos and a repair estimate; the record supports acting and repacking or writing off.",
+  "loss_share": "repair_est_gbp 1040 on 1058.64 is about 98%, just short of full value; the claim of 2069.6 is inflated.",
+  "parties_needed": "Note lists four teams plus a possible insurer, on the 4 versus 5 boundary."
+ },
+ "request": "rec-F421-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007847
+}

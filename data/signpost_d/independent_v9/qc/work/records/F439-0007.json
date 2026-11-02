@@ -1,0 +1,112 @@
+{
+ "id": "F439-0007",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T-2290",
+   "end_time": "14:40"
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "junction observation",
+     "driving": 0,
+     "serious": 0,
+     "dangerous": 1
+    }
+   ],
+   "driving_fault_total": 0
+  },
+  "outcome": {
+   "result": "fail",
+   "debrief": true,
+   "examiner_signoff_at": null,
+   "examiner_note": "Failed to observe at junction."
+  },
+  "review_trail": {
+   "countersigned_by": "SE07",
+   "upheld_complaints_12m": 1
+  }
+ },
+ "factors": {
+  "fault_profile": "dangerous_fault",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "signoff_missing",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": false,
+  "note_alignment": "consistent",
+  "examiner_complaints_12m": 1,
+  "post_submission_edit": "no_edit"
+ },
+ "factors_sampled": {
+  "fault_profile": "dangerous_fault",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "signoff_missing",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": false,
+  "note_alignment": "consistent",
+  "examiner_complaints_12m": 1,
+  "post_submission_edit": "no_edit"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_complete": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "issue_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 35,
+ "deciding": {
+  "result_supported": "Fail agrees with the one dangerous item.",
+  "report_complete": "examiner_signoff_at is null, yet the countersignature is present, so completeness is arguable.",
+  "disposition": "Countersigned and result consistent, so filing is reasonable despite the missing examiner timestamp.",
+  "staff_effort": "Nothing needs more than a quick check.",
+  "issue_severity": "Only the signoff timestamp is missing, which cannot change the result."
+ },
+ "request": "rec-F439-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00529
+}

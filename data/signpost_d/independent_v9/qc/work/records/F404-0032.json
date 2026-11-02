@@ -1,0 +1,130 @@
+{
+ "id": "F404-0032",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "Birch",
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty"
+  },
+  "children": {
+   "booked": 2,
+   "slots": [
+    {
+     "t": "15:45",
+     "signed_in": 6
+    },
+    {
+     "t": "16:30",
+     "signed_in": 6
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S1",
+    "ratio": true,
+    "out": "17:00"
+   },
+   {
+    "id": "S2",
+    "ratio": true,
+    "out": "17:00"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S1",
+    "out": "15:51"
+   },
+   {
+    "id": "S2",
+    "check_status": "pending"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F4",
+    "from": "15:51",
+    "to": "17:00",
+    "room": "Birch",
+    "countersigned_by": "Head"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 4
+  }
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 6,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 69,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 4
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 6,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 69,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 4
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "file_no_action",
+   "second": "escalate_notify",
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "paperwork_only",
+   "second": null,
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "below_ratio": "6 children need 1 eligible adult. S1 left 15:51 and S2 is pending, but signed floater F4 for Birch covers 15:51-17:00, so ratio is met.",
+  "disposition": "A 69-minute staff gap (just over 60) with 4 prior breaches argues for notification, while full signed cover argues for filing. S2 is counted in the rota but pending.",
+  "primary_cause": "Rota and sign-in disagree (early out, pending S2), yet recomputed cover with F4 meets ratio, which points to paperwork only.",
+  "shortfall_duration": "S1's gap runs 15:51-17:00, which is 69 minutes. The cover spans it exactly, so the total depends on whether the cover is counted.",
+  "breach_severity": "With F4 counted no child is beyond cover. Without it, S1's departure leaves 6 children and only the pending S2, so zero or one beyond depends on how S2 is read."
+ },
+ "request": "rec-F404-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011351
+}

@@ -1,0 +1,131 @@
+{
+ "id": "F434-0001",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 2,
+   "riders_started": 140
+  },
+  "post": {
+   "km_marker": 31,
+   "post_type": "junction",
+   "on_post_from": "11:05",
+   "off_post_at": "12:40"
+  },
+  "incidents": [
+   {
+    "time": "12:02",
+    "km": 31,
+    "type": "vehicle_on_course",
+    "medic_called": true,
+    "medic_arrival_min": 4.3,
+    "rider_status": "transferred",
+    "escort_present": true
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "11:30",
+     "ok": false
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "time": "12:04",
+     "km": 31,
+     "type": "vehicle_on_course"
+    }
+   ],
+   "medical_handovers": [
+    {
+     "bib": 57,
+     "km": 31,
+     "destination": "St Anne Hospital"
+    }
+   ]
+  },
+  "sweep": {
+   "passed_at": "12:43",
+   "last_rider_bib": 140
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "time_offset_minor",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "medic_attended",
+  "staffing_gap": "left_before_sweep",
+  "relief_swap_logged": false,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": 4.27,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "time_offset_minor",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "medic_attended",
+  "staffing_gap": "left_before_sweep",
+  "relief_swap_logged": false,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": 4.27,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "safety_review",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "contested",
+   "target": "rider_fall",
+   "second": "no_incident",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "coverage_held": "off_post_at 12:40 is three minutes before sweep passed_at 12:43, no relief entry; only a small gap, so leaning true.",
+  "next_step": "Vehicle on course with a hospital transfer and a failed radio check; confirmed in control, so a formal safety review is needed.",
+  "incident_class": "Post and control log a vehicle on course, but escort present and no fall is recorded, yet bib 57 was transferred, so rider_fall versus no_incident is contested.",
+  "reversal_time": "Hospital transfer in control; injury recovery time unknown, so level 3 slightly ahead of level 2.",
+  "consequence_severity": "Medic attended and handover to St Anne Hospital confirmed, supporting level 3; the intrusion was escorted and the rider status is ambiguous, leaving level 2."
+ },
+ "request": "rec-F434-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006875
+}

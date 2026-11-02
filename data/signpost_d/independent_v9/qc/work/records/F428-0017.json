@@ -1,0 +1,140 @@
+{
+ "id": "F428-0017",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-212",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 40,
+   "seal_type": "J_bulb",
+   "clear_width": 4.5,
+   "clear_width_unit": "m",
+   "consequence_class": "high"
+  },
+  "inspection": {
+   "insp_id": "I-5531",
+   "asset_id": "VL-212",
+   "insp_date": "2025-02-14",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-02-14",
+    "closure_s": 38,
+    "leakage_l_min": 5,
+    "leakage_limit_l_min": 20,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "MN-02",
+    "component": "seal_music_note",
+    "grade": 1,
+    "status": "open",
+    "first_seen": "2025-01-09"
+   },
+   {
+    "code": "PT-01",
+    "component": "leaf",
+    "grade": 3,
+    "status": "closed",
+    "first_seen": "2023-06-01"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [],
+   "last_service": "2024-10-03"
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "temp_barrier_deployed": false,
+   "flood_alert_active": true,
+   "forecast": {
+    "peak_date": "2025-02-22",
+    "peak_level_mAOD": 3.4,
+    "sill_level_mAOD": 1.1
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.95,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "none",
+  "mismatch_count": 1,
+  "mismatch_location": "seal_type",
+  "test_status": "passed_current",
+  "repair_progress": "none_needed",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 8,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.51,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "none",
+  "mismatch_count": 2,
+  "mismatch_location": "seal_type",
+  "test_status": "passed_current",
+  "repair_progress": "none_needed",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 8,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "raise_repair",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 134,
+ "deciding": {
+  "closure_test_valid": "Test performed on insp_date, pass, 38 s vs rated 40 s, leakage 5 under limit 20.",
+  "next_step": "Open seal defect MN-02 has no work order, flood alert is active and the peak is on 2025-02-22, so a works order should be raised now.",
+  "defect_class": "Only open defect is grade 1; the grade 3 leaf defect is closed.",
+  "section_discrepancies": "Register seal_type J_bulb vs defect component seal_music_note: a possible single mismatch; all else agrees.",
+  "flood_risk": "Closes within rated time and open defect is grade 1, but a closed grade 3 defect is in history, which holds level 0 vs 1 in balance."
+ },
+ "request": "rec-F428-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010422
+}

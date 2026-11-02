@@ -1,0 +1,136 @@
+{
+ "id": "F421-0020",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-86650",
+   "service": "exp",
+   "fragile": false,
+   "contents": "drone kit",
+   "qty": 1,
+   "weight_kg": 3.0,
+   "declared_value_gbp": 1390.3
+  },
+  "handling_events": [
+   {
+    "ts": "2024-08-19T04:50",
+    "site": "HUB-W",
+    "code": "SCAN",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-08-19T15:10",
+    "site": "HUB-W",
+    "code": "SCAN",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-08-20T07:20",
+    "site": "DEP-R",
+    "code": "INB"
+   },
+   {
+    "ts": "2024-08-20T09:40",
+    "site": "DEP-R",
+    "code": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-08-20T11:00",
+   "inspector": "T.Ede",
+   "observed_item": "drone kit",
+   "qty_found": 1,
+   "weight_kg": 1.9,
+   "condition": "case torn, tape cut and resealed",
+   "photos": [],
+   "repair_est_gbp": 589
+  },
+  "claim": {
+   "claim_id": "C-662",
+   "claimed_gbp": 971.85,
+   "item_desc": "drone kit",
+   "packaging_desc": "hard case in carton",
+   "submitted": "2024-08-22"
+  },
+  "notes": [
+   "Hub W damaged it before it reached us, in my view."
+  ]
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "photos_missing",
+  "loss_pct": 42.37,
+  "declared_value": 1390.3,
+  "scan_order_anomaly": false,
+  "tamper_signs": true,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.65
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "photos_missing",
+  "loss_pct": 42.37,
+  "declared_value": 1390.3,
+  "scan_order_anomaly": false,
+  "tamper_signs": true,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.65
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "approve_repack",
+   "second": "escalate_supervisor",
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 93,
+ "deciding": {
+  "depot_fault": "Two upstream DMG scans at HUB-W, but a clean inbound and a new DMG at depot sort.",
+  "contents_match": "Same item name and qty but weight 3.0 vs 1.9 kg and resealed tape.",
+  "next_step": "Photos list empty and resealing signs; repack versus supervisor referral both defensible.",
+  "loss_share": "Repair 589 of 1390.30 is 42.4%, within partial but claim of 971.85 pulls toward major.",
+  "parties_needed": "Missing photos, claim and tamper question: two or three teams could be needed."
+ },
+ "request": "rec-F421-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005509
+}

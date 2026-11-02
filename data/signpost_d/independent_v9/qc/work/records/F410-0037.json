@@ -1,0 +1,191 @@
+{
+ "id": "F410-0037",
+ "family": "F410",
+ "state": {
+  "application": {
+   "licence_no": "ML-1190",
+   "holder_ref": "H-2260",
+   "holder_name": "A. Brennan",
+   "term_start": "2026-01-01",
+   "term_end": "2026-12-31",
+   "pitch_req": {
+    "market": "Central",
+    "width_m": 3.32,
+    "depth_m": 2.5
+   },
+   "commodities": [
+    "phone cases",
+    "chargers"
+   ],
+   "docs_pending": []
+  },
+  "licence_current": {
+   "licence_no": "ML-1190",
+   "holder_ref": "H-2260",
+   "holder_name": "A. Brennan",
+   "expires": "2025-12-31",
+   "pitch": {
+    "market": "Central",
+    "pitch_no": 14,
+    "width_m": 3.0,
+    "depth_m": 2.5
+   },
+   "commodities": [
+    "phone cases"
+   ],
+   "conditions": {
+    "min_attendance_pct": 60,
+    "max_width_m": 3.5
+   },
+   "variations": [
+    {
+     "type": "commodity_and_width",
+     "detail": "add chargers, 3.32 m",
+     "approved": true,
+     "approved_on": "2025-10-02"
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "insurer_ref": "PL-88",
+    "start": "2025-01-01",
+    "end": "2026-12-20",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": "2025-11-15",
+    "new_end": "2027-01-01"
+   },
+   "food_reg": null
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2026",
+     "amount_gbp": 300
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2025-12-01",
+     "amount_gbp": 300,
+     "method": "bacs"
+    }
+   ],
+   "payment_plan": null
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 35,
+   "absence_notices": [
+    {
+     "date": "2025-03-10",
+     "reason": "illness",
+     "accepted": true
+    },
+    {
+     "date": "2025-07-21",
+     "reason": "family",
+     "accepted": true
+    },
+    {
+     "date": "2025-09-05",
+     "reason": "vehicle",
+     "accepted": true
+    }
+   ],
+   "complaints": [],
+   "enforcement_notices": 0
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_within_14d_of_term_end",
+  "broker_confirmation_held": true,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.32,
+  "variation_approved": true,
+  "fee_arrears_gbp": 0.0,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.7,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "ends_within_14d_of_term_end",
+  "broker_confirmation_held": true,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "not_registered",
+  "stall_size_delta_m": 0.32,
+  "variation_approved": true,
+  "fee_arrears_gbp": 387.32,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.7,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "grant",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "clear",
+   "target": "none_needed",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "discrepancy_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 133,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-12-20 is before term_end 2026-12-31, but broker_conf.new_end 2027-01-01 covers the full term at the required 5,000,000.",
+  "renewal_disposition": "Fees are fully paid, the width and commodity changes match an approved variation, the three absences are accepted, and there are no complaints or pending documents.",
+  "inspection_level": "The commodity and width changes are formally approved, this is a non-food stall with no food registration, and nothing is unchanged or unverified.",
+  "reversal_time": "A straightforward grant with nothing outstanding could be withdrawn the same day.",
+  "discrepancy_count": "The pli end date, the width and the commodity are each explained by broker confirmation or the approved variation, and attendance is covered by accepted absences. A reader might still query attendance at 70%."
+ },
+ "request": "rec-F410-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009793
+}

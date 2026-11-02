@@ -1,0 +1,117 @@
+{
+ "id": "F418-0044",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "plat": 4,
+   "date": "2025-04-09",
+   "min_staff": 2
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S5"
+   },
+   {
+    "post": "B",
+    "staff_id": "S9"
+   }
+  ],
+  "attendance": null,
+  "events": [],
+  "controls": {
+   "disp_ref": null,
+   "prior_shortfalls_30d": 2
+  },
+  "remarks": [
+   "Full roster worked."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 0,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 92,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "exposure_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 25,
+ "deciding": {
+  "headcount_verified": "attendance is null, so no sign-on or competence record backs the two rostered staff, though the roster is complete.",
+  "next_step": "Events empty with no gap, roster complete and remark 'Full roster worked'; nothing needs action.",
+  "coverage_outcome": "Both min_staff 2 posts are rostered (S5, S9) and events contains no gap.",
+  "reversal_time": "No exposure occurred, so nothing needs undoing.",
+  "exposure_severity": "events is empty, with no gap_start, so no period below minimum."
+ },
+ "request": "rec-F418-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009965
+}

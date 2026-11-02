@@ -1,0 +1,150 @@
+{
+ "id": "F437-0002",
+ "family": "F437",
+ "state": {
+  "job": {
+   "job_id": "J-51872",
+   "lang_pair": "en>fr",
+   "target_locale": "fr-FR",
+   "ordered_words": 3100,
+   "source_version": "v3",
+   "glossary_version": "5",
+   "due_at": "2025-04-22T10:00:00Z",
+   "terms": {
+    "glossary_exception": true,
+    "variant_accepted": false
+   }
+  },
+  "source": {
+   "version": "v3",
+   "segment_count": 220,
+   "word_count": 3100
+  },
+  "deliverable": {
+   "target_locale": "fr-FR",
+   "built_from_version": "v2",
+   "segments_translated": 220,
+   "word_count": 3040,
+   "glossary_version_used": "4",
+   "delivered_at": "2025-04-19T01:00:00Z"
+  },
+  "qa_report": {
+   "run_at": "2025-04-18T20:00:00Z",
+   "flags": 31,
+   "false_positive_marked": 23,
+   "number_mismatches": [
+    {
+     "src": "1,250",
+     "tgt": "1.205"
+    },
+    {
+     "src": "14%",
+     "tgt": "41%"
+    }
+   ],
+   "unresolved": {
+    "critical": 0,
+    "major": 3,
+    "minor": 2
+   }
+  },
+  "review": {
+   "reviewer_id": "R11",
+   "assigned_at": "2025-04-18T09:00:00Z",
+   "completed_at": "2025-04-19T01:10:00Z",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "critical",
+     "status": "open"
+    },
+    {
+     "sev": "major",
+     "status": "open"
+    },
+    {
+     "sev": "minor",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [],
+   "reassignments": 1
+  }
+ },
+ "factors": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "critical",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.74,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": 81,
+  "client_waiver": true,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.74,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": 81,
+  "client_waiver": true,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "hold_for_item",
+   "second": "return_for_fix",
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 89,
+ "deciding": {
+  "scope_matches": "job.source_version and source.version are v3, but deliverable.built_from_version is v2. Segment counts match at 220 and the word count differs by about 2%.",
+  "reviewed_in_time": "Review completed_at 01:10 is ten minutes after delivered_at 01:00 on the same night, although signed_off is true. That makes late sign-off likely but not certain.",
+  "next_step": "The v2 build may need a v3 rebuild or a confirmed source file, which points to hold. Open errors and 81 hours of slack make a fix and resubmit equally defensible.",
+  "open_severity": "One critical review error is open while qa_report.unresolved shows critical 0 and major 3. The critical item is unconfirmed, so level 2 remains plausible.",
+  "parties_needed": "Translator, reviewer, PM and the source or version owner may all be needed, and the number errors could add a fourth or fifth party. The list is unclear between three-or-four and five-plus."
+ },
+ "request": "rec-F437-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01067
+}

@@ -1,0 +1,124 @@
+{
+ "id": "F434-0008",
+ "family": "F434",
+ "state": {
+  "post": {
+   "km_marker": 58,
+   "on_post_from": "09:30",
+   "off_post_at": "12:10",
+   "marshals_rostered": 2,
+   "marshals_signed_in": 1
+  },
+  "incidents": [
+   {
+    "time": "11:05",
+    "km": 58,
+    "type": "mechanical",
+    "bibs": [
+     31
+    ],
+    "rider_status": "continued"
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "11:00",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "time": "11:07",
+     "km": 58,
+     "type": "mechanical",
+     "bibs": [
+      31
+     ]
+    }
+   ],
+   "road_reopened_at": {
+    "55-60": "12:30"
+   }
+  },
+  "sweep": null
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "time_offset_minor",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "gap_during_race",
+  "relief_swap_logged": false,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 30.51,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "time_offset_minor",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "gap_during_race",
+  "relief_swap_logged": false,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 30.51,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "query_marshal",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "mechanical_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 64,
+ "deciding": {
+  "coverage_held": "Only one of two marshals signed in and sweep is null so sweep passage cannot be verified; off_post 12:10 before reopening 12:30 keeps true plausible.",
+  "next_step": "Only a 2-minute time offset between post (11:05) and control (11:07) for the same mechanical event; a clerical fix by the marshal.",
+  "incident_class": "Both logs list only a mechanical stop for bib 31, continued, no fall or intrusion.",
+  "reversal_time": "Only a mechanical stop and missing sweep record; correcting records takes days, possibly weeks, so level 1 or 2.",
+  "consequence_severity": "No medic or fall is recorded, so level 3 rests only on the unverified sweep and weak staffing, balanced against level 2 caution."
+ },
+ "request": "rec-F434-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005011
+}

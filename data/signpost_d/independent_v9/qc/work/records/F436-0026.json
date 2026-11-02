@@ -1,0 +1,121 @@
+{
+ "id": "F436-0026",
+ "family": "F436",
+ "state": {
+  "article": {
+   "slug": "depot-funds",
+   "first_published_at": "2024-05-02T06:00",
+   "channels": [
+    "web",
+    "print"
+   ],
+   "disputed_passage": "Council paid the firm £48,000 for work never done, the report found."
+  },
+  "complaint": {
+   "received_at": "2024-05-15T06:00",
+   "summary": "Figure is wrong; audit says £38,000.",
+   "cited_source": "audit PDF"
+  },
+  "desk_check": {
+   "source_doc": null,
+   "reporter_notes": "£48,000 per council press officer",
+   "filed_copy": "£48,000",
+   "attachments": [
+    "audit.pdf:null"
+   ]
+  },
+  "history": {
+   "edits": [
+    {
+     "at": "2024-05-01T22:10",
+     "by": "sub",
+     "note": "figure"
+    }
+   ],
+   "prior_corrections": 2
+  },
+  "draft_correction": {
+   "stated_value": "£34,000"
+  }
+ },
+ "factors": {
+  "error_status": "unverifiable_pending",
+  "error_origin_stage": "editing_stage",
+  "discrepancy_field": "figure",
+  "discrepancy_size": "moderate",
+  "claim_type": "incidental_fact",
+  "hours_live": 312,
+  "distribution_channels": "print_and_syndicated",
+  "mitigation_present": false,
+  "missing_evidence": true,
+  "legal_signal": false,
+  "legal_cleared": false,
+  "draft_fix_mismatch": true,
+  "prior_corrections": 2,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "error_status": "confirmed_by_source",
+  "error_origin_stage": "source_supplied",
+  "discrepancy_field": "figure",
+  "discrepancy_size": "moderate",
+  "claim_type": "wrongdoing_implication",
+  "hours_live": 312,
+  "distribution_channels": "print_and_syndicated",
+  "mitigation_present": false,
+  "missing_evidence": true,
+  "legal_signal": false,
+  "legal_cleared": false,
+  "draft_fix_mismatch": true,
+  "prior_corrections": 2,
+  "boundary_case": false
+ },
+ "plan": {
+  "error_confirmed": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "correct_now",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_origin": {
+   "clarity": "clear",
+   "target": "editing_stage",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "spread": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "harm_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 86,
+ "deciding": {
+  "error_confirmed": "Audit attachment is null, so complaint's £38,000 is unverified, but the sub edit on the figure keeps an error plausible.",
+  "next_step": "Draft says £34,000, matching neither figure; the draft must be fixed against the audit, which is missing, so correct_now is only leaning.",
+  "error_origin": "Notes and filed copy both say £48,000; the only change is a sub edit on the figure, so editing.",
+  "spread": "Print channel is listed, but the record shows no syndication, so level 2 versus 1 is balanced.",
+  "harm_severity": "The wording implies wasted funds yet names only the council, a borderline between incidental and attributed."
+ },
+ "request": "rec-F436-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005127
+}

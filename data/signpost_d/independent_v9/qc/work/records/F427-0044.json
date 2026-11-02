@@ -1,0 +1,169 @@
+{
+ "id": "F427-0044",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V104",
+   "site_ref": "GR-31",
+   "visit_date": "2024-09-03",
+   "surveyor_grade": "trainee",
+   "weather_on_day": "overcast"
+  },
+  "site_targets": {
+   "band_top_cm": 10,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 4,
+   "dams_total": 3
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 50
+    },
+    {
+     "depth_cm": 47
+    },
+    {
+     "depth_cm": 48
+    },
+    {
+     "depth_cm": 47
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 18,
+     "prev_depth_cm": 18
+    }
+   ],
+   "rain_30d_pct_normal": 98
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D2",
+     "pool_level_cm": 3,
+     "design_pool_cm": 40,
+     "defect_code": "BRCH",
+     "remark": "Central cut; only a trickle held behind."
+    }
+   ],
+   "open_work_orders": [
+    {
+     "dam_id": "D2",
+     "status": "raised"
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 5
+    },
+    {
+     "q": 2,
+     "score": 6
+    }
+   ],
+   "photos_uploaded": 9,
+   "photos_expected": 10
+  },
+  "notes": {
+   "surveyor_note": "Mostly fine, small dip at D2.",
+   "prior_visits": [
+    {
+     "date": "2023-10-05",
+     "entry": "breach D2"
+    },
+    {
+     "date": "2024-03-18",
+     "entry": "breach D2"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 1.0,
+  "photos_status": "partial",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "failed",
+  "water_table_offset_cm": -23.0,
+  "rainfall_pct_normal": 98.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 2,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.43,
+  "photos_status": "none",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -22.76,
+  "rainfall_pct_normal": 61.27,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 2,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_lead",
+   "second": "request_data",
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "well_below",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 68,
+ "deciding": {
+  "dam_caused_drop": "Rain is 98% of normal and the control well is unchanged, while D2 is breached: the dam explains the low wells.",
+  "next_step": "Repeat breach at D2 (two prior entries) favours escalation; photos 9 of 10 leave a request for data defensible.",
+  "hydro_state": "Mean depth about 48 cm against floor 25, roughly 23 cm below, more than 15.",
+  "dam_severity": "Code BRCH with 3 cm of 40 cm design pool is almost nothing held, but a trickle is held, so level 2 is arguable.",
+  "evidence_completeness": "Wells and quadrats are full, inspection logged, photos 9 of 10; full versus partly is contested."
+ },
+ "request": "rec-F427-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010228
+}

@@ -1,0 +1,123 @@
+{
+ "id": "F424-0050",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B505",
+   "vessel_id": "FV5",
+   "yeast_strain": "Safale US-05",
+   "fg_target_max": 1.014
+  },
+  "readings": [
+   {
+    "ts": "2024-08-05",
+    "gravity_plato": 3.7
+   },
+   {
+    "ts": "2024-08-06",
+    "gravity_plato": 3.6
+   }
+  ],
+  "events": [
+   {
+    "type": "pitch",
+    "note": "Pitched US-05, all fine."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B550",
+   "abv_pct": 4.45,
+   "abv_label_band": 4.0,
+   "micro_plate": {
+    "result": "presumptive",
+    "cfu_ml": 15
+   },
+   "retest": [
+    {
+     "result": "negative"
+    }
+   ]
+  },
+  "release_request": {
+   "vessel_id": "FV6"
+  }
+ },
+ "factors": {
+  "gravity_status": "still_dropping_just_above_band",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": "not reported",
+  "discrepancy_count": "2 to 3",
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "gravity_status": "still_dropping",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.07,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "reassuring"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 64,
+ "deciding": {
+  "terminal_gravity": "3.7 then 3.6 °P (about 1.0145 SG) vs band max 1.014: still falling and marginally above, but nearly in band.",
+  "contamination_supported": "Presumptive plate 15 cfu/ml against a negative retest with no explanation of the plate.",
+  "batch_disposition": "Results are complete and the fixes are record corrections at packaging.",
+  "deviation_severity": "ABV 4.45 vs label band 4.0 is about 11% over, under the 0.5 hard limit.",
+  "record_discrepancies": "Lab batch_ref B550 vs B505 and vessel FV5 vs FV6 are clear; strain 'US-05' vs 'Safale US-05' is a borderline abbreviation."
+ },
+ "request": "rec-F424-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009075
+}

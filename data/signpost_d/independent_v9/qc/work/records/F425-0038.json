@@ -1,0 +1,181 @@
+{
+ "id": "F425-0038",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "farm_ref": "F-2291",
+   "flock_id": "FL-18",
+   "producer_code": "1UK-7C20",
+   "method": "free_range",
+   "lay_dates": [
+    "2024-08-11"
+   ],
+   "received_at": "2024-08-11T16:30",
+   "declared_eggs": 2000,
+   "trays": 67
+  },
+  "grading_run": {
+   "grader_id": "G2",
+   "run_start": "2024-08-12T07:00",
+   "run_end": "2024-08-12T09:10",
+   "eggs_in": 2000,
+   "by_size": {
+    "S": 180,
+    "M": 700,
+    "L": 800,
+    "XL": 266
+   },
+   "outgrades": {
+    "cracks": 9,
+    "dirties": 6,
+    "blood_spots": 4,
+    "leakers": 3,
+    "misshapen": 2
+   },
+   "class_a_total": 1946
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-05-10",
+    "interval_days": 90,
+    "manual_recheck": {
+     "n": 200,
+     "cracks_found": 0
+    }
+   },
+   "candling_sample": {
+    "n": 100,
+    "sampled_at": "2024-08-12T08:00"
+   },
+   "scale_check": {
+    "ok": true
+   },
+   "store_temp": {
+    "minutes_above_limit": 0,
+    "max_c": 12
+   }
+  },
+  "flock": {
+   "age_weeks": 52,
+   "salmonella_vaccinated": true,
+   "last_swab": {
+    "date": "2024-07-30",
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2024-08-12",
+   "packs": [
+    {
+     "size": "S",
+     "count": 180
+    },
+    {
+     "size": "M",
+     "count": 700
+    },
+    {
+     "size": "L",
+     "count": 800
+    },
+    {
+     "size": "XL",
+     "count": 266
+    }
+   ],
+   "stamp_code": "1UK-7C20",
+   "best_before": "2024-09-08",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "moderate",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 1,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 1.2,
+  "dominant_defect": "mixed",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 52
+ },
+ "factors_sampled": {
+  "count_gap_size": "moderate",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 1,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 6.97,
+  "dominant_defect": "mixed",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 52
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release_class_a",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "clear",
+   "target": "no_anomaly",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "lay_to_pack": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "outgrade_share": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 161,
+ "deciding": {
+  "counts_reconcile": "Sizes 1946 + outgrades 24 = 1970 against eggs_in 2000, a 30 egg (1.5%) gap.",
+  "batch_disposition": "Packed one day after lay, swab negative, all checks present and calibration rechecked with 0 cracks; only the 1.5% bin gap leaves doubt.",
+  "anomaly_cause": "Outgrades of 24 are very low, the calibration recheck found 0 cracks, and there is no temperature flag.",
+  "lay_to_pack": "Lay 2024-08-11, pack 2024-08-12: 1 day.",
+  "outgrade_share": "24 outgrades of 2000 eggs_in is 1.2%."
+ },
+ "request": "rec-F425-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009825
+}

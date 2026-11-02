@@ -1,0 +1,127 @@
+{
+ "id": "F416-0038",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "date": "2025-05-11",
+   "end": "13:15"
+  },
+  "roster": [
+   {
+    "id": "G4",
+    "exp": "2026-02-01"
+   },
+   {
+    "id": "G5",
+    "exp": "2026-02-01"
+   }
+  ],
+  "incidents": [
+   {
+    "date": "2025-05-11",
+    "type": "water_rescue",
+    "resp": [
+     "G4",
+     "G5"
+    ],
+    "outcome": "conveyed",
+    "aed_used": true,
+    "ambulance_ref": "A-902"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jetski",
+    "out_from": "10:00",
+    "out_to": null
+   }
+  ],
+  "handover": {
+   "rescues": 1,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "check_sheet_ref": "C7"
+  }
+ },
+ "factors": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "conveyed with aed_used true",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "factors_sampled": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "kit_defect_unlisted",
+  "worst_outcome": "conveyed",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": false,
+  "missing_record": "ambulance_ref",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "two_guard_cover": "The rescue lists G4 and G5, both with qual_exp in 2026 and both rostered; no other roster fields are given, so rostering is not fully verifiable.",
+  "totals_reconcile": "Handover rescues 1 and kit_defects 1 match the one incident and the one equipment entry with out_from set; the dates match.",
+  "next_step": "Sign-off and check_sheet_ref are present, cover is two-guard, totals match, and nothing is missing, so the log is filed as it stands.",
+  "outcome_severity": "aed_used is true, which points to critical, but the outcome code is conveyed with an ambulance_ref, which leaves some doubt.",
+  "kit_outage": "The jetski went out at 10:00 with out_to null and no substitute; the shift ended at 13:15, which is about 195 minutes, just above the 180 boundary."
+ },
+ "request": "rec-F416-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01015
+}

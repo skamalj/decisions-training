@@ -1,0 +1,118 @@
+{
+ "id": "F423-0041",
+ "family": "F423",
+ "state": {
+  "job": {
+   "run_qty": 26500,
+   "overs_pct": 2.15,
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "ok_sheet_no": 4,
+   "signed_at": "2024-05-06T08:12"
+  },
+  "colour_readings": {
+   "calibrated_on": "2024-02-09",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.8
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.0
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.28,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "S120",
+   "first_production_at": "2024-05-06T08:14",
+   "sheets_production": 2658
+  }
+ },
+ "factors": {
+  "colour_deviation": "marginal",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2658,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.15,
+  "register_offset_mm": 0.28,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 87,
+  "customer_tier": "standard",
+  "prior_stoppages": 2
+ },
+ "factors_sampled": {
+  "colour_deviation": "multiple_over",
+  "concession_on_file": false,
+  "readings_completeness": "section_null",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2658,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.15,
+  "register_offset_mm": 0.28,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 87,
+  "customer_tier": "standard",
+  "prior_stoppages": 2
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "adjust_and_recheck",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 37,
+ "deciding": {
+  "colour_in_tolerance": "Patches read 2.8 and 3.0 against spec_max_de 3.0, so they are at the limit and not over it. The spectro was calibrated 87 days earlier, close to the 90-day mark, which leaves the readings open to doubt.",
+  "run_before_signoff": "signed_at 08:12 is two minutes before first_production_at 08:14, so the signature precedes production. The gap is tiny, and 2658 production sheets are logged, so a doubt remains.",
+  "next_step": "The 0.28 mm offset is on a target with in_image true, which is over the 0.15 mm limit. Register therefore fails and needs correcting on press and re-pulling.",
+  "staff_effort": "This is a single press adjustment and one re-pull, which is under an hour. Re-measuring and re-checking the 2658 printed sheets could push it into the 1-8 hour range.",
+  "scrap_exposure": "2658 production sheets against run_qty 26500 is about 10.03%, right at the 10% boundary. That is against an overs allowance of roughly 570 sheets. The misregistered sheets are suspect, so the count sits at the boundary between level 2 and level 3."
+ },
+ "request": "rec-F423-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011407
+}

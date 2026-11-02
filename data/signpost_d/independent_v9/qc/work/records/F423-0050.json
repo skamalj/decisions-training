@@ -1,0 +1,145 @@
+{
+ "id": "F423-0050",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-53018",
+   "stock_spec": "MT130",
+   "run_qty": 9000,
+   "overs_pct": 4.79,
+   "customer_tier": "trade",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "CP-6402",
+   "signed_at": null,
+   "customer_present": true,
+   "concession": {
+    "accepted_max_de": 3.5
+   }
+  },
+  "colour_readings": {
+   "instrument": "SP-5",
+   "calibrated_on": "2025-07-06",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.2
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.3
+    },
+    {
+     "ink": "K",
+     "delta_e": 1.5
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "units": "2-3",
+     "offset_mm": 0.22,
+     "in_image": true
+    },
+    {
+     "units": "4-5",
+     "offset_mm": 0.05,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "MT130",
+   "first_production_at": "2025-07-08T06:10:00",
+   "sheets_production": 1097,
+   "stoppages": [
+    "jam",
+    "wash",
+    "jam",
+    "feeder"
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "marginal",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 1097,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 4.79,
+  "register_offset_mm": 0.22,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 2,
+  "customer_tier": "trade",
+  "prior_stoppages": 4
+ },
+ "factors_sampled": {
+  "colour_deviation": "marginal",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 1097,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 4.79,
+  "register_offset_mm": 0.07,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 2,
+  "customer_tier": "trade",
+  "prior_stoppages": 4
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "adjust_and_recheck",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 86,
+ "deciding": {
+  "colour_in_tolerance": "Magenta 3.3 exceeds spec_max_de 3.0 but is under concession accepted_max_de 3.5 on a freshly calibrated instrument, so it passes under the concession.",
+  "run_before_signoff": "signed_at is null while 1097 production sheets are logged.",
+  "next_step": "Unit 2-3 offset 0.22 mm with in_image true exceeds 0.15 mm, so register must be corrected and re-pulled before signing.",
+  "staff_effort": "Correcting register, re-pulling and obtaining signature, plus sorting 1097 sheets, could be one to five days; the exact amount is open.",
+  "scrap_exposure": "1097 production sheets printed with in-image misregister are about 12% of run_qty 9000, above 10% and above overs of about 431."
+ },
+ "request": "rec-F423-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009381
+}

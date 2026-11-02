@@ -1,0 +1,326 @@
+{
+ "id": "F415",
+ "domain": "public toilet cleaning logs",
+ "role": "Contract monitoring officer for a borough council's public conveniences service, reviewing one contractor shift cleaning log at a time for a single toilet block",
+ "setting": "A cleaning contractor submits a digital log for every shift at each council-owned public toilet block. The log covers scheduled cleaning slots, the visits actually recorded, any hygiene faults reported during the shift and their remedy, and a supervisor sign-off. The officer checks each submitted log against the schedule and the contract standard. The officer decides whether a clean was genuinely missed, whether the sign-off is valid and what to do with the log. The officer also rates how long users were exposed to an unremedied fault. Closures, approved exemptions and operative notes often explain apparent gaps, so the officer must weigh them against the alarming signals.",
+ "questions": {
+  "missed_clean": {
+   "type": "noul",
+   "instructions": "At least one scheduled clean was genuinely missed without valid exemption.",
+   "criteria": {
+    "true": "A slot lacks a completed visit and no covering closure.",
+    "false": "All slots completed, or gaps covered by approved closure."
+   }
+  },
+  "sign_off_valid": {
+   "type": "noul",
+   "instructions": "The supervisor sign-off is valid for this shift log.",
+   "criteria": {
+    "true": "Authorised supervisor signed after the final recorded visit.",
+    "false": "Missing, unauthorised signer, or signed before final visit."
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the officer do with this shift log?",
+   "criteria": {
+    "accept": "Log meets contract standard with no follow-up needed.",
+    "accept_noted": "Minor recording lapse noted against contractor, no service failure.",
+    "hold": "One unconfirmed item must be evidenced before deciding.",
+    "default_notice": "Confirmed service failure triggers a contractual default notice."
+   }
+  },
+  "staff_effort": {
+   "type": "score",
+   "instructions": "How much staff time would fully resolving this record require?",
+   "criteria": [
+    "Under one hour of staff time needed",
+    "One to eight hours of staff time",
+    "One to five working days of staff time",
+    "More than five working days of staff time"
+   ]
+  },
+  "fault_exposure": {
+   "type": "score",
+   "instructions": "How long was an unremedied hygiene fault open to users?",
+   "criteria": [
+    "No fault open while block was public",
+    "Open-to-public fault remedied within 60 minutes",
+    "Open-to-public fault remedied after 60 to 240 minutes",
+    "Open over 240 minutes or never remedied"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "scheduled_slots",
+   "description": "Number of cleaning slots scheduled for the shift; sets how many visits the log should contain.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 3,
+   "max": 8,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "missed_slots",
+   "description": "Number of scheduled slots with no completed visit recorded (visit absent from list or status not_recorded).",
+   "kind": "categorical",
+   "values": [
+    "0",
+    "1",
+    "2"
+   ],
+   "weights": [
+    0.5,
+    0.32,
+    0.18
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S5"
+   ]
+  },
+  {
+   "name": "closure_covers_gap",
+   "description": "Whether an approved closure or exemption window in site.closures overlaps the missed slot(s); only meaningful when missed_slots > 0, otherwise renders as an unrelated closure or none.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "closure_approved",
+   "description": "Whether any closure entry carries an approver; an unapproved closure does not excuse a gap.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.7,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "sign_off_state",
+   "description": "State of the supervisor sign-off: valid, missing (section null), signed by an operative not on the supervisor list, or timestamped before the last visit.",
+   "kind": "categorical",
+   "values": [
+    "valid",
+    "missing",
+    "unauthorised_signer",
+    "signed_before_last_visit"
+   ],
+   "weights": [
+    0.55,
+    0.15,
+    0.12,
+    0.18
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S5"
+   ]
+  },
+  {
+   "name": "fault_type",
+   "description": "Hygiene fault reported during the shift, if any.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "spillage",
+    "blocked_pan",
+    "sharps_find",
+    "no_soap_or_paper",
+    "vandalised_basin"
+   ],
+   "weights": [
+    0.3,
+    0.2,
+    0.15,
+    0.1,
+    0.15,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "fault_open_minutes",
+   "description": "Minutes between fault reported_at and remedied_at; values above 400 render as remedied_at null. Clusters near the 60 and 240 anchors.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 480,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "block_closed_during_fault",
+   "description": "Whether a closure window covers some or all of the fault-open period, reducing time the fault was open to the public.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "checklist_completion",
+   "description": "Completeness of per-visit task checklists: all ticked, some tasks unticked on at least one visit, or checklist null on at least one visit.",
+   "kind": "categorical",
+   "values": [
+    "full",
+    "partial",
+    "absent"
+   ],
+   "weights": [
+    0.55,
+    0.3,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "photo_evidence",
+   "description": "Whether completed visits carry a photo reference; missing photos are a recording lapse, not proof of a missed clean.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.6,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "timestamp_out_of_order",
+   "description": "Whether a visit is logged before shift start or out of sequence with its neighbours, casting doubt on that visit.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S2",
+    "S6"
+   ]
+  },
+  {
+   "name": "note_content",
+   "description": "What the free-text notes convey: routine, an alarming but benign remark, an explanation of a gap that is not backed by a closure entry, or a remark contradicting the structured log.",
+   "kind": "categorical",
+   "values": [
+    "routine",
+    "alarming_benign",
+    "explains_gap_unbacked",
+    "contradicts_log"
+   ],
+   "weights": [
+    0.4,
+    0.25,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "prior_defaults_90d",
+   "description": "Count of default notices at this site in the last 90 days; context only and a decoy for this log's decisions.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "site",
+   "description": "Block identity, opening hours and a closures list with window, reason and approver."
+  },
+  {
+   "name": "shift",
+   "description": "Shift date, start and end times, contractor crew and scheduled slot times."
+  },
+  {
+   "name": "visits",
+   "description": "List of recorded visits with slot, timestamps, status, checklist, photo reference and op_note."
+  },
+  {
+   "name": "faults",
+   "description": "List of hygiene faults with type, reported_at, remedied_at, source and remedy_note."
+  },
+  {
+   "name": "sign_off",
+   "description": "Supervisor signer id, signer role, signed_at and a short comment; null if absent."
+  },
+  {
+   "name": "history",
+   "description": "Prior 90-day counts for this site: defaults, complaints, audits passed."
+  }
+ ],
+ "rendering_notes": "scheduled_slots renders as shift.sched_slots (list of HH:MM times). missed_slots renders as slots in shift.sched_slots with no matching visits entry, or a visits entry with status 'not_recorded'; vary the two forms. closure_covers_gap renders as a site.closures entry whose from/to window spans the missed slot time; when false, closures is empty or holds a window elsewhere in the day. closure_approved renders as closures[].approved_by being an officer id or null. sign_off_state: valid gives a signer_role 'supervisor' and signed_at after the last visit's end time; missing makes sign_off null; unauthorised_signer gives signer_role 'operative'; signed_before_last_visit gives signed_at earlier than the final visits[].end. fault_type none gives an empty faults list. fault_open_minutes renders only as reported_at and remedied_at timestamps (remedied_at null if over 400); the reader must compute the duration. block_closed_during_fault renders as a closures window overlapping the fault interval; exposure counts only time the block was open. Its window may also be the one that covers a missed slot. checklist_completion renders in visits[].checklist as a map of task:boolean, with some false, or as null. photo_evidence renders as visits[].photo_ref string or null. timestamp_out_of_order renders as a visit start earlier than shift.start or earlier than the previous visit. note_content renders in visits[].op_note, faults[].remedy_note and sign_off.comment. Examples include 'strong smell, traced to sewer works on road outside' (alarming_benign) and 'block shut 11:00-12:00 for police incident', with no closures entry (explains_gap_unbacked). Another is 'pan cleared 10:40' while remedied_at is null or later (contradicts_log). Decoys are history.prior_defaults_90d, history.complaints_90d, site.footfall_band and faults[].source ('public_app' vs 'staff'), none of which decide this log's answers. Records must never contain fields such as missed, exposure_minutes, valid_sign_off, outcome or recommended_action. All durations and gaps must be inferred by comparing timestamps across sections. Use ISO 8601 date-times, numbers as numbers and null for unknown values.",
+ "skills": [
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "staff_effort",
+ "next_step": null,
+ "aggravating_factor": null,
+ "design_cost": 0.121208
+}

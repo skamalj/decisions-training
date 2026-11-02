@@ -1,0 +1,164 @@
+{
+ "id": "F430-0030",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S340",
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "C",
+     "normal_band": [
+      40,
+      85
+     ],
+     "alarm_limit": 95,
+     "trip_limit": 105,
+     "customers_fed": 23377,
+     "partner_id": "T2"
+    },
+    {
+     "id": "CB1",
+     "unit": "bar",
+     "normal_band": [
+      5.8,
+      6.4
+     ],
+     "alarm_limit": 5.4,
+     "trip_limit": 5.2
+    }
+   ]
+  },
+  "round": {
+   "id": "RD-12",
+   "date": "2024-07-09",
+   "inspector": "RP",
+   "scheduled_assets": [
+    "T1",
+    "CB1"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 105,
+    "unit": "C",
+    "timestamp": "2024-07-09T10:05"
+   },
+   {
+    "asset_id": "CB1",
+    "param": "op_count",
+    "value": 412
+   }
+  ],
+  "defects": [
+   {
+    "defect_id": "D2",
+    "asset_id": "CB1",
+    "photo_ref": "IMG-902",
+    "note": "SF6 pressure low on CB1."
+   }
+  ],
+  "history": {
+   "previous_round": [
+    {
+     "asset_id": "T1",
+     "param": "oil_temp",
+     "value": 105
+    }
+   ],
+   "open_work_orders": [],
+   "permits": [],
+   "load_events": []
+  },
+  "network": {
+   "partner_status": {
+    "T2": "in_service"
+   },
+   "outage_plan": [
+    {
+     "asset_id": "T2",
+     "from": "2024-07-10",
+     "to": "2024-07-12"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_reading_band": "trip",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "none",
+  "benign_cause_covers": false,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 23377,
+  "trivial_discrepancies": 3,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "trip",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": false,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 23377,
+  "trivial_discrepancies": 3,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "benign_explanation": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "follow_up": {
+   "clarity": "leaning",
+   "target": "urgent_attendance",
+   "second": null,
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "defect_corroborated": "Defect names low SF6 pressure on CB1 but only an operation count was recorded for CB1, no pressure.",
+  "benign_explanation": "No permits, work orders or load events documented, so nothing explains the T1 oil temperature.",
+  "follow_up": "T1 oil temp at the trip limit with no explanation; urgent attendance, tempered by T2 being in service.",
+  "limit_deviation": "Oil temp 105 C equals the 105 trip limit, so trip level, with alarm level arguable on a single stable reading.",
+  "supply_exposure": "T2 is in service and carries load today, but its outage plan starts the next day, so exposure is none or arguably few."
+ },
+ "request": "rec-F430-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009121
+}

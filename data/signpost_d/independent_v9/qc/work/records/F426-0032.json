@@ -1,0 +1,142 @@
+{
+ "id": "F426-0032",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B3",
+   "crop": "pear",
+   "planted_area_ha": 3.0,
+   "lot_id": "L08"
+  },
+  "applications": [
+   {
+    "app_id": 1,
+    "date": "2024-07-30",
+    "product_code": "CD5",
+    "qty_applied": 1.5,
+    "qty_unit": "kg",
+    "area_treated_ha": 2.5
+   },
+   {
+    "app_id": 2,
+    "date": "2024-08-20",
+    "product_code": "AB2",
+    "qty_applied": 4.0,
+    "qty_unit": "L",
+    "area_treated_ha": 2.5
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "CD5",
+    "max_rate_per_ha": 1.0,
+    "rate_unit": "kg",
+    "phi_days": 7,
+    "approved_crops": [
+     "pear"
+    ]
+   },
+   {
+    "product_code": "AB2",
+    "max_rate_per_ha": 2.0,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "approved_crops": [
+     "pear"
+    ]
+   }
+  ],
+  "equipment": null,
+  "harvest": {
+   "first_pick_date": "2024-09-04",
+   "residue_test": {
+    "sampled": false
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin_one_day",
+  "rate_overrun_band": "none",
+  "partial_block_spray": true,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "missing",
+  "missing_item": "equipment_section_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 2,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": true,
+  "clerical_mismatch": "sprayer_id_format",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "expired_under_30d_high_dev",
+  "missing_item": "equipment_section_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 3,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 50,
+ "deciding": {
+  "phi_cleared": "AB2 on 2024-08-20 with phi 14 and first pick 2024-09-04 gives a gap of 15 days, one day of margin; CD5 is far clear. Only counting convention leaves slight doubt.",
+  "next_step": "Rates, crop approvals and intervals all fine, so nothing is outstanding and the lot proceeds.",
+  "finding_class": "Products and crop are approved, rates are under the maximum and intervals are respected; no discrepancies appear.",
+  "reversal_time": "Plain acceptance with no problem found; nothing needs reversing, though the lot would be packed quickly.",
+  "rate_overrun": "Treated-area rates: CD5 1.5/2.5 = 0.6 kg/ha vs 1.0; AB2 4.0/2.5 = 1.6 L/ha vs 2.0; both under max."
+ },
+ "request": "rec-F426-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01124
+}

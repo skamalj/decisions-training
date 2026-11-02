@@ -1,0 +1,134 @@
+{
+ "id": "F409-0019",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "submitted_on": "2024-06-03",
+   "app_type": "change_of_address",
+   "message": "Do you issue visitor vouchers?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "tenancy_agreement",
+     "issued_on": "2024-04-13",
+     "address_line": "Flat 6, 4 Elm Ct",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2022-08-01",
+     "address_line": "Flat 6, 4 Elm Ct",
+     "verified": true
+    }
+   ]
+  },
+  "vehicle": {
+   "keeper_name": "Norwood Fleet Ltd",
+   "supporting_letters": [
+    {
+     "type": "employer_letter",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "E1",
+   "address": "Flat 9, 4 Elm Ct"
+  },
+  "account_history": {
+   "live_permits": [
+    "E1-208"
+   ],
+   "pcns": [],
+   "exceptions": [],
+   "officer_note": "Called applicant, no answer."
+  }
+ },
+ "factors": {
+  "application_type": "change_of_address",
+  "address_match_level": "different_flat",
+  "proof_age_days": 51,
+  "docs_missing": 0,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "change_of_address",
+  "address_match_level": "different_flat",
+  "proof_age_days": 51,
+  "docs_missing": 3,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 3,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 78,
+ "deciding": {
+  "residency_shown": "Both documents give Flat 6 but the request is Flat 9 at the same address, with no explanation, so the address is not matched.",
+  "disposition": "Both required documents are verified and recent, the keeper difference is covered by the employer letter, one household permit is held below the cap, and there are no PCNs.",
+  "main_issue": "The keeper difference is mitigated by the letter and the cap is not reached; the flat difference is the only mild doubt.",
+  "misuse_strength": "The keeper difference is mitigated by the letter, there are no PCNs and the prior permit history is empty, so no unmitigated indicator; the flat mismatch is a doubt, not a street mismatch.",
+  "document_gaps": "The tenancy agreement and ID card are both verified true, and the tenancy agreement is 51 days old."
+ },
+ "request": "rec-F409-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008687
+}

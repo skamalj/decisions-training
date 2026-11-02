@@ -1,0 +1,138 @@
+{
+ "id": "F424-0037",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2244",
+   "vessel_id": "FV2",
+   "volume_hl": 15,
+   "og_target": 1.048,
+   "fg_target_min": 1.009,
+   "fg_target_max": 1.012,
+   "strain_max_temp_c": 25
+  },
+  "readings": [
+   {
+    "ts": "2024-06-02",
+    "gravity_plato": 2.9,
+    "temp_c": 20
+   },
+   {
+    "ts": "2024-06-03",
+    "gravity_sg": 1.011,
+    "temp_c": 20
+   },
+   {
+    "ts": "2024-06-04",
+    "gravity_sg": 1.011,
+    "temp_c": 19.5
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-06-04",
+    "vessel_id": "FV2",
+    "note": "Slight sour note at sampling."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2244",
+   "diacetyl_mgl": 0.09,
+   "micro_plate": {
+    "result": "presumptive",
+    "cfu_ml": 2
+   }
+  },
+  "release_request": {
+   "vessel_id": "FV2",
+   "volume_hl": 15,
+   "note": "Routine."
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive plate plus faint sensory note",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.09,
+  "discrepancy_count": 0,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": false,
+  "temp_excursion": "sustained_major",
+  "excursion_mitigated": true,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.2,
+  "discrepancy_count": 2,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 49,
+ "deciding": {
+  "terminal_gravity": "Last two readings are both 1.011, inside the 1.009-1.012 band.",
+  "contamination_supported": "Presumptive plate (2 cfu/ml) corroborated by a sour sensory note, with no retest or explanation.",
+  "batch_disposition": "Results are complete and in spec, with no out-of-spec readings and a routine request; release as requested.",
+  "deviation_severity": "Temperatures stay below 25C max, diacetyl 0.09 and no out-of-spec value, so no deviation.",
+  "record_discrepancies": "Vessel, volume and refs agree; 2.9P is about 1.011 SG so it is a unit decoy."
+ },
+ "request": "rec-F424-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009129
+}

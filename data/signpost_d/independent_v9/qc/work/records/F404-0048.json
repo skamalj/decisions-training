@@ -1,0 +1,133 @@
+{
+ "id": "F404-0048",
+ "family": "F404",
+ "state": {
+  "session": {
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty",
+   "registered_places": 24
+  },
+  "children": {
+   "booked": 4,
+   "slots": [
+    {
+     "t": "09:00",
+     "signed_in": 6
+    },
+    {
+     "t": "11:00",
+     "signed_in": 8
+    }
+   ]
+  },
+  "staff_signin": [
+   {
+    "staff_id": "S-12",
+    "time_in": "08:00",
+    "time_out": "16:00",
+    "check_status": "ok",
+    "qual_level": 3
+   },
+   {
+    "staff_id": "S019",
+    "time_in": "08:03",
+    "time_out": "16:00",
+    "check_status": "ok",
+    "qual_level": 6
+   }
+  ],
+  "cover_log": [
+   {
+    "staff_id": "F02",
+    "from": "12:00",
+    "to": "12:30",
+    "room_id": "T4",
+    "countersigned_by": null
+   }
+  ]
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 8,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 0,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 0
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 8,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 105,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 0
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "file_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "clear",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 65,
+ "deciding": {
+  "below_ratio": "Peak 8 children needs 1 staff; two eligible staff are signed in all day, so ratio was met. The unsigned floater entry is for another room and irrelevant.",
+  "disposition": "Two eligible staff present throughout; nothing needs confirmation, so file with no action.",
+  "primary_cause": "Staff sign-ins match rota apart from a 3-minute and id-format difference; ratio met in every slot, so no cause found.",
+  "shortfall_duration": "Staff present 08:00-16:00 against need of 1; no minutes below ratio. Overrun above booked 4 is irrelevant.",
+  "breach_severity": "Even 8 children are within cover of 2 eligible staff; none beyond cover."
+ },
+ "request": "rec-F404-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008014
+}

@@ -1,0 +1,137 @@
+{
+ "id": "F428-0020",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-31",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 12,
+   "seal_type": "J_bulb"
+  },
+  "inspection": {
+   "asset_id": "VL-37",
+   "insp_date": "2025-04-12",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-04-12",
+    "closure_s": 12.2,
+    "leakage_l_min": 8,
+    "leakage_limit_l_min": 15,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "MT-1",
+    "component": "motor",
+    "grade": 3,
+    "status": "open",
+    "first_seen": "2025-03-01"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W4",
+     "component": "motor",
+     "defect_code": "MT-1",
+     "grade_raised": 2,
+     "rated_closure_s": 10,
+     "status": "complete",
+     "completed": "2025-04-10",
+     "retest_insp_id": null
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "temp_barrier_deployed": true,
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2025-05-13"
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.02,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 3,
+  "mismatch_location": "asset_id, defect_grade_vs_work_order, rated_closure_s",
+  "test_status": "passed_current",
+  "repair_progress": "completed_untested",
+  "mitigation_present": true,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 31,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.31,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 1,
+  "mismatch_location": "asset_id",
+  "test_status": "passed_current",
+  "repair_progress": "none_needed",
+  "mitigation_present": true,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 31,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_retest",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "drive_actuation",
+   "second": null,
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 72,
+ "deciding": {
+  "closure_test_valid": "Pass with leakage 8 under limit 15, but closure 12.2 s is just over rated 12 s, and the test (2025-04-12) follows the motor repair (2025-04-10).",
+  "next_step": "Motor order W4 is complete with retest_insp_id null while defect MT-1 is still open, so a post-repair retest is requested.",
+  "defect_class": "Highest open defect is the motor, grade 3, a drive/actuation component.",
+  "section_discrepancies": "asset_id VL-31 vs VL-37, defect grade 3 vs grade_raised 2, rated closure 12 vs 10 in the work order: three disagreements.",
+  "flood_risk": "One open grade 3 defect suggests level 1, but closure 12.2 s over rated 12 s could be read as late (level 2); a temporary barrier is deployed."
+ },
+ "request": "rec-F428-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010422
+}

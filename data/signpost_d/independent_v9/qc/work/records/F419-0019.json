@@ -1,0 +1,148 @@
+{
+ "id": "F419-0019",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "date": "2024-05-14",
+   "speed_kmh": 65,
+   "thr": [
+    0.72,
+    0.52,
+    0.42
+   ],
+   "weather": {
+    "precip_mm": 0
+   }
+  },
+  "device": {
+   "cal_expiry": "2025-02-01",
+   "tyre_kpa": 150,
+   "tyre_spec_kpa": [
+    135,
+    165
+   ],
+   "water_mm": 0.5
+  },
+  "runs": [
+   {
+    "dir": "12",
+    "mean_speed": 59,
+    "thirds": [
+     0.6,
+     0.58,
+     0.61
+    ],
+    "seg": [
+     0.41
+    ]
+   },
+   {
+    "dir": "30",
+    "mean_speed": 59,
+    "thirds": [
+     0.6,
+     0.59,
+     0.62
+    ]
+   }
+  ],
+  "maintenance": {
+   "last_rubber_removal": "2024-01-03",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start": "2024-05-20"
+    }
+   ],
+   "cross_checks": [
+    {
+     "d": "2024-05-14",
+     "thirds": [
+      0.6,
+      0.58,
+      0.61
+     ]
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-05-15T09:00"
+  }
+ },
+ "factors": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 132,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "speed_off",
+  "macrotexture_band": "marginal",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_planning",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 132,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 2,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "marginal",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold_retest",
+   "second": "monitor_closely",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "balanced",
+   "target": "none_found",
+   "second": "test_artefact",
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 32,
+ "deciding": {
+  "genuine_deficit": "Segment 0.41 is under the 0.42 minimum while all thirds are 0.58 to 0.62, above planning; mean speed of 59 km/h is more than 5 below 65, so the finding is only modestly supported.",
+  "next_step": "The off-speed runs (59 against 65 km/h) cast doubt on validity and favour hold_retest; the segment below minimum with a rubber removal order starting 2024-05-20 makes monitor_closely defensible.",
+  "deficit_driver": "All thirds are above the planning level, so none_found; the single low segment coinciding with the 59 km/h runs points to test_artefact, although the cross-check agrees.",
+  "friction_severity": "A segment of 0.41 is below the 0.42 minimum, so level 3; it is only 0.01 below the line and the runs are off speed, which gives some doubt.",
+  "evidence_completeness": "Tyre pressure, water depth, weather, signature, both runs and calibration are all present and dated, giving level 4; the off-speed condition could be counted as one defect (level 3)."
+ },
+ "request": "rec-F419-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012637
+}

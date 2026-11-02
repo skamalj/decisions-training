@@ -1,0 +1,136 @@
+{
+ "id": "F411-0043",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H530",
+   "type": "hackney",
+   "expiry": "2025-07-31",
+   "review_date": "2025-07-14"
+  },
+  "vehicle": {
+   "reg": "YN13DEF",
+   "make": "Peugeot",
+   "model": "E7",
+   "first_reg": "2013-06-20",
+   "odometer_km": 41000
+  },
+  "inspection": {
+   "date": "2025-07-08",
+   "result_code": "P",
+   "brake_efficiency_pct": 68
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2026-02-01"
+   },
+   {
+    "type": "mot_cert",
+    "expires_on": "2026-07-07"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-07-10",
+     "result": "F",
+     "odometer_km": 150000
+    }
+   ],
+   "replacements": [
+    {
+     "type": "instrument_cluster",
+     "date": "2024-11-02",
+     "old_km": 152000,
+     "new_km": 30000
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "none_needed",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "large",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 12
+ },
+ "factors_sampled": {
+  "worst_defect_found": "advisory",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "large",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 12
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 89,
+ "deciding": {
+  "odometer_consistent": "Cluster replaced 2024-11-02 (old 152000, new 30000) but the new reading starts 30000 km, so a drop from about 152000 to 41000 is only partly accounted for.",
+  "next_step": "Inspection P, brake tested, no defects and both documents in date.",
+  "inspection_outcome": "Defects list empty.",
+  "document_gaps": "Insurance and mot_cert both expire well after review_date 2025-07-14.",
+  "outstanding_severity": "No defects listed; the only doubt is the odometer, not a defect."
+ },
+ "request": "rec-F411-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010601
+}

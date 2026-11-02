@@ -1,0 +1,204 @@
+{
+ "id": "F440-0047",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "B-5127",
+   "review": "2025-02-10",
+   "arr": "2025-06-06",
+   "dep": "2025-06-09",
+   "pax": {
+    "13-17": 27,
+    "adult": 3
+   },
+   "diet": {
+    "veg": 5,
+    "gf": 2
+   },
+   "amend": [
+    {
+     "type": "pax_change",
+     "delta": 5,
+     "logged_at": "2025-01-28"
+    },
+    {
+     "type": "leader_add",
+     "delta": 2,
+     "logged_at": "2025-01-28"
+    }
+   ]
+  },
+  "roster": [
+   {
+    "role": "leader",
+    "n": 5
+   },
+   {
+    "role": "participant",
+    "n": 32,
+    "dob": "2008-09-01..2011-10-20",
+    "f": 14,
+    "m": 18,
+    "veg": 5,
+    "gf": 2
+   }
+  ],
+  "allocation": [
+   {
+    "room": "D1",
+    "sex": "F",
+    "beds": 16,
+    "nights": [
+     "2025-06-06",
+     "2025-06-07",
+     "2025-06-08"
+    ]
+   },
+   {
+    "room": "D2",
+    "sex": "M",
+    "beds": 20,
+    "nights": [
+     "2025-06-06",
+     "2025-06-07",
+     "2025-06-08"
+    ]
+   }
+  ],
+  "payment": {
+   "total": 4440,
+   "deposit_due": 1332,
+   "paid": 666,
+   "paid_on": "2025-01-14",
+   "sched": [
+    {
+     "due": "2025-01-15",
+     "amt": 666
+    },
+    {
+     "due": "2025-05-01",
+     "amt": 666
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "adult": "L1",
+    "status": "verified",
+    "exp": "2026-03-01"
+   },
+   {
+    "adult": "L2",
+    "status": "verified",
+    "exp": "2026-04-12"
+   },
+   {
+    "adult": "L3",
+    "status": "verified",
+    "exp": "2026-02-20"
+   },
+   {
+    "adult": "L4",
+    "status": "verified",
+    "exp": "2026-05-05"
+   },
+   {
+    "adult": "L5",
+    "status": "verified",
+    "exp": "2026-01-30"
+   }
+  ],
+  "history": {
+   "trusted": false,
+   "stays": 2,
+   "no_shows": 0,
+   "last_stay": "2024-04-12"
+  }
+ },
+ "factors": {
+  "pax_mismatch": "five_plus",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "comfortable",
+  "extra_cover_logged": true,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 116,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 0,
+  "diet_count_drift": "none"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "five_plus",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "comfortable",
+  "extra_cover_logged": true,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 116,
+  "dorm_fit": "fits",
+  "leader_checks": "one_pending",
+  "trusted_organiser": false,
+  "prior_no_shows": 3,
+  "diet_count_drift": "none"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "confirm",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "conflict_count": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 133,
+ "deciding": {
+  "ratio_met": "32 minors need 4 adults and the roster has 5 leaders, with a logged leader_add.",
+  "deposit_covered": "Paid 666 of 1332 deposit, but the schedule's only instalment due so far (666 on 01-15) is paid; the second is due 05-01.",
+  "disposition": "All 5 leader checks are verified, nights match, dorms fit, diets match and the amendments are logged.",
+  "urgency": "Review 2025-02-10 against arrival 2025-06-06 is 116 days.",
+  "conflict_count": "The +5 pax_change and +2 leader_add account for the 30 vs 37 difference; nights, dorms and diets all agree."
+ },
+ "request": "rec-F440-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.016602
+}

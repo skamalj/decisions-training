@@ -1,0 +1,169 @@
+{
+ "id": "F440-0021",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "B101",
+   "review": "2025-06-10",
+   "arr": "2025-06-14",
+   "dep": "2025-06-16",
+   "pax": {
+    "13-17": 10,
+    "adult": 1
+   },
+   "diet": {
+    "veg": 4
+   },
+   "amend": [
+    {
+     "type": "date_change",
+     "delta": "+1n",
+     "logged_at": "2025-06-02"
+    }
+   ]
+  },
+  "roster": [
+   {
+    "role": "participant",
+    "sex": "F",
+    "dob": "2010-02-01",
+    "n": 5,
+    "diet": 2
+   },
+   {
+    "role": "participant",
+    "sex": "M",
+    "dob": "2010-05-01",
+    "n": 5,
+    "diet": 1
+   },
+   {
+    "role": "leader",
+    "sex": "F",
+    "dob": "1985-01-01",
+    "n": 1,
+    "diet": 0
+   }
+  ],
+  "allocation": {
+   "rooms": [
+    {
+     "sex": "F",
+     "beds": 6
+    },
+    {
+     "sex": "M",
+     "beds": 6
+    }
+   ],
+   "nights": [
+    "2025-06-14",
+    "2025-06-15",
+    "2025-06-16"
+   ],
+   "warden_cover": [
+    "2025-06-16"
+   ]
+  },
+  "payment": {
+   "total": 600,
+   "deposit_due": 150,
+   "paid_total": 0,
+   "instalments": [
+    {
+     "due": "2025-06-12",
+     "amt": 150
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "status": "verified",
+    "expiry": "2026-01-01"
+   }
+  ],
+  "history": {
+   "trusted": false,
+   "stays": 3,
+   "no_shows": 2
+  }
+ },
+ "factors": {
+  "pax_mismatch": "none",
+  "night_mismatch": "one_night_extra",
+  "amendment_logged": true,
+  "supervision_level": "exactly_at_ratio",
+  "extra_cover_logged": true,
+  "deposit_position": "nothing_paid",
+  "instalment_approved": true,
+  "days_to_arrival": 4,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 2,
+  "diet_count_drift": "minor"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "none",
+  "night_mismatch": "one_night_extra",
+  "amendment_logged": true,
+  "supervision_level": "exactly_at_ratio",
+  "extra_cover_logged": true,
+  "deposit_position": "nothing_paid",
+  "instalment_approved": true,
+  "days_to_arrival": 9,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 2,
+  "diet_count_drift": "minor"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "confirm",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "ratio_met": "One leader for 10 minors aged 15 is exactly 1:10 on all three nights; warden cover on the extra night adds margin, so true with slight doubt about being at the limit.",
+  "deposit_covered": "paid_total 0 against deposit_due 150; an instalment schedule exists but its first payment is not yet due, so the reader leans to not covered.",
+  "disposition": "Leader verified, dorms fit, ratio met, date change logged and instalment plan present: nothing outstanding, so confirm.",
+  "urgency": "Review 2025-06-10 against arrival 2025-06-14 is 4 days, at the edge between pressing (4-14 days) and immediate (within 3 days).",
+  "conflict_count": "The extra night is explained by the logged date_change; only the diet total (4) versus roster flags (3) is unexplained, so 0 or 1."
+ },
+ "request": "rec-F440-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012028
+}

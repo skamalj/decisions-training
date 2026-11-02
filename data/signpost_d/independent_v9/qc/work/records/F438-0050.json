@@ -1,0 +1,142 @@
+{
+ "id": "F438-0050",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E31877",
+   "specialty": "urology",
+   "los": 2,
+   "admission_method": "elective"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "N20.1"
+   },
+   "comorbidities": [
+    {
+     "code": "I10"
+    }
+   ],
+   "documents_present": {
+    "discharge_summary": true,
+    "operation_note": true,
+    "pathology_report": false
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "N20.0"
+   },
+   "secondary_dx": [
+    {
+     "code": "I10"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "LB36C",
+   "hrg_regrouped": "LB36C",
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    {
+     "code_pair": [
+      "N20.0",
+      "N20.1"
+     ]
+    }
+   ],
+   "queries": []
+  },
+  "coder_history": {
+   "prior_audits": 12,
+   "error_rate": 0.07,
+   "last_audit_result": "pass"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "pathology_report",
+  "clinician_query": "none",
+  "approved_local_convention": true,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.07,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "pathology_report",
+  "clinician_query": "none",
+  "approved_local_convention": true,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.07,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "error_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 78,
+ "deciding": {
+  "primary_supported": "N20.0 vs documented N20.1 is covered by the approved local convention pair N20.0/N20.1, so the primary is supported.",
+  "hrg_shift": "Both HRGs are LB36C, but the missing pathology report leaves some doubt.",
+  "next_step": "The convention covers the only discrepancy and the secondaries match, so the sample closes as coded.",
+  "error_count": "No error remains after the convention; the missing pathology report leaves slight doubt.",
+  "error_severity": "No code is altered, since the convention covers N20.0/N20.1 and the HRG is unchanged."
+ },
+ "request": "rec-F438-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006864
+}

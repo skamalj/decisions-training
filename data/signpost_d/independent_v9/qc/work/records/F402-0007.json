@@ -1,0 +1,103 @@
+{
+ "id": "F402-0007",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "soon",
+   "received": "2025-05-05",
+   "onset": "2025-01-13"
+  },
+  "clinical": {
+   "red_flags": [
+    "RF_NEURO"
+   ],
+   "neuro_signs": {
+    "progression": "stable"
+   },
+   "function_index": 3,
+   "surgery_date": "2025-01-09"
+  },
+  "gp_record": {
+   "first_presented": "2024-12-02",
+   "falls_3m": 4
+  }
+ },
+ "factors": {
+  "red_flag_type": "progressive_neuro_deficit",
+  "red_flag_mitigated": false,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 16,
+  "function_index": 2.73,
+  "prior_episodes_12m": 4,
+  "referrer_priority": "soon",
+  "falls_last_3m": 4,
+  "post_op_days": 116,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "progressive_neuro_deficit",
+  "red_flag_mitigated": false,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 16,
+  "function_index": 2.73,
+  "prior_episodes_12m": 4,
+  "referrer_priority": "soon",
+  "falls_last_3m": 4,
+  "post_op_days": 116,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "accept_as_referred",
+   "second": "escalate_lead",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "contested",
+   "target": "specialist_rehab",
+   "second": "self_management",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "red_flag_unresolved": "Neuro flag present with no mitigation, but the sign is marked stable rather than worsening.",
+  "next_step": "Complete record could simply be accepted; unmitigated neuro flag with 4 falls makes escalation defensible.",
+  "pathway": "Post-op 116 days with function index about 3 and 4 falls suggests specialist rehab, but stable signs leave self-management arguable.",
+  "reversal_time": "Outcome could be permanent or undone over weeks; levels 2 and 3 both plausible.",
+  "clinical_urgency": "Stable sign, referrer 'soon' priority: within six weeks versus able to wait."
+ },
+ "request": "rec-F402-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004429
+}

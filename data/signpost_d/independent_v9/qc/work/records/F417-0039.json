@@ -1,0 +1,135 @@
+{
+ "id": "F417-0039",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V-404",
+   "loa_m": 10.4,
+   "draught_m": 2.1,
+   "draught_src": "declared"
+  },
+  "berth": {
+   "id": "P7",
+   "max_loa_m": 10.0,
+   "fender_allow_m": 0.3,
+   "depth_lat_m": 2.89,
+   "waiver_ref": "W-52",
+   "waiver_expiry": "2025-12-31"
+  },
+  "booking": {
+   "arrival": "2025-09-01",
+   "departure": "2025-09-04",
+   "next_on_berth": {
+    "arrival": "2025-09-04"
+   }
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 10.9,
+    "draught_m": 2.4
+   },
+   "insurance_expiry": "2026-04-01",
+   "inspection_date": "2025-08-20"
+  },
+  "account": {
+   "dues_outstanding_gbp": 1442,
+   "plan_id": null
+  },
+  "history": [
+   {
+    "date": "2024-09-01",
+    "berth": "P7",
+    "incidents": 1
+   },
+   {
+    "date": "2023-09-02",
+    "berth": "P7",
+    "incidents": 1
+   },
+   {
+    "date": "2022-09-01",
+    "berth": "P7",
+    "incidents": 0
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 4.6,
+  "berth_length_fit": "exceeds_limit",
+  "ukc_margin_m": 0.49,
+  "draught_source": "declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 1442,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": true,
+  "prior_incidents": 2,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 4.61,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 0.1,
+  "draught_source": "survey_certificate",
+  "insurance_status": "null",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 1442,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": true,
+  "prior_incidents": 2,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "confirm_allocation",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "clear",
+   "target": "account_arrears",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "ukc_band": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "length_fits": "Survey loa 10.9 exceeds max 10.0 plus fender 0.3 = 10.3; the waiver W-52 is the only reason to doubt.",
+  "next_step": "Waiver covers the stay, insurance and inspection are in order, and turnover is same-day with no overlap; allocation stands.",
+  "primary_issue": "dues_outstanding_gbp 1442 with plan_id null; documents are valid and dates are clean.",
+  "ukc_band": "Survey draught 2.4 against depth 2.89 gives 0.49 m; the declared 2.1 would give 0.79 m, so the effective draught is near the 0.5 boundary.",
+  "unresolved_count": "Declared loa 10.4 vs survey 10.9, declared draught 2.1 vs survey 2.4, and survey loa above berth limit (waived); two or three depending on the waiver."
+ },
+ "request": "rec-F417-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01351
+}

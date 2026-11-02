@@ -1,0 +1,165 @@
+{
+ "id": "F430-0024",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S31",
+   "assets": [
+    {
+     "id": "CB1",
+     "unit": "kPa",
+     "normal_band": [
+      600,
+      700
+     ],
+     "alarm_limit": 520,
+     "trip_limit": 500,
+     "customers_fed": 6021,
+     "partner_id": "CB1B"
+    },
+    {
+     "id": "CB3",
+     "unit": "kPa",
+     "normal_band": [
+      600,
+      700
+     ],
+     "alarm_limit": 520,
+     "trip_limit": 500,
+     "customers_fed": 6021,
+     "partner_id": "CB1B"
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-07-15",
+   "scheduled_assets": [
+    "CB1",
+    "CB3"
+   ],
+   "inspector_note": "CB3 gas looked low."
+  },
+  "readings": [
+   {
+    "asset_id": "CB1",
+    "param": "SF6",
+    "value": 5.0,
+    "unit": "bar",
+    "timestamp": "2024-07-15T10:05"
+   }
+  ],
+  "defects": [
+   {
+    "defect_id": "D4",
+    "asset_id": "CB3",
+    "category": "gas",
+    "photo_ref": null,
+    "note": "SF6 pressure low on CB3."
+   }
+  ],
+  "history": {
+   "previous_round": null,
+   "permits": [
+    {
+     "asset_id": "CB1",
+     "desc": "gas gauge work",
+     "from": "2024-07-14",
+     "to": "2024-07-16"
+    }
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "CB1B": "out_of_service"
+   },
+   "outage_plan": [
+    {
+     "asset_id": "CB1B",
+     "from": "2024-07-10",
+     "to": "2024-07-20"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": true,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 6021,
+  "trivial_discrepancies": 3,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": false,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 6021,
+  "trivial_discrepancies": 3,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "follow_up": {
+   "clarity": "clear",
+   "target": "hold_return",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 86,
+ "deciding": {
+  "defect_corroborated": "Defect is on CB3 with no photo, and CB3 has no reading; only CB1 was read, so nothing recorded supports it.",
+  "benign_explanation": "Valid permit 14-16 July on CB1 for gas gauge work covers the low CB1 reading and the visit date.",
+  "follow_up": "CB3 was scheduled but has no reading and its defect has no photo, so the report goes back for that one missing item.",
+  "limit_deviation": "CB1 5.0 bar is 500 kPa, exactly at the trip limit after conversion, so trip versus alarm is defensible.",
+  "supply_exposure": "Assets feed 6,021 customers and partner CB1B is on outage until 20 July; the load is probably 1,000-9,999, slight doubt over which asset."
+ },
+ "request": "rec-F430-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011966
+}

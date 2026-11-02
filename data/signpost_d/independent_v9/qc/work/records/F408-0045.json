@@ -1,0 +1,128 @@
+{
+ "id": "F408-0045",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 5521,
+   "postcode": "AB1 2CD",
+   "logged_at": "2025-02-11T09:00",
+   "stream": "recycling",
+   "claimed_date": "2025-02-11"
+  },
+  "property": {
+   "uprn": 5521,
+   "postcode": "AB1 2CE",
+   "assisted_collection": false
+  },
+  "schedule": {
+   "streams_due": [
+    "recycling"
+   ],
+   "scheduled_date": "2025-02-11",
+   "week_pattern": "B"
+  },
+  "round_log": {
+   "round_completed_at": "2025-02-11T08:00",
+   "disruption_code": "weather_suspension",
+   "catch_up_date": "2025-02-12",
+   "stops": [
+    {
+     "uprn": 5521,
+     "gps_stop": null,
+     "exception_code": "not_presented",
+     "photo_ref": null
+    }
+   ],
+   "sweep_collected_at": "2025-02-11T12:30"
+  },
+  "history": [
+   {
+    "uprn": 5521,
+    "logged_on": "2024-10-01",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 5530,
+    "logged_on": "2025-01-20",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "alt_week_confusion",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": false,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "weather_suspension",
+  "already_collected": true,
+  "photo_attached": false,
+  "address_id_mismatch": "postcode_typo",
+  "prior_upheld_misses": 0,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "alt_week_confusion",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": false,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "weather_suspension",
+  "already_collected": true,
+  "photo_attached": false,
+  "address_id_mismatch": "postcode_typo",
+  "prior_upheld_misses": 0,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "crew_missed": "Crew coded not_presented without a photo and with null GPS, but a weather_suspension with a catch_up_date of 2025-02-12 also applies.",
+  "report_matches": "Stream and date agree with the schedule, but the week_pattern is B, which leaves alternate-week doubt, and the postcode differs by one character.",
+  "next_step": "sweep_collected_at 2025-02-11T12:30 is later than logged_at, so the bin is already emptied and the case can close.",
+  "return_urgency": "The sweep collection suggests no return is needed, but the unsupported not_presented code leaves a standard-or-same-day return arguable.",
+  "repeat_failures": "The only upheld entry for this UPRN is dated 2024-10-01, outside the window; the other upheld entry is for UPRN 5530."
+ },
+ "request": "rec-F408-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01019
+}

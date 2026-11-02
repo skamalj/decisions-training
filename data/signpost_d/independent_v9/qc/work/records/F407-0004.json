@@ -1,0 +1,122 @@
+{
+ "id": "F407-0004",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-8815",
+   "received_at": "2025-06-18T17:45:00",
+   "channel": "public_app",
+   "photo_ref": "IMG-8815",
+   "linked_reports": [
+    "R-8790"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "footway",
+   "intervention_depth_mm": 20,
+   "speed_limit": null
+  },
+  "inspection": {
+   "inspected_at": "2025-05-30",
+   "depth_mm": 20,
+   "width_mm": 919.21
+  },
+  "works_history": [
+   {
+    "completed": "2025-02-11",
+    "offset_m": null,
+    "guarantee_end": "2026-02-11"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "start": "2025-07-07",
+     "extent_m": [
+      0,
+      120
+     ]
+    }
+   ],
+   "temp_measures": []
+  },
+  "current_order": null
+ },
+ "factors": {
+  "road_category": "footway",
+  "depth_vs_threshold": "on_boundary",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": true,
+  "duplicate_count": 1,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 919.21,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "footway",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": true,
+  "duplicate_count": 1,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 919.21,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate_engineer",
+   "second": "close_no_action",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 64,
+ "deciding": {
+  "meets_threshold": "Depth 20 equals threshold 20, but the inspection dates from 2025-05-30, before the report.",
+  "repeat_failure": "The only job has offset_m null, so it is street-level and unconfirmed as the same spot.",
+  "next_step": "A prior job in guarantee nearby could justify engineer referral; a scheme starting 2025-07-07 and a stale boundary measurement could justify closing.",
+  "staff_effort": "Small footway defect with a scheme about to start, so under an hour of effort.",
+  "response_timescale": "Boundary depth gives routine 28-day repair or none, with scheme extent [0,120] starting in 19 days."
+ },
+ "request": "rec-F407-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007329
+}

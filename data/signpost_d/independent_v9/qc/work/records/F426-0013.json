@@ -1,0 +1,118 @@
+{
+ "id": "F426-0013",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B3",
+   "crop": "apple"
+  },
+  "applications": [
+   {
+    "date": "2024-02-01",
+    "product_code": "AZ5",
+    "qty_applied": 3,
+    "qty_unit": "L",
+    "area_treated_ha": 3
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "AZ5",
+    "max_rate_per_ha": 2,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "approved_crops": [
+     "apple"
+    ]
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-03-20"
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 9,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 40,
+ "deciding": {
+  "phi_cleared": "Spray 2024-02-01, PHI 14 days, pick 2024-03-20, wide margin.",
+  "next_step": "All data present and compliant; release.",
+  "finding_class": "1 L/ha against max 2 and apple approved; no discrepancies.",
+  "reversal_time": "Nothing to undo.",
+  "rate_overrun": "3 L over 3 ha is 1 L/ha, below the max 2."
+ },
+ "request": "rec-F426-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004835
+}

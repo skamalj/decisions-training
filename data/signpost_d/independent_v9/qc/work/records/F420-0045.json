@@ -1,0 +1,119 @@
+{
+ "id": "F420-0045",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "AKE20931",
+   "contour_max_cm": 160,
+   "tare_kg": 80,
+   "planned_gross_kg": 500,
+   "straps_required": 2
+  },
+  "manifest_lines": [
+   {
+    "awb": "618-77200",
+    "pcs": 6,
+    "weight_kg": 420
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2024-06-08T07:40Z",
+   "scale_gross_kg": 498,
+   "max_height_cm": 120,
+   "pcs_counted": {
+    "618-77200": 6
+   },
+   "straps_fitted": 2,
+   "net_fitted": true
+  },
+  "dg_notoc": null,
+  "checks_log": {
+   "scale_cal_due": "2025-01-01"
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": -0.4,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 195,
+  "prior_rebuilds": 0
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -2.4,
+  "piece_count_gap": 2,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "well_within",
+  "contour_waiver": true,
+  "dg_state": "dg_segregation_conflict",
+  "notoc_match": "not_applicable",
+  "securing_state": "one_strap_short",
+  "scale_cal_overdue": true,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 195,
+  "prior_rebuilds": 0
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "clear",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "weight_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "rework_extent": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 37,
+ "deciding": {
+  "pieces_reconciled": "Counted 6 of 6 pcs on the only AWB.",
+  "disposition": "All sections agree: calibrated scale, straps 2 of 2, net fitted, no DG.",
+  "worst_discrepancy": "No section disagrees with another.",
+  "weight_deviation": "Scale 498 kg against planned 500 kg is -0.4%.",
+  "rework_extent": "Straps and net complete, height 120 cm against 160 cm, counts match: nothing physical to change."
+ },
+ "request": "rec-F420-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010665
+}

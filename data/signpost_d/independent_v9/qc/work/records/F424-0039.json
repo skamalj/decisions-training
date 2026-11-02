@@ -1,0 +1,146 @@
+{
+ "id": "F424-0039",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2275",
+   "vessel_id": "FV1",
+   "volume_hl": 18,
+   "og_target": 1.05,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.012,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-08-03",
+    "gravity_sg": 1.053,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-08-08",
+    "gravity_plato": 5.1,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-08-10",
+    "gravity_sg": 1.017,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-08-11",
+    "gravity_sg": 1.015,
+    "temp_c": 19
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-08-11",
+    "vessel_id": "FV7",
+    "note": "Sour, vinegary aroma at sampling."
+   },
+   {
+    "ts": "2024-08-12",
+    "vessel_id": "FV7",
+    "note": "Blended into FV7 ahead of schedule."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2275",
+   "abv_pct": null,
+   "abv_pending": true,
+   "diacetyl_mgl": 0.07,
+   "micro_plate": {
+    "result": "presumptive",
+    "cfu_ml": 850
+   }
+  },
+  "release_request": {
+   "vessel_id": "FV1",
+   "volume_hl": 18
+  }
+ },
+ "factors": {
+  "gravity_status": "still falling, above band",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive plate 850 cfu/ml plus sour sensory note",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.07,
+  "discrepancy_count": "vessel mismatch plus og at 0.003 boundary, 1 or 2",
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "sensory_note_only",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.07,
+  "discrepancy_count": 1,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": true,
+  "release_pressure": "none",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "rework",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (hard_limit_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 67,
+ "deciding": {
+  "terminal_gravity": "Latest readings 1.017 then 1.015 remain above the 1.010-1.012 band and are still falling.",
+  "contamination_supported": "Plate at 850 cfu/ml plus a sour, vinegary note, with no retest or explanation.",
+  "batch_disposition": "A correctable defect: gravity unfinished and a presumptive micro result, so extend conditioning or rework before release.",
+  "deviation_severity": "A blend into FV7 is logged with no QA sign-off, an irreversible step; the hard breach is somewhat tempered by the pending ABV.",
+  "record_discrepancies": "Blend into FV7 vs batch vessel FV1 is one discrepancy; first gravity 1.053 vs OG 1.050 sits exactly at 0.003; 5.1P is a unit decoy."
+ },
+ "request": "rec-F424-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009129
+}

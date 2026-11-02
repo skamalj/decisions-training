@@ -1,0 +1,122 @@
+{
+ "id": "F407-0048",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "PR-6633",
+   "received_at": "2025-05-08T16:05:00Z",
+   "channel": "public_app",
+   "photo_ref": null,
+   "linked_reports": [
+    "PR-6601",
+    "PR-6610",
+    "PR-6618",
+    "PR-6625",
+    "PR-6629"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "usrn": 41007755,
+   "road_class": "local_access",
+   "intervention_depth_mm": 50,
+   "speed_limit": 20
+  },
+  "inspection": {
+   "inspector": "HI-11",
+   "inspected_at": "2025-05-09",
+   "depth_mm": 52,
+   "width_mm": 1101.11,
+   "offset_m": 1
+  },
+  "works_history": [],
+  "programme": {
+   "schemes": [],
+   "temp_measures": []
+  },
+  "current_order": {
+   "id": "WO-8052",
+   "raised": "2025-05-09",
+   "status": "completed_awaiting_signoff",
+   "completed_items": 30,
+   "total_items": 30
+  }
+ },
+ "factors": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "none",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 5,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "completed_awaiting_signoff",
+  "defect_width_mm": 1101.11,
+  "photo_attached": false
+ },
+ "factors_sampled": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "none",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 5,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "completed_awaiting_signoff",
+  "defect_width_mm": 1101.11,
+  "photo_attached": false
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 82,
+ "deciding": {
+  "meets_threshold": "Valid post-report inspection depth 52 mm against threshold 50 mm.",
+  "repeat_failure": "works_history is empty; only the new order exists.",
+  "next_step": "Order WO-8052 is 30/30 complete awaiting signoff, so the defect is already repaired; some doubt remains over signoff.",
+  "staff_effort": "Order totals 30 items, with five linked duplicates to reconcile, implying a heavy workload.",
+  "response_timescale": "Depth just above threshold on local access road: priority within five days versus routine 28 days is balanced."
+ },
+ "request": "rec-F407-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007324
+}

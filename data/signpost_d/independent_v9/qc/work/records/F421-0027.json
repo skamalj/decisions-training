@@ -1,0 +1,142 @@
+{
+ "id": "F421-0027",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P2",
+   "service": "standard",
+   "fragile": false,
+   "contents": "laptop",
+   "qty": 1,
+   "weight_kg": 2.4,
+   "declared_value_gbp": 1392.4
+  },
+  "handling_events": [
+   {
+    "ts": "2024-03-04T08:10",
+    "site": "HUB1",
+    "code": "OUT",
+    "exc": "SCUFF"
+   },
+   {
+    "ts": "2024-03-04T14:30",
+    "site": "DEP",
+    "code": "INB",
+    "exc": null
+   },
+   {
+    "ts": "2024-03-04T16:05",
+    "site": "DEP",
+    "code": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-03-05T09:00",
+   "inspector": "JT",
+   "observed_item": "notebook computer",
+   "qty_found": 1,
+   "weight_kg": 2400,
+   "condition": "corner dent, working",
+   "photos": [
+    "a.jpg",
+    "b.jpg"
+   ],
+   "repair_est_gbp": 25
+  },
+  "claim": {
+   "claim_id": "C2",
+   "claimed_gbp": 44,
+   "item_desc": "laptop",
+   "packaging_desc": "double-wall box, foam",
+   "submitted": "2024-03-06"
+  },
+  "notes": [
+   "Dented at our sort belt, minor. Our fault."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "complete",
+  "loss_pct": 1.8,
+  "declared_value": 1392.4,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": "1 (minor SCUFF upstream)",
+  "fragile_misrouted": false,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 1.76
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 99.18,
+  "declared_value": 1392.4,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 1.76
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 105,
+ "deciding": {
+  "depot_fault": "Clean INB then DMG at DEP SORT, but HUB1 had a SCUFF exception upstream. Together they make this balanced.",
+  "contents_match": "Laptop vs 'notebook computer' and 2.4 kg vs 2400 in the report. Likely a synonym and unit slip, but a reader could doubt it.",
+  "next_step": "Inspection is complete, repair is small and the claim is small, so nothing further is needed.",
+  "loss_share": "Repair 25 against declared 1392.40 is under 2%, which is negligible. The claim of 44 is about 3%.",
+  "parties_needed": "Small complete record with matching small claim; one person can close it."
+ },
+ "request": "rec-F421-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008944
+}

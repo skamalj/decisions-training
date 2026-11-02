@@ -1,0 +1,160 @@
+{
+ "id": "F422-0041",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-4471",
+   "site": "S-208",
+   "delivered_at": "2025-01-21",
+   "received_at": "2025-02-10",
+   "review_date": "2025-03-24",
+   "reason": "OVERSTOCK",
+   "lines": [
+    {
+     "gtin": "05012345000011",
+     "qty_claimed": 112
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "D-88120",
+   "date": "2025-01-15",
+   "lines": [
+    {
+     "gtin": "05012345000011",
+     "batch": "AB1207",
+     "expiry": "2026-09-30",
+     "qty_dispatched": 112
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "05012345000011",
+     "batch": "AB1207",
+     "expiry": "2026-09-30",
+     "qty_counted": 100,
+     "packs_damaged": 2,
+     "seals_intact": 100
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "active",
+     "n": 100
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": "LG-31",
+   "logger_start": "2025-01-20",
+   "logger_end": "2025-02-10",
+   "min_c": 17.2,
+   "max_c": 24.1,
+   "minutes_out_of_range": 0,
+   "stability_ref": null
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2024-11-30",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "hold_limit_days": 38,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-03-30"
+   },
+   "max_days_out_of_control": 28,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 0,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 12,
+  "damaged_pack_fraction": 0.02,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 20,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 6,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 19
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 94,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 12,
+  "damaged_pack_fraction": 0.02,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 20,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": -4,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 19
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "partial_release",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 98,
+ "deciding": {
+  "storage_maintained": "Logger covers delivery to receipt, min 17.2 and max 24.1 inside 15-25C, minutes_out_of_range 0.",
+  "batch_traceable": "Counted batch AB1207 and expiry match the dispatch line exactly; slight doubt since the customer audit has lapsed.",
+  "next_step": "Two damaged packs with otherwise sound stock and 19 months of shelf life point to releasing the sound packs and destroying the damaged ones.",
+  "resaleable_share": "packs_damaged 2 of 100 with all seals intact; all packs fit (level 3) or the 2 damaged are excluded (level 2). The 12-pack count shortfall is not counted stock.",
+  "disposition_urgency": "Original limit 2025-03-20 passed, but the approved extension to 2025-03-30 leaves 6 days against review 2025-03-24."
+ },
+ "request": "rec-F422-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013349
+}

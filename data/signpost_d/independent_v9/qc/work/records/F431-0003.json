@@ -1,0 +1,132 @@
+{
+ "id": "F431-0003",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM2085",
+   "seal_state": "intact",
+   "seal_checked_date": "2023-10-20"
+  },
+  "period_read": {
+   "read_date": "2024-04-03",
+   "reg_kwh": 8104,
+   "src_code": "CUS",
+   "photo_ref": "IMG-5530"
+  },
+  "history": [
+   {
+    "date": "2024-02-01",
+    "reg_kwh": 7500,
+    "src": "EST"
+   },
+   {
+    "date": "2024-03-01",
+    "reg_kwh": 8000,
+    "src": "EST",
+    "ly_kwh": 1000
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW",
+    "E_TPROBE",
+    "E_AIR",
+    "E_COMMS"
+   ],
+   "flow_temp_c": 41,
+   "return_temp_c": 40.6
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 400,
+   "hdd_prior_year": 500,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "open",
+     "date": "2024-03-20"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 0.13,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.8,
+  "diagnostic_error_count": 4,
+  "meter_works_order": true,
+  "consecutive_estimates": 2,
+  "delta_t_implausible": true,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 0.13,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.8,
+  "diagnostic_error_count": 4,
+  "meter_works_order": true,
+  "consecutive_estimates": 2,
+  "delta_t_implausible": true,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 54,
+ "deciding": {
+  "meter_fault": "Four error codes including E_FLOW and E_TPROBE, flow/return delta-T of 0.4 K, open RECAL order.",
+  "billable_actual": "Customer read with photo, in sequence, and the low consumption is explained by the device fault; source and recent estimates leave doubt.",
+  "next_step": "The read itself is in sequence and photo-backed, so it can be released while the meter is handled via the open RECAL.",
+  "staff_effort": "RECAL already ordered; either a brief check or a few hours of follow-up.",
+  "consumption_deviation": "104 kWh against 1000*400/500=800 expected, 87% below."
+ },
+ "request": "rec-F431-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007098
+}

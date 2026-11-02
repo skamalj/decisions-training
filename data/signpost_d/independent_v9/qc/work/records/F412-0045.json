@@ -1,0 +1,158 @@
+{
+ "id": "F412-0045",
+ "family": "F412",
+ "state": {
+  "inspection": {
+   "date": "2024-01-08",
+   "contraventions": [
+    {
+     "ref": "C1",
+     "area": "REC",
+     "due_date": "2024-02-05"
+    },
+    {
+     "ref": "C2",
+     "area": "FAB",
+     "due_date": "2024-02-05"
+    },
+    {
+     "ref": "C3",
+     "area": "CLN",
+     "due_date": "2024-02-05"
+    },
+    {
+     "ref": "C4",
+     "area": "TMP",
+     "due_date": "2024-02-05"
+    },
+    {
+     "ref": "C5",
+     "area": "REC",
+     "due_date": "2024-02-05"
+    }
+   ]
+  },
+  "revisit": {
+   "date": "2024-03-18",
+   "items": [
+    {
+     "ref": "C1",
+     "status": "remedied"
+    },
+    {
+     "ref": "C2",
+     "status": "remedied"
+    },
+    {
+     "ref": "C3",
+     "status": "remedied"
+    },
+    {
+     "ref": "C4",
+     "status": "part_remedied"
+    },
+    {
+     "ref": "C5",
+     "status": "remedied"
+    }
+   ]
+  },
+  "correspondence": {
+   "evidence": [
+    {
+     "ref": "C4",
+     "verified": null
+    }
+   ]
+  },
+  "history": {
+   "enforcement": [
+    {}
+   ],
+   "samples": [
+    {
+     "ref": "C4",
+     "result": "unsatisfactory"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "contravention_count": 5,
+  "resolution_share": "most_resolved",
+  "worst_open_area": "food_handling",
+  "food_handling_open_count": 1,
+  "cross_section_mismatch": "none",
+  "days_past_original_due": 42,
+  "extension_agreed": false,
+  "benign_explanation": false,
+  "operator_evidence": "submitted_unverified",
+  "adverse_sample": true,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 1,
+  "boundary_case": true,
+  "reassuring_note_decoy": false
+ },
+ "factors_sampled": {
+  "contravention_count": 5,
+  "resolution_share": "most_resolved",
+  "worst_open_area": "food_handling",
+  "food_handling_open_count": 1,
+  "cross_section_mismatch": "none",
+  "days_past_original_due": 89,
+  "extension_agreed": false,
+  "benign_explanation": false,
+  "operator_evidence": "submitted_unverified",
+  "adverse_sample": true,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 1,
+  "boundary_case": true,
+  "reassuring_note_decoy": false
+ },
+ "plan": {
+  "all_remedied": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "refer_lead",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "worst_hazard": {
+   "clarity": "leaning",
+   "target": "no_open_item",
+   "second": null,
+   "targets": []
+  },
+  "overdue_extent": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "residual_risk": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "all_remedied": "C4 is part_remedied and its evidence has verified null; four others are remedied, so a lenient reading is possible.",
+  "next_step": "The open TMP item with an unsatisfactory sample supports referral; the unverified evidence makes asking for proof defensible.",
+  "worst_hazard": "C4 (TMP) is the only open item, so food handling is the real answer; the plan's no_open_item reading rests only on the part_remedied status.",
+  "overdue_extent": "Due 2024-02-05 against revisit 2024-03-18 is exactly 42 days, the boundary between levels 2 and 3.",
+  "residual_risk": "One part-remedied TMP item with an unsatisfactory sample linked to C4 gives level 3, but the partial status invites level 2."
+ },
+ "request": "rec-F412-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00932
+}

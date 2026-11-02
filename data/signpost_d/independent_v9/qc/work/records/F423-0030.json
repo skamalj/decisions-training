@@ -1,0 +1,120 @@
+{
+ "id": "F423-0030",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-6032",
+   "run_qty": 30000,
+   "overs_pct": 1.63,
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "signed_at": "2025-06-10T06:30"
+  },
+  "colour_readings": {
+   "calibrated_on": "2025-02-26",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.2
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.1
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.05,
+     "in_image": false
+    }
+   ]
+  },
+  "run_log": {
+   "first_production_at": "2025-06-10T06:45",
+   "sheets_production": 2189
+  }
+ },
+ "factors": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2189,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.63,
+  "register_offset_mm": 0.05,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 104,
+  "customer_tier": "trade",
+  "prior_stoppages": 3
+ },
+ "factors_sampled": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2189,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.63,
+  "register_offset_mm": 0.05,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 104,
+  "customer_tier": "trade",
+  "prior_stoppages": 3
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_for_signoff",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "colour_in_tolerance": "M patch 3.1 is barely over limit 3.0, and the instrument calibration is over 90 days old (2025-02-26).",
+  "run_before_signoff": "signed_at 06:30 precedes first_production_at 06:45.",
+  "next_step": "A signature is on file, so there is nothing to wait for; the over-limit patch calls for adjusting and re-pulling.",
+  "staff_effort": "A re-pull and remeasure is under an hour, though recalibrating the instrument might add time.",
+  "scrap_exposure": "2189 production sheets ran with colour over limit: more than the 489 overs allowance, but under 10% of 30000 (3000)."
+ },
+ "request": "rec-F423-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006663
+}

@@ -1,0 +1,303 @@
+{
+ "id": "F421",
+ "domain": "parcel depot damaged-item records",
+ "role": "Depot damage assessor at a regional parcel sorting depot, reviewing one damaged-item record at a time",
+ "setting": "When a parcel is found damaged at or after intake, depot staff open a damage record. It combines manifest data, scan history, an inspection report, the sender's declared value or claim, and short free-text notes. The assessor works out whether the depot is liable, whether the record is complete enough to act on and how much of the item's value is lost. They then decide what happens to the record next.",
+ "questions": {
+  "depot_fault": {
+   "type": "noul",
+   "instructions": "Damage occurred while the parcel was in this depot's custody.",
+   "criteria": {
+    "true": "Damage first recorded after a clean inbound scan here.",
+    "false": "Damage predates intake, or timing cannot be established."
+   }
+  },
+  "contents_match": {
+   "type": "noul",
+   "instructions": "Damaged item described in the report matches the manifest's declared contents.",
+   "criteria": null
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the assessor do with this damage record now?",
+   "criteria": {
+    "close_no_action": "Record complete and no claim or onward action is required",
+    "request_evidence": "Obtain one named missing item, such as photos, before deciding",
+    "approve_repack": "Accept depot liability now; repack, forward or write off item",
+    "escalate_supervisor": "Refer to claims supervisor for value, tampering or liability dispute"
+   }
+  },
+  "loss_share": {
+   "type": "score",
+   "instructions": "What share of the declared value is lost to damage?",
+   "criteria": [
+    "Negligible: estimated loss under 5% of declared value",
+    "Partial: estimated loss from 5% to under 50%",
+    "Major: estimated loss from 50% to under 100%",
+    "Total: item written off, loss equals full declared value"
+   ]
+  },
+  "parties_needed": {
+   "type": "score",
+   "instructions": "How many separate people or teams must act to resolve this?",
+   "criteria": [
+    "One person can resolve it alone",
+    "Two people or teams must act",
+    "Three or four people or teams must act",
+    "Five or more people or teams must act"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "damage_timing",
+   "description": "When the damage actually arose relative to depot intake: already present on arrival, caused during depot handling, or genuinely unclear from the scans",
+   "kind": "categorical",
+   "values": [
+    "before_intake",
+    "in_depot",
+    "unclear"
+   ],
+   "weights": [
+    0.35,
+    0.4,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "manifest_mismatch",
+   "description": "Where the inspection report disagrees with the manifest: none, a trivial unit or format difference, a quantity difference, a different item description, or a large weight gap",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "trivial_unit",
+    "quantity",
+    "item_description",
+    "weight_large"
+   ],
+   "weights": [
+    0.3,
+    0.2,
+    0.15,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "inspection_state",
+   "description": "Completeness of the damage inspection: complete, photos not attached, inspection still pending, or damage_report section null",
+   "kind": "categorical",
+   "values": [
+    "complete",
+    "photos_missing",
+    "inspection_pending",
+    "report_null"
+   ],
+   "weights": [
+    0.45,
+    0.25,
+    0.18,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "loss_pct",
+   "description": "True estimated loss as a percentage of declared value; values cluster near the 5% and 50% boundaries in some records",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 100,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "declared_value",
+   "description": "Sender's declared value in GBP; high values push towards supervisor referral",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 5,
+   "max": 3000,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S1"
+   ]
+  },
+  {
+   "name": "scan_order_anomaly",
+   "description": "Damage was logged with a timestamp earlier than the depot inbound scan, or an outbound scan precedes inspection",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S2",
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "tamper_signs",
+   "description": "Evidence of resealing, cut tape or missing contents suggesting interference rather than accidental damage",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.15,
+   "skills": [
+    "S5",
+    "S7"
+   ]
+  },
+  {
+   "name": "sender_packaging_poor",
+   "description": "Mitigating factor: the sender's packaging was inadequate for the contents, which weakens depot liability even when damage arose in the depot",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S6",
+    "S5"
+   ]
+  },
+  {
+   "name": "prior_damage_scans",
+   "description": "Number of earlier scan events at upstream hubs carrying a damage or exception code",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "fragile_misrouted",
+   "description": "The manifest carries a fragile service flag, but the handling events show the parcel went through the standard conveyor rather than manual handling",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "note_slant",
+   "description": "Tone of the free-text notes, which may be neutral, may blame the sender or carrier, or may assert depot fault without evidence; this is a decoy",
+   "kind": "categorical",
+   "values": [
+    "neutral",
+    "blames_upstream",
+    "admits_fault",
+    "absent"
+   ],
+   "weights": [
+    0.4,
+    0.2,
+    0.2,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S5"
+   ]
+  },
+  {
+   "name": "claim_amount_gap",
+   "description": "Ratio of the sender's claimed amount to the depot's own repair or replacement estimate; above 1 means an overclaim",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.5,
+   "max": 2.5,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "parcel",
+   "description": "Manifest data: parcel_id, service, fragile flag, declared contents, quantity, weight_kg, declared_value_gbp"
+  },
+  {
+   "name": "handling_events",
+   "description": "Ordered list of scan events with ts, site, event code and exception code"
+  },
+  {
+   "name": "damage_report",
+   "description": "Inspection record: inspected_ts, inspector, observed_item, qty_found, weight_kg, condition, photos list, repair_est_gbp; may be null"
+  },
+  {
+   "name": "claim",
+   "description": "Sender claim: claim_id, claimed_gbp, item_desc, packaging_desc, submitted date; may be null"
+  },
+  {
+   "name": "notes",
+   "description": "One to three short free-text lines from depot staff or the sender"
+  }
+ ],
+ "rendering_notes": "damage_timing shows only indirectly, through handling_events: an exception code (e.g. DMG, CRUSH) at an upstream hub or on the inbound scan means before_intake; clean inbound followed by a damage code at a depot sort event means in_depot; unclear means the first damage code coincides with the inbound scan, or the events are sparse. prior_damage_scans adds that many upstream exception codes; some are decoy codes such as ADDR or WET-label that are not damage. manifest_mismatch is shown by comparing parcel.declared contents, quantity and weight_kg against damage_report.observed_item, qty_found and weight_kg: trivial_unit uses g against kg or a synonym, quantity uses an off-by-one or more, item_description names a different product, and weight_large differs by over 20%. Mismatches are never flagged. inspection_state works as follows: photos_missing gives an empty photos list; inspection_pending sets inspected_ts and repair_est_gbp to null; report_null sets damage_report to null. loss_pct is rendered as damage_report.repair_est_gbp relative to parcel.declared_value_gbp, or as condition 'written_off'; the assessor must compute the share. claim.claimed_gbp equals repair_est_gbp multiplied by claim_amount_gap, so an inflated claim is a decoy for the loss scale. scan_order_anomaly sets damage_report.inspected_ts or a damage event before the inbound scan ts. tamper_signs appears in damage_report.condition text (e.g. 'tape cut and resealed') or as qty_found below the manifest quantity with an intact box. sender_packaging_poor appears in claim.packaging_desc or in a note (e.g. 'single-wall box, no void fill'). fragile_misrouted pairs parcel.fragile=true with a CONV-STD event in handling_events. note_slant drives the notes text; notes that admit or deny fault are never decisive on their own. No field states liability, fault, a loss band, a next action or a severity; the record contains only raw manifest, scan, inspection and claim data.",
+ "skills": [
+  "S1",
+  "S2",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "parties_needed",
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_evidence"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.1074
+}

@@ -1,0 +1,144 @@
+{
+ "id": "F438-0020",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "EP-77102",
+   "admission_method": "elective",
+   "los": 2,
+   "specialty": "orthopaedics"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "M17.1"
+   },
+   "comorbidities": [
+    "I10",
+    "E78.0"
+   ],
+   "theatre_log": [
+    {
+     "code": "W40.1",
+     "date": "2024-03-12",
+     "side": "R"
+    }
+   ],
+   "documents_present": {
+    "discharge_summary": false,
+    "operation_note": true,
+    "pathology_report": true
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "M17.1"
+   },
+   "secondary_dx": [
+    "I10",
+    "E78.0"
+   ],
+   "procedures": [
+    {
+     "code": "W40.1",
+     "date": "2024-03-12",
+     "side": "R"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "HN12B",
+   "hrg_regrouped": "HN12C",
+   "grouper_version_submitted": "2023",
+   "grouper_version_audit": "2024",
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "different_hrg",
+  "missing_source": "discharge_summary",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.12,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "discharge_summary",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.12,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "error_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 76,
+ "deciding": {
+  "primary_supported": "Coded M17.1 matches documented principal_condition M17.1.",
+  "hrg_shift": "hrg_submitted HN12B differs from hrg_regrouped HN12C.",
+  "next_step": "Every code, date and side matches, so the sample closes as coded.",
+  "error_count": "Diagnoses and the W40.1 right-side procedure all match; the missing discharge summary is the only small doubt.",
+  "error_severity": "No code differs from the documentation, so no error alters any assigned code."
+ },
+ "request": "rec-F438-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009282
+}

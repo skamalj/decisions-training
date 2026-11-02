@@ -1,0 +1,128 @@
+{
+ "id": "F417-0037",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V-202",
+   "loa_m": 12.2,
+   "draught_m": 2.5,
+   "draught_src": "declared"
+  },
+  "berth": {
+   "id": "Q2",
+   "max_loa_m": 12.0,
+   "fender_allow_m": 0.3,
+   "depth_lat_m": 3.0,
+   "waiver_ref": null
+  },
+  "booking": {
+   "arrival": "2025-07-10",
+   "departure": "2025-07-15",
+   "next_on_berth": {
+    "arrival": "2025-07-12"
+   }
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 12.8,
+    "draught_m": null
+   },
+   "insurance_expiry": null,
+   "inspection_date": "2025-07-20",
+   "inspection_booked": true
+  },
+  "account": {
+   "dues_outstanding_gbp": 456,
+   "plan_id": null
+  },
+  "history": [
+   {
+    "date": "2024-08-01",
+    "berth": "Q2",
+    "incidents": 1
+   },
+   {
+    "date": "2023-08-02",
+    "berth": "Q2",
+    "incidents": 1
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 4.69,
+  "berth_length_fit": "exceeds_limit",
+  "ukc_margin_m": 0.5,
+  "draught_source": "null",
+  "insurance_status": "null",
+  "inspection_state": "scheduled",
+  "arrears_amount": 456,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "multiple_nights",
+  "trusted_regular": false,
+  "prior_incidents": 2,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 4.69,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 1.65,
+  "draught_source": "null",
+  "insurance_status": "null",
+  "inspection_state": "scheduled",
+  "arrears_amount": 456,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "multiple_nights",
+  "trusted_regular": false,
+  "prior_incidents": 2,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "refer_harbourmaster",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "dimension_mismatch",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "length_fits": "Survey loa 12.8 exceeds max 12.0 plus fender 0.3 = 12.3, and waiver_ref is null; only the declared 12.2 would fit.",
+  "next_step": "Departure 2025-07-15 overlaps next_on_berth arrival 2025-07-12 by three nights, with an oversize survey length and no waiver; beyond officer authority.",
+  "primary_issue": "Declared loa 12.2 vs survey 12.8 and survey length above berth limit; insurance null is a competing issue.",
+  "ukc_band": "Survey draught is null, so the declared 2.5 is used: 3.0 minus 2.5 = 0.5 m exactly at the boundary, and the figure is unverified.",
+  "unresolved_count": "Loa mismatch, survey length above berth limit and stay overlap make three; the first two may be counted as one, giving two."
+ },
+ "request": "rec-F417-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01351
+}

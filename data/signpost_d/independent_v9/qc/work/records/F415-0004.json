@@ -1,0 +1,124 @@
+{
+ "id": "F415-0004",
+ "family": "F415",
+ "state": {
+  "shift": {
+   "sched_slots": [
+    "09:00",
+    "11:00",
+    "13:00",
+    "15:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "09:00",
+    "end": "2025-05-06T09:20"
+   },
+   {
+    "slot": "11:00",
+    "end": "2025-05-06T11:20"
+   },
+   {
+    "slot": "13:00",
+    "status": "not_recorded",
+    "photo_ref": "P204"
+   },
+   {
+    "slot": "15:00",
+    "end": "2025-05-06T15:20"
+   }
+  ],
+  "faults": [
+   {
+    "type": "sharps_find",
+    "reported_at": "2025-05-06T09:10",
+    "remedied_at": null,
+    "remedy_note": "sharps box fitted, collection ticket pending"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2025-05-06T16:00"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 4,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 470.07,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 1
+ },
+ "factors_sampled": {
+  "scheduled_slots": 4,
+  "missed_slots": "2",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 470.07,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 1
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "missed_clean": "The 13:00 slot is not_recorded with no closures. Photo P204 hints that a clean may have happened, but there is no visit end or checklist.",
+  "sign_off_valid": "A supervisor signed at 16:00, after the last visit ended at 15:20.",
+  "next_step": "The one unconfirmed item is whether 13:00 was cleaned and when the sharps were collected. Evidence is needed before deciding.",
+  "staff_effort": "A query to the contractor about the photo and the collection ticket takes some hours. Reconciling the sharps record could stretch it to days.",
+  "fault_exposure": "remedied_at is null, which suggests never remedied. The note says a box was fitted and only the collection ticket is pending, so the hazard may have been contained."
+ },
+ "request": "rec-F415-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013412
+}

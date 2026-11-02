@@ -1,0 +1,131 @@
+{
+ "id": "F437-0011",
+ "family": "F437",
+ "state": {
+  "job": {
+   "target_locale": "es-MX",
+   "source_version": "v2",
+   "glossary_version": "g4",
+   "due_at": "2024-05-15T08:00",
+   "terms": {
+    "variant_accepted": true
+   }
+  },
+  "source": {
+   "version": "v2",
+   "segment_count": 120
+  },
+  "deliverable": {
+   "target_locale": "es-419",
+   "built_from_version": "v2",
+   "segments_translated": 120,
+   "glossary_version_used": "g4",
+   "delivered_at": "2024-05-14T09:00"
+  },
+  "qa_report": {
+   "flags": 11,
+   "false_positive_marked": 3,
+   "unresolved": {
+    "minor": 0,
+    "major": 0,
+    "critical": 0
+   }
+  },
+  "review": {
+   "completed_at": "2024-05-14T09:00",
+   "signed_off": true,
+   "errors": [
+    {
+     "severity": "minor",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2024-05-02"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": true,
+  "glossary_version_state": "match",
+  "review_status": "signed_at_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.27,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 23,
+  "client_waiver": true,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": true,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.27,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 23,
+  "client_waiver": true,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 48,
+ "deciding": {
+  "scope_matches": "Versions (v2) and segment counts (120/120) agree; only the es-MX vs es-419 locale difference, covered by variant_accepted, leaves slight doubt.",
+  "reviewed_in_time": "review.completed_at equals deliverable.delivered_at to the minute, so sign-off before delivery is unclear although signed_off is true.",
+  "next_step": "Counts, QA unresolved (all 0), sign-off and 23h slack are consistent and the locale variant is waived, so release.",
+  "open_severity": "QA unresolved are all 0 and the only review error is a closed minor.",
+  "parties_needed": "Nothing is open, so no one needs to act; the locale variant is already accepted."
+ },
+ "request": "rec-F437-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010095
+}

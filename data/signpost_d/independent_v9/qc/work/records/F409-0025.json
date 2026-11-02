@@ -1,0 +1,140 @@
+{
+ "id": "F409-0025",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "S. Khan",
+   "submitted_on": "2024-05-14",
+   "app_type": "new",
+   "message": "Do vouchers expire?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "tenancy_agreement",
+     "issued_on": "2024-03-13",
+     "address_line": "Flat 6, 8 Dock St",
+     "verified": true
+    },
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2024-04-02",
+     "address_line": "Flat 6, 8 Dock St",
+     "verified": true
+    }
+   ]
+  },
+  "vehicle": {
+   "keeper_name": "Orbit Fleet",
+   "supporting_letters": [
+    {
+     "type": "employer_letter",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "address": "Flat 5, 8 Dock St"
+  },
+  "account_history": {
+   "live_permits": [
+    1,
+    2
+   ],
+   "exceptions": [
+    {
+     "type": "medical",
+     "approved_on": "2023-06-01"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "paid"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "different_flat",
+  "proof_age_days": 62,
+  "docs_missing": 0,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "different_flat",
+  "proof_age_days": 62,
+  "docs_missing": 2,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 3,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 49,
+ "deciding": {
+  "residency_shown": "Verified documents are recent but show Flat 6 against requested Flat 5.",
+  "disposition": "Documents verified, keeper letter on file, cap exception approved.",
+  "main_issue": "Keeper letter and exception cover the flags; flat difference is the only doubt.",
+  "misuse_strength": "Keeper letter mitigates; one paid PCN; the flat mismatch is the only doubt.",
+  "document_gaps": "Both documents are verified; none missing."
+ },
+ "request": "rec-F409-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004824
+}

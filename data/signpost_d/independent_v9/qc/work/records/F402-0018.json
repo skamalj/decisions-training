@@ -1,0 +1,144 @@
+{
+ "id": "F402-0018",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-2095",
+   "source": "hospital",
+   "received": "2025-04-02",
+   "priority": "soon",
+   "site": {
+    "part": "hip",
+    "side": "L"
+   },
+   "onset_date": "2025-01-29"
+  },
+  "patient": {
+   "id": "p-7714",
+   "dob": "1943-03-08",
+   "aid": "frame",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx": "S72.0",
+   "red_flags": [
+    "new_leg_weakness"
+   ],
+   "neuro_signs": {
+    "progression": "static"
+   },
+   "function_index": 7,
+   "anticoagulant": false,
+   "surgery_date": "2025-01-30",
+   "weight_bearing": "toe_touch"
+  },
+  "gp_record": {
+   "dob": "1943-03-08",
+   "meds": [],
+   "falls_3m": 5,
+   "reviews": []
+  },
+  "attachments": [
+   {
+    "type": "op_protocol",
+    "date": "2025-01-30",
+    "side": "L"
+   },
+   {
+    "type": "MRI",
+    "date": "2025-03-15",
+    "side": "L",
+    "result": "pending"
+   }
+  ],
+  "history": {
+   "episodes": [
+    {
+     "date": "2024-08-12",
+     "discharge": "goals_met"
+    }
+   ],
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "new_leg_weakness (static)",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "none",
+  "missing_item": "none",
+  "condition_group": "post_op_orthopaedic with frailty",
+  "symptom_duration_weeks": 9,
+  "function_index": 7.0,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "soon",
+  "falls_last_3m": 5,
+  "post_op_days": 62,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "non_physio_surgical",
+  "symptom_duration_weeks": 9,
+  "function_index": 7.27,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "soon",
+  "falls_last_3m": 5,
+  "post_op_days": 62,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "book_amended",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "specialist_rehab",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 69,
+ "deciding": {
+  "red_flag_unresolved": "New leg weakness is coded and the MRI result is still pending, but the neuro sign is static and the weakness may be post-fracture, so it is balanced.",
+  "next_step": "The priority 'soon' understates 5 falls, function index 7 and the pending MRI, so book with an amended priority and precautions.",
+  "pathway": "Post-hip-fracture surgery at day 62 with toe-touch weight-bearing, 5 falls and function index 7 plainly needs specialist rehabilitation.",
+  "reversal_time": "A missed neuro cause could leave a permanent deficit (level 3), but if it is only post-op weakness recovery takes under three months, so it is contested.",
+  "clinical_urgency": "Weakness with a pending MRI could need review within 48 hours, but the signs are static and no deterioration is recorded, so two weeks is also defensible."
+ },
+ "request": "rec-F402-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00919
+}

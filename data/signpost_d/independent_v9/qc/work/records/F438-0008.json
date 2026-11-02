@@ -1,0 +1,124 @@
+{
+ "id": "F438-0008",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E3380",
+   "los": 6
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "J18.9"
+   },
+   "comorbidities": [
+    "I50.9",
+    "N18.3",
+    "E11.9"
+   ]
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "J18.9"
+   },
+   "secondary_dx": [
+    "I50.0",
+    "N18.5",
+    "E11.2"
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "DZ11B",
+   "hrg_regrouped": "DZ11A"
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    "E11.2/E11.9"
+   ],
+   "queries": [
+    {
+     "target_code": "N18.5",
+     "status": "closed",
+     "response": "contradicts"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 3,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "none",
+  "clinician_query": "answered_contradicts",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.12,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 3,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "answered_contradicts",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.12,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "amend_and_regroup",
+   "second": "request_records",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "primary_supported": "J18.9 identical in both sections.",
+  "hrg_shift": "DZ11B vs DZ11A, yet secondary-only differences make it debatable.",
+  "next_step": "Regroup differs so amend_and_regroup; local convention covering E11.2 invites a records request instead.",
+  "error_count": "Three secondary mismatches, but E11.2/E11.9 convention may excuse one, giving 2 or 3.",
+  "error_severity": "Regrouped HRG differs from submitted, so major."
+ },
+ "request": "rec-F438-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005975
+}

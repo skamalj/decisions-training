@@ -1,0 +1,126 @@
+{
+ "id": "F431-0027",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "H2",
+   "seal_state": "intact",
+   "seal_checked_date": "2023-11-14",
+   "last_verified_date": "2019-06-01"
+  },
+  "period_read": {
+   "read_date": "2024-03-31",
+   "reg_kwh": 5850,
+   "src_code": "AMR",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2024-02-29",
+    "reg_kwh": 5000,
+    "src_code": "AMR",
+    "same_period_ly_kwh": 1000
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_COMMS"
+   ],
+   "flow_temp_c": 68,
+   "return_temp_c": 42,
+   "battery_pct": 18
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 81,
+   "hdd_prior_year": 100,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "closed",
+     "date": "2023-12-05"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.05,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.81,
+  "diagnostic_error_count": 1,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.67,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.81,
+  "diagnostic_error_count": 2,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": true,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 30,
+ "deciding": {
+  "meter_fault": "Seal intact, delta-T of 26 C is plausible, and the lone E_COMMS code only affects transmission.",
+  "billable_actual": "AMR actual in sequence with consumption 850 vs expected 810 fits, but a RECAL order and the old verification date leave a little doubt.",
+  "next_step": "In-sequence AMR read within expected consumption, closed RECAL and intact seal give nothing to chase.",
+  "staff_effort": "Little work, though confirming the closed RECAL and the comms code could stretch beyond an hour.",
+  "consumption_deviation": "Consumption 850 vs expected 810 (1000*81/100) is about 5% over, under 15%."
+ },
+ "request": "rec-F431-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009637
+}

@@ -1,0 +1,143 @@
+{
+ "id": "F431-0036",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM-40117",
+   "seal_state": "intact",
+   "seal_checked_date": "2024-11-04"
+  },
+  "period_read": {
+   "read_date": "2025-03-14",
+   "reg_kwh": 18420,
+   "src_code": "ENG",
+   "photo_ref": "P-8841"
+  },
+  "history": [
+   {
+    "date": "2024-10-11",
+    "reg_kwh": 15900,
+    "src": "EST"
+   },
+   {
+    "date": "2024-11-12",
+    "reg_kwh": 16200,
+    "src": "EST"
+   },
+   {
+    "date": "2024-12-12",
+    "reg_kwh": 16500,
+    "src": "EST"
+   },
+   {
+    "date": "2025-01-13",
+    "reg_kwh": 16800,
+    "src": "EST"
+   },
+   {
+    "date": "2025-02-12",
+    "reg_kwh": 17100,
+    "src": "EST",
+    "same_period_ly_kwh": 748
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [],
+   "flow_temp_c": 67.0,
+   "return_temp_c": 41.5
+  },
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2025-02-25",
+   "hdd_current": 218,
+   "hdd_prior_year": 200,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "open",
+     "date": "2025-02-20"
+    }
+   ],
+   "dispute_open": true
+  }
+ },
+ "factors": {
+  "read_source": "engineer_manual",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.62,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.09,
+  "diagnostic_error_count": 0,
+  "meter_works_order": true,
+  "consecutive_estimates": 5,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": true
+ },
+ "factors_sampled": {
+  "read_source": "engineer_manual",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.62,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.09,
+  "diagnostic_error_count": 0,
+  "meter_works_order": true,
+  "consecutive_estimates": 5,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": true
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "billable_actual": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "bill_estimate",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 61,
+ "deciding": {
+  "meter_fault": "No error codes, normal delta-T of 25.5 C and an intact seal. A tenancy change on 2025-02-25 explains the high use. The open RECAL works order leaves some doubt.",
+  "billable_actual": "The ENG read has a photo reference and a later date and higher register than the last history entry. The tenancy change explains the consumption.",
+  "next_step": "The dispute is open, the RECAL order is open and five estimates are in a row, which leans toward a flagged estimate until things are settled. The valid ENG read gives some doubt.",
+  "staff_effort": "An open dispute, an open RECAL order and five prior estimates to reconcile need days of work, not hours.",
+  "consumption_deviation": "Period use is 18420-17100=1320 kWh. Expected is 748*218/200=815 kWh, so the ratio is 1.62 and the deviation is 62%."
+ },
+ "request": "rec-F431-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009886
+}

@@ -1,0 +1,132 @@
+{
+ "id": "F424-0010",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B-505",
+   "vessel_id": "FV4",
+   "volume_hl": 12,
+   "brew_date": "2024-07-02",
+   "yeast_strain": "S-189",
+   "yeast_gen": 2,
+   "og_target": 1.048,
+   "fg_target_min": 1.008,
+   "fg_target_max": 1.012,
+   "strain_max_temp_c": 14
+  },
+  "readings": [
+   {
+    "ts": "2024-07-03",
+    "gravity_sg": 1.048,
+    "temp_c": 12
+   },
+   {
+    "ts": "2024-07-12",
+    "gravity_sg": 1.01,
+    "temp_c": 13.5
+   },
+   {
+    "ts": "2024-07-13",
+    "gravity_sg": 1.01,
+    "temp_c": 12
+   }
+  ],
+  "events": [
+   {
+    "type": "temp_change",
+    "note": "Approved free-rise to 13.5C, all fine."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B-505",
+   "diacetyl_mgl": 0.07,
+   "micro_plate": {
+    "result": "negative"
+   }
+  },
+  "release_request": {
+   "vessel_id": "FV4",
+   "volume_hl": 12,
+   "note": "Routine packaging Friday."
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": true,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.07,
+  "discrepancy_count": 0,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": true,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.07,
+  "discrepancy_count": 0,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "reassuring"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "hold_retest",
+   "second": null,
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 77,
+ "deciding": {
+  "terminal_gravity": "Consecutive 1.010 readings inside 1.008-1.012.",
+  "contamination_supported": "Negative plate, no sensory signal; contamination unsupported, the planned true cannot be supported by this record.",
+  "batch_disposition": "Nothing missing; release is the natural answer, though the plan leans hold_retest.",
+  "deviation_severity": "13.5C is under 14C limit and an approved free-rise is logged; no deviation.",
+  "record_discrepancies": "All corresponding values agree; count is zero."
+ },
+ "request": "rec-F424-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005385
+}

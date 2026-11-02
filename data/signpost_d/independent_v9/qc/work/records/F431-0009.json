@@ -1,0 +1,124 @@
+{
+ "id": "F431-0009",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "sn": "HM4417",
+   "seal_state": "intact",
+   "seal_checked_date": "2024-01-15",
+   "last_verified_date": "2018-06-01"
+  },
+  "period_read": {
+   "read_date": "2024-03-31",
+   "reg_kwh": 22340,
+   "src_code": "AMR",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "d": "2024-01-31",
+    "kwh": 19000,
+    "src": "AMR"
+   },
+   {
+    "d": "2024-02-29",
+    "kwh": 20000,
+    "src": "EST",
+    "same_period_ly_kwh": 900
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_TPROBE"
+   ],
+   "flow_temp_c": 60,
+   "return_temp_c": 52,
+   "battery_pct": 22
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 260,
+   "hdd_prior_year": 200,
+   "works_orders": [],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 2.0,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.3,
+  "diagnostic_error_count": 1,
+  "meter_works_order": false,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 0.97,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.3,
+  "diagnostic_error_count": 0,
+  "meter_works_order": false,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "meter_fault": "An E_TPROBE temperature-probe code with a narrow 8 K delta-T hints at a device fault, though the seal is intact and there is no works order.",
+  "billable_actual": "Unexplained high consumption of 2340 kWh with no occupancy or works explanation and a probe error; the prior-period estimate only partly explains it.",
+  "next_step": "AMR read in sequence, seal intact, and the preceding period was an estimate whose catch-up could explain the high use, so release is defensible.",
+  "staff_effort": "A probe error and a doubled consumption with no explanation require a site visit and recalculation across periods, one to five days.",
+  "consumption_deviation": "Period 2340 kWh vs expected 900*260/200=1170 gives a ratio of exactly 2.0, on the 100% boundary between levels 2 and 3."
+ },
+ "request": "rec-F431-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009154
+}

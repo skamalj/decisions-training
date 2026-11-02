@@ -1,0 +1,166 @@
+{
+ "id": "F435-0013",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E-3307",
+   "zone_id": "FL-C",
+   "doors_open": "2025-07-19T19:00",
+   "check_filed_at": "2025-07-19T23:40",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 600,
+   "variation": {
+    "ref": "V-88",
+    "new_limit": 650,
+    "status": "pending",
+    "approved_on": null
+   },
+   "stewards_required": 20,
+   "exit_routes": [
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6",
+    "X7"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 600,
+   "issued": 630,
+   "scanned_in": 618
+  },
+  "ingress": {
+   "device_status": "fault_logged",
+   "raw_peak": 649,
+   "manual_recount": {
+    "count": 612,
+    "at": "2025-07-19T21:15"
+   }
+  },
+  "stewarding": {
+   "rostered": 21,
+   "signed_in": 19
+  },
+  "exit_checks": [
+   {
+    "route_id": "X1",
+    "checked_at": "2025-07-19T17:50",
+    "status": "clear"
+   },
+   {
+    "route_id": "X2",
+    "checked_at": "2025-07-19T17:55",
+    "status": "clear"
+   },
+   {
+    "route_id": "X3",
+    "checked_at": null,
+    "status": "clear"
+   },
+   {
+    "route_id": "X4",
+    "checked_at": "2025-07-19T18:10",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "X5",
+    "checked_at": "2025-07-19T19:02",
+    "status": "clear"
+   },
+   {
+    "route_id": "X6",
+    "checked_at": "2025-07-19T18:15",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "X6",
+    "checked_at": "2025-07-19T19:06",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.02,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.06,
+  "manual_recount_present": true,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 1.05,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.05,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "live",
+  "occupancy_ratio": 0.89,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.06,
+  "manual_recount_present": true,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 1.05,
+  "limit_mismatch": false,
+  "steward_gap_pct": -0.05,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 3,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "escalate",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "counter_fault",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 108,
+ "deciding": {
+  "verified_exceedance": "Device is fault_logged so the recount of 612 governs; it exceeds the base limit 600 (variation still pending), by about 2%.",
+  "disposition": "post_event with a recount-verified overage above the unapproved limit; refer to the licensing authority.",
+  "discrepancy_source": "Issued 630 exceeds zone_limit_used 600, which matches the effective limit, so the overage comes from ticket overissue rather than the faulty counter.",
+  "steward_shortfall": "signed_in 19 against required 20 is 5% short; rostered 21 is a decoy.",
+  "unconfirmed_exits": "X3 null time, X4 obstructed with no clear, X5 checked after doors, X6 clear only after doors, X7 absent: five routes, or four if the X6 recheck is credited."
+ },
+ "request": "rec-F435-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012699
+}

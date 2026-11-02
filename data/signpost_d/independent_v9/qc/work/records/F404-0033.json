@@ -1,0 +1,177 @@
+{
+ "id": "F404-0033",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "Maple",
+   "date": "2024-05-07",
+   "age_band": "two_year",
+   "ratio_rule": "1:4",
+   "registered_places": 28
+  },
+  "children": {
+   "booked": 20,
+   "slots": [
+    {
+     "t": "08:00",
+     "signed_in": 18
+    },
+    {
+     "t": "08:15",
+     "signed_in": 20
+    },
+    {
+     "t": "08:30",
+     "signed_in": 22
+    },
+    {
+     "t": "08:45",
+     "signed_in": 22
+    },
+    {
+     "t": "09:00",
+     "signed_in": 22
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S1",
+    "in": "08:00"
+   },
+   {
+    "id": "S2",
+    "in": "08:00"
+   },
+   {
+    "id": "S3",
+    "in": "08:00"
+   },
+   {
+    "id": "S4",
+    "in": "08:00"
+   },
+   {
+    "id": "S5",
+    "in": "08:00"
+   },
+   {
+    "id": "S6",
+    "in": "08:00"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S1",
+    "in": "08:00"
+   },
+   {
+    "id": "S2",
+    "in": "08:00"
+   },
+   {
+    "id": "S3",
+    "in": "07:58"
+   },
+   {
+    "id": "S4",
+    "in": "08:00"
+   },
+   {
+    "id": "S5",
+    "in": "08:01"
+   },
+   {
+    "id": "S6",
+    "in": "09:00"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F2",
+    "from": "08:00",
+    "to": "08:45",
+    "room": "Maple",
+    "countersigned_by": "J. Ortiz"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 1,
+   "last_audit_outcome": "satisfactory"
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 22,
+  "staff_signin_variance": "late_arrival",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 15,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 1
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 22,
+  "staff_signin_variance": "late_arrival",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 60,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 1
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "escalate_notify",
+   "second": "file_no_action",
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "clear",
+   "target": "staff_shortfall",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 119,
+ "deciding": {
+  "below_ratio": "22 children need 6 staff. S6 arrived 09:00 and signed floater F2 only runs 08:00-08:45, leaving the 08:45 slot with 5 staff covering 20 children, which is a small gap.",
+  "disposition": "The uncovered gap is a single 15-minute slot and 2 children beyond cover, while an audit history of satisfactory and one prior breach argue against escalating. Whether it triggers referral is open.",
+  "primary_cause": "Children are 22 against 20 booked, but the shortfall comes from S6 signing in at 09:00 against a rota of 08:00, with eligible staff below rota, so staff shortfall is plain.",
+  "shortfall_duration": "The uncovered window is 08:45-09:00, which is 15 minutes. That sits at the boundary between never below ratio and 15 minutes or less.",
+  "breach_severity": "In the 08:45 slot, 5 staff cover 20 of 22 children, so 2 are beyond cover; counting the 09:00 arrival as the slot start could reduce this to 1."
+ },
+ "request": "rec-F404-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011351
+}

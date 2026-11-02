@@ -1,0 +1,111 @@
+{
+ "id": "F423-0025",
+ "family": "F423",
+ "state": {
+  "job": {
+   "run_qty": 2970,
+   "stock_spec": "CT90",
+   "overs_pct": 2.98,
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "ok_sheet_no": 9,
+   "signed_at": null
+  },
+  "colour_readings": null,
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.02,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "CT90",
+   "first_production_at": "2024-06-03T07:50",
+   "sheets_production": 297,
+   "sheets_makeready": 90
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "section_null",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 297,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.98,
+  "register_offset_mm": 0.02,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 31,
+  "customer_tier": "trade",
+  "prior_stoppages": 2
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": true,
+  "readings_completeness": "section_null",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 297,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.98,
+  "register_offset_mm": 0.02,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 31,
+  "customer_tier": "trade",
+  "prior_stoppages": 2
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "adjust_and_recheck",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "colour_in_tolerance": "colour_readings is null, so no patch was measured and the statement cannot be supported.",
+  "run_before_signoff": "signed_at is null while 297 production sheets are logged from 07:50, so the run went ahead without any signature.",
+  "next_step": "colour_readings is null, so readings must be re-pulled and measured. Register is fine and the stock matches, so adjust_and_recheck applies.",
+  "staff_effort": "Re-pull and measure, then obtain signature and decide on the 297 sheets already run. This is roughly one to five days, though it could be under eight hours.",
+  "scrap_exposure": "297 production sheets are printed unsigned and unmeasured, exactly 10% of the 2970 run and above the 2.98% overs. It sits on the line between levels 2 and 3."
+ },
+ "request": "rec-F423-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010639
+}

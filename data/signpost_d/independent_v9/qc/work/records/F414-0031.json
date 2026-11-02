@@ -1,0 +1,171 @@
+{
+ "id": "F414-0031",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SR-114",
+   "site_id": "P22",
+   "equip_type": "spring_rocker",
+   "crit_fall_height_m": 0.9,
+   "surf_type": "wood_chip",
+   "variance_ref": null
+  },
+  "inspection": {
+   "insp_date": "2025-06-10",
+   "insp_grade": "annual_main",
+   "fall_height_m": 0.9,
+   "surf_type_found": "woodchip",
+   "surf_depth_mm": 267,
+   "surf_req_table": [
+    {
+     "max_h_m": 1.0,
+     "type": "woodchip",
+     "min_depth_mm": 200
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "O2",
+     "result": "fail"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "EN-07",
+     "component_id": "C3",
+     "injury_mech": "minor"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "SR-114",
+    "component_id": "C1",
+    "defect_ref": "D1",
+    "status": "closed",
+    "closed_date": "2025-05-02"
+   },
+   {
+    "wo_id": "W2",
+    "asset_id": "SR-114",
+    "component_id": "C2",
+    "defect_ref": "D2",
+    "status": "closed",
+    "closed_date": "2025-05-02"
+   },
+   {
+    "wo_id": "W3",
+    "asset_id": "SR-114",
+    "component_id": "C5",
+    "defect_ref": "D3",
+    "status": "closed",
+    "closed_date": "2025-06-12",
+    "temp_measure": {
+     "type": "cover_plate",
+     "date": "2025-06-10"
+    }
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 0
+  },
+  "history": [
+   {
+    "date": "2024-06-04",
+    "grade": "annual_main",
+    "defect_refs": [
+     "D1",
+     "D2",
+     "D3"
+    ],
+    "component_results": {
+     "C3": "fail"
+    }
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": 67.42,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 1.0,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 0
+ },
+ "factors_sampled": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": 67.42,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 3,
+  "work_orders_closed_fraction": 0.7,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 0
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "close_asset",
+   "second": null,
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (head_neck_entrapment_fail = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 101,
+ "deciding": {
+  "prior_defects_cleared": "All three prior refs D1-D3 have closed work orders, but D3 closed 2025-06-12 after the inspection, against component C5 while the history failure was on C3, and no follow-up check exists.",
+  "surfacing_adequate": "Depth 267 mm against a 200 mm woodchip requirement for 0.9 m; only a trivial type spelling difference (wood_chip vs woodchip).",
+  "asset_disposition": "A head_neck probe fails on opening O2, with only a cover plate as temporary measure, so whole-asset closure is favoured.",
+  "remedial_progress": "All three raised work orders show status closed.",
+  "hazard_severity": "Head_neck probe failure on O2 points to critical entrapment; the temporary cover plate and a separate minor-injury finding keep level 3 defensible."
+ },
+ "request": "rec-F414-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01002
+}

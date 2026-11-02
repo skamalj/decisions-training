@@ -1,0 +1,164 @@
+{
+ "id": "F419-0040",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "07/25",
+   "date": "2024-04-22",
+   "time": "09:30",
+   "speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": null
+  },
+  "device": {
+   "cal_expiry": "2025-01-15",
+   "tyre_pressure_kpa": null,
+   "water_depth_mm": null
+  },
+  "runs": [
+   {
+    "dir": "07",
+    "thirds": [
+     0.58,
+     0.59,
+     0.58
+    ],
+    "segments_100m": [
+     0.6,
+     0.4,
+     0.58
+    ]
+   },
+   {
+    "dir": "25",
+    "thirds": [
+     0.59,
+     0.58,
+     0.6
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.9,
+    0.9,
+    0.9
+   ],
+   "mtd_threshold_mm": 1.0
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-11-11",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start_date": "2024-05-02"
+    }
+   ],
+   "cross_checks": [
+    {
+     "serial": "CFME-882",
+     "date": "2024-04-22",
+     "thirds": [
+      0.67,
+      0.68,
+      0.67
+     ]
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2023-12-05",
+     "lowest_third": 0.58
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-04-22T07:00Z"
+  }
+ },
+ "factors": {
+  "min_third_band": "above_planning",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 164,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 3,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "marginal",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_minimum",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 164,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "marginal",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_retest",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 40,
+ "deciding": {
+  "genuine_deficit": "Thirds are 0.58 to 0.60 and above planning, but one segment at 0.40 is below minimum; the cross-check device reads about 0.09 higher, which casts some doubt.",
+  "next_step": "Null weather, tyre pressure and water depth, together with the cross-check at 0.67 against 0.58, put the validity in doubt, so retest is needed first.",
+  "deficit_driver": "Every third is above the 0.52 planning level and the cross-check reads higher, so no genuine driver is shown. This is in tension with the 0.40 segment, which the plan's none_found answer cannot fully explain.",
+  "friction_severity": "The segment at 0.40 is below the minimum of 0.42, which settles level 3.",
+  "evidence_completeness": "Weather, tyre pressure and water depth are null, and signed_at 07:00 precedes the 09:30 survey time, so it is arguably misdated. Three versus four counted holds levels 1 and 0 in balance."
+ },
+ "request": "rec-F419-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010856
+}

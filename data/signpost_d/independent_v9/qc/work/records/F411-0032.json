@@ -1,0 +1,135 @@
+{
+ "id": "F411-0032",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "PH-2086",
+   "type": "private_hire",
+   "expiry": "2025-05-31",
+   "review_date": "2025-05-20"
+  },
+  "vehicle": {
+   "reg": "LM11XYZ",
+   "make": "Toyota",
+   "model": "Prius",
+   "seats": 4,
+   "odometer_km": 76540
+  },
+  "inspection": {
+   "station": "TS-03",
+   "date": "2025-05-14",
+   "result_code": "F",
+   "brake_efficiency_pct": 62
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "ref": "INS-5521",
+    "expires_on": "2025-04-30"
+   },
+   {
+    "type": "plate_cert",
+    "ref": "PC-88",
+    "expires_on": "2025-05-01"
+   },
+   {
+    "type": "mot_cert",
+    "ref": "M-310",
+    "expires_on": "2025-05-10",
+    "cover_note_ref": "CN-71",
+    "cover_until": null
+   },
+   {
+    "type": "driver_badge",
+    "ref": "DB-17",
+    "expires_on": "2026-01-12"
+   }
+  ],
+  "history": [
+   {
+    "date": "2024-05-22",
+    "result": "P",
+    "odometer_km": 61900
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "not_started",
+  "deadline_passed": false,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 0,
+  "vehicle_age_years": 13
+ },
+ "factors_sampled": {
+  "worst_defect_found": "advisory",
+  "rectification_state": "not_started",
+  "deadline_passed": false,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 13
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "refuse_renewal",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "contested",
+   "target": "clean_pass",
+   "second": "major_fail",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 129,
+ "deciding": {
+  "odometer_consistent": "Current 76540 km is above the only history reading, 61900 km a year earlier; the rise is plausible.",
+  "next_step": "Insurance (expired 04-30) and plate_cert (expired 05-01) are both before the 05-20 review date with no cover notes, so at least two document gaps point to refusal.",
+  "inspection_outcome": "result_code is F, which could suggest a serious failure, but the defects list is empty and records no graded item. Clean pass and major fail are both arguable.",
+  "document_gaps": "Insurance and plate_cert are plainly expired. The MOT cert expired 05-10 and has cover_note_ref CN-71 but a null cover_until, so it may or may not count as a third gap.",
+  "outstanding_severity": "The defects list is empty so nothing is outstanding, though the F result code leaves a little doubt."
+ },
+ "request": "rec-F411-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010982
+}

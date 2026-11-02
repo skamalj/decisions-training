@@ -1,0 +1,38 @@
+{
+ "persona": "careful_operator",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "verified_exceedance": {
+   "true": 0.05,
+   "false": 0.95
+  },
+  "disposition": {
+   "sign_off": 0.02,
+   "conditional_sign_off": 0.13,
+   "hold": 0.6,
+   "restrict_entry": 0.03,
+   "escalate": 0.22
+  },
+  "discrepancy_source": {
+   "none": 0.22,
+   "counter_fault": 0.04,
+   "ticket_overissue": 0.66,
+   "limit_mismatch": 0.08
+  },
+  "steward_shortfall": {
+   "0": 0.02,
+   "1": 0.03,
+   "2": 0.15,
+   "3": 0.8
+  },
+  "unconfirmed_exits": {
+   "0": 0.01,
+   "1": 0.03,
+   "2": 0.08,
+   "3": 0.68,
+   "4": 0.2
+  }
+ },
+ "cost": 0.00053
+}

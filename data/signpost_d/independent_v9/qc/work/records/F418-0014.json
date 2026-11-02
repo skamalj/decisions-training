@@ -1,0 +1,127 @@
+{
+ "id": "F418-0014",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "BRN",
+   "plat": 5,
+   "date": "2025-06-09",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S08"
+   },
+   {
+    "staff_id": "S09"
+   }
+  ],
+  "attendance": null,
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "09:00"
+   },
+   {
+    "type": "dispatch",
+    "time": "09:20",
+    "staff_id": "S08"
+   }
+  ],
+  "controls": {
+   "disp_ref": "DSP-77",
+   "disp_platform": 5,
+   "valid_from": "2025-05-01",
+   "valid_to": "2025-12-31",
+   "approved_by": "ROM",
+   "prior_shortfalls_30d": 3
+  },
+  "remarks": [
+   "Platform covered as required."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 38,
+  "shortfall_timing": "in_service",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 38,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "correct_and_brief",
+   "second": "accept_log",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "uncovered",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 62,
+ "deciding": {
+  "headcount_verified": "Attendance is null, so no sign-on record exists for either person; the answer is plainly not verified as true.",
+  "next_step": "Dispensation is valid but attendance is missing and remarks say covered, against an open gap; accept versus correct is split.",
+  "coverage_outcome": "gap_start 09:00 with no gap_end or cover events at all.",
+  "reversal_time": "Dispatch with unknown competence in a gap and no attendance record; remedy lies between months and never.",
+  "exposure_severity": "Dispatch event 09:20 by S08 inside the open gap, with no attendance evidence of certification."
+ },
+ "request": "rec-F418-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005605
+}

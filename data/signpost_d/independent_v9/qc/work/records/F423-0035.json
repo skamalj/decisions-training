@@ -1,0 +1,140 @@
+{
+ "id": "F423-0035",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-27745",
+   "stock_spec": "WB-200",
+   "run_qty": 20000,
+   "overs_pct": 2.53,
+   "spec_max_de": 3.0,
+   "customer_tier": "trade"
+  },
+  "proof_signoff": {
+   "signed_at": "2025-04-09T09:20",
+   "concession": {
+    "accepted_max_de": 3.5
+   }
+  },
+  "colour_readings": {
+   "calibrated_on": "2025-02-01",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 3.4
+    },
+    {
+     "ink": "M",
+     "delta_e": null
+    },
+    {
+     "ink": "Y",
+     "delta_e": 2.0
+    },
+    {
+     "ink": "K",
+     "delta_e": 1.6
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.04,
+     "in_image": false
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "WB-200",
+   "first_production_at": "2025-04-09T08:55",
+   "sheets_production": 908,
+   "sheets_makeready": 300,
+   "stoppages": [
+    "09:40",
+    "10:15",
+    "10:50",
+    "11:30"
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "some_patches_null",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 908,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.53,
+  "register_offset_mm": 0.04,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 67,
+  "customer_tier": "trade",
+  "prior_stoppages": 4
+ },
+ "factors_sampled": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "some_patches_null",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 908,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.53,
+  "register_offset_mm": 0.04,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 67,
+  "customer_tier": "trade",
+  "prior_stoppages": 4
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_manager",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 70,
+ "deciding": {
+  "colour_in_tolerance": "C reads 3.4, over spec 3.0 but under the concession limit of 3.5. M is null, so one patch is unmeasured. The concession favours true, and the missing reading keeps false plausible.",
+  "run_before_signoff": "first_production_at 08:55 is before signed_at 09:20, with 908 production sheets logged. The sequence points to production before signature.",
+  "next_step": "Four stoppages in the run log show a repeat failure, which together with the null M reading and the sign-off made after production calls for referral to the manager, and no information request would resolve it.",
+  "staff_effort": "Remeasuring the M patch is a short task under an hour. Whether the late sign-off and stoppages add more time is open, so level 0 is slightly favoured over level 1.",
+  "scrap_exposure": "908 sheets are 4.5% of run_qty 20000 against overs of 2.53% (506 sheets). Only sheets over the limit count, and the concession leaves it open whether any are suspect, so level 0 and 1 are both defensible."
+ },
+ "request": "rec-F423-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008908
+}

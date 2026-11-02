@@ -1,0 +1,309 @@
+{
+ "id": "F403",
+ "domain": "school meal allergen plans",
+ "role": "School catering allergen plan reviewer, who checks each pupil's individual allergen meal plan before and during its use in a school kitchen",
+ "setting": "A local authority school catering service keeps one allergen meal plan per pupil with a diagnosed food allergy. Each plan links the pupil's declared allergens and medical evidence to a mapped menu cycle and to the serving kitchen's controls, with a short history of reviews and incidents. The reviewer opens one plan at a time. For each plan they decide whether it can be released, how exposed the pupil is, where the plan first falls short, and how soon it matters.",
+ "questions": {
+  "evidence_allergens_covered": {
+   "type": "noul",
+   "instructions": "Every allergen in the medical evidence has a mapped menu substitution.",
+   "criteria": null
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the reviewer do with this allergen plan now?",
+   "criteria": {
+    "approve_plan": "Plan complete and safe; release to kitchen unchanged.",
+    "request_evidence": "Ask family for current clinician-signed allergy evidence before deciding.",
+    "approve_restricted": "Release now with the single affected dish withheld.",
+    "return_for_rework": "Hold release; two or more dishes need remapping first.",
+    "escalate_to_lead": "Refer to catering safety lead after a served allergen exposure."
+   }
+  },
+  "first_gap_stage": {
+   "type": "choice",
+   "instructions": "At which stage does the plan first fall short?",
+   "criteria": {
+    "no_gap": "Evidence current, every dish mapped, kitchen controls all verified.",
+    "evidence_gap": "Medical evidence missing, expired or lacking clinician confirmation.",
+    "menu_gap": "Evidence sound, but a dish or recipe is unmapped.",
+    "kitchen_gap": "Evidence and menu sound, but a kitchen control is unverified."
+   }
+  },
+  "exposure_proximity": {
+   "type": "score",
+   "instructions": "How close has a declared allergen come to the pupil's plate?",
+   "criteria": [
+    "Blocked: every allergen dish substituted, all controls verified",
+    "Guarded: dishes all substituted; at least one control unverified",
+    "Open: one or more allergen dishes lack substitution",
+    "Reached: pupil served a declared allergen since plan start"
+   ]
+  },
+  "meal_urgency": {
+   "type": "score",
+   "instructions": "How soon will the pupil next eat a school meal under this plan?",
+   "criteria": [
+    "First school meal more than 20 school days away",
+    "First school meal 6 to 20 school days away",
+    "First school meal 2 to 5 school days away",
+    "First school meal is the next school day",
+    "Pupil already eating school meals under this plan"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "evidence_status",
+   "description": "State of the medical evidence: current clinician letter, expired letter, section null because nothing was supplied, or a parent letter with no clinician signature.",
+   "kind": "categorical",
+   "values": [
+    "current",
+    "expired",
+    "missing",
+    "parent_letter_only"
+   ],
+   "weights": [
+    0.5,
+    0.15,
+    0.15,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S5",
+    "S7"
+   ]
+  },
+  {
+   "name": "allergen_count",
+   "description": "Number of allergens declared for the pupil, which sets how many substitution chains the menu mapping must carry.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 1,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "anaphylaxis_risk",
+   "description": "Whether an adrenaline auto-injector is prescribed. It raises concern but does not on its own change exposure or next step.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.35,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  },
+  {
+   "name": "unsubstituted_dishes",
+   "description": "Count of menu-cycle dishes containing a declared allergen with no substitution mapped. Zero, one or several.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S5",
+    "S7"
+   ]
+  },
+  {
+   "name": "allergen_list_mismatch",
+   "description": "The medical evidence names an allergen that is missing from the pupil's declared list, which the menu mapping was built from.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S2",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "recipe_change_after_mapping",
+   "description": "A dish's recipe version is dated after the plan's mapping date, so the mapping happened before the current recipe existed.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "supplier_spec_confirmed",
+   "description": "A supplier specification sheet, checked after the recipe change, confirms the changed dish is free of the declared allergens. Mitigates a recipe change.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "kitchen_control_state",
+   "description": "Kitchen-side control condition: all verified, allergen training lapsed for some staff, shared equipment for allergen-free prep, or the cleaning and segregation log not completed.",
+   "kind": "categorical",
+   "values": [
+    "all_verified",
+    "training_lapsed",
+    "shared_equipment",
+    "controls_unlogged"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "control_exception_approved",
+   "description": "An approved, in-date exception covers the kitchen weakness, such as a signed deep-clean protocol for shared equipment or a booked training refresher with a supervising trained cook. Mitigates the weakness.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "served_allergen_incident",
+   "description": "Since the plan started, the incident history logs that the pupil was served a dish containing a declared allergen. This is decisive: exposure_proximity goes to Reached whatever else holds, even when the note says there was no reaction.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  },
+  {
+   "name": "days_to_first_meal",
+   "description": "School days from the review date to the pupil's first school meal under the plan. Zero or negative means the pupil is already eating under it.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": -10,
+   "max": 30,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "packed_lunch_interim",
+   "description": "The family has agreed packed lunches until a set date, which pushes back the first school meal even though the plan start date is earlier. Mitigates urgency.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "note_tone",
+   "description": "Tone of the free-text messages in the history, independent of the facts: reassuring, alarmed or neutral. Acts as a decoy.",
+   "kind": "categorical",
+   "values": [
+    "reassuring",
+    "alarmed",
+    "neutral"
+   ],
+   "weights": [
+    0.35,
+    0.3,
+    0.35
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "pupil",
+   "description": "Pupil reference, year group, school code, declared allergens, auto-injector flag, plan start date."
+  },
+  {
+   "name": "medical_evidence",
+   "description": "Evidence document type, issuer role, issue and expiry dates, allergens listed; null if none supplied."
+  },
+  {
+   "name": "menu_mapping",
+   "description": "Mapping date, cycle weeks and a list of allergen-bearing dishes, each with recipe version date, substitution and supplier spec check."
+  },
+  {
+   "name": "kitchen_controls",
+   "description": "Prep area, segregated equipment flag, trained staff count and dates, cleaning log status, approved exceptions."
+  },
+  {
+   "name": "history",
+   "description": "Review date, packed-lunch arrangement, incident list and one to three short free-text messages."
+  }
+ ],
+ "rendering_notes": "pupil.declared_allergens lists allergen_count items. pupil.auto_injector carries anaphylaxis_risk. pupil.plan_start is a date. evidence_status appears as medical_evidence.doc_type ('clinician_letter' or 'parent_letter') with issued and expires dates. When expires falls before history.review_date, the evidence is expired. A missing status renders the whole medical_evidence section as null. allergen_list_mismatch shows only as medical_evidence.allergens containing one item absent from pupil.declared_allergens, and therefore absent from the mapping. menu_mapping.dishes holds entries {dish, contains, recipe_version_date, substitute, spec_checked_on}. unsubstituted_dishes renders as that many entries with substitute: null. recipe_change_after_mapping renders as recipe_version_date later than menu_mapping.mapped_on. supplier_spec_confirmed renders as spec_checked_on later than recipe_version_date; otherwise spec_checked_on is null or earlier. A recipe change without a later spec check counts as an unsubstituted dish. kitchen_control_state renders as staff training dates past their 12-month refresh, or segregated_equipment: false, or cleaning_log_complete: false. control_exception_approved renders as kitchen_controls.exceptions containing a dated, signed entry that covers that weakness; a covered weakness counts as verified. served_allergen_incident renders as a history.incidents entry dated on or after plan_start whose dish contains a declared allergen. Its note may say 'no reaction observed' as a decoy, and the incident still sets exposure to Reached and next step to escalate. Earlier near-miss incidents before plan_start may appear as decoys. history.packed_lunch_until, when non-null, defers the first school meal to the next school day after that date. Otherwise the first meal is plan_start. Urgency is counted in school days from history.review_date. history.messages holds one to three one-sentence notes from the cook, parent or reviewer, written in note_tone. Their tone must not track the facts: alarmed notes can sit on a sound plan and reassuring ones on a flawed plan. For next_step, an evidence gap leads to request_evidence unless an incident forces escalation. Exactly one unsubstituted or unconfirmed dish leads to approve_restricted, and two or more lead to return_for_rework. A record must never contain fields such as risk level, approval status, gap stage, urgency or 'covered: true'. Every answer must be derived by comparing dates, lists and counts across sections.",
+ "skills": [
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_evidence"
+ },
+ "aggravating_factor": "served_allergen_incident",
+ "design_cost": 0.175444
+}

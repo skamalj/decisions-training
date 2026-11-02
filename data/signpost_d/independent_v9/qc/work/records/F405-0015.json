@@ -1,0 +1,150 @@
+{
+ "id": "F405-0015",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-5590",
+   "detected_on": "2025-09-01",
+   "term_start": "2025-09-01",
+   "room": "D1.10"
+  },
+  "booking_a": {
+   "module": "ECO110",
+   "dept": "ECO",
+   "day": "Tue",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    2,
+    3
+   ],
+   "headcount": 61,
+   "features": [],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "HIRE-77",
+   "external_hire": true,
+   "room": "D1.10A",
+   "day": "Tue",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    3,
+    4
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-08-15",
+   "approver": "r.cole"
+  },
+  "room": {
+   "code": "D1.10",
+   "aliases": [
+    "D1.10-S"
+   ],
+   "capacity": 100
+  },
+  "alternatives": [
+   {
+    "code": "D2.04",
+    "capacity": 70,
+    "features": [],
+    "weeks_free": [
+     2
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "change_request",
+    "state": "open"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": true,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 8,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.61,
+  "required_feature": "none",
+  "owning_departments": "external_hire",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": true,
+  "wrong_room_variant": true,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 8,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.61,
+  "required_feature": "none",
+  "owning_departments": "external_hire",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "genuine_clash": "booking_b room D1.10A is not the room code D1.10 or its alias D1.10-S, so it is a different room despite week 3 and the time overlap.",
+  "alt_room_fits": "D2.04 has capacity 70 for 61 people and no feature is needed, but it is free only in week 2 and not week 3.",
+  "resolution": "booking_b is held in D1.10A, not an alias, so no overlap in the same room; dismiss.",
+  "urgency": "Detection equals term_start 2025-09-01; the week 2 Tuesday falls 8 days later, but the clash would first fall in week 3, so it sits at the 7-8 day boundary.",
+  "parties_needed": "An external hire, two departments, an approver, the change-request owner and a room owner are all involved, so five or more."
+ },
+ "request": "rec-F405-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006018
+}

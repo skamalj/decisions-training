@@ -1,0 +1,125 @@
+{
+ "id": "F437-0004",
+ "family": "F437",
+ "state": {
+  "job": {
+   "job_id": "J-30955",
+   "target_locale": "es-ES",
+   "source_version": "v1",
+   "due_at": "2025-05-06T09:00:00Z",
+   "terms": {
+    "due_revised_to": "2025-05-09T09:00:00Z"
+   }
+  },
+  "source": {
+   "version": "v1",
+   "segment_count": 200
+  },
+  "deliverable": {
+   "target_locale": "es-MX",
+   "built_from_version": "v1",
+   "segments_translated": 188,
+   "glossary_version_used": null,
+   "delivered_at": "2025-05-07T19:00:00Z"
+  },
+  "qa_report": null,
+  "review": {
+   "completed_at": "2025-05-07T14:00:00Z",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "critical",
+     "status": "closed",
+     "closed_at": null
+    },
+    {
+     "sev": "major",
+     "status": "open"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "04-18",
+    "04-25",
+    "05-02"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": true,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "critical",
+  "auto_qa_present": false,
+  "qa_false_positive_share": 0.63,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": -34,
+  "client_waiver": true,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": true,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "critical",
+  "auto_qa_present": false,
+  "qa_false_positive_share": 0.63,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": -34,
+  "client_waiver": true,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "return_for_fix",
+   "second": "hold_for_item",
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 54,
+ "deciding": {
+  "scope_matches": "segments_translated is 188 against source segment_count 200. The locale also differs (es-MX against es-ES).",
+  "reviewed_in_time": "Review completed_at 14:00 is before delivered_at 19:00 on 2025-05-07 and signed_off is true.",
+  "next_step": "Missing segments and the locale error are fixable, which favours return. The null glossary version and the absent qa_report are specific missing items, which keeps hold plausible. The revised due date waives lateness.",
+  "open_severity": "A critical review error is marked closed but has closed_at null, and a major error is open. Readers could take either level 3 or level 2.",
+  "parties_needed": "A translator, a reviewer and a PM or QA step are needed, and an account manager may be too, with locale and glossary issues on top. That points to three or four parties."
+ },
+ "request": "rec-F437-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01067
+}

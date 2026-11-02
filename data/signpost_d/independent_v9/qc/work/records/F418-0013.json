@@ -1,0 +1,136 @@
+{
+ "id": "F418-0013",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "HRP",
+   "plat": 1,
+   "date": "2025-05-20",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 1,
+   "dispatch_mode": "driver"
+  },
+  "roster": [
+   {
+    "staff_id": "S30",
+    "planned_start": "06:00"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S30",
+    "sign_on": "06:05",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2025-05-12",
+    "dispatch_comp_exp": "2026-01-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "11:00"
+   },
+   {
+    "type": "gap_end",
+    "time": "11:03"
+   }
+  ],
+  "controls": {
+   "disp_ref": "DSP-118",
+   "disp_platform": 4,
+   "prior_shortfalls_30d": 4
+  },
+  "remarks": [
+   "Brief toilet break, no trains."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 3,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": true,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 3,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": true,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": true
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 54,
+ "deciding": {
+  "headcount_verified": "S30 has a matching sign-on, but safety_comp_exp 2025-05-12 precedes the shift date; the competence flag is the doubt.",
+  "next_step": "Only a 3-minute break, no dispatch, and the dispatch mode is driver; nothing calls for further action.",
+  "coverage_outcome": "The single minimum post was held by rostered S30 for the whole shift apart from a 3-minute break.",
+  "reversal_time": "Trivial event with no lasting effect; undone at once.",
+  "exposure_severity": "Gap 11:00-11:03 is below min_staff 1 with a mismatched dispensation platform, but no duty was missed; level 0 is leaning only."
+ },
+ "request": "rec-F418-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005605
+}

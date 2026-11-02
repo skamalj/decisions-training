@@ -1,0 +1,155 @@
+{
+ "id": "F427-0017",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V202",
+   "visit_date": "2024-07-03",
+   "surveyor_grade": "senior",
+   "weather_on_day": "cloud"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 20,
+   "dipwells_scheduled": 10,
+   "dams_total": 3
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 50
+    },
+    {
+     "depth_cm": 52
+    },
+    {
+     "depth_cm": 54
+    },
+    {
+     "depth_cm": 51
+    },
+    {
+     "depth_cm": 53
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 30,
+     "prev_depth_cm": 30
+    }
+   ],
+   "rain_30d_pct_normal": 51
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D2",
+     "pool_level_cm": 38,
+     "design_pool_cm": 38,
+     "defect_code": "OK",
+     "remark": "Toe slightly damp."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 6
+    },
+    {
+     "q": 2,
+     "score": 5
+    }
+   ],
+   "photos_uploaded": null
+  },
+  "notes": {
+   "prior_visits": []
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.5,
+  "photos_status": "none",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "none_or_slight_seepage",
+  "water_table_offset_cm": -32.0,
+  "rainfall_pct_normal": 51.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.01,
+  "photos_status": "none",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": 6.02,
+  "rainfall_pct_normal": 50.66,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 2,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "well_below",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "dam_caused_drop": "Dry 30 days (51%) favours weather, but controls are steady and the damp toe at D2 hints at a dam contribution.",
+  "next_step": "Pool at design, code OK, no orders; nothing to act on.",
+  "hydro_state": "Mean depth about 52 cm against floor 20 cm is 32 cm below, well past 15.",
+  "dam_severity": "Code OK and pool equals design, but the remark 'toe slightly damp' leaves level 1 seepage defensible.",
+  "evidence_completeness": "5 of 10 wells (partial), quadrats and dam log present, photos null: three of four."
+ },
+ "request": "rec-F427-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009654
+}

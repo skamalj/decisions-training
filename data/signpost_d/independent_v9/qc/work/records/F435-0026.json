@@ -1,0 +1,148 @@
+{
+ "id": "F435-0026",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E101",
+   "zone_id": "BAL2",
+   "zone_type": "balcony",
+   "doors_open": "2025-03-01T19:00",
+   "phase": "live"
+  },
+  "licence": {
+   "base_limit": 180,
+   "variation": {
+    "ref": "V7",
+    "new_limit": 200,
+    "status": "approved",
+    "approved_on": "2025-02-27T10:00"
+   },
+   "stewards_required": 16,
+   "exit_routes": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 200,
+   "issued": 194,
+   "scanned_in": 190
+  },
+  "ingress": {
+   "device_status": "fault_logged",
+   "raw_peak": 204,
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 15,
+   "signed_in": 12,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "A",
+    "checked_at": "2025-03-01T17:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "B",
+    "checked_at": "2025-03-01T17:40",
+    "status": "clear"
+   },
+   {
+    "route_id": "C",
+    "checked_at": "2025-03-01T17:45",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "D",
+    "checked_at": null,
+    "status": "pending"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "balcony",
+  "event_phase": "live",
+  "occupancy_ratio": 0.97,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.05,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.97,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.25,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "balcony",
+  "event_phase": "live",
+  "occupancy_ratio": 1.1,
+  "counter_status": "ok",
+  "counter_inflation": 0.05,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 1.07,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.09,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 4,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "counter_fault",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "verified_exceedance": "Only the fault_logged counter shows 204 against an effective limit of 200 (variation approved before doors), and there is no manual recount, so the exceedance is unverified, though it could still be real.",
+  "disposition": "Faulty device with a null manual_recount: one specific missing confirmation, so hold pending a recount.",
+  "discrepancy_source": "Issued 194 is under the limit of 200 used by ticketing; only the fault_logged raw_peak 204 is above it.",
+  "steward_shortfall": "Signed in 12 of 16 required is exactly 25% short, on the level 2/3 boundary; rostered 15 is a decoy.",
+  "unconfirmed_exits": "Of 4 routes, C is obstructed with no later clear and D has a null checked_at, so 2 are unconfirmed."
+ },
+ "request": "rec-F435-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013993
+}

@@ -1,0 +1,154 @@
+{
+ "id": "F405-0049",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C-5310",
+   "detected_on": "2025-09-28",
+   "term_start": "2025-10-06",
+   "room": "SC-3"
+  },
+  "booking_a": {
+   "module": "CHE220",
+   "dept": "CHE",
+   "day": "Mon",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 35,
+   "required_features": [
+    "dual_projection"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "external_hire": true,
+   "room": "SC-3",
+   "day": "Mon",
+   "start": "15:45",
+   "end": "17:30",
+   "weeks": [
+    1,
+    2
+   ],
+   "headcount": 30,
+   "status": "confirmed",
+   "approved_at": "2025-08-20",
+   "approver": "fm.lead"
+  },
+  "room": {
+   "code": "SC-3",
+   "aliases": [],
+   "capacity": 40,
+   "features": [
+    "dual_projection"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "SC-7",
+    "capacity": 50,
+    "features": [
+     "projector"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "date": "2025-07-01"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-08-12"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 8,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.7,
+  "required_feature": "dual_projection",
+  "owning_departments": "external_hire",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": -1,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.7,
+  "required_feature": "none",
+  "owning_departments": "external_hire",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "reschedule",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "genuine_clash": "Same room, weeks 1-2 shared, and a 15-minute overlap (15:45-16:00); real but narrow, hence leaning.",
+  "alt_room_fits": "SC-7 holds 50 for 35 people and is free, but has projector, not the dual_projection booking A requires; a reader may accept it.",
+  "resolution": "Both confirmed; the only listed room lacks the required feature, so a time must move; the narrow overlap makes a small nudge arguable.",
+  "urgency": "Detected 2025-09-28, first shared Monday 2025-10-06, 8 days later, at the 7/8 day boundary.",
+  "parties_needed": "A short time shift could be done by the officer alone, though the external hire and CHE lecturer might need to agree."
+ },
+ "request": "rec-F405-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011686
+}

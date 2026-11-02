@@ -1,0 +1,137 @@
+{
+ "id": "F428-0034",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-3306",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 500,
+   "seal_type": "J_bulb",
+   "clear_width": 3.8,
+   "clear_width_unit": "m"
+  },
+  "inspection": {
+   "asset_id": "VL-3360",
+   "insp_date": "2024-09-09",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2024-09-09",
+    "closure_s": 475,
+    "leakage_l_min": 11.5,
+    "leakage_limit_l_min": 10,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "S4",
+    "component": "seal",
+    "grade": 2,
+    "length_mm": 450,
+    "status": "open",
+    "first_seen": "2024-04-22"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "WO-318",
+     "component": "seal",
+     "defect_code": "S4",
+     "grade_raised": 3,
+     "status": "scheduled",
+     "raised": "2024-04-25",
+     "completed": null,
+     "retest_insp_id": null,
+     "rated_closure_s": 420
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": false
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.95,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 3,
+  "mismatch_location": "asset_id, work order grade, work order rated closure",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 29,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.45,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "none",
+  "mismatch_count": 1,
+  "mismatch_location": "rated_closure_time",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 29,
+  "borderline_case": true,
+  "outage_beyond_permit": true
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "sign_off",
+   "second": "raise_repair",
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "seal",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (outage_beyond_permit = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 102,
+ "deciding": {
+  "closure_test_valid": "Result is logged as pass, but leakage 11.5 l/min exceeds the stated limit of 10, so the pass is doubtful.",
+  "next_step": "A scheduled seal order exists and the gate closes in time, which supports sign-off. Leakage over limit with the repair not started supports raising a repair.",
+  "defect_class": "The only open defect is S4, a grade 2 seal defect.",
+  "section_discrepancies": "Inspection asset_id VL-3360 differs from register VL-3306; WO grade_raised 3 differs from defect grade 2; WO rated_closure_s 420 differs from 500.",
+  "flood_risk": "closure_s 475 is within the rated 500, the worst open defect is grade 2, the gate is in service and there is no alert."
+ },
+ "request": "rec-F428-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011581
+}

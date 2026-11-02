@@ -1,0 +1,374 @@
+{
+ "id": "F401",
+ "domain": "hospital discharge readiness reviews",
+ "role": "Ward discharge coordinator (senior nurse) reviewing one inpatient's discharge readiness record on the day of planned discharge",
+ "setting": "An acute medical ward's discharge planning system assembles a readiness record for each patient listed for discharge. The record combines admission details, the last 24 hours of observations and pending investigations, the medicines reconciliation against the discharge prescription, therapy and social assessments with any care arrangements, and the discharge checklist with transport and pharmacy timings. The coordinator reviews each record and decides whether the patient can go, where to, how prepared the discharge is, and how far it will slip from the planned time.",
+ "questions": {
+  "rx_matches": {
+   "type": "noul",
+   "instructions": "Discharge prescription matches the reconciled inpatient medication list.",
+   "criteria": null
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should happen with this discharge now?",
+   "criteria": {
+    "discharge_now": "Everything is in place; patient leaves as planned without further action.",
+    "request_item": "One required section or item is missing; obtain it before deciding.",
+    "conditional_discharge": "Discharge proceeds once named outstanding tasks are completed on the day.",
+    "escalate_senior": "A clinical, capacity or identity concern needs a senior clinician's decision."
+   }
+  },
+  "destination": {
+   "type": "choice",
+   "instructions": "Which discharge destination does the current evidence support?",
+   "criteria": {
+    "home_independent": "Home with no new care, equipment or rehabilitation needed.",
+    "home_with_package": "Home with new care visits or equipment, start date confirmed.",
+    "intermediate_care": "Short-term reablement or step-down bed for ongoing rehabilitation.",
+    "care_home": "Permanent residential or nursing placement for continuous care needs.",
+    "remain_inpatient": "No safe destination arranged yet, so patient stays on ward."
+   }
+  },
+  "outstanding_tasks": {
+   "type": "score",
+   "instructions": "How many discharge checklist tasks remain genuinely outstanding?",
+   "criteria": [
+    "Complete: no checklist tasks outstanding",
+    "Minor gap: exactly one checklist task outstanding",
+    "Partial: two or three checklist tasks outstanding",
+    "Unprepared: four or more checklist tasks outstanding"
+   ]
+  },
+  "discharge_delay": {
+   "type": "score",
+   "instructions": "How long after the planned discharge time can the patient leave?",
+   "criteria": [
+    "Ready by the planned discharge date and time",
+    "Same day, but after the planned discharge time",
+    "One or two days after the planned date",
+    "Three or more days after the planned date"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "rx_discrepancy",
+   "description": "Difference between the reconciled inpatient medication list and the discharge prescription: none, a mere unit expression difference (1 g vs 1000 mg, brand vs generic name), a dose or frequency difference, a drug omitted, or a drug added.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "unit_expression_only",
+    "dose_differs",
+    "drug_omitted",
+    "drug_added"
+   ],
+   "weights": [
+    0.4,
+    0.15,
+    0.2,
+    0.15,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "rx_change_documented",
+   "description": "Whether a real discrepancy is covered by a matching entry in the medication change log (drug, action, reason, prescriber, dated before the prescription was signed), making it an intentional, reconciled change.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "obs_pattern",
+   "description": "Pattern of vital signs over the last 24 hours: all within normal ranges, one isolated abnormal set, or repeated abnormal sets (e.g. low SpO2, raised respiratory rate, tachycardia).",
+   "kind": "categorical",
+   "values": [
+    "all_within_range",
+    "single_abnormal_set",
+    "repeated_abnormal"
+   ],
+   "weights": [
+    0.45,
+    0.3,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  },
+  {
+   "name": "obs_baseline_documented",
+   "description": "Whether the clinical section records a patient-specific baseline or adjusted target (e.g. SpO2 target 88-92% for chronic lung disease, chronic rate-controlled AF) that explains the abnormal readings.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "senior_fit_review",
+   "description": "Whether a consultant or registrar recorded a fit-for-discharge review; it mitigates abnormal observations only if timestamped after the latest abnormal set, and is sometimes timestamped before it.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S2",
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "pending_result",
+   "description": "State of investigations at review: none pending, awaited but flagged as not needed before discharge with a named follow-up owner, awaited and flagged as required before discharge, or resulted abnormal with no acknowledgement recorded.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "awaited_non_blocking",
+    "awaited_blocking",
+    "abnormal_unactioned"
+   ],
+   "weights": [
+    0.45,
+    0.25,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S3",
+    "S7"
+   ]
+  },
+  {
+   "name": "missing_section",
+   "description": "A required part of the record that is null or absent: none, the therapy functional assessment, the social history, or the discharge prescription itself.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "function_assessment_null",
+    "social_history_null",
+    "discharge_rx_absent"
+   ],
+   "weights": [
+    0.6,
+    0.15,
+    0.12,
+    0.13
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2"
+   ]
+  },
+  {
+   "name": "outstanding_task_count",
+   "description": "Number of discharge checklist tasks (e.g. TTO dispensed, discharge letter sent, cannula removed, district nurse referral, equipment delivered) whose status is not done, including tasks only falsely marked done.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 5,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S2"
+   ]
+  },
+  {
+   "name": "false_completion",
+   "description": "Whether one checklist task is marked done but has completed_at null, no signed_by, or a completion time earlier than its prerequisite (e.g. TTO dispensed before the prescription was signed), so it actually counts as outstanding.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "name": "care_need",
+   "description": "Level of support the patient needs on leaving, inferred from therapy fields (mobility aid, transfer assistance count, ADL score) against social fields (lives alone, carer availability, prior package): none, a new home package or equipment, short-term rehabilitation, or permanent 24-hour care.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "new_package",
+    "rehab",
+    "permanent_care"
+   ],
+   "weights": [
+    0.35,
+    0.3,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "care_arrangement_status",
+   "description": "State of the care arrangement matching the need: not required, confirmed with start on or before planned discharge, confirmed with a later start date, requested with no start date, or declined by the provider or patient.",
+   "kind": "categorical",
+   "values": [
+    "not_required",
+    "confirmed_on_time",
+    "confirmed_later_start",
+    "requested_no_date",
+    "declined"
+   ],
+   "weights": [
+    0.3,
+    0.25,
+    0.2,
+    0.15,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "logistics_delay",
+   "description": "Timing of transport and pharmacy readiness relative to the planned discharge time: both before it, one later the same day, one on the next day, or transport booked with the date but a null pickup time.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "same_day_late",
+    "next_day",
+    "transport_time_unknown"
+   ],
+   "weights": [
+    0.45,
+    0.25,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "identifier_consistency",
+   "description": "Whether the patient identifier is consistent across sections: identical, differing only in formatting (spaces or leading zeros), or a genuinely different number in the medications section.",
+   "kind": "categorical",
+   "values": [
+    "consistent",
+    "format_only",
+    "mismatch"
+   ],
+   "weights": [
+    0.8,
+    0.12,
+    0.08
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S3"
+   ]
+  },
+  {
+   "name": "capacity_safeguarding_open",
+   "description": "Whether a mental capacity assessment about the discharge decision is pending or a safeguarding referral is open without an outcome.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.15,
+   "skills": [
+    "S7",
+    "S2"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "patient",
+   "description": "Identifier, ward, admission date, admitting condition code, planned_discharge_at datetime, and flags for capacity or safeguarding status."
+  },
+  {
+   "name": "clinical",
+   "description": "List of observation sets from the last 24 hours, documented baselines or targets, senior review entries, and investigations with status."
+  },
+  {
+   "name": "medications",
+   "description": "Patient identifier, reconciled inpatient list, change log entries, discharge prescription items with signed_at, and pharmacy ready time."
+  },
+  {
+   "name": "function_social",
+   "description": "Therapy assessment (mobility aid, transfer assistance, ADL score), social history, and care arrangement with provider status and start date."
+  },
+  {
+   "name": "discharge_tasks",
+   "description": "Checklist items with status, completed_at and signed_by, plus transport booking date, pickup time and destination address type."
+  }
+ ],
+ "rendering_notes": "patient.planned_discharge_at is the reference for all timing. rx_discrepancy appears only by comparing medications.reconciled[] (drug, dose, unit, frequency) with medications.discharge_rx[]; unit_expression_only is a decoy (1 g vs 1000 mg, brand vs generic) and still counts as matching. rx_change_documented is an entry in medications.changes[] naming the drug, action and reason with a prescriber and changed_at before discharge_rx signed_at; when present the discrepancy is reconciled and rx_matches is true, but an entry dated after signing or naming a different drug does not cover it. If missing_section is discharge_rx_absent, medications.discharge_rx is null and rx_matches is false. obs_pattern is shown only as raw parameters in clinical.obs[] (resp_rate, spo2, systolic_bp, heart_rate, temp, consciousness, recorded_at); no aggregate early warning score or stability label is ever given. obs_baseline_documented is clinical.targets with an adjusted spo2_target or rate note; senior_fit_review is clinical.reviews[] with role, outcome fit_for_discharge and reviewed_at, which only mitigates if reviewed_at is after the last abnormal obs. pending_result is clinical.investigations[] with status, required_before_discharge boolean, follow_up_owner and acknowledged_at (null when unactioned). missing_section renders the relevant object as null or omits it. outstanding_task_count and false_completion appear in discharge_tasks.items[] statuses; there is no count field, and a done item with null completed_at, null signed_by, or completed_at before its prerequisite counts as outstanding. care_need is inferred from function_social.therapy (mobility_aid, transfer_assist_count, adl_score) against social (lives_alone, carer_available, existing_package) and is never stated; care_arrangement_status is function_social.care_arrangement with type, status and start_date (null when requested_no_date). logistics_delay is discharge_tasks.transport (booked_date, pickup_time, null when unknown) and medications.pharmacy_ready_at. identifier_consistency compares patient.id with medications.patient_id; format_only is a decoy. capacity_safeguarding_open shows as patient.capacity_assessment status pending or patient.safeguarding_referral open with null outcome. Answer logic: next_step is escalate_senior for repeated or unmitigated abnormal obs without a later senior review, abnormal_unactioned results, a true identifier mismatch or an open capacity/safeguarding item; otherwise request_item when exactly one required section is null or a blocking result is awaited; otherwise conditional_discharge when tasks are outstanding or the delay is same-day; otherwise discharge_now. discharge_delay takes the latest of care start date, transport and pharmacy times; requested_no_date or declined count as three or more days; a null pickup time on the planned date is the deliberately contested boundary between the first two levels. destination is remain_inpatient when a needed arrangement has no confirmed start date. No field states readiness, destination, delay, task count or match result.",
+ "skills": [
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_item"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.207448
+}

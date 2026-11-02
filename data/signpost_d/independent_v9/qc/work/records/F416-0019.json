@@ -1,0 +1,185 @@
+{
+ "id": "F416-0019",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "date": "2025-07-12",
+   "end": "17:00",
+   "signoff": "G1 17:10"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "09:00",
+    "off": "17:00",
+    "qx": "2026-01-05"
+   },
+   {
+    "id": "G2",
+    "on": "09:00",
+    "off": "17:00",
+    "qx": "2026-04-09"
+   },
+   {
+    "id": "M6",
+    "home": "S3",
+    "on": "10:00",
+    "off": "16:00",
+    "qx": null
+   }
+  ],
+  "conditions": [
+   {
+    "t": "14:00",
+    "rip_risk": "high",
+    "flag": "red_yellow",
+    "bathing_zone_moved": false
+   }
+  ],
+  "incidents": [
+   {
+    "date": "2025-07-12",
+    "type": "water_rescue",
+    "t": "10:20",
+    "resp": [
+     "G1",
+     "G2"
+    ],
+    "out": "released"
+   },
+   {
+    "date": "2025-07-12",
+    "type": "water_rescue",
+    "t": "11:05",
+    "resp": [
+     "G1",
+     "G2"
+    ],
+    "out": "released"
+   },
+   {
+    "date": "2025-07-12",
+    "type": "water_rescue",
+    "t": "12:30",
+    "resp": [
+     "G2",
+     "M6"
+    ],
+    "out": "released",
+    "referral_ref": "RF-9"
+   },
+   {
+    "date": "2025-07-12",
+    "type": "water_rescue",
+    "t": "13:40",
+    "resp": [
+     "G1",
+     "G2"
+    ],
+    "out": "released"
+   },
+   {
+    "date": "2025-07-13",
+    "type": "water_rescue",
+    "t": "15:15",
+    "resp": [
+     "G1",
+     "G2"
+    ],
+    "out": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_board",
+    "out_from": "16:30",
+    "out_to": null,
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 5,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "check_sheet_ref": "CS-77"
+  }
+ },
+ "factors": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "date_misentered",
+  "worst_outcome": "released_with_referral_ref",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": false,
+  "missing_record": "qual_record",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "factors_sampled": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "date_misentered",
+  "worst_outcome": "referred",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": true,
+  "missing_record": "qual_record",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate_review",
+   "second": "corrective_order",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "two_guard_cover": "Four rescues have G1 and G2, who are in date. The third pairs G2 with mutual-aid guard M6, whose qx is null, so M6's qualification cannot be confirmed but is plausibly valid.",
+  "totals_reconcile": "The fifth incident is dated 2025-07-13 against shift date 2025-07-12. Counts of 5, 0 and 1 otherwise match. This looks like a possible misentry, so the date is the only doubt.",
+  "next_step": "An unqualified-looking mutual-aid rescue (M6 qx null) and a red_yellow flag with high rip risk and no zone move together make escalate_review and corrective_order both defensible. Sensible readers would split between the two.",
+  "outcome_severity": "All outcomes are released, but one carries referral_ref RF-9. It is unclear whether the worst outcome is on-site only (0) or a referral (1).",
+  "kit_outage": "The rescue_board is out from 16:30 with out_to null and no substitute. The shift ends at 17:00, so about 30 minutes, which is under 60 (1), although the open end leaves slight doubt."
+ },
+ "request": "rec-F416-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.016133
+}

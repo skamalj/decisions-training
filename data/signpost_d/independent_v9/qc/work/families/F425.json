@@ -1,0 +1,337 @@
+{
+ "id": "F425",
+ "domain": "egg packing station grading records",
+ "role": "Grading floor quality controller at an egg packing station",
+ "setting": "A quality controller reviews one graded batch record at a time after it comes off the grader. Each record covers one consignment of eggs from a single flock: what the farm declared at intake, what the grader counted by size and outgrade bin, the equipment and store checks around the run, the flock's health status, and what was packed and stamped. The controller decides whether the counts hold together, what to do with the batch, what most explains any anomaly, how long the eggs waited before packing, and how heavy the outgrade loss was.",
+ "questions": {
+  "counts_reconcile": {
+   "type": "noul",
+   "instructions": "Intake, grader and packing egg counts agree within half a percent.",
+   "criteria": null
+  },
+  "batch_disposition": {
+   "type": "choice",
+   "instructions": "What should happen to this graded batch now?",
+   "criteria": {
+    "release_class_a": "Checks complete, counts reconcile, packed within ten days of lay.",
+    "hold_pending": "One check result or count confirmation still outstanding before release.",
+    "downgrade_class_b": "Fails Class A timing or quality but fit for processing.",
+    "reject_withdraw": "Positive swab or untraceable stamp code; keep out of food chain."
+   }
+  },
+  "anomaly_cause": {
+   "type": "choice",
+   "instructions": "Which single cause best explains this batch's main anomaly?",
+   "criteria": {
+    "no_anomaly": "Counts agree and outgrades sit within normal station range.",
+    "count_error": "Egg counts disagree between sections with no quality explanation.",
+    "equipment_fault": "Overdue calibration without a passing recheck drives defect readings.",
+    "shell_quality": "Ageing flock or shell defects account for raised outgrades.",
+    "storage_temperature": "Unexplained sustained store temperature excursion accounts for dirty outgrades."
+   }
+  },
+  "lay_to_pack": {
+   "type": "score",
+   "instructions": "How many days passed between the oldest lay date and packing?",
+   "criteria": [
+    "Prompt: packed within 3 days of oldest lay",
+    "Standard: packed 4 to 7 days after lay",
+    "Late: packed 8 to 10 days after lay",
+    "Overdue: packed more than 10 days after lay"
+   ]
+  },
+  "outgrade_share": {
+   "type": "score",
+   "instructions": "What share of eggs fed to the grader went to outgrades?",
+   "criteria": [
+    "Fewer than 2% of graded eggs outgraded",
+    "From 2% to under 5% outgraded",
+    "From 5% to under 10% outgraded",
+    "10% or more of graded eggs outgraded"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "count_gap_size",
+   "description": "Size of the largest disagreement between corresponding egg counts in different sections: none, trivial (under 0.5%), moderate (0.5% to 3%), or large (over 3%).",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "trivial",
+    "moderate",
+    "large"
+   ],
+   "weights": [
+    0.3,
+    0.25,
+    0.3,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "count_gap_location",
+   "description": "Where the count disagreement sits: declared intake versus grader eggs_in, size and outgrade bins versus eggs_in, or packed units versus grader class_a_total.",
+   "kind": "categorical",
+   "values": [
+    "intake_vs_grader",
+    "bins_vs_eggs_in",
+    "packs_vs_class_a"
+   ],
+   "weights": [
+    0.35,
+    0.35,
+    0.3
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "stamp_code_mismatch",
+   "description": "Producer code stamped at packing differs from the consignment producer code, usually by the method digit or one farm character.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.12,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "lay_to_pack_days",
+   "description": "Days between the oldest lay date in the consignment and the pack date; values of 3, 7, 10 and 11 sit on level boundaries.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 1,
+   "max": 13,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "mixed_lay_dates",
+   "description": "Consignment lists two lay dates; the older one governs timing but the newer one is listed first.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "missing_check",
+   "description": "Which required check is absent or unfinished: none, candling sample null, salmonella swab result pending, scale check missing, or candling sample logged after run end.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "candling_null",
+    "swab_pending",
+    "scale_check_missing",
+    "candling_after_run"
+   ],
+   "weights": [
+    0.4,
+    0.15,
+    0.2,
+    0.13,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "swab_positive",
+   "description": "Most recent flock salmonella swab returned positive; only possible when the swab is not pending.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.06,
+   "skills": [
+    "S5",
+    "S7"
+   ]
+  },
+  {
+   "name": "outgrade_rate_pct",
+   "description": "Sum of outgrade bins as a percentage of grader eggs_in; values near 2, 5 and 10 sit on level boundaries.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.5,
+   "max": 14,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "dominant_defect",
+   "description": "Outgrade bin holding the largest share of rejected eggs.",
+   "kind": "categorical",
+   "values": [
+    "cracks",
+    "dirties",
+    "blood_spots",
+    "leakers",
+    "mixed"
+   ],
+   "weights": [
+    0.35,
+    0.25,
+    0.12,
+    0.13,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "calibration_overdue",
+   "description": "Crack detector last calibration date is older than its stated interval at run start.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.35,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "calibration_mitigated",
+   "description": "A manual candling recheck during the run found a crack rate matching the detector within one percentage point.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "temp_excursion",
+   "description": "Egg store temperature above limit before grading: none, brief (under 30 minutes) or sustained (30 minutes or more).",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "brief",
+    "sustained"
+   ],
+   "weights": [
+    0.55,
+    0.25,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  },
+  {
+   "name": "temp_mitigated",
+   "description": "A defrost cycle or door-open event is logged overlapping the excursion window, offering a benign explanation.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "flock_age_weeks",
+   "description": "Age of the laying flock; flocks over 65 weeks plausibly explain raised cracks without any equipment fault.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 19,
+   "max": 80,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "consignment",
+   "description": "Intake details: farm_ref, flock_id, producer_code, method, lay_dates list, received_at, declared_eggs, trays."
+  },
+  {
+   "name": "grading_run",
+   "description": "Grader output: grader_id, run_start, run_end, eggs_in, by_size counts, outgrades bins, class_a_total."
+  },
+  {
+   "name": "checks",
+   "description": "Crack detector calibration, candling sample, scale check and egg store temperature log."
+  },
+  {
+   "name": "flock",
+   "description": "Flock health: age_weeks, salmonella_vaccinated, last_swab with date and result, swab_pending."
+  },
+  {
+   "name": "packing",
+   "description": "Pack output: pack_date, packs list of size and count, stamp_code, best_before, label_class."
+  }
+ ],
+ "rendering_notes": "count_gap_size and count_gap_location show only as differing numbers: consignment.declared_eggs against grading_run.eggs_in; the sum of grading_run.by_size (S, M, L, XL) plus grading_run.outgrades against eggs_in; or the sum of packing.packs (pack_size times count) against grading_run.class_a_total. Never add a variance field. consignment.trays is a decoy: trays times 30 rarely equals declared_eggs exactly and should not be treated as authoritative. stamp_code_mismatch appears as packing.stamp_code differing from consignment.producer_code (for example 1UK-4F17 against 2UK-4F17); consignment.method is a decoy that may or may not match. lay_to_pack_days is computed from the oldest entry in consignment.lay_dates and packing.pack_date; when mixed_lay_dates is true the newer date is listed first. packing.best_before is a decoy usually 28 days from the newest lay date. missing_check renders as checks.candling_sample null, flock.swab_pending true with last_swab.result null, checks.scale_check null, or checks.candling_sample.sampled_at later than grading_run.run_end. swab_positive renders as flock.last_swab.result 'positive'; flock.salmonella_vaccinated is a decoy that is usually true either way. outgrade_rate_pct and dominant_defect render only as counts in grading_run.outgrades (cracks, dirties, blood_spots, leakers, misshapen); misshapen stays small and is a decoy. calibration_overdue shows as checks.crack_detector.last_calibrated plus interval_days against run_start; calibration_mitigated adds checks.crack_detector.manual_recheck with n and cracks_found. temp_excursion shows as checks.store_temp.minutes_above_limit and max_c; temp_mitigated shows as checks.store_temp.defrost_logged true or a door_open_at time inside the window. flock_age_weeks appears only in flock.age_weeks. No field may state a disposition, cause, pass or fail, risk level, outgrade percentage or days-to-pack; packing.label_class always shows the intended class A, not the decision. No free-text fields.",
+ "skills": [
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": null,
+ "aggravating_factor": null,
+ "design_cost": 0.15384
+}

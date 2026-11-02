@@ -1,0 +1,115 @@
+{
+ "id": "F431-0033",
+ "family": "F431",
+ "state": {
+  "period_read": {
+   "read_date": "2024-06-30",
+   "reg_kwh": 5741,
+   "src_code": "AMR"
+  },
+  "history": [
+   {
+    "date": "2024-05-31",
+    "reg_kwh": 5000,
+    "src": "AMR",
+    "ly_kwh": 400
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW",
+    "E_TPROBE",
+    "E_AIR"
+   ],
+   "flow_temp_c": 55,
+   "return_temp_c": 54
+  },
+  "site_context": {
+   "hdd_current": 109,
+   "hdd_prior_year": 100
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.7,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.09,
+  "diagnostic_error_count": 3,
+  "meter_works_order": false,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": true,
+  "seal_status": "not_recorded",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 2.24,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.09,
+  "diagnostic_error_count": 3,
+  "meter_works_order": false,
+  "consecutive_estimates": 4,
+  "delta_t_implausible": true,
+  "seal_status": "not_recorded",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "meter_fault": "Three error codes (E_FLOW, E_TPROBE, E_AIR) and a 1 C delta-T (55/54) corroborate a device fault.",
+  "billable_actual": "AMR actual read, later date and higher register than the previous AMR entry.",
+  "next_step": "In-sequence actual AMR read with no dispute or works order; passes checks for release.",
+  "staff_effort": "Nothing is missing, but the device fault flags might warrant a short follow-up check.",
+  "consumption_deviation": "Consumption 741 kWh vs expected 400*109/100=436 kWh, ratio 1.70, a 70% deviation."
+ },
+ "request": "rec-F431-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009692
+}

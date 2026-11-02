@@ -1,0 +1,112 @@
+{
+ "id": "F424-0007",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B-118",
+   "vessel_id": "FV2",
+   "volume_hl": 15,
+   "yeast_strain": "S-04",
+   "fg_target_max": 1.013
+  },
+  "readings": [
+   {
+    "gravity_sg": 1.0145
+   },
+   {
+    "gravity_sg": 1.0145
+   }
+  ],
+  "lab": {
+   "batch_ref": "B-188",
+   "diacetyl_mgl": 0.17,
+   "micro_plate": {
+    "result": "presumptive"
+   }
+  },
+  "release_request": {
+   "vessel_id": "FV4",
+   "volume_hl": 17
+  }
+ },
+ "factors": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.17,
+  "discrepancy_count": 3,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.17,
+  "discrepancy_count": 4,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 28,
+ "deciding": {
+  "terminal_gravity": "Stable 1.0145 is 0.0015 above the 1.013 max; barely outside band.",
+  "contamination_supported": "Only a presumptive plate with no count or confirmation.",
+  "batch_disposition": "Record corrections needed (batch_ref, vessel, volume) at packaging.",
+  "deviation_severity": "Diacetyl 0.17 and gravity slightly above limit; magnitude near the 10% line.",
+  "record_discrepancies": "lab.batch_ref B-188 vs B-118, vessel FV2 vs FV4, volume 15 vs 17 hl."
+ },
+ "request": "rec-F424-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005385
+}

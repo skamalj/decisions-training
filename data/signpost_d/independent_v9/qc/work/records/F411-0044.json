@@ -1,0 +1,115 @@
+{
+ "id": "F411-0044",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "review_date": "2025-03-01"
+  },
+  "vehicle": {
+   "odometer_km": 98400
+  },
+  "inspection": {
+   "result_code": "PA",
+   "brake_efficiency_pct": null
+  },
+  "defects": [
+   {
+    "code": "4.1",
+    "grade": "minor",
+    "rectify_by": "2025-02-15",
+    "repaired_on": null,
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-02-20"
+   }
+  ],
+  "history": [
+   {
+    "date": "2024-03-01",
+    "result": "P",
+    "odometer_km": 91000
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "not_started",
+  "deadline_passed": true,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": true,
+  "retest_before_repair": false,
+  "prior_failures_12m": 3,
+  "vehicle_age_years": 6
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": false,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": true,
+  "retest_before_repair": false,
+  "prior_failures_12m": 3,
+  "vehicle_age_years": 6
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "refuse_renewal",
+   "second": "renew",
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "contested",
+   "target": "minor_fail",
+   "second": "clean_pass",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "odometer_consistent": "98400 km is above the 91000 km reading, no drop; but only one earlier reading exists.",
+  "next_step": "Null brake test, an expired insurance entry and a lapsed unrepaired defect point to refusal, while the minor grade and sparse file leave renewal defensible.",
+  "inspection_outcome": "Result code PA with one minor-graded item, but brake figure is null so the worst finding is arguable.",
+  "document_gaps": "Insurance expired before review_date and only one document is listed; other required types are absent, so one or two gaps.",
+  "outstanding_severity": "Minor item with rectify_by 2025-02-15 before review_date 2025-03-01 and not repaired; null brake test could be read as a major-level unknown."
+ },
+ "request": "rec-F411-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010601
+}

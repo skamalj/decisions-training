@@ -1,0 +1,154 @@
+{
+ "id": "F410-0003",
+ "family": "F410",
+ "state": {
+  "application": {
+   "holder_ref": "H-4187",
+   "holder_name": "A Moreno",
+   "term_end": "2026-12-31",
+   "pitch_req": {
+    "width_m": 4.15
+   },
+   "commodities": [
+    "cushions"
+   ],
+   "docs_pending": [
+    "trader photo ID"
+   ]
+  },
+  "licence_current": {
+   "holder_ref": "H-4178",
+   "holder_name": "A Moreno",
+   "pitch": {
+    "width_m": 3.0
+   },
+   "commodities": [
+    "cushions"
+   ],
+   "conditions": {
+    "min_attendance_pct": 75,
+    "max_width_m": 4.25
+   },
+   "variations": [
+    {
+     "type": "width",
+     "detail": "4.15m frontage",
+     "approved": true,
+     "approved_on": "2025-09-10"
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2027-01-31",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "food_reg": {
+    "registered": false,
+    "fhrs_rating": null
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2025",
+     "amount_gbp": 40.96
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2025-04-02",
+     "amount_gbp": 40.96,
+     "method": "card"
+    }
+   ]
+  },
+  "history": {
+   "allocated_12m": 48,
+   "attended_12m": 39,
+   "absence_notices": [],
+   "complaints": [],
+   "enforcement_notices": 0
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": true,
+  "commodity_change": "none",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 1.15,
+  "variation_approved": true,
+  "fee_arrears_gbp": 0.0,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.81,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "transcription_error",
+  "docs_outstanding": 1
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "indemnity_below_required",
+  "broker_confirmation_held": true,
+  "commodity_change": "none",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 1.15,
+  "variation_approved": true,
+  "fee_arrears_gbp": 40.96,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.64,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "transcription_error",
+  "docs_outstanding": 1
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "defer",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "balanced",
+   "target": "desk_check",
+   "second": "urgent_visit",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 101,
+ "deciding": {
+  "pli_term_covered": "pli.end 2027-01-31 is after term_end 2026-12-31 and indemnity equals the required 5,000,000.",
+  "renewal_disposition": "docs_pending lists one outstanding item (trader photo ID) with everything else in order, so hold until it arrives.",
+  "inspection_level": "food_reg registered:false sits on a cushion stall (not food), so desk_check is favoured, though a reader might mistake it for unregistered food.",
+  "reversal_time": "Deferral can be undone almost immediately once the document arrives, though a few days is also plausible.",
+  "discrepancy_count": "Width 4.15m is covered by the approved variation and fees are fully paid; only holder_ref H-4187 vs H-4178 (same name, swapped digits) remains, which may or may not be counted."
+ },
+ "request": "rec-F410-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010784
+}

@@ -1,0 +1,135 @@
+{
+ "id": "F429-0050",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 500
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "t": "04:00",
+     "level_m": 55.18,
+     "datum": "site"
+    },
+    {
+     "t": "05:00",
+     "level_m": 55.0,
+     "datum": "gauge_zero"
+    }
+   ],
+   "gauge_zero_offset_m": 0.2,
+   "triggers": {
+    "alert_m": 55.2,
+    "action_m": 56.0
+   }
+  },
+  "gate_ops": [
+   {
+    "gate_id": "G1",
+    "t": "05:30",
+    "open_before_m": 0,
+    "open_after_m": 1.2
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate_id": "G1",
+     "opening_m": 1.2
+    }
+   ],
+   "calc_peak_m3s": 495,
+   "gauged_peak_m3s": 374
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "pending",
+    "completed_at": null
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "05:45",
+    "ack": false
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": true,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 32.47,
+  "datum_mismatch": true,
+  "missing_section": "none",
+  "notice_after_release": true,
+  "inspection_status": "pending",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 32.47,
+  "datum_mismatch": true,
+  "missing_section": "none",
+  "notice_after_release": true,
+  "inspection_status": "pending",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "hold_for_inspection",
+   "second": "accept_log",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "within_licence": "calc 495 is just under the 500 limit and gauged 374 is well under, but the 32% calc/gauged gap leaves the figure uncertain.",
+  "gates_reconciled": "G1 open_after 1.2 equals calc opening 1.2.",
+  "next_step": "Inspection is pending, favouring hold; otherwise gates match and no alert is reached, so accepting is arguable.",
+  "trigger_tier": "Site reading 55.18 is 0.02 m under alert 55.2, while the gauge_zero reading 55.0 plus the 0.2 offset equals 55.2.",
+  "parties_needed": "Pending inspection, unacknowledged warning, datum correction, gauge discrepancy and licence-margin review each need a different party."
+ },
+ "request": "rec-F429-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011386
+}

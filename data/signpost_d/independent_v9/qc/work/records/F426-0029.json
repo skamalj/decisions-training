@@ -1,0 +1,110 @@
+{
+ "id": "F426-0029",
+ "family": "F426",
+ "state": {
+  "applications": [
+   {
+    "date": "2024-01-05",
+    "product_code": "CPX-210",
+    "qty_applied": 10,
+    "qty_unit": "L",
+    "area_treated_ha": 10
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "CPX210",
+    "max_rate_per_ha": 1,
+    "rate_unit": "L",
+    "phi_days": 14
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-02-10",
+   "residue_test": {
+    "sampled": true,
+    "result_date": "2024-02-12",
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "product_code_typo",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "missing",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 9,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "clerical_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 36,
+ "deciding": {
+  "phi_cleared": "Spray 2024-01-05 and first pick 2024-02-10 are 36 days apart against phi_days 14. The mismatched code 'CPX-210' versus 'CPX210' leaves slight doubt about the product match.",
+  "next_step": "The residue test is below limit and the dates and rate comply. The only issue is a code typo, so the lot is accepted.",
+  "finding_class": "The only discrepancy is the product code spelling, 'CPX-210' versus 'CPX210'. The rate and timing comply.",
+  "reversal_time": "The clear residue test and compliant rate leave only a code typo, which could be corrected quickly. A packed lot in the supply chain is slow to recall, which gives level 2 or 3 some weight.",
+  "rate_overrun": "10 L over 10 ha is exactly 1 L/ha against a max of 1, so the rate is at the maximum and not above it. The typo adds mild doubt about the reference match."
+ },
+ "request": "rec-F426-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010079
+}

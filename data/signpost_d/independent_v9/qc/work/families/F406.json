@@ -1,0 +1,318 @@
+{
+ "id": "F406",
+ "domain": "museum visitor capacity logs",
+ "role": "Duty front-of-house safety officer at a multi-gallery museum, reviewing each gallery session's capacity log the morning after",
+ "setting": "Every timed gallery session produces a capacity log combining door-counter intervals, ticket scans, a steward's manual tally, any approved capacity variations, counter maintenance records and short staff notes. The officer checks one log at a time. For each log they confirm whether any uplift genuinely applied, judge whether apparent overages are counting faults, rate how far and how long occupancy ran above the limit in force, and decide what happens to the log next.",
+ "questions": {
+  "variation_applies": {
+   "type": "noul",
+   "instructions": "The approved capacity variation applies to this session and gallery.",
+   "criteria": null
+  },
+  "fault_explains_overage": {
+   "type": "noul",
+   "instructions": "The counter overage is explained by a documented counting fault.",
+   "criteria": {
+    "true": "Fault ticket covers this gate and date before session.",
+    "false": "No ticket, wrong gate or date, or informal note only."
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should be done with this capacity log now?",
+   "criteria": {
+    "file_as_complete": "Log reconciles and needs no follow-up; file it as is.",
+    "request_counter_data": "Ask the site team for the missing interval counter export.",
+    "amend_and_file": "Correct a minor cross-section discrepancy, annotate it, then file.",
+    "restrict_admissions": "Set a reduced admission cap for the gallery's next session.",
+    "escalate_safety_lead": "Refer to the venue safety lead for formal overcapacity review."
+   }
+  },
+  "peak_excess": {
+   "type": "score",
+   "instructions": "By how much did reconciled peak occupancy exceed the limit in force?",
+   "criteria": [
+    "Peak at or below 90% of limit",
+    "Peak above 90% and up to 100% of limit",
+    "Peak above limit by no more than 10%",
+    "Peak above limit by more than 10%"
+   ]
+  },
+  "intervals_over": {
+   "type": "score",
+   "instructions": "For how many 15-minute intervals was occupancy above the limit?",
+   "criteria": [
+    "None: no interval above the limit in force",
+    "Single: exactly one interval above the limit",
+    "Few: two or three intervals above the limit",
+    "Several: four to eight intervals above the limit",
+    "Extended: more than eight intervals above the limit"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "true_peak_ratio",
+   "description": "Reconciled peak occupancy as a fraction of the limit in force (certified limit, or the uplifted limit when a valid variation applies).",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.6,
+   "max": 1.3,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "intervals_over_limit",
+   "description": "Number of 15-minute intervals in which reconciled occupancy exceeded the limit in force; forced to 0 when true_peak_ratio is at or below 1.0.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 12,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "section_mismatch",
+   "description": "Which cross-section discrepancy, if any, is planted in the log.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "scans_vs_counter_minor",
+    "scans_vs_counter_major",
+    "tally_vs_counter_peak",
+    "gallery_code_mismatch",
+    "session_date_mismatch"
+   ],
+   "weights": [
+    0.3,
+    0.2,
+    0.12,
+    0.16,
+    0.1,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "variation_present",
+   "description": "Whether a capacity variation (temporary uplift for an event or extra stewarding) is attached to the log.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.45,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "variation_scope",
+   "description": "Whether the attached variation actually covers this session: matching gallery and date, wrong gallery, expired or future date, or pending approval.",
+   "kind": "categorical",
+   "values": [
+    "matches",
+    "wrong_gallery",
+    "date_outside_validity",
+    "approval_pending"
+   ],
+   "weights": [
+    0.55,
+    0.15,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "counter_fault_logged",
+   "description": "Whether any maintenance record about door-counter accuracy exists near the session.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "fault_ticket_scope",
+   "description": "How well the fault record matches: same gate and date, a different gate, raised after the session, or only an informal staff remark.",
+   "kind": "categorical",
+   "values": [
+    "same_gate_same_date",
+    "other_gate",
+    "raised_after_session",
+    "informal_note_only"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.15,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S3",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "interval_export_missing",
+   "description": "Whether the per-interval counter export is absent, so only a session summary total is present.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.18,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "egress_check",
+   "description": "State of the steward's egress-route check for the session.",
+   "kind": "categorical",
+   "values": [
+    "completed",
+    "partial",
+    "not_recorded"
+   ],
+   "weights": [
+    0.55,
+    0.25,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "prior_overages_30d",
+   "description": "Count of earlier logged overages for the same gallery in the past 30 days.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 6,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "staff_note_tone",
+   "description": "Tone of the free-text steward note, independent of the actual data: reassuring without support, factual, alarmed without support, or absent.",
+   "kind": "categorical",
+   "values": [
+    "reassuring_unsupported",
+    "factual",
+    "alarmed_unsupported",
+    "none"
+   ],
+   "weights": [
+    0.25,
+    0.35,
+    0.2,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S3"
+   ]
+  },
+  {
+   "name": "boundary_case",
+   "description": "Whether the reconciled peak sits within 2% of a peak_excess threshold, or the counter and tally disagree across a level boundary.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S6"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "session",
+   "description": "Session id, gallery_code, session_date, open and close times, certified_limit from fire certificate."
+  },
+  {
+   "name": "counts",
+   "description": "Interval list of door-counter occupancy, ticket_scans total, steward manual_tally_peak, summary_peak."
+  },
+  {
+   "name": "variations",
+   "description": "Attached capacity variations: ref, gallery_code, valid_from, valid_to, uplift_to, status; may be empty list."
+  },
+  {
+   "name": "equipment",
+   "description": "Counter gate ids, last_calibrated date, maintenance tickets with gate, raised_at, summary."
+  },
+  {
+   "name": "staff_log",
+   "description": "Stewards on duty, egress_check state and time, one or two short free-text notes."
+  },
+  {
+   "name": "history",
+   "description": "overages_30d count and dates of last logged overages for this gallery."
+  }
+ ],
+ "rendering_notes": "true_peak_ratio and intervals_over_limit appear only as counts.intervals[] entries (start, in, out, occupancy) against session.certified_limit or a variation's uplift_to; never write a ratio, an over_limit flag or an overage duration. section_mismatch is planted silently: ticket_scans differing from the counter-implied entries by under 5% (minor) or over 15% (major); manual_tally_peak differing from the interval peak; a variation or ticket gallery_code differing by one character from session.gallery_code; a variation valid window ending the day before session_date. variation_present adds an entry to variations; variation_scope sets its gallery_code, dates or status ('pending') so the reader must check that it applies, and otherwise the variations list is empty. counter_fault_logged adds a ticket in equipment.maintenance; fault_ticket_scope sets the gate id, a raised_at after session close, or replaces the ticket with a staff note such as 'counter at east door seemed jumpy'. interval_export_missing replaces counts.intervals with null and leaves only summary_peak. egress_check appears as staff_log.egress_check with values done, partial (with routes_checked 2 of 3) or null. prior_overages_30d appears in history.overages_30d with matching dates. staff_note_tone controls the wording of staff_log.notes; reassuring or alarmed notes are decoys and must not match the data unless the tone is factual. boundary_case nudges the interval peak to within 2% of 90%, 100% or 110% of the limit, or puts tally and counter on opposite sides of a threshold. No field may state a disposition, a severity, whether a variation applies or whether a fault explains the counts.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_counter_data"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.134052
+}

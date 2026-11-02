@@ -1,0 +1,131 @@
+{
+ "id": "F421-0008",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P5543",
+   "service": "express",
+   "fragile": false,
+   "contents": "espresso machine",
+   "qty": 1,
+   "weight_kg": 6.8,
+   "declared_value_gbp": 1891.35
+  },
+  "handling_events": [
+   {
+    "ts": "2024-07-03T01:20",
+    "site": "HUB-E",
+    "code": "SORT",
+    "exc": "CRUSH"
+   },
+   {
+    "ts": "2024-07-03T06:45",
+    "site": "HUB-C",
+    "code": "SORT",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-07-03T13:10",
+    "site": "HUB-C",
+    "code": "LOAD",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-07-04T07:30",
+    "site": "DEP-R",
+    "code": "INB",
+    "exc": null
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-07-04T08:20",
+   "inspector": "AK",
+   "observed_item": "espresso machine",
+   "qty_found": 1,
+   "weight_kg": 6800,
+   "condition": "frame crushed, boiler split",
+   "photos": [
+    "img_9012.jpg"
+   ],
+   "repair_est_gbp": 1830
+  },
+  "claim": null
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "complete",
+  "loss_pct": 96.76,
+  "declared_value": 1891.35,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 1.54
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "complete",
+  "loss_pct": 68.95,
+  "declared_value": 1891.35,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 1.54
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 105,
+ "deciding": {
+  "depot_fault": "Three upstream damage codes at HUB-E and HUB-C; the inbound scan here is clean.",
+  "contents_match": "Weight 6.8 kg in the manifest vs 6800 in the report, likely a unit difference; the report doesn't state the unit, so some doubt.",
+  "next_step": "Report complete with photos, no claim, damage clearly upstream; nothing for this depot to do.",
+  "loss_share": "repair_est 1830 / 1891.35 = 96.8%; very close to total but not written off.",
+  "parties_needed": "No claim and complete inspection; one person can close it."
+ },
+ "request": "rec-F421-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007462
+}

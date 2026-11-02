@@ -1,0 +1,135 @@
+{
+ "id": "F402-0017",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-8820",
+   "source": "ward",
+   "received": "2025-02-20",
+   "priority": "routine",
+   "site": {
+    "part": "hip",
+    "side": "R"
+   },
+   "onset_date": "2024-12-05"
+  },
+  "patient": {
+   "id": "p-3307",
+   "dob": "1950-11-20",
+   "aid": "frame",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx": "M16.1",
+   "red_flags": [
+    "night_pain_weight_loss"
+   ],
+   "neuro_signs": null,
+   "function_index": 37,
+   "anticoagulant": false,
+   "surgery_date": "2025-02-17",
+   "weight_bearing": "partial"
+  },
+  "gp_record": {
+   "dob": "1950-11-20",
+   "meds": [
+    "B01AF01"
+   ],
+   "falls_3m": 0,
+   "weight_change_kg": -1,
+   "reviews": [
+    {
+     "date": "2025-01-10",
+     "type": "urgent"
+    }
+   ]
+  },
+  "attachments": [
+   {
+    "type": "op_protocol",
+    "date": "2025-02-17",
+    "side": "R"
+   }
+  ],
+  "history": {
+   "episodes": [],
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": false,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "major",
+  "missing_item": "none",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 11,
+  "function_index": 37.0,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 0,
+  "post_op_days": 3,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": false,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "major",
+  "missing_item": "none",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 11,
+  "function_index": 36.84,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 0,
+  "post_op_days": 3,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "book_amended",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "specialist_rehab",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 78,
+ "deciding": {
+  "red_flag_unresolved": "Night pain and weight loss is coded, but an urgent GP review dated 2025-01-10 follows the onset and weight change is only -1 kg; there is no imaging, so it stays balanced.",
+  "next_step": "clinical.anticoagulant is false while gp_record.meds holds B01AF01, so book with a corrected anticoagulant precaution.",
+  "pathway": "Surgery 3 days ago, partial weight-bearing, a frame and function index 37 point to specialist post-op rehabilitation.",
+  "reversal_time": "An unflagged anticoagulant early after surgery risks a bleed or harm that cannot be undone within three months, though the doubt is real.",
+  "clinical_urgency": "The ward referral is routine and the review was already done, so waiting is arguable, but the fresh post-op state could justify first contact within six weeks."
+ },
+ "request": "rec-F402-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00919
+}

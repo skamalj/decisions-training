@@ -1,0 +1,154 @@
+{
+ "id": "F405-0024",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C412",
+   "detected_on": "2025-01-08",
+   "term_start": "2025-02-17",
+   "room": "S201"
+  },
+  "booking_a": {
+   "module": "LAW105",
+   "dept": "LAW",
+   "day": "Mon",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "headcount": 40,
+   "required_features": [
+    "accessible_entry"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "LAW240",
+   "dept": "LAW",
+   "room": "S201",
+   "day": "Mon",
+   "start": "11:50",
+   "end": "13:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "status": "confirmed",
+   "approved_at": "2024-12-02",
+   "approver": "pdas"
+  },
+  "room": {
+   "code": "S201",
+   "aliases": [],
+   "capacity": 35,
+   "features": [
+    "accessible_entry"
+   ],
+   "building": "South"
+  },
+  "alternatives": [
+   {
+    "code": "S305",
+    "capacity": 60,
+    "features": [
+     "accessible_entry"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   }
+  ],
+  "history": []
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 40,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.14,
+  "required_feature": "accessible_entry",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 0
+ },
+ "factors_sampled": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": true,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 28,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.14,
+  "required_feature": "accessible_entry",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 0
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "balanced",
+   "target": "dismiss",
+   "second": "relocate",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "genuine_clash": "Same room S201, Mon weeks 1-5, A ends 12:00 while B starts 11:50, a 10-minute overlap; real but small.",
+  "alt_room_fits": "S305 capacity 60 vs headcount 40, has accessible_entry, free weeks 1-5.",
+  "resolution": "Only 10 minutes overlap, so a reader could dismiss it or trim a time; both are confirmed and S305 fits, so relocate is also defensible.",
+  "urgency": "Detected 2025-01-08 and first Monday of term is 2025-02-17, 40 days away.",
+  "parties_needed": "Both bookings are in LAW with a listed room; one department contact plus the officer is two, or two module convenors plus the officer is three."
+ },
+ "request": "rec-F405-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010251
+}

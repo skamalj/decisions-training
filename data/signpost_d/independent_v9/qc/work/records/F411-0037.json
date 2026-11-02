@@ -1,0 +1,136 @@
+{
+ "id": "F411-0037",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "PH-877",
+   "type": "private_hire",
+   "expiry": "2025-06-30",
+   "review_date": "2025-06-12"
+  },
+  "vehicle": {
+   "reg": "LD14XYZ",
+   "odometer_km": 148900,
+   "seats": 4
+  },
+  "inspection": {
+   "station": "S07",
+   "date": "2025-06-09",
+   "result_code": "P",
+   "brake_efficiency_pct": 58
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-12-01"
+   },
+   {
+    "type": "mot",
+    "expires_on": "2025-10-15"
+   },
+   {
+    "type": "dbs",
+    "expires_on": "2025-06-01",
+    "cover_note_ref": "CN-4410",
+    "cover_until": "2025-07-31"
+   }
+  ],
+  "history": [
+   {
+    "date": "2024-06-10",
+    "result": "F",
+    "odometer_km": 121300
+   },
+   {
+    "date": "2024-12-02",
+    "result": "P",
+    "odometer_km": 135800
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": "0 (one expired entry covered by a valid cover note)",
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 3,
+  "vehicle_age_years": 11
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "large",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 3,
+  "vehicle_age_years": 11
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 64,
+ "deciding": {
+  "odometer_consistent": "148900 follows 121300 and 135800; steadily rising, no drop.",
+  "next_step": "No defects, valid cover note on the dbs entry, brake test present; renew.",
+  "inspection_outcome": "Defects list empty; the earlier F in history is a decoy.",
+  "document_gaps": "dbs expired 2025-06-01 but cover note CN-4410 runs to 2025-07-31, after review date; this is the sole doubt.",
+  "outstanding_severity": "No defects listed at all, so nothing outstanding."
+ },
+ "request": "rec-F411-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005199
+}

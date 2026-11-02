@@ -1,0 +1,155 @@
+{
+ "id": "F425-0027",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "producer_code": "2UK-9C31",
+   "lay_dates": [
+    "2025-05-12"
+   ],
+   "declared_eggs": 2000
+  },
+  "grading_run": {
+   "run_start": "2025-05-15T06:30",
+   "eggs_in": 2000,
+   "by_size": {
+    "S": 100,
+    "M": 800,
+    "L": 800,
+    "XL": 200
+   },
+   "outgrades": {
+    "cracks": 35,
+    "dirties": 50,
+    "blood_spots": 8,
+    "leakers": 4,
+    "misshapen": 3
+   },
+   "class_a_total": 1900
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2025-03-01",
+    "interval_days": 60
+   },
+   "candling_sample": {
+    "sampled_at": "2025-05-15T07:00"
+   },
+   "scale_check": "ok",
+   "store_temp": {
+    "minutes_above_limit": 70,
+    "max_c": 17
+   }
+  },
+  "flock": {
+   "age_weeks": 49,
+   "last_swab": {
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2025-05-15",
+   "packs": [
+    {
+     "size": "S",
+     "count": 100
+    },
+    {
+     "size": "M",
+     "count": 800
+    },
+    {
+     "size": "L",
+     "count": 800
+    },
+    {
+     "size": "XL",
+     "count": 199
+    }
+   ],
+   "stamp_code": "2UK-9C31"
+  }
+ },
+ "factors": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 3,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 5.0,
+  "dominant_defect": "dirties",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "moderate",
+  "temp_mitigated": false,
+  "flock_age_weeks": 49
+ },
+ "factors_sampled": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 10,
+  "mixed_lay_dates": false,
+  "missing_check": "candling_null",
+  "swab_positive": false,
+  "outgrade_rate_pct": 10.95,
+  "dominant_defect": "dirties",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 49
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release_class_a",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "balanced",
+   "target": "equipment_fault",
+   "second": "storage_temperature",
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "counts_reconcile": "Packs total 1899 against class_a_total 1900; declared and eggs_in both 2000 and sizes plus outgrades equal 2000.",
+  "batch_disposition": "Candling, scale and swab all present and negative, stamp matches, packed within 3 days, counts agree.",
+  "anomaly_cause": "Held in balance by calibration last done 2025-03-01 with 60-day interval and no recheck, against 70 minutes above limit at 17C with no defrost logged; dirties (50) slightly exceed cracks (35).",
+  "lay_to_pack": "Lay 2025-05-12 to pack 2025-05-15 is 3 days, at the boundary between prompt and standard.",
+  "outgrade_share": "100 outgrades of 2000 eggs_in is exactly 5.0%, the boundary between levels 1 and 2."
+ },
+ "request": "rec-F425-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010228
+}

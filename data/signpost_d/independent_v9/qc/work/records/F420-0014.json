@@ -1,0 +1,138 @@
+{
+ "id": "F420-0014",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "AKE60412MN",
+   "flt": "XQ551",
+   "dest": "AMS",
+   "pos": "14L",
+   "contour_max_cm": 170,
+   "tare_kg": 80,
+   "planned_gross_kg": 1500,
+   "straps_required": 4
+  },
+  "manifest_lines": [
+   {
+    "awb": "176-88104410",
+    "pcs": 14,
+    "weight_kg": 900
+   },
+   {
+    "awb": "176-88104421",
+    "pcs": 6,
+    "weight_kg": 520
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2025-09-02T07:15:00Z",
+   "max_height_cm": 176,
+   "pcs_counted": {
+    "176-88104410": 12,
+    "176-88104421": 6
+   },
+   "straps_fitted": 3,
+   "net_fitted": true,
+   "uld_serial_scanned": "AKE60412MN"
+  },
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "176-88104410",
+     "pcs_this_flight": 12,
+     "approved_utc": "2025-09-02T07:50:00Z"
+    }
+   ],
+   "contour_waivers": [
+    {
+     "uld": "AKE60412MN",
+     "position": "14L",
+     "max_cm": 176
+    }
+   ]
+  },
+  "checks_log": {
+   "scale_cal_due": "2026-01-10",
+   "reweigh": {
+    "scale": "S5",
+    "kg": 1469.1
+   }
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": -2.06,
+  "piece_count_gap": -2,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "over_more_than_5cm",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "one_strap_short",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 260,
+  "prior_rebuilds": 1
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -2.06,
+  "piece_count_gap": -2,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "over_more_than_5cm",
+  "contour_waiver": true,
+  "dg_state": "dg_compatible",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 260,
+  "prior_rebuilds": 1
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "release_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "balanced",
+   "target": "physical_build",
+   "second": "paperwork_only",
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "pieces_reconciled": "The 2-piece shortfall on 176-88104410 matches the part shipment of 12 pieces, but that approval is stamped 35 minutes after the build.",
+  "disposition": "Straps fitted are 3 of 4 required, which is a single ramp-side securing fix. The height is waived at 176 cm and the weight is within 3%.",
+  "worst_discrepancy": "The missing strap is a securing shortfall (physical), while the late-dated part-shipment approval could be read as only paperwork.",
+  "weight_deviation": "The reweigh of 1469.1 kg against a plan of 1500 kg is -2.06%, which falls in level 1.",
+  "rework_extent": "One strap short is a minor fix (level 1); the other reading is that the securing shortfall alone leaves the build standing with no change."
+ },
+ "request": "rec-F420-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013733
+}

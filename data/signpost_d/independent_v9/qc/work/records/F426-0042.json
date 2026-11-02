@@ -1,0 +1,127 @@
+{
+ "id": "F426-0042",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B7",
+   "crop": "pear",
+   "planted_area_ha": 10.0,
+   "lot_id": "L305"
+  },
+  "applications": [
+   {
+    "app_id": "A1",
+    "date": "2024-03-01",
+    "product_code": "HRB-9",
+    "qty_applied": 12.6,
+    "qty_unit": "L",
+    "area_treated_ha": 10.0,
+    "sprayer_id": "SP-2",
+    "wind_kmh": 22
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "HRB-9",
+    "max_rate_per_ha": 1.0,
+    "rate_unit": "L",
+    "phi_days": 28,
+    "approved_crops": [
+     "pear"
+    ],
+    "minor_use_auth_ref": "MU-4471"
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "SP-2",
+   "sprayer_type": "tunnel_recycling",
+   "calibration_valid_to": "2024-09-01",
+   "nozzle_dev_pct": 3
+  },
+  "harvest": {
+   "first_pick_date": "2024-04-01",
+   "residue_test": {
+    "sampled": true,
+    "below_limit": true
+   },
+   "prior_rejections": 2
+  }
+ },
+ "factors": {
+  "phi_status": "cleared",
+  "rate_overrun_band": "above_25_borderline",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": true
+ },
+ "factors_sampled": {
+  "phi_status": "breached_short",
+  "rate_overrun_band": "above_10_to_25",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": true,
+  "off_label_crop": false,
+  "num_applications": 8,
+  "high_wind_decoy": true
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "no_finding",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 75,
+ "deciding": {
+  "phi_cleared": "Spray 2024-03-01 and first pick 2024-04-01 is 31 days against phi_days 28, a modest margin of 3 days.",
+  "next_step": "harvest.prior_rejections is 2, a repeat-failure count, and the rate of 1.26 L/ha is above the label maximum of 1.0, which calls for technical manager referral.",
+  "finding_class": "The rate is above the label max but minor_use_auth_ref MU-4471 is present, the crop is approved, the interval is met and residue is below limit. That leans toward no discrepancy.",
+  "reversal_time": "The repeat rejection history and the rate question point to a referral process that likely takes weeks to a few months.",
+  "rate_overrun": "12.6 L over 10.0 ha is 1.26 L/ha against a label max of 1.0, about 26% over. This is right at the 25% boundary between levels 2 and 3."
+ },
+ "request": "rec-F426-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013776
+}

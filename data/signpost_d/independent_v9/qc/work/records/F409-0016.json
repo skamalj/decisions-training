@@ -1,0 +1,129 @@
+{
+ "id": "F409-0016",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "submitted_on": "2024-05-20",
+   "app_type": "renewal",
+   "message": "Car is a company lease, letter attached."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-04-25",
+     "address_line": "3/12 Mill Rd",
+     "verified": null
+    }
+   ]
+  },
+  "vehicle": {
+   "keeper_name": "Brix Leasing",
+   "supporting_letters": [
+    {
+     "type": "lease_agreement",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "address": "Flat 3, 12 Mill Rd"
+  },
+  "account_history": {
+   "live_permits": [
+    "P1",
+    "P2",
+    "P3"
+   ],
+   "past_permits": [
+    {
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "exceptions": [
+    {
+     "type": "carer",
+     "approved_on": "2023-02-01"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "format_only",
+  "proof_age_days": 25,
+  "docs_missing": 1,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 3,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "different_street",
+  "proof_age_days": 25,
+  "docs_missing": 1,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 3,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 39,
+ "deciding": {
+  "residency_shown": "Council tax bill is recent and the address differs only in format, but its verified flag is null, so it is shown only weakly.",
+  "disposition": "The one residence document is unverified, so nothing should be issued yet; the cloned-permit history adds to that.",
+  "main_issue": "The keeper difference is covered by the lease letter and the cap is covered by the approved exception, so no ordinary check clearly fails; the seized permit is the only distraction.",
+  "misuse_strength": "The past permit is seized with the reason 'cloned copy found on different vehicle'.",
+  "document_gaps": "The bill is unverified (one gap); whether another required document, such as ID, is also absent is left open, so 1 or 2."
+ },
+ "request": "rec-F409-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008687
+}

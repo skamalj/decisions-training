@@ -1,0 +1,132 @@
+{
+ "id": "F408-0014",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "M401",
+   "uprn": 4410,
+   "stream": "garden",
+   "claimed": "2024-05-14",
+   "logged_at": "2024-05-14T18:20",
+   "photo": true
+  },
+  "property": {
+   "uprn": 4410,
+   "assisted": false
+  },
+  "schedule": {
+   "streams": [
+    "garden"
+   ],
+   "date": "2024-05-14",
+   "week": "A"
+  },
+  "round_log": {
+   "completed_at": "2024-05-14T16:45",
+   "disruption": "RC",
+   "catch_up": "2024-05-16",
+   "sweep_at": null,
+   "stops": [
+    {
+     "uprn": 4410,
+     "exc": "overweight",
+     "photo_ref": "P4410",
+     "gps_stop": true
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 4410,
+    "logged": "2024-04-25",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 4410,
+    "logged": "2024-03-30",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 4410,
+    "logged": "2024-02-20",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "overweight",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "road_closure, catch-up 2024-05-16 not yet passed",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": "3 (one on the 84-day boundary)",
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "wrong_stream",
+  "report_timing": "after_round_complete",
+  "crew_exception": "overweight",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "road_closure",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "close_no_action",
+   "second": "schedule_return",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 72,
+ "deciding": {
+  "crew_missed": "Overweight exception has photo_ref and gps_stop true and a catch-up date 05-16 is pending, but the resident's photo suggests the bin may have been fine.",
+  "report_matches": "Stream and claimed date equal the schedule, but the road closure moved collection to catch-up 05-16, so the schedule is unclear.",
+  "next_step": "Supported exception plus a pending catch-up favour closing; the resident's photo and three prior misses make a return defensible.",
+  "return_urgency": "No assisted flag or deadline; the catch-up falls in two days, so same day versus standard is close.",
+  "repeat_failures": "Upheld on 04-25 and 03-30, and a third on 2024-02-20, exactly 84 days before the 05-14 report, so the count is 2 or 3."
+ },
+ "request": "rec-F408-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009806
+}

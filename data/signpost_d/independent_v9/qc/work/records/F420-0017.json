@@ -1,0 +1,129 @@
+{
+ "id": "F420-0017",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "AKE20002YY",
+   "flt": "YY456",
+   "dest": "FRA",
+   "contour_max_cm": 163,
+   "tare_kg": 200,
+   "planned_gross_kg": 2000,
+   "straps_required": 3
+  },
+  "manifest_lines": [
+   {
+    "awb": "020-30000003",
+    "dest": "FRA",
+    "pcs": 4,
+    "weight_kg": 1800,
+    "shc": [
+     "ELI"
+    ],
+    "un_no": "UN3481",
+    "dg_class": "9"
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2025-03-04T09:00:00Z",
+   "scale_gross_kg": 2092,
+   "max_height_cm": 140,
+   "pcs_counted": {
+    "020-30000003": 4
+   },
+   "straps_fitted": 3,
+   "uld_serial_scanned": "AKE20002YY"
+  },
+  "dg_notoc": [
+   {
+    "awb": "020-30000003",
+    "un_no": "UN3481",
+    "dg_class": "9",
+    "pcs": 3
+   }
+  ],
+  "checks_log": {
+   "scale_cal_due": "2030-01-01",
+   "reweigh": {
+    "scale": "CAL-7",
+    "kg": 2092
+   }
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 4.6,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "dg_compatible",
+  "notoc_match": "pcs_differ",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 155,
+  "prior_rebuilds": 1
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 5.01,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "dg_compatible",
+  "notoc_match": "pcs_differ",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 155,
+  "prior_rebuilds": 1
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "pieces_reconciled": "Counted 4 matches manifest 4, but the NOTOC line shows 3 pcs for the same AWB, which leaves some doubt.",
+  "disposition": "The NOTOC pcs (3) differ from the manifest (4) on the single DG line, a confirmation that must be cleared before release.",
+  "worst_discrepancy": "Counts, straps and height are in order; the NOTOC pcs difference is the only open point, so a reader could call it none or DG.",
+  "weight_deviation": "Planned 2000 kg against the calibrated reweigh of 2092 kg is 4.6%, in the over 3 to 5% band.",
+  "rework_extent": "Deviation 4.6% falls in the partial band, but it is close to the 5% line that would make it full."
+ },
+ "request": "rec-F420-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009956
+}

@@ -1,0 +1,149 @@
+{
+ "id": "F401-0017",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "A-77",
+   "planned_discharge_at": "2025-04-02T14:00"
+  },
+  "clinical": {
+   "reviews": [
+    {
+     "outcome": "fit_for_discharge",
+     "reviewed_at": "2025-04-02T07:00"
+    }
+   ],
+   "obs": [
+    {
+     "rr": 23,
+     "spo2": 93,
+     "at": "2025-04-02T09:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "A77",
+   "reconciled": [
+    {
+     "drug": "warfarin",
+     "dose": 3,
+     "unit": "mg"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "warfarin",
+     "dose": 5,
+     "unit": "mg"
+    }
+   ],
+   "pharmacy_ready_at": "2025-04-02T11:00"
+  },
+  "function_social": {
+   "social": null,
+   "care_arrangement": {
+    "type": "package",
+    "status": "confirmed",
+    "start_date": "2025-04-02"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "DN referral",
+     "status": "pending"
+    },
+    {
+     "t": "leaflet",
+     "status": "pending"
+    },
+    {
+     "t": "TTO check",
+     "status": "done",
+     "signed_by": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "none shown",
+  "missing_section": "social_history_null",
+  "outstanding_task_count": "2 pending plus one done unsigned",
+  "false_completion": true,
+  "care_need": "new_package",
+  "care_arrangement_status": "confirmed_on_time",
+  "logistics_delay": "none",
+  "identifier_consistency": "format_only",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": false,
+  "senior_fit_review": true,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "social_history_null",
+  "outstanding_task_count": 2,
+  "false_completion": false,
+  "care_need": "new_package",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "format_only",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_senior",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "home_with_package",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "rx_matches": "Warfarin 3 mg vs 5 mg, no changes entry.",
+  "next_step": "Abnormal obs at 09:00 (rr 23, spo2 93, no baseline) after the 07:00 senior review, so no mitigating review.",
+  "destination": "Package confirmed with start_date on the discharge date.",
+  "outstanding_tasks": "Two pending items plus 'TTO check' done with null signed_by: two or three.",
+  "discharge_delay": "Care start on planned date and pharmacy ready 11:00, before 14:00; no transport time shown."
+ },
+ "request": "rec-F401-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009603
+}

@@ -1,0 +1,103 @@
+{
+ "id": "F437-0007",
+ "family": "F437",
+ "state": {
+  "job": {
+   "target_locale": "pt-BR",
+   "glossary_version": "v3",
+   "due_at": "2025-03-14T12:00"
+  },
+  "deliverable": {
+   "target_locale": "pt-PT",
+   "glossary_version_used": "v2",
+   "delivered_at": "2025-03-13T04:00"
+  },
+  "qa_report": {
+   "unresolved": {
+    "critical": 1
+   }
+  },
+  "review": {
+   "assigned_at": "2025-03-11",
+   "completed_at": null,
+   "signed_off": false
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": true,
+  "glossary_version_state": "older_version",
+  "review_status": "in_progress",
+  "open_error_profile": "critical",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.02,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 32,
+  "client_waiver": false,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": true,
+  "glossary_version_state": "older_version",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.02,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 32,
+  "client_waiver": false,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_for_item",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 26,
+ "deciding": {
+  "scope_matches": "Order locale pt-BR differs from the delivered pt-PT, while the record has no source or segment counts. A locale-scope failure is likely but not certain.",
+  "reviewed_in_time": "Review has assigned_at but completed_at null and signed_off false, so review was not completed before delivery.",
+  "next_step": "Review completion and sign-off are the one missing item. Delivery is 32 hours before the due time, so it is not late and the right action is to hold and request it.",
+  "open_severity": "qa_report.unresolved.critical is 1.",
+  "parties_needed": "The locale fix, the glossary update and the review completion could each fall to a different person, but they may be combined. Three versus four or fewer parties is open."
+ },
+ "request": "rec-F437-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011372
+}

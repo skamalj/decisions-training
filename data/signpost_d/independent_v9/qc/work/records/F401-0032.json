@@ -1,0 +1,173 @@
+{
+ "id": "F401-0032",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P-5530",
+   "planned_discharge_at": "2025-04-02T11:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 15,
+     "spo2": 98,
+     "sbp": 124,
+     "hr": 68,
+     "temp": 36.6,
+     "cons": "alert",
+     "at": "2025-04-02T06:00"
+    },
+    {
+     "rr": 16,
+     "spo2": 97,
+     "sbp": 126,
+     "hr": 70,
+     "temp": 36.7,
+     "cons": "alert",
+     "at": "2025-04-01T22:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P5530",
+   "reconciled": [
+    {
+     "drug": "ramipril",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "ramipril",
+     "action": "dose_increased",
+     "reason": "BP review",
+     "prescriber": "Dr Wen",
+     "changed_at": "2025-04-01T16:00"
+    }
+   ],
+   "discharge_rx": {
+    "signed_at": "2025-04-02T08:30",
+    "items": [
+     {
+      "drug": "ramipril",
+      "dose": 10,
+      "unit": "mg",
+      "freq": "od"
+     }
+    ]
+   },
+   "pharmacy_ready_at": "2025-04-02T10:00"
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "summary",
+     "status": "done",
+     "completed_at": "2025-04-02T08:45",
+     "signed_by": "RN Pike"
+    },
+    {
+     "task": "leaflet",
+     "status": "done",
+     "completed_at": "2025-04-02T09:00",
+     "signed_by": "RN Pike"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-04-02",
+    "pickup_time": "11:00"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": true,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "none",
+  "identifier_consistency": "format_only",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 4,
+  "false_completion": true,
+  "care_need": "none",
+  "care_arrangement_status": "confirmed_later_start",
+  "logistics_delay": "next_day",
+  "identifier_consistency": "format_only",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "discharge_now",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "home_independent",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "discharge_delay": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 87,
+ "deciding": {
+  "rx_matches": "Ramipril 5 to 10 mg is covered by a prescriber change entry before signing; the patient_id format differs slightly (P5530 vs P-5530), leaving some doubt.",
+  "next_step": "Normal obs, no pending results, tasks done and signed, matching timings: nothing blocks discharge.",
+  "destination": "No therapy needs, no care arrangement, no social concerns; home is implied.",
+  "outstanding_tasks": "Both checklist items done with completed_at and signed_by; the list is short, so slight doubt.",
+  "discharge_delay": "Pickup 11:00 on the planned date and pharmacy ready 10:00."
+ },
+ "request": "rec-F401-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010525
+}

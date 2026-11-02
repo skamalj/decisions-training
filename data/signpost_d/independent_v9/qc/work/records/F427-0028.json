@@ -1,0 +1,160 @@
+{
+ "id": "F427-0028",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V-3317",
+   "site_ref": "BG-22",
+   "visit_date": "2024-05-20",
+   "surveyor_grade": "accredited",
+   "weather_on_day": "showers"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 4
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 33,
+     "prev_depth_cm": 20
+    },
+    {
+     "depth_cm": 36,
+     "prev_depth_cm": 22
+    },
+    {
+     "depth_cm": 36,
+     "prev_depth_cm": 23
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 30,
+     "prev_depth_cm": 17
+    }
+   ],
+   "rain_30d_pct_normal": 128
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D3",
+     "pool_level_cm": 38,
+     "design_pool_cm": 38,
+     "defect_code": "OK",
+     "remark": "Damp at east wing, maybe seep."
+    }
+   ],
+   "open_work_orders": [
+    {
+     "dam_id": "D3",
+     "status": "raised"
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 5
+    },
+    {
+     "q": 2,
+     "score": 6
+    }
+   ],
+   "photos_uploaded": 5,
+   "photos_expected": 8,
+   "grazing_signs": true
+  },
+  "notes": {
+   "surveyor_note": "Water table has crashed, dams worry me.",
+   "prior_visits": []
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.75,
+  "photos_status": "partial",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -10.0,
+  "rainfall_pct_normal": 128.0,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "alarmed",
+  "grazing_signs": true
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.94,
+  "photos_status": "partial",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -2.89,
+  "rainfall_pct_normal": 127.68,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "alarmed",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "schedule_repair",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "below_band",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 119,
+ "deciding": {
+  "dam_caused_drop": "The control dipwell dropped as much as the site wells (13 cm) and the pool is at design, so the drop is not from the dam.",
+  "next_step": "A seep is noted at D3 and the order is only raised, not booked with a contractor, so a repair order should be progressed.",
+  "hydro_state": "Mean depth 35 cm is 10 cm below the 25 cm floor.",
+  "dam_severity": "Code OK with pool at design, but the remark suggests a seep, so 0 and 1 are both defensible.",
+  "evidence_completeness": "3 of 4 wells read and 5 of 8 photos uploaded, with quadrats and the dam log present: all four elements, two only partly, which could be argued as three."
+ },
+ "request": "rec-F427-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011036
+}

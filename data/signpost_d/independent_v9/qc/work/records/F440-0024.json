@@ -1,0 +1,156 @@
+{
+ "id": "F440-0024",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "review": "2025-08-01",
+   "arr": "2025-08-21",
+   "dep": "2025-08-23",
+   "pax": {
+    "13-17": 11,
+    "adult": 2
+   },
+   "amend": []
+  },
+  "roster": [
+   {
+    "role": "participant",
+    "sex": "F",
+    "dob": "2010-06-01",
+    "n": 6
+   },
+   {
+    "role": "participant",
+    "sex": "M",
+    "dob": "2010-06-01",
+    "n": 6
+   },
+   {
+    "role": "leader",
+    "n": 1
+   },
+   {
+    "role": "leader",
+    "n": 1,
+    "depart": "2025-08-22"
+   }
+  ],
+  "allocation": {
+   "rooms": [
+    {
+     "sex": "F",
+     "beds": 6
+    },
+    {
+     "sex": "M",
+     "beds": 6
+    }
+   ],
+   "nights": [
+    "2025-08-21",
+    "2025-08-22"
+   ],
+   "warden_cover": [
+    "2025-08-22"
+   ]
+  },
+  "payment": {
+   "total": 1200,
+   "deposit_due": 300,
+   "paid_total": 270,
+   "instalments": null
+  },
+  "safeguarding": [
+   {
+    "status": "verified",
+    "expiry": "2026-05-01"
+   },
+   {
+    "status": "verified",
+    "expiry": "2026-05-01"
+   }
+  ],
+  "history": {
+   "trusted": true,
+   "stays": 6,
+   "no_shows": 1
+  }
+ },
+ "factors": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "none",
+  "amendment_logged": false,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": true,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 20,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": true,
+  "prior_no_shows": 1,
+  "diet_count_drift": "none"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "none",
+  "amendment_logged": false,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": true,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 11,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": true,
+  "prior_no_shows": 1,
+  "diet_count_drift": "none"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "confirm",
+   "second": "decline",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 61,
+ "deciding": {
+  "ratio_met": "Second leader leaves 2025-08-22, but warden_cover lists that night, so cover meets 2 adults per 12 minors every night.",
+  "deposit_covered": "paid_total 270 against deposit_due 300 with no instalment plan: 30 short but close, so false leads narrowly.",
+  "disposition": "Shortfall of 30 is small with a trusted organiser, favouring confirm; the unapproved shortfall and unexplained headcount difference leave refusal arguable.",
+  "urgency": "Review 2025-08-01 to arrival 2025-08-21 is 20 days, the soon band.",
+  "conflict_count": "Booking pax totals 13 against 14 on the roster with an empty amendments list: one unexplained conflict."
+ },
+ "request": "rec-F440-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012028
+}

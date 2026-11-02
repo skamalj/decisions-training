@@ -1,0 +1,169 @@
+{
+ "id": "F435-0020",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E8834",
+   "zone_id": "T4",
+   "zone_type": "seated_tier",
+   "doors_open": "2025-11-05T19:00",
+   "check_filed_at": "2025-11-06T00:55",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 800,
+   "variation": {
+    "ref": "V-310",
+    "new_limit": 900,
+    "status": "approved",
+    "approved_on": "2025-11-04"
+   },
+   "stewards_required": 30,
+   "exit_routes": [
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 900,
+   "issued": 855,
+   "comps_included": 35,
+   "scanned_in": 842
+  },
+  "ingress": {
+   "device_id": "C-15",
+   "device_status": "fault_logged",
+   "raw_peak": 1030,
+   "peak_at": "2025-11-05T20:20",
+   "manual_recount": {
+    "count": 954,
+    "at": "2025-11-05T20:35"
+   }
+  },
+  "stewarding": {
+   "rostered": 31,
+   "signed_in": 28,
+   "relief": {
+    "called_at": "2025-11-05T19:30",
+    "eta_min": 20
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "X1",
+    "checked_at": "2025-11-05T17:45",
+    "status": "clear"
+   },
+   {
+    "route_id": "X2",
+    "checked_at": null,
+    "status": "clear"
+   },
+   {
+    "route_id": "X3",
+    "checked_at": "2025-11-05T17:50",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "X4",
+    "checked_at": "2025-11-05T19:10",
+    "status": "clear"
+   },
+   {
+    "route_id": "X6",
+    "checked_at": "2025-11-05T17:55",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "X6",
+    "checked_at": "2025-11-05T19:15",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "seated_tier",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.06,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.08,
+  "manual_recount_present": true,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.95,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.07,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "seated_tier",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.94,
+  "counter_status": "ok",
+  "counter_inflation": 0.08,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 1.09,
+  "limit_mismatch": false,
+  "steward_gap_pct": -0.07,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "restrict_entry",
+   "second": "escalate",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "counter_fault",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 61,
+ "deciding": {
+  "verified_exceedance": "The variation was approved before doors, so the effective limit is 900. The counter is faulty, so the recount of 954 is the verified figure, and it is over 900.",
+  "disposition": "Verified breach of about 6% with unconfirmed exits. The event has ended, which points to referral; restricting entry is also arguable given the unresolved exit and stewarding gaps.",
+  "discrepancy_source": "Issued 855 is within the ticketing limit of 900, which matches the effective limit. The inflated raw peak of 1030 comes from the fault_logged device.",
+  "steward_shortfall": "28 signed in of 30 required is 6.7% short, which is level 1. The relief call and a rostered count of 31 leave a small doubt over level 0.",
+  "unconfirmed_exits": "X2 (null), X3 (obstructed), X4 (checked after doors), X5 (missing) and X6 (obstructed, with only a clear recheck after doors) make five unconfirmed; the post-doors clear recheck on X6 invites a count of four."
+ },
+ "request": "rec-F435-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013394
+}

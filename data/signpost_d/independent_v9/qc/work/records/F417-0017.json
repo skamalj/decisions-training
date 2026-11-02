@@ -1,0 +1,114 @@
+{
+ "id": "F417-0017",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "SY-Q",
+   "loa_m": 10.4,
+   "draught_m": 3.4,
+   "draught_src": "owner"
+  },
+  "berth": {
+   "id": "P9",
+   "max_loa_m": 10.2,
+   "fender_allow_m": 0.3,
+   "depth_lat_m": 3.9,
+   "waiver_ref": "W-221",
+   "waiver_expiry": "2025-09-30"
+  },
+  "booking": {
+   "arr": "2025-08-03",
+   "dep": "2025-08-09",
+   "next_on_berth": "2025-08-12"
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 10.55,
+    "draught_m": null
+   },
+   "insurance_expiry": "2026-02-01",
+   "inspection_date": "2025-07-20"
+  },
+  "account": {
+   "dues_outstanding_gbp": 310,
+   "plan_id": "PP-88",
+   "plan_status": "approved"
+  }
+ },
+ "factors": {
+  "loa_mismatch_pct": 1.44,
+  "berth_length_fit": "marginally_over_limit_plus_fender_waived",
+  "ukc_margin_m": 0.5,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 310,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 1.44,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": -0.07,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 310,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "multiple_nights",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "confirm_allocation",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "dimension_mismatch",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 59,
+ "deciding": {
+  "length_fits": "Survey 10.55 vs max 10.2 plus fender 0.3 = 10.5 is 0.05 over, but waiver W-221 runs past the stay.",
+  "next_step": "Waiver covers the stay, insurance valid, inspection done, plan approved, next booking after departure: allocation can stand.",
+  "primary_issue": "Declared loa 10.4 vs survey 10.55 and survey over berth limit are the only dimension items; all else is in order.",
+  "ukc_band": "Depth 3.9 minus declared draught 3.4 = 0.5, exactly at the boundary of tight and adequate.",
+  "unresolved_count": "A 0.15 m declared-vs-survey gap and a 0.05 m overrun cover by waiver may be counted as none or one."
+ },
+ "request": "rec-F417-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009729
+}

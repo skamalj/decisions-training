@@ -1,0 +1,111 @@
+{
+ "id": "F424-0035",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2415",
+   "vessel_id": "FV7",
+   "fg_target_max": 1.012,
+   "strain_max_temp_c": 22
+  },
+  "readings": [
+   {
+    "ts": "05-09",
+    "gravity_sg": 1.02,
+    "temp_c": 23.1
+   },
+   {
+    "ts": "05-10",
+    "gravity_sg": 1.018,
+    "temp_c": 21
+   }
+  ],
+  "lab": {
+   "diacetyl_mgl": 0.17,
+   "abv_pct": null,
+   "pending": true
+  },
+  "release_request": {
+   "vessel_id": "FV7",
+   "note": "Routine packaging slot."
+  }
+ },
+ "factors": {
+  "gravity_status": "still_dropping",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.17,
+  "discrepancy_count": 0,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": true,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "still_dropping",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.17,
+  "discrepancy_count": 3,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": true,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "balanced",
+   "target": "release_conditional",
+   "second": "dump",
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (hard_limit_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 39,
+ "deciding": {
+  "terminal_gravity": "1.020 then 1.018, still falling and above 1.012 max.",
+  "contamination_supported": "No micro signal; only high diacetyl hints, so modestly false.",
+  "batch_disposition": "Brief 23.1 breach is hard limit favouring dump, but it was brief and corrected so a conditional release is arguable.",
+  "deviation_severity": "23.1 C exceeds strain max 22 C, a hard limit breach.",
+  "record_discrepancies": "Vessel FV7 agrees; no real mismatch, but lack of volume fields leaves 0 vs 1 open."
+ },
+ "request": "rec-F424-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005221
+}

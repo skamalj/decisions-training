@@ -1,0 +1,139 @@
+{
+ "id": "F429-0041",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "spillway": "SP-3",
+   "operator_id": "op41",
+   "licence_q_max_m3s": 200,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 100.8,
+    "action_m": 101.5
+   },
+   "gauge_zero_offset_m": 1.4,
+   "readings": [
+    {
+     "t": "2024-05-02T02:00",
+     "level_m": 100.9,
+     "datum": "site"
+    },
+    {
+     "t": "2024-05-02T04:00",
+     "level_m": 100.2,
+     "datum": "gauge_zero"
+    },
+    {
+     "t": "2024-05-02T06:00",
+     "level_m": 101.1,
+     "datum": "site"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "2024-05-02T03:10",
+    "open_before_m": 0,
+    "open_after_m": 1.5
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.53
+    }
+   ],
+   "calc_peak_m3s": 197,
+   "gauged_peak_m3s": null
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "2024-05-02T07:20"
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "2024-05-02T03:40",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "action",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "borderline (0.03 m)",
+  "discharge_discrepancy_pct": "unavailable (gauged null)",
+  "datum_mismatch": true,
+  "missing_section": "downstream_gauge_null",
+  "notice_after_release": true,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 15.78,
+  "datum_mismatch": true,
+  "missing_section": "downstream_gauge_null",
+  "notice_after_release": true,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "gates_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "query_operator",
+   "second": "accept_log",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 84,
+ "deciding": {
+  "within_licence": "gauged_peak_m3s is null, so only the calculated 197 against the 200 limit is available; the figure is unavailable and 197 sits within 3% of the limit.",
+  "gates_reconciled": "G1 open_after_m 1.5 against calc opening_m 1.53 is a 0.03 m gap, between trivial and material.",
+  "next_step": "Inspection is completed and the sections roughly agree, so accepting is plausible, but the null gauged peak and the late warning give a query to the operator.",
+  "trigger_tier": "The gauge_zero reading 100.2 plus the 1.4 offset is 101.6, above action_m 101.5. Level 3 stays arguable because the gauged peak is unknown against the limit.",
+  "parties_needed": "Several parties are needed: the operator, the gauge team, a surveyor for the datum, comms for the late warning and a senior engineer."
+ },
+ "request": "rec-F429-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009197
+}

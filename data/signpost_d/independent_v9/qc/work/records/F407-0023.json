@@ -1,0 +1,124 @@
+{
+ "id": "F407-0023",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "P-3377",
+   "received_at": "2025-02-20T08:05",
+   "channel": "own_inspector",
+   "photo_ref": "IMG-0912",
+   "linked_reports": [],
+   "claim_ref": null
+  },
+  "location": {
+   "usrn": "30211457",
+   "road_class": "local_access",
+   "intervention_depth_mm": 40,
+   "speed_limit": 20
+  },
+  "inspection": {
+   "inspector": "I-04",
+   "inspected_at": "2025-02-10",
+   "depth_mm": 72,
+   "width_mm": 1374.23,
+   "offset_m": 15
+  },
+  "works_history": [],
+  "programme": {
+   "schemes": [
+    {
+     "id": "S-14",
+     "start": "2025-03-10",
+     "extent_m": [
+      0,
+      60
+     ]
+    }
+   ]
+  },
+  "current_order": {
+   "id": "WO-731",
+   "raised": "2025-02-11",
+   "status": "completed_closed",
+   "completed_items": 1,
+   "total_items": 1
+  }
+ },
+ "factors": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "none",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": true,
+  "duplicate_count": 0,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": false,
+  "order_status": "completed_closed",
+  "defect_width_mm": 1374.23,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "none",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": true,
+  "duplicate_count": 0,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 1374.23,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 75,
+ "deciding": {
+  "meets_threshold": "Inspection depth 72 against threshold 40, but the inspection predates the report by 10 days, so a little doubt remains.",
+  "repeat_failure": "works_history is empty, so no earlier repair matches; the only order WO-731 is the repair of this defect.",
+  "next_step": "WO-731 raised 2025-02-11 after the inspection is completed and closed, 1 of 1 items, so the defect is already repaired and the report can be closed.",
+  "staff_effort": "Closing is quick, but checking whether the repair covers the reported defect and the S-14 coordination may need an hour or several.",
+  "response_timescale": "Depth is well above threshold, suggesting priority, but the order is already complete and a local road 20 limit could make routine adequate; scheme S-14 starts 2025-03-10."
+ },
+ "request": "rec-F407-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008718
+}

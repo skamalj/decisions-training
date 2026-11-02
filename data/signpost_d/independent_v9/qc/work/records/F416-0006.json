@@ -1,0 +1,162 @@
+{
+ "id": "F416-0006",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "N12",
+   "date": "2025-02-14",
+   "signoff": "G07 17:05"
+  },
+  "roster": [
+   {
+    "id": "G07",
+    "on": "09:00",
+    "off": "17:00",
+    "qual": "2026-03-01",
+    "home": "N12"
+   },
+   {
+    "id": "G08",
+    "on": "09:00",
+    "off": "17:00",
+    "qual": "2025-11-30",
+    "home": "N12"
+   },
+   {
+    "id": "G15",
+    "on": "09:00",
+    "off": "17:00",
+    "qual": "2026-01-10",
+    "home": "N09"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "12:00",
+    "wave_m": 2.4,
+    "wind_kt": 22,
+    "flag": "red"
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "type": "water_rescue",
+    "time": "11:20",
+    "resp": [
+     "G07",
+     "G08"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I2",
+    "type": "water_rescue",
+    "time": "14:05",
+    "resp": [
+     "G08",
+     "G15"
+    ],
+    "out": "gp_advised",
+    "amb": "A-4471"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jetski",
+    "out_from": "10:00",
+    "out_to": "11:15",
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "advisories": 3,
+   "check_sheet_ref": null
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "gp_advised with ambulance_ref present (between referred and conveyed)",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": false,
+  "missing_record": "check_sheet_ref",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "over_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_item",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 76,
+ "deciding": {
+  "two_guard_cover": "Both rescues list two responders, rostered at the time with qual dates after 2025-02-14; G15 is from N09 with an in-date qualification.",
+  "totals_reconcile": "Rescues 2, first_aid 0 and kit_defects 1 match the itemised entries; only the null check_sheet_ref leaves slight doubt.",
+  "next_step": "handover.check_sheet_ref is null, the one specific missing item; no flag lag or cover gap is shown.",
+  "outcome_severity": "I2 is coded gp_advised but carries an ambulance ref A-4471, which holds referred against conveyed in balance.",
+  "kit_outage": "Jetski out 10:00 to 11:15 (75 min) with no substitute, which puts it in the 60 to 180 band; the single item and short margin from 60 leave a little doubt."
+ },
+ "request": "rec-F416-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014231
+}

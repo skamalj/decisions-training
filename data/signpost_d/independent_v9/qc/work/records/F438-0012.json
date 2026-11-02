@@ -1,0 +1,123 @@
+{
+ "id": "F438-0012",
+ "family": "F438",
+ "state": {
+  "coded_record": {
+   "primary_dx": "J18.9",
+   "secondary_dx": [
+    "E11.9",
+    "T81.4",
+    "I10"
+   ],
+   "procedures": [
+    {
+     "code": "G45.1",
+     "date": "2024-02-11"
+    }
+   ]
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "J18.9"
+   },
+   "comorbidities": [
+    "E11.9",
+    "N17.9"
+   ],
+   "theatre_log": [
+    {
+     "code": "G45.1",
+     "date": "2024-02-11"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "DZ11C",
+   "hrg_regrouped": "DZ22B",
+   "tariff_submitted": 2210,
+   "tariff_regrouped": 3050,
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 3,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_subchapter",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.2,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_subchapter",
+  "missing_source": "discharge_summary",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.2,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "amend_codes",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "primary_supported": "Coded J18.9 equals documented principal_condition J18.9.",
+  "hrg_shift": "DZ11C is regrouped to DZ22B, but the regrouping depends on the disputed secondary codes.",
+  "next_step": "Not yet submitted and all sources are present, so the codes can simply be amended locally.",
+  "error_count": "T81.4 and I10 are coded without documentation and N17.9 is documented but not coded; that makes three errors, or four if the HRG change is counted.",
+  "error_severity": "T81.4 has no documentation entry and the tariff difference is positive (critical); the HRG change alone would be major."
+ },
+ "request": "rec-F438-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009309
+}

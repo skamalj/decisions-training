@@ -1,0 +1,139 @@
+{
+ "id": "F433-0001",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H17",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "pulse_bpm": 58
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 30
+   },
+   "arrived_at": "10:02",
+   "departed_at": null
+  },
+  "vet_card": {
+   "arrival_copied": "10:09",
+   "presented_at": "10:22",
+   "pulse_bpm": 64,
+   "cri": {
+    "first_bpm": 64,
+    "second_bpm": 77
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 2,
+    "gut_sounds": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "skin_tent_s": 1
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 0
+    }
+   ],
+   "tack": {
+    "site": "girth",
+    "finding": "open wound"
+   },
+   "vet_signed_at": "10:26",
+   "recheck": "pulse requested"
+  },
+  "notes": {
+   "rider_note": "Loose dog spooked him, nearly lost a shoe."
+  }
+ },
+ "factors": {
+  "pulse_status": "met_at_boundary",
+  "time_mismatch": "major_over_5min",
+  "gait_grade": "regular",
+  "gait_mitigation": false,
+  "metabolic_flags": 1,
+  "cri_rise": 13.31,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "open_wound",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_at_boundary",
+  "time_mismatch": "major_over_5min",
+  "gait_grade": "regular",
+  "gait_mitigation": false,
+  "metabolic_flags": 1,
+  "cri_rise": 13.31,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "open_wound",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_recheck",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "contested",
+   "target": "ftq_other",
+   "second": "ftq_metabolic",
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "pulse_met": "Pulse 64 equals the limit. Presented 20 min after gate arrival (10:02) but only 13 min after the copied arrival (10:09), so the boundary reading is plausibly met.",
+  "next_step": "vet_card.recheck shows a pulse recheck requested and departed_at is null, so the horse is held for a specific pending item.",
+  "outcome_code": "The open girth wound points to ftq_other. The CRI rise from 64 to 77 and the CRT of 2 s leave a metabolic code defensible.",
+  "welfare_risk": "The horse is held and uncleared with a pending recheck, an open wound and a CRI rise, which leans towards critical.",
+  "record_completeness": "All readings and the signature are present, but arrival_copied differs from gate.arrived_at by 7 min, so a reviewer could see a time discrepancy."
+ },
+ "request": "rec-F433-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013306
+}

@@ -1,0 +1,177 @@
+{
+ "id": "F410-0013",
+ "family": "F410",
+ "state": {
+  "application": {
+   "app_ref": "A-6088",
+   "term_end": "2026-06-30",
+   "pitch_req": {
+    "market": "Millgate",
+    "width_m": 4.27,
+    "depth_m": 2.5
+   },
+   "commodities": [
+    "fruit",
+    "veg",
+    "flowers"
+   ],
+   "docs_pending": [
+    "pli_endorsement",
+    "declaration"
+   ]
+  },
+  "licence_current": {
+   "pitch": {
+    "market": "Millgate",
+    "pitch_no": 3,
+    "width_m": 3,
+    "depth_m": 2.5
+   },
+   "commodities": [
+    "fruit",
+    "veg"
+   ],
+   "conditions": {
+    "min_attendance_pct": 60,
+    "max_width_m": 4.5
+   },
+   "variations": [
+    {
+     "type": "extension",
+     "detail": "width 4.27m, add flowers",
+     "approved": true,
+     "approved_on": "2025-11-12"
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-06-30",
+    "indemnity_gbp": 1000000
+   },
+   "pli_required_gbp": 2000000,
+   "broker_conf": null,
+   "food_reg": {
+    "registered": true,
+    "fhrs_rating": 3,
+    "inspected_on": "2025-04-10"
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2025",
+     "amount_gbp": 600
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2025-04-01",
+     "amount_gbp": 487.86,
+     "method": "bacs"
+    }
+   ],
+   "payment_plan": {
+    "active": true,
+    "instalments_left": 2,
+    "missed": 0
+   }
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 32,
+   "absence_notices": [
+    {
+     "date": "2025-09-01",
+     "reason": "hospital stay",
+     "accepted": true
+    }
+   ],
+   "complaints": [
+    {
+     "date": "2025-05-02",
+     "category": "weights",
+     "upheld": true,
+     "status": "closed"
+    }
+   ],
+   "enforcement_notices": 0
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "indemnity_below_required",
+  "broker_confirmation_held": false,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "registered_rating_3_or_below",
+  "stall_size_delta_m": 1.27,
+  "variation_approved": true,
+  "fee_arrears_gbp": 112.14,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.64,
+  "absences_notified": true,
+  "complaint_profile": "upheld_closed",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "indemnity_below_required",
+  "broker_confirmation_held": false,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "registered_rating_3_or_below",
+  "stall_size_delta_m": 1.27,
+  "variation_approved": false,
+  "fee_arrears_gbp": 112.14,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.64,
+  "absences_notified": true,
+  "complaint_profile": "upheld_closed",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "balanced",
+   "target": "grant_conditional",
+   "second": "grant",
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "leaning",
+   "target": "desk_check",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "pli_term_covered": "pli.indemnity_gbp 1,000,000 is below pli_required_gbp 2,000,000 with no broker confirmation.",
+  "renewal_disposition": "Variation, active plan with no missed payments and closed complaint explain most items; the indemnity shortfall keeps conditional grant versus grant balanced.",
+  "inspection_level": "Changes are covered by the approved variation and food registration is current (rating 3), so documents only; the closed upheld complaint adds slight doubt.",
+  "reversal_time": "Annual renewal could be undone within three months or take longer; no field settles it.",
+  "discrepancy_count": "Only the indemnity shortfall is unresolved; plan, variation and accepted absence explain the rest, so level 1 vs 0."
+ },
+ "request": "rec-F410-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012379
+}

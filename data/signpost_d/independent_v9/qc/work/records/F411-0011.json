@@ -1,0 +1,118 @@
+{
+ "id": "F411-0011",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H112",
+   "review_date": "2025-03-10"
+  },
+  "vehicle": {
+   "odometer_km": 148200
+  },
+  "inspection": {
+   "result_code": "PA",
+   "brake_efficiency_pct": null
+  },
+  "defects": [
+   {
+    "code": "LT3",
+    "grade": "advisory",
+    "rectify_by": "2025-02-28",
+    "repaired_on": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-03-10"
+   },
+   {
+    "type": "dbs",
+    "reference": null
+   }
+  ],
+  "history": [
+   {
+    "date": "2024-03-05",
+    "result": "F",
+    "odometer_km": 148900
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "advisory",
+  "rectification_state": "not_started",
+  "deadline_passed": true,
+  "documents_missing_count": "1 or 2 (one boundary expiry, one null reference)",
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": true,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": true,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 3
+ },
+ "factors_sampled": {
+  "worst_defect_found": "minor",
+  "rectification_state": "not_started",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": true,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 3
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "refuse_renewal",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "advisory_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 37,
+ "deciding": {
+  "odometer_consistent": "Current 148200 km is below the earlier 148900 km history reading, a small drop with no cluster replacement logged; leans false but small.",
+  "next_step": "Brake efficiency is null, which points to request_evidence, while the document problems and unrepaired item hint at refusal; neither clearly dominates.",
+  "inspection_outcome": "The only defect item is graded advisory and the result code is PA, so no item reached fail severity.",
+  "document_gaps": "Insurance expires exactly on the review date with no cover note, and the dbs entry has a null reference, so it counts as one or two gaps.",
+  "outstanding_severity": "The advisory item is past its rectify_by date and not repaired; the grade is advisory but the lapsed deadline invites reading it as a past-deadline defect."
+ },
+ "request": "rec-F411-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009234
+}

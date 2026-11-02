@@ -1,0 +1,148 @@
+{
+ "id": "F411-0009",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "PH0912",
+   "type": "private_hire",
+   "expiry": "2025-07-31",
+   "review_date": "2025-07-14"
+  },
+  "vehicle": {
+   "first_reg": "2024-06-03",
+   "odometer_km": 151300
+  },
+  "inspection": {
+   "date": "2025-07-02",
+   "result_code": "PA",
+   "brake_efficiency_pct": 74
+  },
+  "defects": [
+   {
+    "code": "WL2",
+    "grade": "advisory",
+    "rectify_by": null,
+    "repaired_on": "2025-07-02",
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-06-30",
+    "cover_note_ref": null
+   },
+   {
+    "type": "mot",
+    "expires_on": "2025-07-14",
+    "cover_note_ref": null
+   },
+   {
+    "type": "dbs",
+    "expires_on": "2026-03-01"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-09-10",
+     "result": "F",
+     "odometer_km": 2100
+    },
+    {
+     "date": "2024-11-05",
+     "result": "F",
+     "odometer_km": 6800
+    },
+    {
+     "date": "2025-01-14",
+     "result": "F",
+     "odometer_km": 9400
+    },
+    {
+     "date": "2025-03-06",
+     "result": "F",
+     "odometer_km": 9900
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_defect_found": "advisory",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": false,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": true,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 1
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": false,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": true,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 1
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "refuse_renewal",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "balanced",
+   "target": "clean_pass",
+   "second": "advisory_only",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 102,
+ "deciding": {
+  "odometer_consistent": "Odometer 151300 against 9900 four months earlier, about 141000 km in four months on a one-year-old vehicle; impossible growth.",
+  "next_step": "Insurance expired 2025-06-30 with no cover note and MOT expires on the review date with no cover note: two documents lacking, which points to refusal.",
+  "inspection_outcome": "Result PA with a single advisory WL2 already repaired on the inspection day; it reads as a clean pass, but an advisory is recorded.",
+  "document_gaps": "Insurance is plainly expired; MOT expires_on equals review_date 2025-07-14 with no cover note, so two gaps or one depending on boundary reading.",
+  "outstanding_severity": "Advisory WL2 is repaired but has no retest entry; it counts as an outstanding advisory (level 1) unless a repaired advisory is treated as closed (level 0)."
+ },
+ "request": "rec-F411-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015553
+}

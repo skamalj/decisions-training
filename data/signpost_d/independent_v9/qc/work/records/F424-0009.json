@@ -1,0 +1,135 @@
+{
+ "id": "F424-0009",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B-770",
+   "vessel_id": "FV6",
+   "volume_hl": 18,
+   "yeast_strain": "K-97",
+   "yeast_gen": 2,
+   "fg_target_min": 1.008,
+   "fg_target_max": 1.012,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "05-03",
+    "gravity_plato": 3.0,
+    "temp_c": 25.5,
+    "probe_id": "P1"
+   },
+   {
+    "ts": "05-03",
+    "temp_c": 23,
+    "probe_id": "P2"
+   },
+   {
+    "ts": "05-09",
+    "gravity_sg": 1.0105
+   },
+   {
+    "ts": "05-10",
+    "gravity_sg": 1.0102
+   }
+  ],
+  "events": [
+   {
+    "type": "pitch",
+    "note": "Pitched K-97 gen 3."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B-770",
+   "diacetyl_mgl": 0.13,
+   "micro_plate": {
+    "result": "positive",
+    "cfu_ml": 40
+   },
+   "lab_note": "Plate possibly cross-contaminated at bench."
+  },
+  "release_request": {
+   "vessel_id": "FV7",
+   "volume_hl": 18
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": true,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.13,
+  "discrepancy_count": 2,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": true,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": true,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.13,
+  "discrepancy_count": 2,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "balanced",
+   "target": "release",
+   "second": "hold_retest",
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "terminal_gravity": "1.0105 and 1.0102 both inside 1.008-1.012 band, consecutive and flat.",
+  "contamination_supported": "Positive plate 40 cfu/ml against lab note of possible bench cross-contamination.",
+  "batch_disposition": "Release vs hold_retest, depends on whether the disputed plate needs a confirming retest.",
+  "deviation_severity": "Diacetyl 0.13 mg/l is well beyond limit by more than 10%, with no explanation.",
+  "record_discrepancies": "Pitch gen 3 vs batch yeast_gen 2 and vessel FV6 vs FV7; plato vs SG is a decoy."
+ },
+ "request": "rec-F424-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005385
+}

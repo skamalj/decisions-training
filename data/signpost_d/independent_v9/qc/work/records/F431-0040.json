@@ -1,0 +1,143 @@
+{
+ "id": "F431-0040",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM-61408",
+   "last_verified_date": "2018-09-14",
+   "seal_state": "intact",
+   "seal_checked_date": "2025-01-15"
+  },
+  "period_read": {
+   "read_date": "2025-03-08",
+   "reg_kwh": 25871,
+   "vol_m3": 331,
+   "src_code": "CUS",
+   "photo_ref": "C-7712"
+  },
+  "history": [
+   {
+    "date": "2024-12-08",
+    "reg_kwh": 24400,
+    "src": "EST"
+   },
+   {
+    "date": "2025-01-08",
+    "reg_kwh": 24600,
+    "src": "EST"
+   },
+   {
+    "date": "2025-02-06",
+    "reg_kwh": 24800,
+    "src": "EST"
+   },
+   {
+    "date": "2025-02-08",
+    "reg_kwh": 25000,
+    "src": "EST",
+    "same_period_ly_kwh": 500
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW",
+    "E_AIR",
+    "E_TPROBE",
+    "E_COMMS"
+   ],
+   "flow_temp_c": 66.0,
+   "return_temp_c": 43.0,
+   "battery_pct": 9
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 176,
+   "hdd_prior_year": 200,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "open",
+     "date": "2025-02-28"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.98,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.88,
+  "diagnostic_error_count": 4,
+  "meter_works_order": true,
+  "consecutive_estimates": 4,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "register_rollback",
+  "missing_section": "none",
+  "consumption_ratio": 0.93,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.88,
+  "diagnostic_error_count": 4,
+  "meter_works_order": true,
+  "consecutive_estimates": 4,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "meter_fault": "Four error codes and an open RECAL order favour a fault. The delta-T of 23 C is normal and the seal is intact, so a real consumption increase remains plausible.",
+  "billable_actual": "The customer read has a photo and is in sequence. Consumption is unexplained, and the active errors and open RECAL order undermine it.",
+  "next_step": "The read is in sequence and carries a photo, and nothing marks it as unusable. It can go to billing, with the open RECAL order handled separately.",
+  "staff_effort": "Four errors, an open recalibration and four estimates to reconcile may take one to five days, or more than five if a visit and rebilling are needed.",
+  "consumption_deviation": "Period use is 25871-25000=871 kWh. Expected is 500*176/200=440 kWh, so the ratio is 1.98, just under the 100% line."
+ },
+ "request": "rec-F431-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009886
+}

@@ -1,0 +1,126 @@
+{
+ "id": "F433-0007",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H42",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "pulse_bpm": 63,
+     "result": "pass"
+    }
+   ],
+   "passport_remark": "left fore irregularity known"
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "10:05"
+  },
+  "vet_card": {
+   "presented_at": "10:12",
+   "pulse_bpm": 52,
+   "cri": {
+    "first_bpm": 52,
+    "second_bpm": null
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 1
+    },
+    {
+     "surface": "soft",
+     "grade": 0
+    }
+   ],
+   "vet_signed_at": null
+  },
+  "notes": {
+   "rider_note": "stumbled on the rocky descent, fine since"
+  }
+ },
+ "factors": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": 0,
+  "cri_rise": 1.21,
+  "missing_items": 2,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "prior_borderline",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": 0,
+  "cri_rise": 1.21,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "prior_borderline",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_recheck",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "leaning",
+   "target": "ftq_gait",
+   "second": null,
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "pulse_met": "Presented 10:12, 7 min after the 10:05 arrival, with pulse 52 against a limit of 64.",
+  "next_step": "cri.second_bpm is null and the horse needs that reading before any decision, so a recheck is the action.",
+  "outcome_code": "Hard-surface trot-up is grade 1 while the soft one is grade 0 and metabolic values are fine; gait is the only candidate failure, softened by the mixed trot-ups.",
+  "welfare_risk": "Only the grade 1 hard trot-up is outside limits; pulse is well within, so exactly one parameter is off, with a borderline earlier gate adding slight doubt.",
+  "record_completeness": "cri.second_bpm and vet_signed_at are both null, which is two missing items, though the signature may be seen as lesser, which is the balance with level 1."
+ },
+ "request": "rec-F433-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011353
+}

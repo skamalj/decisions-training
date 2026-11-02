@@ -1,0 +1,155 @@
+{
+ "id": "F406-0026",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-4417",
+   "gallery_code": "G2B",
+   "session_date": "2025-03-08",
+   "open": "10:00",
+   "close": "12:00",
+   "certified_limit": 120
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "10:00",
+     "occupancy": 96
+    },
+    {
+     "start": "10:15",
+     "occupancy": 118
+    },
+    {
+     "start": "10:30",
+     "occupancy": 120
+    },
+    {
+     "start": "10:45",
+     "occupancy": 126
+    },
+    {
+     "start": "11:00",
+     "occupancy": 133
+    },
+    {
+     "start": "11:15",
+     "occupancy": 127
+    },
+    {
+     "start": "11:30",
+     "occupancy": 112
+    },
+    {
+     "start": "11:45",
+     "occupancy": 98
+    }
+   ],
+   "manual_tally_peak": 131
+  },
+  "variations": [
+   {
+    "ref": "V-208",
+    "gallery_code": "G2C",
+    "valid_from": "2025-03-01",
+    "valid_to": "2025-03-31",
+    "uplift_to": 140,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "tickets": [
+    {
+     "gate": "E1",
+     "raised_at": "2025-03-08T08:40",
+     "summary": "counter drifting high"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": "partial",
+   "routes_checked": "2 of 3",
+   "notes": "Busy but calm, no concerns."
+  },
+  "history": {
+   "overages_30d": 2
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 1.1,
+  "intervals_over_limit": 3,
+  "section_mismatch": "none",
+  "variation_present": true,
+  "variation_scope": "wrong_gallery",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "partial",
+  "prior_overages_30d": 2,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.96,
+  "intervals_over_limit": 7,
+  "section_mismatch": "scans_vs_counter_major",
+  "variation_present": false,
+  "variation_scope": "wrong_gallery",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "other_gate",
+  "interval_export_missing": false,
+  "egress_check": "partial",
+  "prior_overages_30d": 2,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "fault_explains_overage": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 99,
+ "deciding": {
+  "variation_applies": "Variation gallery_code G2C differs by one character from session G2B, though it is approved and in date; likely wrong gallery but a typo is plausible.",
+  "fault_explains_overage": "Ticket for gate E1 raised 08:40 on session date, before the 10:00 open, says counter drifting high; it covers the date but gate linkage is only implied.",
+  "next_step": "Counts, tally and ticket are consistent and the overage is covered by a prior fault ticket; nothing missing, so file.",
+  "peak_excess": "Interval peak 133 vs limit 120 is 110.8%, while the manual tally 131 is 109.2%, straddling the 10% line.",
+  "intervals_over": "Intervals at 126, 133 and 127 are above 120 (three), the 120 interval is only at the limit; a fourth could be counted if at-limit is included."
+ },
+ "request": "rec-F406-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01046
+}

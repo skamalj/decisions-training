@@ -1,0 +1,112 @@
+{
+ "id": "F415-0034",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": [
+    {
+     "from": "11:00",
+     "to": "12:00",
+     "reason": "police incident",
+     "approved_by": null
+    }
+   ]
+  },
+  "shift": {
+   "sched_slots": 7
+  },
+  "visits": [
+   {
+    "slot": "11:00",
+    "status": "not_recorded",
+    "op_note": "block shut for police"
+   }
+  ],
+  "faults": [
+   {
+    "type": "spillage",
+    "reported_at": "2024-08-09T11:30:00",
+    "remedied_at": null
+   }
+  ],
+  "sign_off": null
+ },
+ "factors": {
+  "scheduled_slots": 7,
+  "missed_slots": "1",
+  "closure_covers_gap": true,
+  "closure_approved": false,
+  "sign_off_state": "missing",
+  "fault_type": "spillage",
+  "fault_open_minutes": "over 400, remedied_at null",
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "explains_gap_unbacked",
+  "prior_defaults_90d": 4
+ },
+ "factors_sampled": {
+  "scheduled_slots": 7,
+  "missed_slots": "1",
+  "closure_covers_gap": true,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "spillage",
+  "fault_open_minutes": 403.12,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "explains_gap_unbacked",
+  "prior_defaults_90d": 4
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_noted",
+   "second": "accept",
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "missed_clean": "The 11:00 slot is not_recorded. A closure covers its window but has approved_by null, and the note only claims a police closure, so the gap is unbacked and could go either way.",
+  "sign_off_valid": "sign_off is null, so there is no sign-off.",
+  "next_step": "The plausible police explanation and the closure entry suggest a recording lapse to note. The null approval leaves open acceptance without notice.",
+  "staff_effort": "Staff must confirm the police incident, chase the missing approval and sign-off, and establish when the spillage was dealt with. This takes one to five days, and possibly more.",
+  "fault_exposure": "The spillage was reported at 11:30 with remedied_at null, and the closure ends at 12:00. If the block reopened at 12:00 the fault was open to the public well beyond 240 minutes. Exposure from the closed period still leaves some doubt."
+ },
+ "request": "rec-F415-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009072
+}

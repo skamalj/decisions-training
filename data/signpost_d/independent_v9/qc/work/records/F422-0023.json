@@ -1,0 +1,154 @@
+{
+ "id": "F422-0023",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-3340",
+   "delivered_at": "2025-03-11",
+   "received_at": "2025-04-01",
+   "review_date": "2025-05-05",
+   "reason": "OVERSTOCK",
+   "lines": [
+    {
+     "gtin": "05055500000033",
+     "qty_claimed": 60
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "lines": [
+    {
+     "gtin": "05055500000033",
+     "batch": "P310",
+     "expiry": "2027-06-30",
+     "qty_dispatched": 60
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "05055500000033",
+     "batch": "P310",
+     "expiry": "2027-06-30",
+     "qty_counted": 8,
+     "packs_damaged": 2,
+     "seals_intact": 6
+    },
+    {
+     "gtin": "05055500000033",
+     "batch": "P377",
+     "expiry": "2027-06-30",
+     "qty_counted": 42,
+     "packs_damaged": 0,
+     "seals_intact": 42
+    }
+   ],
+   "uid_scans": []
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": "LG-31",
+   "logger_start": "2025-03-10T09:00",
+   "logger_end": "2025-04-02T09:00",
+   "min_c": 17.0,
+   "max_c": 29.8,
+   "minutes_out_of_range": 293,
+   "stability_ref": null
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-02-15",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "hold_limit_days": 30,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-05-26"
+   },
+   "max_days_out_of_control": 30,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 293,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "one_foreign_batch",
+  "count_discrepancy_packs": 10,
+  "damaged_pack_fraction": 0.04,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 21,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 21,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 25
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 293,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 10,
+  "damaged_pack_fraction": 0.04,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 21,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": -4,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 25
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_traceable": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "reject_destroy",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 65,
+ "deciding": {
+  "storage_maintained": "Logger covers the whole period but shows 293 minutes out of range with max_c 29.8 against 15-25C and no stability_ref.",
+  "batch_traceable": "Counted batch P377 (42 packs) is not on the dispatch, which lists only P310.",
+  "next_step": "Foreign batch P377 and an unallowed excursion mean nearly the whole return fails; no specific missing document would change that.",
+  "resaleable_share": "Only 6 intact packs of the dispatched batch P310 could be fit (6 of 50), and the unallowed excursion could make even those 0.",
+  "disposition_urgency": "Original limit 2025-05-01 is replaced by approved extension to 2025-05-26; review 2025-05-05 leaves 21 days, just over the 20-day line."
+ },
+ "request": "rec-F422-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014601
+}

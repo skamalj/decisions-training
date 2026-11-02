@@ -1,0 +1,162 @@
+{
+ "id": "F419-0041",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "date": "2024-05-14",
+   "speed_kmh": 65,
+   "thr": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": {
+    "precip_mm": 0
+   }
+  },
+  "device": {
+   "cal_expiry": "2025-01-10",
+   "tyre_kpa": 260,
+   "tyre_spec_kpa": [
+    170,
+    210
+   ],
+   "water_mm": 1.0
+  },
+  "runs": [
+   {
+    "dir": "09",
+    "thirds": [
+     0.78,
+     0.8,
+     0.77
+    ],
+    "segments_100m": [
+     0.77,
+     0.41,
+     0.78
+    ]
+   },
+   {
+    "dir": "27",
+    "thirds": [
+     0.79,
+     0.78,
+     0.81
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.63,
+    0.61,
+    0.62
+   ],
+   "mtd_thr_mm": 0.6
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-04-12",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start_date": "2024-05-28"
+    }
+   ],
+   "cross_checks": [
+    {
+     "serial": "C7",
+     "date": "2024-05-14",
+     "thirds": [
+      0.88,
+      0.87,
+      0.89
+     ]
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2023-11-02",
+     "lowest_third": 0.77
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-05-14T16:00Z",
+   "role": "analyst"
+  }
+ },
+ "factors": {
+  "min_third_band": "above_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 398,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "tyre_pressure_off",
+  "macrotexture_band": "marginal",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "above_design",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 398,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "tyre_pressure_off",
+  "macrotexture_band": "marginal",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "monitor_closely",
+   "second": "schedule_works",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "balanced",
+   "target": "none_found",
+   "second": "test_artefact",
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "genuine_deficit": "A 0.41 segment is below the 0.42 minimum, but all thirds are 0.77 or higher, tyre pressure is 260 kPa against a 170-210 spec, and the cross-check device reads about 0.10 higher. That holds artefact against real deficit in balance.",
+  "next_step": "Rubber removal order starts exactly 14 days out, which is borderline for scheduled works. Monitoring is slightly favoured over scheduling works, with the test validity in doubt.",
+  "deficit_driver": "No third is below planning, so none_found leads. Off-spec tyre pressure plus a cross-check about 0.10 higher keep test_artefact plausible.",
+  "friction_severity": "segments_100m contains 0.41, below the 0.42 minimum, which settles level 3 on its own.",
+  "evidence_completeness": "All fields, calibration and sign-off are present and dated. The off-spec tyre pressure could be counted as one doubtful element, which balances level 4 against level 3."
+ },
+ "request": "rec-F419-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015057
+}

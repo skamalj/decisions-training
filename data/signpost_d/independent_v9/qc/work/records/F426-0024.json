@@ -1,0 +1,124 @@
+{
+ "id": "F426-0024",
+ "family": "F426",
+ "state": {
+  "block": {
+   "crop": "plum"
+  },
+  "applications": [
+   {
+    "date": "2024-06-10",
+    "product_code": "CPX210",
+    "qty_applied": 4.1,
+    "qty_unit": "L",
+    "area_treated_ha": 2.0
+   },
+   {
+    "date": "2024-06-24",
+    "product_code": "CPX-210",
+    "qty_applied": 4.0,
+    "qty_unit": "L",
+    "area_treated_ha": 2.0
+   },
+   {
+    "date": "2024-07-05",
+    "product_code": "FGL5",
+    "qty_applied": 1.0,
+    "qty_unit": "L",
+    "area_treated_ha": 2.0
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "CPX210",
+    "max_rate_per_ha": 2.0,
+    "rate_unit": "L",
+    "phi_days": 7,
+    "approved_crops": [
+     "plum"
+    ]
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-08-20",
+   "residue_test": {
+    "sampled": true,
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "near_boundary_slight",
+  "partial_block_spray": false,
+  "clerical_mismatch": "product_code_typo",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "product_ref_entry_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 3,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "product_code_typo",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "product_ref_entry_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 8,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold_and_test",
+   "second": "release_lot",
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "contested",
+   "target": "clerical_only",
+   "second": "no_finding",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 41,
+ "deciding": {
+  "phi_cleared": "FGL5 has no product_ref entry, so its withholding period cannot be confirmed. It was applied 46 days before the pick, so it probably cleared. CPX210 (7 days) cleared.",
+  "next_step": "The residue test is clear and the dates are far apart, which supports release. The missing FGL5 reference and the 2.05 L/ha first application make a hold plausible.",
+  "finding_class": "The code CPX-210 against CPX210 is a clerical mismatch, and FGL5 has no reference. Whether that counts as a finding depends on the reviewer, so clerical_only and no_finding split.",
+  "reversal_time": "Holding a lot and ordering residue sampling, or recalling after release, takes weeks to a couple of months. That puts it at level 2 with some doubt.",
+  "rate_overrun": "The first CPX210 application is 4.1 L over 2.0 ha = 2.05 L/ha against a 2.0 maximum, about 2.5% over. That is a trivial excess, so level 1 and level 0 split."
+ },
+ "request": "rec-F426-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013782
+}

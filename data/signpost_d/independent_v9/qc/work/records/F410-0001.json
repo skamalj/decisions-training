@@ -1,0 +1,139 @@
+{
+ "id": "F410-0001",
+ "family": "F410",
+ "state": {
+  "application": {
+   "term_end": "2026-03-31",
+   "pitch_req": {
+    "width_m": 4.42
+   },
+   "commodities": [
+    "coffee"
+   ],
+   "docs_pending": [
+    "site plan"
+   ]
+  },
+  "licence_current": {
+   "pitch": {
+    "width_m": 3.0
+   },
+   "commodities": [
+    "hot drinks"
+   ],
+   "conditions": {
+    "min_attendance_pct": 85,
+    "max_width_m": 3.25
+   },
+   "variations": []
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-03-30",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": null,
+   "food_reg": {
+    "registered": true,
+    "fhrs_rating": 4
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2025",
+     "amount_gbp": 372.3
+    }
+   ],
+   "ledger": []
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 38,
+   "absence_notices": [
+    {
+     "date": "2025-06-02",
+     "reason": "illness",
+     "accepted": true
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_within_14d_of_term_end",
+  "broker_confirmation_held": false,
+  "commodity_change": "synonym_only",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 1.42,
+  "variation_approved": false,
+  "fee_arrears_gbp": 372.3,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.76,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 1
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "ends_within_14d_of_term_end",
+  "broker_confirmation_held": false,
+  "commodity_change": "synonym_only",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 1.42,
+  "variation_approved": false,
+  "fee_arrears_gbp": 372.3,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.76,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 1
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "balanced",
+   "target": "grant",
+   "second": "grant_conditional",
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "balanced",
+   "target": "scheduled_visit",
+   "second": "desk_check",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 55,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-03-30 is one day before term_end 2026-03-31, at the required sum, with no broker_conf: nearly covered but strictly a one-day gap.",
+  "renewal_disposition": "One pending doc plus arrears and a size change, but the fee, size and cover issues are each modest or small; grant versus conditional grant is close.",
+  "inspection_level": "Requested width 4.42m vs 3.0m with no approved variation points to a visit; the coffee/hot drinks wording is a decoy and food registration is current, so desk_check is plausible.",
+  "reversal_time": "A renewal can be revoked or reissued within about a day, though notification could take several days.",
+  "discrepancy_count": "Unresolved: PLI one day short, width 4.42m exceeds max 3.25m with no variation, 372.30 fees with empty ledger and no plan, attendance 38/50 below 85% with only one accepted notice."
+ },
+ "request": "rec-F410-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010784
+}

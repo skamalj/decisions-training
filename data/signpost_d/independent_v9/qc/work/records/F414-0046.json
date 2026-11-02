@@ -1,0 +1,167 @@
+{
+ "id": "F414-0046",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SL-0412",
+   "equip_type": "slide",
+   "std_ref": "EN1176-3",
+   "crit_fall_height_m": 2.0,
+   "surf_type": "wetpour",
+   "variance_ref": null
+  },
+  "inspection": {
+   "insp_date": "2024-05-14",
+   "insp_grade": "operational",
+   "fall_height_m": 2.0,
+   "surf_type_found": "wetpour",
+   "surf_depth_mm": 25,
+   "surf_req_table": [
+    {
+     "band": "1.5-2.0",
+     "type": "wetpour",
+     "min_depth_mm": 55
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "O2",
+     "result": "fail"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "ENT-2",
+     "component_id": "C5",
+     "injury_mech": "serious"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "SL-0412",
+    "component_id": "C3",
+    "defect_ref": "D7",
+    "status": "closed",
+    "closed_date": "2024-05-20"
+   },
+   {
+    "wo_id": "W2",
+    "asset_id": "SL-0412",
+    "component_id": "C5",
+    "defect_ref": "D8",
+    "status": "open",
+    "temp_measure": {
+     "type": "barrier tape",
+     "date": "2024-05-14"
+    }
+   },
+   {
+    "wo_id": "W3",
+    "asset_id": "SL-0412",
+    "component_id": "C5",
+    "defect_ref": "ENT-2",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "low",
+   "incident_reports_90d": 1
+  },
+  "history": [
+   {
+    "date": "2023-11-02",
+    "grade": "operational",
+    "defect_refs": [
+     "D7",
+     "D8"
+    ]
+   },
+   {
+    "date": "2024-05-20",
+    "component_id": "C3",
+    "result": "pass"
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "slide",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -30.0,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.33,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "low",
+  "incident_reports_90d": 1
+ },
+ "factors_sampled": {
+  "equipment_type": "slide",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 68.44,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.6,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "low",
+  "incident_reports_90d": 1
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "contested",
+   "target": "close_asset",
+   "second": "restrict_use",
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 117,
+ "deciding": {
+  "prior_defects_cleared": "Previous refs D7 and D8: D7 closed, D8 still open on C5; a later pass on C3 only partly offsets this.",
+  "surfacing_adequate": "surf_depth_mm 25 against a 55 mm minimum for 2.0 m wetpour.",
+  "asset_disposition": "Head/neck probe failure with a serious defect on C5 and only barrier tape in place; isolate C5 or close the whole slide are both defensible.",
+  "remedial_progress": "The one closed order (W1) has a closed_date after the inspection date, so arguably none were closed at inspection, with 2 of 3 open.",
+  "hazard_severity": "Head_neck probe fail on opening O2 points to critical, though the finding itself is coded serious."
+ },
+ "request": "rec-F414-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012787
+}

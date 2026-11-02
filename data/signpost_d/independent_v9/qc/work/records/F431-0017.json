@@ -1,0 +1,129 @@
+{
+ "id": "F431-0017",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM-52309",
+   "type": "ultrasonic",
+   "seal_state": "intact",
+   "seal_checked_date": "2024-01-15",
+   "last_verified_date": "2020-09-12"
+  },
+  "period_read": {
+   "read_date": "2024-02-28",
+   "reg_kwh": 18000,
+   "src_code": "CUS",
+   "photo_ref": "P-7740"
+  },
+  "history": [
+   {
+    "date": "2024-01-31",
+    "reg_kwh": 12000,
+    "src": "EST",
+    "same_period_ly_kwh": 2400
+   },
+   {
+    "date": "2023-12-31",
+    "reg_kwh": 9800,
+    "src": "AMR",
+    "same_period_ly_kwh": 2100
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW",
+    "E_AIR"
+   ],
+   "flow_temp_c": 70,
+   "return_temp_c": 44,
+   "battery_pct": 60,
+   "firmware": "3.2.1"
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 500,
+   "hdd_prior_year": 400,
+   "works_orders": [],
+   "dispute_open": true
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 2.0,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.25,
+  "diagnostic_error_count": 2,
+  "meter_works_order": false,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": true
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "register_rollback",
+  "missing_section": "none",
+  "consumption_ratio": 1.19,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.25,
+  "diagnostic_error_count": 2,
+  "meter_works_order": false,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": true
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_engineer",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 111,
+ "deciding": {
+  "meter_fault": "E_FLOW and E_AIR are active, which points to a device fault. Against that, the seal is intact, delta-T is normal, and weather does not explain the doubling but a real consumption increase could.",
+  "billable_actual": "A customer read with a photo reference is in sequence after an estimate, which supports billing. The consumption doubling, the open dispute and the active error codes undermine it.",
+  "next_step": "dispute_open is true, so a dispute handling referral is needed. The metering lead has to take it.",
+  "staff_effort": "A dispute with a site visit and meter testing, plus correspondence, is likely one to five days.",
+  "consumption_deviation": "Consumption is 18000-12000=6000 against expected 2400*500/400=3000, a ratio of exactly 2.0. That is right on the 100% boundary between levels 2 and 3."
+ },
+ "request": "rec-F431-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010249
+}

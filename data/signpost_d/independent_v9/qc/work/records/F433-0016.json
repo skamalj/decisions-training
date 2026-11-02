@@ -1,0 +1,142 @@
+{
+ "id": "F433-0016",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H17",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "result": "recheck_then_pass"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 15
+   },
+   "arrived_at": "09:10"
+  },
+  "vet_card": {
+   "arrival_copied": "09:11",
+   "presented_at": "09:22",
+   "pulse_bpm": 54,
+   "cri": {
+    "first_bpm": 54,
+    "second_bpm": 52
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 1.5,
+    "gut_sounds": "normal",
+    "skin_tent_s": null
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": "regular"
+    }
+   ],
+   "tack": {
+    "site": null,
+    "finding": "none"
+   },
+   "vet_signed_at": null
+  },
+  "notes": {
+   "rider_note": "nearly lost a shoe on the road section"
+  }
+ },
+ "factors": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "regular",
+  "gait_mitigation": false,
+  "metabolic_flags": 0,
+  "cri_rise": 2.49,
+  "missing_items": 2,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "regular",
+  "gait_mitigation": false,
+  "metabolic_flags": 1,
+  "cri_rise": 2.49,
+  "missing_items": 2,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "clear_to_continue",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "clear",
+   "target": "pass",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "welfare_risk": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 38,
+ "deciding": {
+  "pulse_met": "Presented 09:22 against arrival 09:10 (copy 09:11) is 11-12 min, inside the 20 min window, pulse 54 under 64; only a minor copy mismatch leaves slight doubt.",
+  "next_step": "Pulse, CRI, gait, metabolic and tack are all fine, nothing needs a recheck, treatment or referral; the shoe note is a decoy.",
+  "outcome_code": "Pulse 54, regular trot-up, pink mm, CRT 1.5, no tack finding: all within limits.",
+  "welfare_risk": "Every recorded parameter is within limits, no treatment, no departure before clearance.",
+  "record_completeness": "Both vet_signed_at and skin_tent_s are null, so two required items are missing."
+ },
+ "request": "rec-F433-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010552
+}

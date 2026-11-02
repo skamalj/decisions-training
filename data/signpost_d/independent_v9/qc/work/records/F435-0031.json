@@ -1,0 +1,127 @@
+{
+ "id": "F435-0031",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "EV-3301",
+   "zone_id": "T2",
+   "zone_type": "seated_tier",
+   "doors_open": "2025-05-09T18:30:00",
+   "check_filed_at": "2025-05-10T00:40:00",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 1200,
+   "variation": null,
+   "stewards_required": 40,
+   "exit_routes": [
+    "N1",
+    "N2",
+    "S1",
+    "S2",
+    "E1"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 1300,
+   "issued": 1272,
+   "comps_included": 60,
+   "scanned_in": 1241
+  },
+  "ingress": {
+   "device_id": "CTR-17",
+   "device_status": "calibration_due",
+   "raw_peak": 1224,
+   "peak_at": "2025-05-09T20:05:00",
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 34,
+   "signed_in": 30,
+   "relief": null
+  },
+  "exit_checks": null
+ },
+ "factors": {
+  "zone_type": "seated_tier",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.02,
+  "counter_status": "calibration_due",
+  "counter_inflation": 0.09,
+  "manual_recount_present": false,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 1.06,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.25,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": true
+ },
+ "factors_sampled": {
+  "zone_type": "seated_tier",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.96,
+  "counter_status": "calibration_due",
+  "counter_inflation": 0.09,
+  "manual_recount_present": false,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 1.06,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.17,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 1,
+  "exit_log_missing": true
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "conditional_sign_off",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "limit_mismatch",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 146,
+ "deciding": {
+  "verified_exceedance": "Counter is only calibration_due (still valid), so raw_peak 1224 is verified against base_limit 1200 with no variation; the excess is only 2%, which leaves some doubt.",
+  "disposition": "Planned as conditional sign-off. The post-event counts are close to the limit and the gaps are logged rather than a decisive breach, so approval with follow-up is the settled answer.",
+  "discrepancy_source": "Ticketing used 1300 against a licence limit of 1200 with no variation. Issued 1272 is under 1300 but over 1200, so the cause is the limit applied.",
+  "steward_shortfall": "signed_in 30 against required 40 is exactly 25% short, on the line between Marked and Severe. The larger rostered figure of 34 is a decoy.",
+  "unconfirmed_exits": "exit_checks is null, meaning no exit log at all, which is the level 4 condition. A reader might still hesitate over whether the log is just unfiled."
+ },
+ "request": "rec-F435-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012465
+}

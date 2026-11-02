@@ -1,0 +1,186 @@
+{
+ "id": "F405-0001",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-2041",
+   "detected_on": "2025-08-20",
+   "term_start": "2025-09-29",
+   "room": "HB-G12",
+   "slot": "Mon 09:00-13:00"
+  },
+  "booking_a": {
+   "module": "HIS101",
+   "department": "HIS",
+   "weekday": "Mon",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "headcount": 55,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "GEO140",
+   "department": "GEO",
+   "room": "HB-G12",
+   "weekday": "Mon",
+   "start": "11:00",
+   "end": "13:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "headcount": 48,
+   "required_features": [],
+   "status": "confirmed",
+   "approved_at": "2025-06-12",
+   "approver": "j.ames"
+  },
+  "room": {
+   "code": "HB-G12",
+   "aliases": [
+    "HBG12"
+   ],
+   "capacity": 60,
+   "features": [
+    "lecture_capture"
+   ],
+   "building": "HB"
+  },
+  "alternatives": [
+   {
+    "code": "HB-G15",
+    "capacity": 60,
+    "features": [
+     "lecture_capture"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "date": "2024-10-03"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-02-11"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 40,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.09,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 18,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.09,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 83,
+ "deciding": {
+  "genuine_clash": "Same room and same weeks, but A ends 11:00 exactly when B starts 11:00; the scan slot spans both. Back-to-back use is a modest doubt.",
+  "alt_room_fits": "HB-G15 capacity 60 vs headcount 55, has lecture_capture, free weeks 1-10 cover all teaching weeks.",
+  "resolution": "No time overlap (adjacent), both confirmed and approved; nothing to relocate or reschedule, so dismiss.",
+  "urgency": "Detected 2025-08-20, first occurrence Mon 2025-09-29 (week 1), 40 days away.",
+  "parties_needed": "Nothing needs resolving; at most one officer closes the report."
+ },
+ "request": "rec-F405-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012791
+}

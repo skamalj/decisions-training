@@ -1,0 +1,133 @@
+{
+ "id": "F430-0019",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S331",
+   "assets": [
+    {
+     "id": "T2",
+     "param": "oil_temp",
+     "unit": "C",
+     "normal_band": [
+      40,
+      85
+     ],
+     "alarm_limit": 95,
+     "trip_limit": 105,
+     "customers_fed": 13681,
+     "partner_id": "T1"
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-07-21",
+   "scheduled_assets": [
+    "T2",
+    "CB4",
+    "CB5"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T2",
+    "value": 99,
+    "unit": "C"
+   }
+  ],
+  "defects": [],
+  "history": {
+   "previous_round": {
+    "T2": 91
+   },
+   "permits": [
+    {
+     "asset_id": "T1",
+     "end": "2024-07-10"
+    }
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "T1": "outage"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": false,
+  "defect_claim": "none_logged",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 13681,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": false,
+  "defect_claim": "none_logged",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 13681,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "follow_up": {
+   "clarity": "leaning",
+   "target": "recheck_next_round",
+   "second": null,
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "defect_corroborated": "Defects list is empty, so no logged defect exists to corroborate; the 99 C reading is abnormal but this is unclear.",
+  "benign_explanation": "Permit is for T1 and ended 2024-07-10, before the round date; it may still be linked.",
+  "follow_up": "Worsening alarm with partner out; recheck flagged though missed assets could prompt return.",
+  "limit_deviation": "99 C is beyond the 95 alarm, 6 below the 105 trip; level 2 is clear but level 3 is arguable.",
+  "supply_exposure": "13681 customers with partner on outage; level 3 vs 4 depends on counting."
+ },
+ "request": "rec-F430-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006034
+}

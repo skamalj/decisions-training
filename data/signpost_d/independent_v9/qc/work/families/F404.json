@@ -1,0 +1,294 @@
+{
+ "id": "F404",
+ "domain": "nursery staffing ratio checks",
+ "role": "Ratio compliance auditor in a nursery group's central quality team, reviewing one room-day staffing record at a time",
+ "setting": "A group of day nurseries sends each room's daily records to a central quality team. These cover bookings, child sign-in counts per 15-minute slot, the planned staff rota, actual staff sign-in and sign-out times, floater cover entries and recent audit history. The auditor rebuilds the eligible staff count for each slot and compares it with the room's ratio rule. They decide whether the room met ratio, what caused any gap, how long and how serious the gap was, and what to do with the record.",
+ "questions": {
+  "below_ratio": {
+   "type": "noul",
+   "instructions": "The room ran below its required staff ratio during the session.",
+   "criteria": {
+    "true": "An uncovered slot had fewer eligible staff than required.",
+    "false": "Every slot met ratio once logged cover is counted."
+   }
+  },
+  "disposition": {
+   "type": "choice",
+   "instructions": "What should the auditor do with this room-day record?",
+   "criteria": {
+    "file_no_action": "Ratio met in every slot; nothing further is needed.",
+    "hold_confirm": "Outcome depends on one missing confirmation, such as unsigned cover.",
+    "corrective_plan": "Confirmed breach below notifiable threshold; room manager agrees an action plan.",
+    "escalate_notify": "Breach is critical or exceeds sixty minutes; refer to safeguarding lead."
+   }
+  },
+  "primary_cause": {
+   "type": "choice",
+   "instructions": "Which single cause best explains the record's ratio position?",
+   "criteria": {
+    "none_found": "Sections agree and every slot met the required ratio.",
+    "paperwork_only": "Sections disagree, yet recomputed cover met ratio in every slot.",
+    "staff_shortfall": "Ratio missed and eligible staff on duty fell below rota.",
+    "child_overrun": "Ratio missed with staff at rota but children above bookings."
+   }
+  },
+  "shortfall_duration": {
+   "type": "score",
+   "instructions": "How long did the room run below its required ratio?",
+   "criteria": [
+    "Never below ratio in any logged slot",
+    "Below ratio for fifteen minutes or less in total",
+    "Below ratio for sixteen to sixty minutes in total",
+    "Below ratio for more than sixty minutes in total"
+   ]
+  },
+  "breach_severity": {
+   "type": "score",
+   "instructions": "How many children were left beyond eligible staff cover at worst?",
+   "criteria": [
+    "None: no child beyond cover in any slot",
+    "Minor: one child beyond cover at worst slot",
+    "Significant: two or three children beyond cover",
+    "Critical: four or more beyond cover, or none covered"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "age_band",
+   "description": "Age band of the room, which sets the ratio rule: under_2 is 1:3, two_year is 1:4, three_plus is 1:8 (1:13 when a level 6 practitioner is on duty).",
+   "kind": "categorical",
+   "values": [
+    "under_2",
+    "two_year",
+    "three_plus"
+   ],
+   "weights": [
+    0.3,
+    0.35,
+    0.35
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "children_peak",
+   "description": "Highest number of children signed in during any single slot.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 4,
+   "max": 26,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "staff_signin_variance",
+   "description": "How actual staff sign-in and sign-out times differ from the rota: none, trivial (id format or a few minutes), late_arrival, early_departure, or an absent staff member with no sign-in.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "trivial",
+    "late_arrival",
+    "early_departure",
+    "absent"
+   ],
+   "weights": [
+    0.3,
+    0.2,
+    0.18,
+    0.17,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "attendance_overrun",
+   "description": "Number of children signed in above bookings at the peak slot, for example from extra sessions not added to bookings.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "shortfall_minutes",
+   "description": "Underlying minutes during which eligible signed-in staff were below the requirement before any cover is counted. Zero where no gap arises.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 120,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "floater_cover_logged",
+   "description": "A floating practitioner is logged in the cover log as present in the room across the gap window. This mitigates the alarming sign-in gap and appears about equally often with and without one.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "cover_log_unsigned",
+   "description": "The floater cover entry has no countersignature from the room lead, so the mitigation needs one confirmation before it can be relied on.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S4",
+    "S3"
+   ]
+  },
+  {
+   "name": "ineligible_counted",
+   "description": "The rota counts someone who cannot count toward ratio: a student under 17, a staff member whose suitability check is pending, or a level 2 practitioner filling a level 3 requirement shown in the staff register.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.35,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "qualified_teacher_mismatch",
+   "description": "For three_plus rooms, the rota claims a level 6 practitioner on duty (allowing 1:13) but staff sign-in shows them absent or out for part of the day. Values: none, partial_day, absent.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "partial_day",
+    "absent"
+   ],
+   "weights": [
+    0.7,
+    0.18,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "zero_eligible_adult_slot",
+   "description": "Aggravating fact: in at least one slot with four or more children present, no adult eligible to count was signed in, for example only a student or an unchecked staff member. Whenever present this alone sets breach_severity to Critical.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S7",
+    "S1"
+   ]
+  },
+  {
+   "name": "boundary_case",
+   "description": "The gap total lands exactly on 15 or 60 minutes, or the cover log window only partly overlaps the gap, leaving judges split between neighbouring answers.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S6",
+    "S4"
+   ]
+  },
+  {
+   "name": "prior_breaches_90d",
+   "description": "Count of breaches recorded for this room in the last 90 days. Shown as context and decoy; it does not change the ratio arithmetic.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "session",
+   "description": "Room id, date, age_band, ratio_rule string, registered_places, opening and closing times."
+  },
+  {
+   "name": "children",
+   "description": "Bookings count and a list of 15-minute slots with children signed in."
+  },
+  {
+   "name": "rota",
+   "description": "Planned staff list: staff_id, role, qual_level, counts_in_ratio flag, planned start and end."
+  },
+  {
+   "name": "staff_signin",
+   "description": "Actual staff records: staff_id, time_in, time_out, check_status, qual_level from the register."
+  },
+  {
+   "name": "cover_log",
+   "description": "Floater entries: staff_id, from, to, room_id, countersigned_by (null if unsigned)."
+  },
+  {
+   "name": "history",
+   "description": "prior_breaches_90d, last_audit_date and last_audit_outcome for the room."
+  }
+ ],
+ "rendering_notes": "The record never states a breach, minutes below ratio, children beyond cover, cause or required action. The auditor must work out the required staff for each slot from session.ratio_rule and children.slots[].signed_in, then compare it with eligible staff present according to staff_signin (not the rota). age_band appears as session.age_band and session.ratio_rule. For three_plus rooms the rule reads \"1:8; 1:13 with L6 on duty\". children_peak is the largest signed_in value in the slots. attendance_overrun shows as signed_in exceeding children.booked in the peak slots. staff_signin_variance shows through time_in/time_out against rota planned times: absent staff have no staff_signin entry, and trivial variance is a staff_id format difference (e.g. \"S-041\" against \"S041\") or a gap of 1 to 5 minutes. shortfall_minutes is implicit in the slots where eligible staff fall short, and the gap window is built from staff_signin times. floater_cover_logged adds a cover_log entry whose from/to spans the gap window and whose room_id matches the session. When absent, cover_log is an empty list or holds an entry for a different room as a decoy. cover_log_unsigned sets countersigned_by to null. ineligible_counted shows as rota counts_in_ratio true while staff_signin shows check_status \"pending\", an age under 17, or a qual_level lower than the rota claims. qualified_teacher_mismatch shows as the rota listing qual_level 6 while staff_signin is missing or has a midday time_out. zero_eligible_adult_slot shows as a slot with four or more children where only ineligible staff are signed in. boundary_case places gap totals at exactly 15 or 60 minutes, or makes cover from/to overlap only part of the gap. Decoys include registered_places (always at or above the peak and irrelevant to ratio), history.last_audit_outcome \"satisfactory\" alongside a current breach, prior_breaches_90d, and trivial id or time differences that do not change any count. Mismatches are never flagged by any field. Some records reconcile completely.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": null,
+ "aggravating_factor": "zero_eligible_adult_slot",
+ "design_cost": 0.174084
+}

@@ -1,0 +1,144 @@
+{
+ "id": "F409-0018",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "submitted_on": "2024-06-10",
+   "app_type": "renewal",
+   "message": "Can I also buy visitor vouchers?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-01-12",
+     "address_line": "27 Park Lane",
+     "verified": true
+    }
+   ],
+   "note": "Bill scanned, legible."
+  },
+  "vehicle": {
+   "plate": "BD19 WNT",
+   "keeper_name": "same as applicant",
+   "supporting_letters": []
+  },
+  "request": {
+   "zone_code": "C2",
+   "address": "27 Park Lane",
+   "plate_entered": "BD19 WNT",
+   "duration_months": 12
+  },
+  "account_history": {
+   "live_permits": [
+    "C2-0441",
+    "C2-0577"
+   ],
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "past_permits": [
+    {
+     "permit_no": "C2-0310",
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "pcns": [
+    {
+     "issued_on": "2024-02-02",
+     "contravention_code": "01",
+     "status": "open"
+    },
+    {
+     "issued_on": "2024-03-09",
+     "contravention_code": "01",
+     "status": "open"
+    },
+    {
+     "issued_on": "2024-04-17",
+     "contravention_code": "12",
+     "status": "open"
+    }
+   ],
+   "exceptions": [],
+   "officer_note": "Letter sent in March."
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 150,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 150,
+  "docs_missing": 2,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "balanced",
+   "target": "household_cap",
+   "second": "no_issue",
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 99,
+ "deciding": {
+  "residency_shown": "The only residence bill was issued 2024-01-12, 150 days before submission, so it is stale and does not show residence even though the address is exact.",
+  "disposition": "Proof of residence is stale and nothing was issued; the cloned-permit history reinforces holding.",
+  "main_issue": "Two live permits equal max_per_household 2 on a renewal with no exception, which could be the cap issue; a reviewer could also see no ordinary failing check.",
+  "misuse_strength": "The past permit C2-0310 is seized with 'cloned copy found on different vehicle'; the three open PCNs add to it.",
+  "document_gaps": "The one bill is verified true but 150 days old; it counts as unverified under the 90-day rule, or as received and verified, so 0 or 1."
+ },
+ "request": "rec-F409-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008687
+}

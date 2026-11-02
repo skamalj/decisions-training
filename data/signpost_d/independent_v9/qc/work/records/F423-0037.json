@@ -1,0 +1,106 @@
+{
+ "id": "F423-0037",
+ "family": "F423",
+ "state": {
+  "job": {
+   "run_qty": 50000,
+   "overs_pct": 3.05,
+   "spec_max_de": 3.0,
+   "stock_spec": "UC80"
+  },
+  "proof_signoff": {
+   "signed_at": null,
+   "ok_sheet_no": 3
+  },
+  "colour_readings": null,
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.12,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "UC80",
+   "sheets_production": 1336
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "section_null",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 1336,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 3.05,
+  "register_offset_mm": 0.12,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 112,
+  "customer_tier": "standard",
+  "prior_stoppages": 2
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "section_null",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 1336,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 3.05,
+  "register_offset_mm": 0.33,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 112,
+  "customer_tier": "standard",
+  "prior_stoppages": 2
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "run_before_signoff": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "adjust_and_recheck",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "colour_in_tolerance": "colour_readings is null, so there are no measured patches. Tolerance is unsupported, but nothing shows an actual over-limit value.",
+  "run_before_signoff": "signed_at is null while sheets_production is 1336. That is production with no signature, though the sheets may be treated as make-ready-like.",
+  "next_step": "The missing colour readings mean the sheet must be re-pulled and measured, so adjust_and_recheck.",
+  "staff_effort": "Re-pulling and measuring a sheet is quick, but chasing a signature may take an hour or more. This sits on the 0/1 boundary.",
+  "scrap_exposure": "No failure is shown (the register offset of 0.12 is under 0.15 mm), but colour is unmeasured. 1336 sheets against an overs allowance of about 1525 leave suspect sheets uncertain, level 0 or 1."
+ },
+ "request": "rec-F423-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008885
+}

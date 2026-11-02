@@ -1,0 +1,176 @@
+{
+ "id": "F405-0047",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C-2201",
+   "detected_on": "2025-09-22",
+   "term_start": "2025-09-22",
+   "room": "LT2"
+  },
+  "booking_a": {
+   "module": "LAW101",
+   "dept": "LAW",
+   "day": "Mon",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    3,
+    5
+   ],
+   "headcount": 95,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "room": "Lecture Theatre 2",
+   "external_hire": true,
+   "day": "Mon",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    2,
+    4,
+    6
+   ],
+   "headcount": 151,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-09-24",
+   "approver": "ext.bookings"
+  },
+  "room": {
+   "code": "LT2",
+   "aliases": [
+    "Lecture Theatre 2"
+   ],
+   "capacity": 160,
+   "features": [
+    "lecture_capture"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "LT5",
+    "capacity": 120,
+    "features": [
+     "lecture_capture"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "change_request",
+    "state": "open",
+    "target_weeks": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-06-03"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-07-08"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-08-01"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": true,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.26,
+  "required_feature": "lecture_capture",
+  "owning_departments": "external_hire",
+  "prior_clash_count": 3
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": true,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 69,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.26,
+  "required_feature": "lecture_capture",
+  "owning_departments": "external_hire",
+  "prior_clash_count": 3
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "relocate",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 65,
+ "deciding": {
+  "genuine_clash": "Alias matches the same room, but weeks are disjoint ([1,3,5] vs [2,4,6]); an open change request targets weeks [1,2,3], which would create overlap.",
+  "alt_room_fits": "LT5 capacity 120 fits booking A (95) but not external booking B (151), the displaced hire; both are covered, so no listed room fits the displaced booking.",
+  "resolution": "Both bookings confirmed and LT5 is listed free with lecture_capture for every week, so relocate.",
+  "urgency": "Term starts on the detection date and the pending request targets week 1; occurrence is today, though a reader could call it day 1.",
+  "parties_needed": "Moving one booking to LT5 is a single officer's act, but the external hire contact and the open request could add a second party."
+ },
+ "request": "rec-F405-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011686
+}

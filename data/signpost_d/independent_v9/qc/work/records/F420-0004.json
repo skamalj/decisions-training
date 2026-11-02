@@ -1,0 +1,152 @@
+{
+ "id": "F420-0004",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "AKH55012",
+   "flight": "SQ0077",
+   "contour_max_cm": 158,
+   "tare_kg": 100,
+   "planned_gross_kg": 1100,
+   "straps_required": 4
+  },
+  "manifest_lines": [
+   {
+    "awb": "618-30771120",
+    "pcs": 10,
+    "weight_kg": 600,
+    "un_no": "UN3481",
+    "dg_class": "9"
+   },
+   {
+    "awb": "618-30771131",
+    "pcs": 7,
+    "weight_kg": 250
+   },
+   {
+    "awb": "618-30771142",
+    "pcs": 3,
+    "weight_kg": 150,
+    "un_no": "UN1950",
+    "dg_class": "2.2"
+   }
+  ],
+  "build_measured": {
+   "scale_gross_kg": 1077,
+   "max_height_cm": 156,
+   "pcs_counted": {
+    "618-30771120": 7,
+    "618-30771131": 7,
+    "618-30771142": 3
+   },
+   "straps_fitted": 4,
+   "net_fitted": true,
+   "uld_serial_scanned": "AKH55012",
+   "built_utc": "2025-06-08T16:30:00Z"
+  },
+  "dg_notoc": [
+   {
+    "awb": "618-30771120",
+    "un_no": "UN3481",
+    "pcs": 7
+   },
+   {
+    "awb": "618-30771142",
+    "un_no": "UN1950",
+    "pcs": 3
+   }
+  ],
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "618-30771120",
+     "pcs_this_flight": 7
+    }
+   ]
+  },
+  "checks_log": {
+   "scale_cal_due": "2025-06-01",
+   "reweigh": null
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": -2.1,
+  "piece_count_gap": 3,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "within_2cm",
+  "contour_waiver": false,
+  "dg_state": "dg_compatible",
+  "notoc_match": "match",
+  "securing_state": "complete",
+  "scale_cal_overdue": true,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 303,
+  "prior_rebuilds": 1
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -7.84,
+  "piece_count_gap": 3,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "within_2cm",
+  "contour_waiver": false,
+  "dg_state": "dg_compatible",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 303,
+  "prior_rebuilds": 1
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "clear",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "weight_deviation": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 59,
+ "deciding": {
+  "pieces_reconciled": "618-30771120 manifests 10 pcs and 7 are counted; part_shipments shows pcs_this_flight 7 for the same AWB, which covers the gap.",
+  "disposition": "scale_cal_due 2025-06-01 is before built_utc 2025-06-08 and no reweigh is logged; this is the one outstanding confirmation, so the pallet is held.",
+  "worst_discrepancy": "The gap is covered, NOTOC pcs match the counts, the DG classes 9 and 2.2 are compatible, the height is within the limit and the straps are complete, so there is no unresolved disagreement.",
+  "weight_deviation": "Planned 1100 (100 + 1000) against scale 1077 is -2.1%, within 1% to 3%.",
+  "rework_extent": "No physical defect is recorded (counts covered, straps 4 of 4, height 156 of 158), so the reading rests on how far the overdue-scale weight could be wrong."
+ },
+ "request": "rec-F420-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012911
+}

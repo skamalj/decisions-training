@@ -1,0 +1,129 @@
+{
+ "id": "F420-0046",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PMC11042",
+   "tare_kg": 100,
+   "planned_gross_kg": 1600,
+   "straps_required": 4,
+   "contour_max_cm": 160
+  },
+  "manifest_lines": [
+   {
+    "awb": "176-50012345",
+    "pcs": 8,
+    "weight_kg": 1000,
+    "un_no": null
+   },
+   {
+    "awb": "176-50012356",
+    "pcs": 4,
+    "weight_kg": 500,
+    "shc": [
+     "DGR"
+    ],
+    "un_no": "UN3481",
+    "dg_class": "9"
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2025-06-03T10:10:00Z",
+   "scale_gross_kg": 1648,
+   "max_height_cm": 148,
+   "pcs_counted": {
+    "176-50012345": 8,
+    "176-50012356": 4
+   },
+   "straps_fitted": 4,
+   "net_fitted": true
+  },
+  "dg_notoc": [
+   {
+    "awb": "176-50012356",
+    "un_no": "UN3481",
+    "dg_class": "9",
+    "pcs": 4
+   }
+  ],
+  "checks_log": {
+   "scale_cal_due": "2025-09-01"
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 3.0,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "dg_compatible",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 29,
+  "prior_rebuilds": 0
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 5.46,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "dg_compatible",
+  "notoc_match": "line_missing",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 29,
+  "prior_rebuilds": 0
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "balanced",
+   "target": "paperwork_only",
+   "second": "physical_build",
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "pieces_reconciled": "pcs_counted equals manifest pcs on both AWBs (8 and 4); no shortfall or extra.",
+  "disposition": "Straps 4 of 4, net fitted, height 148 under 160, NOTOC matches, calibration not due; nothing outstanding.",
+  "worst_discrepancy": "No ID or document disagreement; only the weight sits exactly at the 3% edge (1648 vs planned 1600).",
+  "weight_deviation": "Scale gross 1648 vs planned 1600 is exactly 3.0%, on the boundary between levels 1 and 2.",
+  "rework_extent": "Securing complete and height within limit; only the 3.0% weight edge could suggest rework."
+ },
+ "request": "rec-F420-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012543
+}

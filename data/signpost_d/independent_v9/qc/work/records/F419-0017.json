@@ -1,0 +1,186 @@
+{
+ "id": "F419-0017",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "16/34",
+   "date": "2024-06-05",
+   "speed_kmh": 65,
+   "thr": {
+    "design": 0.72,
+    "plan": 0.52,
+    "min": 0.42
+   },
+   "thr_95": {
+    "design": 0.66,
+    "plan": 0.47,
+    "min": 0.34
+   },
+   "weather": {
+    "precip_mm": 0,
+    "wind_kt": 8,
+    "air_c": 17
+   }
+  },
+  "device": {
+   "serial": "CFME-4471",
+   "cal_cert_date": "2024-06-20",
+   "cal_expiry": "2025-06-20",
+   "tyre_kpa": null,
+   "tyre_spec_kpa": [
+    135,
+    165
+   ],
+   "water_mm": 0.5
+  },
+  "runs": [
+   {
+    "dir": "16",
+    "mean_speed": 65,
+    "thirds": [
+     0.37,
+     0.6,
+     0.66
+    ],
+    "seg": [
+     0.33,
+     0.4,
+     0.38
+    ]
+   },
+   {
+    "dir": "34",
+    "mean_speed": 64,
+    "thirds": [
+     0.66,
+     0.62,
+     0.39
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.9,
+    0.95,
+    0.92
+   ],
+   "mtd_thr_mm": 0.6,
+   "contaminant": "dry"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-09-10",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start": "2024-06-14"
+    },
+    {
+     "type": "taxiway_resurface",
+     "start": "2024-07-01"
+    }
+   ],
+   "cross_checks": [
+    {
+     "serial": "CFME-2203",
+     "d": "2024-06-05",
+     "thirds": [
+      0.38,
+      0.61,
+      0.67
+     ]
+    }
+   ],
+   "prior_surveys": [
+    {
+     "d": "2023-12-01",
+     "lowest_third": 0.5
+    },
+    {
+     "d": "2024-03-02",
+     "lowest_third": 0.44
+    }
+   ]
+  },
+  "review": {
+   "signed_at": null
+  }
+ },
+ "factors": {
+  "min_third_band": "below_minimum",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 269,
+  "removal_scheduled": true,
+  "calibration_status": "post_dated",
+  "missing_elements_count": 2,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "declining"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_minimum",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 148,
+  "removal_scheduled": true,
+  "calibration_status": "post_dated",
+  "missing_elements_count": 1,
+  "test_condition_anomaly": "natural_rain",
+  "macrotexture_band": "marginal",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "declining"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "restrict_ops",
+   "second": "file_routine",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "rubber_deposits",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 144,
+ "deciding": {
+  "genuine_deficit": "Touchdown thirds of 0.37 and 0.39 are below the 0.42 minimum and a second device's cross-check agrees; the post-dated calibration certificate leaves some doubt.",
+  "next_step": "Thirds below minimum point to restricting operations. The post-dated cal certificate (2024-06-20 against survey 2024-06-05) and null tyre pressure leave a defensible validity argument for not acting on the data, which keeps this balanced.",
+  "deficit_driver": "The low values are only in the touchdown thirds of each direction, mtd 0.9 to 0.95 is well above the 0.6 threshold, rubber was last removed 269 days ago, the cross-check agrees and there is no test anomaly, so rubber deposits.",
+  "friction_severity": "Third averages of 0.37 and 0.39 and segments of 0.33 are below the 0.42 minimum, so level 3; the cal doubt keeps it from clear.",
+  "evidence_completeness": "Tyre pressure and signed_at are null and the calibration is post-dated, which makes three problems (level 1); the unverified calibration and the 0.5 water depth could stretch the count to four (level 0)."
+ },
+ "request": "rec-F419-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012637
+}

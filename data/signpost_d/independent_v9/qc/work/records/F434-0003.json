@@ -1,0 +1,171 @@
+{
+ "id": "F434-0003",
+ "family": "F434",
+ "state": {
+  "event": {
+   "event_id": "TDV-26",
+   "stage_no": 3,
+   "date": "2025-06-14",
+   "closure_start": "09:30",
+   "closure_end": "14:00",
+   "riders_started": 96
+  },
+  "post": {
+   "post_id": "P17",
+   "km_marker": 72,
+   "post_type": "descent",
+   "marshals_rostered": 2,
+   "marshals_signed_in": 2,
+   "on_post_from": "09:40",
+   "off_post_at": "12:50",
+   "relief": []
+  },
+  "incidents": [
+   {
+    "inc_ref": "I1",
+    "time": "11:20",
+    "km": 72,
+    "type": "mechanical",
+    "bibs": [
+     31
+    ],
+    "medic_called": false,
+    "rider_status": "continued",
+    "escort_present": false
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:00",
+     "ok": true
+    },
+    {
+     "time": "11:00",
+     "ok": true
+    },
+    {
+     "time": "12:00",
+     "ok": true
+    }
+   ],
+   "backup_phone": [],
+   "escalations": []
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C1",
+     "time": "11:21",
+     "km": 72,
+     "type": "mechanical",
+     "bibs": [
+      31
+     ]
+    },
+    {
+     "ctl_ref": "C2",
+     "time": "12:07",
+     "km": 72,
+     "type": "animal_on_course",
+     "bibs": []
+    }
+   ],
+   "medical_handovers": [
+    {
+     "ref": "H4",
+     "bib": 64,
+     "km": 72,
+     "destination": "Valmont Hospital"
+    }
+   ],
+   "abandonments": [
+    64
+   ],
+   "road_reopened_at": {
+    "60-80": "13:10"
+   }
+  },
+  "sweep": {
+   "passed_at": "12:55",
+   "last_rider_bib": 96,
+   "post_cleared_at": "12:56"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "left_before_sweep",
+  "relief_swap_logged": false,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 8.42,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "left_before_sweep",
+  "relief_swap_logged": false,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 8.42,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "hold_confirm",
+   "second": "query_marshal",
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "leaning",
+   "target": "course_intrusion",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "consequence_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 200,
+ "deciding": {
+  "coverage_held": "off_post_at 12:50 is five minutes before sweep passed_at 12:55 with no relief; small gap, near the boundary, so balanced.",
+  "next_step": "Control logs an animal on course at 12:07 absent from the post list (query_marshal), while the hospital handover for bib 64 needs matching to the post (hold_confirm).",
+  "incident_class": "Control logs an animal on course at km 72, though the post lists only a mechanical stop; the intrusion is only in the control record, so leaning course_intrusion.",
+  "reversal_time": "Abandonment of bib 64 with a hospital handover places recovery at eight days to three months, level 2.",
+  "consequence_severity": "Hospital handover for bib 64 at km 72 suggests level 3, but the record does not tie it to the animal incident, leaving level 2 plausible."
+ },
+ "request": "rec-F434-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006875
+}

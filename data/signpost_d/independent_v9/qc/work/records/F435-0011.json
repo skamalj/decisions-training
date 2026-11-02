@@ -1,0 +1,142 @@
+{
+ "id": "F435-0011",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E-2041",
+   "zone_id": "FL-A",
+   "doors_open": "2025-03-08T18:00",
+   "phase": "live"
+  },
+  "licence": {
+   "base_limit": 1000,
+   "variation": null,
+   "stewards_required": 20,
+   "exit_routes": [
+    "X1",
+    "X2",
+    "X3"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 1000,
+   "issued": 970,
+   "scanned_in": 951
+  },
+  "ingress": {
+   "device_status": "ok",
+   "raw_peak": 940,
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 22,
+   "signed_in": 20
+  },
+  "exit_checks": [
+   {
+    "route_id": "X1",
+    "checked_at": "2025-03-08T16:40",
+    "status": "clear"
+   },
+   {
+    "route_id": "X2",
+    "checked_at": "2025-03-08T16:45",
+    "status": "clear"
+   },
+   {
+    "route_id": "X3",
+    "checked_at": "2025-03-08T16:50",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "live",
+  "occupancy_ratio": 0.94,
+  "counter_status": "ok",
+  "counter_inflation": 0.0,
+  "manual_recount_present": false,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.97,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.0,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "live",
+  "occupancy_ratio": 0.94,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.07,
+  "manual_recount_present": false,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 1.01,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.16,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "unconfirmed_exits": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 51,
+ "deciding": {
+  "verified_exceedance": "Device ok, raw_peak 940 is below base_limit 1000 with no variation, so no verified exceedance.",
+  "disposition": "Counts, staffing (20 of 20) and all three exits clear before doors reconcile; nothing to follow up.",
+  "discrepancy_source": "Issued 970 and peak 940 both stay under the limit of 1000 used by ticketing.",
+  "steward_shortfall": "signed_in 20 equals stewards_required 20; rostered 22 is a decoy.",
+  "unconfirmed_exits": "X1-X3 all show clear checks at 16:40-16:50, before the 18:00 doors."
+ },
+ "request": "rec-F435-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012699
+}

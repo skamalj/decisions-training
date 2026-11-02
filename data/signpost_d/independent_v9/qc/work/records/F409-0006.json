@@ -1,0 +1,158 @@
+{
+ "id": "F409-0006",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A7731",
+   "full_name": "Imran Hale",
+   "submitted_on": "2024-05-14",
+   "app_type": "new",
+   "message": "Car is used for work, employer letter attached."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-04-10",
+     "address_line": "Flat 3, 14 Mill Lane",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2021-02-01",
+     "address_line": "Flat 3, 14 Mill Lane",
+     "verified": true
+    }
+   ],
+   "note": "ID scan low resolution but legible."
+  },
+  "vehicle": {
+   "plate": "KD19 XRT",
+   "keeper_name": "Imran Hale",
+   "supporting_letters": [
+    {
+     "type": "employer_letter",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "Z4",
+   "address": "3/14 Mill Lane",
+   "plate_entered": "KD19 XRT",
+   "duration_months": 12,
+   "fee_band": "B"
+  },
+  "account_history": {
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "live_permits": [
+    "P220",
+    "P318"
+   ],
+   "past_permits": [
+    {
+     "permit_no": "P101",
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "cancelled",
+     "reason": "signage fault"
+    },
+    {
+     "status": "cancelled",
+     "reason": "signage fault"
+    },
+    {
+     "status": "cancelled",
+     "reason": "permit valid"
+    }
+   ],
+   "exceptions": []
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "format_only",
+  "proof_age_days": 34,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "format_only",
+  "proof_age_days": 146,
+  "docs_missing": 2,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 3,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "hold",
+   "second": "approve",
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "balanced",
+   "target": "no_issue",
+   "second": "household_cap",
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 131,
+ "deciding": {
+  "residency_shown": "Council tax bill verified true, issued 34 days before submission, address matches request apart from Flat 3 versus 3/ format.",
+  "disposition": "Cloned prior permit and household already at cap of 2 argue for hold; documents and keeper are otherwise in order, so approval is also defensible.",
+  "main_issue": "Two live permits equal max_per_household 2 on a new application, which could count as household_cap, but all other checks pass and no exception is needed to rule it out.",
+  "misuse_strength": "Past permit P101 status seized with reason 'cloned copy found on different vehicle'.",
+  "document_gaps": "Both documents verified true; only the low-resolution ID scan note leaves slight doubt between 0 and 1."
+ },
+ "request": "rec-F409-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014286
+}

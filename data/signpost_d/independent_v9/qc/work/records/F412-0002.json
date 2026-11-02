@@ -1,0 +1,146 @@
+{
+ "id": "F412-0002",
+ "family": "F412",
+ "state": {
+  "premises": {
+   "ref": "P-2081",
+   "name": "Lark Bakery"
+  },
+  "inspection": {
+   "contraventions": [
+    {
+     "ref": "C2",
+     "area": "FAB",
+     "due_date": "2025-01-10"
+    },
+    {
+     "ref": "C3",
+     "area": "REC",
+     "due_date": "2025-01-10"
+    }
+   ]
+  },
+  "revisit": {
+   "date": "2025-02-22",
+   "items": [
+    {
+     "ref": "C2",
+     "status": "not_checked"
+    },
+    {
+     "ref": "C3",
+     "status": "remedied"
+    }
+   ]
+  },
+  "correspondence": {
+   "extensions": [
+    {
+     "ref": "C2",
+     "agreed": null,
+     "note": "agreed by phone",
+     "new_due_date": "2025-01-31"
+    }
+   ],
+   "evidence": [
+    {
+     "ref": "c2",
+     "type": "engineer job sheet",
+     "verified": null
+    }
+   ]
+  },
+  "history": {
+   "enforcement": [],
+   "complaints": [
+    {
+     "summary": "Noise from deliveries.",
+     "outcome": "none"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "contravention_count": 2,
+  "resolution_share": "most_resolved",
+  "worst_open_area": "premises_fabric",
+  "food_handling_open_count": 0,
+  "cross_section_mismatch": "trivial_format",
+  "days_past_original_due": 43,
+  "extension_agreed": false,
+  "benign_explanation": true,
+  "operator_evidence": "submitted_unverified",
+  "adverse_sample": false,
+  "complaint_since_inspection": "unrelated",
+  "prior_enforcement_count": 0,
+  "boundary_case": true,
+  "reassuring_note_decoy": false
+ },
+ "factors_sampled": {
+  "contravention_count": 6,
+  "resolution_share": "all_resolved",
+  "worst_open_area": "food_handling",
+  "food_handling_open_count": 1,
+  "cross_section_mismatch": "trivial_format",
+  "days_past_original_due": 17,
+  "extension_agreed": false,
+  "benign_explanation": true,
+  "operator_evidence": "submitted_unverified",
+  "adverse_sample": false,
+  "complaint_since_inspection": "unrelated",
+  "prior_enforcement_count": 4,
+  "boundary_case": true,
+  "reassuring_note_decoy": false
+ },
+ "plan": {
+  "all_remedied": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "worst_hazard": {
+   "clarity": "clear",
+   "target": "premises_fabric",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "overdue_extent": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "residual_risk": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "all_remedied": "C2 was not_checked at revisit and its job sheet has verified null.",
+  "next_step": "One specific item is missing: verification of the C2 engineer job sheet.",
+  "worst_hazard": "The open item C2 has area FAB.",
+  "overdue_extent": "43 days past the original due date, but only 22 days past the phone-agreed date, which has agreed null.",
+  "residual_risk": "Only a FAB item is unverified; job sheet suggests the work was done, so 0 or 1 are both defensible."
+ },
+ "request": "rec-F412-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012414
+}

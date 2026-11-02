@@ -1,0 +1,150 @@
+{
+ "id": "F409-0034",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A-9015",
+   "full_name": "T. Lindqvist",
+   "submitted_on": "2024-07-20",
+   "app_type": "change_of_address",
+   "message": "Can I pay the fee by instalments?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2024-04-23",
+     "address_line": "3/5 Oak Avenue",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2020-02-11",
+     "address_line": "3/5 Oak Avenue",
+     "verified": null
+    }
+   ],
+   "note": "Tenancy agreement not received; ID scan queued for recheck."
+  },
+  "vehicle": {
+   "plate": "WX70 RTY",
+   "keeper_name": "T. Lindqvist",
+   "supporting_letters": []
+  },
+  "request": {
+   "zone_code": "D3",
+   "address": "Flat 3, 5 Oak Avenue",
+   "plate_entered": "WX70 RTY",
+   "duration_months": 6,
+   "fee_band": "low_emission"
+  },
+  "account_history": {
+   "live_permits": [
+    {
+     "permit_no": "P-7788"
+    }
+   ],
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "past_permits": [
+    {
+     "permit_no": "P-6402",
+     "status": "surrendered",
+     "seize_reason": null
+    }
+   ],
+   "pcns": [
+    {
+     "status": "paid"
+    },
+    {
+     "status": "paid"
+    },
+    {
+     "status": "open"
+    }
+   ],
+   "exceptions": [],
+   "officer_note": "Called applicant re payment, no answer."
+  }
+ },
+ "factors": {
+  "application_type": "change_of_address",
+  "address_match_level": "format_only",
+  "proof_age_days": 88,
+  "docs_missing": 2,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "change_of_address",
+  "address_match_level": "format_only",
+  "proof_age_days": 196,
+  "docs_missing": 3,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 3,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": true,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "approve_temporary",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "residence_proof",
+   "second": null,
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "residency_shown": "A verified utility bill matches the address in format only ('3/5 Oak Avenue' vs 'Flat 3, 5 Oak Avenue'), and is 88 days old, just inside the 90-day limit.",
+  "disposition": "Residency is evidenced by the verified bill, while the tenancy agreement and ID check are outstanding, so a time-limited permit fits.",
+  "main_issue": "The residence evidence is close to the age limit and the other documents are outstanding. The keeper matches and the household is under the cap.",
+  "misuse_strength": "There are 3 PCNs, two paid and one open. Literally three are uncancelled, but paid ones are weak misuse evidence. There is no other indicator.",
+  "document_gaps": "The tenancy agreement is absent and the ID card is unverified (verified null). That makes two, but the ID is queued for recheck, so a reader might count only one."
+ },
+ "request": "rec-F409-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011454
+}

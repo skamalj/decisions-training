@@ -1,0 +1,156 @@
+{
+ "id": "F422-0003",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-3090",
+   "site": "C-615",
+   "delivered_at": "2025-06-02T10:00",
+   "received_at": "2025-06-10T10:00",
+   "review_date": "2025-07-08",
+   "reason": "DAMAGED_IN_TRANSIT",
+   "lines": [
+    {
+     "gtin": "G3",
+     "qty_claimed": 30
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "D-119",
+   "lines": [
+    {
+     "gtin": "G3",
+     "batch": "M05",
+     "expiry": "12/2027",
+     "qty_dispatched": 30
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G3",
+     "batch": "M05",
+     "expiry": "2027-12-31",
+     "qty_counted": 30,
+     "packs_damaged": 30,
+     "seals_intact": 0
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "active"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": "L2",
+   "logger_start": "2025-06-02T09:00",
+   "logger_end": "2025-06-10T11:00",
+   "min_c": 17.2,
+   "max_c": 24.1,
+   "minutes_out_of_range": 0,
+   "stability_ref": null
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-04-30",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "location": "Q2",
+   "hold_limit_days": 20,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-07-08"
+   },
+   "max_days_out_of_control": 10,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 0,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "expiry_format_only",
+  "count_discrepancy_packs": 0,
+  "damaged_pack_fraction": 1.0,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 8,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 0,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 29
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 386,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "expiry_format_only",
+  "count_discrepancy_packs": 0,
+  "damaged_pack_fraction": 0.02,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 8,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 27,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 29
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "reject_destroy",
+   "second": "escalate_qp",
+   "targets": [
+    "T1"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "storage_maintained": "Logger covers delivery to receipt with min 17.2 and max 24.1 inside 15-25C and 0 minutes out; the lapsed audit and missing declaration are the only doubt.",
+  "batch_traceable": "Batch M05 is identical on both sides and expiry differs only in format (12/2027 versus 2027-12-31), so it is plainly traceable.",
+  "next_step": "All 30 packs are damaged with 0 seals intact, so destruction is the lead. The all-broken seals could also justify QP referral for tamper suspicion, and the 2-way split comes from that. Storage and batch are otherwise clean.",
+  "resaleable_share": "packs_damaged 30 of 30 with seals_intact 0, so no pack is fit (level 0). The one doubt is that a sceptical reader might want a QP view first.",
+  "disposition_urgency": "The extension new_limit_date 2025-07-08 equals the review date, so the limit expires today. This sits between level 3 (0 days remain) and level 4 (already passed)."
+ },
+ "request": "rec-F422-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.017261
+}

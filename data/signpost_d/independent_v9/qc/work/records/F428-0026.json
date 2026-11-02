@@ -1,0 +1,158 @@
+{
+ "id": "F428-0026",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-0412",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 120,
+   "seal_type": "J_bulb",
+   "clear_width": 4.5,
+   "clear_width_unit": "m",
+   "consequence_class": "high"
+  },
+  "inspection": {
+   "insp_id": "I-8841",
+   "asset_id": "VL-0412",
+   "insp_date": "2025-03-10",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-03-10",
+    "closure_s": 108,
+    "leakage_l_min": 4,
+    "leakage_limit_l_min": 10,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D-17",
+    "component": "motor",
+    "grade": 3,
+    "status": "closed",
+    "first_seen": "2024-11-02"
+   },
+   {
+    "code": "D-21",
+    "component": "paint",
+    "grade": 1,
+    "status": "open",
+    "first_seen": "2024-06-15"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "WO-301",
+     "component": "motor",
+     "defect_code": "D-17",
+     "grade_raised": 3,
+     "status": "complete",
+     "completed": "2025-02-20",
+     "retest_insp_id": "I-8841"
+    }
+   ],
+   "last_service": "2025-01-15"
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "temp_barrier_deployed": false,
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2025-03-17",
+    "peak_level_mAOD": 2.1,
+    "sill_level_mAOD": 3.4
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.9,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "none (only open cosmetic paint defect)",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "passed_current",
+  "repair_progress": "completed_tested",
+  "mitigation_present": false,
+  "mitigation_kind": "none",
+  "days_to_forecast_peak": 7,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.45,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 1,
+  "mismatch_location": "asset_id",
+  "test_status": "failed",
+  "repair_progress": "completed_tested",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 7,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 121,
+ "deciding": {
+  "closure_test_valid": "Test dated on inspection day, closure 108 s against rated 120 s, leakage 4 against limit 10, result pass.",
+  "next_step": "Only an open grade 1 paint defect; the earlier motor repair is complete and retested. Nothing outstanding, so sign off, with minor doubt left by the high consequence class.",
+  "defect_class": "The only open defect is grade 1 cosmetic paint; the grade 3 motor defect is closed.",
+  "section_discrepancies": "Asset IDs match, the work order grade matches the defect grade, and the retest reference points to this inspection.",
+  "flood_risk": "Closes within rated time, no open defect above grade 1, in service, no alert, forecast peak below sill; slight doubt from the high consequence class."
+ },
+ "request": "rec-F428-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011002
+}

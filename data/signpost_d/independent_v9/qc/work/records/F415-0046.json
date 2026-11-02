@@ -1,0 +1,160 @@
+{
+ "id": "F415-0046",
+ "family": "F415",
+ "state": {
+  "site": {
+   "hours": "06:00-18:00",
+   "closures": [
+    {
+     "from": "2025-03-10T10:30",
+     "to": "2025-03-10T12:00",
+     "reason": "basin repair",
+     "approved_by": "OFF-22"
+    }
+   ]
+  },
+  "shift": {
+   "date": "2025-03-10",
+   "start": "06:00",
+   "end": "18:00",
+   "sched_slots": [
+    "06:00",
+    "08:30",
+    "11:00",
+    "13:30",
+    "15:30",
+    "17:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "06:00",
+    "status": "done",
+    "checklist": {
+     "bins": true,
+     "floor": true,
+     "basins": true
+    },
+    "photo_ref": "P101"
+   },
+   {
+    "slot": "08:30",
+    "status": "done",
+    "photo_ref": "P102"
+   },
+   {
+    "slot": "11:00",
+    "status": "done"
+   },
+   {
+    "slot": "13:30",
+    "status": "done"
+   },
+   {
+    "slot": "15:30",
+    "status": "not_recorded"
+   },
+   {
+    "slot": "17:00",
+    "status": "done",
+    "end": "2025-03-10T17:25"
+   }
+  ],
+  "faults": [
+   {
+    "type": "vandalised_basin",
+    "reported_at": "2025-03-10T09:00",
+    "remedied_at": "2025-03-10T14:29",
+    "source": "staff",
+    "remedy_note": "basin replaced 12:15"
+   }
+  ],
+  "sign_off": {
+   "signer": "S-7",
+   "signer_role": "supervisor",
+   "signed_at": "2025-03-10T17:40",
+   "comment": "ok"
+  },
+  "history": {
+   "prior_defaults_90d": 3
+  }
+ },
+ "factors": {
+  "scheduled_slots": 6,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "vandalised_basin",
+  "fault_open_minutes": 329.23,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 3
+ },
+ "factors_sampled": {
+  "scheduled_slots": 6,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "missing",
+  "fault_type": "vandalised_basin",
+  "fault_open_minutes": 329.23,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 3
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_noted",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 119,
+ "deciding": {
+  "missed_clean": "15:30 slot is not_recorded and the only closure (10:30-12:00) is elsewhere in the day.",
+  "sign_off_valid": "Supervisor signed 17:40, after the final visit ended 17:25.",
+  "next_step": "One unrecorded slot with otherwise full checklists and photos reads as a recording lapse rather than a confirmed failure; the remedy note contradiction adds doubt.",
+  "staff_effort": "Vandalised basin replacement, an unrecorded slot and a contradictory remedy note need extended follow-up; days of effort is plausible either way.",
+  "fault_exposure": "Fault 09:00-14:29 is 329 min, minus 90 min closure leaves about 239 min open to the public, right at the 240 boundary."
+ },
+ "request": "rec-F415-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009797
+}

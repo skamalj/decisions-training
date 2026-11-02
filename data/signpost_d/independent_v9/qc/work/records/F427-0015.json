@@ -1,0 +1,140 @@
+{
+ "id": "F427-0015",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V-6074",
+   "site_ref": "BB-18",
+   "visit_date": "2024-05-22",
+   "surveyor_grade": "senior"
+  },
+  "site_targets": {
+   "band_top_cm": 10,
+   "band_floor_cm": 30,
+   "dipwells_scheduled": 3,
+   "dams_total": 4
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 24,
+     "prev_depth_cm": 14
+    },
+    {
+     "depth_cm": 26,
+     "prev_depth_cm": 15
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 20,
+     "prev_depth_cm": 20
+    }
+   ],
+   "rain_30d_pct_normal": 93
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam": "D2",
+     "pool_level_cm": 37,
+     "design_pool_cm": 40,
+     "defect_code": "SEEP",
+     "remark": "Water passing round east end; pool slightly low."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": null,
+   "photos_uploaded": 0,
+   "photos_expected": 6
+  },
+  "notes": {
+   "prior_visits": []
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.66,
+  "photos_status": "none",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": 0.0,
+  "rainfall_pct_normal": 93.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.66,
+  "photos_status": "none",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -22.58,
+  "rainfall_pct_normal": 93.28,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 3,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "within_band",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 55,
+ "deciding": {
+  "dam_caused_drop": "Dipwells fell about 10 cm (14 to 24, 15 to 26) while the control is unchanged and rain is near normal, and D2 is passing water with its pool low.",
+  "next_step": "The only defect is a seep with the pool 3 cm low, there is no work order and no prior failure, so filing is leaning even though photos and quadrats are absent.",
+  "hydro_state": "The mean depth of 25 cm lies inside the 10 to 30 cm band.",
+  "dam_severity": "D2 is coded SEEP but the pool is 37 against a 40 cm design and the remark says water is passing round the end, which could be read as a minor side-cut.",
+  "evidence_completeness": "2 of 3 dipwells read and the inspection logged; photos are 0 of 6 and quadrats are null, so two elements."
+ },
+ "request": "rec-F427-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011059
+}

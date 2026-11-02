@@ -1,0 +1,155 @@
+{
+ "id": "F413-0001",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "care_home",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "zones": [
+    {
+     "id": "kitchen",
+     "toxic_bait_permitted": false,
+     "banned_products": [
+      "BRO-5"
+     ]
+    }
+   ]
+  },
+  "visit": {
+   "id": "V77",
+   "type": "routine",
+   "start": "2024-05-02T09:00",
+   "end": "2024-05-02T10:30",
+   "client_signoff": "2024-05-02",
+   "tech_licence_expiry": "2025-01-31"
+  },
+  "treatments": [
+   {
+    "product": "BRO-5",
+    "zone": "kitchen",
+    "area_m2": 40,
+    "qty_applied": 0.8,
+    "unit": "kg",
+    "label_max_per_m2": 15
+   }
+  ],
+  "monitoring": [
+   {
+    "station": "S1",
+    "zone": "kitchen",
+    "activity": true
+   },
+   {
+    "station": "S2",
+    "zone": "kitchen",
+    "activity": false
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdrawal",
+    "product": "BRO-5",
+    "qty": 1.0,
+    "unit": "kg"
+   },
+   {
+    "movement": "return",
+    "product": "BRO-5",
+    "qty": 0.1,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_visit": "V70",
+   "prev_active_stations": 1,
+   "actions": [
+    {
+     "status": "completed",
+     "date": "2024-05-02"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "moderate_5_to_25pct",
+  "stock_return_logged": true,
+  "station_count_gap": 2,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "stable",
+  "previous_visit_available": true,
+  "dose_overage_pct": 32.58,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "care_home"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "moderate_5_to_25pct",
+  "stock_return_logged": true,
+  "station_count_gap": 2,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "stable",
+  "previous_visit_available": true,
+  "dose_overage_pct": 32.58,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "care_home"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "usage_reconciled": "Net withdrawal 0.9 kg vs 0.8 kg applied; gap is about 11% but a return is logged, so it is close to reconciling.",
+  "activity_increased": "One active station now against prev_active_stations 1, but S3 and S4 were not checked.",
+  "next_step": "BRO-5 is banned in the kitchen zone and was applied there.",
+  "breach_severity": "Banned product used in a banned zone (Prohibited), although the dose is also over the label limit (53 g/m2 vs 15 is not the same as 20 g/m2 used), leaving level 2 plausible.",
+  "parties_needed": "Technician, technical manager and client notification are needed; a fourth party like a revisit planner or a supplier could push it to level 3."
+ },
+ "request": "rec-F413-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005474
+}

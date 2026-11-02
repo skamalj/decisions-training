@@ -1,0 +1,166 @@
+{
+ "id": "F422-0042",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-9023",
+   "site": "S-515",
+   "delivered_at": "2025-02-17",
+   "received_at": "2025-04-01",
+   "review_date": "2025-04-21",
+   "reason": "ORDER_ERROR",
+   "lines": [
+    {
+     "gtin": "05098760000042",
+     "qty_claimed": 60
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "D-71455",
+   "date": "2025-02-14",
+   "lines": [
+    {
+     "gtin": "05098760000042",
+     "batch": "CX552",
+     "expiry": "2026-06-30",
+     "qty_dispatched": 60
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "05098760000042",
+     "batch": "CX552",
+     "expiry": "2026-06-30",
+     "qty_counted": 55,
+     "packs_damaged": 0,
+     "seals_intact": 55
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "active",
+     "n": 54
+    },
+    {
+     "status": "decommissioned",
+     "n": 1,
+     "decommission_site": "S-515",
+     "decommission_at": "2025-04-14"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "cold_2_8",
+   "labelled_range": "2-8C",
+   "logger_id": "LG-77",
+   "logger_start": "2025-02-16",
+   "logger_end": "2025-04-01",
+   "min_c": 2.1,
+   "max_c": 9.8,
+   "minutes_out_of_range": 479,
+   "stability_ref": {
+    "max_hours": 12,
+    "max_c": 12
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-12-31",
+   "declaration_received": true
+  },
+  "quarantine_control": {
+   "hold_limit_days": 30,
+   "extension": {
+    "approved": false,
+    "new_limit_date": null
+   },
+   "max_days_out_of_control": 60,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "full",
+  "excursion_minutes": 479,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 5,
+  "damaged_pack_fraction": 0.0,
+  "uid_alert": true,
+  "uid_alert_explained": true,
+  "days_out_of_control": 43,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 10,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 14
+ },
+ "factors_sampled": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "full",
+  "excursion_minutes": 479,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 5,
+  "damaged_pack_fraction": 0.12,
+  "uid_alert": true,
+  "uid_alert_explained": true,
+  "days_out_of_control": 43,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 16,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 1
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_stock",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 78,
+ "deciding": {
+  "storage_maintained": "Peak 9.8C for 479 minutes exceeds 2-8C but sits inside the stability_ref allowance of 12 hours and 12C; logger covers the whole period.",
+  "batch_traceable": "Counted batch CX552 and expiry match the dispatch line; a decommissioned scan adds slight doubt.",
+  "next_step": "All 55 packs are intact with 14 months of shelf life, the excursion is within allowance, the audit is current and the one decommission event was at the customer's own site on 2025-04-14.",
+  "resaleable_share": "No damage, intact seals and long shelf life make every counted pack fit, though the excursion and decommissioned scan keep some doubt. The plan's level 1 or 2 could not be reconciled with a clear release, so the record shows no failed packs.",
+  "disposition_urgency": "Limit 2025-05-01 against review 2025-04-21 leaves 10 days, right at the boundary between planned and prompt."
+ },
+ "request": "rec-F422-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013349
+}

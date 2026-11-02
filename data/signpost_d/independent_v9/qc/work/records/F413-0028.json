@@ -1,0 +1,137 @@
+{
+ "id": "F413-0028",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "care_home",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ]
+  },
+  "visit": {
+   "type": "routine",
+   "start": "2025-04-08T08:30",
+   "client_signoff": "2025-04-08"
+  },
+  "treatments": [
+   {
+    "product_code": "PWD3",
+    "qty_applied": null,
+    "area_m2": 20
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "activity": true
+   },
+   {
+    "id": "S2",
+    "activity": true
+   },
+   {
+    "id": "S4",
+    "activity": false
+   }
+  ],
+  "van_stock": [
+   {
+    "product_code": "PWD3",
+    "movement": "withdrawal",
+    "qty": 250,
+    "unit": "g"
+   },
+   {
+    "product_code": "PWD3",
+    "movement": "return",
+    "qty": 250,
+    "unit": "g"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 1
+  }
+ },
+ "factors": {
+  "stock_mismatch": "applied_qty_null",
+  "stock_return_logged": true,
+  "station_count_gap": 1,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 42.07,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "care_home"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "applied_qty_null",
+  "stock_return_logged": true,
+  "station_count_gap": 1,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 42.07,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "care_home"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "book_revisit",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "usage_reconciled": "Full 250 g withdrawal returned, so net zero fits the null applied quantity.",
+  "activity_increased": "Two active versus 1 previously, but station S3 is missing from the checks and could change the count.",
+  "next_step": "A revisit seems warranted for rising activity and the unchecked station, though corrective action was completed.",
+  "breach_severity": "Null quantity with a possibly over-label dose sits between a treatment-limit breach and a care-home product problem.",
+  "parties_needed": "Technician, client, manager and stores could all be needed; whether a fourth or fifth is required is unclear."
+ },
+ "request": "rec-F413-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006054
+}

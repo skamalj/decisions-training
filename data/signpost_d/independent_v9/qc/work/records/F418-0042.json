@@ -1,0 +1,131 @@
+{
+ "id": "F418-0042",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "plat": 3,
+   "date": "2025-06-03",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "attendance": [
+   {
+    "staff_id": "S12",
+    "sign_on": "05:50",
+    "sign_off": null,
+    "safety_comp_exp": "2026-02-01",
+    "dispatch_comp_exp": "2025-06-03"
+   },
+   {
+    "staff_id": "S20",
+    "sign_on": "07:01",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2026-03-01",
+    "dispatch_comp_exp": "2026-01-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "05:50"
+   },
+   {
+    "type": "dispatch",
+    "time": "06:20",
+    "staff_id": "S12"
+   },
+   {
+    "type": "gap_end",
+    "time": "07:01"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-118",
+   "disp_platform": 3,
+   "valid_to": "2025-06-03",
+   "approved_by": "ORM",
+   "prior_shortfalls_30d": 6
+  },
+  "remarks": [
+   "S20 late, covered."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 71,
+  "shortfall_timing": "edge_of_service",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 6,
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 71,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 6,
+  "boundary_case": true
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "leaning",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "headcount_verified": "S12 has sign_off null and a dispatch_comp_exp equal to the shift date (boundary), while S20 signed on at 07:01; balanced between verified and not.",
+  "next_step": "A dispensation D-118 is present with approver and the remark says covered, so the log mostly reconciles; the same-day valid_to adds some doubt.",
+  "coverage_outcome": "Remark says covered and S12 was on from 05:50, pointing to rostered staff; the 07:01 gap_end leaves some doubt.",
+  "reversal_time": "The shift is a short past gap with a same-day dispensation; correction could take a day or a few days, so both levels 0 and 1 are defensible.",
+  "exposure_severity": "Dispatch at 06:20 by S12 inside the gap, with dispatch_comp_exp equal to the shift date and valid_to the same day, puts it between level 2 and level 3."
+ },
+ "request": "rec-F418-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009965
+}

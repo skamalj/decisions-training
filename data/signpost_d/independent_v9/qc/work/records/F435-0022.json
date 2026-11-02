@@ -1,0 +1,154 @@
+{
+ "id": "F435-0022",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "EV-5530",
+   "zone_id": "B1",
+   "zone_type": "balcony",
+   "doors_open": "2025-04-02T18:30",
+   "check_filed_at": "2025-04-03T00:10",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 600,
+   "variation": null,
+   "stewards_required": 20,
+   "exit_routes": [
+    "E1",
+    "E2",
+    "E3",
+    "E4"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 600,
+   "issued": 570,
+   "comps_included": 25,
+   "scanned_in": 561
+  },
+  "ingress": {
+   "device_id": "C-07",
+   "device_status": "calibration_due",
+   "raw_peak": 480,
+   "peak_at": "2025-04-02T20:05",
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 22,
+   "signed_in": 21,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "E1",
+    "checked_at": "2025-04-02T17:50",
+    "status": "clear"
+   },
+   {
+    "route_id": "E2",
+    "checked_at": "2025-04-02T17:55",
+    "status": "clear"
+   },
+   {
+    "route_id": "E3",
+    "checked_at": "2025-04-02T18:02",
+    "status": "clear"
+   },
+   {
+    "route_id": "E4",
+    "checked_at": "2025-04-02T18:05",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "balcony",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.8,
+  "counter_status": "calibration_due",
+  "counter_inflation": 0.04,
+  "manual_recount_present": false,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.95,
+  "limit_mismatch": false,
+  "steward_gap_pct": -0.03,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "balcony",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.8,
+  "counter_status": "calibration_due",
+  "counter_inflation": 0.04,
+  "manual_recount_present": false,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 1.03,
+  "limit_mismatch": false,
+  "steward_gap_pct": -0.03,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 3,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "unconfirmed_exits": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 42,
+ "deciding": {
+  "verified_exceedance": "raw_peak 480 against limit 600 on a counter that is only calibration_due, still valid.",
+  "disposition": "Counts, staffing and exits all reconcile; only the calibration_due flag gives slight doubt.",
+  "discrepancy_source": "Issued 570 and peak 480 are both under the 600 limit used by ticketing.",
+  "steward_shortfall": "21 signed in against 20 required.",
+  "unconfirmed_exits": "All four routes show clear before doors at 18:30."
+ },
+ "request": "rec-F435-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011385
+}

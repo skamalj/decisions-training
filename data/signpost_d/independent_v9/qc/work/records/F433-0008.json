@@ -1,0 +1,141 @@
+{
+ "id": "F433-0008",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H08",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "pulse_bpm": 60,
+     "result": "pass"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 30
+   },
+   "arrived_at": "10:00"
+  },
+  "vet_card": {
+   "presented_at": "10:19",
+   "pulse_bpm": 65,
+   "cri": {
+    "first_bpm": 65,
+    "second_bpm": 65.5
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 2,
+    "gut_sounds": [
+     "normal",
+     "normal",
+     "normal",
+     "normal"
+    ]
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 1
+    },
+    {
+     "surface": "hard",
+     "grade": 1
+    }
+   ],
+   "tack": {
+    "site": "girth",
+    "finding": "none"
+   },
+   "vet_signed_at": "10:19"
+  },
+  "notes": {
+   "rider_note": "girth slipped on the climb, rub is old",
+   "vet_remark": "busy gate, long queue"
+  }
+ },
+ "factors": {
+  "pulse_status": "not_met_just_over_limit",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": false,
+  "metabolic_flags": 0,
+  "cri_rise": 0.5,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_at_boundary",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": false,
+  "metabolic_flags": 2,
+  "cri_rise": 0.5,
+  "missing_items": 1,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "eliminate_ftq",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "contested",
+   "target": "ftq_gait",
+   "second": "ftq_metabolic",
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 122,
+ "deciding": {
+  "pulse_met": "Presented 10:19 is inside the window ending 10:20, but pulse 65 is above the stated limit of 64.",
+  "next_step": "The pulse is over the limit with nothing missing or disputed, so the failure is recorded and the horse is stopped.",
+  "outcome_code": "Pulse 65 over the limit is a metabolic-type failure, and both trot-ups are grade 1 with no mitigation, so gait versus metabolic is open.",
+  "welfare_risk": "Pulse is just over the limit, other metabolic values are normal and no tack finding exists, so one parameter is out and it is not severe.",
+  "record_completeness": "All readings and a signature are present, but vet_signed_at equals presented_at to the minute, so the time sequence is arguable."
+ },
+ "request": "rec-F433-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011353
+}

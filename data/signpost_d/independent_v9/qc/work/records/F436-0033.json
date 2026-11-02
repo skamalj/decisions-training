@@ -1,0 +1,117 @@
+{
+ "id": "F436-0033",
+ "family": "F436",
+ "state": {
+  "article": {
+   "channels": [
+    "web"
+   ],
+   "first_published_at": "2024-05-01T10:00Z",
+   "disputed_passage": "Reed was charged with 14 counts of fraud"
+  },
+  "desk_check": {
+   "source_doc": "docket 14 counts",
+   "attachments": [
+    {
+     "amended_indictment": "4 counts, filed same morning"
+    }
+   ]
+  },
+  "complaint": {
+   "received_at": "2024-05-17T20:00Z",
+   "summary": "Solicitor threatens libel action."
+  },
+  "history": {
+   "review_at": "2024-05-17T20:00Z",
+   "prior_corrections": 1,
+   "notes": [
+    "print slot B4 held, status unknown"
+   ]
+  }
+ },
+ "factors": {
+  "error_status": "matches_source",
+  "error_origin_stage": "none",
+  "discrepancy_field": "figure",
+  "discrepancy_size": "large",
+  "claim_type": "implied_fraud",
+  "hours_live": 394,
+  "distribution_channels": "online_only",
+  "mitigation_present": false,
+  "missing_evidence": false,
+  "legal_signal": true,
+  "legal_cleared": false,
+  "draft_fix_mismatch": false,
+  "prior_corrections": 1,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "error_status": "confirmed_by_source",
+  "error_origin_stage": "reporter_drafting",
+  "discrepancy_field": "figure",
+  "discrepancy_size": "large",
+  "claim_type": "incidental_fact",
+  "hours_live": 394,
+  "distribution_channels": "print",
+  "mitigation_present": false,
+  "missing_evidence": false,
+  "legal_signal": false,
+  "legal_cleared": false,
+  "draft_fix_mismatch": false,
+  "prior_corrections": 1,
+  "boundary_case": false
+ },
+ "plan": {
+  "error_confirmed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_origin": {
+   "clarity": "clear",
+   "target": "no_inaccuracy",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "spread": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "harm_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "error_confirmed": "The article matches the docket's 14 counts, but an amended indictment filed the same morning says 4 counts, so the evidence leans only modestly to an error.",
+  "next_step": "The complaint carries a libel threat from a solicitor and no legal review is logged, so it should go to the standards editor or legal before any change.",
+  "error_origin": "The published text matches the docket record the reporter used, so no inaccuracy was introduced at any stage.",
+  "spread": "The channel is web, live about 394 hours; the print slot status is unknown, which leaves online only against online plus print.",
+  "harm_severity": "The passage says a named person was charged with fraud, which implies wrongdoing."
+ },
+ "request": "rec-F436-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011447
+}

@@ -1,0 +1,130 @@
+{
+ "id": "F425-0003",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "producer_code": "1UK-7C21",
+   "method": "free_range",
+   "lay_dates": [
+    "2024-06-02",
+    "2024-05-31"
+   ],
+   "declared_eggs": 5400
+  },
+  "grading_run": {
+   "run_start": "2024-06-04T08:00",
+   "run_end": "2024-06-04T09:50",
+   "eggs_in": 5370,
+   "by_size": {
+    "S": 300,
+    "M": 1900,
+    "L": 2400,
+    "XL": 665
+   },
+   "outgrades": {
+    "cracks": 80,
+    "dirties": 15,
+    "misshapen": 10
+   },
+   "class_a_total": 5265
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-05-25",
+    "interval_days": 30
+   },
+   "scale_check": null,
+   "store_temp": {
+    "minutes_above_limit": 12,
+    "max_c": 14,
+    "defrost_logged": true
+   }
+  },
+  "flock": {
+   "age_weeks": 39
+  },
+  "packing": {
+   "pack_date": "2024-06-04",
+   "stamp_code": "2UK-7C21",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "marginal",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": true,
+  "lay_to_pack_days": 4,
+  "mixed_lay_dates": true,
+  "missing_check": "scale_check_missing",
+  "swab_positive": false,
+  "outgrade_rate_pct": 1.96,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "brief",
+  "temp_mitigated": true,
+  "flock_age_weeks": 39
+ },
+ "factors_sampled": {
+  "count_gap_size": "none",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 5,
+  "mixed_lay_dates": true,
+  "missing_check": "scale_check_missing",
+  "swab_positive": false,
+  "outgrade_rate_pct": 3.92,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "brief",
+  "temp_mitigated": true,
+  "flock_age_weeks": 39
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "reject_withdraw",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "leaning",
+   "target": "shell_quality",
+   "second": null,
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "counts_reconcile": "declared_eggs 5400 against eggs_in 5370 is a 0.56% gap, just over half a percent, while sizes plus outgrades equal eggs_in.",
+  "batch_disposition": "packing.stamp_code 2UK-7C21 differs from consignment.producer_code 1UK-7C21, an untraceable stamp, so the batch is kept out of the food chain.",
+  "anomaly_cause": "Cracks are the main outgrade at 80 of 105 from a 39-week flock, calibration is current and the brief temperature rise has a logged defrost, so shell quality is the best explanation.",
+  "lay_to_pack": "Oldest lay date 2024-05-31 to pack date 2024-06-04 is 4 days, at the 3/4 day boundary; the newer date would give 2 days.",
+  "outgrade_share": "Outgrades of 105 against eggs_in 5370 is 1.96%, right at the 2% boundary between levels 0 and 1."
+ },
+ "request": "rec-F425-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013095
+}

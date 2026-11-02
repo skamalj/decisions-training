@@ -1,0 +1,125 @@
+{
+ "id": "F434-0047",
+ "family": "F434",
+ "state": {
+  "post": {
+   "on_post_from": "09:30",
+   "off_post_at": "15:10",
+   "relief": [
+    {
+     "marshal_ref": "M7",
+     "signed_in": "11:00",
+     "signed_out": "15:10"
+    }
+   ]
+  },
+  "incidents": [
+   {
+    "time": "12:41",
+    "type": "pedestrian_on_course",
+    "bibs": [
+     64
+    ],
+    "medic_called": true,
+    "medic_arrival_min": 2.9,
+    "rider_status": "continued",
+    "riders_held": true
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "11:00",
+     "ok": false
+    },
+    {
+     "time": "13:00",
+     "ok": false
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [],
+   "medical_handovers": []
+  },
+  "sweep": null
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "extra_post_incident",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 2,
+  "medic_arrival_minutes": 2.9,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "extra_post_incident",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 2,
+  "medic_arrival_minutes": 2.9,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "balanced",
+   "target": "course_intrusion",
+   "second": "rider_fall",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "consequence_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 29,
+ "deciding": {
+  "coverage_held": "Marshal presence runs from 09:30 through 15:10 with a relief entry. The sweep is null, so the end point cannot be checked, which leaves some doubt.",
+  "next_step": "The post logs a medic call (arrival 2.9 min) with no control incident or medical handover, so the outcome awaits confirmation from control and medical.",
+  "incident_class": "A pedestrian on course with riders held points to intrusion. The medic call for bib 64 leaves a fall possible, and control has no entry to settle it.",
+  "reversal_time": "The rider continued and nothing serious is confirmed, so any effect is recoverable in days. The medic follow-up is a short matter.",
+  "consequence_severity": "Rider 64 continued and no hospital transfer is listed. The medic call leaves a minor fall possible, so level 0 or 1 are both defensible."
+ },
+ "request": "rec-F434-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012065
+}

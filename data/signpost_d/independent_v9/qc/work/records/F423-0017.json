@@ -1,0 +1,155 @@
+{
+ "id": "F423-0017",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-5120",
+   "product": "flyer",
+   "stock_spec": "MT130",
+   "run_qty": 60000,
+   "overs_pct": 5.0,
+   "due_date": "2024-05-20",
+   "customer_tier": "standard",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "P-310",
+   "ok_sheet_no": 5,
+   "signed_at": "2024-05-14T09:12",
+   "customer_present": false,
+   "concession": {
+    "accepted_max_de": 4.5
+   }
+  },
+  "colour_readings": {
+   "instrument": "SP-1",
+   "calibrated_on": "2024-02-05",
+   "checked_on": "2024-05-14",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.2
+    },
+    {
+     "ink": "M",
+     "delta_e": 4.1
+    },
+    {
+     "ink": "Y",
+     "delta_e": 1.8
+    },
+    {
+     "ink": "K",
+     "delta_e": 2.6
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "unit_pair": "2-3",
+     "offset_mm": 0.33,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press_id": "H2",
+   "stock_loaded": "MT130",
+   "first_production_at": "2024-05-14T09:12",
+   "sheets_production": 2704,
+   "sheets_makeready": 410,
+   "stoppages": [
+    {
+     "min": 5
+    },
+    {
+     "min": 8
+    },
+    {
+     "min": 3
+    }
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "single_patch_over_spec_within_concession",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_same_minute_as_first_production",
+  "sheets_before_check": 2704,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 5.0,
+  "register_offset_mm": 0.33,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 99,
+  "customer_tier": "standard",
+  "prior_stoppages": 3
+ },
+ "factors_sampled": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "some_patches_null",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2704,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 5.0,
+  "register_offset_mm": 0.33,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 99,
+  "customer_tier": "standard",
+  "prior_stoppages": 3
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "adjust_and_recheck",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 111,
+ "deciding": {
+  "colour_in_tolerance": "Highest patch M delta_e 4.1 is over spec_max_de 3.0 but under concession accepted_max_de 4.5; all patches measured.",
+  "run_before_signoff": "signed_at and first_production_at are the same minute while 2704 production sheets are logged; order is ambiguous.",
+  "next_step": "Registration target 2-3 offset 0.33 mm with in_image true exceeds 0.15 mm, so register must be corrected and the sheet re-pulled.",
+  "staff_effort": "Press correction and re-measure is short, but 2704 sheets printed with in-image misregister may need sorting or reprint handling lasting days.",
+  "scrap_exposure": "Suspect sheets are 2704 against overs of 5.0% of 60000 = 3000, so within overs."
+ },
+ "request": "rec-F423-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011676
+}

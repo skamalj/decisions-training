@@ -1,0 +1,126 @@
+{
+ "id": "F424-0031",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2411",
+   "vessel_id": "FV3",
+   "volume_hl": 20,
+   "og_target": 1.052,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.013,
+   "strain_max_temp_c": 22
+  },
+  "readings": [
+   {
+    "ts": "2024-05-08",
+    "gravity_sg": 1.017,
+    "temp_c": 20.5
+   },
+   {
+    "ts": "2024-05-09",
+    "gravity_sg": 1.015,
+    "temp_c": 20.5
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-05-06",
+    "vessel_id": "FV4",
+    "note": "Free-rise to 21.5 approved."
+   }
+  ],
+  "lab": {
+   "diacetyl_mgl": 0.19,
+   "abv_pct": null,
+   "pending": true,
+   "micro_plate": {
+    "result": "negative"
+   },
+   "retest": [
+    {
+     "result": "negative"
+    }
+   ]
+  },
+  "release_request": {
+   "volume_hl": 18.5,
+   "vessel_id": "FV3",
+   "note": "Rush, truck leaves Friday."
+  }
+ },
+ "factors": {
+  "gravity_status": "still_dropping",
+  "final_reading_gap": false,
+  "temp_excursion": "sustained_major",
+  "excursion_mitigated": true,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.19,
+  "discrepancy_count": 2,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "still_dropping",
+  "final_reading_gap": false,
+  "temp_excursion": "sustained_major",
+  "excursion_mitigated": true,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.19,
+  "discrepancy_count": 2,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release_conditional",
+   "second": null,
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 79,
+ "deciding": {
+  "terminal_gravity": "Last readings 1.017 then 1.015, still falling and above 1.013 max.",
+  "contamination_supported": "No positive signal; negative retest, but diacetyl 0.19 is elevated and keeps doubt.",
+  "batch_disposition": "Pending ABV and rush; a record fix is the likely minor action.",
+  "deviation_severity": "Diacetyl 0.19 may be a deviation; no temp reading above max, so 0 vs 1 split.",
+  "record_discrepancies": "Vessel FV3 vs pitch event FV4 and 20 vs 18.5 hl; plus unlisted pairs, so 3 plausible though 2 are shown."
+ },
+ "request": "rec-F424-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005221
+}

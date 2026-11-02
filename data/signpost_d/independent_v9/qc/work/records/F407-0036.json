@@ -1,0 +1,121 @@
+{
+ "id": "F407-0036",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "PR-4417",
+   "channel": "own_inspector",
+   "photo_ref": "IMG-4417",
+   "linked_reports": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "footway",
+   "intervention_depth_mm": 20
+  },
+  "inspection": {
+   "depth_mm": 19,
+   "width_mm": 1115.2,
+   "offset_m": 12
+  },
+  "works_history": [
+   {
+    "job": "J-88",
+    "offset_m": 10,
+    "guarantee_end": "2025-01-01"
+   }
+  ],
+  "programme": {
+   "temp_measures": [
+    {
+     "offset_m": 12,
+     "expiry": "2025-09-01"
+    }
+   ]
+  },
+  "current_order": null
+ },
+ "factors": {
+  "road_category": "footway",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_within_guarantee",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 4,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 1115.2,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "footway",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 4,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 1115.2,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "repeat_failure": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "order_repair",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "meets_threshold": "inspection depth 19 mm vs threshold 20 mm: 1 mm short, near boundary.",
+  "repeat_failure": "works_history J-88 offset 10 m is within ten metres, completed earlier, guarantee_end given.",
+  "next_step": "Own inspector report with inspection and confirmed prior repair at same spot, temp measure in place, no order: raise repair order.",
+  "staff_effort": "Footway repair with recurrence and guarantee issues could take days; width 1115 mm large; no order yet, so 2 vs 3 is open.",
+  "response_timescale": "Depth just under threshold but recurrence and large width; temporary measure in place, so priority 5 days vs 24h make-safe is arguable."
+ },
+ "request": "rec-F407-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005513
+}

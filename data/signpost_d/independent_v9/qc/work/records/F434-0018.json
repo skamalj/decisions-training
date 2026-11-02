@@ -1,0 +1,107 @@
+{
+ "id": "F434-0018",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 4
+  },
+  "post": {
+   "km_marker": 17,
+   "marshals_rostered": 2,
+   "marshals_signed_in": 2,
+   "on_post_from": "08:30",
+   "off_post_at": "12:05"
+  },
+  "incidents": [],
+  "control_record": {
+   "incident_log": [],
+   "road_reopened_at": {
+    "15-20": "11:48"
+   }
+  },
+  "sweep": {
+   "passed_at": "12:02",
+   "last_rider_bib": 94
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": true,
+  "incident_mix": "none",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": "none",
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": true,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 20.71,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "leaning",
+   "target": "no_incident",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (reopen_before_sweep = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 39,
+ "deciding": {
+  "coverage_held": "Both marshals signed in 08:30 to 12:05, after sweep passed_at 12:02.",
+  "next_step": "Post and control incident lists are both empty and agree.",
+  "incident_class": "Neither incident list has an entry, but the early reopening leaves some doubt.",
+  "reversal_time": "Road reopened 11:48, before sweep 12:02, but no harm is recorded, so levels 2 and 3 are both defensible.",
+  "consequence_severity": "road_reopened_at 11:48 precedes sweep passed_at 12:02, with last rider bib 94 passing after reopening."
+ },
+ "request": "rec-F434-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008646
+}

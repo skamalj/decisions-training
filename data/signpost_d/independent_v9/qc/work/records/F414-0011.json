@@ -1,0 +1,163 @@
+{
+ "id": "F414-0011",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SW-114",
+   "equip_type": "swing",
+   "crit_fall_height_m": 2.0,
+   "surf_type": "wood_chip"
+  },
+  "inspection": {
+   "insp_date": "2024-05-14",
+   "insp_grade": "annual_main",
+   "fall_height_m": 2.0,
+   "surf_type_found": "wood_chip",
+   "surf_depth_mm": 305,
+   "surf_req_table": [
+    {
+     "max_h": 2.5,
+     "type": "wood_chip",
+     "min_depth_mm": 300
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "O2",
+     "result": "fail"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "EN1",
+     "component_id": "C-seat2",
+     "injury_mech": "serious"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "SW-114",
+    "component_id": "C-seat1",
+    "defect_ref": "D1",
+    "status": "closed",
+    "closed_date": "2024-02-10"
+   },
+   {
+    "wo_id": "W2",
+    "asset_id": "SW-114",
+    "component_id": "C-chain",
+    "defect_ref": "D2",
+    "status": "closed",
+    "closed_date": "2024-03-01"
+   },
+   {
+    "wo_id": "W3",
+    "asset_id": "SW-114",
+    "component_id": "C-seat2",
+    "defect_ref": "D3",
+    "status": "closed",
+    "closed_date": "2024-05-15",
+    "temp_measure": {
+     "type": "seat_removed",
+     "date": "2024-05-14"
+    }
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 2
+  },
+  "history": [
+   {
+    "date": "2023-05-10",
+    "grade": "annual_main",
+    "defect_refs": [
+     "D1",
+     "D2",
+     "D3"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "swing",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 5.0,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.67,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 2
+ },
+ "factors_sampled": {
+  "equipment_type": "swing",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 115.48,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 3,
+  "work_orders_closed_fraction": 0.75,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 2
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "restrict_use",
+   "second": null,
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "prior_defects_cleared": "Prior refs D1-D3 all have closed orders, but W3 (D3) closed_date 2024-05-15 is after insp_date 2024-05-14, so it was still open at the visit.",
+  "surfacing_adequate": "Depth 305 mm against a 300 mm minimum for wood chip at 2.0 m: only 5 mm above the requirement.",
+  "asset_disposition": "The head-neck probe failed at opening O2 on C-seat2 and a temp_measure removed that seat, so only the component is isolated; the rest of the swing stays open.",
+  "remedial_progress": "All three orders have status closed, but W3's closed_date falls after the inspection date. By status that is all closed (level 3); by date it is 2 of 3 with one open (level 2).",
+  "hazard_severity": "A head_neck probe failure sits next to a finding rated injury_mech serious, not stated as entrapment. Level 4 is slightly favoured over 3."
+ },
+ "request": "rec-F414-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015177
+}

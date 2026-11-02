@@ -1,0 +1,115 @@
+{
+ "id": "F426-0049",
+ "family": "F426",
+ "state": {
+  "applications": [
+   {
+    "date": "2024-06-01",
+    "product_code": "X1",
+    "qty_applied": 1,
+    "qty_unit": "L",
+    "area_treated_ha": 1
+   },
+   {
+    "date": "2024-07-10",
+    "product_code": "X1",
+    "qty_applied": 2.22,
+    "qty_unit": "L",
+    "area_treated_ha": 2
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "X1",
+    "max_rate_per_ha": 1,
+    "rate_unit": "L",
+    "phi_days": 7,
+    "max_apps_per_season": 1
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-07-17"
+  }
+ },
+ "factors": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "near_10_boundary",
+  "partial_block_spray": true,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "missing",
+  "missing_item": "none",
+  "season_count_excess": true,
+  "off_label_crop": false,
+  "num_applications": 2,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "above_10_to_25",
+  "partial_block_spray": true,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": false,
+  "calibration_state": "missing",
+  "missing_item": "none",
+  "season_count_excess": true,
+  "off_label_crop": false,
+  "num_applications": 2,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "label_deviation",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "phi_cleared": "Second X1 application 2024-07-10, first pick 2024-07-17, phi_days 7: gap exactly 7 days, counting convention decides.",
+  "next_step": "X1 applied twice against max_apps_per_season 1 and rate over max, with no residue test: needs technical manager rejection decision.",
+  "finding_class": "Two X1 applications against a seasonal limit of 1 and a rate over max are label deviations.",
+  "reversal_time": "Rejection or regulator notification for a lot picked with excess applications is not reversible within three months.",
+  "rate_overrun": "Second application 2.22 L / 2 ha = 1.11 L/ha against max 1: about 11%, right at the 10% boundary."
+ },
+ "request": "rec-F426-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010652
+}

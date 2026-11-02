@@ -1,0 +1,141 @@
+{
+ "id": "F435-0049",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "EV-7188",
+   "zone_id": "FLR-C",
+   "zone_type": "standing_floor",
+   "doors_open": "2025-05-02T19:00",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 800,
+   "variation": null,
+   "stewards_required": 25,
+   "exit_routes": [
+    "E1",
+    "E2",
+    "E3",
+    "E4"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 800,
+   "issued": 864
+  },
+  "ingress": {
+   "device_status": "ok",
+   "raw_peak": 798,
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 22,
+   "signed_in": 19,
+   "relief": {
+    "called_at": "2025-05-02T19:20",
+    "eta_min": 15
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "E1",
+    "checked_at": "2025-05-02T18:10",
+    "status": "clear"
+   },
+   {
+    "route_id": "E2",
+    "checked_at": "2025-05-02T19:00",
+    "status": "clear"
+   },
+   {
+    "route_id": "E3",
+    "checked_at": "2025-05-02T18:20",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "E4",
+    "checked_at": "2025-05-02T19:15",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.9975,
+  "counter_status": "ok",
+  "counter_inflation": 0.01,
+  "manual_recount_present": false,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 1.08,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.24,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.97,
+  "counter_status": "ok",
+  "counter_inflation": 0.01,
+  "manual_recount_present": false,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 1.08,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.26,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 4,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "ticket_overissue",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "verified_exceedance": "Counter ok, raw_peak 798 against limit 800 with no variation: 2 under, inside 1% of the limit, no recount.",
+  "disposition": "Verified count is under the limit and relief is called; the over-issued tickets and the exit and steward gaps leave some doubt but not enough to withhold.",
+  "discrepancy_source": "issued 864 exceeds zone_limit_used 800, which is the base limit with no variation; the counter is ok.",
+  "steward_shortfall": "signed_in 19 of 25 required is 24% below, just under the 25% line between marked and severe; rostered 22 is a decoy.",
+  "unconfirmed_exits": "E3 obstructed with no later clear and E4 checked after doors make two; E2 clear exactly at doors_open is borderline, so 2 or 3."
+ },
+ "request": "rec-F435-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015976
+}

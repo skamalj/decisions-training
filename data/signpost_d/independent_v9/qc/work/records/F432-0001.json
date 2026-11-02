@@ -1,0 +1,181 @@
+{
+ "id": "F432-0001",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E14",
+   "sp": "MEER",
+   "risk_cat": 2,
+   "roster": [
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+   ],
+   "temp_range_c": [
+    12,
+    26
+   ],
+   "maint_window": "10:00-12:00",
+   "active_vet_case": "VC203"
+  },
+  "shift": {
+   "date": "2024-05-14",
+   "keeper_id": "K07",
+   "start": "06:00",
+   "end": "16:30",
+   "opening_count": 4,
+   "closing_count": 5
+  },
+  "movements": [
+   {
+    "animal_id": "a5",
+    "dir": "in",
+    "time": "05:52",
+    "from": "E09"
+   }
+  ],
+  "feeding": {
+   "sheet_date": "2024-03-02",
+   "items": [
+    {
+     "item": "hay",
+     "sheet_g": 2000,
+     "offered_g": 2000,
+     "leftover_g": 100,
+     "unit": "g",
+     "scatter_flag": true
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "t": "07:00",
+    "logged": true,
+    "entry": "07:04",
+    "temp_c": 18
+   },
+   {
+    "t": "09:00",
+    "logged": false,
+    "entry": null,
+    "cctv_reviewed": true,
+    "reviewer_id": "K02"
+   },
+   {
+    "t": "11:00",
+    "logged": false,
+    "entry": null,
+    "cctv_reviewed": true,
+    "reviewer_id": "K02"
+   },
+   {
+    "t": "13:00",
+    "logged": false,
+    "entry": null,
+    "cctv_reviewed": true,
+    "reviewer_id": "K02"
+   },
+   {
+    "t": "16:15",
+    "logged": true,
+    "entry": "16:20",
+    "temp_c": 19
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "id": "D1",
+     "time": "16:19"
+    }
+   ],
+   "ticket": null
+  }
+ },
+ "factors": {
+  "count_discrepancy": "movement_logged_just_before_shift",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_within_minutes_of_last_round",
+  "intake_ratio": 0.95,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 3,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": true,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 0,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.79,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 3,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": true,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 0,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "secure_at_close": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "missed_rounds": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 122,
+ "deciding": {
+  "count_reconciles": "Opening 4, closing 5, and the only movement (one in) is timed 05:52, before the 06:00 shift start, so the match is doubtful.",
+  "secure_at_close": "D1 lock check at 16:19 against last round entry 16:20, a one-minute margin that could be a clock offset.",
+  "next_step": "Otherwise routine: intake near full, temps normal, no codes, no fault ticket, and the unlogged rounds are CCTV-reviewed.",
+  "intake_shortfall": "Offered 2000 g, leftover 100 g against a 2000 g sheet, so intake is 95%.",
+  "missed_rounds": "Three rounds have logged false, but each carries cctv_reviewed true with a reviewer id, so cover exists."
+ },
+ "request": "rec-F432-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.016225
+}

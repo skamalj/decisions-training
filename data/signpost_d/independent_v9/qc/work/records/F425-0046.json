@@ -1,0 +1,166 @@
+{
+ "id": "F425-0046",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "farm_ref": "F-2281",
+   "flock_id": "FL-66A",
+   "producer_code": "1UK-3C20",
+   "method": "1",
+   "lay_dates": [
+    "2024-05-01"
+   ],
+   "declared_eggs": 3000,
+   "trays": 100
+  },
+  "grading_run": {
+   "grader_id": "G2",
+   "run_start": "2024-05-05T06:00",
+   "run_end": "2024-05-05T09:10",
+   "eggs_in": 3000,
+   "by_size": {
+    "S": 200,
+    "M": 1100,
+    "L": 1100,
+    "XL": 279
+   },
+   "outgrades": {
+    "cracks": 240,
+    "dirties": 40,
+    "blood_spots": 10,
+    "leakers": 5,
+    "misshapen": 2
+   },
+   "class_a_total": 2679
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-04-20",
+    "interval_days": 30
+   },
+   "candling_sample": {
+    "n": 100,
+    "sampled_at": "2024-05-05T08:00"
+   },
+   "scale_check": {
+    "ok": true
+   },
+   "store_temp": {
+    "minutes_above_limit": 0,
+    "max_c": 5.2
+   }
+  },
+  "flock": {
+   "age_weeks": 66,
+   "last_swab": {
+    "date": "2024-04-10",
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2024-05-05",
+   "packs": [
+    {
+     "size": "S",
+     "pack_size": 10,
+     "count": 20
+    },
+    {
+     "size": "M",
+     "pack_size": 10,
+     "count": 110
+    },
+    {
+     "size": "L",
+     "pack_size": 10,
+     "count": 110
+    },
+    {
+     "size": "XL",
+     "pack_size": 3,
+     "count": 93
+    }
+   ],
+   "stamp_code": "1UK-3C20",
+   "best_before": "2024-05-29",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "moderate",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 4,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 9.9,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 66
+ },
+ "factors_sampled": {
+  "count_gap_size": "moderate",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 8,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 5.25,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 66
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release_class_a",
+   "second": null,
+   "targets": []
+  },
+  "anomaly_cause": {
+   "clarity": "balanced",
+   "target": "count_error",
+   "second": "shell_quality",
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "counts_reconcile": "Bins plus outgrades sum to 2976 against eggs_in 3000, a 24 egg (0.8%) gap; declared equals eggs_in, so the gap sits only in the bins, just above half a percent.",
+  "batch_disposition": "All checks are present and in date, swab negative, packed 4 days after lay and stamp code matches, so release is favoured, with some doubt from the unexplained 24 egg bin gap.",
+  "anomaly_cause": "The 24 egg bin shortfall against eggs_in points to count_error, but 240 cracks, a high outgrade count and a 66 week flock keep shell_quality plausible.",
+  "lay_to_pack": "Lay 2024-05-01 and pack 2024-05-05 is 4 days, right at the boundary between prompt (up to 3) and standard (4 to 7).",
+  "outgrade_share": "Outgrades total 297 of 3000 eggs_in (9.9%), or 297 of 2976 binned (about 10.0%), right at the 10% boundary between levels 2 and 3."
+ },
+ "request": "rec-F425-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013775
+}

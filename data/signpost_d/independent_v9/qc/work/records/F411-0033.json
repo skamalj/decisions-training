@@ -1,0 +1,123 @@
+{
+ "id": "F411-0033",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H-0912",
+   "type": "hackney",
+   "expiry": "2025-04-30",
+   "review_date": "2025-04-18"
+  },
+  "vehicle": {
+   "reg": "GH14DEF",
+   "odometer_km": 92415
+  },
+  "inspection": {
+   "date": "2025-04-10",
+   "result_code": "P",
+   "brake_efficiency_pct": 64
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-12-01"
+   },
+   {
+    "type": "mot_cert",
+    "expires_on": "2025-04-10",
+    "cover_note_ref": "CN-12",
+    "cover_until": "2025-04-25"
+   }
+  ],
+  "history": [
+   {
+    "date": "2024-07-02",
+    "result": "P",
+    "odometer_km": 92410
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 0,
+  "vehicle_age_years": 13
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 13
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 48,
+ "deciding": {
+  "odometer_consistent": "Current 92415 km is only 5 km above the 92410 km reading from nine months earlier. That is no drop, but almost no use for a licensed vehicle is odd, so both answers are arguable.",
+  "next_step": "There are no defects and the MOT cert is covered by CN-12 to 04-25, so renewal is supported. The odometer oddity leaves slight doubt.",
+  "inspection_outcome": "The defects list is empty and the result code is P.",
+  "document_gaps": "The MOT cert expired 04-10, but cover note CN-12 runs past the 04-18 review date, so it counts as in date.",
+  "outstanding_severity": "The defects list is empty, so nothing is outstanding."
+ },
+ "request": "rec-F411-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010982
+}

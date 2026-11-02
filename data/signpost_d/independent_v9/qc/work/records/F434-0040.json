@@ -1,0 +1,156 @@
+{
+ "id": "F434-0040",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 1,
+   "first_rider_at": "10:10"
+  },
+  "post": {
+   "km_marker": 30.0,
+   "marshals_signed_in": 2,
+   "on_post_from": "09:45",
+   "off_post_at": "12:02:30"
+  },
+  "incidents": [
+   {
+    "time": "10:50",
+    "km": 30.0,
+    "type": "mechanical",
+    "bibs": [
+     41
+    ],
+    "medic_called": true,
+    "medic_cancelled": true,
+    "rider_status": "continued"
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:30",
+     "ok": false
+    },
+    {
+     "time": "11:00",
+     "ok": false
+    },
+    {
+     "time": "11:30",
+     "ok": false
+    }
+   ],
+   "backup_phone": [
+    {
+     "time": "10:31",
+     "ok": false
+    }
+   ],
+   "escalations": [
+    {
+     "time": "10:52",
+     "inc_ref": "P1",
+     "acknowledged": false
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "time": "10:50",
+     "km": 30.0,
+     "type": "mechanical",
+     "bibs": [
+      14
+     ]
+    },
+    {
+     "time": "10:48",
+     "km": 30.0,
+     "type": "vehicle_on_course",
+     "note": "official moto"
+    }
+   ]
+  },
+  "sweep": {
+   "passed_at": "12:03:10",
+   "last_rider_bib": 150
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "bib_digit_swap",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 20.93,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "bib_digit_swap",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 20.93,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "safety_review",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "balanced",
+   "target": "no_incident",
+   "second": "course_intrusion",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "coverage_held": "Two marshals from 09:45, but off_post_at 12:02:30 is 40 seconds before sweep passed_at 12:03:10. Near the boundary, leaning true.",
+  "next_step": "All three radio checks failed, the backup phone failed, and the escalation at 10:52 was never acknowledged, so race control was not reached during the incident. That is a confirmed communications failure needing formal review.",
+  "incident_class": "The post and control mechanical entries have bib 41 vs 14, so they may be the same incident or not. The control vehicle entry is an official moto, which a reader could count as an intrusion.",
+  "reversal_time": "The rider continued and the medic was cancelled, so nothing lasting needs to be undone.",
+  "consequence_severity": "The medic was called then cancelled and the rider continued, with no handover. Level 1 against level 2 is contested."
+ },
+ "request": "rec-F434-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011139
+}

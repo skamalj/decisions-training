@@ -1,0 +1,165 @@
+{
+ "id": "F437-0023",
+ "family": "F437",
+ "state": {
+  "job": {
+   "job_id": "J-7730",
+   "target_locale": "es-ES",
+   "source_version": "v4",
+   "glossary_version": "g2",
+   "due_at": "2025-04-08T12:00",
+   "workflow": [
+    {
+     "step": "dtp",
+     "done_at": null
+    }
+   ]
+  },
+  "source": {
+   "version": "v4",
+   "segment_count": 140,
+   "word_count": 2200,
+   "repetitions": {
+    "words": 14
+   }
+  },
+  "deliverable": {
+   "built_from_version": "v4",
+   "target_locale": "es-ES",
+   "segments_translated": 140,
+   "word_count": 2188,
+   "glossary_version_used": "g2",
+   "delivered_at": "2025-04-07T16:00"
+  },
+  "qa_report": {
+   "flags": 20,
+   "false_positive_marked": 13,
+   "number_mismatches": [
+    [
+     15,
+     51
+    ],
+    [
+     9,
+     90
+    ],
+    [
+     120,
+     102
+    ],
+    [
+     3,
+     30
+    ]
+   ],
+   "unresolved": {
+    "critical": 1,
+    "major": 0,
+    "minor": 2
+   }
+  },
+  "review": {
+   "signed_off": true,
+   "completed_at": "2025-04-07T13:00",
+   "errors": [
+    {
+     "sev": "critical",
+     "status": "closed"
+    },
+    {
+     "sev": "minor",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    {
+     "round": 1
+    },
+    {
+     "round": 2
+    }
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "critical_open",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.65,
+  "number_mismatch_count": 4,
+  "deadline_slack_hours": 20,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": true
+ },
+ "factors_sampled": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": true,
+  "glossary_version_state": "older_version",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.65,
+  "number_mismatch_count": 4,
+  "deadline_slack_hours": -39,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": true
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_for_item",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 77,
+ "deciding": {
+  "scope_matches": "Versions v4 and segments 140 match; word count 2200 vs 2188 is a small drift partly explained by repetitions.",
+  "reviewed_in_time": "review.signed_off true, completed 3h before delivered_at; only some doubt as QA critical is still counted.",
+  "next_step": "The one named missing item is the DTP step with done_at null; delivery is 20h ahead of due so not late.",
+  "open_severity": "qa_report.unresolved critical 1 even though the review lists its critical error as closed.",
+  "parties_needed": "DTP owner and the translator/QA person to clear the critical flag: about two parties."
+ },
+ "request": "rec-F437-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010678
+}

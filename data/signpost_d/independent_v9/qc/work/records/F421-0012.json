@@ -1,0 +1,121 @@
+{
+ "id": "F421-0012",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P20417",
+   "contents": "laptop",
+   "qty": 1,
+   "weight_kg": 2.1,
+   "declared_value_gbp": 2353.82
+  },
+  "handling_events": [
+   {
+    "ts": "2024-06-10T09:00",
+    "site": "HubE",
+    "code": "SCAN",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-06-10T14:00",
+    "site": "DEPOT",
+    "code": "INBOUND",
+    "exc": null
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": null,
+   "observed_item": "laptop",
+   "qty_found": 1,
+   "weight_kg": 2100,
+   "unit": "g",
+   "photos": [],
+   "repair_est_gbp": null
+  },
+  "claim": {
+   "claimed_gbp": 1830,
+   "submitted": "2024-06-12"
+  },
+  "notes": [
+   "Awaiting inspection slot."
+  ]
+ },
+ "factors": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 34.17,
+  "declared_value": 2353.82,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 2.28
+ },
+ "factors_sampled": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 34.17,
+  "declared_value": 2353.82,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 2.28
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_evidence",
+   "second": "approve_repack",
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 65,
+ "deciding": {
+  "depot_fault": "Upstream DMG code at HubE predates intake, but the report is silent; leans true only weakly.",
+  "contents_match": "Weight 2100 g vs 2.1 kg is just a unit difference.",
+  "next_step": "Inspection pending with null inspected_ts and estimate, so evidence is missing, but a claim exists.",
+  "loss_share": "No estimate; claim of 1830 is about 78% and may be inflated.",
+  "parties_needed": "Inspector, claims, upstream hub and sender may all be needed; uncertain whether three or four or more."
+ },
+ "request": "rec-F421-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005646
+}

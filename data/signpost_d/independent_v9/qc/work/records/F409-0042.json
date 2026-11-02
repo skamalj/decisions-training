@@ -1,0 +1,140 @@
+{
+ "id": "F409-0042",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A-5120",
+   "full_name": "Omar Haddad",
+   "submitted_on": "2025-04-02",
+   "app_type": "renewal",
+   "message": "Do permits cover bank holidays?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-10-27",
+     "address_line": "Flat 3, 9 Mill Lane",
+     "verified": true
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "LM68 VDC",
+   "keeper_name": "Omar Haddad"
+  },
+  "request": {
+   "zone_code": "B4",
+   "address": "3/9 Mill Lane",
+   "plate_entered": "LM68 VDC",
+   "duration_months": 12
+  },
+  "account_history": {
+   "live_permits": [
+    "P-31",
+    "P-32",
+    "P-33"
+   ],
+   "past_permits": [
+    {
+     "permit_no": "P-17",
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    }
+   ],
+   "exceptions": [
+    {
+     "type": "carer",
+     "approved_on": "2023-06-01"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "format_only",
+  "proof_age_days": 157,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 3,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "format_only",
+  "proof_age_days": 157,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 3,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve_temporary",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "balanced",
+   "target": "no_issue",
+   "second": "residence_proof",
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 65,
+ "deciding": {
+  "residency_shown": "Only residence document is a council tax bill issued 157 days before submission, beyond the 90-day limit.",
+  "disposition": "Stale proof with carer exception and cancelled PCNs suggests a time-limited permit rather than full approval.",
+  "main_issue": "Stale residence document (residence_proof) versus a renewal with cap exception, cancelled PCNs and matching keeper (no_issue).",
+  "misuse_strength": "Past permit P-17 seized for a cloned copy on a different vehicle, though the renewal is otherwise clean.",
+  "document_gaps": "Single bill is marked verified but aged 157 days; a renewal may need nothing more, or the stale bill counts as unverified."
+ },
+ "request": "rec-F409-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008907
+}

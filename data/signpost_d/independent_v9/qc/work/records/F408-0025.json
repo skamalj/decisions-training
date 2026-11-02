@@ -1,0 +1,121 @@
+{
+ "id": "F408-0025",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 100605,
+   "stream": "refuse",
+   "claimed_date": "2024-08-13",
+   "logged_at": "2024-08-13T17:30",
+   "photo_attached": false
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled_date": "2024-08-13"
+  },
+  "round_log": {
+   "completed_at": "2024-08-13T17:10",
+   "disruption_code": "VEH_BRK",
+   "catch_up_date": "2024-08-14",
+   "stops": [
+    {
+     "uprn": 100605,
+     "exception_code": "overweight",
+     "photo_ref": null,
+     "gps_stop": true
+    }
+   ],
+   "sweep_collected_at": "2024-08-14T09:00"
+  },
+  "history": [
+   {
+    "uprn": 100605,
+    "logged_on": "2024-07-10",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100605,
+    "logged_on": "2024-06-01",
+    "outcome": "rejected"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "overweight",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": true,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 1,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "overweight",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": true,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 4,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "return_conditional",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "crew_missed": "Overweight stop has GPS but no photo, and a sweep was collected later after a breakdown.",
+  "report_matches": "Stream and date match, but the report was logged only twenty minutes after round completion.",
+  "next_step": "Overweight exception with a later sweep suggests a return conditional on presentation.",
+  "return_urgency": "Sweep collection and the standard-return options leave level two or one defensible.",
+  "repeat_failures": "One upheld entry in window; the rejected entry does not count."
+ },
+ "request": "rec-F408-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005721
+}

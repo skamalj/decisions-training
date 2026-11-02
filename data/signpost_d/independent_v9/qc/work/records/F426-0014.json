@@ -1,0 +1,135 @@
+{
+ "id": "F426-0014",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B9",
+   "crop": "cherry",
+   "planted_area_ha": 2
+  },
+  "applications": [
+   {
+    "app_id": 1,
+    "date": "2024-03-10",
+    "product_code": "MK4",
+    "qty_applied": 5,
+    "qty_unit": "L",
+    "area_treated_ha": 2,
+    "sprayer_id": "S1",
+    "wind_kmh": 22
+   },
+   {
+    "app_id": 2,
+    "date": "2024-03-20",
+    "product_code": "MK4",
+    "qty_applied": 5,
+    "qty_unit": "L",
+    "area_treated_ha": 2,
+    "sprayer_id": "S1",
+    "wind_kmh": 20
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "MK4",
+    "max_rate_per_ha": 2,
+    "rate_unit": "L",
+    "phi_days": 28,
+    "approved_crops": [
+     "cherry"
+    ]
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "S1",
+   "sprayer_type": "tunnel_recycling",
+   "calibration_valid_to": "2024-12-01",
+   "nozzle_dev_pct": 3
+  },
+  "harvest": {
+   "first_pick_date": "2024-04-01",
+   "residue_test": {
+    "sampled": false
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "breached_short",
+  "rate_overrun_band": "above_10_to_25",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 2,
+  "high_wind_decoy": true
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 4,
+  "high_wind_decoy": true
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_and_test",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "interval_breach",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 70,
+ "deciding": {
+  "phi_cleared": "Pick 12 days after last spray against 28-day PHI: not elapsed.",
+  "next_step": "Interval not elapsed and no residue test sampled; hold and test.",
+  "finding_class": "Pick 2024-04-01 is before PHI end 2024-04-17: interval breach.",
+  "reversal_time": "Harvested fruit with residue risk; months to resolve, near 3-month edge.",
+  "rate_overrun": "5 L over 2 ha is 2.5 L/ha vs max 2, 25% over, at the edge of the 10-25% band."
+ },
+ "request": "rec-F426-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004835
+}

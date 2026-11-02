@@ -1,0 +1,137 @@
+{
+ "id": "F428-0011",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-0412",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 300,
+   "seal_type": "J_bulb",
+   "clear_width": 4.5,
+   "clear_width_unit": "m",
+   "consequence_class": "high"
+  },
+  "inspection": {
+   "insp_id": "I-8841",
+   "asset_id": "VL-0412",
+   "insp_date": "2025-03-10",
+   "closure_test": {
+    "performed": false,
+    "test_date": null,
+    "closure_s": null,
+    "leakage_l_min": null,
+    "leakage_limit_l_min": 40,
+    "result": null
+   }
+  },
+  "defects": [
+   {
+    "code": "D7",
+    "component": "seal_bulb",
+    "grade": 2,
+    "length_mm": 220,
+    "status": "open",
+    "first_seen": "2024-11-02"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [],
+   "last_service": "2024-09-15"
+  },
+  "operations": {
+   "outage": {
+    "status": "out_of_service",
+    "since": "2025-03-08",
+    "permit_ref": "P-2291",
+    "permit_expiry": "2025-03-24"
+   },
+   "temp_barrier_deployed": false,
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2025-04-10",
+    "peak_level_mAOD": 3.1,
+    "sill_level_mAOD": 2.4
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.86,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 0,
+  "mismatch_location": "width_units",
+  "test_status": "not_performed",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "approved_outage_permit",
+  "days_to_forecast_peak": 31,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.86,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 0,
+  "mismatch_location": "width_units",
+  "test_status": "not_performed",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "approved_outage_permit",
+  "days_to_forecast_peak": 31,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "seal",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 90,
+ "deciding": {
+  "closure_test_valid": "closure_test performed false with null timings, but gate is under valid permit and no test was required, so true vs false is near balance.",
+  "next_step": "Only a grade 2 seal defect, outage permit valid to 2025-03-24, no work order outstanding; sign-off leaning.",
+  "defect_class": "The only open defect is seal_bulb grade 2.",
+  "section_discrepancies": "Width 4.5 m with unit m everywhere; ids match; no clear mismatch, so 0 vs 1 is borderline.",
+  "flood_risk": "Gate out of service with no test or closure time and sill 2.4 below peak 3.1; leaning High though permit valid and peak is a month away."
+ },
+ "request": "rec-F428-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005501
+}

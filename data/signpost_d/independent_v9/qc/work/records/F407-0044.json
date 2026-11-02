@@ -1,0 +1,112 @@
+{
+ "id": "F407-0044",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-4172",
+   "received_at": "2025-07-15T08:00",
+   "channel": "own_inspector",
+   "photo_ref": "IMG-901",
+   "linked_reports": [],
+   "claim_ref": "CL-3350"
+  },
+  "location": {
+   "road_class": "local_access",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspected_at": "2025-07-16",
+   "depth_mm": 38,
+   "width_mm": 422.11,
+   "offset_m": 3
+  },
+  "works_history": [
+   {
+    "job": "J-17",
+    "completed": "2023-02-01",
+    "offset_m": 18,
+    "guarantee_end": "2024-02-01"
+   }
+  ],
+  "current_order": {
+   "id": "WO-612",
+   "status": "awaiting_signoff",
+   "completed_items": 3,
+   "total_items": 3
+  }
+ },
+ "factors": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "offset_18m_out_guarantee",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 0,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": true,
+  "order_status": "completed_awaiting_signoff",
+  "defect_width_mm": 422.11,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_out_guarantee",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 0,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": true,
+  "order_status": "completed_awaiting_signoff",
+  "defect_width_mm": 422.11,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "repeat_failure": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "meets_threshold": "depth_mm 38 is 2 mm under intervention_depth_mm 40.",
+  "repeat_failure": "Only prior job is 18 m from the defect and its guarantee ended in 2024, so not within ten metres.",
+  "next_step": "Below threshold and order WO-612 is 3/3 complete awaiting signoff, so close; the claim_ref gives some pull toward the engineer.",
+  "staff_effort": "Claim CL-3350 needs file work and signoff checks: possibly over five days, possibly one to five.",
+  "response_timescale": "Claim and no temp measure could demand a make-safe, but the shallow depth and finished order argue for priority timing."
+ },
+ "request": "rec-F407-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007261
+}

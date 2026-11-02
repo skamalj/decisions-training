@@ -1,0 +1,137 @@
+{
+ "id": "F416-0040",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "date": "2025-07-09",
+   "end": "16:00",
+   "signoff": "G6"
+  },
+  "roster": [
+   {
+    "id": "G6",
+    "exp": "2026-04-01"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "10:00",
+    "rip_risk": "mod",
+    "flag": "yellow",
+    "bathing_zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "date": "2025-07-09",
+    "type": "water_rescue",
+    "resp": [
+     "G6"
+    ],
+    "outcome": "conveyed",
+    "aed_used": true,
+    "ambulance_ref": "A-71"
+   },
+   {
+    "date": "2025-07-09",
+    "type": "first_aid",
+    "outcome": "released"
+   },
+   {
+    "date": "2025-07-09",
+    "type": "swimmer_assist",
+    "outcome": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jetski",
+    "out_from": "13:00",
+    "out_to": null
+   }
+  ],
+  "handover": {
+   "rescues": 1,
+   "first_aid": 2,
+   "kit_defects": 1,
+   "check_sheet_ref": "C2"
+  }
+ },
+ "factors": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "first_aid_includes_unclassed_assist",
+  "worst_outcome": "conveyed with aed_used true",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 0,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "referred",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "corrective_order",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "two_guard_cover": "The only water_rescue lists a single responder, G6, and the roster has only one guard.",
+  "totals_reconcile": "Handover first_aid is 2 but only one first_aid incident is itemised; the swimmer_assist incident could account for the second, so this is not decisive.",
+  "next_step": "A single-guard rescue and a jetski out with no substitute or end time are operational lapses that call for a station fix.",
+  "outcome_severity": "The outcome is conveyed with ambulance_ref A-71, but aed_used is true, which points to a possible AED shock.",
+  "kit_outage": "The jetski went out at 13:00 with out_to null and no substitute, and the shift ended at 16:00, so the outage is 180 minutes, exactly on the boundary."
+ },
+ "request": "rec-F416-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01015
+}

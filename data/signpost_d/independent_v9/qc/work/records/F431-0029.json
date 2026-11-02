@@ -1,0 +1,123 @@
+{
+ "id": "F431-0029",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "H4",
+   "seal_state": "intact",
+   "seal_checked_date": "2024-01-10"
+  },
+  "period_read": {
+   "read_date": "2024-03-31",
+   "reg_kwh": 6900,
+   "src_code": "AMR",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2024-02-29",
+    "reg_kwh": 6000,
+    "src_code": "AMR",
+    "same_period_ly_kwh": 850
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [],
+   "flow_temp_c": 67,
+   "return_temp_c": 41,
+   "battery_pct": 80
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 109,
+   "hdd_prior_year": 100,
+   "works_orders": [],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 0.97,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.09,
+  "diagnostic_error_count": 0,
+  "meter_works_order": false,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "system_estimate",
+  "read_sequence_issue": "none",
+  "missing_section": "previous_read_null",
+  "consumption_ratio": 1.95,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.09,
+  "diagnostic_error_count": 3,
+  "meter_works_order": false,
+  "consecutive_estimates": 2,
+  "delta_t_implausible": true,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 34,
+ "deciding": {
+  "meter_fault": "Nothing in the record shows a fault: no error codes, intact seal, delta-T 26 C, consumption normal. The routine note forced this away from the plan's true.",
+  "billable_actual": "AMR actual in sequence (6900 after 6000 on a later date) with consumption 900 vs expected about 927 (850*109/100).",
+  "next_step": "Everything passes: no errors, intact seal, no works orders or dispute, so release it.",
+  "staff_effort": "Nothing to resolve, so under an hour.",
+  "consumption_deviation": "900 against expected about 927 is roughly 3% under, below 15%."
+ },
+ "request": "rec-F431-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009637
+}

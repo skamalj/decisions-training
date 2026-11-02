@@ -1,0 +1,123 @@
+{
+ "id": "F433-0009",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H31",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "result": "pass"
+    }
+   ]
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "11:00",
+   "departed_at": "11:38"
+  },
+  "vet_card": {
+   "presented_at": "11:20",
+   "pulse_bpm": 64,
+   "cri": {
+    "first_bpm": 64,
+    "second_bpm": 65.4
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 2
+    },
+    {
+     "surface": "soft",
+     "grade": 0
+    }
+   ],
+   "vet_signed_at": "11:44"
+  },
+  "notes": {
+   "rider_note": "nearly lost a shoe on the road section"
+  }
+ },
+ "factors": {
+  "pulse_status": "met_at_boundary",
+  "time_mismatch": "none",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": true,
+  "metabolic_flags": 0,
+  "cri_rise": 1.42,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": true,
+  "note_tone": "alarming_irrelevant"
+ },
+ "factors_sampled": {
+  "pulse_status": "not_met",
+  "time_mismatch": "none",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": true,
+  "metabolic_flags": 0,
+  "cri_rise": 1.42,
+  "missing_items": 2,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "eliminate_ftq",
+   "second": "clear_to_continue",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "balanced",
+   "target": "ftq_metabolic",
+   "second": "pass",
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "pulse_met": "Presented 11:20 is exactly at the end of the window from 11:00, and pulse 64 equals the limit, so it is met only at the boundary.",
+  "next_step": "The hard trot-up is grade 2 but the soft one is grade 0, and the horse left at 11:38 before the 11:44 signature, so stopping versus clearing is disputed.",
+  "outcome_code": "Pulse sits right on the limit and CRI is small, so it reads as either a pass or a marginal pulse failure, and the mixed gait grades are unclear.",
+  "welfare_risk": "gate.departed_at 11:38 is earlier than vet_signed_at 11:44, so the horse was on course uncleared, which is the critical level.",
+  "record_completeness": "All readings and the signature are present and in sequence, but the departure before the signature is an oddity."
+ },
+ "request": "rec-F433-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011353
+}

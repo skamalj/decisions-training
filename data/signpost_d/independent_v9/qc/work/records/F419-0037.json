@@ -1,0 +1,150 @@
+{
+ "id": "F419-0037",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "16/34",
+   "date": "2024-08-14",
+   "speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": {
+    "precip_mm": 0
+   }
+  },
+  "device": {
+   "cal_expiry": "2025-03-01",
+   "tyre_pressure_kpa": 210,
+   "tyre_spec_kpa": [
+    200,
+    220
+   ],
+   "water_depth_mm": 1.0
+  },
+  "runs": [
+   {
+    "dir": "16",
+    "mean_speed_kmh": 65,
+    "thirds": [
+     0.71,
+     0.78,
+     0.8
+    ]
+   },
+   {
+    "dir": "34",
+    "mean_speed_kmh": 64,
+    "thirds": [
+     0.8,
+     0.78,
+     0.72
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.9,
+    0.9,
+    0.9
+   ],
+   "mtd_threshold_mm": 0.6,
+   "contaminant": "dry"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-09-29",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start_date": "2024-08-25"
+    }
+   ],
+   "cross_checks": [],
+   "prior_surveys": [
+    {
+     "date": "2024-02-10",
+     "lowest_third": 0.74
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-08-15T09:00Z"
+  }
+ },
+ "factors": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 320,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_planning",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "mid_section",
+  "days_since_rubber_removal": 320,
+  "removal_scheduled": false,
+  "calibration_status": "expired",
+  "missing_elements_count": 3,
+  "test_condition_anomaly": "speed_off",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "declining"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "monitor_closely",
+   "second": "restrict_ops",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "rubber_deposits",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "genuine_deficit": "The lowest third is 0.71, just under design 0.72 and far above the 0.52 planning level, so no deficit below planning is shown. The slide from 0.74 gives some doubt.",
+  "next_step": "Touchdown thirds are marginally under design and removal is already scheduled for 2024-08-25, which favours monitoring. The falling trend keeps stronger action plausible.",
+  "deficit_driver": "The low values sit in the touchdown thirds (0.71 in 16, 0.72 in 34), mtd_mm 0.9 is against 0.6 and last rubber removal was 320 days ago.",
+  "friction_severity": "The lowest value, 0.71, is 0.01 under the 0.72 design level, which holds levels 0 and 1 in balance.",
+  "evidence_completeness": "Calibration is valid, tyre pressure, water depth, weather and both runs are present, and signed_at is after the survey. This is complete, with slight doubt only about trivial gaps."
+ },
+ "request": "rec-F419-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010856
+}

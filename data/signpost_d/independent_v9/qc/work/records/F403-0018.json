@@ -1,0 +1,137 @@
+{
+ "id": "F403-0018",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "egg",
+    "milk",
+    "soy",
+    "nut"
+   ],
+   "plan_start": "2025-04-10"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-01-01",
+   "allergens": [
+    "egg",
+    "milk",
+    "soy",
+    "nut"
+   ]
+  },
+  "menu_mapping": {
+   "dishes": [
+    {
+     "contains": [
+      "egg"
+     ],
+     "substitute": "vegan quiche"
+    },
+    {
+     "contains": [
+      "milk",
+      "soy"
+     ],
+     "substitute": "oat bake"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": false
+  },
+  "history": {
+   "review_date": "2025-04-10",
+   "incidents": [
+    {
+     "date": "2025-04-10",
+     "dish": "quiche",
+     "note": "no reaction observed"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "segregated_equipment_false",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 0,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "expired",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 15,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate_to_lead",
+   "second": "approve_plan",
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "kitchen_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 25,
+ "deciding": {
+  "evidence_allergens_covered": "Nut appears in the evidence but in no mapped dish, though egg, milk and soy are substituted, so coverage is only modestly favoured.",
+  "next_step": "A served incident on plan_start calls for escalation, but the 'no reaction observed' note and a plan otherwise mapped could support approval.",
+  "first_gap_stage": "Clinician letter is unexpired and the dishes are mapped, but segregated_equipment is false with no approved exception.",
+  "exposure_proximity": "Incident dated 2025-04-10, on plan_start, involved quiche containing egg, a declared allergen; the dish also has a substitute, leaving slight doubt.",
+  "meal_urgency": "plan_start equals review_date and an incident is already logged that day, so the pupil is eating (level 4), although the first meal could be read as the same day (level 3)."
+ },
+ "request": "rec-F403-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011976
+}

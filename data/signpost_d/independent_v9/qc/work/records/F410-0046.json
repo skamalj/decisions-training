@@ -1,0 +1,149 @@
+{
+ "id": "F410-0046",
+ "family": "F410",
+ "state": {
+  "application": {
+   "app_ref": "A-1041",
+   "term_start": "2025-04-01",
+   "term_end": "2026-03-31",
+   "pitch_req": {
+    "width_m": 3.11
+   },
+   "commodities": [
+    "candles",
+    "soaps",
+    "incense holders"
+   ],
+   "docs_pending": [
+    "id",
+    "ledger"
+   ]
+  },
+  "licence_current": {
+   "pitch": {
+    "width_m": 3.0
+   },
+   "commodities": [
+    "candles",
+    "soaps"
+   ],
+   "conditions": {
+    "min_attendance_pct": 75
+   },
+   "variations": []
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-03-26",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": true,
+    "new_end": null
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2025",
+     "amount_gbp": 420
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2025-05-02",
+     "amount_gbp": 313.08
+    }
+   ],
+   "payment_plan": {
+    "active": true,
+    "instalments_left": 2,
+    "missed": 0
+   }
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 40,
+   "absence_notices": [],
+   "complaints": [],
+   "enforcement_notices": 0
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_within_14d",
+  "broker_confirmation_held": false,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.11,
+  "variation_approved": false,
+  "fee_arrears_gbp": 106.92,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.8,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": true,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.11,
+  "variation_approved": false,
+  "fee_arrears_gbp": 106.92,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.8,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "defer",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "contested",
+   "target": "desk_check",
+   "second": "scheduled_visit",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 64,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-03-26 is five days before term_end; broker_conf received but new_end null, so extension is not shown. Cover is near-complete, which keeps true plausible.",
+  "renewal_disposition": "docs_pending lists two outstanding items, so the renewal should be held until they arrive; nothing else is serious.",
+  "inspection_level": "Incense holders added with no approved variation suggests a visit; the change is small and documents are the main gap, so desk_check is also defensible.",
+  "reversal_time": "A deferral over lapsing cover and pending documents could be undone in weeks or take months; no field fixes the duration.",
+  "discrepancy_count": "Unapproved commodity addition and the unconfirmed pli end are unresolved; arrears are covered by the active plan with missed 0. Whether the pli gap counts separately keeps one versus two open."
+ },
+ "request": "rec-F410-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009247
+}

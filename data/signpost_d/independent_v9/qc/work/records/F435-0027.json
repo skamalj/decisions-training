@@ -1,0 +1,159 @@
+{
+ "id": "F435-0027",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E204",
+   "zone_id": "FLR1",
+   "zone_type": "standing_floor",
+   "doors_open": "2025-05-10T20:00",
+   "check_filed_at": "2025-05-11T00:30",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 400,
+   "variation": {
+    "ref": "V3",
+    "new_limit": 500,
+    "status": "approved",
+    "approved_on": "2025-05-08T10:00"
+   },
+   "stewards_required": 25,
+   "exit_routes": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 500,
+   "issued": 525,
+   "comps_included": 40,
+   "scanned_in": 515
+  },
+  "ingress": {
+   "device_id": "I-9",
+   "device_status": "calibration_due",
+   "raw_peak": 575,
+   "peak_at": "2025-05-10T22:10",
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 27,
+   "signed_in": 24,
+   "late_signin": 1,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "A",
+    "checked_at": "2025-05-10T18:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "B",
+    "checked_at": "2025-05-10T18:40",
+    "status": "clear"
+   },
+   {
+    "route_id": "C",
+    "checked_at": "2025-05-10T18:50",
+    "status": "clear"
+   },
+   {
+    "route_id": "D",
+    "checked_at": "2025-05-10T20:15",
+    "status": "clear"
+   },
+   {
+    "route_id": "E",
+    "checked_at": "2025-05-10T19:00",
+    "status": "obstructed"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.15,
+  "counter_status": "calibration_due",
+  "counter_inflation": 0.02,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 1.05,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.04,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 3,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.15,
+  "counter_status": "calibration_due",
+  "counter_inflation": 0.02,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.93,
+  "limit_mismatch": false,
+  "steward_gap_pct": -0.04,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 1,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "sign_off",
+   "second": "hold",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "ticket_overissue",
+   "second": null,
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 200,
+ "deciding": {
+  "verified_exceedance": "The counter is calibration_due but still valid, with raw_peak 575 against an effective limit of 500 (variation approved before doors), so the occupancy is verified over the limit.",
+  "disposition": "The event is over with a clearly exceeded limit and 3 unconfirmed routes, yet the record is complete and nothing is missing apart from stewards one short. Reviewers could reasonably split between approving the zone and holding it.",
+  "discrepancy_source": "Issued 525 exceeds the 500 limit that ticketing used; zone_limit_used matches the effective limit, so there is no limit mismatch. The 575 peak above issued leaves slight doubt.",
+  "steward_shortfall": "24 signed in against 25 required is 4% short, but one late sign-in could bring the count to 25. Level 0 and level 1 are both defensible.",
+  "unconfirmed_exits": "D was checked clear only after doors, E is obstructed with no later clear, and F has no entry, so 3 of 6 routes lack a pre-doors clear."
+ },
+ "request": "rec-F435-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013993
+}

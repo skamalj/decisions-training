@@ -1,0 +1,129 @@
+{
+ "id": "F406-0022",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-7032",
+   "gallery_code": "GAL-03",
+   "session_date": "2025-05-09",
+   "open": "10:00",
+   "close": "17:30",
+   "certified_limit": 80
+  },
+  "counts": {
+   "intervals": null,
+   "summary_peak": 110,
+   "manual_tally_peak": 112,
+   "ticket_scans": 331,
+   "counter_entries": 318
+  },
+  "variations": [
+   {
+    "ref": "V-305",
+    "gallery_code": "GAL-03",
+    "valid_from": "2025-05-05",
+    "valid_to": "2025-05-11",
+    "uplift_to": 100,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "gates": [
+    "E1",
+    "E2"
+   ],
+   "last_calibrated": "2025-02-20",
+   "maintenance": [
+    {
+     "gate": "E1",
+     "raised_at": "2025-05-09T18:05",
+     "summary": "count drift"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": "partial",
+   "routes_checked": "2 of 3",
+   "notes": "Dangerously packed, counter at east door seemed jumpy. Tally above 100 roughly 14:30 to 15:30."
+  },
+  "history": {
+   "overages_30d": 2
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 1.1,
+  "intervals_over_limit": 4,
+  "section_mismatch": "scans_vs_counter_minor",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "raised_after_session",
+  "interval_export_missing": true,
+  "egress_check": "partial",
+  "prior_overages_30d": 2,
+  "staff_note_tone": "alarmed_unsupported",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.71,
+  "intervals_over_limit": 10,
+  "section_mismatch": "scans_vs_counter_minor",
+  "variation_present": false,
+  "variation_scope": "matches",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "raised_after_session",
+  "interval_export_missing": true,
+  "egress_check": "partial",
+  "prior_overages_30d": 2,
+  "staff_note_tone": "alarmed_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_safety_lead",
+   "second": "request_counter_data",
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 86,
+ "deciding": {
+  "variation_applies": "V-305 is approved for GAL-03 with a window covering 2025-05-09, uplift to 100; the missing export leaves slight doubt.",
+  "fault_explains_overage": "E1 ticket raised 18:05, after the 17:30 close, plus an informal note about a jumpy east door; the ticket does not predate the session but a fault is plausible.",
+  "next_step": "Peak of 110-112 against 100 with partial egress check points to escalation, but the null interval export also supports requesting counter data.",
+  "peak_excess": "summary_peak 110 is exactly 10% over the uplift limit of 100 while the tally is 112, so levels 2 and 3 are both defensible.",
+  "intervals_over": "Interval export is null; the note says tally above 100 from about 14:30 to 15:30, which is three or four intervals."
+ },
+ "request": "rec-F406-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010649
+}

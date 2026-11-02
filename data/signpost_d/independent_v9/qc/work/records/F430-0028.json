@@ -1,0 +1,138 @@
+{
+ "id": "F430-0028",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "C",
+     "normal_band": [
+      40,
+      85
+     ],
+     "alarm_limit": 95,
+     "trip_limit": 105,
+     "customers_fed": 640,
+     "partner_id": "T2"
+    }
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 105,
+    "unit": "C"
+   },
+   {
+    "asset_id": "T1",
+    "param": "oil_level",
+    "value": 60,
+    "unit": "%"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "T1",
+    "note": "oil leaking heavily"
+   }
+  ],
+  "history": {
+   "previous_round": [
+    {
+     "asset_id": "T1",
+     "param": "oil_temp",
+     "value": 105
+    }
+   ],
+   "load_events": [
+    {
+     "asset_id": "T2",
+     "type": "transfer"
+    }
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "T2": "out_of_service"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": true,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 640,
+  "trivial_discrepancies": 2,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": true,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": true,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 6986,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "follow_up": {
+   "clarity": "clear",
+   "target": "work_order",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "defect_corroborated": "Note says heavy oil leak but oil level reads 60%, a normal level, so it looks overstated.",
+  "benign_explanation": "Load transfer is logged against T2, the partner, not T1, so whether it explains T1 heat is open.",
+  "follow_up": "Stable temperature at limit versus last round, no worsening, no missing items; planned work order.",
+  "limit_deviation": "Oil temp 105 C equals the trip limit, but a transfer could account for it, so alarm level is arguable.",
+  "supply_exposure": "Partner T2 is out of service and T1 feeds 640 customers, in the 100 to 999 range."
+ },
+ "request": "rec-F430-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009121
+}

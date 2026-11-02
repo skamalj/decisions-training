@@ -1,0 +1,136 @@
+{
+ "id": "F408-0049",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 420310,
+   "stream": "refuse",
+   "claimed": "2024-02-13",
+   "logged_at": "2024-02-16T11:15",
+   "photo": true
+  },
+  "property": {
+   "uprn": 420310,
+   "assisted": false
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "date": "2024-02-14"
+  },
+  "round_log": {
+   "completed_at": "2024-02-14T14:45",
+   "stops": [
+    {
+     "uprn": 420310,
+     "exception": "not_presented",
+     "photo_ref": null,
+     "gps_stop": true
+    }
+   ],
+   "sweep_at": null
+  },
+  "history": [
+   {
+    "uprn": 420310,
+    "on": "2024-01-09",
+    "outcome": "rejected"
+   },
+   {
+    "uprn": 420310,
+    "on": "2023-09-18",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 420311,
+    "on": "2024-02-01",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 0,
+  "history_decoys": 3,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 3,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 64,
+ "deciding": {
+  "crew_missed": "The crew recorded not_presented with no photo_ref, but gps_stop is true and the resident attached a photo; both answers are defensible.",
+  "report_matches": "The claimed date 2024-02-13 does not equal the scheduled date 2024-02-14.",
+  "next_step": "The date mismatch and a not_presented stop with GPS support closing the case, with only the missing crew photo as a doubt.",
+  "return_urgency": "Wrong claimed date and a not_presented stop leave no case to uphold, and the property is not assisted.",
+  "repeat_failures": "No upheld entry for this UPRN in the window; the only other entries are rejected, older than 84 days, or for UPRN 420311."
+ },
+ "request": "rec-F408-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010405
+}

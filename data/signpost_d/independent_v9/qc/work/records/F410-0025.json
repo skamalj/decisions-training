@@ -1,0 +1,177 @@
+{
+ "id": "F410-0025",
+ "family": "F410",
+ "state": {
+  "application": {
+   "app_ref": "A-7714",
+   "licence_no": "L-160",
+   "holder_ref": "H-2093",
+   "term_start": "2025-10-01",
+   "term_end": "2026-09-30",
+   "pitch_req": {
+    "market": "Old Square",
+    "width_m": 3.13,
+    "depth_m": 2.5
+   },
+   "commodities": [
+    "jam",
+    "cakes"
+   ],
+   "docs_pending": [
+    "pli_cert",
+    "gas_cert"
+   ]
+  },
+  "licence_current": {
+   "licence_no": "L-160",
+   "holder_ref": "H-2093",
+   "expires": "2025-09-30",
+   "pitch": {
+    "market": "Old Square",
+    "pitch_no": 6,
+    "width_m": 3.0,
+    "depth_m": 2.5
+   },
+   "commodities": [
+    "jam"
+   ],
+   "conditions": {
+    "min_attendance_pct": 70
+   },
+   "variations": [
+    {
+     "type": "commodity",
+     "detail": "cakes",
+     "approved": true,
+     "approved_on": "2025-04-22"
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-03-15",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": true,
+    "new_end": "2026-03-15"
+   },
+   "food_reg": {
+    "registered": true,
+    "fhrs_rating": 4,
+    "inspected_on": "2025-05-02"
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2024-25",
+     "amount_gbp": 543.57
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2024-10-08",
+     "amount_gbp": 500,
+     "method": "card"
+    }
+   ],
+   "payment_plan": {
+    "active": true,
+    "instalments_left": 1,
+    "missed": 0
+   }
+  },
+  "history": {
+   "allocated_12m": 52,
+   "attended_12m": 34,
+   "absence_notices": [],
+   "complaints": [
+    {
+     "date": "2025-06-03",
+     "category": "obstruction",
+     "upheld": true,
+     "status": "open"
+    }
+   ],
+   "enforcement_notices": 0
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_more_than_14d_early",
+  "broker_confirmation_held": true,
+  "commodity_change": "food_added",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.13,
+  "variation_approved": true,
+  "fee_arrears_gbp": 43.57,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.65,
+  "absences_notified": false,
+  "complaint_profile": "upheld_open_non_safety",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "ends_more_than_14d_early",
+  "broker_confirmation_held": true,
+  "commodity_change": "food_added",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.13,
+  "variation_approved": true,
+  "fee_arrears_gbp": 43.57,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.65,
+  "absences_notified": false,
+  "complaint_profile": "upheld_open_non_safety",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "renewal_disposition": {
+   "clarity": "leaning",
+   "target": "refuse",
+   "second": null,
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "clear",
+   "target": "desk_check",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 84,
+ "deciding": {
+  "pli_term_covered": "Held in balance: pli.end and broker new_end 2026-03-15 are months short of term_end 2026-09-30, but pli_cert is pending and may extend it.",
+  "renewal_disposition": "Attendance 34/52 is below 70% with no notices, plus an open upheld complaint and two pending documents, favouring refuse.",
+  "inspection_level": "The cakes addition is an approved variation, food registration is current at rating 4, and the width delta is 0.13m, so only documents need checking.",
+  "reversal_time": "Held in balance: a refusal or grant with the open complaint could take months to undo, within or beyond three months.",
+  "discrepancy_count": "Held in balance: the PLI end date short of the term and the attendance shortfall are real, but the pending pli_cert and the small balance on an active plan may explain them."
+ },
+ "request": "rec-F410-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007446
+}

@@ -1,0 +1,154 @@
+{
+ "id": "F437-0010",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "2",
+   "glossary_version": "g1",
+   "due_at": "2025-07-20T09:00",
+   "terms": {
+    "variant_accepted": true
+   }
+  },
+  "source": {
+   "version": "2",
+   "segment_count": 90
+  },
+  "deliverable": {
+   "built_from_version": "2.1",
+   "segments_translated": 90,
+   "glossary_version_used": "g1",
+   "delivered_at": "2025-07-16T16:00"
+  },
+  "qa_report": {
+   "flags": 30,
+   "false_positive_marked": 2,
+   "number_mismatches": [
+    [
+     "5",
+     "15"
+    ],
+    [
+     "8.1",
+     "81"
+    ],
+    [
+     "300",
+     "30"
+    ],
+    [
+     "1999",
+     "1990"
+    ],
+    [
+     "6",
+     "9"
+    ],
+    [
+     "44",
+     "4"
+    ]
+   ],
+   "unresolved": {
+    "critical": 1
+   }
+  },
+  "review": {
+   "completed_at": "2025-07-16T12:00",
+   "signed_off": null,
+   "errors": [
+    {
+     "sev": "major",
+     "status": "open"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-06-01",
+    "2025-06-10",
+    "2025-06-20",
+    "2025-07-01"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "completed_not_signed",
+  "open_error_profile": "one_major_and_one_unresolved_critical_qa_flag",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.07,
+  "number_mismatch_count": 6,
+  "deadline_slack_hours": 89,
+  "client_waiver": true,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.07,
+  "number_mismatch_count": 6,
+  "deadline_slack_hours": 89,
+  "client_waiver": true,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_for_item",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "scope_matches": "Segments are 90 of 90. Build version 2.1 differs from ordered version 2, but variant_accepted is true, so it is arguably in scope.",
+  "reviewed_in_time": "Review completed_at 12:00 precedes the 16:00 delivery, but signed_off is null. Whether completion without sign-off counts is open.",
+  "next_step": "The single missing item is the review sign-off (signed_off null). Delivery is 89 hours before the due time and a waiver is present, so the right action is to hold and request that sign-off.",
+  "open_severity": "The review error is major and open, but QA unresolved shows 1 critical that may duplicate the number mismatches. Critical versus major is contestable.",
+  "parties_needed": "The reviewer must sign off, and the translator may need to fix the number mismatches. That is one or two parties."
+ },
+ "request": "rec-F437-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011372
+}

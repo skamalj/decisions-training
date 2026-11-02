@@ -1,0 +1,122 @@
+{
+ "id": "F428-0007",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-208",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 240,
+   "seal_type": "music_note"
+  },
+  "inspection": {
+   "asset_id": "VL-209",
+   "insp_date": "2025-04-15",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-03-28",
+    "closure_s": 175,
+    "leakage_l_min": 9,
+    "leakage_limit_l_min": 10,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D3",
+    "component": "seal",
+    "grade": 4,
+    "status": "open",
+    "first_seen": "2024-11-02"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W88",
+     "component": "seal",
+     "defect_code": "D3",
+     "grade_raised": 4,
+     "status": "complete",
+     "completed": "2025-04-02",
+     "retest_insp_id": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.73,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 1,
+  "mismatch_location": "asset_id",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "completed_tested",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 29,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.73,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 2,
+  "mismatch_location": "asset_id",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "completed_tested",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 29,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_retest",
+   "second": "raise_repair",
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "seal",
+   "second": null,
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "closure_test_valid": "Test passed on 2025-03-28 but work order W88 completed 2025-04-02 with retest_insp_id null; the pass predates the repair, yet the figures were within limits.",
+  "next_step": "W88 is complete but unlinked to any retest and D3 is still open: a retest is the natural step, though a further repair order is arguable.",
+  "defect_class": "The only open defect D3 is on the seal component at grade 4.",
+  "section_discrepancies": "asset_id VL-208 in the register versus VL-209 in the inspection is the one disagreement; other values (grade 4 in both D3 and W88) agree.",
+  "flood_risk": "Open grade 4 seal defect gives High; whether the gate would still close after the unverified seal repair, hence Critical, is unproven."
+ },
+ "request": "rec-F428-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009068
+}

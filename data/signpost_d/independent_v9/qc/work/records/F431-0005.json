@@ -1,0 +1,136 @@
+{
+ "id": "F431-0005",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM3306",
+   "last_verified_date": "2018-05-21",
+   "seal_state": "intact",
+   "seal_checked_date": "2024-03-28"
+  },
+  "period_read": {
+   "read_date": "2024-03-28",
+   "reg_kwh": 20640,
+   "vol_m3": 812.4,
+   "src_code": "ENG",
+   "photo_ref": "IMG-8821"
+  },
+  "history": [
+   {
+    "date": "2024-02-27",
+    "reg_kwh": 20000,
+    "src": "AMR",
+    "ly_kwh": 700
+   },
+   {
+    "date": "2024-01-28",
+    "reg_kwh": 19350,
+    "src": "AMR"
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_TPROBE",
+    "E_COMMS"
+   ],
+   "flow_temp_c": 68,
+   "return_temp_c": 42,
+   "battery_pct": 18,
+   "firmware": "2.3.1"
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 455,
+   "hdd_prior_year": 500,
+   "works_orders": [],
+   "tariff_code": "T2",
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "engineer_manual",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.0,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.91,
+  "diagnostic_error_count": 2,
+  "meter_works_order": false,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "engineer_manual",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 0.83,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.91,
+  "diagnostic_error_count": 2,
+  "meter_works_order": false,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": true,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 76,
+ "deciding": {
+  "meter_fault": "E_TPROBE is logged but flow/return temperatures (68/42) are plausible, the seal is intact and consumption is normal.",
+  "billable_actual": "Engineer read with photo, in sequence after an AMR read, with consumption in line with expected.",
+  "next_step": "Engineer-verified read passes checks; the temperature probe code is the only residual doubt.",
+  "staff_effort": "Nothing open to resolve; under an hour.",
+  "consumption_deviation": "640 kWh against 700*455/500=637 expected, under 1% deviation."
+ },
+ "request": "rec-F431-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007098
+}

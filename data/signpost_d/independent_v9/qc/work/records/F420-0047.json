@@ -1,0 +1,109 @@
+{
+ "id": "F420-0047",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "AKE20817",
+   "serial": "20817",
+   "tare_kg": 100,
+   "planned_gross_kg": 1000,
+   "straps_required": 3,
+   "contour_max_cm": 160
+  },
+  "manifest_lines": [
+   {
+    "awb": "618-33440011",
+    "pcs": 5,
+    "weight_kg": 900
+   }
+  ],
+  "build_measured": {
+   "scale_gross_kg": 1010,
+   "max_height_cm": 140,
+   "pcs_counted": {
+    "618-33440011": 5
+   },
+   "straps_fitted": 3,
+   "net_fitted": true,
+   "uld_serial_scanned": "20871"
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 1.0,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "uld_serial_differs",
+  "minutes_to_cutoff": 255,
+  "prior_rebuilds": 3
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -7.01,
+  "piece_count_gap": -1,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "over_up_to_5cm",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "two_or_more_straps_short",
+  "scale_cal_overdue": true,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 255,
+  "prior_rebuilds": 3
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "leaning",
+   "target": "paperwork_only",
+   "second": null,
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "pieces_reconciled": "pcs_counted 5 equals manifest pcs 5.",
+  "disposition": "Scanned serial 20871 differs from header serial 20817; this single document confirmation is outstanding and nothing physical is wrong.",
+  "worst_discrepancy": "Only the ULD serial mismatch; build is within limits and no DG.",
+  "weight_deviation": "1010 vs 1000 planned is exactly 1.0%, the edge of levels 0 and 1.",
+  "rework_extent": "Straps 3 of 3, height 140 under 160, counts match; no physical change needed."
+ },
+ "request": "rec-F420-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012543
+}

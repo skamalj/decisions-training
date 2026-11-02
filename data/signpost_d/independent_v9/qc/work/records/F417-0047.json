@@ -1,0 +1,109 @@
+{
+ "id": "F417-0047",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "loa_m": 12.0,
+   "draught_m": 1.55,
+   "draught_src": "owner"
+  },
+  "berth": {
+   "max_loa_m": 14,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 2.5
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 13.3,
+    "draught_m": null
+   },
+   "insurance_expiry": "2026-12-31"
+  },
+  "account": {
+   "dues_outstanding_gbp": 582,
+   "plan_id": null
+  },
+  "booking": {
+   "departure": "2026-06-10"
+  }
+ },
+ "factors": {
+  "loa_mismatch_pct": 10.81,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 0.95,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 582,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 2,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 10.81,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 0.83,
+  "draught_source": "owner_declared",
+  "insurance_status": "missing",
+  "inspection_state": "scheduled",
+  "arrears_amount": 582,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 2,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "confirm_allocation",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "account_arrears",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 26,
+ "deciding": {
+  "length_fits": "Survey loa 13.3 is within 14 + 0.5.",
+  "next_step": "Insurance covers the stay and nothing is missing; the small dues are the only loose end.",
+  "primary_issue": "Dues outstanding 582 with no plan_id is the only issue.",
+  "ukc_band": "Depth 2.5 minus declared draught 1.55 = 0.95 m, just under the 1 m anchor.",
+  "unresolved_count": "Vessel loa 12.0 vs survey 13.3, unsurveyed draught and dues without a plan sit near the two/three boundary."
+ },
+ "request": "rec-F417-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008586
+}

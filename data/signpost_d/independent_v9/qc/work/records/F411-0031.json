@@ -1,0 +1,127 @@
+{
+ "id": "F411-0031",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H-4471",
+   "type": "hackney",
+   "expiry": "2025-03-31",
+   "review_date": "2025-03-20"
+  },
+  "vehicle": {
+   "reg": "KX12ABC",
+   "odometer_km": 148222
+  },
+  "inspection": {
+   "station": "TS-08",
+   "date": "2025-03-12",
+   "result_code": "PA",
+   "brake_efficiency_pct": 61
+  },
+  "defects": [
+   {
+    "code": "LT-3",
+    "grade": "advisory",
+    "rectify_by": "2025-04-15",
+    "repaired_on": null,
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-09-01"
+   },
+   {
+    "type": "mot_cert",
+    "expires_on": "2025-03-15",
+    "cover_note_ref": "CN-55",
+    "cover_until": "2025-03-21"
+   }
+  ],
+  "history": [
+   {
+    "date": "2025-01-10",
+    "result": "F",
+    "odometer_km": 148240
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "advisory",
+  "rectification_state": "not_started",
+  "deadline_passed": false,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 12
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "not_started",
+  "deadline_passed": false,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 12
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "refuse_renewal",
+   "second": "refer_committee",
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "advisory_only",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 80,
+ "deciding": {
+  "odometer_consistent": "Current 148222 km is only 18 km below the last history reading of 148240; no cluster replacement is logged, so a small doubt remains.",
+  "next_step": "The 18 km drop with no replacement could send it to committee, while the cover-noted document and open item could be read as grounds for refusal; the two are in balance.",
+  "inspection_outcome": "The only defect item is graded advisory; nothing is graded minor, major or dangerous.",
+  "document_gaps": "The MOT cert expired 2025-03-15, before the review date of 03-20, but cover note CN-55 runs to 03-21, only a day past review. That counts as in date, but only just.",
+  "outstanding_severity": "The advisory item carries a rectify_by date of 2025-04-15, after the review date, and is unrepaired. It looks like a minor item still within deadline, but it is graded advisory."
+ },
+ "request": "rec-F411-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010982
+}

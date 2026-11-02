@@ -1,0 +1,149 @@
+{
+ "id": "F414-0012",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "CF-31",
+   "equip_type": "climbing_frame",
+   "crit_fall_height_m": 2.4,
+   "surf_type": "wood_chip",
+   "variance_ref": {
+    "ref": "V-22",
+    "expires": "2025-12-31"
+   }
+  },
+  "inspection": {
+   "insp_date": "2024-07-09",
+   "insp_grade": "annual_main",
+   "fall_height_m": 2.4,
+   "surf_type_found": "wood_chip",
+   "surf_depth_mm": 172,
+   "surf_req_table": [
+    {
+     "max_h": 2.5,
+     "type": "wood_chip",
+     "min_depth_mm": 200
+    }
+   ],
+   "probe_results": [],
+   "findings": [
+    {
+     "defect_code": "CR2",
+     "component_id": "C-rung4",
+     "injury_mech": "serious"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "CF-31",
+    "component_id": "C-rung4",
+    "defect_ref": "D4",
+    "status": "open"
+   },
+   {
+    "wo_id": "W2",
+    "asset_id": "CF-31",
+    "component_id": "C-rail",
+    "defect_ref": "D5",
+    "status": "closed",
+    "closed_date": "2024-07-20"
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 0
+  },
+  "history": [
+   {
+    "date": "2023-07-05",
+    "defect_refs": [
+     "D4",
+     "D5"
+    ]
+   },
+   {
+    "date": "2024-07-25",
+    "component": "C-rung4",
+    "result": "pass"
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -28.0,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": "0.5 by status, 0 by closed date",
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 0
+ },
+ "factors_sampled": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -28.3,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 2,
+  "work_orders_closed_fraction": 0.45,
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 0
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "contested",
+   "target": "close_asset",
+   "second": "sign_off",
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "prior_defects_cleared": "D4 order W1 is still open, but a pass follow-up check on C-rung4 is dated 2024-07-25, after the inspection. D5 order W2 closed 2024-07-20, after insp_date.",
+  "surfacing_adequate": "Depth 172 mm against a 200 mm minimum for wood chip at 2.4 m: 28 mm short.",
+  "asset_disposition": "A serious-mechanism finding on C-rung4 and short surfacing argue for closing the asset. A valid variance V-22 (expires 2025-12-31), a passed follow-up check, no incidents and medium use argue for sign-off.",
+  "remedial_progress": "W2 has status closed but its closed_date is after the inspection, and W1 is open. Level 1 if counted by status, level 0 if counted by date.",
+  "hazard_severity": "Finding CR2 is rated serious (level 3). The variance and the passed follow-up check on the same component make level 2 plausible."
+ },
+ "request": "rec-F414-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015177
+}

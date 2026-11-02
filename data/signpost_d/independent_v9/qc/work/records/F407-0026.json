@@ -1,0 +1,122 @@
+{
+ "id": "F407-0026",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "PR-4471",
+   "received_at": "2025-03-12T09:14:00Z",
+   "channel": "public_app",
+   "photo_ref": "IMG-8812",
+   "linked_reports": [
+    "PR-4460",
+    "PR-4466"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "usrn": 21003417,
+   "road_class": "local_access",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspector": "HI-07",
+   "inspected_at": "2025-02-20",
+   "depth_mm": 75,
+   "width_mm": 1309.22,
+   "offset_m": null
+  },
+  "works_history": [
+   {
+    "job": "J-1190",
+    "completed": "2024-11-05",
+    "offset_m": null,
+    "guarantee_end": "2025-11-05"
+   }
+  ],
+  "programme": {
+   "temp_measures": [
+    {
+     "type": "cone",
+     "expiry": "2025-04-30"
+    }
+   ]
+  },
+  "current_order": null
+ },
+ "factors": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 2,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 1309.22,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "none",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 2,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 1309.22,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "repeat_failure": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 54,
+ "deciding": {
+  "meets_threshold": "Inspection depth 75 vs threshold 40, but inspected_at 2025-02-20 predates received_at 2025-03-12, so validity is doubtful.",
+  "repeat_failure": "Street-level job J-1190 within guarantee has null offset; same spot is plausible but unconfirmed.",
+  "next_step": "Cone in place until April and no order, claim or scheme; a closure is plausible though the stale inspection leaves doubt.",
+  "staff_effort": "Wide defect, stale inspection and possible guarantee recall could mean days of work, or a few days if simple.",
+  "response_timescale": "Depth exceeds threshold, favouring a routine repair, but the stale inspection and temporary measure leave no-repair plausible."
+ },
+ "request": "rec-F407-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005403
+}

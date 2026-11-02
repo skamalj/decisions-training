@@ -1,0 +1,128 @@
+{
+ "id": "F430-0043",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "CB4",
+     "unit": "kPa",
+     "alarm_limit": 520,
+     "trip_limit": 480,
+     "customers_fed": 10368,
+     "partner_id": "CB5"
+    }
+   ]
+  },
+  "round": {
+   "scheduled_assets": [
+    "CB4",
+    "T2",
+    "B1"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "CB4",
+    "param": "sf6",
+    "value": 4.8,
+    "unit": "bar"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "CB4",
+    "note": "Gas low.",
+    "photo_ref": null
+   }
+  ],
+  "history": {
+   "previous_round": {
+    "CB4": 5.0
+   }
+  },
+  "network": {
+   "partner_status": {
+    "CB5": "in_service"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "trip",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": false,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": true,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 10368,
+  "trivial_discrepancies": 2,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "normal",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": false,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": true,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 10368,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "balanced",
+   "target": "hold_return",
+   "second": "recheck_next_round",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 37,
+ "deciding": {
+  "defect_corroborated": "Gas low note agrees with 4.8 bar falling from 5.0, but photo_ref is null.",
+  "benign_explanation": "No permit, work order or load event is recorded; absence of any cause leaves doubt either way.",
+  "follow_up": "T2 and B1 have no readings and the photo is missing, favouring return; the worsening reading could justify a recheck.",
+  "limit_deviation": "4.8 bar is 480 kPa, exactly at the trip limit and just past the 520 alarm; alarm or trip both defensible.",
+  "supply_exposure": "CB4 feeds 10368 customers, near the 10,000 line, and partner CB5 is in service, so level 3 or 4 is arguable."
+ },
+ "request": "rec-F430-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006071
+}

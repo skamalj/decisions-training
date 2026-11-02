@@ -1,0 +1,152 @@
+{
+ "id": "F427-0046",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V-1041",
+   "site_ref": "BB-17",
+   "visit_date": "2024-07-09",
+   "surveyor_grade": "senior",
+   "weather_on_day": "dry"
+  },
+  "site_targets": {
+   "band_top_cm": 10,
+   "band_floor_cm": 30,
+   "dipwells_scheduled": 14,
+   "dams_total": 6
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "W3",
+     "depth_cm": 64
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 48,
+     "prev_depth_cm": 47
+    }
+   ],
+   "rain_30d_pct_normal": 138
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam": "D2",
+     "pool_level_cm": 35,
+     "design_pool_cm": 35,
+     "defect_code": "OK",
+     "remark": "Holding water."
+    },
+    {
+     "dam": "D5",
+     "pool_level_cm": 30,
+     "design_pool_cm": 30,
+     "defect_code": "OK",
+     "remark": "Sound."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": null,
+  "notes": {
+   "surveyor_note": "Routine visit.",
+   "prior_visits": [
+    {
+     "date": "2023-05-02",
+     "dam": "D2",
+     "event": "breach"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.07,
+  "photos_status": "none",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": -33.73,
+  "rainfall_pct_normal": 138.24,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.07,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "failed",
+  "water_table_offset_cm": -33.73,
+  "rainfall_pct_normal": 138.24,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 3,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "well_below",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 127,
+ "deciding": {
+  "dam_caused_drop": "Wet 30 days (138%) and stable control well, so weather does not explain the deep reading; one old breach on D2 gives weak support, but both dams now hold.",
+  "next_step": "Dams OK, no open work orders, no defect; nothing calls for action, though missing elements leave some doubt.",
+  "hydro_state": "Well W3 depth 64 cm against band floor 30 cm is about 34 cm below the floor.",
+  "dam_severity": "Both inspected dams show pool equal to design and code OK.",
+  "evidence_completeness": "1 of 14 wells read (under 25%), vegetation null, no photo data; only the dam inspection is recorded."
+ },
+ "request": "rec-F427-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009663
+}

@@ -1,0 +1,151 @@
+{
+ "id": "F413-0018",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "care_home",
+   "zones": [
+    {
+     "z": "laundry",
+     "toxic_bait_permitted": false
+    }
+   ],
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ]
+  },
+  "visit": {
+   "tech_licence_expiry": "2026-02-28",
+   "start": "2025-04-03T10:00",
+   "end": "2025-04-03T11:15",
+   "client_signoff": "2025-04-03"
+  },
+  "treatments": [
+   {
+    "product": "BT-9",
+    "zone": "laundry",
+    "area_m2": 8,
+    "qty_applied": 280,
+    "unit": "g",
+    "label_max_per_m2": 25.27
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product": "BT-9",
+    "qty": 400,
+    "unit": "g"
+   },
+   {
+    "movement": "return",
+    "product": "BT-9",
+    "qty": 50,
+    "unit": "g"
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "activity": true
+   },
+   {
+    "id": "S2",
+    "activity": true
+   },
+   {
+    "id": "S3",
+    "activity": false
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 2,
+   "actions": [
+    {
+     "status": "raised",
+     "booked": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "surplus",
+  "stock_return_logged": true,
+  "station_count_gap": 2,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "stable",
+  "previous_visit_available": true,
+  "dose_overage_pct": 38.5,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "care_home"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": true,
+  "station_count_gap": 2,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": true,
+  "dose_overage_pct": 38.52,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "care_home"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (restricted_product_used = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 38,
+ "deciding": {
+  "usage_reconciled": "Net withdrawal 350 g against 280 g applied: a 70 g gap that the logged return does not close.",
+  "activity_increased": "2 active stations against previous 2, but S4 and S5 are missing from monitoring, so a rise cannot be ruled out.",
+  "next_step": "Dates are in order and sign-off is present, but BT-9 toxic bait in the laundry zone (toxic_bait_permitted false) calls for escalation, not filing.",
+  "breach_severity": "Toxic bait applied in the laundry zone where it is not permitted; the dose is also over label, but the prohibited use dominates.",
+  "parties_needed": "Corrective action raised but not booked: technician, manager and a revisit scheduler, with a possible client notification."
+ },
+ "request": "rec-F413-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010903
+}

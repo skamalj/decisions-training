@@ -1,0 +1,139 @@
+{
+ "id": "F428-0049",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "RD-502",
+   "gate_type": "radial",
+   "rated_closure_s": 120,
+   "consequence_class": "high"
+  },
+  "inspection": {
+   "asset_id": "RD-502",
+   "insp_date": "2025-09-04",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-09-04",
+    "closure_s": 114,
+    "leakage_l_min": 10.2,
+    "leakage_limit_l_min": 10,
+    "result": null
+   }
+  },
+  "defects": [
+   {
+    "code": "H3",
+    "component": "hoist",
+    "grade": 3,
+    "status": "open",
+    "first_seen": "2025-05-12"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W81",
+     "component": "hoist",
+     "defect_code": "H3",
+     "grade_raised": 3,
+     "status": "complete",
+     "completed": "2025-07-02",
+     "retest_insp_id": null
+    },
+    {
+     "wo_id": "W64",
+     "component": "hoist",
+     "defect_code": "H1",
+     "grade_raised": 2,
+     "status": "complete",
+     "completed": "2025-02-10"
+    }
+   ]
+  },
+  "operations": {
+   "temp_barrier_deployed": true,
+   "flood_alert_active": true,
+   "forecast": {
+    "peak_date": "2025-09-30"
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "radial",
+  "closure_time_ratio": 0.95,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "marginal_leak",
+  "repair_progress": "completed_untested",
+  "mitigation_present": true,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 26,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "radial",
+  "closure_time_ratio": 1.1,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 4,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "failed",
+  "repair_progress": "none_needed",
+  "mitigation_present": true,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 26,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "raise_repair",
+   "second": "escalate_engineer",
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "drive_actuation",
+   "second": null,
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 76,
+ "deciding": {
+  "closure_test_valid": "Closure 114 s is within the rated 120 s, but leakage of 10.2 is just over the limit of 10 and the result is null.",
+  "next_step": "The grade 3 hoist defect is still open after work order W81 was completed, with no retest and an earlier hoist order W64. A repeat failure favours an engineer, while the barrier deployed and the lack of an open order favour a new repair order.",
+  "defect_class": "The only open defect is the grade 3 hoist defect, which is drive gear.",
+  "section_discrepancies": "asset_id, the grade raised on W81 and the defect grade all agree.",
+  "flood_risk": "The gate closes within the rated time and has one grade 3 defect, with a temporary barrier deployed. The marginal leakage leaves some doubt."
+ },
+ "request": "rec-F428-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010367
+}

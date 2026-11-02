@@ -1,0 +1,306 @@
+{
+ "id": "F431",
+ "domain": "heat network meter readings",
+ "role": "Metering validation analyst at a district heat network operator, checking each billing-period meter reading before it is released to customer billing",
+ "setting": "A residential and commercial heat network supplies dwellings and small premises through heat interface units, each with a heat meter. Every billing period, each meter produces one reading record. Some are remote reads, some are submitted by customers, some come from engineer visits, and some are system estimates. The analyst opens one record at a time. Each record holds the meter's identity and condition, the current reading, recent reading history, device diagnostics and site context. The analyst decides whether the reading is billable, whether any anomaly points to the meter itself, what to do next, and how far consumption has strayed from what was expected.",
+ "questions": {
+  "meter_fault": {
+   "type": "noul",
+   "instructions": "The consumption anomaly is attributable to a faulty or tampered meter.",
+   "criteria": {
+    "true": "Diagnostics, seal or delta-T evidence corroborate a device fault.",
+    "false": "No corroborating fault evidence, or a benign explanation fits."
+   }
+  },
+  "billable_actual": {
+   "type": "noul",
+   "instructions": "The period reading is a valid actual reading fit for billing.",
+   "criteria": {
+    "true": "Actual read, in sequence, with consumption explained or plausible.",
+    "false": "Estimated, out of order, unevidenced or unexplained implausible consumption."
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should happen with this meter reading now?",
+   "criteria": {
+    "accept_reading": "Reading passes checks; release to billing without further work.",
+    "request_photo_read": "Ask occupant or site for dated meter photograph before deciding.",
+    "bill_estimate": "Replace unusable read with flagged estimate; correct at next actual.",
+    "escalate_engineer": "Refer to metering lead for site visit or dispute handling."
+   }
+  },
+  "staff_effort": {
+   "type": "score",
+   "instructions": "How much staff time would fully resolving this record require?",
+   "criteria": [
+    "Under one hour of staff time needed",
+    "One to eight hours of staff time",
+    "One to five working days of staff time",
+    "More than five working days of staff time"
+   ]
+  },
+  "consumption_deviation": {
+   "type": "score",
+   "instructions": "How far does period consumption deviate from expected baseline?",
+   "criteria": [
+    "Deviation under 15% of weather-adjusted expected",
+    "Deviation 15% to under 40% from expected",
+    "Deviation 40% to under 100% from expected",
+    "Deviation of 100% or more from expected"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "read_source",
+   "description": "How the current period reading was obtained. Remote and engineer reads are trusted. Customer reads need photographic evidence. System estimates are never actual reads.",
+   "kind": "categorical",
+   "values": [
+    "amr_remote",
+    "customer_submitted",
+    "engineer_manual",
+    "system_estimate"
+   ],
+   "weights": [
+    0.45,
+    0.25,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S5",
+    "S7"
+   ]
+  },
+  {
+   "name": "read_sequence_issue",
+   "description": "Ordering problem between the current read and history: read date earlier than the previous read, register value lower than the previous read, or duplicate timestamp.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "date_before_previous",
+    "register_rollback",
+    "duplicate_timestamp"
+   ],
+   "weights": [
+    0.6,
+    0.13,
+    0.15,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S5"
+   ]
+  },
+  {
+   "name": "missing_section",
+   "description": "Which part of the record is absent or null. Diagnostics may be null, the previous-read entry may be missing so consumption cannot be computed, or the photo reference may be missing on a customer read.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "diagnostics_null",
+    "previous_read_null",
+    "photo_ref_missing"
+   ],
+   "weights": [
+    0.55,
+    0.15,
+    0.12,
+    0.18
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "consumption_ratio",
+   "description": "Actual period consumption divided by the weather-adjusted expected consumption. It drives the deviation score and includes values sitting on the 15%, 40% and 100% boundaries.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.0,
+   "max": 2.6,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "occupancy_change",
+   "description": "Site context shows a void period, a tenancy change or a new occupant within the period. This explains unusually low or high consumption.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "degree_day_ratio",
+   "description": "Heating degree days this period divided by the same period last year. A cold period mitigates high consumption and a mild one mitigates low consumption; the analyst must apply this when judging deviation.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.7,
+   "max": 1.4,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "diagnostic_error_count",
+   "description": "Number of active device error codes, such as flow sensor fault, temperature probe open circuit or air in sensor. Two or more corroborate a fault; one alone does not settle it.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "meter_works_order",
+   "description": "An open or recently closed works order for meter exchange or recalibration falls within the period. This benignly explains a register reset or step change.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "consecutive_estimates",
+   "description": "Count of immediately preceding periods billed on estimates in the history list. Three or more makes another estimate unacceptable and pushes toward an actual read or escalation.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 5,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "delta_t_implausible",
+   "description": "Diagnostics show the return temperature at or above the flow temperature, or a near-zero delta-T while volume accumulates. This suggests swapped or failed temperature probes.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "seal_status",
+   "description": "Tamper seal state on the meter. It may be intact, broken with an engineer visit logged on the same date, broken with no matching visit, or not recorded.",
+   "kind": "categorical",
+   "values": [
+    "intact",
+    "broken_logged_visit",
+    "broken_no_visit",
+    "not_recorded"
+   ],
+   "weights": [
+    0.55,
+    0.15,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "dispute_open",
+   "description": "The customer has an open billing or meter accuracy dispute recorded against this supply point. This requires escalation regardless of read quality.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.18,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "meter",
+   "description": "Meter identity and condition: serial, type, install date, last verification date, seal state and seal check date."
+  },
+  {
+   "name": "period_read",
+   "description": "Current reading: read date, energy register kWh, volume register m3, read source code and photo reference."
+  },
+  {
+   "name": "history",
+   "description": "List of previous period reads with date, register kWh, source code, and same-period consumption from last year."
+  },
+  {
+   "name": "diagnostics",
+   "description": "Device telemetry: active error codes, mean flow and return temperatures, battery state and firmware; may be null."
+  },
+  {
+   "name": "site_context",
+   "description": "Supply point context: occupancy status and change date, degree days now and last year, works orders, dispute flag."
+  }
+ ],
+ "rendering_notes": "read_source appears as period_read.src_code (AMR, CUS, ENG, EST). system_estimate also leaves period_read.photo_ref null, which is normal for that source. read_sequence_issue is never stated. It must be inferred by comparing period_read.read_date and reg_kwh with the latest history entry: an earlier date, a lower register, or the same timestamp. missing_section shows as diagnostics: null, a history list lacking the immediately preceding period, or period_read.photo_ref: null on a CUS read. consumption_ratio is rendered only indirectly. Period consumption is period_read.reg_kwh minus the last history reg_kwh. Expected consumption is history.same_period_ly_kwh scaled by site_context.hdd_current divided by site_context.hdd_prior_year. Raw numbers must be chosen so the computed ratio lands where the factor says, including exact boundary cases. occupancy_change appears as site_context.occupancy (occupied, void, changed) with tenancy_change_date inside the period. degree_day_ratio appears through the two hdd fields. diagnostic_error_count is the length of diagnostics.error_codes, using terse codes such as E_FLOW, E_TPROBE, E_AIR or E_COMMS. delta_t_implausible appears through diagnostics.flow_temp_c and return_temp_c values, never as a flag. meter_works_order appears as site_context.works_orders entries with type METER_EXCH or RECAL, plus open/closed status and date. consecutive_estimates is the count of trailing EST entries in history. seal_status appears as meter.seal_state (intact, broken, null) plus meter.seal_checked_date. A broken seal is matched or unmatched by an ENG history entry or works order on the same date. dispute_open appears as site_context.dispute_open boolean. Decoys: diagnostics.battery_pct low (irrelevant to read validity); a lone E_COMMS code (affects remote transmission only); firmware version; tariff_code; and meter.last_verified_date being old but still within its validity window. No field may state validity, anomaly, fault, deviation percentage, recommended action or risk. Numbers are numbers, dates are ISO, unknowns are null, and there are no free-text fields.",
+ "skills": [
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "staff_effort",
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_photo_read"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.130192
+}

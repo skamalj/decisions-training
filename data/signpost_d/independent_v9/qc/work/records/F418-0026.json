@@ -1,0 +1,121 @@
+{
+ "id": "F418-0026",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "KEL",
+   "plat": 2,
+   "date": "2025-03-11",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 1,
+   "dispatch_mode": "staff"
+  },
+  "attendance": [
+   {
+    "staff_id": "S41",
+    "sign_on": "05:00",
+    "sign_off": "13:00",
+    "safety_comp_exp": "2025-02-28",
+    "dispatch_comp_exp": "2025-09-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "04:20"
+   },
+   {
+    "type": "gap_end",
+    "time": "05:30"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-118",
+   "disp_platform": 2,
+   "valid_to": "2025-03-31",
+   "approved_by": "RO7",
+   "possession_from": "04:00",
+   "possession_to": "05:30",
+   "prior_shortfalls_30d": 4
+  }
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 70,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": true,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 70,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": true,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_ops",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "uncovered",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 29,
+ "deciding": {
+  "headcount_verified": "S41 safety_comp_exp 2025-02-28 is before shift date, so competence lapsed, though sign-on matches and the lapse may be a record-only matter during possession.",
+  "next_step": "Lapsed safety competence on a staffed platform with prior_shortfalls_30d 4 favours escalation; dispensation and possession give some doubt.",
+  "coverage_outcome": "gap_start 04:20 to gap_end 05:30 has no cover_start or cover_end events at all.",
+  "reversal_time": "Lapsed competence needs renewal/retraining, likely weeks to months; a repeat-pattern record could push it past three months.",
+  "exposure_severity": "Gap lies wholly before service_from 06:00 and overlaps possession 04:00-05:30, so none during service; the dispensation D-118 makes level 1 arguable."
+ },
+ "request": "rec-F418-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00554
+}

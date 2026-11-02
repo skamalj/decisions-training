@@ -1,0 +1,143 @@
+{
+ "id": "F438-0039",
+ "family": "F438",
+ "state": {
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "I21.4"
+   },
+   "comorbidities": [
+    "I10",
+    "E11.9",
+    "N18.3",
+    "E78.0",
+    "F17.2"
+   ],
+   "theatre_log": []
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "I21.4"
+   },
+   "secondary_dx": [
+    "I11.0",
+    "E11.5",
+    "N18.9",
+    "E78.5",
+    "F17.1"
+   ],
+   "procedures": [
+    {
+     "code": "K49.1",
+     "date": "2024-05-10"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "EB10B",
+   "hrg_regrouped": "EB11A",
+   "tariff_submitted": 4920,
+   "tariff_regrouped": 3880,
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    "I11.0/I10"
+   ],
+   "queries": [
+    {
+     "target_code": "E11.5",
+     "status": "open",
+     "response": null
+    }
+   ]
+  },
+  "coder_history": {
+   "error_rate": 0.29,
+   "last_audit_result": "pass"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "coded_procedure_no_theatre_entry",
+  "regroup_outcome": "diff_subchapter",
+  "missing_source": "none",
+  "clinician_query": "outstanding",
+  "approved_local_convention": true,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.29,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_subchapter",
+  "missing_source": "none",
+  "clinician_query": "outstanding",
+  "approved_local_convention": true,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.29,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_to_lead",
+   "second": "accept_as_coded",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "error_severity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unsupported_billable_code = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 55,
+ "deciding": {
+  "primary_supported": "Coded I21.4 matches documented principal I21.4.",
+  "hrg_shift": "hrg_submitted EB10B differs from hrg_regrouped EB11A. The regrouped tariff is lower (4920 to 3880), which leaves a little doubt.",
+  "next_step": "The unsupported procedure K49.1 argues for referral to the lead. The episode is not yet submitted and the coder last passed, so closing it is arguable.",
+  "error_count": "Four secondary mismatches plus the unsupported procedure K49.1 give five errors, level 3.",
+  "error_severity": "Procedure K49.1 is billed with no theatre_log entry (empty list), and the regrouped tariff falls by 1040. That is a billed code with no documentation, the top level."
+ },
+ "request": "rec-F438-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009481
+}

@@ -1,0 +1,138 @@
+{
+ "id": "F406-0008",
+ "family": "F406",
+ "state": {
+  "session": {
+   "gallery_code": "G2",
+   "date": "2024-06-08",
+   "certified_limit": 100
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "14:00",
+     "occupancy": 101
+    },
+    {
+     "start": "14:15",
+     "occupancy": 106
+    },
+    {
+     "start": "14:30",
+     "occupancy": 108
+    },
+    {
+     "start": "14:45",
+     "occupancy": 100
+    }
+   ],
+   "manual_tally_peak": 84,
+   "ticket_scans": 520,
+   "entries_total": 720
+  },
+  "variations": [
+   {
+    "gallery_code": "G2",
+    "valid_to": "2024-06-07",
+    "uplift_to": 120,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "maintenance": [
+    {
+     "gate": "N1",
+     "raised_at": "2024-06-08T09:00",
+     "summary": "over-counting"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": "done"
+  },
+  "history": {
+   "overages_30d": 0
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.84,
+  "intervals_over_limit": 3,
+  "section_mismatch": "scans_vs_counter_major",
+  "variation_present": true,
+  "variation_scope": "date_outside_validity",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "factual",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.93,
+  "intervals_over_limit": 11,
+  "section_mismatch": "scans_vs_counter_major",
+  "variation_present": false,
+  "variation_scope": "date_outside_validity",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "informal_note_only",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "factual",
+  "boundary_case": true
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_safety_lead",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "variation_applies": "The gallery matches and the variation is approved, but valid_to 2024-06-07 is the day before the session date of 06-08.",
+  "fault_explains_overage": "The N1 over-counting ticket was raised at 09:00 on the session date, before the session, and ticket scans of 520 against 720 entries confirm the counter inflation.",
+  "next_step": "The counter exceeds the limit in several intervals, there is a major scans mismatch, and the variation has expired, so formal review is warranted despite the ticket.",
+  "peak_excess": "The reconciled tally peak of 84 is 84% of the limit of 100, with scans supporting it.",
+  "intervals_over": "Three counter intervals read above 100 (101, 106, 108) and 14:45 sits at exactly 100, so the count is 3 or 4."
+ },
+ "request": "rec-F406-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00979
+}

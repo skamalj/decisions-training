@@ -1,0 +1,132 @@
+{
+ "id": "F402-0031",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-4471",
+   "source": "GP",
+   "received": "2025-03-10",
+   "priority": "routine",
+   "site": {
+    "part": "thoracic spine",
+    "side": "central"
+   },
+   "onset_date": "2024-01-15"
+  },
+  "patient": {
+   "mobility_aid": "none",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx_code": "thoracic_pain_nos",
+   "red_flags": [
+    "cancer_hx_new_spinal_pain"
+   ],
+   "neuro_signs": {},
+   "function_index": 40,
+   "weight_bearing": "full"
+  },
+  "gp_record": {
+   "first_presented": "2024-09-02",
+   "falls_3m": 0,
+   "reviews": [
+    "2025-02-20"
+   ]
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2024-12-01",
+    "result": "pending"
+   }
+  ],
+  "history": {
+   "episodes": [
+    {
+     "date": "2024-08-01"
+    }
+   ],
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 59,
+  "function_index": 40.0,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "routine",
+  "falls_last_3m": 0,
+  "post_op_days": "none",
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "non_physio_surgical",
+  "symptom_duration_weeks": 59,
+  "function_index": 40.13,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "routine",
+  "falls_last_3m": 4,
+  "post_op_days": 65,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_info",
+   "second": "accept_as_referred",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "community_msk",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "red_flag_unresolved": "Cancer-history red flag; MRI result pending, but a GP review in Feb 2025 exists, so partly addressed.",
+  "next_step": "MRI result pending could justify requesting it; otherwise the record is complete enough to accept.",
+  "pathway": "Simple thoracic musculoskeletal presentation, full weight-bearing, no neuro signs, no surgery.",
+  "reversal_time": "Possible spinal malignancy with delay: months to undo, perhaps irreversible; onset mismatch adds doubt.",
+  "clinical_urgency": "Unresolved cancer red flag with pending MRI sits between two-week and six-week contact."
+ },
+ "request": "rec-F402-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004947
+}

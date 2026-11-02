@@ -1,0 +1,137 @@
+{
+ "id": "F435-0017",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E5120",
+   "zone_id": "F1",
+   "zone_type": "standing_floor",
+   "doors_open": "2025-06-14T19:00",
+   "check_filed_at": "2025-06-15T00:30",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 1500,
+   "variation": null,
+   "stewards_required": 28,
+   "exit_routes": [
+    "X1",
+    "X2",
+    "X3"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 1500,
+   "issued": 1455,
+   "comps_included": 60,
+   "scanned_in": 1440
+  },
+  "ingress": {
+   "device_id": "C-07",
+   "device_status": "fault_logged",
+   "raw_peak": 1830,
+   "peak_at": "2025-06-14T21:05",
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 24,
+   "signed_in": 22,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "X1",
+    "checked_at": "2025-06-14T17:40",
+    "status": "clear"
+   },
+   {
+    "route_id": "X2",
+    "checked_at": "2025-06-14T17:45",
+    "status": "clear"
+   },
+   {
+    "route_id": "X3",
+    "checked_at": "2025-06-14T19:01",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.09,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.12,
+  "manual_recount_present": false,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.97,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.21,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 1,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.09,
+  "counter_status": "ok",
+  "counter_inflation": 0.12,
+  "manual_recount_present": false,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.97,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.21,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 1,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "conditional_sign_off",
+   "second": "restrict_entry",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "counter_fault",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "verified_exceedance": "Device is fault_logged with no recount, so the 1830 raw peak is unverified and over-limit occupancy is not established. But the faulty counter may mask a real overshoot.",
+  "disposition": "Over-limit occupancy is unverified, and stewards are short by 21% with one exit check late. Conditional sign-off is defensible, but restricting entry is also arguable.",
+  "discrepancy_source": "Only the fault_logged raw_peak (1830) exceeds the 1500 limit. Issued 1455 is within the ticketing limit of 1500.",
+  "steward_shortfall": "22 signed in of 28 required is 21.4% short, so level 2. Rounding leaves some doubt near the 25% edge.",
+  "unconfirmed_exits": "X3 was checked at 19:01, one minute after the 19:00 doors, so it counts as unconfirmed; the minute-level margin leaves doubt versus level 0."
+ },
+ "request": "rec-F435-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013394
+}

@@ -1,0 +1,321 @@
+{
+ "id": "F424",
+ "domain": "brewery batch fermentation logs",
+ "role": "Cellar quality technologist who signs off each fermented batch before it is released to packaging",
+ "setting": "A regional craft brewery's QA desk. Each record is one batch's fermentation log exported from the brewhouse system. It covers the batch header, daily gravity and temperature readings, cellar events with short operator notes, lab QC results, and the packaging release request. The technologist reviews one batch at a time and decides whether fermentation is genuinely finished, whether contamination is supported, what happens to the batch next, how serious its worst deviation is, and how many record discrepancies must be fixed before sign-off.",
+ "questions": {
+  "terminal_gravity": {
+   "type": "noul",
+   "instructions": "Fermentation reached terminal gravity within the recipe's target band.",
+   "criteria": {
+    "true": "Two consecutive stable readings inside target FG band",
+    "false": "Gravity still moving, outside band, or stability unconfirmed"
+   }
+  },
+  "contamination_supported": {
+   "type": "noul",
+   "instructions": "The log's evidence supports microbial contamination of this batch.",
+   "criteria": {
+    "true": "Positive plate or corroborated off-flavour, not explained away",
+    "false": "No positive result, or signal explained or unconfirmed"
+   }
+  },
+  "batch_disposition": {
+   "type": "choice",
+   "instructions": "What should happen to this batch next?",
+   "criteria": {
+    "release": "All results in and within spec; package as requested.",
+    "release_conditional": "Results complete; minor fix or record correction required at packaging.",
+    "hold_retest": "A pending or borderline result needs one confirming retest.",
+    "rework": "Correctable defect; extend conditioning, re-pitch or blend before release.",
+    "dump": "Uncorrectable defect or hard-limit breach; batch must be discarded."
+   }
+  },
+  "deviation_severity": {
+   "type": "score",
+   "instructions": "How severe is the worst unexplained deviation in this batch log?",
+   "criteria": [
+    "Nil: no unexplained out-of-spec reading or lab result",
+    "Minor: worst unexplained deviation within 10% beyond limit",
+    "Major: worst unexplained deviation more than 10% beyond limit",
+    "Critical: hard limit breached or irreversible step logged"
+   ]
+  },
+  "record_discrepancies": {
+   "type": "score",
+   "instructions": "How many cross-section discrepancies must be corrected before sign-off?",
+   "criteria": [
+    "No discrepancies between corresponding values across sections",
+    "Exactly one discrepancy between corresponding values",
+    "Two or three discrepancies between corresponding values",
+    "Four or more discrepancies between corresponding values"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "gravity_status",
+   "description": "True state of attenuation at the end of the readings: stable inside the target FG band, stuck high, still dropping, or over-attenuated below the band.",
+   "kind": "categorical",
+   "values": [
+    "stable_in_target",
+    "stuck_high",
+    "still_dropping",
+    "over_attenuated"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S5",
+    "S7"
+   ]
+  },
+  {
+   "name": "final_reading_gap",
+   "description": "Only one reading exists at the apparent terminal gravity, so stability across two readings cannot be confirmed.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S4",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "temp_excursion",
+   "description": "Largest fermentation temperature excursion above the strain's working range: none, brief and small (under 2°C for under 12 h), or sustained and large.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "brief_minor",
+    "sustained_major"
+   ],
+   "weights": [
+    0.4,
+    0.35,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "excursion_mitigated",
+   "description": "An excursion is explained by an approved free-rise diacetyl rest or a probe fault confirmed by a second probe. Applies only when an excursion exists.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "micro_signal",
+   "description": "Strongest contamination signal in the log: none, a sensory note only (e.g. sour, phenolic), a presumptive plate growth, or a confirmed plate count above spec.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "sensory_note_only",
+    "presumptive_plate",
+    "confirmed_plate"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "micro_mitigated",
+   "description": "The micro signal is undercut by a later negative retest, a lab note attributing growth to plating error, or a sensory note from an untrained taster contradicted by the panel.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "diacetyl_mgl",
+   "description": "Measured diacetyl in mg/L against a spec limit of 0.10. Values cluster near the limit so some batches sit on the boundary.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.02,
+   "max": 0.2,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "discrepancy_count",
+   "description": "Number of seeded material mismatches between corresponding fields in different sections: vessel ID, yeast strain or generation, volume, brew date vs first reading, target OG vs first gravity, batch ID in lab vs header.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 5,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "decoy_mismatch",
+   "description": "Presence of a trivial apparent mismatch that is not a real discrepancy: a rounding difference (≤0.001 SG, ≤0.5 hl) or a unit-converted value (°P vs SG) that agrees once converted.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.45,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "lab_result_pending",
+   "description": "One required lab result (ABV, diacetyl, or micro plate) is null with status pending at the time of review.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S4",
+    "S5"
+   ]
+  },
+  {
+   "name": "hard_limit_breach",
+   "description": "Decisive aggravating fact: fermentation peaked above the strain's stated maximum tolerance (autolysis risk), the batch was blended into another tank before QA sign-off, or ABV exceeds the labelled duty band by more than 0.5% abv.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S7",
+    "S3"
+   ]
+  },
+  {
+   "name": "release_pressure",
+   "description": "Urgency expressed in the release request note (none, routine, rush for an event or contract). Decoy only; it never changes the correct answers.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "routine",
+    "rush"
+   ],
+   "weights": [
+    0.3,
+    0.45,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "operator_note_tone",
+   "description": "Tone of free-text operator notes, independent of the data: neutral, alarmed about something the data shows is fine, or reassuring about something the data shows is a problem.",
+   "kind": "categorical",
+   "values": [
+    "neutral",
+    "alarmed",
+    "reassuring"
+   ],
+   "weights": [
+    0.5,
+    0.25,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "batch",
+   "description": "Header: batch_id, recipe, style, brew_date, vessel_id, volume_hl, yeast_strain, yeast_gen, og_target, fg_target_min, fg_target_max, strain_max_temp_c."
+  },
+  {
+   "name": "readings",
+   "description": "List of dated readings: ts, gravity_sg or gravity_plato, temp_c, ph, probe_id."
+  },
+  {
+   "name": "events",
+   "description": "List of cellar events (pitch, dry_hop, temp_change, transfer, blend, retest_request) with ts, vessel_id, actor and a one-sentence note."
+  },
+  {
+   "name": "lab",
+   "description": "QC results: batch_ref, abv_pct, abv_label_band, diacetyl_mgl, micro_plate {result, cfu_ml, plated_on}, retest list, lab_note."
+  },
+  {
+   "name": "release_request",
+   "description": "Packaging request: requested_date, format, volume_hl, vessel_id, requested_by, note."
+  }
+ ],
+ "rendering_notes": "gravity_status shows only through the readings list: the last two to four gravity values compared with batch.fg_target_min/max (some in °Plato, needing conversion). final_reading_gap leaves a single reading at the terminal value, with the prior reading still falling. temp_excursion appears as readings temp_c values above batch.strain_max_temp_c minus a margin. excursion_mitigated adds a temp_change event noting an approved free-rise, or a second probe_id reading normal at the same ts with a note flagging the first probe. micro_signal appears as an events note (sensory), lab.micro_plate.result 'presumptive' or a cfu_ml count. micro_mitigated adds a negative entry in lab.retest or a lab_note citing plating error or a panel contradiction. diacetyl_mgl sits in lab.diacetyl_mgl, often 0.09 to 0.11. discrepancy_count is realised as mismatches spread across varied pairs: batch.vessel_id vs a transfer event or release_request.vessel_id, batch.volume_hl vs release_request.volume_hl (beyond 0.5 hl), yeast_strain or yeast_gen vs the pitch event note, brew_date vs first reading ts, og_target vs first gravity (beyond 0.003 SG), lab.batch_ref vs batch_id. decoy_mismatch inserts rounding or unit-converted values that agree and must not be counted. lab_result_pending sets one lab value to null with a pending flag. hard_limit_breach appears as a reading above strain_max_temp_c, a blend or transfer event into another vessel dated before any QA sign-off, or lab.abv_pct exceeding abv_label_band by more than 0.5. When present, deviation_severity is Critical and the disposition is dump. release_pressure appears only in release_request.note. operator_note_tone shapes events notes and may contradict the data. No field may state an answer: no status, risk, complete, contaminated, severity or discrepancy-count fields. Free text is limited to events notes, lab_note and release_request.note, each one sentence.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": null,
+ "aggravating_factor": "hard_limit_breach",
+ "design_cost": 0.147288
+}

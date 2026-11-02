@@ -1,0 +1,121 @@
+{
+ "id": "F402-0041",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "urgent",
+   "received": "2025-03-10",
+   "onset": "2024-01-22",
+   "site": {
+    "part": "knee",
+    "side": "L"
+   }
+  },
+  "clinical": {
+   "red_flags": [
+    "night_pain_weight_loss"
+   ],
+   "function_index": 42,
+   "surgery_date": "2024-12-19"
+  },
+  "gp_record": {
+   "weight_change_kg": -4,
+   "falls_3m": 1,
+   "reviews": [
+    {
+     "date": "2025-01-15",
+     "type": "routine"
+    }
+   ]
+  },
+  "attachments": [
+   {
+    "type": "xray",
+    "side": "R",
+    "result": "post_op_ok"
+   }
+  ],
+  "history": {
+   "episodes": [],
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": false,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "post_op_protocol",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 59,
+  "function_index": 42.14,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 1,
+  "post_op_days": 81,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": true,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "post_op_protocol",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 59,
+  "function_index": 42.14,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 1,
+  "post_op_days": 81,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_lead",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "balanced",
+   "target": "community_msk",
+   "second": "self_management",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 30,
+ "deciding": {
+  "red_flag_unresolved": "Night pain/weight loss flag with -4 kg; the only review is routine and dated before the surgery, so explanation is thin but arguable.",
+  "next_step": "Unexplained weight loss flag plus urgent priority and laterality conflict favour escalation, with doubt from the missing op protocol.",
+  "pathway": "Function index 42 post-op knee with no self-management trial; community MSK is slightly favoured over self-management.",
+  "reversal_time": "Booking outcome is correctable in days; near the 1-day/1-7 day boundary.",
+  "clinical_urgency": "Function 42 and 81 days post-op with an unresolved flag sits at the boundary between waiting and contact within six weeks."
+ },
+ "request": "rec-F402-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004677
+}

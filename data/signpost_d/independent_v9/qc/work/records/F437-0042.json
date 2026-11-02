@@ -1,0 +1,127 @@
+{
+ "id": "F437-0042",
+ "family": "F437",
+ "state": {
+  "job": {
+   "due_at": "2025-05-06T12:00",
+   "terms": {}
+  },
+  "source": {
+   "word_count": 3000,
+   "segment_count": 200,
+   "repetitions_words": 22
+  },
+  "deliverable": {
+   "segments_translated": 200,
+   "word_count": 2978,
+   "delivered_at": "2025-05-07T18:00"
+  },
+  "qa_report": {
+   "flags": {
+    "number": 5
+   },
+   "false_positive_marked": 2,
+   "unresolved": {
+    "minor": 1
+   }
+  },
+  "review": {
+   "completed_at": "2025-05-07",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "major",
+     "status": "open"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    {
+     "date": "2025-04-28"
+    }
+   ],
+   "reassignments": 2
+  }
+ },
+ "factors": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.4,
+  "number_mismatch_count": 5,
+  "deadline_slack_hours": -30,
+  "client_waiver": false,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.4,
+  "number_mismatch_count": 6,
+  "deadline_slack_hours": 81,
+  "client_waiver": false,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_am",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "scope_matches": "Segments are 200/200 and the word count differs by 22 (0.7%), matching the 22 repetition words, but version fields are absent.",
+  "reviewed_in_time": "Review is signed off with completed_at 2025-05-07 (date only) and delivered_at 2025-05-07T18:00, so the order is not certain.",
+  "next_step": "delivered_at is 30 hours after due_at, terms hold no waiver or revised due date, and an open major error remains, so the account manager must decide.",
+  "open_severity": "The review lists a major error as open, while the QA unresolved count shows only 1 minor and the sign-off is present; 2 and 1 are both defensible.",
+  "parties_needed": "The fix needs the translator, the reviewer's re-check and the account manager for the late delivery, and history shows 2 reassignments, so 3-4 parties."
+ },
+ "request": "rec-F437-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013189
+}

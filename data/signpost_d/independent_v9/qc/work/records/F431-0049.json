@@ -1,0 +1,132 @@
+{
+ "id": "F431-0049",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM5512",
+   "type": "ultrasonic",
+   "last_verified": "2021-06-30",
+   "seal_state": null,
+   "seal_checked": null
+  },
+  "period_read": {
+   "read_date": "2024-03-30",
+   "reg_kwh": 4720,
+   "src_code": "CUS",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2024-01-31",
+    "reg_kwh": 2800,
+    "src": "AMR"
+   },
+   {
+    "date": "2024-02-29",
+    "reg_kwh": 3000,
+    "src": "ENG",
+    "same_period_ly_kwh": 900
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_TPROBE",
+    "E_FLOW",
+    "E_COMMS"
+   ],
+   "flow_temp_c": 48,
+   "return_temp_c": 49
+  },
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2024-02-29",
+   "hdd_current": 485,
+   "hdd_prior_year": 500,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "closed",
+     "date": "2023-08-02"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "photo_ref_missing",
+  "consumption_ratio": 1.97,
+  "occupancy_change": true,
+  "degree_day_ratio": 0.97,
+  "diagnostic_error_count": 3,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": true,
+  "seal_status": "not_recorded",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.52,
+  "occupancy_change": true,
+  "degree_day_ratio": 0.97,
+  "diagnostic_error_count": 3,
+  "meter_works_order": true,
+  "consecutive_estimates": 3,
+  "delta_t_implausible": true,
+  "seal_status": "not_recorded",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "billable_actual": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_photo_read",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 75,
+ "deciding": {
+  "meter_fault": "E_TPROBE and E_FLOW with return temperature above flow (48/49) point to device fault, balanced against a new tenancy from 2024-02-29 that could explain high use.",
+  "billable_actual": "Customer read is in sequence after a move-in engineer read and the tenancy change makes higher use plausible, but it has no photo.",
+  "next_step": "CUS read with photo_ref null and a large deviation; the missing dated photo is the specific item to request.",
+  "staff_effort": "Possible device fault, tenancy change, missing photo and unrecorded seal could mean one to five days or longer if a site visit and rebill follow.",
+  "consumption_deviation": "1720 kWh vs expected 900*485/500=873 gives ratio 1.97, about 97%, right at the 100% boundary."
+ },
+ "request": "rec-F431-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01112
+}

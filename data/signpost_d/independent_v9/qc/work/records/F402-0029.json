@@ -1,0 +1,135 @@
+{
+ "id": "F402-0029",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "D429",
+   "priority": "routine",
+   "site": "neck",
+   "onset": "2023-10-30",
+   "received": "2025-05-05"
+  },
+  "patient": {
+   "dob": "1958-03-14",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx": "M54.2",
+   "red_flags": [
+    "night_pain"
+   ],
+   "neuro_signs": {
+    "progression": "stable"
+   },
+   "function_index": 93.88,
+   "surgery_date": null
+  },
+  "gp_record": {
+   "dob": "1958-03-15",
+   "falls_3m": 0,
+   "reviews": [
+    "2025-03-24"
+   ]
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-03-19",
+    "result": "no_sinister"
+   }
+  ],
+  "history": {
+   "episodes": [
+    {
+     "start": "2024-09-02"
+    }
+   ],
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain",
+  "red_flag_mitigated": true,
+  "mismatch_field": "date_of_birth",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 79,
+  "function_index": 93.88,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "routine",
+  "falls_last_3m": 0,
+  "post_op_days": "none",
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "date_of_birth",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "neurological",
+  "symptom_duration_weeks": 79,
+  "function_index": 93.88,
+  "prior_episodes_12m": 1,
+  "referrer_priority": "routine",
+  "falls_last_3m": 5,
+  "post_op_days": 120,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 91,
+ "deciding": {
+  "red_flag_unresolved": "A night_pain code is listed. An MRI of 2025-03-19 shows no_sinister, within 8 weeks, and a GP review followed on 2025-03-24. Leaning explained, but the code is still on the record.",
+  "next_step": "Mitigated flag, complete record and a one-day DOB difference between patient and GP that changes nothing. Accept as referred.",
+  "pathway": "Function index 93.88, stable signs, no falls and no surgery over 79 weeks. This settles self-management.",
+  "reversal_time": "Waiting on a routine accept is undone within a day. The residual night_pain code adds slight doubt.",
+  "clinical_urgency": "Long-standing stable problem, MRI clear, very good function and no falls. It can safely wait more than six weeks."
+ },
+ "request": "rec-F402-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00964
+}

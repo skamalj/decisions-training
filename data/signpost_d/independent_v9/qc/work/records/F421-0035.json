@@ -1,0 +1,117 @@
+{
+ "id": "F421-0035",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P5",
+   "contents": "drill press",
+   "qty": 1,
+   "kg": 12.0,
+   "value_gbp": 2748.7
+  },
+  "handling_events": [
+   {
+    "site": "HubD",
+    "ev": "SCAN",
+    "exc": "DMG"
+   },
+   {
+    "site": "DEP",
+    "ev": "INBOUND",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "observed_item": "drill press",
+   "qty_found": 1,
+   "kg": 9.0,
+   "condition": "column bent, base cracked",
+   "photos": [
+    "e.jpg"
+   ],
+   "repair_est_gbp": 1340
+  },
+  "claim": {
+   "claimed_gbp": 1166
+  },
+  "notes": [
+   "Damage came from HubD."
+  ]
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "complete",
+  "loss_pct": 48.75,
+  "declared_value": 2748.7,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 0.87
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "photos_missing",
+  "loss_pct": 38.88,
+  "declared_value": 2748.7,
+  "scan_order_anomaly": false,
+  "tamper_signs": true,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 0.87
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "close_no_action",
+   "second": "approve_repack",
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 51,
+ "deciding": {
+  "depot_fault": "DMG at HubD upstream and on the inbound scan.",
+  "contents_match": "Same item name, but weight 9.0 kg against 12.0 kg declared (25% lower), balanced.",
+  "next_step": "Report is complete with photo and estimate, but depot not at fault, so closing and repacking are both defensible.",
+  "loss_share": "repair_est_gbp 1340 on 2748.7 is about 48.8%, just under 50%; claim 1166 is lower.",
+  "parties_needed": "Upstream-caused damage with a weight discrepancy needs the upstream hub and others, between two and three or four parties."
+ },
+ "request": "rec-F421-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007847
+}

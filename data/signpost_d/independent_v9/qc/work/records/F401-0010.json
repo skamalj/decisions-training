@@ -1,0 +1,157 @@
+{
+ "id": "F401-0010",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P505",
+   "planned_discharge_at": "2025-07-08T15:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 18,
+     "spo2": 90,
+     "sbp": 126,
+     "hr": 84,
+     "cons": "A",
+     "at": "2025-07-08T07:00"
+    }
+   ],
+   "targets": {
+    "spo2_target": "88-92"
+   }
+  },
+  "medications": {
+   "patient_id": "P505",
+   "reconciled": [
+    {
+     "drug": "apixaban",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ],
+   "changes": [],
+   "discharge_rx": {
+    "signed_at": "2025-07-07T16:00",
+    "items": []
+   }
+  },
+  "function_social": {
+   "therapy": {
+    "transfer_assist_count": 2,
+    "adl_score": 4
+   },
+   "social": {
+    "lives_alone": true
+   },
+   "care_arrangement": {
+    "type": "care_home",
+    "status": "provisional",
+    "start_date": "2025-07-10"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "TTO",
+     "status": "pending"
+    },
+    {
+     "task": "handover",
+     "status": "pending"
+    },
+    {
+     "task": "transport",
+     "status": "pending"
+    },
+    {
+     "task": "care plan",
+     "status": "done",
+     "completed_at": null,
+     "signed_by": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "drug_missing_from_discharge_rx",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 4,
+  "false_completion": true,
+  "care_need": "continuous_care",
+  "care_arrangement_status": "provisional_start_two_days_later",
+  "logistics_delay": "care_start_two_days_later",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "discharge_rx_absent",
+  "outstanding_task_count": 3,
+  "false_completion": true,
+  "care_need": "new_package",
+  "care_arrangement_status": "declined",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "discharge_now",
+   "second": "conditional_discharge",
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "care_home",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "rx_matches": "Apixaban is reconciled but the discharge prescription items list is empty with no change entry.",
+  "next_step": "SpO2 90 is within the documented 88-92 target and nothing clinical is open; the four task gaps favour conditional discharge, so readers can split.",
+  "destination": "Lives alone, 2-person transfer, ADL 4 and a care home placement point to care home, though the start is only provisional.",
+  "outstanding_tasks": "Three pending items plus care plan marked done with null completed_at and signed_by make four outstanding.",
+  "discharge_delay": "Care home start 2025-07-10 is two days after planned, but the status is provisional, so slipping to 3+ days is plausible."
+ },
+ "request": "rec-F401-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010243
+}

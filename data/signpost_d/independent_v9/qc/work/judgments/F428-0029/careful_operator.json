@@ -1,0 +1,36 @@
+{
+ "persona": "careful_operator",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "closure_test_valid": {
+   "true": 0.03,
+   "false": 0.97
+  },
+  "next_step": {
+   "sign_off": 0.02,
+   "request_retest": 0.6,
+   "raise_repair": 0.12,
+   "escalate_engineer": 0.26
+  },
+  "defect_class": {
+   "no_open_defect": 0.01,
+   "seal": 0.02,
+   "drive_actuation": 0.95,
+   "structural": 0.02
+  },
+  "section_discrepancies": {
+   "0": 0.05,
+   "1": 0.75,
+   "2": 0.14,
+   "3": 0.06
+  },
+  "flood_risk": {
+   "0": 0.03,
+   "1": 0.6,
+   "2": 0.29,
+   "3": 0.08
+  }
+ },
+ "cost": 0.000371
+}

@@ -1,0 +1,310 @@
+{
+ "id": "F438",
+ "domain": "clinical coding audit samples",
+ "role": "Clinical coding auditor reviewing one sampled inpatient episode at a time against its source documentation",
+ "setting": "A hospital clinical coding department runs a rolling audit. Each sample is a single completed inpatient episode pulled from the coded data. The auditor compares the assigned diagnosis and procedure codes with structured extracts from the clinical documentation, regroups the episode and checks the coder's history. For each sample the auditor decides whether the codes stand, whether anything is missing, how many errors exist, how serious the worst one is, and whether the episode needs correction, regrouping or referral to the coding lead.",
+ "questions": {
+  "primary_supported": {
+   "type": "noul",
+   "instructions": "Primary diagnosis code is supported by the clinical documentation.",
+   "criteria": null
+  },
+  "hrg_shift": {
+   "type": "noul",
+   "instructions": "Corrected coding would move the episode into a different HRG.",
+   "criteria": {
+    "true": "Regrouped HRG differs from the submitted HRG",
+    "false": "Regrouped HRG matches, or regrouping not yet possible"
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should happen to this audit sample now?",
+   "criteria": {
+    "accept_as_coded": "Coding matches documentation; sample closes with no changes.",
+    "request_records": "A named document or query answer is needed before deciding.",
+    "amend_codes": "Correct codes locally; correction leaves the submitted HRG unchanged.",
+    "amend_and_regroup": "Correct codes, regroup and flag the tariff change for resubmission.",
+    "escalate_to_lead": "Refer to coding lead for unsupported billable codes or integrity concerns."
+   }
+  },
+  "error_count": {
+   "type": "score",
+   "instructions": "How many coding errors does this audit sample contain?",
+   "criteria": [
+    "No coding errors found against the documentation",
+    "Exactly one coding error found",
+    "Two or three coding errors found",
+    "Four or more coding errors found"
+   ]
+  },
+  "error_severity": {
+   "type": "score",
+   "instructions": "How serious is the most consequential coding error found?",
+   "criteria": [
+    "None: no error alters any assigned code",
+    "Cosmetic: sequencing or specificity slip, same clinical meaning",
+    "Minor: secondary code wrong or missing, HRG unchanged",
+    "Major: primary diagnosis wrong or regrouped HRG differs",
+    "Critical: billed code has no supporting documentation entry"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "primary_dx_match",
+   "description": "How the coded primary diagnosis relates to the documented principal condition: exact match, same category but differing fourth character, or a different condition altogether.",
+   "kind": "categorical",
+   "values": [
+    "exact",
+    "specificity_differs",
+    "different_condition"
+   ],
+   "weights": [
+    0.55,
+    0.25,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "secondary_discrepancies",
+   "description": "Number of secondary diagnosis codes that are missing from, or not supported by, the documented comorbidities and complications list.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "procedure_mismatch",
+   "description": "State of the coded procedures against the theatre log: all match, one procedure date or laterality differs, or a documented procedure is not coded.",
+   "kind": "categorical",
+   "values": [
+    "all_match",
+    "date_or_side_differs",
+    "documented_not_coded"
+   ],
+   "weights": [
+    0.6,
+    0.22,
+    0.18
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "regroup_outcome",
+   "description": "Result of regrouping with corrected codes: same HRG, different HRG within the same subchapter, different subchapter, or regrouping blocked because a source document is absent.",
+   "kind": "categorical",
+   "values": [
+    "same_hrg",
+    "diff_hrg_same_subchapter",
+    "diff_subchapter",
+    "not_regroupable"
+   ],
+   "weights": [
+    0.5,
+    0.2,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5",
+    "S4"
+   ]
+  },
+  {
+   "name": "missing_source",
+   "description": "Which, if any, key source document is absent from the documentation extract, preventing confirmation of some codes.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "discharge_summary",
+    "operation_note",
+    "pathology_report"
+   ],
+   "weights": [
+    0.6,
+    0.15,
+    0.13,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "clinician_query",
+   "description": "Status of any query raised with the responsible clinician about an uncertain diagnosis: none raised, outstanding, answered confirming the code, or answered contradicting it.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "outstanding",
+    "answered_confirms",
+    "answered_contradicts"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "approved_local_convention",
+   "description": "Whether an approved local coding convention listed in the audit context covers the apparent primary or secondary discrepancy, making it compliant rather than an error.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "pre_submission",
+   "description": "Whether the episode has not yet been submitted to the commissioner, so any correction carries no resubmission or tariff recovery.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  },
+  {
+   "name": "coder_recent_audit_passed",
+   "description": "Whether the coder's most recent audit was passed with high accuracy; a mitigating decoy that does not change the facts of this sample.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "coder_error_rate",
+   "description": "Coder's historical error rate across prior audits; an alarming-looking decoy that should not on its own change any decision.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0.3,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "boundary_case",
+   "description": "Whether a discrepancy hinges on a classification boundary, such as acute versus chronic or a fourth character that standards leave open, splitting reasonable auditors.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S6"
+   ]
+  },
+  {
+   "name": "unsupported_billable_code",
+   "description": "Decisive aggravating fact: a coded procedure or complication that raises the tariff has no corresponding entry anywhere in the documentation or theatre log.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "episode",
+   "description": "Episode identifiers, admission and discharge dates, specialty, length of stay and admission method."
+  },
+  {
+   "name": "clinical_documentation",
+   "description": "Structured extract of documented diagnoses, procedures with dates and sides, and document presence flags."
+  },
+  {
+   "name": "coded_record",
+   "description": "Assigned primary and secondary diagnosis codes and procedure codes with dates and laterality."
+  },
+  {
+   "name": "grouping",
+   "description": "Submitted HRG, auditor regrouped HRG, tariff values and commissioner submission status."
+  },
+  {
+   "name": "audit_context",
+   "description": "Sample metadata, approved local coding conventions applied, and clinician query records with status."
+  },
+  {
+   "name": "coder_history",
+   "description": "Coder pseudonymous id, prior audit count, historical error rate and last audit result."
+  }
+ ],
+ "rendering_notes": "No free-text fields; all content is codes, dates, numbers, flags and enumerations. primary_dx_match appears only by comparing coded_record.primary_dx.code with clinical_documentation.principal_condition.code (same three characters with different fourth for specificity_differs). secondary_discrepancies is the count of mismatches between coded_record.secondary_dx[] and clinical_documentation.comorbidities[]; never stated as a count. procedure_mismatch appears as differing date or side between coded_record.procedures[] and clinical_documentation.theatre_log[], or a theatre_log entry with no coded counterpart. regroup_outcome appears as grouping.hrg_submitted versus grouping.hrg_regrouped (hrg_regrouped null and grouping.regroup_status 'blocked_missing_source' when not_regroupable); tariff_submitted and tariff_regrouped follow. missing_source sets clinical_documentation.documents_present.{discharge_summary,operation_note,pathology_report} to false and blanks the corresponding lists. clinician_query appears in audit_context.queries[] with target_code, status ('open','closed') and response ('confirms','contradicts', null). approved_local_convention appears as an entry in audit_context.local_conventions_applied[] whose code_pair matches the discrepancy; when absent the list may hold unrelated decoy conventions. pre_submission appears as grouping.submitted_to_commissioner false with submission_date null. coder_recent_audit_passed and coder_error_rate appear in coder_history.last_audit_result and coder_history.error_rate; both are decoys. boundary_case appears as a code pair where the documented term maps to two adjacent codes, e.g. documentation listing both acute and chronic forms. unsupported_billable_code appears as a coded procedure or complication code in coded_record with no matching entry in any documentation list and a positive tariff difference; it must not be flagged by any field. Never include fields such as error_found, severity, accuracy, outcome or recommended_action; the auditor must derive every answer by comparison.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_records"
+ },
+ "aggravating_factor": "unsupported_billable_code",
+ "design_cost": 0.135952
+}

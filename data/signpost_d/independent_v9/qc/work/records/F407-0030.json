@@ -1,0 +1,147 @@
+{
+ "id": "F407-0030",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "PR-7015",
+   "received_at": "2025-06-03T08:20:00Z",
+   "channel": "public_app",
+   "photo_ref": "IMG-5107",
+   "linked_reports": [
+    "PR-7001",
+    "PR-7008",
+    "PR-7010"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "usrn": 51009934,
+   "road_class": "main_distributor",
+   "intervention_depth_mm": 40,
+   "grid_ref": "SK 4521 3390",
+   "speed_limit": 40
+  },
+  "inspection": {
+   "inspector": "HI-03",
+   "scheduled_for": "2025-06-06",
+   "depth_mm": null,
+   "width_mm": 110.53
+  },
+  "works_history": [
+   {
+    "job": "J-2760",
+    "completed": "2024-09-12",
+    "offset_m": null,
+    "guarantee_end": "2025-09-12"
+   },
+   {
+    "job": "J-2811",
+    "completed": "2023-04-20",
+    "offset_m": 120,
+    "guarantee_end": "2024-04-20"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "id": "S-41",
+     "start": "2025-06-23",
+     "extent": "chainage 0-300 m, covers site"
+    },
+    {
+     "id": "S-57",
+     "start": "2025-09-01",
+     "extent": "other street"
+    }
+   ],
+   "temp_measures": [
+    {
+     "type": "cone",
+     "expiry": "2025-07-15"
+    }
+   ]
+  },
+  "current_order": {
+   "id": "WO-8802",
+   "raised": "2025-06-03",
+   "status": "raised",
+   "completed_items": 0,
+   "total_items": 4
+  }
+ },
+ "factors": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "near_below",
+  "inspection_state": "scheduled",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 3,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "raised",
+  "defect_width_mm": 110.53,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "well_below",
+  "inspection_state": "scheduled",
+  "prior_repair_match": "none",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 3,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "raised",
+  "defect_width_mm": 110.53,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "repeat_failure": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "order_repair",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 200,
+ "deciding": {
+  "meets_threshold": "Depth null pending scheduled inspection; narrow width and cone suggest below 40 mm, but the raised order implies it might meet it.",
+  "repeat_failure": "Only street-level J-2760 within guarantee (null offset); J-2811 is 120 m away, so same spot is unconfirmed.",
+  "next_step": "Order WO-8802 raised and scheme S-41 covers the site from 2025-06-23, so confirm and time the order around the scheme.",
+  "staff_effort": "Four-item order, scheme sequencing and possible guarantee check put it at days, between two and over five.",
+  "response_timescale": "Depth unmeasured; cone in place, scheme in 20 days; priority five-day versus routine 28-day is arguable."
+ },
+ "request": "rec-F407-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005403
+}

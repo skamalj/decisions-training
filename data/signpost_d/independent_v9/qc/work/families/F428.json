@@ -1,0 +1,339 @@
+{
+ "id": "F428",
+ "domain": "flood defence gate inspections",
+ "role": "Flood asset inspection reviewer at a regional river and coastal flood authority, checking each submitted gate inspection record before it is filed",
+ "setting": "Field inspectors submit one structured record per flood defence gate visit, covering mitre, vertical lift, flap, radial and stoplog gates. The reviewer reconciles the record against the asset register, defect list, works history and operating context. They then decide whether the latest closure test is valid, what to do next, which component class holds the worst open defect, how many cross-section discrepancies exist, and how severe the gate's flood risk is.",
+ "questions": {
+  "closure_test_valid": {
+   "type": "noul",
+   "instructions": "The latest logged closure test shows the gate sealing within limits.",
+   "criteria": {
+    "true": "Current test logged, within rated time and leakage limit",
+    "false": "Test missing, failed, late, leaking or predates later repair"
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should be done with this inspection record now?",
+   "criteria": {
+    "sign_off": "Record complete and acceptable; file without further action required.",
+    "request_retest": "Ask for a post-repair closure test before deciding.",
+    "raise_repair": "Issue a works order now, with interim operating restrictions.",
+    "escalate_engineer": "Refer to the duty asset engineer for an urgent decision."
+   }
+  },
+  "defect_class": {
+   "type": "choice",
+   "instructions": "Which component class holds the highest-graded open defect?",
+   "criteria": {
+    "no_open_defect": "No open defect above grade 1 is recorded.",
+    "seal": "Highest-graded defect affects seals, sills or leakage paths.",
+    "drive_actuation": "Highest-graded defect affects hinges, hoists, motors or locking gear.",
+    "structural": "Highest-graded defect affects leaf, frame, anchorage or concrete."
+   }
+  },
+  "section_discrepancies": {
+   "type": "score",
+   "instructions": "How many values disagree between sections of the record?",
+   "criteria": [
+    "Every cross-section value agrees with its counterpart",
+    "One value disagrees with its counterpart elsewhere",
+    "Two values disagree with their counterparts elsewhere",
+    "Three or more values disagree across sections"
+   ]
+  },
+  "flood_risk": {
+   "type": "score",
+   "instructions": "How severe is the flood risk from the gate's current condition?",
+   "criteria": [
+    "Low: closes within rated time, no defect above grade 2",
+    "Moderate: closes within rated time, one grade 3 defect",
+    "High: closes late, or any grade 4 defect",
+    "Critical: cannot close, or outage exceeds permitted window"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "gate_type",
+   "description": "Type of gate inspected; changes which components and units appear but not the decision logic",
+   "kind": "categorical",
+   "values": [
+    "mitre",
+    "vertical_lift",
+    "flap",
+    "radial",
+    "demountable_stoplog"
+   ],
+   "weights": [
+    0.25,
+    0.25,
+    0.2,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "closure_time_ratio",
+   "description": "Measured closure time in the inspection divided by rated closure time in the asset register",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.6,
+   "max": 1.6,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "max_defect_grade",
+   "description": "Highest grade (1 to 4) among open defects in the defect list",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 1,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "dominant_defect_component",
+   "description": "Component class of the highest-graded open defect",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "seal",
+    "drive_actuation",
+    "structural"
+   ],
+   "weights": [
+    0.2,
+    0.3,
+    0.25,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S6"
+   ]
+  },
+  {
+   "name": "mismatch_count",
+   "description": "Number of genuine disagreements between corresponding values in different sections",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "mismatch_location",
+   "description": "Where the first mismatch sits when mismatch_count is above zero",
+   "kind": "categorical",
+   "values": [
+    "asset_id",
+    "seal_type",
+    "width_units",
+    "test_date_vs_repair",
+    "defect_grade_vs_work_order",
+    "rated_closure_time"
+   ],
+   "weights": [
+    0.15,
+    0.15,
+    0.15,
+    0.2,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "test_status",
+   "description": "State of the latest closure test relative to repairs and limits",
+   "kind": "categorical",
+   "values": [
+    "passed_current",
+    "passed_predates_repair",
+    "failed",
+    "not_performed"
+   ],
+   "weights": [
+    0.4,
+    0.2,
+    0.2,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S4"
+   ]
+  },
+  {
+   "name": "repair_progress",
+   "description": "Status of work on the highest-graded defect",
+   "kind": "categorical",
+   "values": [
+    "none_needed",
+    "not_started",
+    "in_progress",
+    "completed_untested",
+    "completed_tested"
+   ],
+   "weights": [
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4"
+   ]
+  },
+  {
+   "name": "mitigation_present",
+   "description": "Whether a mitigating arrangement accompanies the alarming signal",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "mitigation_kind",
+   "description": "Form of mitigation when present",
+   "kind": "categorical",
+   "values": [
+    "temporary_barrier_deployed",
+    "approved_outage_permit",
+    "scheduled_works_order",
+    "recent_pass_retest"
+   ],
+   "weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "days_to_forecast_peak",
+   "description": "Days from inspection date to the next forecast peak level reaching the gate sill",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 1,
+   "max": 60,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "borderline_case",
+   "description": "Key value placed on a threshold, e.g. closure ratio 0.98 to 1.02 or leakage at limit",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S6"
+   ]
+  },
+  {
+   "name": "outage_beyond_permit",
+   "description": "Gate held out of service past its permit expiry while a flood alert is active",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "asset",
+   "description": "Register data: asset_id, gate_type, rated_closure_s, seal_type, clear_width, consequence_class"
+  },
+  {
+   "name": "inspection",
+   "description": "Visit details: insp_id, asset_id, insp_date, closure_test object with timings and leakage"
+  },
+  {
+   "name": "defects",
+   "description": "List of open and closed defects with component, grade, measurements, first_seen"
+  },
+  {
+   "name": "maintenance",
+   "description": "Works orders with status, dates, retest reference, plus last_service date"
+  },
+  {
+   "name": "operations",
+   "description": "Outage state, permit, temporary barrier, flood alert flag and level forecast"
+  }
+ ],
+ "rendering_notes": "asset: gate_type, rated_closure_s, seal_type (e.g. 'J_bulb', 'music_note'), clear_width with clear_width_unit, consequence_class (decoy: high class alone sets no level). inspection: asset_id (may differ from register by one character), insp_date, closure_test {performed bool, test_date, closure_s, leakage_l_min, leakage_limit_l_min, result 'pass'/'fail'/null}; closure_s = closure_time_ratio x rated_closure_s; not_performed gives performed false and null timings; failed shows result 'fail' or closure_s null with performed true; passed_predates_repair shows test_date earlier than the relevant work order's completed date. defects: list of {code, component, grade, length_mm or loss_pct, status 'open'/'closed', first_seen}; component values map to defect_class (seal/sill/leak path, hinge/hoist/motor/lock, leaf/frame/anchor/concrete); decoys include closed grade 4 defects and open grade 1 cosmetic paint defects. maintenance: work_orders list {wo_id, component, defect_code, grade_raised, status 'scheduled'/'in_progress'/'complete', raised, completed, retest_insp_id}; repair_progress drives status and whether retest_insp_id is null; old completed orders on other components are decoys; last_service is a decoy. operations: outage {status 'in_service'/'out_of_service', since, permit_ref, permit_expiry}, temp_barrier_deployed bool, flood_alert_active bool, forecast {peak_date, peak_level_mAOD, sill_level_mAOD}. Mismatches render as: different asset_id between asset and inspection; seal_type in register vs seal component in defects; width given in mm in one place and m elsewhere with inconsistent value; test before repair completion; work order grade_raised differing from defect grade; rated_closure_s quoted differently in work order. Rounding differences (e.g. 4.50 vs 4.5) are not mismatches. outage_beyond_permit renders as status out_of_service, permit_expiry earlier than insp_date and flood_alert_active true; it alone sets flood_risk to Critical and next_step to escalate_engineer. Mitigation renders as temp_barrier_deployed true, a valid permit_expiry after insp_date, a scheduled works order covering the worst defect, or a passing retest linked in maintenance; it may lower next_step (e.g. scheduled order lets a grade 3 seal defect be signed off) but never changes the observable flood_risk anchors. Ties in highest grade across components are deliberate contested cases. The record never contains fields like fit_for_service, risk_level, mismatch_flag or recommended_action; there are no free-text fields.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_retest"
+ },
+ "aggravating_factor": "outage_beyond_permit",
+ "design_cost": 0.150988
+}

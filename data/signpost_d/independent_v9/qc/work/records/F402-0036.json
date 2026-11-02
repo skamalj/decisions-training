@@ -1,0 +1,124 @@
+{
+ "id": "F402-0036",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-1041",
+   "source": "GP",
+   "received": "2025-03-10",
+   "priority": "urgent",
+   "site": {
+    "part": "hip",
+    "side": "L"
+   },
+   "onset": "2024-09-02"
+  },
+  "patient": {
+   "consent_to_refer": true,
+   "aid": "none"
+  },
+  "clinical": {
+   "dx": "M62.8",
+   "red_flags": [
+    "falls_unexplained"
+   ],
+   "neuro_signs": {},
+   "function_index": 76.57,
+   "anticoagulant": false
+  },
+  "gp_record": {
+   "falls_3m": 4,
+   "reviews": []
+  },
+  "attachments": [],
+  "history": {
+   "episodes": [],
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "falls_unexplained",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 27,
+  "function_index": 76.57,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 4,
+  "post_op_days": "none",
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 27,
+  "function_index": 76.57,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 4,
+  "post_op_days": 34,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 70,
+ "deciding": {
+  "red_flag_unresolved": "red_flags lists falls_unexplained and gp reviews is empty, though the high function index leaves some doubt.",
+  "next_step": "Nothing is missing, no mismatch, consent present, so it can be accepted as referred.",
+  "pathway": "Function index 76.57, no neuro signs, and a self-management trial already done point to self-management.",
+  "reversal_time": "Simple waiting-list placement can be undone within a day.",
+  "clinical_urgency": "High function and 27-week duration with no acute findings mean a wait over six weeks is safe; 'urgent' priority is a decoy."
+ },
+ "request": "rec-F402-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007313
+}

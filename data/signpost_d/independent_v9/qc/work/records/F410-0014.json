@@ -1,0 +1,166 @@
+{
+ "id": "F410-0014",
+ "family": "F410",
+ "state": {
+  "application": {
+   "app_ref": "A-7312",
+   "term_end": "2026-03-31",
+   "pitch_req": {
+    "market": "Quay",
+    "width_m": 3.22,
+    "depth_m": 2
+   },
+   "commodities": [
+    "bric-a-brac",
+    "vinyl records"
+   ],
+   "docs_pending": [
+    "pli_certificate",
+    "broker_letter"
+   ]
+  },
+  "licence_current": {
+   "pitch": {
+    "market": "Quay",
+    "pitch_no": 21,
+    "width_m": 3,
+    "depth_m": 2
+   },
+   "commodities": [
+    "bric-a-brac"
+   ],
+   "conditions": {
+    "min_attendance_pct": 75,
+    "max_width_m": 3.5
+   },
+   "variations": []
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-03-20",
+    "indemnity_gbp": 2000000
+   },
+   "pli_required_gbp": 2000000,
+   "broker_conf": null,
+   "food_reg": {
+    "registered": true,
+    "fhrs_rating": 5,
+    "inspected_on": "2025-05-14"
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2025",
+     "amount_gbp": 840
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2025-03-03",
+     "amount_gbp": 840,
+     "method": "card"
+    }
+   ],
+   "payment_plan": null
+  },
+  "history": {
+   "allocated_12m": 52,
+   "attended_12m": 41,
+   "absence_notices": [
+    {
+     "date": "2025-07-01",
+     "reason": "illness",
+     "accepted": true
+    }
+   ],
+   "complaints": [
+    {
+     "date": "2025-02-11",
+     "category": "late opening",
+     "upheld": true,
+     "status": "closed"
+    }
+   ],
+   "enforcement_notices": 0
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_within_14d_of_term_end",
+  "broker_confirmation_held": false,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.22,
+  "variation_approved": false,
+  "fee_arrears_gbp": 0.0,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.79,
+  "absences_notified": true,
+  "complaint_profile": "upheld_closed",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "ends_within_14d_of_term_end",
+  "broker_confirmation_held": false,
+  "commodity_change": "none",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.22,
+  "variation_approved": false,
+  "fee_arrears_gbp": 218.24,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.79,
+  "absences_notified": true,
+  "complaint_profile": "upheld_closed",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "grant",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "clear",
+   "target": "scheduled_visit",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 88,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-03-20 is eleven days before term_end 2026-03-31 with no broker_conf, though a renewal certificate is pending.",
+  "renewal_disposition": "Fees fully paid, attendance above minimum, complaint closed, no serious breach, so grant as applied.",
+  "inspection_level": "Vinyl records are added with no matching variation, and width 3.22 vs 3.0 is also unapproved; no food safety gap, so a scheduled visit.",
+  "reversal_time": "A grant could be reversed by revocation in about one to seven days; some doubt remains.",
+  "discrepancy_count": "Counts are the PLI end gap, unapproved commodity, 0.22m width change and two pending documents; whether the small width and pending items count splits level 2 and 3."
+ },
+ "request": "rec-F410-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012379
+}

@@ -1,0 +1,140 @@
+{
+ "id": "F423-0031",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-48213",
+   "product": "carton",
+   "stock_spec": "GS-250C",
+   "run_qty": 10000,
+   "overs_pct": 2.6,
+   "spec_max_de": 3.0,
+   "customer_tier": "standard"
+  },
+  "proof_signoff": {
+   "signed_at": "2025-03-12T06:40",
+   "ok_sheet_no": 212,
+   "concession": null
+  },
+  "colour_readings": {
+   "calibrated_on": "2025-01-15",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.1
+    },
+    {
+     "ink": "M",
+     "delta_e": null
+    },
+    {
+     "ink": "Y",
+     "delta_e": 1.8
+    },
+    {
+     "ink": "K",
+     "delta_e": null
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "pair": "K-C",
+     "offset_mm": 0.08,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P3",
+   "stock_loaded": "GS-300M",
+   "first_production_at": "2025-03-12T07:05",
+   "sheets_production": 1220,
+   "sheets_makeready": 340,
+   "stoppages": [
+    "07:50",
+    "08:10",
+    "08:45",
+    "09:20"
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "some_patches_null",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 1220,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 2.6,
+  "register_offset_mm": 0.08,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 56,
+  "customer_tier": "standard",
+  "prior_stoppages": 4
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "some_patches_null",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 1220,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 2.6,
+  "register_offset_mm": 0.08,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 56,
+  "customer_tier": "standard",
+  "prior_stoppages": 4
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "adjust_and_recheck",
+   "second": "hold_for_signoff",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (wrong_stock_loaded = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 65,
+ "deciding": {
+  "colour_in_tolerance": "Measured patches C 2.1 and Y 1.8 are under spec_max_de 3.0, but M and K delta_e are null, so the sheet is not fully measured. Missing readings favour false, while the passing patches leave true plausible.",
+  "run_before_signoff": "signed_at 06:40 precedes first_production_at 07:05, so no production sheets were logged before signature. Some doubt remains because the signature is tied to a single OK sheet number.",
+  "next_step": "Null M and K readings call for a re-pull and remeasure, which supports adjust_and_recheck. Stock loaded GS-300M differs from spec GS-250C, which pulls toward escalation. Hold_for_signoff is not supported because the sign-off is present, so the split is contested.",
+  "staff_effort": "Wrong stock with 1220 production sheets plus incomplete readings means reprint planning and remeasuring. This sits between one to five days and more than five days, with level 3 slightly favoured.",
+  "scrap_exposure": "stock_loaded GS-300M differs from stock_spec GS-250C, and 1220 production sheets are 12.2% of run_qty 10000, at or above 10% and far over the 2.6% overs."
+ },
+ "request": "rec-F423-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008908
+}

@@ -1,0 +1,167 @@
+{
+ "id": "F404-0041",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "A3",
+   "date": "2024-03-12",
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty"
+  },
+  "children": {
+   "booked": 19,
+   "slots": [
+    {
+     "t": "11:15",
+     "n": 21
+    },
+    {
+     "t": "11:30",
+     "n": 21
+    },
+    {
+     "t": "11:45",
+     "n": 21
+    },
+    {
+     "t": "12:00",
+     "n": 21
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S011",
+    "q": 6,
+    "in_ratio": true,
+    "plan": "07:30-16:00"
+   },
+   {
+    "id": "S012",
+    "q": 3,
+    "in_ratio": true,
+    "plan": "07:30-17:30"
+   },
+   {
+    "id": "S013",
+    "q": 3,
+    "in_ratio": true,
+    "plan": "07:45-17:30"
+   },
+   {
+    "id": "S014",
+    "q": 3,
+    "in_ratio": true,
+    "plan": "12:00-17:00"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S011",
+    "in": "07:30",
+    "out": "11:20",
+    "q": 6
+   },
+   {
+    "id": "S012",
+    "in": "07:30",
+    "out": "17:30",
+    "q": 3
+   },
+   {
+    "id": "S013",
+    "in": "07:45",
+    "out": "17:30",
+    "q": 3
+   },
+   {
+    "id": "S014",
+    "in": "12:00",
+    "out": "17:00",
+    "q": 3
+   }
+  ],
+  "cover_log": [],
+  "history": {
+   "prior_breaches_90d": 2,
+   "last_audit_outcome": "satisfactory"
+  }
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 21,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 40,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "partial_day",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 2
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 21,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 40,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "partial_day",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 2
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "corrective_plan",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "balanced",
+   "target": "staff_shortfall",
+   "second": "none_found",
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "below_ratio": "L6 S011 signed out 11:20 against a 16:00 plan, leaving two L3 staff with 21 children from 11:20 to 12:00 (three needed at 1:8) and an empty cover_log.",
+  "disposition": "Uncovered breach of about 40 minutes, under sixty, so a confirmed non-notifiable breach calls for an action plan with the room manager.",
+  "primary_cause": "Eligible staff fell below rota because the L6 left early, but the 21 children against 19 booked also contribute, so none_found or a child-side reading stays arguable.",
+  "shortfall_duration": "Gap runs 11:20 to 12:00 by sign-in times, but the slot grid is 15-minute and the start falls mid-slot, so it could be read as 40 minutes or as a shorter window.",
+  "breach_severity": "Two L3 staff cover 16 children at 1:8 against 21 signed in, leaving five beyond cover, though the 1:13 L6 rule applied until 11:20 gives some doubt."
+ },
+ "request": "rec-F404-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012256
+}

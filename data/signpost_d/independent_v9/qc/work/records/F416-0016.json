@@ -1,0 +1,196 @@
+{
+ "id": "F416-0016",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "station": "N4",
+   "date": "2025-03-08",
+   "signoff": "G1 17:40"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "09:00",
+    "off": "17:30",
+    "qx": "2026-01-10"
+   },
+   {
+    "id": "G2",
+    "on": "09:00",
+    "off": "17:30",
+    "qx": "2026-02-01"
+   },
+   {
+    "id": "M9",
+    "home": "S2",
+    "on": "11:00",
+    "off": "13:00",
+    "qx": "2025-11-30"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "11:00",
+    "rip_risk": "mod",
+    "flag": "yellow",
+    "bathing_zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-03-08",
+    "type": "water_rescue",
+    "t": "09:40",
+    "resp": [
+     "G1",
+     "G2"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I2",
+    "date": "2025-03-08",
+    "type": "water_rescue",
+    "t": "10:15",
+    "resp": [
+     "G1",
+     "G2"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I3",
+    "date": "2025-03-08",
+    "type": "water_rescue",
+    "t": "11:30",
+    "resp": [
+     "G1",
+     "M9"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I4",
+    "date": "2025-03-08",
+    "type": "water_rescue",
+    "t": "12:10",
+    "resp": [
+     "G2",
+     "M9"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I5",
+    "date": "2025-03-08",
+    "type": "water_rescue",
+    "t": "12:55",
+    "resp": [
+     "G1",
+     "M9"
+    ],
+    "out": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jetski",
+    "unit": "JS1",
+    "out_from": "12:00",
+    "out_to": "13:30",
+    "sub": "JS2"
+   }
+  ],
+  "handover": {
+   "rescues": 5,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "check_sheet_ref": "CS-118"
+  }
+ },
+ "factors": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": false,
+  "missing_record": "ambulance_ref",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "kit_outage": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 68,
+ "deciding": {
+  "two_guard_cover": "Every rescue lists two responders with in-date qx; the mutual-aid guard M9 (home S2) is on roster 11:00-13:00 and the last rescue is at 12:55, close to his off time, which leaves slight doubt.",
+  "totals_reconcile": "Handover rescues 5, first_aid 0 and kit_defects 1 match five itemised rescues, no first-aid incidents and one equipment entry. All dates equal the shift date. Modest doubt only because the mutual-aid cover is tight.",
+  "next_step": "Log is complete, with a check_sheet_ref, sign-off and matching totals. The only kit outage has a substitute logged, so there is nothing to request, amend or order.",
+  "outcome_severity": "All five outcomes are released and there is no aed_used, referral_ref or ambulance_ref.",
+  "kit_outage": "Jetski out 12:00-13:30 (90 min) but substitute JS2 is logged, so no unsubstituted outage. Doubt arises only from the length of the outage."
+ },
+ "request": "rec-F416-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.016133
+}

@@ -1,0 +1,132 @@
+{
+ "id": "F407-0008",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-3305",
+   "received_at": "2024-07-01T08:05",
+   "channel": "public_app",
+   "photo_ref": null,
+   "linked_reports": [
+    "R-3290",
+    "R-3294",
+    "R-3298",
+    "R-3301"
+   ],
+   "claim_ref": "CL-910"
+  },
+  "location": {
+   "road_class": "main_distributor",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspected_at": "2024-07-02",
+   "depth_mm": 38,
+   "width_mm": 399.01,
+   "offset_m": 9
+  },
+  "works_history": [
+   {
+    "job": "J-501",
+    "completed": "2024-03-15",
+    "offset_m": null,
+    "guarantee_end": "2025-03-15"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "start": "2024-07-15",
+     "extent_m": [
+      0,
+      50
+     ]
+    }
+   ],
+   "temp_measures": [
+    {
+     "offset_m": 9,
+     "installed": "2024-07-02",
+     "expiry": "2024-08-02"
+    }
+   ]
+  },
+  "current_order": null
+ },
+ "factors": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 4,
+  "reporter_source": "public_app",
+  "injury_or_claim": true,
+  "order_status": "none",
+  "defect_width_mm": 399.01,
+  "photo_attached": false
+ },
+ "factors_sampled": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 4,
+  "reporter_source": "public_app",
+  "injury_or_claim": true,
+  "order_status": "none",
+  "defect_width_mm": 399.01,
+  "photo_attached": false
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "repeat_failure": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_engineer",
+   "second": "close_no_action",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 70,
+ "deciding": {
+  "meets_threshold": "depth 38 mm is below the 40 mm threshold.",
+  "repeat_failure": "J-501 has street-level null offset but is recent and in guarantee; defect at 9 m, location unconfirmed.",
+  "next_step": "claim_ref CL-910 and possible repeat favour engineer; below threshold with scheme and temp measure favour closing.",
+  "staff_effort": "claim handling takes hours, perhaps days if the history is checked.",
+  "response_timescale": "below threshold suggests none; claim and possible recurrence might justify routine repair."
+ },
+ "request": "rec-F407-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004728
+}

@@ -1,0 +1,139 @@
+{
+ "id": "F407-0032",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "P-2207",
+   "received_at": "2025-06-02T10:00",
+   "channel": "utility_contractor",
+   "photo_ref": null,
+   "linked_reports": [
+    "P-2190",
+    "P-2198",
+    "P-2201"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "strategic",
+   "intervention_depth_mm": 50
+  },
+  "inspection": {
+   "inspected_at": "2025-06-03",
+   "depth_mm": 51,
+   "width_mm": 529.02,
+   "offset_m": 2
+  },
+  "works_history": [
+   {
+    "job": "J-310",
+    "done": "2025-02-11",
+    "offset_m": 10,
+    "guarantee_end": "2026-02-11"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "start": "2025-06-16",
+     "covers_offset": true
+    }
+   ],
+   "temp_measures": [
+    {
+     "covers_offset": true,
+     "expires": "2025-07-01"
+    }
+   ]
+  },
+  "current_order": {
+   "id": "WO-871",
+   "status": "raised",
+   "completed_items": 0,
+   "total_items": 1
+  }
+ },
+ "factors": {
+  "road_category": "strategic",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 3,
+  "reporter_source": "utility_contractor",
+  "injury_or_claim": false,
+  "order_status": "raised",
+  "defect_width_mm": 529.02,
+  "photo_attached": false
+ },
+ "factors_sampled": {
+  "road_category": "strategic",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 3,
+  "reporter_source": "utility_contractor",
+  "injury_or_claim": false,
+  "order_status": "raised",
+  "defect_width_mm": 529.02,
+  "photo_attached": false
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "response_timescale": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 77,
+ "deciding": {
+  "meets_threshold": "depth_mm 51 vs intervention_depth_mm 50 on a valid post-report inspection; margin is only 1 mm.",
+  "repeat_failure": "works_history job J-310 offset_m 10 sits exactly at the ten-metre limit, within guarantee; the defect inspection offset is 2.",
+  "next_step": "Order WO-871 already raised, temporary measure in place and scheme covering offset starts 2025-06-16; nothing to add.",
+  "staff_effort": "Order raised, no claim and no open items; minimal administrative time.",
+  "response_timescale": "Planned scheme and temporary measure cover the defect, so no separate repair is required."
+ },
+ "request": "rec-F407-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00779
+}

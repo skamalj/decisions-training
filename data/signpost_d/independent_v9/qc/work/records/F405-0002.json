@@ -1,0 +1,182 @@
+{
+ "id": "F405-0002",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-5530",
+   "detected_on": "2025-10-08",
+   "term_start": "2025-10-06",
+   "room": "LB-214",
+   "slot": "Mon 10:00-13:00"
+  },
+  "booking_a": {
+   "module": "CHM210",
+   "department": "CHEM",
+   "weekday": "Mon",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "headcount": 30,
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "PHY120",
+   "department": "PHYS",
+   "room": "LB214",
+   "weekday": "Mon",
+   "start": "11:00",
+   "end": "13:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "headcount": 32,
+   "required_features": [
+    "lab_benches"
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-07-01",
+   "approver": "s.ito"
+  },
+  "room": {
+   "code": "LB-214",
+   "aliases": [
+    "LB214"
+   ],
+   "capacity": 36,
+   "features": [
+    "lab_benches"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "LB-310",
+    "capacity": 34,
+    "features": [
+     "projector"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "date": "2024-10-07"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-01-20"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-03-04"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": -2,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.06,
+  "required_feature": "lab_benches",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 3
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": true,
+  "wrong_room_variant": true,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": -2,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.06,
+  "required_feature": "lab_benches",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 3
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "balanced",
+   "target": "dismiss",
+   "second": "reschedule",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 69,
+ "deciding": {
+  "genuine_clash": "Mon 11:00-12:00 overlaps in weeks 1-10; B's room LB214 is a listed alias of LB-214. The differing code text is the only doubt.",
+  "alt_room_fits": "LB-310 capacity 34 covers 32, but features lack the required lab_benches.",
+  "resolution": "Both confirmed and overlap on an aliased room, with no fitting room, which points to reschedule; the differing room strings make dismiss arguable.",
+  "urgency": "Week 1 Monday 2025-10-06 is two days before detection on 2025-10-08, so already past; some may count it as only just missed.",
+  "parties_needed": "Two different departments (CHEM, PHYS) must agree one move."
+ },
+ "request": "rec-F405-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012791
+}

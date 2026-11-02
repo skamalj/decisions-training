@@ -1,0 +1,337 @@
+{
+ "id": "F418",
+ "domain": "rail station platform staffing logs",
+ "role": "Area station staffing auditor, who reviews each completed platform staffing log against rosters, sign-on records and approved dispensations",
+ "setting": "A regional rail operator's station staffing assurance desk. After every shift, the duty manager submits a platform staffing log for each staffed platform. The auditor checks it one at a time. The log must show who was on the platform, when they signed on and off, whether they held in-date competence (dispatch, platform safety), any gaps below the platform's minimum staffing level, how gaps were covered, and whether an approved single-staffing or reduced-staffing dispensation applied. The auditor decides whether the log can be accepted, needs records chased, needs correcting with a team briefing, or must go to the route operations manager.",
+ "questions": {
+  "headcount_verified": {
+   "type": "noul",
+   "instructions": "Every person logged on platform has a matching valid sign-on.",
+   "criteria": {
+    "true": "Each logged person has matching sign-on and in-date competence.",
+    "false": "Any logged person lacks sign-on, or competence is lapsed or absent."
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the reviewer do with this staffing log now?",
+   "criteria": {
+    "accept_log": "Log reconciles and exposure is nil or covered by dispensation.",
+    "request_records": "A named sign-on sheet or dispensation reference is missing.",
+    "correct_and_brief": "Amend log entries and brief the team on a found shortfall.",
+    "escalate_ops": "Refer to route operations manager for safety-critical breach or repeats."
+   }
+  },
+  "coverage_outcome": {
+   "type": "choice",
+   "instructions": "How was the platform's minimum staffing covered during service hours?",
+   "criteria": {
+    "fully_rostered": "All minimum posts filled by rostered staff throughout service.",
+    "cover_arranged": "Every gap filled by redeployed or relief staff, none left open.",
+    "partial_cover": "Some gap minutes filled, but an open period remained.",
+    "uncovered": "Gap left wholly unfilled from its start to its end."
+   }
+  },
+  "reversal_time": {
+   "type": "score",
+   "instructions": "How long would it take to fully undo this outcome?",
+   "criteria": [
+    "Could be fully undone within one day",
+    "Needs one to seven days to undo",
+    "Needs eight days to three months to undo",
+    "Cannot be undone within three months"
+   ]
+  },
+  "exposure_severity": {
+   "type": "score",
+   "instructions": "How serious was the worst staffing exposure during passenger service?",
+   "criteria": [
+    "No period below minimum during passenger service",
+    "Below minimum, but within a valid approved dispensation",
+    "Below minimum without valid dispensation, no safety duty missed",
+    "Safety-critical duty performed without certified staff present"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "roster_attendance_mismatch",
+   "description": "Size and location of disagreement between rostered posts and attendance sign-on records: none; trivial (sign-on a few minutes off); minor (staff id swapped for an undocumented substitute); major (rostered person has no sign-on at all, or sign-off precedes logged end of duty by 30+ minutes)",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "trivial",
+    "minor",
+    "major"
+   ],
+   "weights": [
+    0.35,
+    0.25,
+    0.22,
+    0.18
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "shortfall_minutes",
+   "description": "Total minutes the platform was below its minimum staffing level, derived only from gap events and sign-on/off times, never stated as a total",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 120,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "shortfall_timing",
+   "description": "When the shortfall fell relative to the platform's passenger service window in the shift section",
+   "kind": "categorical",
+   "values": [
+    "no_shortfall",
+    "outside_service",
+    "off_peak",
+    "peak"
+   ],
+   "weights": [
+    0.3,
+    0.2,
+    0.3,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "dispensation_present",
+   "description": "Whether the controls section carries an approved reduced-staffing dispensation reference; the main mitigating signal",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "dispensation_fit",
+   "description": "How well a present dispensation actually matches the gap: covers the whole gap; expired part-way through the gap; issued for a different platform number; or covers the time but its approver field is blank",
+   "kind": "categorical",
+   "values": [
+    "covers_fully",
+    "expired_midgap",
+    "wrong_platform",
+    "unapproved"
+   ],
+   "weights": [
+    0.5,
+    0.2,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "cover_arrangement",
+   "description": "How gap periods were filled: no cover recorded, full cover by redeployed or relief staff, or cover that starts late or ends early, leaving open minutes",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "full",
+    "partial"
+   ],
+   "weights": [
+    0.3,
+    0.35,
+    0.35
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S1"
+   ]
+  },
+  {
+   "name": "unqualified_dispatch",
+   "description": "Aggravating fact: at least one train was dispatched from a staff-dispatch platform during a gap by a person whose dispatch competence is absent or expired on the shift date, visible only by matching dispatch event times to attendance competence records",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "competence_lapse",
+   "description": "Whether a logged person's platform safety competence expiry date in attendance falls before the shift date, separate from dispatch competence",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "benign_closure",
+   "description": "Whether a planned possession or platform closure in controls overlaps the gap, so no trains called during part or all of it",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.45,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "note_consistency",
+   "description": "Whether the duty manager's free-text remarks agree with listed events: consistent; contradicts (names a cover person absent from attendance, or claims no gaps when events show one); vague (mentions 'short-handed' with no times)",
+   "kind": "categorical",
+   "values": [
+    "consistent",
+    "contradicts",
+    "vague"
+   ],
+   "weights": [
+    0.5,
+    0.25,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "missing_section",
+   "description": "Whether a needed part of the record is absent or null: none missing, attendance list null, or controls section referenced in remarks but null",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "attendance_missing",
+    "controls_missing"
+   ],
+   "weights": [
+    0.7,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S5"
+   ]
+  },
+  {
+   "name": "prior_shortfalls_30d",
+   "description": "Count of earlier logged shortfalls at this platform in the last 30 days; three or more supports escalation when a current unapproved shortfall exists, otherwise a decoy",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 6,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S6"
+   ]
+  },
+  {
+   "name": "boundary_case",
+   "description": "Whether a key time sits exactly on a boundary, such as a gap ending at the minute service starts or a dispensation valid_to equal to the gap end, leaving judges split",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S6"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "shift",
+   "description": "Station code, platform number, shift date, shift start and end, passenger service window, min_staff, dispatch_mode"
+  },
+  {
+   "name": "roster",
+   "description": "List of planned posts: post, staff_id, role, planned_start, planned_end"
+  },
+  {
+   "name": "attendance",
+   "description": "List of sign-on records: staff_id, sign_on, sign_off, safety_comp_exp, dispatch_comp_exp; may be null"
+  },
+  {
+   "name": "events",
+   "description": "List of timed entries: type (gap_start, gap_end, cover_start, cover_end, dispatch, redeploy), time, staff_id, platform"
+  },
+  {
+   "name": "controls",
+   "description": "Dispensation and possession details: disp_ref, disp_platform, valid_from, valid_to, approved_by, possession_from, possession_to, prior_shortfalls_30d"
+  },
+  {
+   "name": "remarks",
+   "description": "One to three short free-text lines from the duty manager about the shift"
+  }
+ ],
+ "rendering_notes": "roster_attendance_mismatch appears as differences between roster and attendance: shifted sign_on times, a different staff_id with no redeploy event, or a missing attendance row. shortfall_minutes and shortfall_timing are never given as totals; derive them from gap_start/gap_end and cover events against shift.service_from/service_to. dispensation_present controls whether controls.disp_ref is filled or null. dispensation_fit shows as valid_to before gap_end, disp_platform differing from shift.platform, or approved_by null. cover_arrangement appears as cover_start/cover_end events that span the gap fully, partly or not at all. unqualified_dispatch is visible only when a dispatch event time falls inside a gap and that staff_id's dispatch_comp_exp is null or before shift.date, while shift.dispatch_mode is 'staff'. competence_lapse shows as safety_comp_exp earlier than shift.date. benign_closure fills possession_from/to overlapping the gap. note_consistency is in remarks lines, for example naming a relief person absent from attendance, or saying 'all covered' against an open gap. missing_section sets attendance or controls to null, often while remarks refer to it. prior_shortfalls_30d sits in controls as a plain integer. Decoys: expiry dates falling within days after the shift date, which are still valid; gaps entirely outside the service window; a high prior_shortfalls count on a clean shift; remarks expressing worry with no matching event; overtime flags on roster rows. No field may state severity, breach status, coverage outcome, verification result or recommended action. Totals, flags such as 'breach' and computed gap durations must never appear.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "reversal_time",
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_records"
+ },
+ "aggravating_factor": "unqualified_dispatch",
+ "design_cost": 0.147184
+}

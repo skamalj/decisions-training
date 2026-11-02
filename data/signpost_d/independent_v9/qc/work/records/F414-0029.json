@@ -1,0 +1,138 @@
+{
+ "id": "F414-0029",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "CF-310",
+   "crit_fall_height_m": 1.5,
+   "surf_type": "wood_chip"
+  },
+  "inspection": {
+   "insp_date": "2024-07-15",
+   "insp_grade": "annual_main",
+   "fall_height_m": 1.5,
+   "surf_type_found": "wood_chip",
+   "surf_depth_mm": 285,
+   "surf_req_table": [
+    {
+     "h_max": 1.5,
+     "type": "wood_chip",
+     "min_depth_mm": 300
+    }
+   ],
+   "probe_results": [],
+   "findings": [
+    {
+     "defect_code": "PT01",
+     "component_id": "C2",
+     "injury_mech": "none",
+     "cosmetic": true
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "CF-310",
+    "component_id": "C2",
+    "defect_ref": "D9",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "high",
+   "incident_reports_90d": 3
+  },
+  "history": [
+   {
+    "date": "2024-01-20",
+    "grade": "annual_main",
+    "defect_refs": []
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": -15.0,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "high",
+  "incident_reports_90d": 3
+ },
+ "factors_sampled": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": 37.25,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.73,
+  "temporary_measure_in_place": true,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "high",
+  "incident_reports_90d": 3
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 40,
+ "deciding": {
+  "prior_defects_cleared": "The previous inspection raised no defects (empty defect_refs), so nothing from it can be open. That is vacuously true.",
+  "surfacing_adequate": "Depth 285 mm is below the 300 mm requirement for 1.5 m wood chip, by a modest margin.",
+  "asset_disposition": "The only finding is cosmetic paint wear with injury_mech none, and there are no failed probes or temporary measures. Continued use fits.",
+  "remedial_progress": "The single raised work order W1 is open with no closed date.",
+  "hazard_severity": "The only finding is flagged cosmetic with injury_mech none."
+ },
+ "request": "rec-F414-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013561
+}

@@ -1,0 +1,162 @@
+{
+ "id": "F406-0019",
+ "family": "F406",
+ "state": {
+  "session": {
+   "gallery_code": "GAL-S3",
+   "session_date": "2025-06-14",
+   "open": "10:00",
+   "close": "12:30",
+   "certified_limit": 100
+  },
+  "counts": {
+   "intervals": [
+    {
+     "t": "10:00",
+     "occ": 70
+    },
+    {
+     "t": "10:15",
+     "occ": 95
+    },
+    {
+     "t": "10:30",
+     "occ": 104
+    },
+    {
+     "t": "10:45",
+     "occ": 108
+    },
+    {
+     "t": "11:00",
+     "occ": 110
+    },
+    {
+     "t": "11:15",
+     "occ": 106
+    },
+    {
+     "t": "11:30",
+     "occ": 102
+    },
+    {
+     "t": "11:45",
+     "occ": 101
+    },
+    {
+     "t": "12:00",
+     "occ": 96
+    }
+   ],
+   "manual_tally_peak": 112
+  },
+  "variations": [
+   {
+    "gallery_code": "GAL-S3",
+    "valid_from": "2025-06-14",
+    "valid_to": "2025-06-14",
+    "uplift_to": 120,
+    "status": "pending"
+   }
+  ],
+  "equipment": {
+   "maintenance": [
+    {
+     "gate": "S-1",
+     "raised_at": "2025-06-13T16:00",
+     "summary": "double counting"
+    }
+   ],
+   "gates": [
+    "S-1"
+   ]
+  },
+  "staff_log": {
+   "egress_check": {
+    "state": "partial",
+    "routes_checked": "2 of 3"
+   },
+   "notes": [
+    "Queue at door from 10:30."
+   ]
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 1.1,
+  "intervals_over_limit": 6,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "matches gallery and date but status pending",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "partial",
+  "prior_overages_30d": 3,
+  "staff_note_tone": "factual",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.26,
+  "intervals_over_limit": 12,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "partial",
+  "prior_overages_30d": 3,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "fault_explains_overage": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "amend_and_file",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "variation_applies": "Variation matches gallery and date but status is pending, not approved.",
+  "fault_explains_overage": "Ticket for gate S-1, the session gate, raised 2025-06-13, before the session.",
+  "next_step": "Tally 112 vs counter peak 110 is a minor discrepancy; the fault ticket explains it, so annotate and file.",
+  "peak_excess": "Counter peak 110 is exactly 10% over, tally 112 is just above, so level 2 or 3.",
+  "intervals_over": "Six intervals above 100: 104, 108, 110, 106, 102, 101."
+ },
+ "request": "rec-F406-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009814
+}

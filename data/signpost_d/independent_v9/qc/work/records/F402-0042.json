@@ -1,0 +1,107 @@
+{
+ "id": "F402-0042",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "routine",
+   "received": "2025-04-02",
+   "onset": "2025-01-29"
+  },
+  "clinical": {
+   "red_flags": [],
+   "function_index": 70,
+   "anticoagulant": false,
+   "surgery_date": "2025-02-18"
+  },
+  "gp_record": {
+   "meds": [
+    "B01AF02"
+   ],
+   "falls_3m": 1
+  },
+  "attachments": [],
+  "history": {
+   "episodes": 2,
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": false,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "major",
+  "missing_item": "post_op_protocol",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 9,
+  "function_index": 69.66,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "routine",
+  "falls_last_3m": 1,
+  "post_op_days": 44,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": false,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "major",
+  "missing_item": "post_op_protocol",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 9,
+  "function_index": 69.66,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "routine",
+  "falls_last_3m": 1,
+  "post_op_days": 44,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "book_amended",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "specialist_rehab",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "red_flag_unresolved": "No red-flag codes, but the unrecorded anticoagulant (GP lists B01AF02) could be read as an unaddressed risk.",
+  "next_step": "clinical.anticoagulant false while gp meds list an anticoagulant requires booking with corrected precautions.",
+  "pathway": "44 days post-op with 2 prior episodes and failed self-management points to specialist rehab, with some doubt.",
+  "reversal_time": "Post-op rehab delay or anticoagulant error takes weeks to undo.",
+  "clinical_urgency": "Function 70, one fall, no flags; waiting versus six-week contact is a near split."
+ },
+ "request": "rec-F402-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004677
+}

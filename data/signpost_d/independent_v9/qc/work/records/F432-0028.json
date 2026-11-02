@@ -1,0 +1,128 @@
+{
+ "id": "F432-0028",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E07",
+   "risk_cat": 3,
+   "temp_range_c": [
+    18,
+    26
+   ]
+  },
+  "shift": {
+   "open": 2,
+   "close": 2
+  },
+  "rounds": [
+   {
+    "t": "09:00",
+    "logged": true,
+    "temp_c": 19
+   },
+   {
+    "t": "13:00",
+    "logged": true,
+    "temp_c": 27
+   }
+  ],
+  "close_check": {
+   "t": "12:40"
+  },
+  "feeding": [
+   {
+    "sheet_g": 1000,
+    "offered_g": 1000,
+    "leftover_kg": 0.1
+   }
+  ]
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_before_last_round",
+  "intake_ratio": 0.9,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 0,
+  "cctv_cover": false,
+  "temp_excursion": "brief_single_reading",
+  "heater_maintenance_window": false,
+  "field_mismatch": "unit_kg_vs_g",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_before_last_round",
+  "intake_ratio": 0.42,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 1,
+  "cctv_cover": false,
+  "temp_excursion": "brief_single_reading",
+  "heater_maintenance_window": false,
+  "field_mismatch": "unit_kg_vs_g",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "missed_rounds": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 29,
+ "deciding": {
+  "count_reconciles": "Opening 2 equals closing 2 and no movements are listed.",
+  "secure_at_close": "Lock check 12:40 precedes last round 13:00, but no fault ticket exists.",
+  "next_step": "Counts match, rounds logged and intake fine; early lock check is the only doubt.",
+  "intake_shortfall": "Leftover 0.1 kg is 100 g of 1000 g offered, so 90% intake.",
+  "missed_rounds": "Both rounds are logged."
+ },
+ "request": "rec-F432-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005823
+}

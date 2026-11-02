@@ -1,0 +1,124 @@
+{
+ "id": "F431-0016",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM-40117",
+   "type": "ultrasonic",
+   "seal_state": "broken",
+   "seal_checked_date": "2024-03-02",
+   "last_verified_date": "2021-06-01"
+  },
+  "period_read": {
+   "read_date": "2024-03-31",
+   "reg_kwh": 9187,
+   "src_code": "ENG",
+   "photo_ref": "P-2281"
+  },
+  "history": [
+   {
+    "date": "2024-02-29",
+    "reg_kwh": 8000,
+    "src": "AMR",
+    "same_period_ly_kwh": 1000
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_COMMS",
+    "E_AIR",
+    "E_FLOW"
+   ],
+   "flow_temp_c": 68,
+   "return_temp_c": 41,
+   "battery_pct": 22
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 690,
+   "hdd_prior_year": 500,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "open",
+     "date": "2024-03-10"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "engineer_manual",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 0.86,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.38,
+  "diagnostic_error_count": 3,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "engineer_manual",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 0.26,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.38,
+  "diagnostic_error_count": 3,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "billable_actual": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_engineer",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 55,
+ "deciding": {
+  "meter_fault": "Consumption 1187 kWh against expected 1380 is close to baseline, and delta-T 27 C is plausible. Against that, the seal is broken and there are three error codes, so some doubt remains.",
+  "billable_actual": "The read is an engineer read in sequence, but the seal was found broken on 2024-03-02 with no matching engineer visit in history, and a RECAL order is open. This leans towards not billable.",
+  "next_step": "The broken seal has no logged visit, and the open RECAL order and error codes need follow-up. This leans towards referral to the metering lead.",
+  "staff_effort": "The work is a single seal and recalibration check with one site visit, likely one to eight hours.",
+  "consumption_deviation": "Consumption is 9187-8000=1187 against expected 1000*690/500=1380, a ratio of 0.86 and a deviation of about 14%. That sits right at the 15% boundary between levels 0 and 1."
+ },
+ "request": "rec-F431-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010249
+}

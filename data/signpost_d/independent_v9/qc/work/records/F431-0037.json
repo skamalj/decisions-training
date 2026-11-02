@@ -1,0 +1,135 @@
+{
+ "id": "F431-0037",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM-22053",
+   "type": "ultrasonic",
+   "last_verified_date": "2019-06-03",
+   "seal_state": "intact",
+   "seal_checked_date": "2025-01-20"
+  },
+  "period_read": {
+   "read_date": "2025-03-10",
+   "reg_kwh": 52000,
+   "vol_m3": 690,
+   "src_code": "AMR",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2025-02-10",
+    "reg_kwh": 51200,
+    "src": "AMR",
+    "same_period_ly_kwh": 600
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW",
+    "E_TPROBE",
+    "E_AIR",
+    "E_COMMS"
+   ],
+   "flow_temp_c": 48.2,
+   "return_temp_c": 47.9,
+   "battery_pct": 14,
+   "firmware": "3.2.1"
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 155,
+   "hdd_prior_year": 120,
+   "works_orders": [
+    {
+     "type": "METER_EXCH",
+     "status": "open",
+     "date": "2025-03-04"
+    }
+   ],
+   "dispute_open": false,
+   "tariff_code": "RES-B"
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "photo_ref_missing",
+  "consumption_ratio": 1.03,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.29,
+  "diagnostic_error_count": 4,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": true,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "photo_ref_missing",
+  "consumption_ratio": 2.37,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.29,
+  "diagnostic_error_count": 4,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "accept_reading",
+   "second": "escalate_engineer",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 125,
+ "deciding": {
+  "meter_fault": "Four error codes including E_FLOW, E_TPROBE and E_AIR. Delta-T is only 0.3 C. A METER_EXCH order is open. Together these corroborate a device fault.",
+  "billable_actual": "It is an in-sequence AMR actual with plausible consumption, which favours true. The device errors and open exchange order leave doubt.",
+  "next_step": "Consumption is plausible and the read is in sequence, which supports accepting it. The faulty diagnostics and the exchange order support sending it to an engineer.",
+  "staff_effort": "Checking the exchange order and the diagnostics is probably one to eight hours of work.",
+  "consumption_deviation": "Period use is 800 kWh. Expected is 600*155/120=775 kWh, so the ratio is 1.03 and the deviation is 3%."
+ },
+ "request": "rec-F431-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009886
+}

@@ -1,0 +1,147 @@
+{
+ "id": "F403-0020",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "soy",
+    "egg"
+   ],
+   "plan_start": "2025-06-05"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-03-01",
+   "allergens": [
+    "soy",
+    "egg"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-05-20",
+   "dishes": [
+    {
+     "dish": "stir fry",
+     "contains": [
+      "soy"
+     ],
+     "recipe_version_date": "2025-05-28",
+     "substitute": null,
+     "spec_checked_on": "2025-05-30"
+    },
+    {
+     "dish": "omelette",
+     "contains": [
+      "egg"
+     ],
+     "recipe_version_date": "2025-05-28",
+     "substitute": null,
+     "spec_checked_on": "2025-05-30"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": false,
+   "exceptions": [
+    {
+     "signed": "2025-06-02",
+     "covers": "cleaning log gap"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-06-10",
+   "packed_lunch_until": "2025-06-11",
+   "incidents": [
+    {
+     "date": "2025-06-05",
+     "dish": "omelette",
+     "note": "no reaction observed"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 2,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "cleaning_log_incomplete",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 2,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 2,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 3,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_for_rework",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "balanced",
+   "target": "kitchen_gap",
+   "second": "no_gap",
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 33,
+ "deciding": {
+  "evidence_allergens_covered": "Both evidence allergens (soy, egg) appear in the declared list and in mapped dishes, but those dishes have substitute null, so true is only leaning.",
+  "next_step": "Two dishes (stir fry, omelette) have substitute null, which means remapping is needed before release.",
+  "first_gap_stage": "Evidence is current, but the incomplete cleaning log is covered by a signed exception, which makes kitchen_gap and no_gap both defensible.",
+  "exposure_proximity": "Incident on 2025-06-05, on plan_start, served omelette containing declared egg, despite the 'no reaction observed' note.",
+  "meal_urgency": "packed_lunch_until 2025-06-11 puts the first meal on 2025-06-12, 2 school days after review_date 2025-06-10, at the boundary of levels 2 and 3, and the logged incident confuses it."
+ },
+ "request": "rec-F403-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011976
+}

@@ -1,0 +1,142 @@
+{
+ "id": "F409-0032",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A-2208",
+   "full_name": "R. Okafor",
+   "submitted_on": "2024-06-03",
+   "app_type": "change_of_address",
+   "message": "Do visitor vouchers carry over?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2024-04-07",
+     "address_line": "9 Bell Court",
+     "verified": true
+    }
+   ],
+   "note": "Address line partly cropped in scan; no tenancy agreement uploaded."
+  },
+  "vehicle": {
+   "plate": "BD65 HJK",
+   "keeper_name": "R. Okafor",
+   "supporting_letters": []
+  },
+  "request": {
+   "zone_code": "A1",
+   "address": "9 Bell Court",
+   "plate_entered": "BD65 HJK",
+   "duration_months": 12
+  },
+  "account_history": {
+   "live_permits": [
+    {
+     "permit_no": "P-5510"
+    },
+    {
+     "permit_no": "P-5532"
+    }
+   ],
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "past_permits": [
+    {
+     "permit_no": "P-4102",
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "open"
+    }
+   ],
+   "exceptions": []
+  }
+ },
+ "factors": {
+  "application_type": "change_of_address",
+  "address_match_level": "exact",
+  "proof_age_days": 57,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "change_of_address",
+  "address_match_level": "exact",
+  "proof_age_days": 57,
+  "docs_missing": 3,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 1,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "household_cap",
+   "second": null,
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 59,
+ "deciding": {
+  "residency_shown": "A verified utility bill 57 days old matches the address, which supports residency. The note says the address line is partly cropped, which leaves some doubt.",
+  "disposition": "Tenancy agreement is missing and the household already holds 2 permits against a cap of 2, so nothing should be issued yet.",
+  "main_issue": "Two live permits at the address equal max_per_household 2 and there is no exception. The cloned past permit is a competing issue, which leaves some doubt.",
+  "misuse_strength": "Past permit P-4102 was seized with reason 'cloned copy found on different vehicle'.",
+  "document_gaps": "Only the tenancy agreement is missing. The utility bill is present and verified."
+ },
+ "request": "rec-F409-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011454
+}

@@ -1,0 +1,122 @@
+{
+ "id": "F426-0035",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B9",
+   "crop": "apple",
+   "planted_area_ha": 5.0,
+   "lot_id": "L62"
+  },
+  "applications": [
+   {
+    "app_id": 1,
+    "date": "2024-08-01",
+    "product_code": "UV6",
+    "qty_applied": 10.2,
+    "qty_unit": "L",
+    "area_treated_ha": 5.0,
+    "wind_kmh": 20
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "UV6",
+    "max_rate_per_ha": 2.0,
+    "rate_unit": "L",
+    "phi_days": 7,
+    "approved_crops": [
+     "apple"
+    ]
+   }
+  ],
+  "equipment": {
+   "sprayer_type": "tunnel_recycling",
+   "calibration_valid_to": "2024-07-25",
+   "nozzle_dev_pct": 3
+  },
+  "harvest": {
+   "first_pick_date": "2024-08-20",
+   "residue_test": {
+    "sampled": false
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "about_2pct_over",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "expired_under_30d_low_dev",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": true
+ },
+ "factors_sampled": {
+  "phi_status": "breached_short",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "unit_ml_vs_l",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "expired_under_30d_low_dev",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 9,
+  "high_wind_decoy": true
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_and_test",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "contested",
+   "target": "no_finding",
+   "second": "label_deviation",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 41,
+ "deciding": {
+  "phi_cleared": "UV6 applied 2024-08-01, phi 7, first pick 2024-08-20: 19 days, well clear.",
+  "next_step": "Calibration expired 2024-07-25, before the 2024-08-01 application, rate is marginally over, and residue test not sampled, favouring a hold and test.",
+  "finding_class": "Rate is 10.2/5.0 = 2.04 L/ha vs max 2.0, a trivial excess that could be read as a label deviation or as rounding; intervals fine.",
+  "reversal_time": "Holding and testing a lot resolves in days, though a quick same-day result is possible.",
+  "rate_overrun": "2.04 L/ha against max 2.0 is 2% over, right at the line between level 0 and level 1."
+ },
+ "request": "rec-F426-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01124
+}

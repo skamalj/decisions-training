@@ -1,0 +1,109 @@
+{
+ "id": "F438-0013",
+ "family": "F438",
+ "state": {
+  "coded_record": {
+   "primary_dx": "K35.2",
+   "secondary_dx": [
+    "E11.9",
+    "I10",
+    "N39.0",
+    "J45.9"
+   ]
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "K35.8"
+   },
+   "comorbidities": [
+    "E78.0"
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "FD05A",
+   "hrg_regrouped": "FD05A"
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    "K35.2/K35.8"
+   ]
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.22,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.22,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unsupported_billable_code = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 31,
+ "deciding": {
+  "primary_supported": "K35.2 vs K35.8 differ in the fourth character; the local convention K35.2/K35.8 covers this pair but doubt remains.",
+  "hrg_shift": "FD05A matches FD05A, but the many secondary mismatches leave it open.",
+  "next_step": "The convention covers the primary pair and the HRG is unchanged, which favours closing despite the secondary mismatches.",
+  "error_count": "Four secondary codes (E11.9, I10, N39.0, J45.9) are coded without documentation and E78.0 is not coded, giving four or more errors.",
+  "error_severity": "The secondary errors with the HRG unchanged are minor; the primary pair could be taken as major."
+ },
+ "request": "rec-F438-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009309
+}

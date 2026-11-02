@@ -1,0 +1,150 @@
+{
+ "id": "F411-0004",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "P093",
+   "type": "private hire",
+   "expiry": "2025-06-30",
+   "review_date": "2025-06-05"
+  },
+  "vehicle": {
+   "reg": "LK15 ABC",
+   "make": "Toyota",
+   "model": "Prius",
+   "first_reg": "2016-03-14",
+   "seats": 4,
+   "odometer_km": 172300
+  },
+  "inspection": {
+   "station_id": "ST-14",
+   "date": "2025-05-28",
+   "result_code": "P",
+   "brake_efficiency_pct": 66,
+   "emissions": "pass",
+   "lighting": "pass"
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2026-01-12"
+   },
+   {
+    "type": "driver_badge",
+    "expires_on": "2025-09-30"
+   },
+   {
+    "type": "mot_cert",
+    "expires_on": "2025-06-02",
+    "cover_note_ref": "CN310",
+    "cover_until": "2025-07-01"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-05-30",
+     "result": "P",
+     "odometer_km": 141800
+    },
+    {
+     "date": "2023-11-20",
+     "result": "F",
+     "odometer_km": 128900
+    },
+    {
+     "date": "2023-05-26",
+     "result": "P",
+     "odometer_km": 112000
+    }
+   ],
+   "replacements": []
+  }
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "not_applicable",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 9
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "retest_passed",
+  "deadline_passed": true,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 9
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 126,
+ "deciding": {
+  "odometer_consistent": "Readings rise steadily from 112000 to 141800 to 172300 km; no drop or replacement.",
+  "next_step": "No defects, brake test present, documents in date; the mot_cert expiry is covered by a cover note, with the earlier failure as a minor doubt.",
+  "inspection_outcome": "defects is empty and the result is P with emissions and lighting passing.",
+  "document_gaps": "mot_cert expired 2025-06-02 but CN310 runs to 2025-07-01, past the review date, so all documents count as in date.",
+  "outstanding_severity": "The defects list is empty; nothing is outstanding."
+ },
+ "request": "rec-F411-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008944
+}

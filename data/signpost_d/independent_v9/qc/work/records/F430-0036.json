@@ -1,0 +1,143 @@
+{
+ "id": "F430-0036",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "CB2",
+     "param": "sf6",
+     "unit": "bar",
+     "normal": [
+      5.8,
+      6.4
+     ],
+     "alarm": 5.5,
+     "trip": 5.2,
+     "partner_id": "CB1",
+     "customers_fed": 12281
+    }
+   ]
+  },
+  "round": {
+   "date": "2025-03-04",
+   "inspector": "j.khan",
+   "scheduled": [
+    "CB2"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "CB2",
+    "param": "sf6",
+    "value": 5.9,
+    "unit": "bar"
+   }
+  ],
+  "defects": [
+   {
+    "id": "D1",
+    "asset_id": "CB2",
+    "note": "SF6 gauge reads low",
+    "photo_ref": "IMG-0412"
+   }
+  ],
+  "history": {
+   "previous_round": null,
+   "open_work_orders": [
+    {
+     "desc": "SF6 gauge on CB2 faulty, replacement ordered"
+    }
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "cb1": "in_service"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "within_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": true,
+  "defect_claim": "supported",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 12281,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": true,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 12281,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "follow_up": {
+   "clarity": "clear",
+   "target": "file_closed",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 45,
+ "deciding": {
+  "defect_corroborated": "The low-gauge defect on CB2 matches an SF6 reading of 5.9 bar, near the bottom of the 5.8-6.4 band, and a photo is attached.",
+  "benign_explanation": "All readings are in band, so there is no abnormal reading. The open work order for the faulty CB2 gauge is a possible explanation, which keeps this balanced.",
+  "follow_up": "All readings are in band, the partner is in service, and the open gauge work order is already in hand. Nothing further is needed.",
+  "limit_deviation": "The worst reading, 5.9 bar, is inside the 5.8-6.4 normal band and well above the 5.5 alarm limit. It sits close to the band edge, which leaves slight doubt.",
+  "supply_exposure": "Partner CB1 is in service and carries the load, so no customers would lose supply."
+ },
+ "request": "rec-F430-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009872
+}

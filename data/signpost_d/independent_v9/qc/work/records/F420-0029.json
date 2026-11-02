@@ -1,0 +1,99 @@
+{
+ "id": "F420-0029",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "planned_gross_kg": 1000,
+   "contour_max_cm": 160,
+   "straps_required": 3
+  },
+  "build_measured": {
+   "scale_gross_kg": 1018,
+   "max_height_cm": 161,
+   "straps_fitted": 3
+  },
+  "checks_log": {
+   "reweigh": {
+    "kg": 1020
+   }
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 2.0,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "over_up_to_1cm",
+  "contour_waiver": false,
+  "dg_state": "dg_compatible",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 265,
+  "prior_rebuilds": 3
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -5.63,
+  "piece_count_gap": 4,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "over_more_than_5cm",
+  "contour_waiver": false,
+  "dg_state": "dg_compatible",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": true,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "awb_digits_transposed",
+  "minutes_to_cutoff": 265,
+  "prior_rebuilds": 3
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "release",
+   "second": "release_conditional",
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "balanced",
+   "target": "physical_build",
+   "second": "none",
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "rework_extent": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "pieces_reconciled": "No count section present; nothing contradicts.",
+  "disposition": "Height 161 vs 160 unwaived marginal.",
+  "worst_discrepancy": "1 cm over contour, otherwise clean.",
+  "weight_deviation": "Reweigh 1020 vs 1000 is 2%.",
+  "rework_extent": "Only 1cm over height."
+ },
+ "request": "rec-F420-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00563
+}

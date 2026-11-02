@@ -1,0 +1,125 @@
+{
+ "id": "F408-0027",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 2002,
+   "logged_at": "2024-06-07T09:00",
+   "stream": "recycling",
+   "claimed_date": "2024-06-04",
+   "photo_attached": true
+  },
+  "property": {
+   "uprn": 2002,
+   "postcode": "AB1 2CD"
+  },
+  "schedule": {
+   "streams_due": [
+    "recycling"
+   ],
+   "scheduled_date": "2024-06-03"
+  },
+  "round_log": {
+   "disruption_code": "road_closure",
+   "catch_up_date": "2024-06-10",
+   "stops": [
+    {
+     "uprn": 2002,
+     "exception_code": null,
+     "photo_ref": null,
+     "gps_stop": true
+    }
+   ]
+  },
+  "history": [
+   {
+    "outcome": "upheld",
+    "logged_on": "2024-05-10"
+   },
+   {
+    "outcome": "upheld",
+    "logged_on": "2024-04-12"
+   },
+   {
+    "outcome": "pending",
+    "logged_on": "2024-06-01"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "beyond_window",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "road_closure",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "beyond_window",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "road_closure",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_supervisor",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 68,
+ "deciding": {
+  "crew_missed": "GPS shows a stop at the address with no exception, but a road_closure disruption with a future catch_up_date of 2024-06-10 points the other way.",
+  "report_matches": "Claimed date 2024-06-04 differs from the scheduled 2024-06-03, and the report was logged 2024-06-07, beyond 48 hours.",
+  "next_step": "The resident photo is attached but the crew stop has no photo_ref, so evidence could be requested; two upheld misses plus a pending case could also justify supervisor escalation.",
+  "return_urgency": "The date does not match and the catch-up is due 2024-06-10, so waiting for the next round is the likely answer.",
+  "repeat_failures": "Two upheld entries (2024-05-10, 2024-04-12) are within 84 days; the pending 2024-06-01 entry could make a third."
+ },
+ "request": "rec-F408-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009869
+}

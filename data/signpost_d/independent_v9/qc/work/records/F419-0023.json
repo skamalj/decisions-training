@@ -1,0 +1,167 @@
+{
+ "id": "F419-0023",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "survey_date": "2024-03-05",
+   "test_speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": null
+  },
+  "device": {
+   "cal_cert_date": "2023-01-31",
+   "cal_expiry": "2024-01-31",
+   "tyre_pressure_kpa": 690,
+   "tyre_spec_kpa": [
+    650,
+    750
+   ],
+   "water_depth_mm": null
+  },
+  "runs": [
+   {
+    "dir": "05",
+    "mean_speed_kmh": 65,
+    "thirds": [
+     0.68,
+     0.74,
+     0.75
+    ],
+    "segments_100m": [
+     0.78,
+     0.4,
+     0.85
+    ]
+   },
+   {
+    "dir": "23",
+    "mean_speed_kmh": 65,
+    "thirds": [
+     0.76,
+     0.75,
+     0.73
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.8,
+    0.9,
+    0.9
+   ],
+   "mtd_threshold_mm": 0.6
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-03-24",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start_date": "2024-03-12"
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2023-06-10",
+     "lowest_third": 0.8
+    },
+    {
+     "date": "2023-11-08",
+     "lowest_third": 0.74
+    }
+   ],
+   "cross_checks": [
+    {
+     "serial": "CF-22",
+     "date": "2024-03-06",
+     "thirds": [
+      0.7,
+      0.75,
+      0.74
+     ]
+    }
+   ]
+  },
+  "review": {
+   "signed_at": null
+  }
+ },
+ "factors": {
+  "min_third_band": "above_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 347,
+  "removal_scheduled": true,
+  "calibration_status": "expired",
+  "missing_elements_count": 3,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "declining"
+ },
+ "factors_sampled": {
+  "min_third_band": "above_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 347,
+  "removal_scheduled": false,
+  "calibration_status": "expired",
+  "missing_elements_count": 4,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "declining"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "monitor_closely",
+   "second": null,
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "leaning",
+   "target": "rubber_deposits",
+   "second": null,
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 25,
+ "deciding": {
+  "genuine_deficit": "One 100 m segment reads 0.40, below the 0.42 minimum, and a cross-check agrees, but all thirds are at or above 0.68 and the calibration expired 2024-01-31, so the case is balanced.",
+  "next_step": "A rubber removal order starts 2024-03-12, so close monitoring fits better than new works, though the invalid test and the sub-minimum segment leave some doubt.",
+  "deficit_driver": "The low segment is in the first touchdown third, texture is adequate at 0.8-0.9 mm and removal is 347 days old, with the order only now being scheduled.",
+  "friction_severity": "A 100 m segment at 0.40 is below the 0.42 minimum, which alone places it at level 3.",
+  "evidence_completeness": "Calibration expired, weather null, water depth null and signed_at null: four elements missing or invalid."
+ },
+ "request": "rec-F419-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013244
+}

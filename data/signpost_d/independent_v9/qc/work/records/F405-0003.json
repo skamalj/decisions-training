@@ -1,0 +1,169 @@
+{
+ "id": "F405-0003",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-7712",
+   "detected_on": "2025-11-03",
+   "term_start": "2025-11-03",
+   "room": "EN-104",
+   "slot": "Thu 10:00-12:00"
+  },
+  "booking_a": {
+   "module": "EDU210",
+   "department": "EDU",
+   "weekday": "Thu",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "headcount": 60,
+   "required_features": [
+    "accessible_entry"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "EDU305",
+   "department": "EDU",
+   "room": "EN-104",
+   "weekday": "Thu",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "status": "cancelled",
+   "room_released": false,
+   "approved_at": "2025-11-10",
+   "approver": "m.lo"
+  },
+  "room": {
+   "code": "EN-104",
+   "aliases": [],
+   "capacity": 70,
+   "features": [
+    "accessible_entry"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "EN-009",
+    "capacity": 40,
+    "features": [
+     "projector"
+    ],
+    "weeks_free": [
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "date": "2025-05-02"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-06-17"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "cancelled_not_released",
+  "approval_out_of_order": true,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 3,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.66,
+  "required_feature": "accessible_entry",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "cancelled_not_released",
+  "approval_out_of_order": true,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 33,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.66,
+  "required_feature": "accessible_entry",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "genuine_clash": "Identical room, weekday, times and weeks, but B is cancelled with room_released false, so the slot is still held; slight doubt about a dead booking.",
+  "alt_room_fits": "EN-009 capacity 40 vs headcount 60, lacks accessible_entry, and is free only in weeks 4-8.",
+  "resolution": "B status cancelled with room not released and approved_at 2025-11-10 after the first occurrence, so B's state must be confirmed before acting.",
+  "urgency": "Detected 2025-11-03; first shared Thursday of week 1 is 2025-11-06, 3 days away.",
+  "parties_needed": "Same department; the department administrator and the timetabling office must act."
+ },
+ "request": "rec-F405-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012791
+}

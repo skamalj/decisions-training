@@ -1,0 +1,101 @@
+{
+ "id": "F402-0010",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "routine",
+   "onset": "2025-01-20"
+  },
+  "clinical": {
+   "red_flags": [
+    "RF_NEURO"
+   ],
+   "function_index": 93
+  },
+  "gp_record": {
+   "first_presented": "2023-06-12",
+   "falls_3m": 0
+  },
+  "attachments": []
+ },
+ "factors": {
+  "red_flag_type": "progressive_neuro_deficit",
+  "red_flag_mitigated": false,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "major",
+  "missing_item": "imaging_report",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 16,
+  "function_index": 92.95,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 0,
+  "post_op_days": 29,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "progressive_neuro_deficit",
+  "red_flag_mitigated": false,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "major",
+  "missing_item": "imaging_report",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 16,
+  "function_index": 92.95,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 0,
+  "post_op_days": 29,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "book_amended",
+   "second": "accept_as_referred",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "red_flag_unresolved": "Neuro red flag listed, attachments empty, no review or discharge code.",
+  "next_step": "Onset 2025 vs GP first presented 2023 mismatch supports amended booking; routine and complete otherwise supports accepting.",
+  "pathway": "Function index 93 and no falls: self-management.",
+  "reversal_time": "Unexplained neuro flag could take months to undo or be permanent; levels 2 and 3.",
+  "clinical_urgency": "High function, no falls, routine; yet an open neuro flag could justify six-week contact."
+ },
+ "request": "rec-F402-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004429
+}

@@ -1,0 +1,186 @@
+{
+ "id": "F415-0021",
+ "family": "F415",
+ "state": {
+  "site": {
+   "hours": "07:00-19:00",
+   "closures": [
+    {
+     "from": "08:00",
+     "to": "12:30",
+     "reason": "sewer works",
+     "approved_by": "OFF214"
+    }
+   ]
+  },
+  "shift": {
+   "date": "2024-05-14",
+   "start": "06:55",
+   "end": "17:30",
+   "sched_slots": [
+    "07:00",
+    "09:00",
+    "11:00",
+    "13:00",
+    "15:00",
+    "17:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "07:00",
+    "start": "07:02",
+    "end": "07:25",
+    "status": "done",
+    "checklist": {
+     "soap": true,
+     "floor": true
+    }
+   },
+   {
+    "slot": "11:00",
+    "start": "11:04",
+    "end": "11:30",
+    "status": "done",
+    "checklist": {
+     "soap": true,
+     "floor": true
+    },
+    "op_note": "strong smell, traced to sewer works on road outside"
+   },
+   {
+    "slot": "13:00",
+    "start": "13:01",
+    "end": "13:24",
+    "status": "done",
+    "checklist": {
+     "soap": true,
+     "floor": true
+    }
+   },
+   {
+    "slot": "15:00",
+    "start": "15:03",
+    "end": "15:26",
+    "status": "done",
+    "checklist": {
+     "soap": true,
+     "floor": true
+    }
+   },
+   {
+    "slot": "17:00",
+    "start": "17:02",
+    "end": "17:20",
+    "status": "done",
+    "checklist": {
+     "soap": true,
+     "floor": true
+    }
+   }
+  ],
+  "faults": [
+   {
+    "type": "no_soap_or_paper",
+    "reported_at": "2024-05-14T08:10:00",
+    "remedied_at": "2024-05-14T12:29:00",
+    "source": "staff",
+    "remedy_note": "dispensers refilled"
+   }
+  ],
+  "sign_off": {
+   "signer": "S31",
+   "signer_role": "supervisor",
+   "signed_at": "2024-05-14T17:40:00",
+   "comment": "checked"
+  },
+  "history": {
+   "prior_defaults_90d": 0,
+   "complaints_90d": 1,
+   "audits_passed": 3
+  }
+ },
+ "factors": {
+  "scheduled_slots": 6,
+  "missed_slots": "1",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "no_soap_or_paper",
+  "fault_open_minutes": 259.17,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 0
+ },
+ "factors_sampled": {
+  "scheduled_slots": 6,
+  "missed_slots": "1",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "unauthorised_signer",
+  "fault_type": "no_soap_or_paper",
+  "fault_open_minutes": 259.17,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 0
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "sign_off_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 59,
+ "deciding": {
+  "missed_clean": "The 09:00 slot has no visit, but the approved closure 08:00-12:30 (OFF214) spans it; the other five slots have done visits.",
+  "sign_off_valid": "Supervisor signed at 17:40, after the last visit ended at 17:20. No photo refs, which leaves slight doubt.",
+  "next_step": "The gap is covered by an approved closure, the sign-off is valid and the fault fell inside the closure, so nothing needs follow-up.",
+  "staff_effort": "Nothing is outstanding. The smell note is explained by sewer works, so a quick check is all that is needed.",
+  "fault_exposure": "The fault interval 08:10-12:29 lies wholly inside the 08:00-12:30 closure, so it was not open to the public."
+ },
+ "request": "rec-F415-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012855
+}

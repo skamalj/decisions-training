@@ -1,0 +1,179 @@
+{
+ "id": "F425-0050",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "farm_ref": "F-4415",
+   "flock_id": "FL-68E",
+   "producer_code": "1UK-9A12",
+   "method": "1",
+   "lay_dates": [
+    "2024-09-10"
+   ],
+   "declared_eggs": 1500,
+   "trays": 50
+  },
+  "grading_run": {
+   "grader_id": "G1",
+   "run_start": "2024-09-13T06:00",
+   "run_end": "2024-09-13T07:30",
+   "eggs_in": 1500,
+   "by_size": {
+    "S": 100,
+    "M": 600,
+    "L": 600,
+    "XL": 182
+   },
+   "outgrades": {
+    "cracks": 5,
+    "dirties": 9,
+    "blood_spots": 2,
+    "leakers": 1,
+    "misshapen": 1
+   },
+   "class_a_total": 1482
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-09-02",
+    "interval_days": 30
+   },
+   "candling_sample": {
+    "n": 100,
+    "sampled_at": "2024-09-13T06:50"
+   },
+   "scale_check": {
+    "ok": true
+   },
+   "store_temp": {
+    "minutes_above_limit": 0,
+    "max_c": 5.0
+   }
+  },
+  "flock": {
+   "age_weeks": 68,
+   "last_swab": {
+    "date": "2024-09-01",
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2024-09-13",
+   "packs": [
+    {
+     "size": "S",
+     "pack_size": 10,
+     "count": 10
+    },
+    {
+     "size": "M",
+     "pack_size": 10,
+     "count": 60
+    },
+    {
+     "size": "L",
+     "pack_size": 10,
+     "count": 60
+    },
+    {
+     "size": "XL",
+     "pack_size": 10,
+     "count": 18
+    }
+   ],
+   "stamp_code": "1UK-9A12",
+   "best_before": "2024-10-08",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 3,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 1.2,
+  "dominant_defect": "dirties",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 68
+ },
+ "factors_sampled": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 3,
+  "mixed_lay_dates": false,
+  "missing_check": "swab_pending",
+  "swab_positive": false,
+  "outgrade_rate_pct": 8.49,
+  "dominant_defect": "dirties",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "brief",
+  "temp_mitigated": false,
+  "flock_age_weeks": 68
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release_class_a",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "leaning",
+   "target": "no_anomaly",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "lay_to_pack": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "outgrade_share": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 44,
+ "deciding": {
+  "counts_reconcile": "Declared equals eggs_in at 1500 and bins plus outgrades is 1500; packs sum to 1480 against class_a_total 1482, a 2 egg gap that is well under half a percent.",
+  "batch_disposition": "All checks are present and in date, swab negative, stamp code matches, packed 3 days after lay and counts agree, so release as Class A.",
+  "anomaly_cause": "Outgrades total 18 of 1500, low and spread across bins, calibration current, store temperature clean; only the 2 egg pack gap is noticeable.",
+  "lay_to_pack": "Lay 2024-09-10 and pack 2024-09-13 is 3 days, a prompt pack.",
+  "outgrade_share": "18 outgrades of 1500 eggs_in is 1.2%, below 2%."
+ },
+ "request": "rec-F425-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013775
+}

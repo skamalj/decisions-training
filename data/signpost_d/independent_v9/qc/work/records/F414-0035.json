@@ -1,0 +1,135 @@
+{
+ "id": "F414-0035",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "MP-9",
+   "equip_type": "multi_play",
+   "crit_fall_height_m": 1.8,
+   "surf_type": "rubber"
+  },
+  "inspection": {
+   "insp_date": "2025-08-01",
+   "insp_grade": "routine_visual",
+   "fall_height_m": 1.8,
+   "surf_type_found": "rubber_tile",
+   "surf_depth_mm": 45,
+   "surf_req_table": [
+    {
+     "max_h_m": 2.0,
+     "type": "rubber_tile",
+     "min_depth_mm": 40
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "O3",
+     "result": null
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "PT-02",
+     "component_id": "C2",
+     "injury_mech": "cosmetic"
+    }
+   ]
+  },
+  "maintenance": [],
+  "site": {
+   "incident_reports_90d": 1
+  },
+  "history": [
+   {
+    "date": "2024-08-01",
+    "defect_refs": [
+     "D4"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "multi_play",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": 5.0,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": "none raised",
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": true,
+  "inspector_grade": "routine_visual",
+  "usage_level": "medium",
+  "incident_reports_90d": 1
+ },
+ "factors_sampled": {
+  "equipment_type": "multi_play",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": -119.08,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.06,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": true,
+  "inspector_grade": "routine_visual",
+  "usage_level": "medium",
+  "incident_reports_90d": 1
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "balanced",
+   "target": "hold",
+   "second": "close_asset",
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (head_neck_entrapment_fail = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 39,
+ "deciding": {
+  "prior_defects_cleared": "Prior ref D4 has no open work order, though the maintenance list is empty and no closure is shown.",
+  "surfacing_adequate": "Depth 45 mm against a 40 mm requirement, narrowly meeting it, while the register says rubber and the visit found rubber_tile.",
+  "asset_disposition": "The head_neck probe on opening O3 has a null result, favouring hold; one incident report keeps closure arguable.",
+  "remedial_progress": "No work orders were raised (empty list).",
+  "hazard_severity": "Only a cosmetic PT-02 finding, with the unconfirmed head_neck opening leaving level 1 arguable."
+ },
+ "request": "rec-F414-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01002
+}

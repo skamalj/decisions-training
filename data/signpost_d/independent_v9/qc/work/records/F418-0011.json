@@ -1,0 +1,136 @@
+{
+ "id": "F418-0011",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "KLB",
+   "plat": 2,
+   "date": "2025-03-11",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "attendance": [
+   {
+    "staff_id": "S41",
+    "sign_on": "05:50",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2026-01-10",
+    "dispatch_comp_exp": "2026-01-10"
+   },
+   {
+    "staff_id": "S77",
+    "sign_on": "05:55",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2026-02-01",
+    "dispatch_comp_exp": null
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "14:00",
+    "staff_id": null
+   },
+   {
+    "type": "dispatch",
+    "time": "14:20",
+    "staff_id": "S77"
+   },
+   {
+    "type": "cover_start",
+    "time": "15:00",
+    "staff_id": "S52"
+   }
+  ],
+  "controls": {
+   "disp_ref": null,
+   "prior_shortfalls_30d": 5
+  },
+  "remarks": [
+   "Late cover arrived, trains ran normally."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 118,
+  "shortfall_timing": "in_service",
+  "dispensation_present": false,
+  "dispensation_fit": "none",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 5,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 118,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 5,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "balanced",
+   "target": "partial_cover",
+   "second": "cover_arranged",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unqualified_dispatch = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 25,
+ "deciding": {
+  "headcount_verified": "Both logged staff have sign-ons and in-date safety competence; the dispatch gap is a separate issue.",
+  "next_step": "Gap is covered only partly and S77 dispatched without dispatch competence, yet remarks are mild; accepting is only weakly supported.",
+  "coverage_outcome": "Gap starts 14:00 and cover starts 15:00 with no cover_end or gap_end, so partial against arranged is balanced.",
+  "reversal_time": "Event is past; the effect of an unqualified dispatch sits between a week and a few months to remedy.",
+  "exposure_severity": "Dispatch event at 14:20 inside the gap by S77 whose dispatch_comp_exp is null while dispatch_mode is staff."
+ },
+ "request": "rec-F418-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005605
+}

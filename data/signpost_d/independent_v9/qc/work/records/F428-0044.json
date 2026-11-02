@@ -1,0 +1,136 @@
+{
+ "id": "F428-0044",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "MG-770",
+   "gate_type": "mitre",
+   "rated_closure_s": 100,
+   "seal_type": "J_bulb",
+   "clear_width": 12.0,
+   "clear_width_unit": "m"
+  },
+  "inspection": {
+   "asset_id": "MG-707",
+   "insp_date": "2025-10-02",
+   "closure_test": {
+    "performed": false,
+    "test_date": null,
+    "closure_s": null,
+    "leakage_l_min": null,
+    "leakage_limit_l_min": 15,
+    "result": null
+   }
+  },
+  "defects": [
+   {
+    "code": "H1",
+    "component": "hoist",
+    "grade": 3,
+    "status": "open",
+    "first_seen": "2025-08-14"
+   },
+   {
+    "code": "S2",
+    "component": "seal_music_note",
+    "grade": 2,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": []
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": true,
+   "forecast": {
+    "peak_date": "2025-10-12",
+    "peak_level_mAOD": 5.2,
+    "sill_level_mAOD": 4.9
+   },
+   "gate_width_mm": 1200
+  }
+ },
+ "factors": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 1.08,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 3,
+  "mismatch_location": "width_units, asset_id, seal_type",
+  "test_status": "not_performed",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 10,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 1.08,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "none",
+  "mismatch_count": 3,
+  "mismatch_location": "width_units",
+  "test_status": "not_performed",
+  "repair_progress": "completed_tested",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 10,
+  "borderline_case": false,
+  "outage_beyond_permit": true
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "raise_repair",
+   "second": "escalate_engineer",
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "drive_actuation",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (outage_beyond_permit = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 72,
+ "deciding": {
+  "closure_test_valid": "The closure test was not performed, with performed false and a null result and null timings, so no valid test is logged.",
+  "next_step": "An open grade 3 hoist defect has no work order, the flood alert is active and the peak is 10 days away, so raising repair is favoured. The forecast peak of 5.2 m above the 4.9 m sill and the untested gate make escalation equally defensible.",
+  "defect_class": "The highest open grade is the grade 3 hoist defect; the seal defect is only grade 2.",
+  "section_discrepancies": "Register asset_id MG-770 differs from the inspection's MG-707, clear_width 12.0 m differs from gate_width_mm 1200, and the register's J_bulb seal differs from the music_note seal defect.",
+  "flood_risk": "With no closure test the gate cannot be shown to close in time, the flood alert is active and the peak exceeds the sill, which fits level 2. The single grade 3 defect and no recorded failure keep level 1 plausible."
+ },
+ "request": "rec-F428-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011489
+}

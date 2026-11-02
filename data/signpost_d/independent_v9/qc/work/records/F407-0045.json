@@ -1,0 +1,119 @@
+{
+ "id": "F407-0045",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-5088",
+   "received_at": "2025-08-20",
+   "channel": "utility_contractor",
+   "photo_ref": null,
+   "linked_reports": [
+    "R-5080",
+    "R-5084"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "local_access",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspected_at": "2025-08-21",
+   "depth_mm": 40,
+   "width_mm": 65.36
+  },
+  "works_history": [
+   {
+    "completed": "2025-03-14",
+    "offset_m": 10,
+    "guarantee_end": "2026-03-14"
+   }
+  ],
+  "current_order": {
+   "id": "WO-733",
+   "status": "raised",
+   "completed_items": 0,
+   "total_items": 1
+  }
+ },
+ "factors": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "on_boundary",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_boundary",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 2,
+  "reporter_source": "utility_contractor",
+  "injury_or_claim": false,
+  "order_status": "raised",
+  "defect_width_mm": 65.36,
+  "photo_attached": false
+ },
+ "factors_sampled": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 2,
+  "reporter_source": "utility_contractor",
+  "injury_or_claim": false,
+  "order_status": "raised",
+  "defect_width_mm": 65.36,
+  "photo_attached": false
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_engineer",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "meets_threshold": "depth_mm 40 equals intervention_depth_mm 40, which is at threshold.",
+  "repeat_failure": "Job completed 2025-03-14 at offset 10 m, in guarantee; exactly at the ten-metre limit.",
+  "next_step": "Defect on a repair within guarantee is a recurrence needing engineer review, even though order WO-733 is already raised.",
+  "staff_effort": "Order already raised, so the officer only needs to refer and note: under an hour.",
+  "response_timescale": "Depth at threshold means routine 28 days, but the order is already raised and the officer's referral may supersede, so the 0 versus 1 reading is open."
+ },
+ "request": "rec-F407-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007261
+}

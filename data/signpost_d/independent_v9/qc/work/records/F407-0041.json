@@ -1,0 +1,122 @@
+{
+ "id": "F407-0041",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-1041",
+   "received_at": "2025-03-04T09:10",
+   "channel": "own_inspector",
+   "photo_ref": null,
+   "linked_reports": [],
+   "claim_ref": "CL-2291"
+  },
+  "location": {
+   "road_class": "strategic",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspected_at": "2025-03-05",
+   "depth_mm": 40,
+   "width_mm": 834.28,
+   "offset_m": 4
+  },
+  "works_history": [
+   {
+    "job": "J-88",
+    "completed": "2024-09-10",
+    "offset_m": null,
+    "guarantee_end": "2025-09-10"
+   }
+  ],
+  "programme": {
+   "temp_measures": [
+    {
+     "offset_m": 4,
+     "expiry": "2025-04-15"
+    }
+   ]
+  },
+  "current_order": null
+ },
+ "factors": {
+  "road_category": "strategic",
+  "depth_vs_threshold": "on_boundary",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 0,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": true,
+  "order_status": "none",
+  "defect_width_mm": 834.28,
+  "photo_attached": false
+ },
+ "factors_sampled": {
+  "road_category": "strategic",
+  "depth_vs_threshold": "on_boundary",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 0,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": true,
+  "order_status": "none",
+  "defect_width_mm": 834.28,
+  "photo_attached": false
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_engineer",
+   "second": "close_no_action",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "response_timescale": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "meets_threshold": "inspection.depth_mm 40 equals intervention_depth_mm 40, so at threshold.",
+  "repeat_failure": "Prior job on the street has null offset and is in guarantee: nearby but unconfirmed at the spot.",
+  "next_step": "claim_ref CL-2291 favours escalation, but the temporary measure in place and no confirmed repeat make closing defensible.",
+  "staff_effort": "Open claim on a strategic road needs engineer liaison and claim file work, days of effort, no order yet.",
+  "response_timescale": "Depth at threshold gives routine 28-day repair; temp measure covers the offset until April."
+ },
+ "request": "rec-F407-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007261
+}

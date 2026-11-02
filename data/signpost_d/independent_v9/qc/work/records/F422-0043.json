@@ -1,0 +1,151 @@
+{
+ "id": "F422-0043",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "delivered_at": "2025-05-02",
+   "received_at": "2025-05-28",
+   "review_date": "2025-06-10",
+   "lines": [
+    {
+     "gtin": "G3",
+     "qty_claimed": 101
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "lines": [
+    {
+     "gtin": "G3",
+     "batch": "K90",
+     "expiry": "2027-05-31",
+     "qty_dispatched": 101
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G3",
+     "batch": "K90",
+     "expiry": "2027-05-31",
+     "qty_counted": 100,
+     "packs_damaged": 20,
+     "seals_intact": 80
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "active"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": null,
+   "logger_start": null,
+   "logger_end": null,
+   "minutes_out_of_range": 343,
+   "note": "per customer declaration",
+   "stability_ref": {
+    "max_hours": 24,
+    "max_c": 30
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-01-31",
+   "declaration_received": true
+  },
+  "quarantine_control": {
+   "hold_limit_days": 30,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-06-30"
+   },
+   "max_days_out_of_control": 45,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "absent",
+  "excursion_minutes": 343,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 1,
+  "damaged_pack_fraction": 0.2,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 26,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 20,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 23
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "absent",
+  "excursion_minutes": 343,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 1,
+  "damaged_pack_fraction": 0.77,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 26,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 3,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 23
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_traceable": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "partial_release",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "storage_maintained": "No logger, so only a customer-declared 343-minute excursion that fits the stability_ref allowance; unverified evidence on both sides.",
+  "batch_traceable": "Counted batch K90 matches the dispatch line, but the dispatch has no number or date and the audit has lapsed.",
+  "next_step": "20 of 100 packs damaged with seals broken while 80 are intact and long-dated, so release the sound packs and destroy the rest.",
+  "resaleable_share": "80 intact packs out of 100 counted is more than half but not all (level 2); the missing logger leaves minor doubt.",
+  "disposition_urgency": "Extension to 2025-06-30 against review 2025-06-10 gives exactly 20 days, at the boundary of routine and planned."
+ },
+ "request": "rec-F422-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013349
+}

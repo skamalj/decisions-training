@@ -1,0 +1,175 @@
+{
+ "id": "F409-0039",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A-5521",
+   "full_name": "S. Brandt",
+   "submitted_on": "2024-08-12",
+   "app_type": "renewal",
+   "message": "Is the zone map available online?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-07-23",
+     "address_line": "Flat 3, 8 Orchard Rd",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": null,
+     "address_line": null,
+     "verified": null
+    },
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2024-06-30",
+     "address_line": "Flat 3, 8 Orchard Rd",
+     "verified": false
+    }
+   ],
+   "note": "Tenancy agreement requested, not received."
+  },
+  "vehicle": {
+   "plate": "GH19JKL",
+   "keeper_name": "Northway Leasing Ltd",
+   "keeper_postcode": "ZN4 2QT",
+   "supporting_letters": [
+    {
+     "type": "lease_agreement",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "Z1",
+   "address": "3/8 Orchard Rd",
+   "plate_entered": "GH19JKL",
+   "duration_months": 12,
+   "fee_band": "B"
+  },
+  "account_history": {
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "live_permits": [
+    "P-410",
+    "P-455"
+   ],
+   "past_permits": [
+    {
+     "permit_no": "P-302",
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "pcns": [
+    {
+     "issued_on": "2024-02-03",
+     "contravention_code": "01",
+     "status": "cancelled"
+    },
+    {
+     "issued_on": "2024-03-11",
+     "contravention_code": "01",
+     "status": "cancelled"
+    },
+    {
+     "issued_on": "2024-04-19",
+     "contravention_code": "12",
+     "status": "cancelled"
+    },
+    {
+     "issued_on": "2024-05-27",
+     "contravention_code": "01",
+     "status": "cancelled"
+    }
+   ],
+   "exceptions": [],
+   "officer_note": "PCNs cancelled, signage fault."
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "format_only",
+  "proof_age_days": 20,
+  "docs_missing": 3,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "format_only",
+  "proof_age_days": 20,
+  "docs_missing": 1,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "household_cap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 153,
+ "deciding": {
+  "residency_shown": "A verified council tax bill issued 20 days before submission shows 'Flat 3, 8 Orchard Rd' against the requested '3/8 Orchard Rd'. The difference is format only, and there is no date anomaly.",
+  "disposition": "Residency is shown and the lease letter explains the keeper difference. The household is at its cap and a cloned permit was seized, so approval is doubtful. The outstanding documents are the main reason for doubt.",
+  "main_issue": "Two live permits against a cap of 2 with an empty exceptions list, so household_cap is the issue that decides the outcome.",
+  "misuse_strength": "Past permit P-302 is seized with the reason 'cloned copy found on different vehicle'. That confirms misuse regardless of the cancelled PCNs or the lease-explained keeper.",
+  "document_gaps": "The id_card is unverified, the utility_bill is marked false and the note says the tenancy agreement was not received. That gives three gaps, or two if the tenancy agreement is not required on a renewal."
+ },
+ "request": "rec-F409-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011907
+}

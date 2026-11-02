@@ -1,0 +1,134 @@
+{
+ "id": "F417-0004",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "MY-Linnet",
+   "loa_m": 13.54,
+   "draught_m": 2.2,
+   "draught_src": "survey_certificate"
+  },
+  "berth": {
+   "id": "Q2",
+   "max_loa_m": 14.0,
+   "fender_allow_m": 0.4,
+   "depth_lat_m": 3.0,
+   "waiver_ref": "W-310",
+   "waiver_expiry": "2025-12-31"
+  },
+  "booking": {
+   "arrival": "2025-08-01",
+   "departure": "2025-08-05",
+   "next_on_berth": {
+    "arrival": "2025-08-05"
+   }
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 14.3,
+    "draught_m": 2.2
+   },
+   "insurance_expiry": "2026-04-30",
+   "inspection_date": "2025-07-15"
+  },
+  "account": {
+   "dues_outstanding_gbp": 0,
+   "deposit_paid": true
+  },
+  "history": [
+   {
+    "date": "2022-08-02",
+    "berth": "Q2",
+    "incidents": 1
+   },
+   {
+    "date": "2023-08-10",
+    "berth": "Q2",
+    "incidents": 1
+   },
+   {
+    "date": "2024-08-03",
+    "berth": "Q2",
+    "incidents": 1
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 5.6,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 0.8,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 0,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": false,
+  "prior_incidents": 3,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 5.62,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 1.96,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 1291,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 3,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "refer_harbourmaster",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "balanced",
+   "target": "date_conflict",
+   "second": "dimension_mismatch",
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 77,
+ "deciding": {
+  "length_fits": "Survey loa 14.3 is over max 14.0 but within max plus fender 14.4; waiver W-310 also present.",
+  "next_step": "Declared 13.54 against survey 14.3, a waiver reliance, a same-day turnover and 3 prior incidents lean toward referring to the harbour master.",
+  "primary_issue": "The 5.6% loa mismatch versus next_on_berth arrival equal to departure day 2025-08-05; both are defensible.",
+  "ukc_band": "Depth 3.0 minus survey draught 2.2 gives 0.8 m, which is level 2.",
+  "unresolved_count": "The loa mismatch may be settled by the waiver and the same-day turnover is not an overlap, so zero or one."
+ },
+ "request": "rec-F417-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011746
+}

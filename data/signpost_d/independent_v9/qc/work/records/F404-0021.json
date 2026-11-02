@@ -1,0 +1,154 @@
+{
+ "id": "F404-0021",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "B1",
+   "age_band": "under_2",
+   "ratio_rule": "1:3"
+  },
+  "children": {
+   "booked": 9,
+   "slots": [
+    {
+     "t": "11:00",
+     "signed_in": 11
+    },
+    {
+     "t": "11:15",
+     "signed_in": 11
+    },
+    {
+     "t": "11:30",
+     "signed_in": 11
+    },
+    {
+     "t": "11:45",
+     "signed_in": 11
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S1",
+    "end": "17:00"
+   },
+   {
+    "id": "S2",
+    "end": "17:00"
+   },
+   {
+    "id": "S3",
+    "end": "17:00"
+   },
+   {
+    "id": "S4",
+    "end": "12:00"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S1",
+    "out": "17:00"
+   },
+   {
+    "id": "S2",
+    "out": "17:00"
+   },
+   {
+    "id": "S3",
+    "out": "17:00"
+   },
+   {
+    "id": "S4",
+    "out": "11:02"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F9",
+    "from": "11:02",
+    "to": "11:45",
+    "room": "B1",
+    "countersigned_by": "M. Roy"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 1
+  }
+ },
+ "factors": {
+  "age_band": "under_2",
+  "children_peak": 11,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 58,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "partial_day",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 1
+ },
+ "factors_sampled": {
+  "age_band": "under_2",
+  "children_peak": 10,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 58,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "partial_day",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 1
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "paperwork_only",
+   "second": null,
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "below_ratio": "11 children need 4 staff at 1:3; S4 signed out 11:02 and floater cover ends 11:45, so the 11:45 slot has 3 staff.",
+  "disposition": "Only a short uncovered tail remains and it rests on the partial cover span; confirming the cover end is the one open item.",
+  "primary_cause": "Leading answer rests on cover paperwork nearly closing the gap; some doubt because the 11:45 slot is still one staff short.",
+  "shortfall_duration": "Gap 11:02 to 12:00 is 58 min; cover to 11:45 leaves exactly 15 min uncovered, at the level 0/1 boundary.",
+  "breach_severity": "11 children against 3 staff covering 9 leaves 2 beyond cover in the 11:45 slot."
+ },
+ "request": "rec-F404-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011468
+}

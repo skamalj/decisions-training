@@ -1,0 +1,141 @@
+{
+ "id": "F420-0012",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "AKE20931QZ",
+   "flt": "XQ208",
+   "dest": "DXB",
+   "pos": "12R",
+   "contour_max_cm": 163,
+   "tare_kg": 120,
+   "planned_gross_kg": 1200,
+   "straps_required": 4,
+   "cutoff_utc": "2025-05-06T10:02:00Z"
+  },
+  "manifest_lines": [
+   {
+    "awb": "176-30077110",
+    "dest": "DXB",
+    "pcs": 12,
+    "weight_kg": 600
+   },
+   {
+    "awb": "176-30077125",
+    "dest": "DXB",
+    "pcs": 8,
+    "weight_kg": 480
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2025-05-06T09:10:00Z",
+   "scale_gross_kg": 1151,
+   "max_height_cm": 168,
+   "pcs_counted": {
+    "176-30077110": 10,
+    "176-30077125": 8
+   },
+   "straps_fitted": 4,
+   "net_fitted": true,
+   "uld_serial_scanned": "AKE20931QZ"
+  },
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "176-30077110",
+     "pcs_this_flight": 10
+    }
+   ],
+   "contour_waivers": [
+    {
+     "uld": "AKE20931QZ",
+     "position": "12R",
+     "max_cm": 170
+    }
+   ]
+  },
+  "checks_log": {
+   "scale_cal_due": "2025-11-30",
+   "reweigh": {
+    "scale": "S3",
+    "kg": 1164.6
+   }
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": -2.95,
+  "piece_count_gap": -2,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "over_up_to_5cm",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 52,
+  "prior_rebuilds": 0
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -7.81,
+  "piece_count_gap": -2,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "over_up_to_5cm",
+  "contour_waiver": true,
+  "dg_state": "dg_segregation_conflict",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 52,
+  "prior_rebuilds": 0
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "balanced",
+   "target": "physical_build",
+   "second": "paperwork_only",
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "pieces_reconciled": "176-30077110 shows 12 manifested and 10 counted, and the part shipment of 10 this flight covers it. The count rests only on that approval.",
+  "disposition": "Every check is satisfied: the waiver for 12R allows 170 cm against a 168 cm build, straps are 4 of 4 with the net fitted, the serial matches and the shortfall is covered.",
+  "worst_discrepancy": "No dangerous goods are present; the only open question is whether the part-shipment covering the shortfall counts as paperwork or a physical gap.",
+  "weight_deviation": "The reweigh of 1164.6 kg against a plan of 1200 kg is -2.95%, just inside the 3% boundary, and the superseded build scale read -4.1%.",
+  "rework_extent": "No physical change is needed: straps and net are complete, the height is waived and the weight is within 3%."
+ },
+ "request": "rec-F420-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013733
+}

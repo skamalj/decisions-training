@@ -1,0 +1,153 @@
+{
+ "id": "F405-0020",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C533",
+   "detected_on": "2025-10-14",
+   "term_start": "2025-09-08",
+   "room": "G07"
+  },
+  "booking_a": {
+   "dept": "ECO",
+   "room": "G07",
+   "day": "Tue",
+   "start": "15:00",
+   "end": "17:00",
+   "weeks": [
+    6,
+    7,
+    8
+   ],
+   "headcount": 60,
+   "required_features": [],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "dept": "MUS",
+   "room": "G-07",
+   "day": "Tue",
+   "start": "15:00",
+   "end": "17:00",
+   "weeks": [
+    1,
+    2,
+    3
+   ],
+   "status": "cancelled",
+   "approved_at": "2025-06-01",
+   "approver": "dw"
+  },
+  "room": {
+   "code": "G07",
+   "aliases": [
+    "G-07"
+   ],
+   "capacity": 70
+  },
+  "alternatives": [
+   {
+    "code": "G11",
+    "capacity": 60,
+    "features": [],
+    "weeks_free": [
+     6,
+     7,
+     8
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-06-20"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-07-15"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-09-02"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "cancelled_not_released",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.0,
+  "required_feature": "none",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 3
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "cancelled_not_released",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 44,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.93,
+  "required_feature": "none",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 3
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "genuine_clash": "Weeks [6-8] and [1-3] are disjoint and booking_b is cancelled, but the room may not have been released and the scan flagged it.",
+  "alt_room_fits": "G11 capacity 60 equals headcount 60, no features required, free weeks 6-8; fits exactly with no margin.",
+  "resolution": "Disjoint weeks plus booking_b status cancelled leave no live overlap, so dismiss.",
+  "urgency": "Detected Tue 2025-10-14, a_s week 6 Tuesday is 2025-10-14, so today; with no live overlap the timing is slightly debatable.",
+  "parties_needed": "ECO, MUS, room release approver and prior-report owners might need to act; the number is uncertain between 3-4 and 5+."
+ },
+ "request": "rec-F405-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009361
+}

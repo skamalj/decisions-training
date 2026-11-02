@@ -1,0 +1,139 @@
+{
+ "id": "F434-0026",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 2,
+   "riders_started": 140
+  },
+  "post": {
+   "km_marker": 31,
+   "post_type": "junction",
+   "on_post_from": "11:20"
+  },
+  "incidents": [
+   {
+    "inc_ref": "P1",
+    "time": "11:52",
+    "km": 31,
+    "type": "fall",
+    "bibs": [
+     44
+    ],
+    "medic_called": true,
+    "medic_arrival_min": 6.11,
+    "rider_status": "continued",
+    "escort_present": false
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "11:30",
+     "ok": false
+    },
+    {
+     "time": "11:45",
+     "ok": false
+    },
+    {
+     "time": "12:00",
+     "ok": false
+    },
+    {
+     "time": "12:15",
+     "ok": false
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [],
+   "medical_handovers": [
+    {
+     "ref": "M3",
+     "bib": 44,
+     "km": 31,
+     "destination": "Riverside Hospital"
+    }
+   ],
+   "abandonments": []
+  },
+  "sweep": {
+   "passed_at": "12:40"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "extra_post_incident",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "late_before_first_rider",
+  "relief_swap_logged": false,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": 6.11,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "extra_post_incident",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "hospital",
+  "staffing_gap": "late_before_first_rider",
+  "relief_swap_logged": false,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": 6.11,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "file",
+   "second": "hold_confirm",
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "balanced",
+   "target": "rider_fall",
+   "second": "course_intrusion",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "coverage_held": "on_post_from 11:20 is after the stage first-rider time implied by the 11:30 check; no relief logged, so coverage began late.",
+  "next_step": "Post lists a fall that control's incident_log lacks, but a handover for bib 44 exists; file vs confirm with control is balanced.",
+  "incident_class": "Post logs a fall with no control entry; the post-only fall is the main evidence and the hospital handover is unexplained.",
+  "reversal_time": "Handover to hospital for bib 44 while status is continued; recovery could be days or weeks.",
+  "consequence_severity": "Post says rider continued and medic called, with the hospital handover only in control; leans level 1 with doubt."
+ },
+ "request": "rec-F434-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005805
+}

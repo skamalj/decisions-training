@@ -1,0 +1,106 @@
+{
+ "id": "F438-0014",
+ "family": "F438",
+ "state": {
+  "coded_record": {
+   "primary_dx": "J18.9",
+   "secondary_dx": [
+    "A41.9",
+    "E11.9",
+    "I10",
+    "N17.9"
+   ]
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "J44.1"
+   },
+   "comorbidities": []
+  },
+  "grouping": {
+   "hrg_submitted": "DZ11A",
+   "hrg_regrouped": "DZ12A",
+   "tariff_submitted": 2400,
+   "tariff_regrouped": 1900,
+   "submitted_to_commissioner": false
+  }
+ },
+ "factors": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.18,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.18,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "primary_supported": "Coded J18.9 differs from documented principal J44.1, a different condition.",
+  "hrg_shift": "DZ11A regroups to DZ12A in the same subchapter, with a lower tariff; the same-subchapter move is only a modest shift.",
+  "next_step": "Not yet submitted, so closing as coded is arguable, but the mismatches do not support it.",
+  "error_count": "Four coded secondary codes (A41.9, E11.9, I10, N17.9) have no comorbidity entry and the primary is wrong, giving four or five errors, or three if the primary is counted separately.",
+  "error_severity": "A41.9 and N17.9 are billable codes without documentation (critical), but the wrong primary and HRG change could also be read as major."
+ },
+ "request": "rec-F438-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009309
+}

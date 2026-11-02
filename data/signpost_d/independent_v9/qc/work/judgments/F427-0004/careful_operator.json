@@ -1,0 +1,38 @@
+{
+ "persona": "careful_operator",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "dam_caused_drop": {
+   "true": 0.1,
+   "false": 0.9
+  },
+  "next_step": {
+   "accept_record": 0.02,
+   "request_data": 0.5,
+   "recheck_next_visit": 0.06,
+   "schedule_repair": 0.07,
+   "escalate_lead": 0.35
+  },
+  "hydro_state": {
+   "well_below": 0.12,
+   "below_band": 0.8,
+   "within_band": 0.05,
+   "above_band": 0.03
+  },
+  "dam_severity": {
+   "0": 0.5,
+   "1": 0.08,
+   "2": 0.25,
+   "3": 0.17
+  },
+  "evidence_completeness": {
+   "0": 0.03,
+   "1": 0.2,
+   "2": 0.55,
+   "3": 0.2,
+   "4": 0.02
+  }
+ },
+ "cost": 0.000551
+}

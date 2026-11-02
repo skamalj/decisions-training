@@ -1,0 +1,128 @@
+{
+ "id": "F424-0036",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2231",
+   "vessel_id": "FV3",
+   "volume_hl": 20,
+   "og_target": 1.052,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.013,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-05-09",
+    "gravity_plato": 4.1,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-05-10",
+    "gravity_sg": 1.012,
+    "temp_c": 26.5
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-05-11",
+    "note": "Plate positive, possible infection!!"
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2231",
+   "diacetyl_mgl": 0.08,
+   "micro_plate": {
+    "result": "positive",
+    "cfu_ml": 120
+   },
+   "retest": [
+    {
+     "result": "negative"
+    }
+   ],
+   "lab_note": "First plate contaminated at plating; repeat plate clean."
+  },
+  "release_request": {
+   "vessel_id": "FV5",
+   "volume_hl": 18.5,
+   "note": "Routine."
+  }
+ },
+ "factors": {
+  "gravity_status": "final reading in band, prior reading still falling",
+  "final_reading_gap": true,
+  "temp_excursion": "brief, 26.5C vs max 24",
+  "excursion_mitigated": false,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.08,
+  "discrepancy_count": 2,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": true,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": false,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.08,
+  "discrepancy_count": 2,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "alarmed"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contamination_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 59,
+ "deciding": {
+  "terminal_gravity": "Only one reading (1.012) is in band; prior reading 4.1P (about 1.016) was still falling, so stability is unconfirmed.",
+  "contamination_supported": "Positive plate was explained by a plating error and the repeat plate was negative.",
+  "batch_disposition": "Lab results are complete and the contamination signal is explained; routine request, with some doubt over the gravity confirmation.",
+  "deviation_severity": "Unmitigated 26.5C reading vs strain max 24C is about 10.4% over, near the boundary between Major and a limit breach (Critical).",
+  "record_discrepancies": "Vessel FV3 vs FV5 on release request and volume 20 vs 18.5 hl; plato vs SG is a decoy."
+ },
+ "request": "rec-F424-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009129
+}

@@ -1,0 +1,147 @@
+{
+ "id": "F435-0010",
+ "family": "F435",
+ "state": {
+  "event": {
+   "zone_id": "F3",
+   "zone_type": "standing_floor",
+   "doors_open": "2025-08-16T19:00",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 1000,
+   "variation": {
+    "ref": "V-5",
+    "new_limit": 1200,
+    "status": "approved",
+    "approved_on": "2025-08-16T19:20"
+   },
+   "stewards_required": 36,
+   "exit_routes": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 1000,
+   "issued": 990,
+   "scanned_in": 975
+  },
+  "ingress": {
+   "device_status": "fault_logged",
+   "raw_peak": 1083,
+   "manual_recount": {
+    "count": 1012,
+    "at": "2025-08-16T21:30"
+   }
+  },
+  "stewarding": {
+   "rostered": 30,
+   "signed_in": 25
+  },
+  "exit_checks": [
+   {
+    "route_id": "A",
+    "checked_at": "2025-08-16T18:15",
+    "status": "clear"
+   },
+   {
+    "route_id": "B",
+    "checked_at": "2025-08-16T18:20",
+    "status": "clear"
+   },
+   {
+    "route_id": "C",
+    "checked_at": "2025-08-16T18:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "D",
+    "checked_at": "2025-08-16T19:00",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.012,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.07,
+  "manual_recount_present": true,
+  "capacity_variation": "approved_late",
+  "tickets_issued_ratio": 0.99,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.31,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 1,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.81,
+  "counter_status": "ok",
+  "counter_inflation": 0.07,
+  "manual_recount_present": true,
+  "capacity_variation": "approved_late",
+  "tickets_issued_ratio": 0.99,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.31,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "sign_off",
+   "second": "hold",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "balanced",
+   "target": "counter_fault",
+   "second": "none",
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 86,
+ "deciding": {
+  "verified_exceedance": "The variation was approved at 19:20, after doors, so the effective limit stays 1000. The device is faulty, so the recount of 1012 is the verified figure. The late variation leaves some doubt.",
+  "disposition": "The event has ended with a small recounted excess and a large steward gap. The data is complete, which favours sign-off. The late variation and the weak staffing make a hold defensible.",
+  "discrepancy_source": "Only the fault_logged counter overstates the figures, at 1083 against a recount of 1012. Tickets are within limit, but the recount is also slightly over, so counter_fault or none.",
+  "steward_shortfall": "signed_in 25 of 36 required is 30.6% under, severe. The roster of 30 is a decoy.",
+  "unconfirmed_exits": "Routes A to C were clear before doors. D was checked clear at exactly 19:00, the door time, so it may or may not count. That makes 0 or 1 unconfirmed."
+ },
+ "request": "rec-F435-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01568
+}

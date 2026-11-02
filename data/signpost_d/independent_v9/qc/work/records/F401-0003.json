@@ -1,0 +1,127 @@
+{
+ "id": "F401-0003",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P731"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 26,
+     "spo2": 91
+    }
+   ],
+   "inv": [
+    {
+     "test": "CRP",
+     "ack": null
+    }
+   ]
+  },
+  "medications": {
+   "reconciled": [
+    "apixaban 5mg bd"
+   ],
+   "discharge_rx": [
+    "apixaban 2.5mg bd"
+   ]
+  },
+  "function_social": {
+   "care": {
+    "status": "requested_no_date"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "TTO",
+     "status": "done",
+     "completed_at": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "dose_changed",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "none",
+  "outstanding_task_count": 2,
+  "false_completion": true,
+  "care_need": "rehab",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "none",
+  "outstanding_task_count": 2,
+  "false_completion": true,
+  "care_need": "new_package",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_senior",
+   "second": "request_item",
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "intermediate_care",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 28,
+ "deciding": {
+  "rx_matches": "Apixaban 5mg bd versus 2.5mg bd with no change entry.",
+  "next_step": "Unacknowledged CRP and abnormal obs with no review suggest escalation; the missing task evidence could also point to request_item.",
+  "destination": "Care requested with no start date and rehab need point to intermediate_care.",
+  "outstanding_tasks": "One TTO is done with null completed_at, so one outstanding or zero if accepted.",
+  "discharge_delay": "Care requested_no_date implies a delay beyond the planned date, probably one to two days."
+ },
+ "request": "rec-F401-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007226
+}

@@ -1,0 +1,138 @@
+{
+ "id": "F434-0050",
+ "family": "F434",
+ "state": {
+  "event": {
+   "closure_end": "14:30"
+  },
+  "post": {
+   "km_marker": 88,
+   "off_post_at": "13:30",
+   "relief": [
+    {
+     "marshal_ref": "M6",
+     "signed_in": "11:00",
+     "signed_out": "13:30"
+    }
+   ]
+  },
+  "incidents": [],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "11:30",
+     "ok": false
+    },
+    {
+     "time": "12:30",
+     "ok": false
+    },
+    {
+     "time": "13:00",
+     "ok": false
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C4",
+     "time": "12:12",
+     "km": 88,
+     "type": "mechanical",
+     "bibs": [
+      33
+     ]
+    }
+   ],
+   "medical_handovers": [
+    {
+     "ref": "H1",
+     "bib": 33,
+     "km": 88,
+     "destination": "Mercy Hospital"
+    }
+   ],
+   "abandonments": [
+    33
+   ]
+  },
+  "sweep": null
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "hospital_transfer",
+  "staffing_gap": "left_before_sweep",
+  "relief_swap_logged": true,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 15.91,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "left_before_sweep",
+  "relief_swap_logged": true,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 15.91,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "safety_review",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "leaning",
+   "target": "mechanical_only",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "coverage_held": "M6 was on post from 11:00 to 13:30, ahead of the 14:30 closure end, and the sweep is null, so the end cannot be verified. Whether the marshal stayed until the sweep passed is unknown.",
+  "next_step": "Control confirms a hospital handover for bib 33 at km 88, which the post never logged, and the post was unreliable on radio. This is a confirmed failure that needs panel review.",
+  "incident_class": "Control logs only a mechanical stop for bib 33 at km 88. The post list is empty, so a fall is not explicit, which leaves doubt.",
+  "reversal_time": "A hospital transfer implies recovery measured in months or longer. The injury severity is unknown, so level 2 or 3 are both defensible.",
+  "consequence_severity": "The medical handover for bib 33 at km 88 goes to Mercy Hospital, with the bib in the abandonments list."
+ },
+ "request": "rec-F434-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012065
+}

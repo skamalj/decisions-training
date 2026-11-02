@@ -1,0 +1,146 @@
+{
+ "id": "F427-0016",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V101",
+   "visit_date": "2024-06-11",
+   "surveyor_grade": "trainee",
+   "weather_on_day": "dry"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 20,
+   "dipwells_scheduled": 10,
+   "dams_total": 4
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "W3",
+     "depth_cm": 43
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 12,
+     "prev_depth_cm": 12
+    }
+   ],
+   "rain_30d_pct_normal": 123
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D1",
+     "pool_level_cm": 40,
+     "design_pool_cm": 40,
+     "defect_code": "OK",
+     "remark": "Holding."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": null,
+   "photos_uploaded": null
+  },
+  "notes": {
+   "surveyor_note": "Water table looks terrible, very worried.",
+   "prior_visits": [
+    {
+     "date": "2023-09-02",
+     "dam_id": "D1",
+     "event": "breach"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.1,
+  "photos_status": "none",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": -23.0,
+  "rainfall_pct_normal": 123.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "alarmed",
+  "grazing_signs": true
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.77,
+  "photos_status": "partial",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "partial_breach",
+  "water_table_offset_cm": -22.97,
+  "rainfall_pct_normal": 123.41,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "alarmed",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "leaning",
+   "target": "well_below",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 53,
+ "deciding": {
+  "dam_caused_drop": "Wet 30 days (123%) and steady controls, so weather and regional drop are unlikely causes; one prior breach on D1 gives modest doubt.",
+  "next_step": "Dam log shows no defect and no open orders, so the record is filed as routine; the alarmed note is tone only.",
+  "hydro_state": "Dipwell W3 at 43 cm against band floor 20 cm is 23 cm below the floor, more than 15.",
+  "dam_severity": "D1 pool 40 equals design 40, code OK.",
+  "evidence_completeness": "1 of 10 wells read, photos null, quadrats null; only the dam log is recorded."
+ },
+ "request": "rec-F427-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009654
+}

@@ -1,0 +1,153 @@
+{
+ "id": "F424-0022",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2398",
+   "vessel_id": "FV2",
+   "volume_hl": 24,
+   "brew_date": "2024-06-03",
+   "yeast_strain": "US-05",
+   "yeast_gen": 4,
+   "og_target": 1.05,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.012,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-06-05",
+    "gravity_sg": 1.05,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-06-09",
+    "gravity_sg": 1.016,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-06-11",
+    "gravity_sg": 1.012,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-06-12",
+    "gravity_sg": 1.011,
+    "temp_c": 19
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-06-03",
+    "type": "pitch",
+    "actor": "op1",
+    "note": "Pitched US-05 gen 5, all fine."
+   },
+   {
+    "ts": "2024-06-12",
+    "type": "transfer",
+    "vessel_id": "FV4",
+    "actor": "op1",
+    "note": "Moved to FV4 to free tank, looks great."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2398",
+   "abv_pct": 5.1,
+   "abv_label_band": 5.0,
+   "diacetyl_mgl": 0.11,
+   "micro_plate": {
+    "result": "positive",
+    "cfu_ml": 40,
+    "plated_on": "2024-06-11"
+   },
+   "retest": []
+  },
+  "release_request": {
+   "volume_hl": 22.5,
+   "vessel_id": "FV4",
+   "note": "Customer order ships Friday, need packaging tomorrow."
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.11,
+  "discrepancy_count": 4,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.11,
+  "discrepancy_count": 3,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": true,
+  "release_pressure": "rush",
+  "operator_note_tone": "reassuring"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "balanced",
+   "target": "hold_retest",
+   "second": "release_conditional",
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (hard_limit_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 124,
+ "deciding": {
+  "terminal_gravity": "1.012 then 1.011 are both in band, but they differ by 0.001 and come after a 1.016 reading, so stability is arguable.",
+  "contamination_supported": "Positive plate at 40 cfu/ml with an empty retest list and no explanation, though the count is low.",
+  "batch_disposition": "A positive plate with no retest points to hold_retest, while an in-band, low-diacetyl batch under a rush request makes release_conditional defensible.",
+  "deviation_severity": "The FV4 transfer on 06-12 was logged with no QA sign-off, an irreversible step, so the level is Critical.",
+  "record_discrepancies": "Volume 24 vs 22.5, yeast_gen 4 vs note gen 5 and brew_date 06-03 vs first reading 06-05 are clear. The batch vessel FV2 vs release FV4 is a possible fourth, but it follows the transfer."
+ },
+ "request": "rec-F424-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01201
+}

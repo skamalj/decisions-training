@@ -1,0 +1,150 @@
+{
+ "id": "F422-0024",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-4418",
+   "delivered_at": "2025-05-01",
+   "received_at": "2025-05-06",
+   "review_date": "2025-06-10",
+   "reason": "DAMAGED_IN_TRANSIT",
+   "lines": [
+    {
+     "gtin": "05077700000047",
+     "qty_claimed": 40
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "lines": [
+    {
+     "gtin": "05077700000047",
+     "batch": "Q88",
+     "expiry": "2026-03-31",
+     "qty_dispatched": 40
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "05077700000047",
+     "batch": "Q88",
+     "expiry": "03-2026",
+     "qty_counted": 29,
+     "packs_damaged": 19,
+     "seals_intact": 10
+    }
+   ],
+   "uid_scans": []
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": "LG-72",
+   "logger_start": "2025-04-30T10:00",
+   "logger_end": "2025-05-07T10:00",
+   "min_c": 18.0,
+   "max_c": 29.5,
+   "minutes_out_of_range": 124,
+   "stability_ref": {
+    "max_hours": 2,
+    "max_c": 30
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-02-28",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "hold_limit_days": 20,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-06-10"
+   },
+   "max_days_out_of_control": 30,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 124,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "expiry_format_only",
+  "count_discrepancy_packs": 11,
+  "damaged_pack_fraction": 0.66,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 5,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 0,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 9
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 124,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "expiry_format_only",
+  "count_discrepancy_packs": 11,
+  "damaged_pack_fraction": 0.67,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 5,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 1,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 9
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_traceable": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "reject_destroy",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 76,
+ "deciding": {
+  "storage_maintained": "Excursion of 124 minutes is 4 minutes over the 2 h allowance, though max_c 29.5 is under the allowance cap of 30.",
+  "batch_traceable": "Batch Q88 matches the dispatch line; expiry differs only in format (03-2026 vs 2026-03-31).",
+  "next_step": "19 of 29 packs damaged and a marginal excursion favour destruction, but no storage declaration was received, a specific missing document that could justify requesting evidence first.",
+  "resaleable_share": "10 intact packs of 29 (about 34%) could be fit, but the borderline excursion could make that 0.",
+  "disposition_urgency": "The extended limit 2025-06-10 equals review_date: zero days remain, which reads as urgent or as the limit just reached and overdue."
+ },
+ "request": "rec-F422-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014601
+}

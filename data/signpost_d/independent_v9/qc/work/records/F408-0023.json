@@ -1,0 +1,118 @@
+{
+ "id": "F408-0023",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 100403,
+   "stream": "garden",
+   "logged_at": "2024-06-04T10:00"
+  },
+  "property": {
+   "assisted_collection": true,
+   "assisted_since": "2023-09-01"
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ]
+  },
+  "round_log": {
+   "stops": [
+    {
+     "uprn": 100403,
+     "exception_code": "not_presented",
+     "gps_stop": null
+    }
+   ]
+  },
+  "history": [
+   {
+    "outcome": "upheld"
+   },
+   {
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "wrong_stream",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": false,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 0,
+  "assisted_miss_breach": true
+ },
+ "factors_sampled": {
+  "stream_mismatch": "wrong_stream",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": true,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "weather_suspension",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 1,
+  "history_decoys": 2,
+  "assisted_miss_breach": true
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "return_conditional",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (assisted_miss_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 29,
+ "deciding": {
+  "crew_missed": "Stop shows not_presented with no GPS data, for an assisted property.",
+  "report_matches": "Reported garden stream differs from the refuse stream due, though the stop exists.",
+  "next_step": "Not_presented exception suggests a return after the resident fixes presentation.",
+  "return_urgency": "Assisted collection with a not_presented stop is a breach, so same day.",
+  "repeat_failures": "Two upheld history entries are listed."
+ },
+ "request": "rec-F408-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005721
+}

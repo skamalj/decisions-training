@@ -1,0 +1,154 @@
+{
+ "id": "F435-0039",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E-7104",
+   "zone_id": "ST4",
+   "zone_type": "seated_tier",
+   "doors_open": "2025-07-19T19:30",
+   "check_filed_at": "2025-07-19T20:45",
+   "phase": "live"
+  },
+  "licence": {
+   "base_limit": 600,
+   "variation": null,
+   "stewards_required": 10,
+   "exit_routes": [
+    "E1",
+    "E2",
+    "E3",
+    "E4"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 600,
+   "issued": 558,
+   "comps_included": 25,
+   "scanned_in": 549
+  },
+  "ingress": {
+   "device_id": "D33",
+   "device_status": "ok",
+   "raw_peak": 597,
+   "peak_at": "2025-07-19T20:30",
+   "manual_recount": {
+    "count": 602,
+    "at": "2025-07-19T20:35"
+   }
+  },
+  "stewarding": {
+   "rostered": 10,
+   "signed_in": 10,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "E1",
+    "checked_at": "2025-07-19T18:50",
+    "status": "clear"
+   },
+   {
+    "route_id": "E2",
+    "checked_at": "2025-07-19T18:55",
+    "status": "clear"
+   },
+   {
+    "route_id": "E3",
+    "checked_at": "2025-07-19T19:00",
+    "status": "clear"
+   },
+   {
+    "route_id": "E4",
+    "checked_at": "2025-07-19T19:05",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "seated_tier",
+  "event_phase": "live",
+  "occupancy_ratio": 0.995,
+  "counter_status": "ok",
+  "counter_inflation": 0.0,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.93,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.0,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "seated_tier",
+  "event_phase": "live",
+  "occupancy_ratio": 0.9,
+  "counter_status": "ok",
+  "counter_inflation": 0.04,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.93,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.12,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 4,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "unconfirmed_exits": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 42,
+ "deciding": {
+  "verified_exceedance": "Counter ok with peak 597 under limit 600, but the recount of 602 is a few people over; the figures straddle the limit.",
+  "disposition": "Issued 558 under limit, stewards 10 of 10, all exits clear; only the 597 vs 602 difference is a minor query.",
+  "discrepancy_source": "Issued 558 is under limit used 600, and the counter is ok with no fault.",
+  "steward_shortfall": "signed_in 10 equals stewards_required 10.",
+  "unconfirmed_exits": "All four routes checked clear 18:50-19:05, before doors at 19:30."
+ },
+ "request": "rec-F435-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010641
+}

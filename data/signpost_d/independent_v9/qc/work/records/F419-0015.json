@@ -1,0 +1,159 @@
+{
+ "id": "F419-0015",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "12/30",
+   "date": "2024-09-10",
+   "speed_kmh": 60,
+   "thresholds": {
+    "design": 0.74,
+    "maint_planning": 0.54,
+    "minimum": 0.44
+   },
+   "weather": {
+    "precip_mm": 0,
+    "temp_c": 19
+   }
+  },
+  "device": {
+   "serial": "CFME-4471",
+   "cal_cert": "2024-09-10",
+   "cal_expiry": "2025-09-10",
+   "tyre_kpa": 250,
+   "tyre_spec_kpa": [
+    230,
+    270
+   ],
+   "water_mm": 1.0
+  },
+  "runs": [
+   {
+    "dir": "12",
+    "mean_speed_kmh": 60,
+    "thirds": [
+     0.7,
+     0.58,
+     0.69
+    ],
+    "seg_100m_t2": [
+     0.74,
+     0.41,
+     0.59
+    ]
+   },
+   {
+    "dir": "30",
+    "mean_speed_kmh": 61,
+    "thirds": [
+     0.69,
+     0.59,
+     0.7
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    1.0,
+    1.1,
+    1.0
+   ],
+   "mtd_threshold_mm": 0.8,
+   "contaminant": "dry"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2024-02-13",
+   "works_orders": [],
+   "prior_surveys": [],
+   "cross_checks": [
+    {
+     "serial": "CFME-2208",
+     "date": "2024-09-10",
+     "thirds": [
+      0.69,
+      0.59,
+      0.7
+     ]
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-09-11T14:00",
+   "role": "engineer"
+  }
+ },
+ "factors": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "mid_section",
+  "days_since_rubber_removal": 210,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "no_prior"
+ },
+ "factors_sampled": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "mid_section",
+  "days_since_rubber_removal": 210,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 3,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "low",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "no_prior"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file_routine",
+   "second": null,
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "genuine_deficit": "All thirds (0.58-0.70) are above the 0.54 planning level and the cross-check agrees, but one mid-third segment at 0.41 is below the 0.44 minimum; the evidence leans slightly to no deficit.",
+  "next_step": "All third averages are above planning and the cross-check agrees with the main run, favouring filing; the single low segment gives some doubt.",
+  "deficit_driver": "No third falls below planning level, texture adequate (1.0-1.1 vs 0.8), and the cross-check agrees, so no driver.",
+  "friction_severity": "Mid-third segment 0.41 is below the 0.44 minimum, so level 3, though thirds alone would be level 1.",
+  "evidence_completeness": "Calibration cert is dated the same day as the survey rather than before it; this is borderline, and everything else is present and signed after the survey."
+ },
+ "request": "rec-F419-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011885
+}

@@ -1,0 +1,151 @@
+{
+ "id": "F405-0023",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C330",
+   "detected_on": "2025-08-01",
+   "term_start": "2025-09-29",
+   "room": "B12"
+  },
+  "booking_a": {
+   "module": "HIS140",
+   "dept": "HIS",
+   "day": "Wed",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "headcount": 44,
+   "required_features": [
+    "hearing_loop"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "PHL115",
+   "dept": "PHL",
+   "room": "B12",
+   "day": "Wed",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-06-12",
+   "approver": "tross"
+  },
+  "room": {
+   "code": "B12",
+   "capacity": 60
+  },
+  "alternatives": null,
+  "history": [
+   {
+    "type": "clash_report",
+    "date": "2024-10-02",
+    "state": "closed"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-01-15",
+    "state": "closed"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 59,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": true,
+  "headcount_ratio": 0.73,
+  "required_feature": "hearing_loop",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": true,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 4,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": true,
+  "headcount_ratio": 0.73,
+  "required_feature": "hearing_loop",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 47,
+ "deciding": {
+  "genuine_clash": "The plan expected a lean to true, but A runs odd weeks and B even weeks in B12 with no shared week, so the scan flag does not reflect a real overlap.",
+  "alt_room_fits": "alternatives is null, so no free room is listed; the plan's lean to true cannot be supported, so no listed room fits.",
+  "resolution": "Weeks [1,3,5,7] and [2,4,6,8] never intersect and both bookings are confirmed, so dismiss; the two prior reports are closed.",
+  "urgency": "detected_on 2025-08-01 and term_start 2025-09-29 are about 59 days apart, so any occurrence is distant.",
+  "parties_needed": "With no overlap, nothing needs to be resolved beyond the officer closing the report."
+ },
+ "request": "rec-F405-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010251
+}

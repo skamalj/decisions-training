@@ -1,0 +1,154 @@
+{
+ "id": "F440-0033",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "GB-3098",
+   "review": "2025-04-01",
+   "arr": "2025-04-23",
+   "dep": "2025-04-25",
+   "pax": 18,
+   "diet": {
+    "veg": 3
+   },
+   "amend": []
+  },
+  "roster": [
+   {
+    "role": "participant",
+    "dob": "2010-03-01",
+    "sex": "F",
+    "n": 8,
+    "veg": 1
+   },
+   {
+    "role": "participant",
+    "dob": "2010-07-01",
+    "sex": "M",
+    "n": 8,
+    "veg": 1
+   },
+   {
+    "role": "leader",
+    "dob": "1980-01-01",
+    "n": 3
+   }
+  ],
+  "allocation": [
+   {
+    "sex": "F",
+    "beds": 10,
+    "nights": [
+     "2025-04-23",
+     "2025-04-24"
+    ]
+   },
+   {
+    "sex": "M",
+    "beds": 10,
+    "nights": [
+     "2025-04-23",
+     "2025-04-24"
+    ]
+   }
+  ],
+  "payment": {
+   "price_pp": 100,
+   "total": 1800,
+   "deposit_due": 500,
+   "paid_total": 500,
+   "paid_on": null
+  },
+  "safeguarding": [
+   {
+    "n": 3,
+    "status": "verified",
+    "exp": "2026-02-01"
+   }
+  ],
+  "history": {
+   "trusted": false,
+   "stays": 6,
+   "no_shows": 4
+  }
+ },
+ "factors": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "none",
+  "amendment_logged": false,
+  "supervision_level": "above_ratio",
+  "extra_cover_logged": false,
+  "deposit_position": "paid_full",
+  "instalment_approved": false,
+  "days_to_arrival": 22,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 4,
+  "diet_count_drift": "minor"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "none",
+  "amendment_logged": false,
+  "supervision_level": "short_all_nights",
+  "extra_cover_logged": false,
+  "deposit_position": "paid_full",
+  "instalment_approved": false,
+  "days_to_arrival": 50,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 4,
+  "diet_count_drift": "minor"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "ratio_met": "16 minors aged 13-17 need 2 adults and the roster has 3 leaders, all verified, on every night.",
+  "deposit_covered": "paid_total 500 equals deposit_due 500, but paid_on is null, so the payment date is unconfirmed, which leaves some doubt.",
+  "disposition": "The one specific gap is the missing payment date. With 4 no-shows and an untrusted organiser, the booking should be held until it is confirmed.",
+  "urgency": "Review 2025-04-01 to arrival 2025-04-23 is 22 days, in the 15-30 day band.",
+  "conflict_count": "Booked 18 vs roster 19 and diet total 3 vs roster flags 2 are unexplained with no amendments. Total 1800 is priced at 18 heads rather than 19, which is arguably a third conflict."
+ },
+ "request": "rec-F440-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015588
+}

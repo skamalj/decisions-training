@@ -1,0 +1,109 @@
+{
+ "id": "F426-0004",
+ "family": "F426",
+ "state": {
+  "applications": [
+   {
+    "date": "2024-07-01",
+    "product_code": "M4",
+    "qty_applied": 3.3,
+    "qty_unit": "L",
+    "area_treated_ha": 2,
+    "sprayer_id": "SP-01"
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "M4",
+    "max_rate_per_ha": 1.5,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "minor_use_auth_ref": null
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-08-30",
+   "residue_test": {
+    "sampled": true,
+    "below_limit": null,
+    "result_date": null
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "over_25",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "missing",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "near_10_boundary",
+  "partial_block_spray": false,
+  "clerical_mismatch": "sprayer_id_format",
+  "minor_use_auth": true,
+  "residue_test_clear": false,
+  "calibration_state": "expired_long",
+  "missing_item": "product_ref_entry_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 7,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "release_lot",
+   "second": "hold_and_test",
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "balanced",
+   "target": "label_deviation",
+   "second": "clerical_only",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 28,
+ "deciding": {
+  "phi_cleared": "Applied 2024-07-01, PHI 14, picked 2024-08-30: elapsed.",
+  "next_step": "Rate overrun with pending residue result; hold_and_test and release both defensible.",
+  "finding_class": "Rate 1.65 L/ha vs 1.5 max with no authorisation.",
+  "reversal_time": "Overdose cannot be undone once fruit is packed.",
+  "rate_overrun": "3.3/2=1.65 L/ha, 10% over; near the boundary."
+ },
+ "request": "rec-F426-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004458
+}

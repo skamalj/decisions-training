@@ -1,0 +1,132 @@
+{
+ "id": "F403-0033",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "egg",
+    "milk",
+    "nut",
+    "soy"
+   ],
+   "plan_start": "2025-02-03"
+  },
+  "medical_evidence": {
+   "doc_type": "parent_letter",
+   "note": "GP-copied",
+   "allergens": [
+    "egg",
+    "milk",
+    "nut",
+    "soy"
+   ]
+  },
+  "menu_mapping": {
+   "dishes": [
+    {
+     "dish": "pasta bake",
+     "contains": [
+      "milk"
+     ],
+     "substitute": "oat bake"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-02-11",
+   "incidents": [
+    {
+     "date": "2025-02-10",
+     "dish": "cheese pasta",
+     "contains": [
+      "milk"
+     ]
+    }
+   ],
+   "messages": [
+    "URGENT, plan failing!"
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": -5,
+  "packed_lunch_interim": false,
+  "note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 23,
+  "packed_lunch_interim": false,
+  "note_tone": "alarmed"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_to_lead",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "balanced",
+   "target": "no_gap",
+   "second": "evidence_gap",
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 26,
+ "deciding": {
+  "evidence_allergens_covered": "The evidence allergens match the declared list and the mapped dish carries a substitute. Only one dish is shown, so some doubt remains.",
+  "next_step": "A cheese pasta containing milk was served on 2025-02-10, after plan_start, so the case goes to the safety lead. Document-type doubts keep it from certain.",
+  "first_gap_stage": "The evidence is a parent_letter noted as GP-copied. This is borderline between lacking clinician confirmation (evidence_gap) and acceptable (no_gap).",
+  "exposure_proximity": "The incident on 2025-02-10 is dated after plan_start 2025-02-03 and the dish contains milk, a declared allergen.",
+  "meal_urgency": "Plan start was 2025-02-03 and a meal was served 2025-02-10, so the pupil is already eating. Whether the plan is in effect given the parent-letter evidence is uncertain, which leaves the next-day level plausible."
+ },
+ "request": "rec-F403-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014493
+}

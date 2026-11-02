@@ -1,0 +1,153 @@
+{
+ "id": "F414-0028",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SW-207",
+   "crit_fall_height_m": 2.2,
+   "surf_type": "wood_chip"
+  },
+  "inspection": {
+   "insp_date": "2024-06-28",
+   "insp_grade": "annual_main",
+   "fall_height_m": 2.2,
+   "surf_type_found": "wood_chip",
+   "surf_depth_mm": 300,
+   "surf_req_table": [
+    {
+     "h_max": 2.2,
+     "type": "wood_chip",
+     "min_depth_mm": 300
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "O1",
+     "result": "fail"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "CH02",
+     "component_id": "C3",
+     "injury_mech": "minor"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "SW-207",
+    "component_id": "C3",
+    "defect_ref": "D1",
+    "status": "closed",
+    "closed_date": "2024-05-30"
+   },
+   {
+    "wo_id": "W2",
+    "asset_id": "SW-207",
+    "component_id": "C1",
+    "defect_ref": "D2",
+    "status": "closed",
+    "closed_date": "2024-07-02"
+   }
+  ],
+  "site": {
+   "usage_level": "high",
+   "incident_reports_90d": 2
+  },
+  "history": [
+   {
+    "date": "2023-12-01",
+    "defect_refs": [
+     "D1",
+     "D2"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "swing",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": 0.0,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 1.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "high",
+  "incident_reports_90d": 2
+ },
+ "factors_sampled": {
+  "equipment_type": "swing",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": -110.95,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 4,
+  "work_orders_closed_fraction": 0.43,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "high",
+  "incident_reports_90d": 2
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "sign_off_actions",
+   "second": null,
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (head_neck_entrapment_fail = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 30,
+ "deciding": {
+  "prior_defects_cleared": "D1 and D2 both show closed. D2 closed on 2024-07-02, after the visit date, and there is no follow-up check.",
+  "surfacing_adequate": "Depth 300 mm exactly equals the 300 mm requirement at 2.2 m, so it sits on the boundary.",
+  "asset_disposition": "All work orders are closed and the listed finding is minor, which leans toward continued use with actions. The failed head_neck probe weighs against it.",
+  "remedial_progress": "Both raised work orders W1 and W2 have status closed.",
+  "hazard_severity": "A head_neck probe on O1 has result fail, which implies entrapment. The listed finding is only minor, so level 3 remains arguable."
+ },
+ "request": "rec-F414-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013561
+}

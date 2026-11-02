@@ -1,0 +1,152 @@
+{
+ "id": "F435-0034",
+ "family": "F435",
+ "state": {
+  "event": {
+   "zone_id": "F3",
+   "zone_type": "standing_floor",
+   "doors_open": "2025-08-16T19:00:00",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 500,
+   "variation": {
+    "ref": "V-12",
+    "new_limit": 520,
+    "status": "pending",
+    "approved_on": null
+   },
+   "stewards_required": 32,
+   "exit_routes": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 500,
+   "issued": 470
+  },
+  "ingress": {
+   "device_status": "fault_logged",
+   "raw_peak": 553,
+   "manual_recount": {
+    "count": 503,
+    "at": "2025-08-16T21:15:00"
+   }
+  },
+  "stewarding": {
+   "rostered": 31,
+   "signed_in": 30,
+   "relief": {
+    "called_at": "2025-08-16T19:20:00",
+    "eta_min": 15
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "A",
+    "checked_at": "2025-08-16T18:15:00",
+    "status": "clear"
+   },
+   {
+    "route_id": "B",
+    "checked_at": "2025-08-16T18:30:00",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "C",
+    "checked_at": "2025-08-16T18:40:00",
+    "status": "clear"
+   },
+   {
+    "route_id": "D",
+    "checked_at": "2025-08-16T19:00:00",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.006,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.1,
+  "manual_recount_present": true,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 0.94,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.06,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 1,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.14,
+  "counter_status": "ok",
+  "counter_inflation": 0.1,
+  "manual_recount_present": true,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 0.94,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.26,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "counter_fault",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 94,
+ "deciding": {
+  "verified_exceedance": "The counter is faulty, so the recount of 503 is the verified figure. It is above the effective limit of 500 (the variation is pending), but only by 0.6%.",
+  "disposition": "The event has ended and the recount is over the effective limit, so the case goes to the licensing authority.",
+  "discrepancy_source": "The device is fault_logged and inflated (raw 553 against recount 503), while issued 470 is under the limit used (500), so the counter fault is the source.",
+  "steward_shortfall": "signed_in 30 against required 32 is 6% short, which is under 10%.",
+  "unconfirmed_exits": "B is obstructed with no later clear, so it is unconfirmed. D was checked clear exactly at doors_open (19:00), which is borderline and leaves a possible second route."
+ },
+ "request": "rec-F435-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012465
+}

@@ -1,0 +1,158 @@
+{
+ "id": "F401-0008",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P303",
+   "planned_discharge_at": "2025-05-14T11:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 15,
+     "spo2": 97,
+     "sbp": 132,
+     "hr": 70,
+     "temp": 36.6,
+     "cons": "A",
+     "at": "2025-05-14T06:00"
+    }
+   ],
+   "investigations": [
+    {
+     "test": "potassium",
+     "status": "resulted_high",
+     "required_before_discharge": false,
+     "follow_up_owner": null,
+     "acknowledged_at": null
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P303",
+   "reconciled": [
+    {
+     "drug": "furosemide",
+     "dose": 40,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "changes": [],
+   "discharge_rx": {
+    "signed_at": "2025-05-13T17:00",
+    "items": [
+     {
+      "drug": "furosemide",
+      "dose": 40,
+      "unit": "mg",
+      "freq": "bd"
+     }
+    ]
+   }
+  },
+  "function_social": {
+   "therapy": null,
+   "social": {
+    "lives_alone": false,
+    "carer_available": true
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "TTO",
+     "status": "done",
+     "completed_at": "2025-05-13T17:30",
+     "signed_by": "RN Kay"
+    },
+    {
+     "task": "GP letter",
+     "status": "in_progress"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-05-16",
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "frequency_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "function_assessment_null",
+  "outstanding_task_count": "1 (in progress)",
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_needed",
+  "logistics_delay": "transport_two_days_later_time_unknown",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "function_assessment_null",
+  "outstanding_task_count": 4,
+  "false_completion": false,
+  "care_need": "new_package",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "conditional_discharge",
+   "second": "escalate_senior",
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "home_independent",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "rx_matches": "Furosemide od reconciled vs bd on the prescription with no change entry.",
+  "next_step": "Potassium resulted high with null acknowledged_at and no owner supports escalation, while a single in-progress task and normal obs support conditional discharge.",
+  "destination": "Lives with a carer available and no care arrangement; therapy is null, so home independent is probable but not certain.",
+  "outstanding_tasks": "GP letter is in_progress with all else signed done; one outstanding versus complete is arguable.",
+  "discharge_delay": "Transport is booked two days after the planned date with a null pickup time, which sits at the 2 vs 3 day boundary."
+ },
+ "request": "rec-F401-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010243
+}

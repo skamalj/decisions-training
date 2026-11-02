@@ -1,0 +1,128 @@
+{
+ "id": "F408-0021",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "MB-1041",
+   "uprn": 100201,
+   "flat_no": "3",
+   "logged_at": "2024-03-12T09:10",
+   "stream": "refuse",
+   "claimed_date": "2024-03-11",
+   "photo_attached": true
+  },
+  "property": {
+   "uprn": 100201,
+   "flat_no": "3A",
+   "assisted_collection": true,
+   "assisted_since": "2023-06-01"
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled_date": "2024-03-12"
+  },
+  "round_log": {
+   "status": "in_progress",
+   "disruption_code": "WX_SUSP",
+   "catch_up_date": "2024-03-14",
+   "stops": [
+    {
+     "uprn": 100201,
+     "exception_code": "access_blocked",
+     "photo_ref": "P778",
+     "gps_stop": true
+    }
+   ],
+   "sweep_collected_at": null
+  },
+  "history": [
+   {
+    "uprn": 100201,
+    "logged_on": "2024-02-20",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "before_round_complete",
+  "crew_exception": "access_blocked",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "weather_suspension",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 1,
+  "history_decoys": 0,
+  "assisted_miss_breach": true
+ },
+ "factors_sampled": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "before_round_complete",
+  "crew_exception": "access_blocked",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "weather_suspension",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 4,
+  "history_decoys": 0,
+  "assisted_miss_breach": true
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "close_no_action",
+   "second": "escalate_supervisor",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (assisted_miss_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 63,
+ "deciding": {
+  "crew_missed": "Stop has a supported access_blocked exception with photo and GPS, but the bin belongs to an assisted household.",
+  "report_matches": "Claimed date is one day before the scheduled date, and the report was logged while the round was in progress.",
+  "next_step": "The supported exception and weather disruption favour closing, but the assisted breach could justify supervisor referral.",
+  "return_urgency": "Assisted collection is true since 2023 and the stop was an exception, so a same-day return is due.",
+  "repeat_failures": "One upheld case is in the window, and the status of the flat mismatch leaves zero defensible."
+ },
+ "request": "rec-F408-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005721
+}

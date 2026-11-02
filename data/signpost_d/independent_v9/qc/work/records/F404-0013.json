@@ -1,0 +1,146 @@
+{
+ "id": "F404-0013",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "B1",
+   "age_band": "two_year",
+   "ratio_rule": "1:4"
+  },
+  "children": {
+   "booked": 8,
+   "slots": [
+    {
+     "t": "16:30",
+     "in": 5
+    },
+    {
+     "t": "16:45",
+     "in": 5
+    },
+    {
+     "t": "17:00",
+     "in": 5
+    },
+    {
+     "t": "17:15",
+     "in": 5
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S12",
+    "q": 3,
+    "counts": true,
+    "end": "17:30"
+   },
+   {
+    "id": "S14",
+    "q": 3,
+    "counts": true,
+    "end": "17:30"
+   },
+   {
+    "id": "S15",
+    "q": 6,
+    "counts": true,
+    "end": "17:30"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S12",
+    "out": "16:30"
+   },
+   {
+    "id": "S14",
+    "out": "17:30"
+   }
+  ],
+  "cover_log": [],
+  "history": {
+   "prior_breaches_90d": 4
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 8,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 0,
+  "shortfall_minutes": 60,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "absent",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 4
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 8,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 0,
+  "shortfall_minutes": 81,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": true,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "absent",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "corrective_plan",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "clear",
+   "target": "staff_shortfall",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "below_ratio": "From 16:30 to 17:30 there are 5 children and only S14 is signed in, so 1 eligible against the 2 required. The cover_log is empty, so a breach is established.",
+  "disposition": "The breach is confirmed, with no cover logged. At about 60 minutes it is not above the notifiable threshold, so the room manager agrees an action plan. Four prior breaches are context only.",
+  "primary_cause": "S12 left at 16:30 against a rota end of 17:30 and S15 has no sign-in at all. Staff on duty were below rota while children stayed within the 8 booked.",
+  "shortfall_duration": "The gap window runs from 16:30 to 17:30, exactly at the 60-minute anchor. Whether it counts as 60 minutes or as 61 or more is the open point.",
+  "breach_severity": "5 children with 1 eligible staff member (4 covered) leaves one child beyond cover at the worst slot."
+ },
+ "request": "rec-F404-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013374
+}

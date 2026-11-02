@@ -1,0 +1,120 @@
+{
+ "id": "F428-0048",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "FL-27",
+   "gate_type": "flap",
+   "rated_closure_s": 60,
+   "seal_type": "J_bulb"
+  },
+  "inspection": {
+   "asset_id": "FL-27",
+   "insp_date": "2025-06-10",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-06-10",
+    "closure_s": 54,
+    "leakage_l_min": 3,
+    "leakage_limit_l_min": 8,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D2",
+    "component": "seal_music_note",
+    "grade": 2,
+    "status": "closed",
+    "first_seen": "2025-03-01"
+   }
+  ],
+  "operations": {
+   "outage": {
+    "status": "out_of_service",
+    "since": "2025-06-01",
+    "permit_expiry": "2025-06-10T06:00"
+   },
+   "flood_alert_active": true
+  }
+ },
+ "factors": {
+  "gate_type": "flap",
+  "closure_time_ratio": 0.9,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "none",
+  "mismatch_count": 1,
+  "mismatch_location": "seal_type",
+  "test_status": "passed_current",
+  "repair_progress": "completed_tested",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 27,
+  "borderline_case": true,
+  "outage_beyond_permit": true
+ },
+ "factors_sampled": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.57,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 3,
+  "mismatch_location": "seal_type",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "completed_tested",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 27,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_engineer",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "closure_test_valid": "Same-day test passed, closure 54 s against rated 60 and leakage 3 against limit 8. The outage context adds some doubt.",
+  "next_step": "The gate is out of service with the permit expired earlier on the inspection day and a flood alert active, which calls for an urgent engineer decision.",
+  "defect_class": "The only defect is closed, so there is no open defect.",
+  "section_discrepancies": "The register seal_type is J_bulb while the closed defect names a music_note seal. This may be an old seal replaced since, so it could count as one disagreement or none.",
+  "flood_risk": "permit_expiry is 06:00 on the inspection date with the gate still out of service and an alert active. That points to an overrun, but the same-day timing leaves some room for a High rating instead of Critical."
+ },
+ "request": "rec-F428-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010367
+}

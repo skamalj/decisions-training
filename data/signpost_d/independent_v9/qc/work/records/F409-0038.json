@@ -1,0 +1,136 @@
+{
+ "id": "F409-0038",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "R. Okafor",
+   "submitted_on": "2024-07-01",
+   "app_type": "renewal",
+   "message": "Do you have a phone line for queries?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-01-31",
+     "address_line": "14 Quay St",
+     "verified": true
+    }
+   ],
+   "note": "Renewal, no new residence proof requested."
+  },
+  "vehicle": {
+   "plate": "LM68XYZ",
+   "keeper_name": "R. Okafor",
+   "supporting_letters": []
+  },
+  "request": {
+   "zone_code": "Z2",
+   "address": "14 Quay St",
+   "plate_entered": "LM68XYZ",
+   "duration_months": 12
+  },
+  "account_history": {
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "live_permits": [
+    "P-77"
+   ],
+   "past_permits": [
+    {
+     "permit_no": "P-31",
+     "status": "expired",
+     "seize_reason": null
+    }
+   ],
+   "pcns": [],
+   "exceptions": []
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 152,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 152,
+  "docs_missing": 2,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "contradicting_claim",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 46,
+ "deciding": {
+  "residency_shown": "The only residence document was issued 152 days before submission, far over 90 days, so residency is not shown by current evidence.",
+  "disposition": "This is a routine renewal. The plate and keeper match the applicant, there is one live permit against a cap of 2, there are no PCNs and the past permit simply expired. The note says no new residence proof is requested.",
+  "main_issue": "No check fails. The household holds 1 of 2 permits, the keeper matches, and there are no misuse records. The stale document is not required on a renewal.",
+  "misuse_strength": "There are no PCNs, the past permit is merely expired, the keeper matches and the message is unrelated. No misuse indicator is present.",
+  "document_gaps": "The renewal note says no new residence proof is requested and the listed document is verified, so no required document is missing. The age of the document is the only doubt."
+ },
+ "request": "rec-F409-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011907
+}

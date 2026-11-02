@@ -1,0 +1,169 @@
+{
+ "id": "F403-0048",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-0873",
+   "yr": 6,
+   "school": "S207",
+   "declared_allergens": [
+    "fish",
+    "soy",
+    "mustard"
+   ],
+   "auto_injector": false,
+   "plan_start": "2025-03-10"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2025-01-08",
+   "expires": "2026-01-08",
+   "allergens": [
+    "fish",
+    "soy",
+    "mustard"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-02-24",
+   "cycle_weeks": 3,
+   "dishes": [
+    {
+     "dish": "Fish fingers",
+     "contains": [
+      "fish"
+     ],
+     "recipe_version_date": "2025-02-01",
+     "substitute": null,
+     "spec_checked_on": "2025-02-20"
+    },
+    {
+     "dish": "Teriyaki noodles",
+     "contains": [
+      "soy"
+     ],
+     "recipe_version_date": "2025-02-01",
+     "substitute": null,
+     "spec_checked_on": "2025-02-20"
+    },
+    {
+     "dish": "Mustard mash",
+     "contains": [
+      "mustard"
+     ],
+     "recipe_version_date": "2025-02-01",
+     "substitute": "plain mash",
+     "spec_checked_on": "2025-02-20"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "prep_area": "allergen bench",
+   "segregated_equipment": true,
+   "trained_staff": 3,
+   "trained_on": [
+    "2024-11-04",
+    "2024-11-04",
+    "2024-12-02"
+   ],
+   "cleaning_log_complete": true,
+   "exceptions": []
+  },
+  "history": {
+   "review_date": "2025-03-10",
+   "packed_lunch_until": "2025-03-11",
+   "incidents": [
+    {
+     "date": "2025-03-10",
+     "dish": "Fish fingers",
+     "contains": [
+      "fish"
+     ],
+     "note": "tray plated in error, pulled before service"
+    }
+   ],
+   "messages": [
+    "Cook: this plan is a disaster waiting to happen."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 2,
+  "packed_lunch_interim": true,
+  "note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "shared_equipment",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 28,
+  "packed_lunch_interim": true,
+  "note_tone": "alarmed"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_for_rework",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "no_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 134,
+ "deciding": {
+  "evidence_allergens_covered": "Fish and soy dishes have substitute null, so two of three evidence allergens lack a mapped substitution; only mustard is mapped.",
+  "next_step": "Exactly two dishes (Fish fingers, Teriyaki noodles) have no substitute while evidence, specs and controls are fine, so return for rework.",
+  "first_gap_stage": "Evidence current and controls verified; the gap sits in two unsubstituted dishes (the plan's no_gap reading is not supported by the record).",
+  "exposure_proximity": "Two allergen dishes are unsubstituted, and a 2025-03-10 fish tray was plated but pulled before service, so Open versus Reached.",
+  "meal_urgency": "packed_lunch_until 2025-03-11 puts the first meal on 2025-03-12, 2 school days from review_date 2025-03-10, close to the next-day boundary."
+ },
+ "request": "rec-F403-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.0122
+}

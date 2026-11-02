@@ -1,0 +1,168 @@
+{
+ "id": "F401-0039",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P404",
+   "planned_discharge_at": "2025-06-03T12:00"
+  },
+  "clinical": {
+   "targets": {
+    "spo2": "94-98"
+   },
+   "obs": [
+    {
+     "rr": 15,
+     "spo2": 96,
+     "sbp": 130,
+     "hr": 70,
+     "cons": "alert",
+     "at": "2025-06-03T06:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P404",
+   "reconciled": [
+    {
+     "drug": "metformin",
+     "dose": 500,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "metformin",
+     "dose": 1000,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ]
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": "frame",
+    "adl_score": 12
+   },
+   "care_arrangement": {
+    "type": "reablement_bed",
+    "status": "confirmed",
+    "start_date": "2025-06-03"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "s": "pending"
+    },
+    {
+     "t": "letter",
+     "s": "pending"
+    },
+    {
+     "t": "transport",
+     "s": "pending"
+    },
+    {
+     "t": "bed handover",
+     "s": "done",
+     "completed_at": null,
+     "signed_by": null
+    },
+    {
+     "t": "belongings",
+     "s": "done",
+     "completed_at": "2025-06-03T09:00",
+     "signed_by": null
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-06-03",
+    "pickup_time": "12:00"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "frequency_differs_same_daily_total",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 5,
+  "false_completion": true,
+  "care_need": "rehab",
+  "care_arrangement_status": "confirmed_on_time",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "social_history_null",
+  "outstanding_task_count": 5,
+  "false_completion": true,
+  "care_need": "new_package",
+  "care_arrangement_status": "declined",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "conditional_discharge",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "intermediate_care",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discharge_delay": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "rx_matches": "Metformin 500 mg bd vs 1000 mg od: same daily total but a different dose and frequency, with no change entry.",
+  "next_step": "Obs normal and nothing is missing or concerning, but five tasks are open on the day, so discharge is conditional on completing them.",
+  "destination": "Frame, ADL 12 and a confirmed reablement bed point to intermediate care; there is no home package.",
+  "outstanding_tasks": "Three tasks are pending, and two 'done' items lack completed_at or signed_by, giving five.",
+  "discharge_delay": "Reablement bed starts 2025-06-03 and pickup is 12:00, both at the planned time; the open tasks leave some doubt."
+ },
+ "request": "rec-F401-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010614
+}

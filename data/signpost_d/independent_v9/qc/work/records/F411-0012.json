@@ -1,0 +1,159 @@
+{
+ "id": "F411-0012",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H0412",
+   "type": "hackney",
+   "expiry": "2025-04-30",
+   "review_date": "2025-04-12"
+  },
+  "vehicle": {
+   "reg": "KX14 TLD",
+   "make": "Peugeot",
+   "model": "E7",
+   "first_reg": "2014-03-18",
+   "seats": 5,
+   "odometer_km": 62100
+  },
+  "inspection": {
+   "station": "TS07",
+   "date": "2025-04-05",
+   "result_code": "P",
+   "brake_efficiency_pct": 68,
+   "emissions": "pass",
+   "lighting": "pass"
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "reference": "INS5521",
+    "expires_on": "2025-11-30"
+   },
+   {
+    "type": "dbs",
+    "reference": "DB8810",
+    "expires_on": "2026-02-01"
+   },
+   {
+    "type": "mot_cert",
+    "reference": "MT3302",
+    "expires_on": "2025-10-14"
+   },
+   {
+    "type": "meter_cert",
+    "reference": "MC771",
+    "expires_on": "2026-01-20"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-04-20",
+     "result": "F",
+     "odometer_km": 60100
+    },
+    {
+     "date": "2024-07-02",
+     "result": "F",
+     "odometer_km": 61000
+    },
+    {
+     "date": "2024-10-15",
+     "result": "F",
+     "odometer_km": 61700
+    },
+    {
+     "date": "2025-01-10",
+     "result": "F",
+     "odometer_km": 62400
+    }
+   ],
+   "replacements": []
+  }
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "none needed",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 11
+ },
+ "factors_sampled": {
+  "worst_defect_found": "minor",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": true,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": true,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 11
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 151,
+ "deciding": {
+  "odometer_consistent": "Current 62100 km is lower than the latest history reading of 62400 km, with no replacements logged; a slight drop leaning false.",
+  "next_step": "Passing inspection, empty defects, brake test present and all documents in date support renewal; only the slight odometer difference adds doubt.",
+  "inspection_outcome": "The defects list is empty and result code is P, so no defects or advisories were recorded.",
+  "document_gaps": "All four documents are present with expiry dates well after the 2025-04-12 review date.",
+  "outstanding_severity": "No defect items exist, so nothing is outstanding."
+ },
+ "request": "rec-F411-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009234
+}

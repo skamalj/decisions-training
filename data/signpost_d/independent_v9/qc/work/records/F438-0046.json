@@ -1,0 +1,128 @@
+{
+ "id": "F438-0046",
+ "family": "F438",
+ "state": {
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "I50.0"
+   },
+   "documents_present": {
+    "discharge_summary": false,
+    "operation_note": true
+   },
+   "theatre_log": [
+    {
+     "proc": "W37.1",
+     "date": "2024-03-02",
+     "side": "L"
+    }
+   ]
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "I50.9"
+   },
+   "procedures": [
+    {
+     "code": "W37.1",
+     "date": "2024-03-03",
+     "side": "L"
+    },
+    {
+     "code": "X40.2",
+     "date": "2024-03-03"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "HN12A",
+   "hrg_regrouped": null,
+   "regroup_status": "blocked_missing_source",
+   "tariff_diff": 640,
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "date_or_side_differs",
+  "regroup_outcome": "not_regroupable",
+  "missing_source": "discharge_summary",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.16,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "date_or_side_differs",
+  "regroup_outcome": "not_regroupable",
+  "missing_source": "discharge_summary",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.16,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "amend_codes",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unsupported_billable_code = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 41,
+ "deciding": {
+  "primary_supported": "I50.9 vs documented I50.0: same three characters, different fourth; discharge summary missing, so support is only modest.",
+  "hrg_shift": "hrg_regrouped is null (blocked_missing_source), yet the tariff diff of 640 hints at a shift; both answers are defensible.",
+  "next_step": "Submission is still pending and the errors are correctable locally; no HRG change is shown, so amend_codes.",
+  "error_count": "Four errors: primary specificity, one secondary mismatch, procedure date differs, and X40.2 with no documentation entry.",
+  "error_severity": "X40.2 is billed with no theatre_log entry and a positive tariff diff (critical), but the primary mismatch could also be read as major."
+ },
+ "request": "rec-F438-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006864
+}

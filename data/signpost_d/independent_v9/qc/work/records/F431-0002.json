@@ -1,0 +1,129 @@
+{
+ "id": "F431-0002",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM7730",
+   "last_verified_date": "2019-06-10",
+   "seal_state": "intact",
+   "seal_checked_date": "2023-11-02"
+  },
+  "period_read": {
+   "read_date": "2024-04-01",
+   "reg_kwh": 5790,
+   "src_code": "AMR"
+  },
+  "history": [
+   {
+    "date": "2024-03-01",
+    "reg_kwh": 5000,
+    "src": "AMR",
+    "ly_kwh": 600
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_COMMS"
+   ],
+   "battery_pct": 22
+  },
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2024-03-12",
+   "hdd_current": 500,
+   "hdd_prior_year": 360,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "closed",
+     "date": "2022-09-05"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 0.95,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.39,
+  "diagnostic_error_count": 1,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "none",
+  "consumption_ratio": 0.57,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.39,
+  "diagnostic_error_count": 1,
+  "meter_works_order": true,
+  "consecutive_estimates": 5,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 45,
+ "deciding": {
+  "meter_fault": "Seal intact, only a lone E_COMMS code, old RECAL closed, and consumption in line with expected.",
+  "billable_actual": "AMR actual read, later than the previous one, consumption plausible; occupancy change and old recalibration give slight doubt.",
+  "next_step": "Read is in sequence and passes checks, so release.",
+  "staff_effort": "No open issues; under an hour.",
+  "consumption_deviation": "790 kWh against 600*500/360=833 expected, about 5% below; the heating-demand rise adds slight doubt."
+ },
+ "request": "rec-F431-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007098
+}

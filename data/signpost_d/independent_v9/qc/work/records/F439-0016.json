@@ -1,0 +1,115 @@
+{
+ "id": "F439-0016",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T1041",
+   "end_time": "11:20",
+   "conditions": "heavy rain"
+  },
+  "candidate": {
+   "attempt": 1,
+   "id_check": null
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "mirrors",
+     "driving": 3,
+     "serious": 0,
+     "dangerous": 0
+    }
+   ],
+   "driving_fault_total": 3
+  },
+  "outcome": {
+   "result": "fail",
+   "debrief": true,
+   "examiner_note": "Candidate coped adequately.",
+   "examiner_signoff_at": "11:35"
+  },
+  "review_trail": {
+   "countersigned_by": "SE4",
+   "edits": [
+    {
+     "at": "14:02",
+     "amendment_reason": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "fault_profile": "clear_pass",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "id_check_null",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": true,
+  "note_alignment": "vague",
+  "examiner_complaints_12m": 0,
+  "post_submission_edit": "edit_no_reason"
+ },
+ "factors_sampled": {
+  "fault_profile": "clear_pass",
+  "result_mismatch": true,
+  "tally_error": false,
+  "documentation_gap": "id_check_null",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": true,
+  "note_alignment": "vague",
+  "examiner_complaints_12m": 0,
+  "post_submission_edit": "edit_no_reason"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_complete": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold_query",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "issue_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "result_supported": "Original plan wanted true, so I set the result to fail on 3 driving faults. That contradicts a fail result. Wait: fail with 3 faults is a mismatch; the reviewer would doubt the result.",
+  "report_complete": "candidate.id_check is null, a missing mandatory field, but sign-off and debrief are present and countersigned, so completeness is arguable.",
+  "disposition": "One open point (null id_check and unexplained edit) needs examiner confirmation, so hold_query.",
+  "staff_effort": "Single confirmation from the examiner, under an hour, though the unexplained edit could add a little time.",
+  "issue_severity": "The missing ID check and the reasonless edit are paperwork issues, but the fail result on 3 faults sits near a discrepancy that could change the outcome."
+ },
+ "request": "rec-F439-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005369
+}

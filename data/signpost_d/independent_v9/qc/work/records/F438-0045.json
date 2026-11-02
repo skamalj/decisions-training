@@ -1,0 +1,161 @@
+{
+ "id": "F438-0045",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E5932",
+   "los": 5,
+   "specialty": "orthopaedics",
+   "method": "elective"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "M17.1"
+   },
+   "comorbidities": [
+    "I10"
+   ],
+   "theatre_log": [
+    {
+     "proc": "W40.1",
+     "date": "2024-02-14",
+     "side": "R"
+    },
+    {
+     "proc": "Y53.2",
+     "date": "2024-02-14",
+     "side": null
+    }
+   ],
+   "documents_present": {
+    "discharge_summary": true,
+    "operation_note": false,
+    "pathology_report": true
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "M17.0"
+   },
+   "secondary_dx": [
+    "I10"
+   ],
+   "procedures": [
+    {
+     "code": "W40.1",
+     "date": "2024-02-14",
+     "side": "R"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "HN12C",
+   "hrg_regrouped": "HN12B",
+   "tariff_submitted": 5210,
+   "tariff_regrouped": 5640,
+   "submitted_to_commissioner": true,
+   "submission_date": "2024-03-01"
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    {
+     "code_pair": [
+      "M17.0",
+      "M17.1"
+     ],
+     "rule": "LC-07"
+    }
+   ],
+   "queries": [
+    {
+     "target_code": "Y53.2",
+     "status": "closed",
+     "response": "contradicts"
+    }
+   ]
+  },
+  "coder_history": {
+   "prior_audits": 15,
+   "error_rate": 0.27,
+   "last_audit_result": "pass"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "documented_not_coded",
+  "regroup_outcome": "different_hrg",
+  "missing_source": "operation_note",
+  "clinician_query": "answered_contradicts",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.27,
+  "boundary_case": true,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "documented_not_coded",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "operation_note",
+  "clinician_query": "answered_contradicts",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.27,
+  "boundary_case": true,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "hrg_shift": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 133,
+ "deciding": {
+  "primary_supported": "Coded M17.0 differs from documented M17.1 in the fourth character; convention LC-07 covers the pair but the operation note is missing.",
+  "hrg_shift": "hrg_submitted HN12C differs from hrg_regrouped HN12B, with tariffs 5210 vs 5640.",
+  "next_step": "The M17 pair is covered by LC-07 and the closed query on Y53.2 contradicts it, so the uncoded theatre entry is not to be coded and the coding stands.",
+  "error_count": "The M17.0/M17.1 pair and the uncoded Y53.2 entry are each explained by LC-07 and the contradicting query, leaving zero or one error.",
+  "error_severity": "If anything is an error it is the M17 specificity or Y53.2 omission, neither of which changes the clinical meaning, so 0 or 1."
+ },
+ "request": "rec-F438-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009158
+}

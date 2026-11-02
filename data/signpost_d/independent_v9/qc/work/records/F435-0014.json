@@ -1,0 +1,144 @@
+{
+ "id": "F435-0014",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E-5120",
+   "zone_id": "BAL-N",
+   "doors_open": "2025-06-14T19:00",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 400,
+   "variation": {
+    "ref": "V-41",
+    "new_limit": 440,
+    "status": "approved",
+    "approved_on": "2025-06-10"
+   },
+   "stewards_required": 36,
+   "exit_routes": [
+    "X1",
+    "X2",
+    "X3",
+    "X4"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 440,
+   "issued": 475,
+   "scanned_in": 466
+  },
+  "ingress": {
+   "device_id": "C-12",
+   "device_status": "ok",
+   "raw_peak": 484,
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 30,
+   "signed_in": 27,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "X1",
+    "checked_at": "2025-06-14T18:20",
+    "status": "clear"
+   },
+   {
+    "route_id": "X2",
+    "checked_at": "2025-06-14T18:25",
+    "status": "clear"
+   },
+   {
+    "route_id": "X3",
+    "checked_at": "2025-06-14T18:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "X4",
+    "checked_at": "2025-06-14T19:00",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "balcony",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.1,
+  "counter_status": "ok",
+  "counter_inflation": 0.0,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 1.08,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.25,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "balcony",
+  "event_phase": "live",
+  "occupancy_ratio": 1.1,
+  "counter_status": "ok",
+  "counter_inflation": 0.0,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 1.08,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.23,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 4,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "balanced",
+   "target": "counter_fault",
+   "second": "limit_mismatch",
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 106,
+ "deciding": {
+  "verified_exceedance": "Counter ok, raw_peak 484 against effective limit 440 (variation approved 06-10, before doors), a clear overage; the base limit 400 is a possible competing reading.",
+  "disposition": "post_event with a counter-verified overage of 10% above the effective limit; refer to the licensing authority.",
+  "discrepancy_source": "Issued 475 exceeds zone_limit_used 440, which equals the effective limit; a reviewer might still weigh the base limit 400 or the counter.",
+  "steward_shortfall": "signed_in 27 of required 36 is exactly 25% short, on the level 2/3 boundary, with no relief.",
+  "unconfirmed_exits": "X4 was checked clear at 19:00, exactly at doors_open, so it is arguably in time; the other three routes are clear by 18:30."
+ },
+ "request": "rec-F435-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012699
+}

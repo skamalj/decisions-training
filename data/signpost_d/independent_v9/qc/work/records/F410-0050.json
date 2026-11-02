@@ -1,0 +1,150 @@
+{
+ "id": "F410-0050",
+ "family": "F410",
+ "state": {
+  "application": {
+   "term_start": "2025-09-01",
+   "term_end": "2026-08-31",
+   "pitch_req": {
+    "width_m": 3.92
+   },
+   "commodities": [
+    "leather goods"
+   ],
+   "docs_pending": []
+  },
+  "licence_current": {
+   "pitch": {
+    "width_m": 3.0
+   },
+   "commodities": [
+    "leather goods"
+   ],
+   "conditions": {
+    "min_attendance_pct": 70,
+    "max_width_m": 4.0
+   },
+   "variations": [
+    {
+     "type": "width",
+     "detail": "3.92m",
+     "approved": true,
+     "approved_on": "2025-07-10"
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-08-31",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": true,
+    "new_end": "2026-08-31"
+   },
+   "food_reg": null
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2025",
+     "amount_gbp": 380
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2025-08-14",
+     "amount_gbp": 253.76,
+     "method": "card"
+    }
+   ],
+   "payment_plan": null
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 48,
+   "absence_notices": [],
+   "complaints": [],
+   "enforcement_notices": 0
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": true,
+  "commodity_change": "none",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.92,
+  "variation_approved": true,
+  "fee_arrears_gbp": 126.24,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.96,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": true,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "not_registered",
+  "stall_size_delta_m": 0.92,
+  "variation_approved": false,
+  "fee_arrears_gbp": 126.24,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.96,
+  "absences_notified": false,
+  "complaint_profile": "upheld_open_safety",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "grant",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "leaning",
+   "target": "none_needed",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "pli_term_covered": "pli.end equals term_end 2026-08-31 and indemnity meets the required sum, backed by broker_conf new_end; cover ends exactly on the last day.",
+  "renewal_disposition": "docs_pending is empty, there are no complaints or enforcement notices, attendance is 48/50 and the width is approved; only a small balance of 126.24 is unpaid.",
+  "inspection_level": "Width increase is covered by an approved variation dated 2025-07-10, commodities unchanged and non-food with no food registration needed.",
+  "reversal_time": "A full-year grant with no recorded means of early withdrawal is hard to undo; a revocation route within months is possible but uncertain.",
+  "discrepancy_count": "Only one open item: fees_due 380 against ledger 253.76 leaves 126.24 with no payment plan; the width difference is approved."
+ },
+ "request": "rec-F410-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009247
+}

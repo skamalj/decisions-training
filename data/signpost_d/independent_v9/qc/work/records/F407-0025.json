@@ -1,0 +1,130 @@
+{
+ "id": "F407-0025",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "P-5519",
+   "received_at": "2025-05-12T07:40",
+   "channel": "own_inspector",
+   "photo_ref": "IMG-3308",
+   "linked_reports": [
+    "x",
+    "y",
+    "z"
+   ],
+   "claim_ref": null,
+   "note": "depth est. 40mm from kerbside"
+  },
+  "location": {
+   "road_class": "main_distributor",
+   "intervention_depth_mm": 40,
+   "speed_limit": 40
+  },
+  "inspection": null,
+  "works_history": [
+   {
+    "job": "J-205",
+    "completed": "2025-01-14",
+    "offset_m": 22,
+    "guarantee_end": "2026-01-14"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "id": "S-31",
+     "start": "2025-09-15",
+     "extent_m": [
+      0,
+      200
+     ]
+    }
+   ]
+  },
+  "current_order": {
+   "id": "WO-1188",
+   "raised": "2025-05-12",
+   "status": "raised",
+   "completed_items": 0,
+   "total_items": 4
+  }
+ },
+ "factors": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "at_threshold_estimated",
+  "inspection_state": "not_done",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 3,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": false,
+  "order_status": "raised",
+  "defect_width_mm": 1261.08,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "not_done",
+  "prior_repair_match": "none",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 3,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": false,
+  "order_status": "raised",
+  "defect_width_mm": 1261.08,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "order_repair",
+   "second": "escalate_engineer",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 69,
+ "deciding": {
+  "meets_threshold": "inspection is null; only the report note gives an estimated depth of 40 mm, equal to the threshold of 40, so it is an unmeasured estimate.",
+  "repeat_failure": "J-205 completed 2025-01-14 at offset 22 m, in guarantee to 2026-01-14; the defect offset is not given, so same-spot match is likely but not exact.",
+  "next_step": "WO-1188 is already raised with 0 of 4 items done, so confirming the order is plausible, but the guarantee-period repeat failure also supports engineer referral.",
+  "staff_effort": "A 4-item order, guarantee recovery on J-205 and measurement could take 2 to 5 days or more.",
+  "response_timescale": "Estimated depth at threshold on a 40 mph main distributor with no temporary measure and 3 linked reports; priority 5 days versus 24-hour make safe is split, with scheme S-31 too far off to help."
+ },
+ "request": "rec-F407-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008718
+}

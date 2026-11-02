@@ -1,0 +1,140 @@
+{
+ "id": "F423-0014",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-58213",
+   "product": "catalogue",
+   "stock_spec": "GL-115",
+   "run_qty": 30000,
+   "overs_pct": 2.72,
+   "due_date": "2025-04-18",
+   "customer_tier": "standard",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "CP-6102",
+   "ok_sheet_no": 21,
+   "signed_at": "2025-04-09T07:50",
+   "customer_present": false,
+   "concession": {
+    "accepted_max_de": 3.3
+   }
+  },
+  "colour_readings": {
+   "instrument": "SP-4",
+   "calibrated_on": "2025-03-12",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.4
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.3
+    },
+    {
+     "ink": "K",
+     "delta_e": 1.9
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "pair": "K/Y",
+     "offset_mm": 0.34,
+     "in_image": false
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P2",
+   "stock_loaded": "GL-115",
+   "first_production_at": "2025-04-09T08:20",
+   "sheets_production": 1721,
+   "sheets_makeready": 260,
+   "stoppages": [
+    "reel splice"
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_before_production",
+  "sheets_before_check": 1721,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.72,
+  "register_offset_mm": 0.34,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 28,
+  "customer_tier": "standard",
+  "prior_stoppages": 1
+ },
+ "factors_sampled": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "section_null",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 1721,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.72,
+  "register_offset_mm": 0.34,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 28,
+  "customer_tier": "standard",
+  "prior_stoppages": 1
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "release_run",
+   "second": "hold_for_signoff",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 112,
+ "deciding": {
+  "colour_in_tolerance": "M reads 3.3, above spec_max_de 3.0 and exactly at concession accepted_max_de 3.3; the other patches are lower. The verdict depends on whether the concession applies.",
+  "run_before_signoff": "signed_at 07:50 precedes first_production_at 08:20 on the same day, so no production was logged before the signature.",
+  "next_step": "A signature is on file and register is trim-only (in_image false), which supports release. The M patch sitting right at the concession edge keeps a hold arguable.",
+  "staff_effort": "If M is treated as failing, the 1721 sheets already printed need a reprint decision and customer contact that could run to over a week. The time is not stated.",
+  "scrap_exposure": "1721 production sheets is 5.7% of 30000, above the overs of about 816 sheets and below 10%. These sheets count as suspect only if the M patch is over limit, so the level splits between 1 and 2."
+ },
+ "request": "rec-F423-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010077
+}

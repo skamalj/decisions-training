@@ -1,0 +1,322 @@
+{
+ "id": "F430",
+ "domain": "electricity substation inspection rounds",
+ "role": "Area asset condition engineer reviewing submitted substation inspection round reports",
+ "setting": "A regional distribution network operator's asset team receives one completed inspection round report per visit from field inspectors covering primary and secondary substations. Each report lists the site's asset register with operating limits, the round schedule, the readings taken (transformer oil temperature and level, SF6 gas pressure, battery float voltage, breaker operation counts), any defects the inspector logged with short notes, recent history (previous round readings, open work orders, permits to work, load events) and the network supply arrangement. The engineer reconciles these sections, judges how abnormal and how consequential the findings are, and decides what follow-up the report needs. No field states severity or disposition; these must be inferred.",
+ "questions": {
+  "defect_corroborated": {
+   "type": "noul",
+   "instructions": "The worst logged defect is corroborated by the recorded readings.",
+   "criteria": null
+  },
+  "benign_explanation": {
+   "type": "noul",
+   "instructions": "The worst abnormal reading has a documented non-fault explanation.",
+   "criteria": {
+    "true": "Permit, known gauge fault or load event explains it.",
+    "false": "No abnormal reading, or nothing documented accounts for it."
+   }
+  },
+  "follow_up": {
+   "type": "choice",
+   "instructions": "What follow-up should this inspection round report receive next?",
+   "criteria": {
+    "file_closed": "Accept report as filed; no further action is required.",
+    "recheck_next_round": "Accept, but flag one asset for targeted recheck next round.",
+    "hold_return": "Return to inspector for one missing reading or photo first.",
+    "work_order": "Raise planned maintenance work order within normal priority window.",
+    "urgent_attendance": "Dispatch crew or arrange switching within twenty-four hours."
+   }
+  },
+  "limit_deviation": {
+   "type": "score",
+   "instructions": "How far does the worst reading stray beyond its limits?",
+   "criteria": [
+    "All readings within their normal operating bands",
+    "Worst reading outside normal band, below alarm limit",
+    "Worst reading at or beyond alarm, below trip limit",
+    "Worst reading at or beyond its trip limit"
+   ]
+  },
+  "supply_exposure": {
+   "type": "score",
+   "instructions": "If the worst defective asset failed, how many customers lose supply?",
+   "criteria": [
+    "None: no open defect, or in-service partner carries load",
+    "Few: fewer than 100 customers would lose supply",
+    "Some: 100 to 999 customers would lose supply",
+    "Many: 1,000 to 9,999 customers would lose supply",
+    "Widespread: 10,000 or more customers would lose supply"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "worst_reading_band",
+   "description": "Band of the most abnormal reading relative to the register limits for that asset and parameter: within normal band, outside normal band only, at or beyond alarm, at or beyond trip.",
+   "kind": "categorical",
+   "values": [
+    "normal",
+    "outside_normal",
+    "alarm",
+    "trip"
+   ],
+   "weights": [
+    0.28,
+    0.32,
+    0.28,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "limit_unit_mismatch",
+   "description": "The worst reading is recorded in a different unit from the register limit (kPa vs bar, mV per cell vs V per string), so a raw comparison misleads until converted.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "benign_cause_present",
+   "description": "History contains a mitigating item that could explain an abnormal reading: active permit to work, gauge already logged as faulty, recorded load transfer or heatwave, or recent oil top-up.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "benign_cause_type",
+   "description": "Kind of mitigating item when present.",
+   "kind": "categorical",
+   "values": [
+    "permit_to_work",
+    "gauge_known_faulty",
+    "load_transfer",
+    "recent_top_up"
+   ],
+   "weights": [
+    0.25,
+    0.3,
+    0.3,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "benign_cause_covers",
+   "description": "Whether the mitigating item actually matches the abnormal asset and visit date; when false it names a different asset ID or its validity window ended before the round date, acting as a decoy.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.6,
+   "skills": [
+    "S1",
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "defect_claim",
+   "description": "Relationship between the inspector's worst logged defect and the readings: no defect logged, defect matches an abnormal reading, defect overstates a reading that is only mildly off, or defect has no supporting reading at all.",
+   "kind": "categorical",
+   "values": [
+    "none_logged",
+    "matches_reading",
+    "overstated",
+    "unsupported"
+   ],
+   "weights": [
+    0.2,
+    0.4,
+    0.2,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "trend_vs_last_round",
+   "description": "Direction of the worst parameter compared with the previous round's reading for the same asset.",
+   "kind": "categorical",
+   "values": [
+    "stable",
+    "worsening",
+    "improving",
+    "no_previous"
+   ],
+   "weights": [
+    0.35,
+    0.3,
+    0.15,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "scheduled_assets_missed",
+   "description": "Number of assets in the round schedule with no reading entry from this visit.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 2,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "evidence_missing",
+   "description": "A defect references a photo or a confirming reading that is absent (photo_ref null, or the parameter named in the note was not recorded).",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S4",
+    "S5"
+   ]
+  },
+  {
+   "name": "redundancy_state",
+   "description": "State of the worst asset's redundant partner: in service, out of service on the outage plan, or no partner exists.",
+   "kind": "categorical",
+   "values": [
+    "partner_in_service",
+    "partner_out_of_service",
+    "no_partner"
+   ],
+   "weights": [
+    0.45,
+    0.25,
+    0.3
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S3"
+   ]
+  },
+  {
+   "name": "customers_fed",
+   "description": "Customers supplied through the worst defective asset, from the register.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 20,
+   "max": 25000,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "trivial_discrepancies",
+   "description": "Count of harmless cross-section mismatches (asset ID suffix spelt differently, round date vs reading timestamp off by a day across midnight, inspector initials vs full name) that should not change any answer.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "near_boundary",
+   "description": "Worst reading sits within 2% of a band limit, or customers_fed sits within 5% of a supply_exposure threshold, leaving judges split.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S6"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "site",
+   "description": "Site ID, name, voltage, and asset register with units, normal band, alarm and trip limits, customers fed and partner ID."
+  },
+  {
+   "name": "round",
+   "description": "Round ID, visit date, inspector, start and finish times, scheduled asset IDs, and a free-text inspector_note."
+  },
+  {
+   "name": "readings",
+   "description": "List of readings: asset_id, param, value, unit, timestamp."
+  },
+  {
+   "name": "defects",
+   "description": "List of logged defects: defect_id, asset_id, category, photo_ref, and a one-sentence free-text note."
+  },
+  {
+   "name": "history",
+   "description": "Previous round readings, open work orders with short descriptions, permits to work with validity windows, and load events."
+  },
+  {
+   "name": "network",
+   "description": "Outage plan entries, partner asset statuses and supply arrangement for the site."
+  }
+ ],
+ "rendering_notes": "worst_reading_band appears only as readings[].value against site.assets[] normal_band, alarm_limit and trip_limit; never print a band label. limit_unit_mismatch: readings[].unit differs from site.assets[].unit (e.g. 5.6 bar reading against a 520 kPa alarm), so the reviewer must convert. benign_cause_present/type: history.permits[] with a valid window, history.open_work_orders[].desc such as 'SF6 gauge on CB2 reading low, replacement ordered', history.load_events[] recording a transfer or high ambient temperature, or a top-up entry. benign_cause_covers=false: the item cites a neighbouring asset ID (T1 vs T2) or a permit window ending before round.date; it must look plausible. defect_claim: defects[].note wording vs readings (an 'oil weeping heavily' note with oil level in band = overstated; a note naming a parameter never recorded = unsupported); none_logged gives an empty defects list. trend_vs_last_round: compare readings with history.previous_round; no_previous gives history.previous_round null. scheduled_assets_missed: round.scheduled_assets contains IDs with no readings entry. evidence_missing: defects[].photo_ref null or a confirming parameter absent. redundancy_state: site.assets[].partner_id plus network.partner_status and network.outage_plan dates covering round.date; a partner listed in service in site but on outage in network is a deliberate cross-section conflict where network wins. customers_fed sits in site.assets[]; supply_exposure is zero when the partner is in service. trivial_discrepancies are scattered decoys (ID casing, midnight timestamps, initials) and must not drive answers. round.inspector_note may contain decoy reassurance ('all fine on site') or alarm ('smell of burning near panel') unsupported elsewhere. Rough answer logic: hold_return when evidence_missing or a scheduled asset missed and the outcome depends on it; recheck_next_round for outside_normal or covered alarm readings; work_order for uncovered alarm readings that are stable; urgent_attendance for trip, or uncovered alarm worsening with no in-service partner. Never include fields such as severity, priority, risk, recommended_action, explained or customers_at_risk.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": null,
+ "aggravating_factor": null,
+ "design_cost": 0.166664
+}

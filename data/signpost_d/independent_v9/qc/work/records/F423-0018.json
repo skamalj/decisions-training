@@ -1,0 +1,154 @@
+{
+ "id": "F423-0018",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-6038",
+   "product": "catalogue",
+   "stock_spec": "GL90",
+   "run_qty": 45000,
+   "overs_pct": 4.9,
+   "due_date": "2024-06-10",
+   "customer_tier": "standard",
+   "spec_max_de": 3.5
+  },
+  "proof_signoff": {
+   "proof_id": "P-771",
+   "ok_sheet_no": 2,
+   "signed_at": "2024-06-03T06:40",
+   "customer_present": true,
+   "concession": {
+    "accepted_max_de": 4.0
+   }
+  },
+  "colour_readings": {
+   "instrument": "SP-3",
+   "calibrated_on": "2024-02-05",
+   "checked_on": "2024-06-03",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.4
+    },
+    {
+     "ink": "M",
+     "delta_e": null
+    },
+    {
+     "ink": "Y",
+     "delta_e": 2.0
+    },
+    {
+     "ink": "K",
+     "delta_e": 3.1
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "unit_pair": "1-2",
+     "offset_mm": 0.17,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press_id": "H1",
+   "stock_loaded": "GL90",
+   "first_production_at": "2024-06-03T07:25",
+   "sheets_production": 2209,
+   "sheets_makeready": 350,
+   "stoppages": [
+    {
+     "min": 7
+    },
+    {
+     "min": 5
+    },
+    {
+     "min": 12
+    },
+    {
+     "min": 4
+    }
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": true,
+  "readings_completeness": "some_patches_null",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2209,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 4.9,
+  "register_offset_mm": 0.17,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 119,
+  "customer_tier": "standard",
+  "prior_stoppages": 4
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": true,
+  "readings_completeness": "some_patches_null",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2209,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 4.66,
+  "register_offset_mm": 0.17,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 119,
+  "customer_tier": "standard",
+  "prior_stoppages": 4
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_run",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 169,
+ "deciding": {
+  "colour_in_tolerance": "Magenta patch delta_e is null, so not every patch is measured; the statement is unsupported.",
+  "run_before_signoff": "signed_at 06:40 precedes first_production_at 07:25 on the same day; production followed signature.",
+  "next_step": "Release is weakly supported by the signature in order and the concession, but the null M reading and in-image 0.17 mm offset argue for a re-pull instead.",
+  "staff_effort": "Remeasuring M, correcting register and dealing with 2209 produced sheets likely takes one to five days, with some doubt either way.",
+  "scrap_exposure": "Suspect sheets 2209 (in-image misregister over 0.15 mm) against overs 4.9% of 45000 = 2205: just over by 4 sheets, balanced between within and exceeding overs."
+ },
+ "request": "rec-F423-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011676
+}

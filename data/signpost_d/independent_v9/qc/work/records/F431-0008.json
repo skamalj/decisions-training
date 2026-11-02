@@ -1,0 +1,144 @@
+{
+ "id": "F431-0008",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "sn": "HM9910",
+   "seal_state": "broken",
+   "seal_checked_date": "2024-02-10"
+  },
+  "period_read": {
+   "read_date": "2024-03-31",
+   "reg_kwh": 6181,
+   "src_code": "AMR",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "d": "2023-10-31",
+    "kwh": 4200,
+    "src": "EST"
+   },
+   {
+    "d": "2023-11-30",
+    "kwh": 4400,
+    "src": "EST"
+   },
+   {
+    "d": "2023-12-31",
+    "kwh": 4600,
+    "src": "EST"
+   },
+   {
+    "d": "2024-01-31",
+    "kwh": 4800,
+    "src": "EST"
+   },
+   {
+    "d": "2024-02-29",
+    "kwh": 5000,
+    "src": "EST",
+    "same_period_ly_kwh": 600
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW"
+   ],
+   "flow_temp_c": 66,
+   "return_temp_c": 42
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 254,
+   "hdd_prior_year": 200,
+   "works_orders": [
+    {
+     "type": "METER_EXCH",
+     "status": "closed",
+     "date": "2024-02-10"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.55,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.27,
+  "diagnostic_error_count": 1,
+  "meter_works_order": true,
+  "consecutive_estimates": 5,
+  "delta_t_implausible": false,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "register_rollback",
+  "missing_section": "previous_read_null",
+  "consumption_ratio": 1.55,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.27,
+  "diagnostic_error_count": 1,
+  "meter_works_order": true,
+  "consecutive_estimates": 5,
+  "delta_t_implausible": false,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "meter_fault": "Broken seal and an E_FLOW code point to a fault, but the seal date matches the closed METER_EXCH order of 2024-02-10 and delta-T is normal.",
+  "billable_actual": "AMR read is in sequence and the exchange explains the seal, but photo_ref is null and consumption is well above expectation.",
+  "next_step": "Seal break is matched by the closed exchange order, delta-T is plausible and the read is in sequence, so the reading can be released.",
+  "staff_effort": "Five trailing estimates and the post-exchange history will need a long true-up, probably more than five days, though that is uncertain.",
+  "consumption_deviation": "Period 1181 kWh vs expected 600*254/200=762 gives a ratio of about 1.55, a deviation of about 55%."
+ },
+ "request": "rec-F431-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009154
+}

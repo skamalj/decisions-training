@@ -1,0 +1,161 @@
+{
+ "id": "F410-0024",
+ "family": "F410",
+ "state": {
+  "application": {
+   "app_ref": "A-2908",
+   "licence_no": "L-455",
+   "holder_ref": "H-5520",
+   "holder_name": "R. Okafor",
+   "term_start": "2025-07-01",
+   "term_end": "2026-06-30",
+   "pitch_req": {
+    "market": "Harbour",
+    "width_m": 3.46,
+    "depth_m": 2.5
+   },
+   "commodities": [
+    "bread",
+    "pies"
+   ],
+   "docs_pending": []
+  },
+  "licence_current": {
+   "licence_no": "L-455",
+   "holder_ref": "H-5520",
+   "holder_name": "R. Okafor",
+   "expires": "2025-06-30",
+   "pitch": {
+    "market": "Harbour",
+    "pitch_no": 21,
+    "width_m": 3.0,
+    "depth_m": 2.5
+   },
+   "commodities": [
+    "bread"
+   ],
+   "conditions": {
+    "min_attendance_pct": 75,
+    "max_width_m": 3.5
+   },
+   "variations": []
+  },
+  "compliance_docs": {
+   "pli": {
+    "insurer_ref": "INS-88213",
+    "start": "2025-06-15",
+    "end": "2026-06-30",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": true,
+    "new_end": "2026-06-30"
+   },
+   "food_reg": {
+    "registered": true,
+    "fhrs_rating": 5,
+    "inspected_on": "2025-02-18"
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2024-25",
+     "amount_gbp": 698.94
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2024-07-03",
+     "amount_gbp": 300,
+     "method": "bank"
+    }
+   ],
+   "payment_plan": null
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 45,
+   "absence_notices": [],
+   "complaints": [],
+   "enforcement_notices": 0
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": true,
+  "commodity_change": "food_added",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.46,
+  "variation_approved": false,
+  "fee_arrears_gbp": 398.94,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.9,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": true,
+  "commodity_change": "food_added",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.46,
+  "variation_approved": false,
+  "fee_arrears_gbp": 398.94,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.9,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "leaning",
+   "target": "defer",
+   "second": null,
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "contested",
+   "target": "desk_check",
+   "second": "scheduled_visit",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 96,
+ "deciding": {
+  "pli_term_covered": "pli.end and broker new_end both reach term_end 2026-06-30 at the required 5,000,000; the cover is stated, but only partly evidenced since the insurer_ref is new.",
+  "renewal_disposition": "Unpaid fees of 398.94 with no plan point to deferring until the balance is settled; the rest of the record is sound.",
+  "inspection_level": "Held in balance: the 0.46m width increase and added pies are unapproved, favouring a visit, but the food registration is current at rating 5 and the width is within max_width_m 3.5, favouring a desk check.",
+  "reversal_time": "Held in balance: a deferral can be lifted once the balance is paid, but a renewed licence runs a year.",
+  "discrepancy_count": "Held in balance: the width and commodity addition are unapproved changes, but the width stays within the licence max and the added pies are covered by food registration, so a reviewer may count zero or one."
+ },
+ "request": "rec-F410-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007446
+}

@@ -1,0 +1,123 @@
+{
+ "id": "F411-0018",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "T230",
+   "type": "hackney",
+   "review_date": "2025-02-12"
+  },
+  "vehicle": {
+   "first_reg": "2023-03-01",
+   "odometer_km": 52050
+  },
+  "inspection": {
+   "result_code": "P",
+   "brake_efficiency_pct": 64
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-12-01"
+   },
+   {
+    "type": "badge",
+    "expires_on": "2025-02-12"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-02-10",
+     "result": "P",
+     "odometer_km": 52300
+    }
+   ],
+   "replacements": [
+    {
+     "type": "instrument_cluster",
+     "date": "2025-02-10",
+     "old_km": 52300,
+     "new_km": 51500
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "not_applicable",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": true,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 0,
+  "vehicle_age_years": 2
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": true,
+  "prior_failures_12m": 0,
+  "vehicle_age_years": 2
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "odometer_consistent": "250 km drop below history 52300; cluster replacement documented, but new_km 51500 implies 550 km driven in two days to reach 52050, so it only partly fits.",
+  "next_step": "No defects, brake figure present; the badge expiring on the review date and a small explained drop are not enough to block renewal.",
+  "inspection_outcome": "defects list empty and result P.",
+  "document_gaps": "Badge expires_on equals review_date 2025-02-12 with no cover note; whether that counts as expired is open, otherwise complete.",
+  "outstanding_severity": "No defects recorded, so nothing is outstanding."
+ },
+ "request": "rec-F411-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009501
+}

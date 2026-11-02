@@ -1,0 +1,164 @@
+{
+ "id": "F422-0038",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT3",
+   "site": "S58",
+   "delivered_at": "2024-06-03T09:00",
+   "received_at": "2024-07-09T10:00",
+   "review_date": "2024-07-19",
+   "reason": "OVERSTOCK",
+   "lines": [
+    {
+     "gtin": "G3",
+     "qty_claimed": 60
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "D27",
+   "lines": [
+    {
+     "gtin": "G3",
+     "batch": "M4",
+     "expiry": "2025-09-30",
+     "qty_dispatched": 60
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G3",
+     "batch": "M4",
+     "expiry": "2025-09-30",
+     "qty_counted": 51,
+     "packs_damaged": 0,
+     "seals_intact": 51
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "active"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": null,
+   "logger_start": null,
+   "logger_end": null,
+   "min_c": null,
+   "max_c": null,
+   "minutes_out_of_range": null,
+   "stability_ref": {
+    "max_hours": 4,
+    "max_c": 30
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-04-30",
+   "declaration_received": true
+  },
+  "quarantine_control": {
+   "location": "Q2",
+   "hold_limit_days": 38,
+   "extension": {
+    "approved": false,
+    "new_limit_date": null
+   },
+   "max_days_out_of_control": 45,
+   "min_shelf_life_months": 12
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "absent",
+  "excursion_minutes": 0,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 9,
+  "damaged_pack_fraction": 0.0,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 36,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 28,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 14
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "absent",
+  "excursion_minutes": 287,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 9,
+  "damaged_pack_fraction": 0.32,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 36,
+  "customer_audit_current": true,
+  "quarantine_days_remaining": 8,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 14
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_stock",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "disposition_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 73,
+ "deciding": {
+  "storage_maintained": "No logger was used, but the stock is ambient. The audit is valid to 2025-04 and the storage declaration is received, so conditions are probably kept without being measured.",
+  "batch_traceable": "Counted batch M4 and its expiry match the linked dispatch D27. Only 51 of 60 packs came back, and nothing counted lies outside the dispatch, so true is moderately favoured.",
+  "next_step": "All 51 packs are intact, with an active UID scan, an exact batch match, 14 months of shelf life against the 12-month minimum, a valid audit and a declaration. Nothing is missing, so release.",
+  "resaleable_share": "No damage, shelf life above the minimum and an active UID scan all point to the packs being fit. The case for level 0 is weak, resting only on the unlogged storage.",
+  "disposition_urgency": "Received 07-09 plus a 38-day hold gives 08-16, which is 28 days after the 07-19 review. That is more than 20 days, so routine."
+ },
+ "request": "rec-F422-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014519
+}

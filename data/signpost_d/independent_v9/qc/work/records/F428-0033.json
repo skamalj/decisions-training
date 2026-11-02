@@ -1,0 +1,149 @@
+{
+ "id": "F428-0033",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "MG-208",
+   "gate_type": "mitre",
+   "rated_closure_s": 240,
+   "seal_type": "J_bulb",
+   "clear_width": 5.2,
+   "clear_width_unit": "m"
+  },
+  "inspection": {
+   "asset_id": "MG-298",
+   "insp_date": "2024-10-02",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2024-10-02",
+    "closure_s": 187,
+    "leakage_l_min": 38,
+    "leakage_limit_l_min": 20,
+    "result": "fail"
+   }
+  },
+  "defects": [
+   {
+    "code": "S1",
+    "component": "seal",
+    "grade": 3,
+    "length_mm": 900,
+    "status": "open",
+    "first_seen": "2024-07-15"
+   },
+   {
+    "code": "H1",
+    "component": "hinge",
+    "grade": 3,
+    "status": "open",
+    "first_seen": "2024-08-01"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "WO-77",
+     "component": "hinge",
+     "defect_code": "H1",
+     "grade_raised": 4,
+     "status": "scheduled",
+     "raised": "2024-08-05",
+     "completed": null,
+     "retest_insp_id": null,
+     "rated_closure_s": 300,
+     "clear_width_mm": 5150
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2024-11-18",
+    "peak_level_mAOD": 2.9,
+    "sill_level_mAOD": 2.4
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.78,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "seal and drive_actuation tied",
+  "mismatch_count": 3,
+  "mismatch_location": "asset_id, work order rated closure, work order grade",
+  "test_status": "failed",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 47,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.78,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 0,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "failed",
+  "repair_progress": "completed_tested",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 47,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "raise_repair",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "balanced",
+   "target": "seal",
+   "second": "drive_actuation",
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 93,
+ "deciding": {
+  "closure_test_valid": "Result is fail: leakage 38 l/min against a limit of 20.",
+  "next_step": "The seal leak defect S1 has no work order, and the test failed on leakage, so a repair order with interim restrictions is needed; WO-77 covers only the hinge.",
+  "defect_class": "S1 seal and H1 hinge are both open at grade 3; the failed leakage test points to the seal, while the hinge is the one with a work order raised at grade 4.",
+  "section_discrepancies": "Inspection asset_id MG-298 differs from register MG-208, and WO-77 rated_closure_s 300 differs from 240. WO grade_raised 4 differs from defect grade 3. A fourth, the width of 5150 mm against 5.2 m, is a borderline rounding case.",
+  "flood_risk": "Closure_s 187 is within the rated 240, and the worst defects are grade 3. The leakage failure and a second grade 3 defect could argue for moderate."
+ },
+ "request": "rec-F428-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011581
+}

@@ -1,0 +1,157 @@
+{
+ "id": "F404-0050",
+ "family": "F404",
+ "state": {
+  "session": {
+   "age_band": "two_year",
+   "ratio_rule": "1:4",
+   "registered_places": 24
+  },
+  "children": {
+   "booked": 16,
+   "slots": [
+    {
+     "t": "09:00",
+     "signed_in": 16
+    },
+    {
+     "t": "09:30",
+     "signed_in": 19
+    }
+   ]
+  },
+  "rota": [
+   {
+    "staff_id": "S01",
+    "counts_in_ratio": true
+   },
+   {
+    "staff_id": "S02",
+    "counts_in_ratio": true
+   },
+   {
+    "staff_id": "S03",
+    "counts_in_ratio": true
+   },
+   {
+    "staff_id": "S04",
+    "counts_in_ratio": true
+   },
+   {
+    "staff_id": "S06",
+    "counts_in_ratio": true
+   }
+  ],
+  "staff_signin": [
+   {
+    "staff_id": "S-01",
+    "time_in": "08:00",
+    "check_status": "ok"
+   },
+   {
+    "staff_id": "S02",
+    "time_in": "08:00",
+    "check_status": "ok"
+   },
+   {
+    "staff_id": "S03",
+    "time_in": "08:02",
+    "check_status": "ok"
+   },
+   {
+    "staff_id": "S04",
+    "time_in": "09:08",
+    "check_status": "ok"
+   },
+   {
+    "staff_id": "S06",
+    "time_in": "08:00",
+    "check_status": "pending"
+   },
+   {
+    "staff_id": "S09",
+    "time_in": "08:30",
+    "check_status": "ok"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 4
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 19,
+  "staff_signin_variance": "late_arrival",
+  "attendance_overrun": 3,
+  "shortfall_minutes": 0,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 19,
+  "staff_signin_variance": "late_arrival",
+  "attendance_overrun": 3,
+  "shortfall_minutes": 72,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "partial_day",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "file_no_action",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "balanced",
+   "target": "none_found",
+   "second": "paperwork_only",
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 77,
+ "deciding": {
+  "below_ratio": "19 children need 5 staff; S01, S02, S03, S04, S09 are eligible by 09:30, but the rota counted S06 who is pending, so a reader could doubt it.",
+  "disposition": "Five eligible staff present at the 19-child slot; ratio met, so file with no action despite prior breaches.",
+  "primary_cause": "Rota counts pending S06 and S09 is unrostered, so the sections disagree (paperwork_only), yet ratio is met, so none_found is nearly as plausible.",
+  "shortfall_duration": "S04 arrives 09:08 when only 16 children need 4 staff; any gap is under 15 minutes, if any.",
+  "breach_severity": "No child beyond cover at 09:30 with five eligible staff; the planned level 2 could not be supported alongside a met ratio."
+ },
+ "request": "rec-F404-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008014
+}

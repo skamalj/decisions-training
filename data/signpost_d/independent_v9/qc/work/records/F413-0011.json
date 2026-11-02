@@ -1,0 +1,172 @@
+{
+ "id": "F413-0011",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "id": "S-4410",
+   "tier": "office",
+   "stations": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8"
+   ],
+   "zones": [
+    {
+     "z": "kitchenette",
+     "banned_products": [
+      "BRO-2"
+     ]
+    },
+    {
+     "z": "open_plan",
+     "banned_products": []
+    }
+   ]
+  },
+  "visit": {
+   "id": "V-8821",
+   "type": "routine",
+   "tech": "T-17",
+   "licence_expiry": "2024-05-31",
+   "start": "2024-06-12T09:00",
+   "end": "2024-06-12T10:20",
+   "client_signoff": null
+  },
+  "treatments": [
+   {
+    "product": "BRO-2",
+    "ai": "brodifacoum",
+    "zone": "kitchenette",
+    "area_m2": 100,
+    "qty": 545,
+    "unit": "g",
+    "label_max_per_m2": 5
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "A6",
+    "zone": "open_plan",
+    "activity": true,
+    "bait_taken_pct": 30
+   },
+   {
+    "id": "A2",
+    "zone": "open_plan",
+    "activity": true,
+    "bait_taken_pct": 10
+   },
+   {
+    "id": "A4",
+    "zone": "open_plan",
+    "activity": false
+   },
+   {
+    "id": "A8",
+    "zone": "open_plan",
+    "activity": false
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product": "BRO-2",
+    "qty": 800,
+    "unit": "g",
+    "batch": "B77"
+   },
+   {
+    "movement": "return",
+    "product": "BRO-2",
+    "qty": 250,
+    "unit": "g"
+   }
+  ],
+  "follow_up": {
+   "prev_visit": "V-8790",
+   "prev_active_stations": 1,
+   "actions": []
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": true,
+  "station_count_gap": 4,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": true,
+  "dose_overage_pct": 9.03,
+  "licence_valid_on_visit": false,
+  "restricted_product_used": true,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "office"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": true,
+  "station_count_gap": 4,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": true,
+  "dose_overage_pct": 9.03,
+  "licence_valid_on_visit": false,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "office"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "book_revisit",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 131,
+ "deciding": {
+  "usage_reconciled": "Net stock is 550 g (800 withdrawn minus 250 returned) against 545 g applied. The 5 g gap could be rounding or a real shortfall, so both readings are defensible.",
+  "activity_increased": "Active stations are 2 against 1 previously, a rise of one. Only 4 of 8 stations were checked, so the comparison is not like for like.",
+  "next_step": "A banned product was applied, the licence is expired and the client sign-off is null. The treatment needs correcting by a revisit, though a reviewer could also consider escalation.",
+  "breach_severity": "BRO-2 was applied in the kitchenette, where it is listed under banned_products.",
+  "parties_needed": "The technician, the technical manager and the client sign-off are needed, and possibly a licensed replacement technician. That puts it between two and three teams."
+ },
+ "request": "rec-F413-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009791
+}

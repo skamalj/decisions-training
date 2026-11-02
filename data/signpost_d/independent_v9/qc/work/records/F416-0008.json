@@ -1,0 +1,135 @@
+{
+ "id": "F416-0008",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "S03",
+   "date": "2025-07-09",
+   "signoff": "G21 18:02"
+  },
+  "roster": [
+   {
+    "id": "G21",
+    "on": "10:00",
+    "off": "18:00",
+    "qual": "2025-07-09",
+    "home": "S03"
+   },
+   {
+    "id": "G33",
+    "on": "10:00",
+    "off": "18:00",
+    "qual": "2026-02-02",
+    "home": "S05"
+   }
+  ],
+  "incidents": [
+   {
+    "type": "water_rescue",
+    "time": "13:10",
+    "resp": [
+     "G21",
+     "G33"
+    ],
+    "out": "conveyed",
+    "aed": true,
+    "amb": "A-902"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_board",
+    "out_from": "12:00",
+    "out_to": "15:00",
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "check_sheet_ref": "CS-88"
+  }
+ },
+ "factors": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "rescues_overcount",
+  "worst_outcome": "conveyed with aed_used true",
+  "kit_gap_band": "60_to_180 (exactly 180 min)",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": true,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "corrective_order",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 65,
+ "deciding": {
+  "two_guard_cover": "The single rescue lists G21 and G33, both rostered; G21's qual expiry equals the shift date and G33 is mutual aid from S05, so the boundary keeps it in balance.",
+  "totals_reconcile": "handover.rescues is 2 but only one water_rescue is itemised.",
+  "next_step": "The rescue board was out 12:00 to 15:00 (180 min) with sub null, an unsubstituted outage of 60 minutes or more, so a station fix is ordered.",
+  "outcome_severity": "The outcome code is conveyed with an ambulance ref, but aed true indicates a shock, which holds level 2 against level 3.",
+  "kit_outage": "The board was out exactly 180 min with no substitute, on the line between 60-180 and over 180."
+ },
+ "request": "rec-F416-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014231
+}

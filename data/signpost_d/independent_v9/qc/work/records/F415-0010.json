@@ -1,0 +1,132 @@
+{
+ "id": "F415-0010",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": []
+  },
+  "shift": {
+   "sched_slots": [
+    "08:00",
+    "11:00",
+    "14:00",
+    "17:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "status": "done",
+    "checklist": {
+     "all": true
+    }
+   },
+   {
+    "slot": "11:00",
+    "status": "done",
+    "checklist": {
+     "all": true
+    }
+   },
+   {
+    "slot": "17:00",
+    "status": "done",
+    "end": "16:52",
+    "checklist": {
+     "all": true
+    }
+   }
+  ],
+  "faults": [
+   {
+    "type": "blocked_pan",
+    "reported_at": "10:00",
+    "remedied_at": "12:30"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "16:55",
+   "comment": "signed at depot"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 4,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "signed_at close to final visit end, recorded visit ends 16:52",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 150.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 1
+ },
+ "factors_sampled": {
+  "scheduled_slots": 4,
+  "missed_slots": "0",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "signed_before_last_visit",
+  "fault_type": "none",
+  "fault_open_minutes": 306.48,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 1
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_noted",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 55,
+ "deciding": {
+  "missed_clean": "The 14:00 slot has no visits entry and closures is empty.",
+  "sign_off_valid": "Supervisor signed 16:55 after the last visit end 16:52, but the visit slot is 17:00 and the sign-off was at the depot, so it stays balanced.",
+  "next_step": "A recording lapse is noted without a clear service failure: the fault was remedied and the checklists are full, so accept with a note.",
+  "staff_effort": "Little is needed beyond querying the 14:00 gap, a short task that could stretch to a few hours.",
+  "fault_exposure": "Fault 10:00-12:30 is 150 minutes with no closure, so the block was open to the public throughout."
+ },
+ "request": "rec-F415-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010082
+}

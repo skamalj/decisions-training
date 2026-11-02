@@ -1,0 +1,136 @@
+{
+ "id": "F403-0039",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-3308",
+   "declared_allergens": [
+    "peanut"
+   ],
+   "auto_injector": true,
+   "plan_start": "2025-07-14"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-05-30",
+   "allergens": [
+    "peanut"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-05-20",
+   "dishes": [
+    {
+     "dish": "satay noodles",
+     "contains": [
+      "peanut"
+     ],
+     "recipe_version_date": "2025-04-30",
+     "substitute": "sweet chilli noodles",
+     "spec_checked_on": "2025-05-12"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "trained": "2025-01-20",
+   "cleaning_log_complete": true
+  },
+  "history": {
+   "review_date": "2025-06-02",
+   "packed_lunch_until": null,
+   "incidents": [],
+   "messages": [
+    "Parent: happy with the plan."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 30,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 1,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "training_lapsed",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": -3,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "no_gap",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 34,
+ "deciding": {
+  "evidence_allergens_covered": "Peanut in the clinician letter maps to satay noodles with a sweet chilli noodles substitute and a spec check after the recipe date; the record is clean, with only the single-dish mapping leaving mild doubt.",
+  "next_step": "Evidence current, the one dish substituted and confirmed, kitchen controls verified, no incidents: release unchanged, with slight doubt because the plan starts well in the future.",
+  "first_gap_stage": "Letter valid to 2026-05-30, dish substituted with spec_checked_on 2025-05-12 after the recipe date, training 2025-01-20, segregation and cleaning true.",
+  "exposure_proximity": "All allergen dishes substituted, all controls verified, no incidents.",
+  "meal_urgency": "plan_start 2025-07-14 with no packed-lunch deferral is over 20 school days after the 2025-06-02 review."
+ },
+ "request": "rec-F403-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013104
+}

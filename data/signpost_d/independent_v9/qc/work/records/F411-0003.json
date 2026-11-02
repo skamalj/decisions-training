@@ -1,0 +1,135 @@
+{
+ "id": "F411-0003",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H208",
+   "type": "hackney",
+   "review_date": "2025-05-01"
+  },
+  "vehicle": {
+   "odometer_km": 120400
+  },
+  "inspection": {
+   "result_code": "PA",
+   "brake_efficiency_pct": 61
+  },
+  "defects": [
+   {
+    "code": "steering_play",
+    "grade": "minor",
+    "rectify_by": "2025-03-15",
+    "repaired_on": "2025-03-20",
+    "retest_on": "2025-03-10",
+    "retest_result": "pass"
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-04-10"
+   },
+   {
+    "type": "badge",
+    "expires_on": "2025-02-28"
+   },
+   {
+    "type": "plate_fee",
+    "expires_on": "2025-05-01"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-05-02",
+     "result": "P",
+     "odometer_km": 150000
+    }
+   ],
+   "replacements": [
+    {
+     "type": "instrument_cluster",
+     "date": "2024-11-01",
+     "old_km": 151200,
+     "new_km": 118000
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "retest_passed",
+  "deadline_passed": true,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": true,
+  "odometer_drop": "large",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": true,
+  "prior_failures_12m": 0,
+  "vehicle_age_years": 11
+ },
+ "factors_sampled": {
+  "worst_defect_found": "minor",
+  "rectification_state": "retest_passed",
+  "deadline_passed": true,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "large",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": true,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 11
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "advisory_only",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "odometer_consistent": "Reading 120400 km is below the 150000 km history, but a logged instrument_cluster replacement (old 151200, new 118000) accounts for it.",
+  "next_step": "Documents and an invalid retest argue against plain renewal, but nothing points to the odometer or a clear major defect.",
+  "inspection_outcome": "Result code PA suggests an advisory-level pass, though the defect line is graded minor.",
+  "document_gaps": "Insurance and badge expired before review; plate_fee expires on the review date with no cover note, which holds 2 against 3.",
+  "outstanding_severity": "Retest 2025-03-10 predates the repair 2025-03-20, so it is unretested and past rectify_by; steering_play could be treated as safety-critical."
+ },
+ "request": "rec-F411-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008944
+}

@@ -1,0 +1,119 @@
+{
+ "id": "F402-0045",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "soon",
+   "received": "2025-05-06",
+   "onset": "2023-08-01"
+  },
+  "patient": {
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "diagnosis_code": "neuropathy",
+   "red_flags": [
+    "progressive_weakness"
+   ],
+   "neuro_signs": {
+    "progression": "worsening"
+   },
+   "function_index": 26,
+   "weight_bearing": "full",
+   "surgery_date": "2025-03-09"
+  },
+  "gp_record": {
+   "falls_3m": 0,
+   "reviews": []
+  },
+  "attachments": [
+   {
+    "type": "op_protocol",
+    "date": "2025-03-24",
+    "result": "ok"
+   }
+  ],
+  "history": {
+   "episodes": 2,
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": false,
+  "mismatch_field": "surgery_date",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "neurological",
+  "symptom_duration_weeks": 91,
+  "function_index": 26.26,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "soon",
+  "falls_last_3m": 0,
+  "post_op_days": 58,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": false,
+  "mismatch_field": "surgery_date",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "neurological",
+  "symptom_duration_weeks": 91,
+  "function_index": 26.26,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "soon",
+  "falls_last_3m": 0,
+  "post_op_days": 58,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_info",
+   "second": "book_amended",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "balanced",
+   "target": "community_msk",
+   "second": "redirect_out",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "red_flag_unresolved": "Worsening neuro signs with progressive weakness code and no review or imaging explaining it.",
+  "next_step": "Surgery date 2025-03-09 vs op protocol 2025-03-24 could be queried or booked with a correction.",
+  "pathway": "Neuropathy with worsening signs could be community MSK or need out-of-scope medical work.",
+  "reversal_time": "Correcting a date or a booking is quick, but a delay could stretch to days.",
+  "clinical_urgency": "Function 26 with worsening neuro signs sits between two-week contact and six weeks."
+ },
+ "request": "rec-F402-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004677
+}

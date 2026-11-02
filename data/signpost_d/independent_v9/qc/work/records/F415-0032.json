@@ -1,0 +1,128 @@
+{
+ "id": "F415-0032",
+ "family": "F415",
+ "state": {
+  "shift": {
+   "start": "08:00",
+   "sched_slots": [
+    "09:00",
+    "12:00",
+    "15:00"
+   ]
+  },
+  "site": {
+   "closures": []
+  },
+  "visits": [
+   {
+    "slot": "09:00",
+    "start": "09:03",
+    "end": "09:30",
+    "photo_ref": "a1"
+   },
+   {
+    "slot": "12:00",
+    "start": "11:58",
+    "end": "12:20",
+    "photo_ref": "a2"
+   },
+   {
+    "slot": "15:00",
+    "start": "15:01",
+    "end": "15:25",
+    "photo_ref": "a3"
+   }
+  ],
+  "faults": [
+   {
+    "type": "blocked_pan",
+    "reported_at": "2024-06-11T09:10:00",
+    "remedied_at": "2024-06-11T12:55:00",
+    "remedy_note": "plunged, routine"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2024-06-11T15:40:00"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 3,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 225.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "routine",
+  "prior_defaults_90d": 3
+ },
+ "factors_sampled": {
+  "scheduled_slots": 3,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 225.26,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "routine",
+  "prior_defaults_90d": 3
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "sign_off_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_noted",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "missed_clean": "All three slots have visits with photos. The 12:00 visit starts at 11:58 and so, though not before shift start, is slightly earlier than the slot. This leaves some doubt.",
+  "sign_off_valid": "A supervisor signed at 15:40, after the final visit ended at 15:25.",
+  "next_step": "Every slot was visited and the sign-off is valid, so there is no service failure. The 12:00 start time is out of sequence with the 09:00 visit end time, a minor recording lapse to note against the contractor.",
+  "staff_effort": "The checklist maps are absent and the visit timestamps need querying with the contractor, which could take days. It might instead be a quick correction, so the effort sits between two levels.",
+  "fault_exposure": "The fault ran 09:10 to 12:55 (225 minutes) with no closure, so the block stayed open throughout. That is near the 240-minute boundary, and the remedy time is uncertain."
+ },
+ "request": "rec-F415-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009072
+}

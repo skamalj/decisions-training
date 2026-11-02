@@ -1,0 +1,122 @@
+{
+ "id": "F406-0010",
+ "family": "F406",
+ "state": {
+  "session": {
+   "gallery_code": "G3",
+   "date": "2024-09-14",
+   "certified_limit": 120
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "15:00",
+     "occupancy": 70
+    },
+    {
+     "start": "15:15",
+     "occupancy": 90
+    }
+   ],
+   "ticket_scans": 412,
+   "entries_total": 425
+  },
+  "variations": [
+   {
+    "gallery_code": "G-3",
+    "uplift_to": 140,
+    "status": "approved"
+   }
+  ],
+  "staff_log": {
+   "egress_check": null,
+   "notes": "Counters fine today."
+  },
+  "history": {
+   "overages_30d": 1
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.75,
+  "intervals_over_limit": 0,
+  "section_mismatch": "scans_vs_counter_minor",
+  "variation_present": true,
+  "variation_scope": "format_differs",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "none",
+  "interval_export_missing": false,
+  "egress_check": "not_recorded",
+  "prior_overages_30d": 1,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.75,
+  "intervals_over_limit": 5,
+  "section_mismatch": "scans_vs_counter_minor",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "not_recorded",
+  "prior_overages_30d": 1,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 26,
+ "deciding": {
+  "variation_applies": "The variation code G-3 differs in format from session G3 and no valid dates are given, though it is approved.",
+  "fault_explains_overage": "There is no equipment section or ticket, and no overage occurred; the note 'Counters fine' documents no fault.",
+  "next_step": "Scans of 412 against 425 entries is a small gap under 5%, nothing exceeds the limit, and egress is unrecorded, so file with a little doubt.",
+  "peak_excess": "The peak of 90 is 75% of the certified limit of 120.",
+  "intervals_over": "Both intervals (70, 90) are well below 120, so none is over."
+ },
+ "request": "rec-F406-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00979
+}

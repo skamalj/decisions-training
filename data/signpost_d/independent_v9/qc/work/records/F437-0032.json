@@ -1,0 +1,118 @@
+{
+ "id": "F437-0032",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v2",
+   "due_at": "2025-06-04T18:00:00Z",
+   "terms": {
+    "variant_accepted": true
+   }
+  },
+  "source": {
+   "version": "v2",
+   "segment_count": 120
+  },
+  "deliverable": {
+   "built_from_version": "v2",
+   "segments_translated": 118,
+   "delivered_at": "2025-06-04T05:00:00Z"
+  },
+  "qa_report": {
+   "unresolved": {
+    "major": 1
+   }
+  },
+  "review": {
+   "completed_at": "2025-06-04",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "major",
+     "status": "open"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-05-28"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "minor_segment_gap",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.22,
+  "number_mismatch_count": 1,
+  "deadline_slack_hours": 13,
+  "client_waiver": true,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.22,
+  "number_mismatch_count": 5,
+  "deadline_slack_hours": 13,
+  "client_waiver": true,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "return_for_fix",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "scope_matches": "Versions agree but 118 of 120 segments were translated; a small gap with no explanation.",
+  "reviewed_in_time": "Review completed_at is date-only 2025-06-04 with signed_off true, same day as delivery at 05:00, so the order is unclear.",
+  "next_step": "A major error is open in both qa_report and review with 13 hours of slack, so the translator can fix and resubmit.",
+  "open_severity": "The review error is major and open, with no critical items.",
+  "parties_needed": "The translator alone can fix the single error, though a re-check by the reviewer is possible."
+ },
+ "request": "rec-F437-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009205
+}

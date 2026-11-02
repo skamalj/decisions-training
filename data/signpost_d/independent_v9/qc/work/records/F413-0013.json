@@ -1,0 +1,161 @@
+{
+ "id": "F413-0013",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "id": "S-3302",
+   "tier": "office",
+   "stations": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5"
+   ]
+  },
+  "visit": {
+   "id": "V-7015",
+   "type": "routine",
+   "licence_expiry": "2025-01-15",
+   "start": "2024-06-05T13:00",
+   "end": "2024-06-05T14:10",
+   "client_signoff": "2024-06-05"
+  },
+  "treatments": [
+   {
+    "product": "DUST-4",
+    "area_m2": 60,
+    "qty": 600,
+    "unit": "g",
+    "label_max_per_m2": 12
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "E1",
+    "activity": true,
+    "bait_taken_pct": 5
+   },
+   {
+    "id": "E2",
+    "activity": true,
+    "bait_taken_pct": 10
+   },
+   {
+    "id": "E3",
+    "activity": true,
+    "bait_taken_pct": 5
+   },
+   {
+    "id": "E4",
+    "activity": false
+   },
+   {
+    "id": "E5",
+    "activity": false
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product": "DUST-4",
+    "qty": 1.0,
+    "unit": "kg"
+   },
+   {
+    "movement": "return",
+    "product": "DUST-4",
+    "qty": 0.4,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 2,
+   "actions": []
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": true,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": true,
+  "dose_overage_pct": 0.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "office"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": true,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": true,
+  "date_sequence": "signoff_before_visit_end",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 45.37,
+  "licence_valid_on_visit": false,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "office"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 61,
+ "deciding": {
+  "usage_reconciled": "Net stock is 0.6 kg (1.0 kg withdrawn minus 0.4 kg returned), the same as the 600 g applied.",
+  "activity_increased": "3 active stations against 2 previously. The rise is only one station and bait taken is low (5 to 10%).",
+  "next_step": "Stock, dose and dates are complete and in order, the licence is valid, and no actions are open.",
+  "breach_severity": "Applied 10 g/m2 against a 12 g/m2 label maximum. All 5 stations were checked and the licence is valid.",
+  "parties_needed": "There are no open items. Any activity follow-up would fall to the technician at the next routine visit."
+ },
+ "request": "rec-F413-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009791
+}

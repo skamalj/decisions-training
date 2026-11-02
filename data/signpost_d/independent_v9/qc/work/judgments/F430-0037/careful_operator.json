@@ -1,0 +1,36 @@
+{
+ "persona": "careful_operator",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "defect_corroborated": {
+   "true": 0.25,
+   "false": 0.75
+  },
+  "benign_explanation": {
+   "true": 0.7,
+   "false": 0.3
+  },
+  "follow_up": {
+   "file_closed": 0.01,
+   "recheck_next_round": 0.04,
+   "hold_return": 0.1,
+   "work_order": 0.25,
+   "urgent_attendance": 0.6
+  },
+  "limit_deviation": {
+   "0": 0.01,
+   "1": 0.06,
+   "2": 0.87,
+   "3": 0.06
+  },
+  "supply_exposure": {
+   "0": 0.02,
+   "1": 0.01,
+   "2": 0.02,
+   "3": 0.15,
+   "4": 0.8
+  }
+ },
+ "cost": 0.000424
+}

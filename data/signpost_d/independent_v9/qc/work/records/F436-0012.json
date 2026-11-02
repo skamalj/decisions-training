@@ -1,0 +1,113 @@
+{
+ "id": "F436-0012",
+ "family": "F436",
+ "state": {
+  "article": {
+   "channels": [
+    "web"
+   ],
+   "first_published_at": "2024-03-02T08:00",
+   "disputed_passage": "a clerk at the depot"
+  },
+  "complaint": {
+   "review_at": "2024-03-10T14:00",
+   "claimed_correct_value": "senior clerk"
+  },
+  "desk_check": {
+   "source_doc": "clerk",
+   "filed_copy": "senior clerk"
+  },
+  "history": {
+   "edits": [
+    {
+     "t": "2024-03-02T07:40",
+     "edit": "sub: role wording"
+    }
+   ],
+   "prior_corrections": 1
+  },
+  "draft_correction": {
+   "stated_value": "senior clerk"
+  }
+ },
+ "factors": {
+  "error_status": "matches_source",
+  "error_origin_stage": "none",
+  "discrepancy_field": "title_role",
+  "discrepancy_size": "moderate",
+  "claim_type": "incidental_fact",
+  "hours_live": 198,
+  "distribution_channels": "online_only",
+  "mitigation_present": true,
+  "missing_evidence": false,
+  "legal_signal": false,
+  "legal_cleared": false,
+  "draft_fix_mismatch": true,
+  "prior_corrections": 1,
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "error_status": "matches_source",
+  "error_origin_stage": "reporter_drafting",
+  "discrepancy_field": "title_role",
+  "discrepancy_size": "moderate",
+  "claim_type": "cosmetic",
+  "hours_live": 198,
+  "distribution_channels": "online_only",
+  "mitigation_present": true,
+  "missing_evidence": false,
+  "legal_signal": false,
+  "legal_cleared": false,
+  "draft_fix_mismatch": true,
+  "prior_corrections": 1,
+  "boundary_case": true
+ },
+ "plan": {
+  "error_confirmed": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "no_action",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_origin": {
+   "clarity": "balanced",
+   "target": "no_inaccuracy",
+   "second": "editing_stage",
+   "targets": []
+  },
+  "spread": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "harm_severity": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "error_confirmed": "Published 'clerk' agrees with source_doc 'clerk'; only filed copy and complaint differ.",
+  "next_step": "Text matches source so closing is favoured, but the sub-edit and filed 'senior clerk' leave room to ask for the roster.",
+  "error_origin": "Article matches source, yet a sub-editor changed role wording after filing, leaving editing_stage plausible.",
+  "spread": "Only web in channels and live 198 hours, so online-only for 24 hours or longer.",
+  "harm_severity": "Unnamed clerk's grade is an incidental fact with no named party affected."
+ },
+ "request": "rec-F436-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009747
+}

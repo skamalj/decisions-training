@@ -1,0 +1,131 @@
+{
+ "id": "F415-0042",
+ "family": "F415",
+ "state": {
+  "site": {
+   "hours": "07:00-19:00",
+   "closures": [
+    {
+     "from": "2024-06-03T15:00",
+     "to": "2024-06-03T16:00",
+     "reason": "police incident",
+     "approved_by": "OFF-09"
+    }
+   ]
+  },
+  "shift": {
+   "sched_slots": [
+    "08:00",
+    "09:30",
+    "11:00",
+    "13:00",
+    "15:00",
+    "16:30",
+    "17:45"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "15:00",
+    "status": "not_recorded"
+   },
+   {
+    "slot": "17:45",
+    "start": "17:45",
+    "end": "17:52",
+    "checklist": {
+     "floor": true,
+     "pans": true,
+     "soap": true
+    }
+   }
+  ],
+  "faults": [
+   {
+    "type": "sharps_find",
+    "reported_at": "2024-06-03T15:10",
+    "remedied_at": "2024-06-03T16:35"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2024-06-03T17:50"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 7,
+  "missed_slots": "1",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "signed_before_last_visit",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 85.7,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 0
+ },
+ "factors_sampled": {
+  "scheduled_slots": 7,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 85.7,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 0
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept",
+   "second": "default_notice",
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "missed_clean": "The 15:00 slot is not_recorded, but an approved closure starts exactly at 15:00, so the covering of the slot is borderline.",
+  "sign_off_valid": "A supervisor signed at 17:50, after the final visit started at 17:45 but before it ended at 17:52, so the sign-off is borderline.",
+  "next_step": "Whether the 15:00 gap counts as a service failure turns on the closure starting at the slot time, so accepting and issuing a default notice are both defensible.",
+  "staff_effort": "One boundary item needs confirming with the contractor, which takes a few hours.",
+  "fault_exposure": "The sharps find ran 15:10-16:35 and the block was closed until 16:00, so only 35 minutes were open to the public."
+ },
+ "request": "rec-F415-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007844
+}

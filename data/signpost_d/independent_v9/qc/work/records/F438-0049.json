@@ -1,0 +1,185 @@
+{
+ "id": "F438-0049",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E55102",
+   "specialty": "cardiology",
+   "los": 6,
+   "admission_method": "emergency",
+   "admit": "2024-02-04",
+   "discharge": "2024-02-10"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "I21.4"
+   },
+   "comorbidities": [
+    {
+     "code": "I10"
+    },
+    {
+     "code": "E11.9"
+    },
+    {
+     "code": "N18.3"
+    },
+    {
+     "code": "E78.0"
+    }
+   ],
+   "theatre_log": [
+    {
+     "proc": "K75.1",
+     "date": "2024-02-05",
+     "side": null
+    }
+   ],
+   "documents_present": {
+    "discharge_summary": false,
+    "operation_note": true,
+    "pathology_report": true
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "I21.4"
+   },
+   "secondary_dx": [
+    {
+     "code": "I10"
+    },
+    {
+     "code": "E11.9"
+    },
+    {
+     "code": "N18.4"
+    },
+    {
+     "code": "E78.5"
+    },
+    {
+     "code": "I25.1"
+    },
+    {
+     "code": "Z95.5"
+    }
+   ],
+   "procedures": [
+    {
+     "code": "K75.1",
+     "date": "2024-02-05",
+     "side": null
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "EB10A",
+   "hrg_regrouped": "EB10B",
+   "tariff_submitted": 3400,
+   "tariff_regrouped": 3150,
+   "submitted_to_commissioner": true,
+   "submission_date": "2024-03-01"
+  },
+  "audit_context": {
+   "sample_id": "S-902",
+   "local_conventions_applied": [
+    {
+     "code_pair": [
+      "E78.5",
+      "E78.0"
+     ]
+    }
+   ],
+   "queries": [
+    {
+     "target_code": "N18.4",
+     "status": "closed",
+     "response": "confirms"
+    }
+   ]
+  },
+  "coder_history": {
+   "coder_id": "c-2217",
+   "prior_audits": 22,
+   "error_rate": 0.16,
+   "last_audit_result": "pass"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "discharge_summary",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.16,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "discharge_summary",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.16,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_records",
+   "second": "amend_and_regroup",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 192,
+ "deciding": {
+  "primary_supported": "I21.4 matches the documented principal condition exactly; only the missing discharge summary leaves slight doubt.",
+  "hrg_shift": "The record shows EB10A vs EB10B, which is a shift, but the discharge summary is missing and the approved convention is arguably in play, so the lean is weak.",
+  "next_step": "The discharge summary is missing, which supports request_records, but the HRG difference and already-submitted status support amend_and_regroup.",
+  "error_count": "E78.5/E78.0 is covered by the approved convention and N18.4 was confirmed by the query; I25.1 and Z95.5 are undocumented, so zero to one error is arguable.",
+  "error_severity": "The regrouped HRG differs (EB10A vs EB10B) with an exact primary, which is major rather than a billed code with no documentation."
+ },
+ "request": "rec-F438-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006864
+}

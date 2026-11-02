@@ -1,0 +1,132 @@
+{
+ "id": "F404-0026",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "B1",
+   "date": "2025-03-11",
+   "age_band": "under_2",
+   "ratio_rule": "1:3"
+  },
+  "children": {
+   "booked": 4,
+   "slots": [
+    {
+     "t": "08:00-09:15",
+     "in": 5
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S041",
+    "q": 3,
+    "ratio": true
+   },
+   {
+    "id": "S052",
+    "q": 3,
+    "ratio": true
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S052",
+    "in": "07:55",
+    "check": "pending",
+    "q": 3
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F07",
+    "room": "B1",
+    "from": "08:00",
+    "to": "09:15",
+    "by": null
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 1
+  }
+ },
+ "factors": {
+  "age_band": "under_2",
+  "children_peak": 5,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 75,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 1
+ },
+ "factors_sampled": {
+  "age_band": "under_2",
+  "children_peak": 5,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 20,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": true,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": true,
+  "prior_breaches_90d": 1
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "corrective_plan",
+   "second": "hold_confirm",
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "clear",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (zero_eligible_adult_slot = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 60,
+ "deciding": {
+  "below_ratio": "Only S052 is signed in and is pending (ineligible), so no eligible staff for 5 children; the floater cover entry is unsigned (by null), so it is unconfirmed.",
+  "disposition": "Unsigned floater cover could be confirmed (hold_confirm), but a 75-minute window with zero eligible staff supports a plan or action; both defensible.",
+  "primary_cause": "Rota counts S041 and S052 but S041 has no sign-in and S052 is pending; booked 4 vs 5 in is minor. Staff shortfall, not none_found, fits the record.",
+  "shortfall_duration": "Slot 08:00-09:15 is 75 minutes without eligible cover, over sixty.",
+  "breach_severity": "5 children need 2 staff; none eligible. If the unsigned floater counts it covers 3, leaving 2 beyond; if not, all 5 are beyond."
+ },
+ "request": "rec-F404-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010685
+}

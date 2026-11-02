@@ -1,0 +1,161 @@
+{
+ "id": "F410-0011",
+ "family": "F410",
+ "state": {
+  "application": {
+   "app_ref": "A-4101",
+   "term_end": "2026-03-31",
+   "pitch_req": {
+    "market": "Eastgate",
+    "width_m": 3.01,
+    "depth_m": 2
+   },
+   "commodities": [
+    "clothing",
+    "handbags"
+   ],
+   "docs_pending": [
+    "pli_certificate"
+   ]
+  },
+  "licence_current": {
+   "pitch": {
+    "market": "Eastgate",
+    "pitch_no": 12,
+    "width_m": 3,
+    "depth_m": 2
+   },
+   "commodities": [
+    "clothing"
+   ],
+   "conditions": {
+    "min_attendance_pct": 90,
+    "max_width_m": 3.5
+   },
+   "variations": []
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2025-12-31",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": null,
+   "food_reg": null
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2025",
+     "amount_gbp": 1200
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2025-03-02",
+     "amount_gbp": 788.68,
+     "method": "card"
+    }
+   ],
+   "payment_plan": null
+  },
+  "history": {
+   "allocated_12m": 52,
+   "attended_12m": 46,
+   "absence_notices": [
+    {
+     "date": "2025-06-01",
+     "reason": "illness, 6 market days",
+     "accepted": true
+    }
+   ],
+   "complaints": [
+    {
+     "date": "2025-07-04",
+     "category": "noise",
+     "upheld": false,
+     "status": "closed"
+    }
+   ],
+   "enforcement_notices": 0
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_before_term_end",
+  "broker_confirmation_held": false,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.01,
+  "variation_approved": false,
+  "fee_arrears_gbp": 411.32,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.89,
+  "absences_notified": true,
+  "complaint_profile": "not_upheld_only",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 1
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": false,
+  "commodity_change": "food_added",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.01,
+  "variation_approved": true,
+  "fee_arrears_gbp": 411.32,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.89,
+  "absences_notified": true,
+  "complaint_profile": "not_upheld_only",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 1
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "grant_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "clear",
+   "target": "scheduled_visit",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 30,
+ "deciding": {
+  "pli_term_covered": "pli.end 2025-12-31 is before term_end 2026-03-31 and broker_conf is null; a certificate is pending.",
+  "renewal_disposition": "Only minor issues (arrears, small added line, pending certificate) with no lapse or serious breach, so grant with conditions.",
+  "inspection_level": "Application adds handbags with no matching variation; non-food, no food registration issue, so a scheduled visit.",
+  "reversal_time": "Renewal grants an annual licence that would be hard to undo within three months; some doubt remains.",
+  "discrepancy_count": "PLI gap, unapproved handbags, arrears with no plan make three; the pending certificate may count as a fourth, split between levels 2 and 3."
+ },
+ "request": "rec-F410-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012379
+}

@@ -1,0 +1,191 @@
+{
+ "id": "F406-0037",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-6240",
+   "gallery_code": "E5",
+   "session_date": "2025-06-07",
+   "open": "14:00",
+   "close": "17:00",
+   "certified_limit": 100
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "14:00",
+     "occupancy": 98
+    },
+    {
+     "start": "14:15",
+     "occupancy": 104
+    },
+    {
+     "start": "14:30",
+     "occupancy": 111
+    },
+    {
+     "start": "14:45",
+     "occupancy": 112
+    },
+    {
+     "start": "15:00",
+     "occupancy": 114
+    },
+    {
+     "start": "15:15",
+     "occupancy": 115
+    },
+    {
+     "start": "15:30",
+     "occupancy": 113
+    },
+    {
+     "start": "15:45",
+     "occupancy": 112
+    },
+    {
+     "start": "16:00",
+     "occupancy": 114
+    },
+    {
+     "start": "16:15",
+     "occupancy": 111
+    },
+    {
+     "start": "16:30",
+     "occupancy": 112
+    },
+    {
+     "start": "16:45",
+     "occupancy": 102
+    }
+   ],
+   "ticket_scans": 1215,
+   "manual_tally_peak": 106,
+   "summary_peak": 115
+  },
+  "variations": [
+   {
+    "ref": "V-310",
+    "gallery_code": "E5",
+    "valid_from": "2025-06-01",
+    "valid_to": "2025-06-30",
+    "uplift_to": 110,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "gates": [
+    "E5-N"
+   ],
+   "last_calibrated": "2025-02-03",
+   "maintenance": [
+    {
+     "gate": "E5-N",
+     "raised_at": "2025-06-07T12:30",
+     "summary": "Intermittent double-count on exit sensor"
+    }
+   ]
+  },
+  "staff_log": {
+   "stewards": 3,
+   "egress_check": {
+    "state": "done",
+    "time": "13:50"
+   },
+   "notes": [
+    "Steward tally peak 106 at 15:15."
+   ]
+  },
+  "history": {
+   "overages_30d": 5,
+   "dates": [
+    "2025-05-10",
+    "2025-05-17",
+    "2025-05-24",
+    "2025-05-31",
+    "2025-06-01"
+   ]
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.96,
+  "intervals_over_limit": 9,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 5,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.15,
+  "intervals_over_limit": 2,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 5,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 138,
+ "deciding": {
+  "variation_applies": "V-310 approved, gallery E5 matches, window 2025-06-01 to 06-30 covers the session date; limit in force 110.",
+  "fault_explains_overage": "Same-gate, same-day ticket raised before opening, but it describes exit-sensor double-count only and the counter peak 115 vs tally 106 gap is modest.",
+  "next_step": "Variation valid and ticket documented; the counter overage is attributable to the fault and tally stays under the limit, so the log can be filed.",
+  "peak_excess": "Steward tally peak 106 is about 96% of the 110 limit; counter peak 115 is doubted given the ticket.",
+  "intervals_over": "Counter shows nine intervals above 110 (14:30 to 16:30)."
+ },
+ "request": "rec-F406-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012601
+}

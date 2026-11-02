@@ -1,0 +1,128 @@
+{
+ "id": "F404-0025",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "C1",
+   "age_band": "two_year",
+   "ratio_rule": "1:4"
+  },
+  "children": {
+   "booked": 4,
+   "slots": [
+    {
+     "t": "10:00",
+     "signed_in": 6
+    },
+    {
+     "t": "10:15",
+     "signed_in": 6
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S1"
+   },
+   {
+    "id": "S2",
+    "end": "10:31"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S1"
+   },
+   {
+    "id": "S2",
+    "out": "09:50"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F3",
+    "from": "09:50",
+    "to": "10:31",
+    "room": "C1",
+    "countersigned_by": "J. Pike"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 4
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 6,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 41,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 6,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 41,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "clear",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "below_ratio": "6 children need 2 staff; S2 left 09:50 but countersigned floater F3 covers 09:50 to 10:31, matching the gap.",
+  "disposition": "Cover fully spans the gap but the gap itself and the four prior breaches invite one confirmation before filing.",
+  "primary_cause": "Staff and cover reconcile; only attendance over booking is notable, so no cause for a breach.",
+  "shortfall_duration": "41 min gap fully covered by logged floater, so level 0, or level 1 if the cover is discounted.",
+  "breach_severity": "Without cover 1 staff covers 4 of 6 children, 2 beyond; whether the floater is trusted decides the level."
+ },
+ "request": "rec-F404-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011468
+}

@@ -1,0 +1,122 @@
+{
+ "id": "F421-0041",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-48213",
+   "service": "std",
+   "fragile": false,
+   "contents": "ceramic planter",
+   "qty": 1,
+   "weight_kg": 2.5,
+   "declared_value_gbp": 2564.27
+  },
+  "handling_events": [
+   {
+    "ts": "2024-05-06T08:10",
+    "site": "THIS-DEPOT",
+    "ev": "INBOUND",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": null,
+   "observed_item": "ceramic planter",
+   "qty_found": 1,
+   "weight_g": 2500,
+   "condition": "carton scuffed, item intact",
+   "photos": [
+    "a1.jpg"
+   ],
+   "repair_est_gbp": null
+  },
+  "claim": null,
+  "notes": [
+   "Scuff already present on arrival, upstream handling likely."
+  ]
+ },
+ "factors": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 1.0,
+  "declared_value": 2564.27,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.27
+ },
+ "factors_sampled": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 20.01,
+  "declared_value": 2564.27,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.27
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 55,
+ "deciding": {
+  "depot_fault": "Only event is the inbound scan here carrying the DMG code, so first damage coincides with intake; no clean inbound and no upstream scan to settle it.",
+  "contents_match": "Planter matches; 2.5 kg vs 2500 g is only a unit difference, but the report is not yet fully inspected.",
+  "next_step": "Minor scuff, item intact, no claim, nothing outstanding, so closing is likely though the inspection is still pending.",
+  "loss_share": "Condition says carton scuffed with item intact, so loss is negligible, far under 5% of 2564.27.",
+  "parties_needed": "No claim or onward action; one person can close it, small doubt from the pending inspection."
+ },
+ "request": "rec-F421-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009441
+}

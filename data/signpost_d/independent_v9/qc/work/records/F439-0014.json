@@ -1,0 +1,125 @@
+{
+ "id": "F439-0014",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T-66120",
+   "end": "16:20",
+   "conditions": "dry"
+  },
+  "candidate": {
+   "ref": "C58",
+   "attempt": 3,
+   "id_check": true
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "junctions",
+     "driving": 0,
+     "serious": 0,
+     "dangerous": 1
+    },
+    {
+     "item": "mirrors",
+     "driving": 2,
+     "serious": 0,
+     "dangerous": 0
+    }
+   ],
+   "driving_fault_total": 2
+  },
+  "outcome": {
+   "result": "fail",
+   "intervention": false,
+   "debrief": true,
+   "examiner_note": "Dangerous fault at junction, vehicle approaching braked.",
+   "examiner_signoff_at": null
+  },
+  "review_trail": {
+   "upheld_complaints_12m": 4,
+   "edits": [
+    {
+     "at": "2024-06-03T09:00",
+     "amendment_reason": "added missing debrief record"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "fault_profile": "dangerous_fault",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "signoff_missing",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": false,
+  "adverse_conditions": false,
+  "note_alignment": "consistent",
+  "examiner_complaints_12m": 4,
+  "post_submission_edit": "edit_with_reason"
+ },
+ "factors_sampled": {
+  "fault_profile": "dangerous_fault",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "signoff_missing",
+  "intervention_recorded": false,
+  "intervention_explained": true,
+  "continued_after_collision": false,
+  "senior_countersigned": false,
+  "adverse_conditions": false,
+  "note_alignment": "consistent",
+  "examiner_complaints_12m": 4,
+  "post_submission_edit": "edit_with_reason"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "report_complete": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "issue_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 118,
+ "deciding": {
+  "result_supported": "Fail with one dangerous fault is consistent, but the edit and missing sign-off leave doubt; leaning false per plan.",
+  "report_complete": "examiner_signoff_at is null while the edit trail has a reason; missing sign-off is arguable.",
+  "disposition": "Accept as filed: result and note agree and the edit is explained.",
+  "staff_effort": "Sign-off chase and edit check, hours to a couple of days.",
+  "issue_severity": "Dangerous fault is recorded; whether a safety procedure was breached is arguable, versus a result-affecting gap."
+ },
+ "request": "rec-F439-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005604
+}

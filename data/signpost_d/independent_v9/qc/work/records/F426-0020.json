@@ -1,0 +1,114 @@
+{
+ "id": "F426-0020",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B7A"
+  },
+  "applications": [
+   {
+    "date": "2024-03-01",
+    "qty_applied": 2.24,
+    "qty_unit": "L",
+    "area_treated_ha": 2
+   }
+  ],
+  "product_ref": [
+   {
+    "max_rate_per_ha": 1,
+    "rate_unit": "L",
+    "phi_days": 21,
+    "minor_use_auth_ref": "MU-9"
+   }
+  ],
+  "equipment": {
+   "calibration_valid_to": "2024-02-15",
+   "nozzle_dev_pct": 12
+  },
+  "harvest": {
+   "block_id": "B7B",
+   "first_pick_date": "2024-03-22",
+   "residue_test": {
+    "sampled": true,
+    "result_date": null,
+    "below_limit": null
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "near_10_boundary",
+  "partial_block_spray": false,
+  "clerical_mismatch": "lot_block_id_mismatch",
+  "minor_use_auth": true,
+  "residue_test_clear": false,
+  "calibration_state": "expired_under_30d_high_dev",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "lot_block_id_mismatch",
+  "minor_use_auth": true,
+  "residue_test_clear": false,
+  "calibration_state": "expired_under_30d_high_dev",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 6,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "contested",
+   "target": "clerical_only",
+   "second": "no_finding",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 28,
+ "deciding": {
+  "phi_cleared": "Application 2024-03-01 to pick 2024-03-22 is exactly 21 days, equal to phi_days, so inclusive or exclusive counting decides it.",
+  "next_step": "Residue result is pending, nozzle deviation is 12% on an expired calibration and the block id differs, pointing to referral.",
+  "finding_class": "harvest.block_id 'B7B' vs block 'B7A' is a clerical mismatch, and minor_use_auth_ref 'MU-9' may cover the rate, so no finding is arguable.",
+  "reversal_time": "Correcting an id or awaiting results could take under a day or a few days.",
+  "rate_overrun": "2.24 L over 2 ha is 1.12 L/ha against max 1, about 12% over, close to the 10% boundary."
+ },
+ "request": "rec-F426-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009483
+}

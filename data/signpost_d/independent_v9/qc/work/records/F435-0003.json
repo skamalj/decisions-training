@@ -1,0 +1,164 @@
+{
+ "id": "F435-0003",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E-3340",
+   "zone_id": "TIER-2",
+   "zone_type": "seated_tier",
+   "doors_open": "2025-06-06T18:00:00",
+   "check_filed_at": "2025-06-06T22:10:00",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 800,
+   "variation": {
+    "ref": "V-41",
+    "new_limit": 900,
+    "status": "approved",
+    "approved_on": "2025-05-30"
+   },
+   "stewards_required": 30,
+   "exit_routes": [
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 900,
+   "issued": 909,
+   "comps_included": 30,
+   "scanned_in": 890
+  },
+  "ingress": {
+   "device_id": "CTR-4",
+   "device_status": "fault_logged",
+   "raw_peak": 921,
+   "peak_at": "2025-06-06T19:10:00",
+   "manual_recount": {
+    "count": 837,
+    "at": "2025-06-06T21:40:00"
+   }
+  },
+  "stewarding": {
+   "rostered": 29,
+   "signed_in": 27,
+   "relief": {
+    "called_at": "2025-06-06T17:30:00",
+    "eta_min": 20
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "X1",
+    "checked_at": "2025-06-06T17:30:00",
+    "status": "clear"
+   },
+   {
+    "route_id": "X2",
+    "checked_at": "2025-06-06T17:32:00",
+    "status": "clear"
+   },
+   {
+    "route_id": "X3",
+    "checked_at": "2025-06-06T17:35:00",
+    "status": "clear"
+   },
+   {
+    "route_id": "X4",
+    "checked_at": "2025-06-06T17:40:00",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "X4",
+    "checked_at": "2025-06-06T18:00:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "X5",
+    "checked_at": null,
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "seated_tier",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.93,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.1,
+  "manual_recount_present": true,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 1.01,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.1,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 3,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "seated_tier",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.81,
+  "counter_status": "ok",
+  "counter_inflation": 0.1,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.97,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.01,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "sign_off",
+   "second": "conditional_sign_off",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "contested",
+   "target": "counter_fault",
+   "second": "ticket_overissue",
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 96,
+ "deciding": {
+  "verified_exceedance": "Counter is fault_logged, so the recount of 837 is verified against an effective limit of 900 (variation approved before doors); only the faulty raw_peak 921 is above it.",
+  "disposition": "Verified counts are within limit, but steward sign-in is 10% short and exit gaps are logged; sign-off versus conditional sign-off is close.",
+  "discrepancy_source": "Only the fault_logged raw_peak 921 exceeds 900, but issued 909 also slightly exceeds zone_limit_used 900; both fit.",
+  "steward_shortfall": "signed_in 27 of 30 required is exactly 10% below, on the line between level 1 and level 2.",
+  "unconfirmed_exits": "X5 has a null checked_at and X6 is absent from the log; X4 was obstructed and its clear came at 18:00:30, 30 seconds after doors. Whether X4 counts decides between 2 and 3."
+ },
+ "request": "rec-F435-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014489
+}

@@ -1,0 +1,129 @@
+{
+ "id": "F411-0029",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "P0925",
+   "type": "private_hire",
+   "expiry": "2025-05-31",
+   "review_date": "2025-05-12"
+  },
+  "vehicle": {
+   "reg": "BV12GHJ",
+   "first_reg": "2011-09-05",
+   "odometer_km": 152300
+  },
+  "inspection": {
+   "station": "TS09",
+   "date": "2025-05-06",
+   "result_code": "P",
+   "brake_efficiency_pct": 66
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-04-30"
+   },
+   {
+    "type": "dbs",
+    "expires_on": "2025-03-01"
+   },
+   {
+    "type": "mot",
+    "expires_on": "2025-11-20"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-11-12",
+     "result": "P",
+     "odometer_km": 151900
+    }
+   ],
+   "replacements": []
+  }
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "none_needed",
+  "deadline_passed": false,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 14
+ },
+ "factors_sampled": {
+  "worst_defect_found": "minor",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": false,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "large",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 14
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "conditional_renewal",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 70,
+ "deciding": {
+  "odometer_consistent": "152300 km is above the earlier 151900 km; no drop, though only 400 km in six months is low.",
+  "next_step": "Two expired documents with an empty defects list; the planned conditional renewal cannot be met and refusal fits the record.",
+  "inspection_outcome": "Result P and an empty defects list.",
+  "document_gaps": "Insurance (2025-04-30) and DBS (2025-03-01) both expire before the review date 2025-05-12; MOT is in date.",
+  "outstanding_severity": "No defects recorded, so level 0; the planned level 4 versus 3 balance conflicts with a clean inspection."
+ },
+ "request": "rec-F411-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009362
+}

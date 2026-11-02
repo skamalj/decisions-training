@@ -1,0 +1,157 @@
+{
+ "id": "F412-0025",
+ "family": "F412",
+ "state": {
+  "premises": {
+   "ref": "P505",
+   "type": "bakery",
+   "risk_band": "B"
+  },
+  "inspection": {
+   "date": "2025-01-13",
+   "contraventions": [
+    {
+     "ref": "C1",
+     "area": "REC",
+     "due_date": "2025-02-01"
+    },
+    {
+     "ref": "C2",
+     "area": "PST",
+     "due_date": "2025-02-01"
+    }
+   ]
+  },
+  "revisit": {
+   "date": "2025-03-05",
+   "items": [
+    {
+     "ref": "C1",
+     "status": "remedied",
+     "observed": "records complete"
+    },
+    {
+     "ref": "C2",
+     "status": "remedied",
+     "observed": "no activity seen"
+    }
+   ],
+   "officer_note": "No droppings seen; proofing screens fitted."
+  },
+  "correspondence": {
+   "extensions": [
+    {
+     "ref": "C2",
+     "agreed": true,
+     "new_due_date": "2025-02-20"
+    }
+   ],
+   "operator_reply": "Pest contractor still to complete proofing of rear door.",
+   "evidence": [
+    {
+     "type": "pest contractor booking",
+     "date": "2025-03-12",
+     "verified": null
+    }
+   ]
+  },
+  "history": {
+   "enforcement": [
+    {
+     "year": 2019
+    },
+    {
+     "year": 2021
+    },
+    {
+     "year": 2023
+    },
+    {
+     "year": 2024
+    }
+   ],
+   "samples": [],
+   "complaints": []
+  }
+ },
+ "factors": {
+  "contravention_count": 2,
+  "resolution_share": "all_resolved",
+  "worst_open_area": "food_handling",
+  "food_handling_open_count": 1,
+  "cross_section_mismatch": "reply_contradicts_revisit",
+  "days_past_original_due": 32,
+  "extension_agreed": true,
+  "benign_explanation": true,
+  "operator_evidence": "none_submitted",
+  "adverse_sample": false,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 4,
+  "boundary_case": true,
+  "reassuring_note_decoy": false
+ },
+ "factors_sampled": {
+  "contravention_count": 2,
+  "resolution_share": "most_resolved",
+  "worst_open_area": "fabric_cleaning",
+  "food_handling_open_count": 0,
+  "cross_section_mismatch": "reply_contradicts_revisit",
+  "days_past_original_due": -19,
+  "extension_agreed": true,
+  "benign_explanation": true,
+  "operator_evidence": "none_submitted",
+  "adverse_sample": false,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 4,
+  "boundary_case": true,
+  "reassuring_note_decoy": false
+ },
+ "plan": {
+  "all_remedied": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "refer_lead",
+   "second": "close_case",
+   "targets": [
+    "T1"
+   ]
+  },
+  "worst_hazard": {
+   "clarity": "clear",
+   "target": "no_open_item",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "overdue_extent": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "residual_risk": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 97,
+ "deciding": {
+  "all_remedied": "Both items are marked remedied at revisit, but the operator reply says the pest proofing is still to be completed and the contractor booking is dated after the revisit.",
+  "next_step": "Four prior enforcement actions point to referral, while both items are remedied at revisit and support closing.",
+  "worst_hazard": "Both items C1 and C2 are recorded as remedied by observation at revisit, so no open item is classified.",
+  "overdue_extent": "Original due 2025-02-01 is 32 days before the revisit, but the agreed C2 extension to 2025-02-20 is only 13 days before it.",
+  "residual_risk": "The pest item C2 may not be fully fixed given the reply and the later contractor booking; there is no adverse sample."
+ },
+ "request": "rec-F412-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009876
+}

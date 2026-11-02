@@ -1,0 +1,172 @@
+{
+ "id": "F432-0002",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E02",
+   "sp": "LION",
+   "risk_cat": 1,
+   "doors": [
+    "D1",
+    "D2"
+   ],
+   "temp_range_c": [
+    10,
+    24
+   ]
+  },
+  "shift": {
+   "date": "2024-06-03",
+   "keeper_id": "K11",
+   "start": "06:00",
+   "end": "17:45",
+   "opening_count": 5,
+   "closing_count": 5
+  },
+  "movements": null,
+  "feeding": {
+   "sheet_date": "2024-03-01",
+   "items": [
+    {
+     "item": "meat",
+     "sheet_g": 4000,
+     "offered_g": 4000,
+     "leftover_g": 3040,
+     "unit": "g"
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "t": "06:30",
+    "logged": true,
+    "entry": "06:34",
+    "temp_c": 3,
+    "beh": [
+     "LETH",
+     "LAME",
+     "STER"
+    ]
+   },
+   {
+    "t": "09:00",
+    "logged": false,
+    "entry": null
+   },
+   {
+    "t": "12:00",
+    "logged": false,
+    "entry": null
+   },
+   {
+    "t": "15:00",
+    "logged": false,
+    "entry": null
+   },
+   {
+    "t": "17:30",
+    "logged": true,
+    "entry": null,
+    "temp_c": 4
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "id": "D1",
+     "time": "17:41"
+    },
+    {
+     "id": "D2",
+     "time": "17:29"
+    }
+   ],
+   "ticket": "BF311",
+   "ticket_state": "closed"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "one_door_just_before_last_round",
+  "intake_ratio": 0.24,
+  "intake_mitigation": false,
+  "unrecorded_rounds": "3 plus one ambiguous",
+  "cctv_cover": false,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": false,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 3,
+  "vet_case_open": false,
+  "missing_section": "movements_absent",
+  "risk_category": "cat_1_high"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "partial_doors_only",
+  "intake_ratio": 0.32,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 0,
+  "cctv_cover": true,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": false,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 3,
+  "vet_case_open": false,
+  "missing_section": "movements_absent",
+  "risk_category": "cat_1_high"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "count_reconciles": "Opening 5 and closing 5 with no movements section, so nothing could change the count.",
+  "secure_at_close": "Ticket BF311 is closed and D1 was checked at 17:41, but D2 at 17:29 is before the 17:30 round.",
+  "next_step": "High-risk lions with LETH/LAME/STER codes, temps of 3 and 4 against a 10-24 range, and a very low intake call for referral.",
+  "intake_shortfall": "Intake is 960 of 4000 g (24%), right at the 25% boundary between marked and severe, and no fast flag is set.",
+  "missed_rounds": "Three rounds are logged false and the 17:30 round is logged true with a null entry time, so the count is 3 or 4 with no CCTV."
+ },
+ "request": "rec-F432-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.016225
+}

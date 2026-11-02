@@ -1,0 +1,167 @@
+{
+ "id": "F432-0046",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E14",
+   "risk_cat": 2,
+   "doors": [
+    "A",
+    "B"
+   ],
+   "temp_range_c": [
+    18,
+    26
+   ],
+   "maint_window": "10:00-14:00",
+   "active_vet_case": true
+  },
+  "shift": {
+   "date": "2024-05-14",
+   "start": "07:00",
+   "end": "15:00",
+   "opening_count": 6,
+   "closing_count": 5
+  },
+  "movements": [
+   {
+    "animal_id": "A3",
+    "direction": "out",
+    "time": "07:02",
+    "dest": "E09"
+   }
+  ],
+  "feeding": {
+   "sheet_ver": "2024-03-01",
+   "items": [
+    {
+     "sheet_g": 2000,
+     "offered_g": 2000,
+     "leftover_g": 1500,
+     "unit": "g",
+     "fast_flag": false,
+     "scatter_flag": true
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched": "09:00",
+    "logged": true,
+    "entry_time": "09:03",
+    "temp_c": 22
+   },
+   {
+    "sched": "11:00",
+    "logged": true,
+    "entry_time": "11:04",
+    "temp_c": 27
+   },
+   {
+    "sched": "13:00",
+    "logged": false,
+    "entry_time": null,
+    "cctv_reviewed": true,
+    "reviewer_id": "R88"
+   },
+   {
+    "sched": "14:30",
+    "logged": true,
+    "entry_time": "14:33",
+    "temp_c": 23
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "A",
+     "time": "14:51"
+    }
+   ],
+   "ticket": "T-210",
+   "ticket_state": "closed"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "partial_doors_only",
+  "intake_ratio": 0.25,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 1,
+  "cctv_cover": true,
+  "temp_excursion": "brief_single_reading",
+  "heater_maintenance_window": true,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 0,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.77,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 4,
+  "cctv_cover": true,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": true,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 0,
+  "vet_case_open": true,
+  "missing_section": "feeding_absent",
+  "risk_category": "cat_2_medium"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "recheck_round",
+   "second": "sign_off",
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "count_reconciles": "Opening 6, closing 5, with one out movement logged at 07:02, just after shift start, so it likely reconciles but the timing leaves some doubt.",
+  "secure_at_close": "close_check lists only door A although the enclosure has doors A and B; door B has no lock check, though the ticket is closed.",
+  "next_step": "One unlogged round and a 27C reading inside the maintenance window point to a recheck; otherwise the log is fairly consistent and could be signed off.",
+  "intake_shortfall": "Offered 2000 g, leftover 1500 g gives 25% intake, exactly on the boundary between marked and severe; the scatter flag adds ambiguity.",
+  "missed_rounds": "Exactly one of four rounds (13:00) has logged false and null entry_time."
+ },
+ "request": "rec-F432-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012484
+}

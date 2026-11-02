@@ -1,0 +1,144 @@
+{
+ "id": "F405-0021",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C101",
+   "detected_on": "2025-02-10",
+   "term_start": "2025-02-10",
+   "room": "LT4"
+  },
+  "booking_a": {
+   "module": "BIO120",
+   "dept": "BIO",
+   "day": "Mon",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    1,
+    2,
+    3
+   ],
+   "headcount": 100,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "CHM210",
+   "dept": "CHM",
+   "room": "LT4",
+   "day": "Mon",
+   "start": "15:00",
+   "end": "17:00",
+   "weeks": [
+    1,
+    2,
+    3
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-01-20",
+   "approver": "jlee"
+  },
+  "room": {
+   "code": "LT4",
+   "capacity": 130
+  },
+  "alternatives": [
+   {
+    "code": "LT7",
+    "capacity": 110,
+    "features": [
+     "lecture_capture"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "history": []
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.77,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 0
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 34,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.77,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 0
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "relocate",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 42,
+ "deciding": {
+  "genuine_clash": "Same room LT4, Mon, weeks 1-3, 14:00-16:00 vs 15:00-17:00 overlap by an hour; the one doubt is that the overlap is partial.",
+  "alt_room_fits": "LT7 capacity 110 vs headcount 100, has lecture_capture, free weeks 1-3; the margin is modest.",
+  "resolution": "Both bookings confirmed (B approved with approver), overlap real, and LT7 fits, so relocate.",
+  "urgency": "detected_on equals term_start and the clash is Monday week 1, so first occurrence is today; whether it counts as live or imminent keeps it close.",
+  "parties_needed": "Two different departments (BIO, CHM) with the officer; one moving department plus the officer is two, but the other department may also need to agree, making three."
+ },
+ "request": "rec-F405-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010251
+}

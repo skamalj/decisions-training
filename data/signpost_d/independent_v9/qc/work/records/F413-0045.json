@@ -1,0 +1,112 @@
+{
+ "id": "F413-0045",
+ "family": "F413",
+ "state": {
+  "visit": {
+   "id": "V-9001",
+   "type": "routine"
+  },
+  "treatments": [
+   {
+    "product": "RB-10",
+    "qty": 1.2,
+    "unit": "kg"
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product": "RB-10",
+    "qty": 1.2,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": null,
+   "actions": [
+    {
+     "a": "reseal entry",
+     "status": "raised",
+     "booked": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 4,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "decreased",
+  "previous_visit_available": false,
+  "dose_overage_pct": 76.31,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "office"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "large_over_25pct",
+  "stock_return_logged": false,
+  "station_count_gap": 4,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "decreased",
+  "previous_visit_available": false,
+  "dose_overage_pct": 76.31,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "office"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "book_revisit",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 36,
+ "deciding": {
+  "usage_reconciled": "Applied 1.2 kg equals withdrawn 1.2 kg.",
+  "activity_increased": "No previous count (null), so no comparison is possible.",
+  "next_step": "The action 'reseal entry' is raised with booked null, so a revisit must be booked.",
+  "breach_severity": "No area or label limit is shown, so a treatment breach cannot be shown; the unbooked action may count as paperwork.",
+  "parties_needed": "The technician and scheduler are needed; the client may be a third."
+ },
+ "request": "rec-F413-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005077
+}

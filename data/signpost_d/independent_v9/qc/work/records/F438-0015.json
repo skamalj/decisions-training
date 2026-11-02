@@ -1,0 +1,112 @@
+{
+ "id": "F438-0015",
+ "family": "F438",
+ "state": {
+  "coded_record": {
+   "primary_dx": "J44.1",
+   "secondary_dx": [
+    "J44.0"
+   ],
+   "procedures": []
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "J44.1"
+   },
+   "comorbidities": [
+    "J44.0"
+   ],
+   "theatre_log": [
+    {
+     "code": "E85.1",
+     "date": "2024-05-02"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "DZ65B",
+   "hrg_regrouped": "DZ65A",
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "documented_not_coded",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.06,
+  "boundary_case": true,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "documented_not_coded",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.06,
+  "boundary_case": true,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "amend_and_regroup",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "primary_supported": "J44.1 matches the principal condition, but J44.0 is also documented, so the acute/chronic pair is borderline.",
+  "hrg_shift": "DZ65B regroups to DZ65A once the uncoded procedure is added, though the J44.0/J44.1 boundary leaves some doubt.",
+  "next_step": "The theatre_log E85.1 has no coded counterpart and the HRG differs, so the codes need correction and regrouping.",
+  "error_count": "The only discrepancy is the single theatre_log procedure missing from the coded procedures.",
+  "error_severity": "The omitted procedure changes the HRG (major); whether it counts as a billable-code error (critical) is open."
+ },
+ "request": "rec-F438-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009309
+}

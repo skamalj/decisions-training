@@ -1,0 +1,136 @@
+{
+ "id": "F427-0003",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V103",
+   "visit_date": "2024-08-14",
+   "surveyor_grade": "trainee"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 2
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 37
+    },
+    {
+     "depth_cm": 39
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 34,
+     "prev_depth_cm": 22
+    }
+   ],
+   "rain_30d_pct_normal": 57
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D1",
+     "pool_level_cm": 4,
+     "design_pool_cm": 30,
+     "defect_code": "BRCH",
+     "remark": "Centre cut through, small pool left."
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "score": 5
+    }
+   ],
+   "photos_uploaded": 11,
+   "photos_expected": 12
+  },
+  "notes": {
+   "surveyor_note": "Dam gone, urgent!"
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 1.0,
+  "photos_status": "partial",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "breach with small residual pool",
+  "water_table_offset_cm": -13.0,
+  "rainfall_pct_normal": 57.0,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "alarmed",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.22,
+  "photos_status": "partial",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": -15.38,
+  "rainfall_pct_normal": 57.48,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "alarmed",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "recheck_next_visit",
+   "second": "escalate_lead",
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "below_band",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "dam_caused_drop": "The control well fell from 22 to 34 cm and rain is 57% of normal, which points to dry weather even though D1 is breached.",
+  "next_step": "D1 is coded BRCH with 4 of 30 cm pool, which supports escalation. No repeat failure is recorded and the weather explains the drop, so a recheck is also defensible.",
+  "hydro_state": "Mean depth 38 cm against floor 25 cm is 13 cm below, within the up-to-15 band.",
+  "dam_severity": "BRCH with 4 of 30 cm pool left is a breach, but the residual pool leaves level 2 plausible.",
+  "evidence_completeness": "All four elements are present. Photos are 11 of 12, so a reviewer could rate this as one partly recorded element or as full."
+ },
+ "request": "rec-F427-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013066
+}

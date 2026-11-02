@@ -1,0 +1,163 @@
+{
+ "id": "F404-0045",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "C1",
+   "date": "2024-09-10",
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty"
+  },
+  "children": {
+   "booked": 18,
+   "slots": [
+    {
+     "t": "15:00",
+     "n": 19
+    },
+    {
+     "t": "15:15",
+     "n": 19
+    },
+    {
+     "t": "15:30",
+     "n": 19
+    },
+    {
+     "t": "15:45",
+     "n": 19
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S301",
+    "q": 3,
+    "plan": "07:30-17:30"
+   },
+   {
+    "id": "S302",
+    "q": 3,
+    "plan": "07:30-17:30"
+   },
+   {
+    "id": "S303",
+    "q": 3,
+    "plan": "07:45-16:00"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S301",
+    "in": "07:30",
+    "out": "17:30"
+   },
+   {
+    "id": "S302",
+    "in": "07:31",
+    "out": "17:30"
+   },
+   {
+    "id": "S303",
+    "in": "07:45",
+    "out": "15:03"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F11",
+    "from": "15:00",
+    "to": "16:00",
+    "room": "C1",
+    "countersigned_by": "A.Khan"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 1,
+   "last_audit_outcome": "satisfactory"
+  }
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 19,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 57,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 1
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 19,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 57,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 1
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "file_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "clear",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 76,
+ "deciding": {
+  "below_ratio": "S303 signed out 15:03 against a 16:00 plan leaving two staff for 19 children (three needed), but countersigned floater F11 for room C1 runs 15:00 to 16:00; the 3-minute early departure leaves slight doubt.",
+  "disposition": "Countersigned cover spans the whole 57-minute absence, so ratio is met in every slot and nothing further is needed.",
+  "primary_cause": "The early departure is fully replaced by the signed floater, and the one child above booking is covered, so no cause of a ratio miss is found.",
+  "shortfall_duration": "F11 covers 15:00 to 16:00, which includes the whole gap from S303's 15:03 departure, so no uncovered minutes.",
+  "breach_severity": "Two staff plus the floater give three eligible adults for 19 children, so none are beyond cover, though the one-over-booking overrun adds slight doubt."
+ },
+ "request": "rec-F404-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012256
+}

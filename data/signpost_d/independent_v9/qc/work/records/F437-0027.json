@@ -1,0 +1,112 @@
+{
+ "id": "F437-0027",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v2",
+   "terms": {
+    "variant_accepted": true
+   }
+  },
+  "source": {
+   "version": "v2",
+   "segment_count": 312
+  },
+  "deliverable": {
+   "built_from_version": "v2",
+   "segments_translated": 310
+  },
+  "qa_report": {
+   "flags": 14,
+   "false_positive_marked": 11,
+   "unresolved": {
+    "minor": 0,
+    "major": 0
+   }
+  },
+  "review": null,
+  "history": {
+   "revision_rounds": [
+    "2025-01-08",
+    "2025-01-15"
+   ],
+   "reassignments": 2
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "section_missing",
+  "open_error_profile": "minor",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.41,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 87,
+  "client_waiver": true,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "section_missing",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.41,
+  "number_mismatch_count": 6,
+  "deadline_slack_hours": 87,
+  "client_waiver": true,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "return_for_fix",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "scope_matches": "Versions agree at v2, but segments_translated is 310 against source segment_count 312. That is a small gap that could be a real omission.",
+  "reviewed_in_time": "review is null, so no review is shown. It may exist elsewhere, which keeps a second answer plausible.",
+  "next_step": "The review is missing and 3 of 14 QA flags are unaccounted for, but there is plenty of time. The job should go back for fixes and a review.",
+  "open_severity": "qa unresolved shows 0 minor and 0 major, but 3 flags are not marked false positive and there is no review, so a minor error is conceivable.",
+  "parties_needed": "revision_rounds has 2 entries and reassignments is 2, so the job already involves many people. Translator, reviewer, PM, QA and maybe the client could all be involved."
+ },
+ "request": "rec-F437-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008311
+}

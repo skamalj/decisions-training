@@ -1,0 +1,157 @@
+{
+ "id": "F403-0034",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P3377",
+   "declared_allergens": [
+    "sesame"
+   ],
+   "auto_injector": true,
+   "plan_start": "2025-02-10"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2024-11-05",
+   "expires": "2025-11-05",
+   "allergens": [
+    "sesame"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-01-20",
+   "dishes": [
+    {
+     "dish": "hummus pot",
+     "contains": [
+      "sesame"
+     ],
+     "recipe_version_date": "2025-02-03",
+     "substitute": "bean dip",
+     "spec_checked_on": "2025-02-05"
+    },
+    {
+     "dish": "seeded roll",
+     "contains": [
+      "sesame"
+     ],
+     "recipe_version_date": "2025-01-10",
+     "substitute": "plain roll",
+     "spec_checked_on": "2025-01-15"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": false,
+   "cleaning_log_complete": true,
+   "staff_trained": [
+    "2024-09-20"
+   ],
+   "exceptions": [
+    {
+     "date": "2025-02-01",
+     "signed": "head cook, LA lead",
+     "covers": "shared toaster"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-03-03",
+   "packed_lunch_until": "2025-04-30",
+   "incidents": [
+    {
+     "date": "2025-02-18",
+     "dish": "seeded roll",
+     "contains": [
+      "sesame"
+     ],
+     "note": "served at taster lunch"
+    }
+   ],
+   "messages": [
+    "Parent confirms packed lunches until May."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "shared_equipment",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 44,
+  "packed_lunch_interim": true,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "shared_equipment",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 20,
+  "packed_lunch_interim": true,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "no_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 93,
+ "deciding": {
+  "evidence_allergens_covered": "Both sesame dishes have substitutes, yet the seeded roll with sesame reached the plate on 2025-02-18, so the mapping's effectiveness is questionable. This keeps coverage balanced.",
+  "next_step": "Evidence is current, every dish has a substitute and the shared-equipment weakness is covered by a signed exception. The served sesame roll is the doubt that stops this being certain.",
+  "first_gap_stage": "The evidence is current, the hummus recipe change (2025-02-03) is followed by a spec check (2025-02-05), and the shared toaster is covered by a signed exception. No stage falls short.",
+  "exposure_proximity": "The incident on 2025-02-18 is after plan_start 2025-02-10 and the seeded roll contains sesame, a declared allergen.",
+  "meal_urgency": "Packed lunches run until 2025-04-30, so the first meal is 2025-05-01, more than 20 school days after review on 2025-03-03."
+ },
+ "request": "rec-F403-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014493
+}

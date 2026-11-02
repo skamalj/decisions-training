@@ -1,0 +1,123 @@
+{
+ "id": "F430-0032",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "C",
+     "normal_band": [
+      40,
+      75
+     ],
+     "alarm_limit": 90,
+     "customers_fed": 10040,
+     "partner_id": null
+    }
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 89.8,
+    "unit": "C"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "T1",
+    "photo_ref": "IMG77",
+    "note": "Oil temp high."
+   }
+  ],
+  "history": {
+   "permits": [
+    {
+     "asset": "T1",
+     "valid": "covers 2025-06-02"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_reading_band": "outside_normal near alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 10040,
+  "trivial_discrepancies": 2,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": true,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 14147,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "follow_up": {
+   "clarity": "leaning",
+   "target": "file_closed",
+   "second": null,
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 37,
+ "deciding": {
+  "defect_corroborated": "Note says oil temp high and 89.8 C is high, but the match is partial.",
+  "benign_explanation": "Permit on T1 explicitly covers the round date.",
+  "follow_up": "Permit covers the reading and the defect has a photo; accept as filed.",
+  "limit_deviation": "89.8 C sits a hair under the 90 C alarm limit.",
+  "supply_exposure": "No partner; customers_fed 10040 is just over the 10,000 line."
+ },
+ "request": "rec-F430-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008903
+}

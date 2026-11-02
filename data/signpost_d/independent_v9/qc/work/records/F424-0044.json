@@ -1,0 +1,155 @@
+{
+ "id": "F424-0044",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B-2330",
+   "recipe": "Stout",
+   "brew_date": "2024-06-01",
+   "vessel_id": "FV2",
+   "volume_hl": 22,
+   "yeast_strain": "S-04",
+   "yeast_gen": 1,
+   "og_target": 1.058,
+   "fg_target_min": 1.014,
+   "fg_target_max": 1.018,
+   "strain_max_temp_c": 22
+  },
+  "readings": [
+   {
+    "ts": "2024-06-01",
+    "gravity_sg": 1.058,
+    "temp_c": 18
+   },
+   {
+    "ts": "2024-06-10",
+    "gravity_sg": 1.017,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-06-12",
+    "gravity_sg": 1.016,
+    "temp_c": 19
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-06-01",
+    "type": "pitch",
+    "vessel_id": "FV2",
+    "note": "Pitched S-04 gen 1."
+   },
+   {
+    "ts": "2024-06-11",
+    "type": "blend",
+    "vessel_id": "FV7",
+    "note": "Half of the batch blended into FV7 before QA sign-off; it tasted fine."
+   },
+   {
+    "ts": "2024-06-12",
+    "type": "note",
+    "note": "Slight buttery note, nothing worrying."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B-2330",
+   "abv_pct": 5.4,
+   "micro_plate": {
+    "result": "negative",
+    "plated_on": "2024-06-12"
+   },
+   "diacetyl_mgl": 0.06,
+   "retest": [
+    {
+     "result": "negative"
+    }
+   ]
+  },
+  "release_request": {
+   "vessel_id": "FV2",
+   "volume_hl": 22,
+   "note": "Truck is waiting, need it today."
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "sensory_note_only",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.06,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": true,
+  "release_pressure": "rush",
+  "operator_note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "sensory_note_only",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.06,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": true,
+  "release_pressure": "rush",
+  "operator_note_tone": "reassuring"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (hard_limit_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 123,
+ "deciding": {
+  "terminal_gravity": "Readings 1.017 then 1.016 are both in the 1.014-1.018 band and nearly flat.",
+  "contamination_supported": "Only a faint sensory note; the plate and retest are both negative.",
+  "batch_disposition": "Release_conditional is set in the plan, but the blend into FV7 before sign-off is a hard-limit breach, so the record points to dump.",
+  "deviation_severity": "The blend event into FV7 dated 2024-06-11 precedes any QA sign-off, a hard-limit breach.",
+  "record_discrepancies": "The blend event moves FV7 against a batch FV2 record, which is arguably one discrepancy; the other values agree."
+ },
+ "request": "rec-F424-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006087
+}

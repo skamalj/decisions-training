@@ -1,0 +1,120 @@
+{
+ "id": "F438-0028",
+ "family": "F438",
+ "state": {
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "J44.0"
+   },
+   "comorbidities": [
+    "N17.9",
+    "N18.3",
+    "E11.9"
+   ]
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "J44.1"
+   },
+   "secondary_dx": [
+    "N17.9",
+    "N18.9",
+    "E11.8"
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "DZ65B",
+   "hrg_regrouped": "DZ65B",
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "audit_context": {
+   "queries": [
+    {
+     "target_code": "J44.1",
+     "status": "closed",
+     "response": "contradicts"
+    }
+   ]
+  },
+  "coder_history": {
+   "error_rate": 0.26
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 2,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "answered_contradicts",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.26,
+  "boundary_case": true,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "answered_contradicts",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.26,
+  "boundary_case": true,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "amend_and_regroup",
+   "second": "amend_codes",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "primary_supported": "The closed query on J44.1 contradicts it and the documented principal is J44.0.",
+  "hrg_shift": "Both HRGs are DZ65B, though the primary correction leaves some doubt.",
+  "next_step": "Not yet submitted (submission_date null), so amending is easy; regrouping is arguable because the HRG is the same.",
+  "error_count": "The primary plus N18.9 and E11.8 against documented N18.3 and E11.9 make three errors, at the boundary of four.",
+  "error_severity": "All differences are specificity-level with the same HRG, and whether they count as slips is arguable."
+ },
+ "request": "rec-F438-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009977
+}

@@ -1,0 +1,130 @@
+{
+ "id": "F424-0019",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2414",
+   "vessel_id": "FV1",
+   "volume_hl": 25,
+   "yeast_strain": "WLP001",
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 22
+  },
+  "readings": [
+   {
+    "ts": "2024-08-03",
+    "gravity_sg": 1.0135,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-08-04",
+    "gravity_sg": 1.0125,
+    "temp_c": 19
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-08-04",
+    "vessel_id": "FV1",
+    "note": "Beer tastes great, no concerns."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2414",
+   "diacetyl_mgl": 0.14,
+   "micro_plate": {
+    "result": "positive",
+    "cfu_ml": 150,
+    "plated_on": "2024-08-02"
+   },
+   "retest": [
+    {
+     "result": "negative"
+    }
+   ],
+   "abv_pct": 5.0
+  },
+  "release_request": {
+   "vessel_id": "FV1",
+   "volume_hl": 25.2,
+   "note": "Routine."
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.14,
+  "discrepancy_count": 0,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.14,
+  "discrepancy_count": 2,
+  "decoy_mismatch": false,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "reassuring"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 87,
+ "deciding": {
+  "terminal_gravity": "Both readings are in band, but the last still fell 0.001, so stability is unconfirmed.",
+  "contamination_supported": "Positive plate of 150 cfu/ml against a later negative retest; genuinely two-sided.",
+  "batch_disposition": "Lab complete, retest negative, routine request, gravity in band.",
+  "deviation_severity": "No out-of-spec value, but the unexplained positive plate is arguably minor.",
+  "record_discrepancies": "Volume 25 vs 25.2 is within 0.5 hl; otherwise consistent."
+ },
+ "request": "rec-F424-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005879
+}

@@ -1,0 +1,129 @@
+{
+ "id": "F406-0020",
+ "family": "F406",
+ "state": {
+  "session": {
+   "gallery_code": "GAL-C6",
+   "session_date": "2025-07-19",
+   "open": "11:00",
+   "close": "13:00",
+   "certified_limit": 100
+  },
+  "counts": {
+   "intervals": null,
+   "ticket_scans": 142,
+   "manual_tally_peak": 88,
+   "summary_peak": 90
+  },
+  "variations": [
+   {
+    "ref": "V-315",
+    "gallery_code": "GAL-C6",
+    "valid_from": "2025-07-15",
+    "valid_to": "2025-07-31",
+    "uplift_to": 115,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "gates": [
+    "C-1"
+   ],
+   "maintenance": [
+    {
+     "gate": "C-1",
+     "raised_at": "2025-07-19T08:20",
+     "summary": "readings inflated"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": "done",
+   "notes": [
+    "Quiet session, nothing to report."
+   ]
+  },
+  "history": {
+   "overages_30d": 6
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.9,
+  "intervals_over_limit": 0,
+  "section_mismatch": "none",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": true,
+  "egress_check": "completed",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.69,
+  "intervals_over_limit": 11,
+  "section_mismatch": "none",
+  "variation_present": false,
+  "variation_scope": "wrong_gallery",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": true,
+  "egress_check": "completed",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 80,
+ "deciding": {
+  "variation_applies": "V-315 approved, same gallery, window 07-15 to 07-31 covers 07-19.",
+  "fault_explains_overage": "Ticket on gate C-1, raised 08:20 on the session date before the 11:00 open.",
+  "next_step": "Interval export is null, but summary peak 90, tally 88 and scans are consistent and egress done, so filing is plausible.",
+  "peak_excess": "Summary peak 90 sits right at 90% of limit 100, tally 88.",
+  "intervals_over": "Intervals are null; summary peak of 90 on limit 100 suggests none, but is not conclusive."
+ },
+ "request": "rec-F406-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009814
+}

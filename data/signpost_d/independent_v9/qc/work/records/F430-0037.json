@@ -1,0 +1,156 @@
+{
+ "id": "F430-0037",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "T1",
+     "param": "oil_temp",
+     "unit": "C",
+     "normal": [
+      60,
+      80
+     ],
+     "alarm": 85,
+     "trip": 95,
+     "partner_id": "T2",
+     "customers_fed": 10020
+    },
+    {
+     "id": "T1",
+     "param": "oil_level",
+     "unit": "%",
+     "normal": [
+      40,
+      80
+     ]
+    }
+   ]
+  },
+  "round": {
+   "date": "2025-06-12",
+   "scheduled": [
+    "T1"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 185,
+    "unit": "F"
+   },
+   {
+    "asset_id": "T1",
+    "param": "oil_level",
+    "value": 62,
+    "unit": "%"
+   }
+  ],
+  "defects": [
+   {
+    "id": "D2",
+    "asset_id": "T1",
+    "note": "oil weeping heavily at bushing",
+    "photo_ref": null
+   }
+  ],
+  "history": {
+   "previous_round": null,
+   "load_events": [
+    "T2 load transferred to T1 2025-06-11"
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "T2": "outage"
+   },
+   "outage_plan": [
+    {
+     "asset": "T2",
+     "from": "2025-06-10",
+     "to": "2025-06-14"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": true,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": true,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 10020,
+  "trivial_discrepancies": 4,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "trip",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": false,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": true,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 1722,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "leaning",
+   "target": "hold_return",
+   "second": null,
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "defect_corroborated": "The note says oil is weeping heavily, but T1 oil level is 62%, mid-band, and no photo is attached. The readings do not support the claim.",
+  "benign_explanation": "A load transfer from T2 to T1 the day before could explain the high temperature. But T1 is at alarm level despite it, so a fault remains plausible.",
+  "follow_up": "The defect photo_ref is null, which is a specific missing item, so the report goes back to the inspector first. The alarm-level temperature gives some doubt.",
+  "limit_deviation": "185 F converts to 85 C, exactly the alarm limit, so it is level 2. A reader who does not convert units would read 185 against an 85 limit differently, and a reader who treats the load transfer as explaining it could say level 1.",
+  "supply_exposure": "Partner T2 is on outage, so nothing carries the load. T1 feeds 10,020 customers, just over the 10,000 boundary, which leaves level 3 defensible."
+ },
+ "request": "rec-F430-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009872
+}

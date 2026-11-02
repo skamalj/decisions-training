@@ -1,0 +1,148 @@
+{
+ "id": "F411-0025",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "P901",
+   "type": "private_hire",
+   "review_date": "2025-03-10"
+  },
+  "vehicle": {
+   "odometer_km": 21480,
+   "first_reg": "2024-03-01"
+  },
+  "inspection": {
+   "result_code": "P",
+   "brake_efficiency_pct": 74,
+   "emissions": "ok",
+   "lighting": "ok"
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-02-28",
+    "cover_note_ref": "CN41",
+    "cover_until": "2025-04-30"
+   },
+   {
+    "type": "badge",
+    "expires_on": "2026-01-15"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-05-10",
+     "result": "F",
+     "odometer_km": 3100
+    },
+    {
+     "date": "2024-06-02",
+     "result": "F",
+     "odometer_km": 4200
+    },
+    {
+     "date": "2024-08-14",
+     "result": "F",
+     "odometer_km": 9800
+    },
+    {
+     "date": "2024-09-20",
+     "result": "F",
+     "odometer_km": 21400
+    }
+   ],
+   "replacements": [
+    {
+     "type": "instrument_cluster",
+     "date": "2024-11-05",
+     "old_km": 21430,
+     "new_km": 21430
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "not_started",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 1
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "not_started",
+  "deadline_passed": true,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 1
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 84,
+ "deciding": {
+  "odometer_consistent": "The reading rises only 80 km in six months after a cluster replacement on a one-year-old vehicle that had reached 21,400 km by September. The history is otherwise ascending and there is no drop, so doubt remains.",
+  "next_step": "The defects list is empty, brake efficiency is 74, the insurance is covered by a cover note valid until 2025-04-30, and the badge is in date.",
+  "inspection_outcome": "The defects list is empty and the result code is P; the earlier F results are history only.",
+  "document_gaps": "Insurance expired 2025-02-28 but cover note CN41 runs to 2025-04-30, after the review date, so it counts as in date; the badge is valid.",
+  "outstanding_severity": "There are no defects in the list, so none are outstanding."
+ },
+ "request": "rec-F411-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012187
+}

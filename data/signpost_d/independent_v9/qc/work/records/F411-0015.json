@@ -1,0 +1,122 @@
+{
+ "id": "F411-0015",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "review_date": "2025-05-01"
+  },
+  "vehicle": {
+   "odometer_km": 40500
+  },
+  "defects": [
+   {
+    "grade": "minor",
+    "rectify_by": "2025-04-20",
+    "repaired_on": "2025-04-10",
+    "retest_on": "2025-04-12",
+    "retest_result": "pass"
+   },
+   {
+    "grade": "advisory",
+    "repaired_on": "2025-04-10",
+    "retest_on": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-04-01"
+   },
+   {
+    "type": "mot_cert",
+    "expires_on": "2025-03-15"
+   }
+  ],
+  "history": [
+   {
+    "odometer_km": 28000
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 3,
+  "vehicle_age_years": 2
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "retest_passed",
+  "deadline_passed": true,
+  "documents_missing_count": 3,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "large",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 3,
+  "vehicle_age_years": 2
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "minor_fail",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "odometer_consistent": "Current 40500 km is above the history reading of 28000 km, no drop.",
+  "next_step": "Defects are repaired and retested and odometer is sound, favouring renewal, but two expired documents leave some doubt.",
+  "inspection_outcome": "The worst defect item is graded minor, so it is a minor fail with nothing major.",
+  "document_gaps": "Insurance (2025-04-01) and mot_cert (2025-03-15) both expired before the 2025-05-01 review date with no cover notes.",
+  "outstanding_severity": "The minor item has a passing retest, while the advisory was repaired but has no retest; whether it counts as outstanding is open between level 0 and 1."
+ },
+ "request": "rec-F411-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009234
+}

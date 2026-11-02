@@ -1,0 +1,342 @@
+{
+ "id": "F412",
+ "domain": "food hygiene inspection follow-ups",
+ "role": "Food safety follow-up officer in a district council environmental health team",
+ "setting": "After a food hygiene inspection finds contraventions, the operator is given deadlines to put them right. A follow-up officer reviews each case file one at a time. The file holds the premises details, the original inspection's contravention list, the revisit findings, correspondence with the operator (extension requests, replies and submitted evidence) and the compliance history including complaints and samples. The officer decides whether the case can close, what happens next, how overdue and how serious the remaining failings are, and which hazard area the worst open item falls in.",
+ "questions": {
+  "all_remedied": {
+   "type": "noul",
+   "instructions": "Every contravention from the inspection is verified as remedied at revisit.",
+   "criteria": {
+    "true": "Each listed item confirmed remedied by observation or verified evidence",
+    "false": "Any item open, unchecked, unverified or contradicted elsewhere"
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should happen with this follow-up case now?",
+   "criteria": {
+    "close_case": "No further action; case closed with compliance confirmed.",
+    "request_evidence": "Ask operator for one specific missing proof before deciding.",
+    "issue_notice": "Serve improvement notice with fixed deadlines for open items.",
+    "refer_lead": "Pass to lead officer for prohibition or prosecution review."
+   }
+  },
+  "worst_hazard": {
+   "type": "choice",
+   "instructions": "Which hazard area does the most serious open item concern?",
+   "criteria": {
+    "no_open_item": "Every contravention closed; nothing remains open to classify.",
+    "records_only": "Worst open item is paperwork: HACCP, training or logs.",
+    "premises_fabric": "Worst open item is structure, equipment or cleaning standard.",
+    "food_handling": "Worst open item is temperature, cross-contamination or pest control."
+   }
+  },
+  "overdue_extent": {
+   "type": "score",
+   "instructions": "How far past due is the most overdue open item?",
+   "criteria": [
+    "No open item is past its due date",
+    "Most overdue open item is 1 to 14 days late",
+    "Most overdue open item is 15 to 42 days late",
+    "Most overdue open item is over 42 days late"
+   ]
+  },
+  "residual_risk": {
+   "type": "score",
+   "instructions": "How serious is the public health risk still remaining?",
+   "criteria": [
+    "Negligible: no open items of any kind remain",
+    "Low: only records or premises fabric items remain open",
+    "Elevated: one temperature, contamination or pest item, no adverse sample",
+    "Serious: 2+ such items, or one with adverse sample"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "contravention_count",
+   "description": "Number of contraventions listed in the original inspection.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 1,
+   "max": 7,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "resolution_share",
+   "description": "Proportion of listed items actually remedied by the revisit, before evidence is considered.",
+   "kind": "categorical",
+   "values": [
+    "all_resolved",
+    "most_resolved",
+    "about_half",
+    "few_resolved"
+   ],
+   "weights": [
+    0.3,
+    0.3,
+    0.25,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "worst_open_area",
+   "description": "Hazard area of the most serious item still open after revisit and evidence.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "records",
+    "fabric_cleaning",
+    "food_handling"
+   ],
+   "weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S4"
+   ]
+  },
+  {
+   "name": "food_handling_open_count",
+   "description": "Number of open temperature, contamination or pest items (0 when worst_open_area is not food_handling).",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S1"
+   ]
+  },
+  {
+   "name": "cross_section_mismatch",
+   "description": "Unannounced disagreement between sections about an item's identity, date or status.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "trivial_format",
+    "ref_mismatch",
+    "date_conflict",
+    "reply_contradicts_revisit"
+   ],
+   "weights": [
+    0.3,
+    0.2,
+    0.15,
+    0.15,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "days_past_original_due",
+   "description": "Revisit date minus original due date of the most overdue open item; negative means not yet due.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": -20,
+   "max": 90,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "extension_agreed",
+   "description": "Written extension agreed for the most overdue open item, moving its effective due date later.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S1"
+   ]
+  },
+  {
+   "name": "benign_explanation",
+   "description": "Documented innocent cause for an alarming finding, e.g. engineer job sheet for chiller fault or pest contractor visit already booked.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "operator_evidence",
+   "description": "State of evidence the operator sent for items not seen remedied at revisit.",
+   "kind": "categorical",
+   "values": [
+    "none_submitted",
+    "submitted_verified",
+    "submitted_unverified",
+    "submitted_partial"
+   ],
+   "weights": [
+    0.3,
+    0.25,
+    0.25,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S5"
+   ]
+  },
+  {
+   "name": "adverse_sample",
+   "description": "Latest food or swab sample since inspection returned unsatisfactory.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "complaint_since_inspection",
+   "description": "Public complaint received since inspection and how it relates to open items.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "unrelated",
+    "related_unsubstantiated",
+    "related_substantiated"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "prior_enforcement_count",
+   "description": "Formal notices or warnings served on the premises in the past five years.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "boundary_case",
+   "description": "Values placed on scale edges: exactly 14 or 42 days late, extension agreed only verbally, or item marked partly remedied.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S6",
+    "S4"
+   ]
+  },
+  {
+   "name": "reassuring_note_decoy",
+   "description": "Free text asserting full compliance or good progress regardless of the actual item statuses.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.4,
+   "skills": [
+    "S5",
+    "S1"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "premises",
+   "description": "Premises reference, trading name, business type, risk band and food business operator name."
+  },
+  {
+   "name": "inspection",
+   "description": "Inspection date, officer initials and list of contraventions with ref, area code, requirement text and due_date."
+  },
+  {
+   "name": "revisit",
+   "description": "Revisit date, per-item findings (ref, status, observed) and a one-sentence officer_note."
+  },
+  {
+   "name": "correspondence",
+   "description": "Extension requests with agreed flag and new date, operator_reply text and evidence items with verified flag."
+  },
+  {
+   "name": "history",
+   "description": "Prior hygiene ratings, enforcement actions, complaints with one-line summary, and sample results since inspection."
+  }
+ ],
+ "rendering_notes": "inspection.contraventions has contravention_count entries, each with ref (e.g. C3), area code (REC, FAB, CLN, TMP, XCN, PST) and due_date. Map REC to records, FAB/CLN to premises fabric, TMP/XCN/PST to food handling; the worst open area must be inferred from codes, never stated. revisit.items[] status values: remedied, part_remedied, not_remedied, not_checked; resolution_share and worst_open_area drive which items are not remedied, with food_handling_open_count fixing how many TMP/XCN/PST items stay open. An item not seen at revisit counts as remedied only if correspondence.evidence lists it with verified true; operator_evidence sets this (submitted_unverified gives verified false or null; submitted_partial covers only some open refs). days_past_original_due appears only as inspection due_date versus revisit.date; when extension_agreed is true, correspondence.extensions holds the ref with agreed true and a later new_due_date, so overdue must be measured against it; when false the request may still appear with agreed false or null as a decoy. cross_section_mismatch: trivial_format uses e.g. 'c3' vs 'C3' or date written differently but same day; ref_mismatch has revisit or evidence citing a ref absent from inspection; date_conflict gives evidence dated after revisit or extension date before original due; reply_contradicts_revisit has operator_reply claiming an item fixed that revisit marks not_remedied. benign_explanation appears as an evidence item or history entry (engineer job sheet, pest contractor booking) that explains but does not remedy the finding. adverse_sample appears in history.samples with result 'unsatisfactory' and a ref link; complaint_since_inspection appears in history.complaints with a one-line summary and outcome field. prior_enforcement_count is the length of history.enforcement. boundary_case sets overdue days to exactly 14 or 42, extensions noted as 'agreed by phone' with agreed null, or part_remedied statuses. reassuring_note_decoy puts phrases like 'all works completed' or 'good progress noted' in officer_note or operator_reply irrespective of item statuses. Free-text fields are officer_note, operator_reply and complaint summary only. No field may state overall compliance, risk level, overdue band, recommended action or case outcome; unknown values are null.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_evidence"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.16776
+}

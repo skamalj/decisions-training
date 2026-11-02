@@ -1,0 +1,144 @@
+{
+ "id": "F414-0025",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SW-310",
+   "equip_type": "swing",
+   "crit_fall_height_m": 1.6,
+   "surf_type": "bark"
+  },
+  "inspection": {
+   "insp_date": "2025-08-04",
+   "insp_grade": "annual_main",
+   "fall_height_m": 1.6,
+   "surf_type_found": "bark",
+   "surf_depth_mm": 150,
+   "surf_req_table": [
+    {
+     "band": "<=2.0",
+     "type": "bark",
+     "min_depth_mm": 250
+    }
+   ],
+   "chain_wear_pct": 8,
+   "probe_results": [],
+   "findings": [
+    {
+     "defect_code": "PNT-02",
+     "component_id": "C2",
+     "injury_mech": "cosmetic"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "SW-310",
+    "component_id": "C2",
+    "defect_ref": "D-5",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 1
+  },
+  "history": [
+   {
+    "date": "2024-08-02",
+    "grade": "annual_main",
+    "defect_refs": []
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "swing",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -100.0,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 1
+ },
+ "factors_sampled": {
+  "equipment_type": "swing",
+  "register_mismatch": "moderate",
+  "surfacing_depth_margin_mm": -97.67,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 2,
+  "work_orders_closed_fraction": 0.97,
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 1
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 62,
+ "deciding": {
+  "prior_defects_cleared": "The previous visit raised no defect_refs, but the open order W1 is a possible carry-over.",
+  "surfacing_adequate": "150 mm bark against a 250 mm minimum.",
+  "asset_disposition": "A single cosmetic finding and chain wear of 8%, with no hazard.",
+  "remedial_progress": "The only order W1 is open and none is closed.",
+  "hazard_severity": "The only finding is PNT-02, cosmetic."
+ },
+ "request": "rec-F414-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012927
+}

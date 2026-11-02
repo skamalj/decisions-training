@@ -1,0 +1,127 @@
+{
+ "id": "F403-0016",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "milk"
+   ],
+   "plan_start": "2025-01-13"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-01-01",
+   "allergens": [
+    "milk",
+    "egg"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-01-06",
+   "dishes": [
+    {
+     "dish": "mac cheese",
+     "contains": [
+      "milk"
+     ],
+     "substitute": "oat pasta"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true
+  },
+  "history": {
+   "review_date": "2025-02-03",
+   "packed_lunch_until": null,
+   "incidents": [
+    {
+     "date": "2025-01-20",
+     "dish": "mac cheese",
+     "note": "oat version intended; label unchecked"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 0,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 28,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "no_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "evidence_allergens_covered": "Evidence lists egg, which has no mapped dish or substitution; only milk is mapped.",
+  "next_step": "Evidence is current, the only mapped dish is substituted and controls are verified; the incident used the intended oat substitute, so approval is leaning but doubtful.",
+  "first_gap_stage": "Clinician letter is unexpired, the mapped dish has a substitute, and equipment and cleaning log are verified.",
+  "exposure_proximity": "An incident after plan_start involved a milk dish, which suggests Reached, but the dish was substituted and only the label is unchecked, which supports Open instead.",
+  "meal_urgency": "plan_start 2025-01-13 is before review_date 2025-02-03 and there is no packed lunch deferral, so the pupil is already eating."
+ },
+ "request": "rec-F403-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011976
+}

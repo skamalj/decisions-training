@@ -1,0 +1,145 @@
+{
+ "id": "F432-0041",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E14",
+   "risk_cat": 1,
+   "roster": [
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+   ],
+   "active_vet_case": true
+  },
+  "shift": {
+   "opening_count": 4,
+   "closing_count": 4,
+   "end": "18:00"
+  },
+  "movements": [],
+  "feeding": {
+   "items": [
+    {
+     "sheet_g": 5000,
+     "offered_g": 5000,
+     "leftover_g": 4500
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched_time": "10:00",
+    "logged": true,
+    "entry_time": "10:03",
+    "beh": [
+     "LAME",
+     "STER"
+    ]
+   },
+   {
+    "sched_time": "13:00",
+    "logged": false,
+    "cctv_reviewed": true,
+    "reviewer_id": "K7"
+   },
+   {
+    "sched_time": "16:00",
+    "logged": false
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "A",
+     "time": null
+    }
+   ],
+   "ticket_state": "repaired",
+   "retest_due": "2025-03-12"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "repaired_retest_pending",
+  "lock_check_timing": "absent",
+  "intake_ratio": 0.1,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 2,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 2,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_1_high"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "unexplained_off_by_one",
+  "barrier_fault": "repaired_retest_pending",
+  "lock_check_timing": "absent",
+  "intake_ratio": 0.1,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 1,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 2,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_1_high"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "keeper_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 26,
+ "deciding": {
+  "count_reconciles": "opening_count 4 equals closing_count 4 and movements is empty, so it reconciles; only mild doubt remains.",
+  "secure_at_close": "The only close_check door has time null (no lock check) and the barrier ticket is merely repaired with a retest still due.",
+  "next_step": "The unlocked door and pending retest on a cat 1 enclosure call for a keeper on site now, though the unlogged rounds leave some doubt.",
+  "intake_shortfall": "Intake is 5000-4500=500 g of 5000 g sheet, 10%, which is below 25%; no fast or scatter flag softens it.",
+  "missed_rounds": "Two rounds have logged false; the 13:00 one has CCTV review by K7, so the count is 1 or 2 depending on whether CCTV counts as an entry."
+ },
+ "request": "rec-F432-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011057
+}

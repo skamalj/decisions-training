@@ -1,0 +1,144 @@
+{
+ "id": "F421-0030",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P5",
+   "service": "express",
+   "fragile": false,
+   "contents": "espresso machine",
+   "qty": 1,
+   "weight_kg": 7.5,
+   "declared_value_gbp": 2121.86
+  },
+  "handling_events": [
+   {
+    "ts": "2024-05-10T07:00",
+    "site": "HUB1",
+    "code": "OUT",
+    "exc": "ADDR"
+   },
+   {
+    "ts": "2024-05-10T10:20",
+    "site": "HUB2",
+    "code": "OUT",
+    "exc": "WET-label"
+   },
+   {
+    "ts": "2024-05-10T13:00",
+    "site": "HUB3",
+    "code": "OUT",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-05-10T16:40",
+    "site": "DEP",
+    "code": "INB",
+    "exc": null
+   },
+   {
+    "ts": "2024-05-10T18:15",
+    "site": "DEP",
+    "code": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": null,
+   "inspector": null,
+   "observed_item": "espresso machine",
+   "qty_found": 1,
+   "weight_kg": 7.5,
+   "condition": "awaiting full inspection",
+   "repair_est_gbp": null
+  },
+  "claim": {
+   "claim_id": "C5",
+   "claimed_gbp": 88.05,
+   "item_desc": "espresso machine",
+   "packaging_desc": "double-wall box with foam",
+   "submitted": "2024-05-12"
+  },
+  "notes": [
+   "Parcel logged as damaged; inspection booked for next shift."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "none",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 5.0,
+  "declared_value": 2121.86,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": "3 (two decoys, one DMG)",
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 0.83
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 60.58,
+  "declared_value": 2121.86,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 0.83
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 133,
+ "deciding": {
+  "depot_fault": "HUB3 DMG upstream, but a clean DEP INB and a DEP SORT DMG after it. Balanced, leaning not depot.",
+  "contents_match": "Observed item, quantity and weight all equal the manifest; claim item matches too.",
+  "next_step": "inspected_ts and repair_est_gbp are null, so the inspection result is the missing item to request.",
+  "loss_share": "The claim of 88.05 over a declared 2121.86 is about 4.1%, and the repair estimate divided by the 0.83 gap is about 5%. That sits at the boundary of levels 0 and 1.",
+  "parties_needed": "An inspector may finish alone, or a second team such as claims or repack may be needed. The record does not decide between one and two."
+ },
+ "request": "rec-F421-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008944
+}

@@ -1,0 +1,136 @@
+{
+ "id": "F437-0022",
+ "family": "F437",
+ "state": {
+  "job": {
+   "job_id": "J-2086",
+   "target_locale": "fr-FR",
+   "source_version": "v2",
+   "glossary_version": "g3",
+   "due_at": "2025-05-09T16:00"
+  },
+  "source": {
+   "version": "v2",
+   "segment_count": 96,
+   "word_count": 1510,
+   "repetitions": {
+    "words": 40
+   }
+  },
+  "deliverable": {
+   "built_from_version": "v2",
+   "target_locale": "fr-FR",
+   "segments_translated": 96,
+   "word_count": 1504,
+   "glossary_version_used": null,
+   "delivered_at": "2025-05-08T23:00"
+  },
+  "qa_report": {
+   "flags": 11,
+   "false_positive_marked": 2,
+   "number_mismatches": [],
+   "unresolved": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0
+   }
+  },
+  "review": {
+   "signed_off": true,
+   "completed_at": "2025-05-08T20:00",
+   "errors": []
+  },
+  "history": {
+   "revision_rounds": [
+    {
+     "round": 1
+    }
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.18,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 17,
+  "client_waiver": false,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "in_progress",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.18,
+  "number_mismatch_count": 3,
+  "deadline_slack_hours": 17,
+  "client_waiver": false,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 49,
+ "deciding": {
+  "scope_matches": "Versions and segments match (96); word count differs by 6 words, explained by repetitions, though glossary_version_used is null.",
+  "reviewed_in_time": "review.signed_off true, completed_at 2025-05-08T20:00 before delivered_at 23:00.",
+  "next_step": "Sign-off done, QA unresolved all zero, delivered 17h before due.",
+  "open_severity": "qa_report.unresolved all zero and review.errors empty.",
+  "parties_needed": "Nothing open to resolve; no one needs to act."
+ },
+ "request": "rec-F437-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010678
+}

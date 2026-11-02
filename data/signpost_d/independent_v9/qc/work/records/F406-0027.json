@@ -1,0 +1,119 @@
+{
+ "id": "F406-0027",
+ "family": "F406",
+ "state": {
+  "session": {
+   "gallery_code": "G4",
+   "session_date": "2025-05-10",
+   "certified_limit": 36
+  },
+  "counts": {
+   "gates": [
+    "N1"
+   ],
+   "intervals": [
+    {
+     "start": "14:00",
+     "in": 205,
+     "out": 169,
+     "occupancy": 36
+    }
+   ],
+   "manual_tally_peak": 40,
+   "ticket_scans": 212
+  },
+  "variations": [
+   {
+    "gallery_code": "G4",
+    "valid_to": "2025-05-09",
+    "uplift_to": 45
+   }
+  ],
+  "equipment": {
+   "tickets": [
+    {
+     "gate": "N1",
+     "raised_at": "2025-05-10T08:00"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "true_peak_ratio": "1.11 by tally, 1.00 by counter",
+  "intervals_over_limit": "0 by counter, 1 by tally",
+  "section_mismatch": "scans_vs_counter_minor",
+  "variation_present": true,
+  "variation_scope": "date_outside_validity",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "not_recorded",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.7,
+  "intervals_over_limit": 11,
+  "section_mismatch": "scans_vs_counter_minor",
+  "variation_present": false,
+  "variation_scope": "date_outside_validity",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "other_gate",
+  "interval_export_missing": false,
+  "egress_check": "not_recorded",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": true
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "amend_and_file",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "variation_applies": "Variation valid_to 2025-05-09 ends the day before session_date 2025-05-10.",
+  "fault_explains_overage": "Ticket on gate N1, the counting gate, raised 08:00 on the session date before the session.",
+  "next_step": "Scans 212 vs counter-implied entries 205 is a small gap of about 3%, a minor discrepancy to annotate and file.",
+  "peak_excess": "Tally 40 vs limit 36 is about 111%, near the 10% line, while the counter peak sits at 36.",
+  "intervals_over": "Counter interval occupancy 36 equals the limit with none above, but the tally of 40 suggests one over."
+ },
+ "request": "rec-F406-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01046
+}

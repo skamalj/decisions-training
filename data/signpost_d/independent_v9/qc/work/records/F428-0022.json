@@ -1,0 +1,140 @@
+{
+ "id": "F428-0022",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "MG-31",
+   "gate_type": "mitre",
+   "rated_closure_s": 200,
+   "clear_width": 6.0,
+   "clear_width_unit": "m"
+  },
+  "inspection": {
+   "asset_id": "MG-13",
+   "insp_date": "2025-02-10",
+   "width_mm": 5200,
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-02-10",
+    "closure_s": 228,
+    "leakage_l_min": 4,
+    "leakage_limit_l_min": 15,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D2",
+    "component": "leaf",
+    "grade": 1,
+    "status": "open",
+    "first_seen": "2024-11-02"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W31",
+     "component": "motor",
+     "defect_code": "D2",
+     "grade_raised": 1,
+     "rated_closure_s": 180,
+     "status": "scheduled",
+     "retest_insp_id": null
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": true,
+   "forecast": {
+    "peak_date": "2025-02-25"
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 1.14,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 3,
+  "mismatch_location": "width_units",
+  "test_status": "passed_current",
+  "repair_progress": "none_needed",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 15,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 1.14,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 3,
+  "mismatch_location": "width_units",
+  "test_status": "passed_current",
+  "repair_progress": "none_needed",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 15,
+  "borderline_case": false,
+  "outage_beyond_permit": true
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_engineer",
+   "second": "raise_repair",
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (outage_beyond_permit = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 25,
+ "deciding": {
+  "closure_test_valid": "Result is labelled pass, but closure_s 228 exceeds the 200 s rated time, so the gate does not seal within limits.",
+  "next_step": "Late closure (228 vs 200 s) with flood alert active and peak in 15 days: escalation is plausible, but a repair order is also defensible, and one is already scheduled.",
+  "defect_class": "Only open defect is grade 1 (leaf), so no open defect above grade 1.",
+  "section_discrepancies": "Asset id MG-31 vs MG-13; register width 6.0 m vs inspection 5200 mm; rated_closure_s 200 in register vs 180 in the work order. Three disagreements.",
+  "flood_risk": "Closure 228 s is later than the 200 s rating, and there is no grade 4 defect, no failure to close and no outage, so high."
+ },
+ "request": "rec-F428-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009946
+}

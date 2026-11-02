@@ -1,0 +1,149 @@
+{
+ "id": "F426-0009",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B31",
+   "crop": "plum",
+   "planted_area_ha": 3,
+   "lot_id": "L309"
+  },
+  "applications": [
+   {
+    "app_id": "A1",
+    "date": "2024-01-10",
+    "product_code": "FNG40",
+    "qty_applied": 4.5,
+    "qty_unit": "L",
+    "area_treated_ha": 3
+   },
+   {
+    "app_id": "A2",
+    "date": null,
+    "product_code": "FNG40",
+    "qty_applied": 4.5,
+    "qty_unit": "L",
+    "area_treated_ha": 3
+   },
+   {
+    "app_id": "A3",
+    "date": "2024-01-24",
+    "product_code": "FNG40",
+    "qty_applied": 4.5,
+    "qty_unit": "L",
+    "area_treated_ha": 3
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "FNG40",
+    "max_rate_per_ha": 2.0,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "max_apps_per_season": 4,
+    "approved_crops": [
+     "plum"
+    ]
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "SP-4",
+   "calibration_valid_to": "2024-12-01",
+   "nozzle_dev_pct": 3
+  },
+  "harvest": {
+   "lot_id": "L309",
+   "block_id": "B31",
+   "first_pick_date": "2024-04-08",
+   "residue_test": {
+    "sampled": true,
+    "result_date": "2024-04-10",
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "app_date_missing",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 3,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "app_date_missing",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "sprayer_id_format",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "expired_under_30d_low_dev",
+  "missing_item": "product_ref_entry_missing",
+  "season_count_excess": false,
+  "off_label_crop": true,
+  "num_applications": 3,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "rate_overrun": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 64,
+ "deciding": {
+  "phi_cleared": "A2 has a null date, so strictly its interval cannot be confirmed; it sits between dated apps of 2024-01-10 and 2024-01-24, so doubt is small.",
+  "next_step": "A2 falls between the January dated apps, picking began in April, and the residue result is below limit, so nothing practical stands in the way of release.",
+  "finding_class": "Codes, crop, sprayer and dose all agree; the null date is the only blemish and no discrepancy of substance appears.",
+  "reversal_time": "Plain acceptance of a routine record is undone within a day.",
+  "rate_overrun": "4.5 L over 3 ha is 1.5 L/ha against the 2.0 maximum, so every app is under the limit."
+ },
+ "request": "rec-F426-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01283
+}

@@ -1,0 +1,150 @@
+{
+ "id": "F404-0001",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "B2",
+   "date": "2024-05-14",
+   "age_band": "under_2",
+   "ratio_rule": "1:3",
+   "places": 12
+  },
+  "children": {
+   "booked": 9,
+   "slots": [
+    {
+     "from": "13:03",
+     "to": "14:20",
+     "signed_in": 9
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S12",
+    "qual": 3,
+    "counts": true
+   },
+   {
+    "id": "S14",
+    "qual": 3,
+    "counts": true
+   },
+   {
+    "id": "S19",
+    "qual": 3,
+    "counts": true
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S12",
+    "in": "07:30",
+    "out": "13:03"
+   },
+   {
+    "id": "S14",
+    "in": "07:30",
+    "out": "13:03"
+   },
+   {
+    "id": "S19",
+    "in": "07:45",
+    "out": "17:00",
+    "check_status": "pending"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F4",
+    "room": "B9",
+    "from": "13:03",
+    "to": "14:20",
+    "countersigned_by": "J. Roe"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 0
+  }
+ },
+ "factors": {
+  "age_band": "under_2",
+  "children_peak": 9,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 0,
+  "shortfall_minutes": 77,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 0
+ },
+ "factors_sampled": {
+  "age_band": "under_2",
+  "children_peak": 9,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 0,
+  "shortfall_minutes": 77,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "partial_day",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 0
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "escalate_notify",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (zero_eligible_adult_slot = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 121,
+ "deciding": {
+  "below_ratio": "Slot 13:03-14:20 has 9 children needing 3 staff; S12 and S14 signed out at 13:03 and S19 is pending, so no eligible staff remain. The only cover entry is for room B9.",
+  "disposition": "The 77-minute gap with no eligible adult and no cover for this room exceeds sixty minutes and is critical, so it is referred on.",
+  "primary_cause": "Staff signed out far earlier than the rota, with S19 unchecked, so this is really a staff shortfall; the plan's none_found lean cannot be honestly supported. Children match bookings (9 of 9).",
+  "shortfall_duration": "Gap window 13:03 to 14:20 is 77 minutes, over sixty.",
+  "breach_severity": "Nine children with zero eligible staff in the slot, so none are covered; the zero-eligible slot puts this at the top level despite the plan's balance."
+ },
+ "request": "rec-F404-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011484
+}

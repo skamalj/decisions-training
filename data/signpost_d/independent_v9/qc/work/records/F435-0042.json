@@ -1,0 +1,156 @@
+{
+ "id": "F435-0042",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E212",
+   "zone_id": "B2",
+   "zone_type": "balcony",
+   "doors_open": "2025-06-14T19:00",
+   "check_filed_at": "2025-06-14T20:15",
+   "phase": "live"
+  },
+  "licence": {
+   "base_limit": 500,
+   "variation": {
+    "ref": "V3",
+    "new_limit": 560,
+    "status": "pending",
+    "approved_on": null
+   },
+   "stewards_required": 19,
+   "exit_routes": [
+    "n",
+    "s",
+    "e",
+    "w"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 500,
+   "issued": 440,
+   "comps_included": 20,
+   "scanned_in": 436
+  },
+  "ingress": {
+   "device_id": "D14",
+   "device_status": "fault_logged",
+   "raw_peak": 542,
+   "peak_at": "2025-06-14T19:45",
+   "manual_recount": {
+    "count": 502,
+    "at": "2025-06-14T19:50"
+   }
+  },
+  "stewarding": {
+   "rostered": 16,
+   "signed_in": 14,
+   "relief": {
+    "called_at": "2025-06-14T19:20",
+    "eta_min": 25
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "n",
+    "checked_at": "2025-06-14T18:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "s",
+    "checked_at": "2025-06-14T18:35",
+    "status": "clear"
+   },
+   {
+    "route_id": "e",
+    "checked_at": "2025-06-14T18:40",
+    "status": "clear"
+   },
+   {
+    "route_id": "w",
+    "checked_at": "2025-06-14T19:00",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "balcony",
+  "event_phase": "live",
+  "occupancy_ratio": 1.004,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.08,
+  "manual_recount_present": true,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 0.88,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.26,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "balcony",
+  "event_phase": "live",
+  "occupancy_ratio": 0.91,
+  "counter_status": "ok",
+  "counter_inflation": 0.08,
+  "manual_recount_present": true,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 0.88,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.26,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "conditional_sign_off",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "counter_fault",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 89,
+ "deciding": {
+  "verified_exceedance": "Variation is pending, so the effective limit is the base 500. The device is faulty, so the recount of 502 is the verified figure. That is only 2 over, 0.4%, and a reviewer could treat that as within tolerance.",
+  "disposition": "The overage is marginal and relief stewards are on their way. This points to approval with the minor gaps logged, though a verified exceedance could argue for something firmer.",
+  "discrepancy_source": "Tickets 440 are under the limit and the limit used, 500, matches the effective limit. Only the fault_logged raw_peak of 542 reads clearly over.",
+  "steward_shortfall": "14 signed in against 19 required is about 26% short, just past the 25% boundary.",
+  "unconfirmed_exits": "Route w was checked clear at 19:00, exactly doors time. It is either just in time or not before doors, so the count is 0 or 1."
+ },
+ "request": "rec-F435-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015789
+}

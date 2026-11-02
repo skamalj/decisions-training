@@ -1,0 +1,123 @@
+{
+ "id": "F402-0025",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "soon",
+   "site": "lumbar",
+   "onset": "2023-07-10",
+   "received": "2025-06-02"
+  },
+  "clinical": {
+   "dx": "neuro_myelopathy",
+   "red_flags": [
+    "saddle_anaesthesia_bladder"
+   ],
+   "neuro_signs": {
+    "progression": "stable"
+   },
+   "anticoagulant": false,
+   "fi": 20.4
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-05-14",
+    "result": "no_sinister"
+   }
+  ],
+  "gp_record": {
+   "meds": [
+    "apixaban"
+   ],
+   "falls_3m": 1,
+   "reviews": [
+    "2025-05-20 urgent"
+   ]
+  },
+  "history": {
+   "episodes": 3,
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "saddle_anaesthesia_bladder",
+  "red_flag_mitigated": true,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "neurological",
+  "symptom_duration_weeks": 98,
+  "function_index": 20.41,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 1,
+  "post_op_days": 59,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "saddle_anaesthesia_bladder",
+  "red_flag_mitigated": true,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "neurological",
+  "symptom_duration_weeks": 98,
+  "function_index": 20.41,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 1,
+  "post_op_days": 59,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_info",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "specialist_rehab",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "red_flag_unresolved": "MRI no_sinister within 8 weeks plus a dated urgent GP review explain the flag.",
+  "next_step": "Anticoagulant false in clinical vs apixaban in GP meds needs clarifying before triage.",
+  "pathway": "Neurological diagnosis with function index 20.4 requires specialist rehab.",
+  "reversal_time": "Booking or triage can be undone within a day, though a one-week reversal is arguable.",
+  "clinical_urgency": "Stable signs, reviewed flag and a 98-week course allow waiting, though the severe function index leaves six weeks plausible."
+ },
+ "request": "rec-F402-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00483
+}

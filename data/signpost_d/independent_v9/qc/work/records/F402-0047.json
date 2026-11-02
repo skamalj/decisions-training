@@ -1,0 +1,142 @@
+{
+ "id": "F402-0047",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-2287",
+   "received": "2025-04-14",
+   "priority": "routine",
+   "site": {
+    "part": "hip",
+    "side": "R"
+   },
+   "onset": "2023-07-10"
+  },
+  "patient": {
+   "dob": "1958-03-02",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx": "Z96.64",
+   "red_flags": [
+    "night_pain_weight_loss"
+   ],
+   "function_index": 28.8,
+   "surgery_date": "2025-03-01",
+   "weight_bearing": "full"
+  },
+  "gp_record": {
+   "first_presented": "2023-07-10",
+   "falls_3m": 2,
+   "weight_change_kg": -1.5
+  },
+  "attachments": [
+   {
+    "type": "op_protocol",
+    "date": "2025-01-20",
+    "side": "R"
+   },
+   {
+    "type": "MRI",
+    "date": "2025-02-05",
+    "side": "R",
+    "result": "no_sinister"
+   }
+  ],
+  "history": {
+   "episodes": [
+    {
+     "d": "2024-05-01"
+    },
+    {
+     "d": "2024-08-10"
+    },
+    {
+     "d": "2024-11-02"
+    },
+    {
+     "d": "2025-01-08"
+    }
+   ],
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": false,
+  "mismatch_field": "surgery_date",
+  "mismatch_magnitude": "major",
+  "missing_item": "none",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 92,
+  "function_index": 28.8,
+  "prior_episodes_12m": 4,
+  "referrer_priority": "routine",
+  "falls_last_3m": 2,
+  "post_op_days": 44,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": false,
+  "mismatch_field": "surgery_date",
+  "mismatch_magnitude": "major",
+  "missing_item": "none",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 92,
+  "function_index": 28.8,
+  "prior_episodes_12m": 4,
+  "referrer_priority": "routine",
+  "falls_last_3m": 2,
+  "post_op_days": 44,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_lead",
+   "second": "book_amended",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "self_management",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 95,
+ "deciding": {
+  "red_flag_unresolved": "The flag is listed, and the only MRI is about 9 weeks old, just outside the 8-week window, though it shows no_sinister and weight change is only -1.5 kg.",
+  "next_step": "Surgery date 2025-03-01 against op_protocol 2025-01-20 is a major mismatch, and the flag is not clearly explained, so escalate or book with amendment are both defensible.",
+  "pathway": "Self-management was tried and the problem is long-standing with only mild weight change; post-op status and function index 28.8 cast some doubt.",
+  "reversal_time": "Mostly a scheduling or pathway decision correctable within days, with some residual doubt from the unexplained flag.",
+  "clinical_urgency": "Routine priority, 92-week history, full weight-bearing and a recent no_sinister MRI suggest safe waiting."
+ },
+ "request": "rec-F402-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00817
+}

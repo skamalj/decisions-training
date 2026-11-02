@@ -1,0 +1,145 @@
+{
+ "id": "F403-0030",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P3308",
+   "declared_allergens": [
+    "sesame"
+   ],
+   "auto_injector": {
+    "prescribed": false,
+    "anaphylaxis_risk": false
+   },
+   "plan_start": "2025-03-10"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2025-01-08",
+   "expires": "2026-01-08",
+   "allergens": [
+    "sesame"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-02-20",
+   "dishes": [
+    {
+     "dish": "falafel wrap",
+     "contains": [
+      "sesame"
+     ],
+     "recipe_version_date": "2025-02-01",
+     "substitute": null,
+     "spec_checked_on": null
+    },
+    {
+     "dish": "hummus dip",
+     "contains": [
+      "sesame"
+     ],
+     "recipe_version_date": "2025-03-01",
+     "substitute": "tomato dip",
+     "spec_checked_on": null
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": false,
+   "last_trained": "2024-12-02",
+   "exceptions": [
+    {
+     "date": "2025-03-03",
+     "signed_by": "area manager",
+     "covers": "cleaning_log_complete"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-03-10",
+   "packed_lunch_until": null,
+   "incidents": [],
+   "messages": [
+    "Cook: nothing to worry about, we have it covered."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 0,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 27,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_for_rework",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "balanced",
+   "target": "evidence_gap",
+   "second": "kitchen_gap",
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 97,
+ "deciding": {
+  "evidence_allergens_covered": "Sesame has a listed substitute only on the hummus dip, whose recipe changed after mapping without a later spec check; the falafel wrap has none, so false is leading.",
+  "next_step": "Two dishes need remapping (falafel wrap with substitute null; hummus dip with recipe 2025-03-01 after mapping 2025-02-20 and no spec check), so release is held for rework.",
+  "first_gap_stage": "The evidence is current to 2026, and the open cleaning log has a signed exception, so the first gap is the menu stage, not evidence or kitchen.",
+  "exposure_proximity": "Two sesame dishes lack a confirmed substitution, which fits Open; the cleaning-log gap and its exception make Guarded or Blocked less plausible.",
+  "meal_urgency": "plan_start equals the 2025-03-10 review date with no packed-lunch deferral, so the pupil is eating that day or the meals start immediately; levels 3 and 4 are balanced."
+ },
+ "request": "rec-F403-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013105
+}

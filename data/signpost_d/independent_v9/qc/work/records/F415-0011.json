@@ -1,0 +1,173 @@
+{
+ "id": "F415-0011",
+ "family": "F415",
+ "state": {
+  "site": {
+   "open": "07:00",
+   "closures": [
+    {
+     "from": "2025-03-11T07:00",
+     "to": "2025-03-11T12:00",
+     "reason": "sewer works",
+     "approved_by": "OFF214"
+    }
+   ]
+  },
+  "shift": {
+   "start": "2025-03-11T07:00",
+   "sched_slots": [
+    "07:30",
+    "09:00",
+    "10:30",
+    "12:00",
+    "13:30",
+    "15:00",
+    "16:30",
+    "18:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "07:30",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "pans": true
+    },
+    "photo_ref": "P1",
+    "op_note": "strong smell, traced to sewer works on road outside"
+   },
+   {
+    "slot": "09:00",
+    "status": "done"
+   },
+   {
+    "slot": "10:30",
+    "status": "done"
+   },
+   {
+    "slot": "12:00",
+    "status": "not_recorded"
+   },
+   {
+    "slot": "13:30",
+    "status": "done"
+   },
+   {
+    "slot": "15:00",
+    "status": "done"
+   },
+   {
+    "slot": "16:30",
+    "status": "done"
+   },
+   {
+    "slot": "18:00",
+    "status": "done",
+    "end": "2025-03-11T18:25"
+   }
+  ],
+  "faults": [
+   {
+    "type": "spillage",
+    "reported_at": "2025-03-11T06:56",
+    "remedied_at": "2025-03-11T12:00",
+    "source": "staff"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2025-03-11T18:40"
+  },
+  "history": {
+   "prior_defaults_90d": 0
+  }
+ },
+ "factors": {
+  "scheduled_slots": 8,
+  "missed_slots": "1",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "spillage",
+  "fault_open_minutes": 304.0,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 0
+ },
+ "factors_sampled": {
+  "scheduled_slots": 8,
+  "missed_slots": "1",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "spillage",
+  "fault_open_minutes": 303.92,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 0
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 76,
+ "deciding": {
+  "missed_clean": "12:00 slot is not_recorded and the approved closure ends exactly at 12:00, so cover for that slot is borderline.",
+  "sign_off_valid": "Supervisor signed at 18:40, after the final visit end 18:25; only the slim margin leaves slight doubt.",
+  "next_step": "Everything else is routine and the gap sits at an approved closure edge, so nothing needs follow-up.",
+  "staff_effort": "Single log, no open items; a quick check suffices.",
+  "fault_exposure": "Spillage 06:56 to 12:00 lies entirely within the 07:00-12:00 closure, so no open-to-public time."
+ },
+ "request": "rec-F415-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011244
+}

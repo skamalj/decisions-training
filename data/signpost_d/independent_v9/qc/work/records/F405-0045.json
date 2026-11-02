@@ -1,0 +1,146 @@
+{
+ "id": "F405-0045",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-8205",
+   "detected_on": "2025-10-08",
+   "term_start": "2025-10-06",
+   "room": "C0.12"
+  },
+  "booking_a": {
+   "module": "CHM130",
+   "dept": "CHM",
+   "day": "Wed",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "headcount": 20,
+   "required_features": [
+    "lab_benches"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "CHM220",
+   "dept": "CHM",
+   "room": "C012",
+   "day": "Wed",
+   "start": "11:00",
+   "end": "13:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "status": "provisional",
+   "approved_at": null
+  },
+  "room": {
+   "code": "C0.12",
+   "aliases": [
+    "C012"
+   ],
+   "capacity": 30,
+   "features": [
+    "lab_benches"
+   ]
+  },
+  "alternatives": null,
+  "history": [
+   {
+    "type": "change_request",
+    "state": "open",
+    "target_slot": "Wed 10:30-12:30"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": true,
+  "headcount_ratio": 0.66,
+  "required_feature": "lab_benches",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 0
+ },
+ "factors_sampled": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 52,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": true,
+  "headcount_ratio": 0.66,
+  "required_feature": "lab_benches",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 0
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "dismiss",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "genuine_clash": "C012 is an alias of C0.12 and the times are adjacent, ending 11:00 and starting 11:00, but the open change request to Wed 10:30-12:30 would overlap.",
+  "alt_room_fits": "The alternatives section is null, so no free room is listed and a lab_benches room is required.",
+  "resolution": "Current times do not overlap, so dismissal is leaned toward, but booking_b is provisional with no approval and a change request is open.",
+  "urgency": "Detected 2025-10-08, a Wednesday in week 1 (term starts 2025-10-06), so the first occurrence is today.",
+  "parties_needed": "Same department, so perhaps two (the department and timetabling) or three with the change requester or approver; a boundary between levels 1 and 2."
+ },
+ "request": "rec-F405-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01201
+}

@@ -1,0 +1,151 @@
+{
+ "id": "F413-0022",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "id": "O22",
+   "tier": "office",
+   "stations": [
+    "S1",
+    "S2",
+    "S3"
+   ],
+   "zones": {
+    "Z2": {
+     "banned_products": [
+      "RB5"
+     ]
+    }
+   }
+  },
+  "visit": {
+   "type": "routine",
+   "tech": "T40",
+   "lic_exp": "2025-04-30",
+   "start": "2025-05-12T13:00",
+   "end": "2025-05-12T14:05",
+   "signoff": null
+  },
+  "treatments": [
+   {
+    "prod": "RB5-L",
+    "ai": "brodifacoum",
+    "zone": "Z2",
+    "area_m2": 20,
+    "qty": 12,
+    "unit": "g",
+    "label_max_per_m2": 0.45
+   }
+  ],
+  "monitoring": [
+   {
+    "st": "S2",
+    "act": true
+   },
+   {
+    "st": "S3",
+    "act": false
+   },
+   {
+    "st": "S1",
+    "act": false
+   }
+  ],
+  "van_stock": [
+   {
+    "mv": "withdraw",
+    "prod": "RB5-L",
+    "qty": 12,
+    "unit": "g"
+   }
+  ],
+  "follow_up": {
+   "prev_active": 2,
+   "actions": [
+    {
+     "act": "proof gap under door",
+     "status": "raised",
+     "booked": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "decreased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 33.33,
+  "licence_valid_on_visit": false,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "office"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "moderate_5_to_25pct",
+  "stock_return_logged": false,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "decreased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 33.11,
+  "licence_valid_on_visit": false,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "office"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "book_revisit",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 62,
+ "deciding": {
+  "usage_reconciled": "12 g RB5-L applied against 12 g withdrawn with no returns.",
+  "activity_increased": "1 active station against prev_active 2; a drop of one, so a small doubt remains.",
+  "next_step": "The corrective action is raised with booked null, so a revisit must be arranged, and the licence and dose problems also need correcting.",
+  "breach_severity": "Dose is 0.6 g/m2 against 0.45 and the licence expired before the visit, which is level 2. Whether RB5-L, with the same active ingredient as banned RB5 in Z2, counts as the banned product is open, and that would be level 3.",
+  "parties_needed": "The technician must renew the licence and someone must book the revisit and obtain the client signoff; these may be one coordinator or two teams."
+ },
+ "request": "rec-F413-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009995
+}

@@ -1,0 +1,160 @@
+{
+ "id": "F437-0001",
+ "family": "F437",
+ "state": {
+  "job": {
+   "job_id": "J-48213",
+   "client_ref": "PO-7731",
+   "lang_pair": "en>de",
+   "target_locale": "de-DE",
+   "ordered_words": 5200,
+   "source_version": "v2",
+   "glossary_version": "4",
+   "due_at": "2025-03-14T12:00:00Z",
+   "terms": {
+    "glossary_exception": true
+   },
+   "workflow": [
+    {
+     "step": "translate",
+     "owner": "T14",
+     "done_at": "2025-03-12T15:00:00Z"
+    },
+    {
+     "step": "review",
+     "owner": "R07",
+     "done_at": "2025-03-13T06:30:00Z"
+    },
+    {
+     "step": "pm_check",
+     "owner": "PM3",
+     "done_at": "2025-03-13T07:30:00Z"
+    }
+   ]
+  },
+  "source": {
+   "version": "v2",
+   "segment_count": 410,
+   "word_count": 5200,
+   "repetitions": {
+    "rep_words": 170,
+    "fuzzy_words": 640
+   }
+  },
+  "deliverable": {
+   "target_locale": "de-DE",
+   "built_from_version": "v2",
+   "segments_translated": 410,
+   "word_count": 5188,
+   "glossary_version_used": "3",
+   "delivered_at": "2025-03-13T08:00:00Z"
+  },
+  "qa_report": {
+   "flags": 28,
+   "false_positive_marked": 2,
+   "number_mismatches": [],
+   "unresolved": {
+    "critical": 0,
+    "major": 0,
+    "minor": 1
+   }
+  },
+  "review": {
+   "reviewer_id": "R07",
+   "assigned_at": "2025-03-12T16:00:00Z",
+   "completed_at": "2025-03-13T06:30:00Z",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "minor",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-03-05",
+    "2025-03-09"
+   ],
+   "reassignments": 1
+  }
+ },
+ "factors": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.07,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 28,
+  "client_waiver": true,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": true,
+  "glossary_version_state": "older_version",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.07,
+  "number_mismatch_count": 5,
+  "deadline_slack_hours": 28,
+  "client_waiver": true,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 81,
+ "deciding": {
+  "scope_matches": "Source, job and build versions are all v2 and segments are 410 of 410. Word count differs by 12 (under 1%), which the repetitions breakdown explains.",
+  "reviewed_in_time": "Review completed_at 2025-03-13T06:30 is before delivered_at 08:00 and signed_off is true.",
+  "next_step": "Counts, locale, sign-off and timing are consistent and the glossary exception is waived. One minor QA item still shows, which leaves some doubt about releasing.",
+  "open_severity": "qa_report.unresolved shows 1 minor while the only review error is closed. Readers could take that as none open or as one minor open.",
+  "parties_needed": "Workflow lists translator T14, reviewer R07 and PM3, and there was a reassignment. That implies three or four parties for any fix, though a fifth is plausible."
+ },
+ "request": "rec-F437-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01067
+}

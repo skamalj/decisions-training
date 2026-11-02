@@ -1,0 +1,116 @@
+{
+ "id": "F439-0021",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T-48812",
+   "end_time": "11:20"
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "junctions",
+     "driving": 6,
+     "serious": 0,
+     "dangerous": 0
+    },
+    {
+     "item": "positioning",
+     "driving": 5,
+     "serious": 0,
+     "dangerous": 0
+    },
+    {
+     "item": "signals",
+     "driving": 4,
+     "serious": 0,
+     "dangerous": 0
+    }
+   ],
+   "driving_fault_total": 14
+  },
+  "outcome": {
+   "result": "pass",
+   "intervention": false,
+   "debrief": "given",
+   "examiner_signoff_at": null,
+   "examiner_note": "Steady drive, minor faults only."
+  }
+ },
+ "factors": {
+  "fault_profile": "borderline_count",
+  "result_mismatch": true,
+  "tally_error": true,
+  "documentation_gap": "signoff_missing",
+  "intervention_recorded": false,
+  "intervention_explained": true,
+  "continued_after_collision": false,
+  "senior_countersigned": false,
+  "adverse_conditions": false,
+  "note_alignment": "consistent",
+  "examiner_complaints_12m": 0,
+  "post_submission_edit": "no_edit"
+ },
+ "factors_sampled": {
+  "fault_profile": "borderline_count",
+  "result_mismatch": true,
+  "tally_error": true,
+  "documentation_gap": "signoff_missing",
+  "intervention_recorded": false,
+  "intervention_explained": true,
+  "continued_after_collision": false,
+  "senior_countersigned": false,
+  "adverse_conditions": false,
+  "note_alignment": "consistent",
+  "examiner_complaints_12m": 0,
+  "post_submission_edit": "no_edit"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_complete": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "refer_investigation",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "issue_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "result_supported": "Item sum is 15 against recorded total 14; a pass at 15 is still supported, but the tally error leaves some doubt.",
+  "report_complete": "examiner_signoff_at is null, so a required sign-off is missing.",
+  "disposition": "Tally error, pass result on a borderline count and missing sign-off together mean the result needs formal investigation.",
+  "staff_effort": "A tally recheck and examiner contact could take under an hour or a few hours; both defensible.",
+  "issue_severity": "Tally error could change the result (level 2), but the missing sign-off could be read as a breached mandatory procedure (level 3)."
+ },
+ "request": "rec-F439-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004697
+}

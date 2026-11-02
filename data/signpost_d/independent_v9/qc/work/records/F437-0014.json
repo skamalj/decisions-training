@@ -1,0 +1,139 @@
+{
+ "id": "F437-0014",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v3",
+   "target_locale": "it-IT",
+   "glossary_version": "g5",
+   "due_at": "2024-09-12T12:00",
+   "terms": {
+    "variant_accepted": false
+   }
+  },
+  "source": {
+   "version": "v3",
+   "segment_count": 310,
+   "word_count": 4200
+  },
+  "deliverable": {
+   "target_locale": "it-IT",
+   "built_from_version": "v3",
+   "segments_translated": 308,
+   "word_count": 4150,
+   "glossary_version_used": null,
+   "delivered_at": "2024-09-11T02:00"
+  },
+  "qa_report": {
+   "run_at": "2024-09-10T14:00",
+   "flags": 19,
+   "false_positive_marked": 4,
+   "number_mismatches": [
+    {
+     "source": "1,200",
+     "target": "120"
+    }
+   ],
+   "unresolved": {
+    "minor": 2,
+    "major": 0,
+    "critical": 0
+   }
+  },
+  "review": {
+   "completed_at": "2024-09-10T11:00",
+   "signed_off": true,
+   "errors": [
+    {
+     "severity": "minor",
+     "status": "open"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2024-08-21",
+    "2024-08-28",
+    "2024-09-03",
+    "2024-09-07"
+   ],
+   "reassignments": 2
+  }
+ },
+ "factors": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.21,
+  "number_mismatch_count": 1,
+  "deadline_slack_hours": 34,
+  "client_waiver": false,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.21,
+  "number_mismatch_count": 1,
+  "deadline_slack_hours": 34,
+  "client_waiver": false,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "release",
+   "second": "return_for_fix",
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 98,
+ "deciding": {
+  "scope_matches": "Segments are 308 of 310 and words 4150 vs 4200 (about 1.2%), with no repetitions breakdown to explain it, though the version matches.",
+  "reviewed_in_time": "Sign-off is true and completed_at 2024-09-10T11:00 precedes delivery, but it also precedes the QA run at 14:00.",
+  "next_step": "34h slack and sign-off favour release; the number mismatch 1,200 vs 120, the null glossary_version_used and the 2 missing segments favour a fix.",
+  "open_severity": "Open items are labelled minor, but the unresolved 1,200 vs 120 number mismatch could be rated major.",
+  "parties_needed": "Four prior rounds and 2 reassignments; a fix plus a glossary check needs translator, reviewer, PM and possibly the client, so 3-4 vs 5 or more."
+ },
+ "request": "rec-F437-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010095
+}

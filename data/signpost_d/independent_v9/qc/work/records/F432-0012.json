@@ -1,0 +1,157 @@
+{
+ "id": "F432-0012",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E2",
+   "risk_cat": 1,
+   "roster": [
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+   ],
+   "temp_range_c": [
+    18,
+    28
+   ],
+   "doors": [
+    "D1",
+    "D2"
+   ],
+   "maint_window": "12:00-14:00"
+  },
+  "shift": {
+   "keeper_id": "K3",
+   "end": "18:00",
+   "opening_count": 4,
+   "closing_count": 3
+  },
+  "movements": [
+   {
+    "animal_id": "a9",
+    "direction": "out",
+    "time": "10:12",
+    "dest": "E5"
+   }
+  ],
+  "feeding": {
+   "items": [
+    {
+     "sheet_g": 2000,
+     "offered_g": 2000,
+     "leftover_g": 1510,
+     "unit": "g"
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched_time": "09:00",
+    "logged": true,
+    "entry_time": "09:03",
+    "temp_c": 22
+   },
+   {
+    "sched_time": "13:00",
+    "logged": true,
+    "entry_time": "13:05",
+    "temp_c": 31
+   },
+   {
+    "sched_time": "17:00",
+    "logged": true,
+    "entry_time": null
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "D1",
+     "time": "17:41"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "none",
+  "lock_check_timing": "partial_doors_only",
+  "intake_ratio": 0.245,
+  "intake_mitigation": false,
+  "unrecorded_rounds": "0 or 1 (one round logged true with null entry_time)",
+  "cctv_cover": false,
+  "temp_excursion": "brief_single_reading",
+  "heater_maintenance_window": true,
+  "field_mismatch": "animal_id_not_on_roster",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_1_high"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "none",
+  "lock_check_timing": "partial_doors_only",
+  "intake_ratio": 0.96,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 3,
+  "cctv_cover": false,
+  "temp_excursion": "brief_single_reading",
+  "heater_maintenance_window": true,
+  "field_mismatch": "animal_id_not_on_roster",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_1_high"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "secure_at_close": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "recheck_round",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "count_reconciles": "Opening 4 and closing 3, but the only movement out is a9, which is not on the roster, so it does not explain the loss.",
+  "secure_at_close": "The enclosure lists doors D1 and D2 but only D1 has a lock check; D2 is missing.",
+  "next_step": "One door unchecked at close and the count gap point to a targeted recheck; the brief 31 C reading fell inside the heater window.",
+  "intake_shortfall": "Offered 2000 g, leftover 1510 g, so intake is 24.5%, right at the level 2/3 boundary of 25%.",
+  "missed_rounds": "All three rounds are logged true, but the 17:00 round has a null entry_time, which is ambiguous between zero and one missed."
+ },
+ "request": "rec-F432-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013783
+}

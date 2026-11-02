@@ -1,0 +1,129 @@
+{
+ "id": "F420-0015",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PMC33810AB",
+   "flt": "XQ77",
+   "tare_kg": 110,
+   "planned_gross_kg": 900,
+   "straps_required": 4
+  },
+  "manifest_lines": [
+   {
+    "awb": "176-41200011",
+    "pcs": 6,
+    "weight_kg": 400,
+    "shc": "CORA",
+    "dg_class": "8"
+   },
+   {
+    "awb": "176-41200022",
+    "pcs": 3,
+    "weight_kg": 390,
+    "shc": "FLAM",
+    "dg_class": "3"
+   }
+  ],
+  "build_measured": {
+   "pcs_counted": {
+    "176-41200011": 6,
+    "176-41200022": 3
+   },
+   "straps_fitted": 4
+  },
+  "dg_notoc": [
+   {
+    "awb": "176-41200011",
+    "dg_class": "8",
+    "pcs": 6
+   },
+   {
+    "awb": "176-41200022",
+    "dg_class": "3",
+    "pcs": 3
+   }
+  ],
+  "checks_log": {
+   "reweigh": {
+    "kg": 944.7
+   }
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 4.97,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "dg_segregation_conflict",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 18,
+  "prior_rebuilds": 3
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 4.67,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "well_within",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "matched",
+  "securing_state": "one_strap_short",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "awb_digits_transposed",
+  "minutes_to_cutoff": 18,
+  "prior_rebuilds": 3
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "leaning",
+   "target": "dangerous_goods",
+   "second": null,
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 42,
+ "deciding": {
+  "pieces_reconciled": "Counted pieces equal the manifest on both lines (6 and 3).",
+  "disposition": "A class 8 and class 3 pair on the same ULD is a segregation conflict that needs the pallet broken down, so it goes back to the build team.",
+  "worst_discrepancy": "The corrosive (8) and flammable (3) lines on one ULD are an incompatible class pair, which outranks every other class.",
+  "weight_deviation": "The reweigh of 944.7 kg against a plan of 900 kg is +4.97%, at the 5% boundary between levels 2 and 3.",
+  "rework_extent": "The segregation conflict points to a full rebuild, while a partial repositioning of the class 3 line would also be defensible."
+ },
+ "request": "rec-F420-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013733
+}

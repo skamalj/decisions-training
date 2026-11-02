@@ -1,0 +1,136 @@
+{
+ "id": "F434-0041",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 2,
+   "riders_started": 148,
+   "first_rider_at": "10:12"
+  },
+  "post": {
+   "km_marker": 41,
+   "post_type": "junction",
+   "marshals_rostered": 2,
+   "marshals_signed_in": 2,
+   "on_post_from": "09:10",
+   "off_post_at": "12:48"
+  },
+  "incidents": [],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:00",
+     "ok": true
+    },
+    {
+     "time": "11:00",
+     "ok": false
+    }
+   ],
+   "backup_phone": [
+    {
+     "time": "11:05",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [],
+   "medical_handovers": [],
+   "abandonments": [],
+   "road_reopened_at": {
+    "40-45": "12:55"
+   }
+  },
+  "sweep": {
+   "passed_at": "12:41",
+   "last_rider_bib": 212,
+   "post_cleared_at": "12:48"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "none",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": "none",
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "abandoned",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": 26.96,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "leaning",
+   "target": "no_incident",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 39,
+ "deciding": {
+  "coverage_held": "Both marshals signed in from 09:10, before first rider 10:12, and stayed until 12:48, after sweep passage at 12:41.",
+  "next_step": "Post and control logs are both empty, with no handovers or abandonments; the one failed radio check was covered by an OK backup call.",
+  "incident_class": "Incident lists are empty in both the post and control records, though a reader might allow for an unlogged event.",
+  "reversal_time": "There is no incident or consequence to undo.",
+  "consequence_severity": "No incidents, handovers or abandonments are recorded anywhere; the road reopened at 12:55, after the sweep."
+ },
+ "request": "rec-F434-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00934
+}

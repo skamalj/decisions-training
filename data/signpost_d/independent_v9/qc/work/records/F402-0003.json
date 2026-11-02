@@ -1,0 +1,123 @@
+{
+ "id": "F402-0003",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-7765",
+   "received": "2025-04-22",
+   "priority": "routine",
+   "site": {
+    "part": "hip",
+    "side": "L"
+   },
+   "onset": "2025-04-08"
+  },
+  "clinical": {
+   "red_flags": [
+    "PND01"
+   ],
+   "neuro_signs": {
+    "progression": "worsening"
+   },
+   "fi": 57.24,
+   "surgery_date": "2025-04-01",
+   "wb": "partial"
+  },
+  "gp_record": {
+   "falls_3m": 3
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-03-05",
+    "side": "L",
+    "result": "no_sinister"
+   },
+   {
+    "type": "op_protocol",
+    "date": "2025-04-01",
+    "side": "L"
+   }
+  ],
+  "history": {
+   "episodes": 3,
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "progressive_neuro_deficit",
+  "red_flag_mitigated": true,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "none",
+  "missing_item": "none",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 2,
+  "function_index": 57.24,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "routine",
+  "falls_last_3m": 3,
+  "post_op_days": 21,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "progressive_neuro_deficit",
+  "red_flag_mitigated": false,
+  "mismatch_field": "surgery_date",
+  "mismatch_magnitude": "major",
+  "missing_item": "weight_bearing_status",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 2,
+  "function_index": 57.24,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "routine",
+  "falls_last_3m": 3,
+  "post_op_days": 21,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "specialist_rehab",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 60,
+ "deciding": {
+  "red_flag_unresolved": "The MRI of 2025-03-05 is no_sinister and within 8 weeks, but it predates the worsening that began on 2025-04-08, so cover is only modest.",
+  "next_step": "Side, surgery date and weight-bearing are all present and consistent, so nothing is missing or needs amending.",
+  "pathway": "Surgery 21 days ago, a worsening neuro sign and 3 falls favour specialist rehab.",
+  "reversal_time": "A progressive neuro deficit after surgery could leave lasting loss, but the benign MRI leaves recovery within three months possible: level 3 versus level 2.",
+  "clinical_urgency": "Worsening neuro signs 3 weeks post-op argue for medical review within 48 hours, while the benign MRI argues for two weeks: level 3 versus level 2."
+ },
+ "request": "rec-F402-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008417
+}

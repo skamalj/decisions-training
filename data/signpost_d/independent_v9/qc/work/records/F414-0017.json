@@ -1,0 +1,151 @@
+{
+ "id": "F414-0017",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SR-212",
+   "site_id": "S21",
+   "equip_type": "spring_rocker",
+   "crit_fall_height_m": 0.5,
+   "surf_type": "bark"
+  },
+  "inspection": {
+   "insp_date": "2024-06-03",
+   "insp_grade": "operational",
+   "fall_height_m": 0.5,
+   "surf_type_found": "bark",
+   "surf_depth_mm": 250,
+   "surf_req_table": [
+    {
+     "band_m": "<=1.0",
+     "type": "bark",
+     "min_depth_mm": 150
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "OP-2",
+     "result": "fail"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "ENT-01",
+     "component_id": "C-seat-rail",
+     "injury_mech": "minor"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "WO-880",
+    "asset_id": "SR-212",
+    "component_id": "C-spring",
+    "defect_ref": "D-55",
+    "raised_date": "2024-02-10",
+    "status": "closed",
+    "closed_date": "2024-04-01"
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "closure_status": "open",
+   "incident_reports_90d": 3
+  },
+  "history": [
+   {
+    "date": "2024-03-01",
+    "grade": "operational",
+    "defect_refs": [
+     "D-55"
+    ]
+   },
+   {
+    "date": "2024-06-10",
+    "result": "pass",
+    "component_id": "C-spring"
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 100.0,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 1.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "medium",
+  "incident_reports_90d": 3
+ },
+ "factors_sampled": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "large",
+  "surfacing_depth_margin_mm": 103.61,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.11,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "medium",
+  "incident_reports_90d": 3
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (head_neck_entrapment_fail = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 153,
+ "deciding": {
+  "prior_defects_cleared": "D-55 from previous inspection has WO-880 closed 2024-04-01 and a passing follow-up on C-spring; the follow-up date is later than the inspection.",
+  "surfacing_adequate": "250 mm bark against 150 mm minimum at 0.5 m.",
+  "asset_disposition": "Head-neck probe failure on OP-2 would normally restrict, yet the record shows no closure or restriction; sign-off is doubtful.",
+  "remedial_progress": "The only work order WO-880 is closed.",
+  "hazard_severity": "Head_neck probe fail on OP-2 suggests critical entrapment, but the finding is logged as minor injury; held between serious and moderate."
+ },
+ "request": "rec-F414-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005865
+}

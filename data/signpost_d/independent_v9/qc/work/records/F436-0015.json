@@ -1,0 +1,113 @@
+{
+ "id": "F436-0015",
+ "family": "F436",
+ "state": {
+  "article": {
+   "channels": [
+    "web"
+   ],
+   "first_published_at": "2024-02-01T07:00",
+   "disputed_passage": "Daniel Smith, 44, was charged with theft from the club"
+  },
+  "complaint": {
+   "review_at": "2024-02-08T20:00",
+   "claimed_correct_value": "Smyth",
+   "summary": "Wrong surname; our solicitor will write."
+  },
+  "desk_check": {
+   "source_doc": "court list: Smith",
+   "reporter_notes": "Smith",
+   "filed_copy": "Smith"
+  },
+  "history": {
+   "prior_corrections": 4,
+   "legal_review": null
+  },
+  "draft_correction": {
+   "stated_value": "Smyth"
+  }
+ },
+ "factors": {
+  "error_status": "matches_source",
+  "error_origin_stage": "none",
+  "discrepancy_field": "name",
+  "discrepancy_size": "trivial",
+  "claim_type": "wrongdoing_implication",
+  "hours_live": 181,
+  "distribution_channels": "online_only",
+  "mitigation_present": false,
+  "missing_evidence": false,
+  "legal_signal": true,
+  "legal_cleared": false,
+  "draft_fix_mismatch": true,
+  "prior_corrections": 4,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "error_status": "confirmed_by_source",
+  "error_origin_stage": "editing_stage",
+  "discrepancy_field": "name",
+  "discrepancy_size": "trivial",
+  "claim_type": "incidental_fact",
+  "hours_live": 181,
+  "distribution_channels": "online_only",
+  "mitigation_present": false,
+  "missing_evidence": false,
+  "legal_signal": false,
+  "legal_cleared": true,
+  "draft_fix_mismatch": true,
+  "prior_corrections": 4,
+  "boundary_case": false
+ },
+ "plan": {
+  "error_confirmed": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_origin": {
+   "clarity": "clear",
+   "target": "no_inaccuracy",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "spread": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "harm_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "error_confirmed": "Court list, notes, filed copy and article all read 'Smith'; only the complainant says 'Smyth'.",
+  "next_step": "Complaint mentions a solicitor and legal_review is null; the draft's 'Smyth' conflicts with source, so refer before any change.",
+  "error_origin": "Every stage from source to article reads 'Smith', so no inaccuracy was introduced.",
+  "spread": "Only web channel, live 181 hours, so online-only for 24 hours or longer.",
+  "harm_severity": "Named man is stated as charged with theft, so a wrong name would imply wrongdoing by a named party."
+ },
+ "request": "rec-F436-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009747
+}

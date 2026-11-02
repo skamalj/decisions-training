@@ -1,0 +1,119 @@
+{
+ "id": "F437-0019",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v4",
+   "due_at": "2025-07-10T16:00"
+  },
+  "source": {
+   "version": "v4",
+   "segment_count": 90
+  },
+  "deliverable": {
+   "built_from_version": "v4",
+   "segments_translated": 90,
+   "delivered_at": "2025-07-07T19:00"
+  },
+  "qa_report": null,
+  "review": {
+   "completed_at": "2025-07-07T19:00",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "minor",
+     "status": "closed"
+    },
+    {
+     "sev": "minor",
+     "status": "disputed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "r1",
+    "r2"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_at_delivery_time",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": false,
+  "qa_false_positive_share": 0.27,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": 69,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_after_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": false,
+  "qa_false_positive_share": 0.27,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": 69,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_for_fix",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "scope_matches": "Source v4 equals job v4 and deliverable v4, with 90 of 90 segments translated.",
+  "reviewed_in_time": "Review completed_at equals delivered_at to the minute and signed_off is true, so whether sign-off came before delivery is balanced.",
+  "next_step": "The review still shows a disputed minor error that the translator can fix before the 69h-away deadline, and no waiver or lateness points to the account manager.",
+  "open_severity": "The minor error is disputed rather than clearly open or closed, and qa_report is null, so the level is balanced between 0 and 1.",
+  "parties_needed": "The translator, reviewer and PM are clearly needed. The account manager or client could be needed for the dispute, which is arguable."
+ },
+ "request": "rec-F437-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008059
+}

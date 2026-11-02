@@ -1,0 +1,142 @@
+{
+ "id": "F414-0044",
+ "family": "F414",
+ "state": {
+  "inspection": {
+   "insp_date": "2024-07-02",
+   "fall_height_m": 1.0,
+   "surf_depth_mm": 150,
+   "surf_type_found": "rubber",
+   "surf_req_table": [
+    {
+     "h": 1.0,
+     "type": "rubber",
+     "min_depth_mm": 150
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "RIM-BURR",
+     "injury_mech": "minor"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "defect_ref": "D-7",
+    "status": "closed",
+    "closed_date": "2024-05-01"
+   },
+   {
+    "defect_ref": "D-8",
+    "status": "closed",
+    "closed_date": "2024-05-09"
+   },
+   {
+    "defect_ref": "D-9",
+    "status": "open",
+    "temp_measure": {
+     "type": "taped_off",
+     "date": "2024-07-02"
+    }
+   },
+   {
+    "defect_ref": "D-10",
+    "status": "open"
+   },
+   {
+    "defect_ref": "D-11",
+    "status": "closed",
+    "closed_date": "2024-07-03"
+   }
+  ],
+  "history": [
+   {
+    "defect_refs": [
+     "D-7"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "roundabout",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 0.0,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": "0.4 (0.6 if D-11 is counted)",
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "high",
+  "incident_reports_90d": 1
+ },
+ "factors_sampled": {
+  "equipment_type": "roundabout",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 92.01,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 2,
+  "work_orders_closed_fraction": 0.9,
+  "temporary_measure_in_place": true,
+  "approved_variance": true,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "high",
+  "incident_reports_90d": 1
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "contested",
+   "target": "restrict_use",
+   "second": "sign_off_actions",
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "prior_defects_cleared": "The only prior defect, D-7, matches a work order closed 2024-05-01.",
+  "surfacing_adequate": "Depth 150 mm equals the 150 mm rubber minimum at 1.0 m, with no margin.",
+  "asset_disposition": "A minor-injury burr plus an open order with a taped-off temp measure could mean restricting use or continuing with scheduled repairs.",
+  "remedial_progress": "Five orders: 2 closed before the inspection, D-11 closed the day after, 2 open, so 2/5 or 3/5.",
+  "hazard_severity": "RIM-BURR is rated minor injury, which could be read as cuts (moderate) or just a low-level logged defect."
+ },
+ "request": "rec-F414-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013685
+}

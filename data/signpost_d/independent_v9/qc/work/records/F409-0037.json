@@ -1,0 +1,134 @@
+{
+ "id": "F409-0037",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "app_type": "new",
+   "submitted_on": "2024-05-20"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-01-18",
+     "address_line": "5 Mill Rd",
+     "verified": true
+    }
+   ]
+  },
+  "request": {
+   "address": "5 Mill Rd"
+  },
+  "account_history": {
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "live_permits": [
+    "P-1",
+    "P-2"
+   ],
+   "past_permits": [
+    {
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 123,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 5,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 123,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 5,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "main_issue": {
+   "clarity": "balanced",
+   "target": "household_cap",
+   "second": "misuse_record",
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 28,
+ "deciding": {
+  "residency_shown": "The council tax bill is marked verified and the address matches, but it was issued 123 days before submission. Over 90 days it counts as unverified, though a reader might still accept the verified flag.",
+  "disposition": "A past permit was seized as a cloned copy, the household is at its cap and the residence proof is stale, so nothing should be issued yet.",
+  "main_issue": "Two live permits against a cap of 2 with no exception point to household_cap. The seized cloned permit points to misuse_record, and the two are in balance.",
+  "misuse_strength": "The past permit has status seized with the reason 'cloned copy found on different vehicle'. That is a confirmed misuse record.",
+  "document_gaps": "The only document listed is verified, but at 123 days old it counts as unverified. Level 0 and level 1 are both defensible."
+ },
+ "request": "rec-F409-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011907
+}

@@ -1,0 +1,143 @@
+{
+ "id": "F437-0013",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v1",
+   "target_locale": "fr-FR",
+   "glossary_version": "g7",
+   "due_at": "2024-08-20T10:00",
+   "terms": {
+    "variant_accepted": false,
+    "glossary_exception": false
+   }
+  },
+  "source": {
+   "version": "v1",
+   "segment_count": 240,
+   "word_count": 5100,
+   "repetitions": 180
+  },
+  "deliverable": {
+   "target_locale": "fr-FR",
+   "built_from_version": "v1",
+   "segments_translated": 240,
+   "word_count": 5068,
+   "glossary_version_used": "g7",
+   "delivered_at": "2024-08-18T23:00"
+  },
+  "qa_report": {
+   "run_at": "2024-08-18T20:00",
+   "flags": 14,
+   "false_positive_marked": 0,
+   "unresolved": {
+    "minor": 3,
+    "major": 0,
+    "critical": 0
+   }
+  },
+  "review": {
+   "reviewer_id": "rv08",
+   "assigned_at": "2024-08-17T09:00",
+   "completed_at": "2024-08-18T22:00",
+   "signed_off": true,
+   "errors": [
+    {
+     "id": "E4",
+     "severity": "major",
+     "status": "open"
+    },
+    {
+     "id": "E5",
+     "severity": "minor",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2024-08-02",
+    "2024-08-08",
+    "2024-08-13"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.0,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 35,
+  "client_waiver": false,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.0,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 35,
+  "client_waiver": false,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "return_for_fix",
+   "second": "hold_for_item",
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 108,
+ "deciding": {
+  "scope_matches": "Versions (v1) and segments (240/240) agree; the word count differs by about 0.6%, a small drift left over from the repetitions.",
+  "reviewed_in_time": "signed_off is true with completed_at 22:00, an hour before delivery at 23:00, but the review still lists an open major error.",
+  "next_step": "Open major E4 with 35h slack points to return for fix; sign-off despite open E4 leaves it unclear if an item is missing.",
+  "open_severity": "Review error E4 is major and open, while QA unresolved counts show only minor, leaving 2 vs 1 defensible.",
+  "parties_needed": "Three prior revision rounds; fixing E4 needs translator, reviewer and PM, and perhaps an account manager or client, so 3-4 vs 5 or more is open."
+ },
+ "request": "rec-F437-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010095
+}

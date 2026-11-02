@@ -1,0 +1,119 @@
+{
+ "id": "F402-0005",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-5521",
+   "priority": "routine",
+   "site": {
+    "part": "knee",
+    "side": "R"
+   },
+   "onset": "2024-05-20"
+  },
+  "clinical": {
+   "red_flags": [
+    "NPWL"
+   ],
+   "fi": 62
+  },
+  "gp_record": {
+   "weight_change_kg": -5,
+   "falls_3m": 1,
+   "reviews": [
+    {
+     "type": "urgent",
+     "date": "2025-04-10"
+    }
+   ]
+  },
+  "attachments": [
+   {
+    "type": "xray",
+    "side": "L",
+    "result": "oa"
+   }
+  ],
+  "history": {
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": true,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "major",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 52,
+  "function_index": 62.0,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "routine",
+  "falls_last_3m": 1,
+  "post_op_days": "null",
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "surgery_date",
+  "mismatch_magnitude": "major",
+  "missing_item": "weight_bearing_status",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 52,
+  "function_index": 14.08,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "routine",
+  "falls_last_3m": 4,
+  "post_op_days": 58,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "book_amended",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "red_flag_unresolved": "NPWL with -5 kg is followed by an urgent GP review on 2025-04-10, but no imaging confirms it, so it is balanced and leans explained.",
+  "next_step": "Referral side is R but the X-ray is L, so the booking needs the corrected side and precautions rather than a query.",
+  "pathway": "A year of stable knee symptoms, FI 62, one fall and a tried self-management plan point to self-management.",
+  "reversal_time": "The cost of a wrongly sided booking or missed flag runs from weeks to beyond three months: level 2 versus level 3.",
+  "clinical_urgency": "The weight-loss flag, only partly reviewed, argues for two weeks (level 2), while a stable year-long problem argues for six weeks (level 1)."
+ },
+ "request": "rec-F402-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008417
+}

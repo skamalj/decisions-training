@@ -1,0 +1,120 @@
+{
+ "id": "F438-0023",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E3390",
+   "spec": "ortho",
+   "los": 3
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "S72.0"
+   },
+   "comorbidities": [
+    "I10"
+   ]
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "S72.0"
+   },
+   "secondary_dx": [
+    "I10"
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "HN12B",
+   "hrg_regrouped": "HN12B"
+  },
+  "coder_history": {
+   "error_rate": 0.13
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.13,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 2,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "not_regroupable",
+  "missing_source": "none",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.13,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "error_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 43,
+ "deciding": {
+  "primary_supported": "Coded S72.0 equals documented principal S72.0.",
+  "hrg_shift": "HN12B submitted and regrouped are identical.",
+  "next_step": "Codes match documentation and the HRG is unchanged, so the sample closes.",
+  "error_count": "The secondary I10 matches and no procedures are listed, so no errors; the sparse extract leaves slight doubt.",
+  "error_severity": "No code differs from the documentation."
+ },
+ "request": "rec-F438-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007746
+}

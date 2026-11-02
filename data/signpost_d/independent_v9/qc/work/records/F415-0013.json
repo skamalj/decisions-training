@@ -1,0 +1,160 @@
+{
+ "id": "F415-0013",
+ "family": "F415",
+ "state": {
+  "site": {
+   "open": "07:00",
+   "closures": [
+    {
+     "from": "2025-04-08T07:00",
+     "to": "2025-04-08T13:20",
+     "reason": "deep clean",
+     "approved_by": "OFF087"
+    }
+   ]
+  },
+  "shift": {
+   "start": "2025-04-08T07:00",
+   "sched_slots": [
+    "07:30",
+    "09:00",
+    "10:30",
+    "12:00",
+    "13:30",
+    "15:00",
+    "16:30",
+    "18:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "07:30",
+    "end": "2025-04-08T07:50"
+   },
+   {
+    "slot": "09:00",
+    "end": "2025-04-08T09:15"
+   },
+   {
+    "slot": "10:30",
+    "end": "2025-04-08T10:45"
+   },
+   {
+    "slot": "12:00",
+    "end": "2025-04-08T13:28"
+   },
+   {
+    "slot": "13:30",
+    "start": "2025-04-08T13:25",
+    "end": "2025-04-08T14:30"
+   },
+   {
+    "slot": "15:00",
+    "end": "2025-04-08T15:20",
+    "checklist": null,
+    "photo_ref": null
+   }
+  ],
+  "faults": [
+   {
+    "type": "spillage",
+    "reported_at": "2025-04-08T07:00",
+    "remedied_at": "2025-04-08T13:19"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2025-04-08T15:21"
+  },
+  "history": {
+   "prior_defaults_90d": 1
+  }
+ },
+ "factors": {
+  "scheduled_slots": 8,
+  "missed_slots": "2",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "spillage",
+  "fault_open_minutes": 379.0,
+  "block_closed_during_fault": true,
+  "checklist_completion": "absent",
+  "photo_evidence": false,
+  "timestamp_out_of_order": true,
+  "note_content": "routine",
+  "prior_defaults_90d": 1
+ },
+ "factors_sampled": {
+  "scheduled_slots": 8,
+  "missed_slots": "2",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "missing",
+  "fault_type": "spillage",
+  "fault_open_minutes": 378.8,
+  "block_closed_during_fault": true,
+  "checklist_completion": "absent",
+  "photo_evidence": false,
+  "timestamp_out_of_order": true,
+  "note_content": "routine",
+  "prior_defaults_90d": 1
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 92,
+ "deciding": {
+  "missed_clean": "Slots 16:30 and 18:00 have no visits, and the only closure ends 13:20, so no cover.",
+  "sign_off_valid": "Supervisor signed 15:21, one minute after the last listed visit end 15:20, but the 13:30 visit starts before the previous visit ended, leaving the ordering and the final visit uncertain.",
+  "next_step": "Routine log with no notes or open faults; the planned answer is to accept.",
+  "staff_effort": "Single shift with no outstanding item; some doubt from the missing slots, checklist and photos.",
+  "fault_exposure": "Spillage 07:00 to 13:19 lies fully inside the 07:00-13:20 closure, so no open-to-public time."
+ },
+ "request": "rec-F415-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011244
+}

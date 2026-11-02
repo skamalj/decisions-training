@@ -1,0 +1,156 @@
+{
+ "id": "F403-0011",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-4417",
+   "yr": 5,
+   "declared_allergens": [
+    "egg",
+    "sesame",
+    "milk"
+   ],
+   "auto_injector": true,
+   "plan_start": "2025-10-20"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2025-06-05",
+   "expires": "2026-06-05",
+   "allergens": [
+    "egg",
+    "sesame",
+    "milk"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-08-20",
+   "cycle_weeks": 3,
+   "dishes": [
+    {
+     "dish": "sesame flatbread",
+     "contains": [
+      "sesame"
+     ],
+     "recipe_version_date": "2025-09-01",
+     "substitute": null,
+     "spec_checked_on": null
+    },
+    {
+     "dish": "egg fried rice",
+     "contains": [
+      "egg"
+     ],
+     "recipe_version_date": "2025-07-01",
+     "substitute": "plain rice",
+     "spec_checked_on": "2025-08-18"
+    },
+    {
+     "dish": "cheese pasta",
+     "contains": [
+      "milk"
+     ],
+     "recipe_version_date": "2025-07-01",
+     "substitute": "dairy-free pasta",
+     "spec_checked_on": "2025-08-18"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "trained": [
+    "2025-05-12",
+    "2025-05-12"
+   ]
+  },
+  "history": {
+   "review_date": "2025-09-15",
+   "packed_lunch_until": "2025-10-19",
+   "incidents": [],
+   "messages": [
+    "Cook: URGENT, flatbread recipe changed and nobody has checked it!"
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 25,
+  "packed_lunch_interim": true,
+  "note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 28,
+  "packed_lunch_interim": true,
+  "note_tone": "alarmed"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_restricted",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "no_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 88,
+ "deciding": {
+  "evidence_allergens_covered": "Sesame is listed in the evidence and the flatbread has substitute null, so it is not substituted. But the dish is mapped and the other two allergens are covered, so a reader could still say mapped.",
+  "next_step": "Exactly one dish (sesame flatbread) has no substitute and an unconfirmed spec. The evidence is current and the kitchen controls are complete, so release with that dish withheld.",
+  "first_gap_stage": "Evidence is current to 2026-06-05, all three dishes are mapped, and the controls are verified and complete.",
+  "exposure_proximity": "The flatbread has substitute null and no spec check after its recipe change, so one allergen dish is unsubstituted. There is no incident, so the level is Open.",
+  "meal_urgency": "Packed lunch runs to 2025-10-19 and the plan starts 2025-10-20, about 25 school days after the 2025-09-15 review. That is more than 20, but the half-term count adds slight doubt."
+ },
+ "request": "rec-F403-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014234
+}

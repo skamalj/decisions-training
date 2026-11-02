@@ -1,0 +1,131 @@
+{
+ "id": "F421-0013",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P93310",
+   "contents": "monitor",
+   "qty": 1,
+   "weight_kg": 6.4,
+   "declared_value_gbp": 2589.01
+  },
+  "handling_events": [
+   {
+    "ts": "2024-07-01T07:00",
+    "site": "HubS",
+    "code": "SCAN",
+    "exc": "ADDR"
+   },
+   {
+    "ts": "2024-07-01T19:00",
+    "site": "HubS",
+    "code": "SCAN",
+    "exc": "WET"
+   },
+   {
+    "ts": "2024-07-02T08:00",
+    "site": "HubS",
+    "code": "SCAN",
+    "exc": "ADDR"
+   },
+   {
+    "ts": "2024-07-02T12:00",
+    "site": "DEPOT",
+    "code": "INBOUND",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": null,
+   "observed_item": "monitor",
+   "qty_found": 1,
+   "weight_kg": 6.4,
+   "repair_est_gbp": null
+  },
+  "claim": {
+   "claimed_gbp": 1537.21
+  },
+  "notes": [
+   "Our forklift hit the cage; likely ours. Value dispute raised."
+  ]
+ },
+ "factors": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "none",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 78.07,
+  "declared_value": 2589.01,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 0.76
+ },
+ "factors_sampled": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "none",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 78.07,
+  "declared_value": 2589.01,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 0.76
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_supervisor",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "depot_fault": "DMG coincides with inbound scan; note admits fault but is not decisive.",
+  "contents_match": "Monitor, qty and weight match manifest.",
+  "next_step": "Note reports value dispute and admitted fault with a 2589 value, calling for supervisor.",
+  "loss_share": "No estimate; claim 1537 is 59% of value, but a minor repair is conceivable.",
+  "parties_needed": "Supervisor, inspector, claims and possibly sender or hub; three or four versus five."
+ },
+ "request": "rec-F421-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005646
+}

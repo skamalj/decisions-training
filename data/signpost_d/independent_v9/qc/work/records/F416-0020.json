@@ -1,0 +1,179 @@
+{
+ "id": "F416-0020",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "date": "2025-08-14",
+   "signoff": "G1 17:05"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "09:00",
+    "off": "17:00",
+    "qx": "2026-02-11"
+   },
+   {
+    "id": "G4",
+    "on": "09:00",
+    "off": "17:00",
+    "qx": null
+   }
+  ],
+  "conditions": [
+   {
+    "t": "12:00",
+    "wave_m": 2.4,
+    "wind_kt": 28,
+    "rip_risk": "low",
+    "flag": "yellow"
+   }
+  ],
+  "incidents": [
+   {
+    "date": "2025-08-14",
+    "type": "water_rescue",
+    "resp": [
+     "G1",
+     "G4"
+    ],
+    "out": "first_aid"
+   },
+   {
+    "date": "2025-08-14",
+    "type": "water_rescue",
+    "resp": [
+     "G1",
+     "G4"
+    ],
+    "out": "released"
+   },
+   {
+    "date": "2025-08-14",
+    "type": "water_rescue",
+    "resp": [
+     "G1",
+     "G4"
+    ],
+    "out": "released"
+   },
+   {
+    "date": "2025-08-15",
+    "type": "water_rescue",
+    "resp": [
+     "G1",
+     "G4"
+    ],
+    "out": "released"
+   },
+   {
+    "date": "2025-08-14",
+    "type": "water_rescue",
+    "resp": [
+     "G1",
+     "G4"
+    ],
+    "out": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jetski",
+    "out_from": "11:00",
+    "out_to": "15:00",
+    "sub": "JS3"
+   }
+  ],
+  "handover": {
+   "rescues": 5,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "advisories": 6,
+   "beach_users_est": 4200,
+   "check_sheet_ref": "CS-9"
+  }
+ },
+ "factors": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "date_misentered",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "over_180",
+  "kit_substitute_logged": true,
+  "missing_record": "qual_record",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "factors_sampled": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "date_misentered",
+  "worst_outcome": "referred",
+  "kit_gap_band": "over_180",
+  "kit_substitute_logged": true,
+  "missing_record": "qual_record",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "kit_outage": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 46,
+ "deciding": {
+  "two_guard_cover": "G4 has qx null on the roster, so his qualification is unverifiable. Every rescue relies on G4 as the second guard, so no rescue shows two qualified guards.",
+  "totals_reconcile": "One incident is dated 2025-08-15 against shift date 2025-08-14. The counts 5, 0 and 1 match, so this date is the only difference and slight doubt remains.",
+  "next_step": "Nothing operational is wrong: the outcomes are minor, the kit is substituted and the flag is consistent with a low rip risk. The log is almost clean apart from the date slip and the null qx, so filing is leaning.",
+  "outcome_severity": "The worst outcome is first_aid, with no referral_ref, ambulance_ref or aed_used.",
+  "kit_outage": "Jetski out 11:00-15:00 (240 min) but substitute JS3 is logged, so there is no unsubstituted outage. The long duration leaves some doubt."
+ },
+ "request": "rec-F416-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.016133
+}

@@ -1,0 +1,142 @@
+{
+ "id": "F408-0034",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "MB-3318",
+   "uprn": 4410,
+   "stream": "refuse",
+   "claimed": "2025-06-09",
+   "logged_at": "2025-06-10T23:50",
+   "photo": true
+  },
+  "property": {
+   "uprn": 4410,
+   "assisted": true,
+   "assisted_since": "2024-11-12"
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "date": "2025-06-09"
+  },
+  "round_log": {
+   "completed_at": "2025-06-09T16:20",
+   "disruption": "road_closure",
+   "catch_up": "2025-06-12",
+   "stops": [
+    {
+     "uprn": 4410,
+     "exception": null,
+     "photo_ref": "P-5120",
+     "gps_stop": false
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 4410,
+    "logged": "2025-03-16",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 4410,
+    "logged": "2025-03-18",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 4410,
+    "logged": "2025-04-30",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 4410,
+    "logged": "2025-05-27",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "failed_gps_stop_false",
+  "round_disruption": "road_closure",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 4,
+  "history_decoys": 0,
+  "assisted_miss_breach": true
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "road_closure",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 4,
+  "history_decoys": 0,
+  "assisted_miss_breach": true
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (assisted_miss_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 78,
+ "deciding": {
+  "crew_missed": "Stop has no exception and gps_stop false, but a road closure with catch_up 2025-06-12 still pending leaves doubt.",
+  "report_matches": "Stream and date match and the round was complete, but logged_at 2025-06-10T23:50 is just inside the 48h limit.",
+  "next_step": "No sweep or catch-up collection is recorded; the record does not show the bin was emptied, so the planned close_no_action is only weakly supported.",
+  "return_urgency": "Assisted since 2024-11-12 and the stop shows gps_stop false with no exception, so the return is needed the same day.",
+  "repeat_failures": "Four upheld entries; the one on 2025-03-18 falls on the 84-day edge (and 03-16 just outside), so the count is 3 or 2."
+ },
+ "request": "rec-F408-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012077
+}

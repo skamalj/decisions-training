@@ -1,0 +1,143 @@
+{
+ "id": "F425-0044",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "producer_code": "1UK-2D58",
+   "lay_dates": [
+    "2025-06-10",
+    "2025-06-09"
+   ],
+   "declared_eggs": 8000
+  },
+  "grading_run": {
+   "run_end": "2025-06-12T10:00",
+   "eggs_in": 7960,
+   "by_size": {
+    "S": 800,
+    "M": 3200,
+    "L": 3000,
+    "XL": 840
+   },
+   "outgrades": {
+    "cracks": 70,
+    "dirties": 30,
+    "leakers": 20
+   },
+   "class_a_total": 7840
+  },
+  "checks": {
+   "candling_sample": {
+    "sampled_at": "2025-06-12T08:30"
+   },
+   "store_temp": {
+    "minutes_above_limit": 8,
+    "max_c": 13.5,
+    "defrost_logged": true
+   }
+  },
+  "flock": {
+   "last_swab": {
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2025-06-12",
+   "packs": [
+    {
+     "size": "M",
+     "count": 7840
+    }
+   ],
+   "stamp_code": "1UK-2D58"
+  }
+ },
+ "factors": {
+  "count_gap_size": "borderline",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 3,
+  "mixed_lay_dates": true,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 1.51,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "brief",
+  "temp_mitigated": true,
+  "flock_age_weeks": 33
+ },
+ "factors_sampled": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 7,
+  "mixed_lay_dates": true,
+  "missing_check": "swab_pending",
+  "swab_positive": false,
+  "outgrade_rate_pct": 11.48,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": true,
+  "temp_excursion": "brief",
+  "temp_mitigated": true,
+  "flock_age_weeks": 33
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release_class_a",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "leaning",
+   "target": "no_anomaly",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "lay_to_pack": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "outgrade_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 39,
+ "deciding": {
+  "counts_reconcile": "declared_eggs 8000 vs eggs_in 7960 is a gap of 40, 0.5%; sizes plus outgrades equal 7960 and packs equal class_a_total.",
+  "batch_disposition": "Candling sampled before run_end, swab negative with none pending, stamp matches; the 0.5% intake gap leaves slight doubt.",
+  "anomaly_cause": "Outgrades are low (120 of 7960), and the brief temperature rise is covered by a logged defrost; only the small intake gap raises doubt.",
+  "lay_to_pack": "Oldest lay date is 2025-06-09 (newer date listed first), pack 2025-06-12: 3 days.",
+  "outgrade_share": "Outgrades 70+30+20=120 of 7960, about 1.5%, close enough to 2% to leave some doubt."
+ },
+ "request": "rec-F425-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008575
+}

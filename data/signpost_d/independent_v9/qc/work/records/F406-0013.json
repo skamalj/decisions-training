@@ -1,0 +1,117 @@
+{
+ "id": "F406-0013",
+ "family": "F406",
+ "state": {
+  "session": {
+   "gallery_code": "G2",
+   "session_date": "2025-05-10",
+   "certified_limit": 100
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "14:00",
+     "occupancy": 100
+    },
+    {
+     "start": "14:15",
+     "occupancy": 97
+    }
+   ],
+   "entries": 200,
+   "ticket_scans": 260,
+   "manual_tally_peak": 111
+  },
+  "variations": [
+   {
+    "ref": "V-12",
+    "gallery_code": "G2",
+    "valid_from": "2025-05-02",
+    "valid_to": "2025-05-09",
+    "uplift_to": 110,
+    "status": "approved"
+   }
+  ],
+  "staff_log": {
+   "egress_check": "done",
+   "notes": "Counter at east door seemed jumpy, otherwise all fine."
+  },
+  "history": {
+   "overages_30d": 6
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 1.11,
+  "intervals_over_limit": 0,
+  "section_mismatch": "scans_vs_counter_major",
+  "variation_present": true,
+  "variation_scope": "date_outside_validity",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "informal_note_only",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.22,
+  "intervals_over_limit": 10,
+  "section_mismatch": "scans_vs_counter_major",
+  "variation_present": false,
+  "variation_scope": "date_outside_validity",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "informal_note_only",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "fault_explains_overage": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "request_counter_data",
+   "second": "amend_and_file",
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "variation_applies": "V-12 is approved for G2 but valid_to is 2025-05-09, the day before the session. It probably does not apply, but a reader could argue it was still in effect.",
+  "fault_explains_overage": "The only fault evidence is an informal staff note about a jumpy east counter. There is no maintenance ticket.",
+  "next_step": "Scans (260) exceed counter entries (200) by 30% and the tally (111) differs from the counter peak (100). The reader can request the counter data or amend and file; both are defensible.",
+  "peak_excess": "Against the 100 limit the tally peak of 111 is more than 10% over (level 3). If the 110 uplift applied it would be level 2, which keeps the plan balanced.",
+  "intervals_over": "The maximum interval occupancy is exactly 100, which is at the limit and not over. The tally of 111 hints at an unlogged excess, so the count could be 0 or 1."
+ },
+ "request": "rec-F406-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012853
+}

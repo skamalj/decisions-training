@@ -1,0 +1,160 @@
+{
+ "id": "F429-0017",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 120,
+   "ramp_max_m_per_10min": 0.25,
+   "operator_id": "OP07"
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "t": "03:30",
+     "level_m": 101.2
+    }
+   ],
+   "triggers": {
+    "alert_m": 100.8,
+    "action_m": 102
+   }
+  },
+  "gate_ops": [
+   {
+    "gate": "G3",
+    "t": "03:00",
+    "open_after_m": 0.4
+   },
+   {
+    "gate": "G3",
+    "t": "03:10",
+    "open_after_m": 0.9
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G3",
+     "opening_m": 0.91
+    }
+   ],
+   "calc_peak_m3s": 114,
+   "gauged_peak_m3s": 131,
+   "tailwater_m": [
+    {
+     "t": "03:20",
+     "m": 2.1
+    },
+    {
+     "t": "03:40",
+     "m": 2.9
+    }
+   ]
+  },
+  "instruments": {
+   "piezometer": [
+    {
+     "t": "03:15",
+     "kpa": 120,
+     "alert_kpa": 150
+    }
+   ],
+   "post_op_inspection": {
+    "status": "pending",
+    "completed_at": null
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "02:40",
+    "ack": true
+   },
+   {
+    "type": "callout",
+    "sent_at": "03:25",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "above_limit",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 14.99,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": true
+ },
+ "factors_sampled": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "large",
+  "discharge_discrepancy_pct": 14.99,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": true
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_for_inspection",
+   "second": null,
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (ramp_limit_breached = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 79,
+ "deciding": {
+  "within_licence": "Gauged peak 131 m3s exceeds the 120 limit.",
+  "gates_reconciled": "G3 open_after 0.9 m vs 0.91 m in the calculation inputs.",
+  "next_step": "post_op_inspection is pending with null completion; escalation is the competing option given the breach.",
+  "trigger_tier": "G3 rose 0.5 m in 10 minutes against a 0.25 m limit, and the gauged peak is over the limit.",
+  "parties_needed": "Discharge over limit, ramp breach, pending inspection and a 15% calc/gauge gap could involve three or five or more parties; the count is open."
+ },
+ "request": "rec-F429-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009804
+}

@@ -1,0 +1,161 @@
+{
+ "id": "F405-0036",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-4471",
+   "detected_on": "2025-02-03",
+   "term_start": "2025-03-10",
+   "room": "HB2.14"
+  },
+  "booking_a": {
+   "module": "BIO204",
+   "dept": "BIO",
+   "day": "Tue",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 50,
+   "required_features": [],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "CHM110",
+   "dept": "CHM",
+   "room": "HB2.14",
+   "day": "Tue",
+   "start": "11:00",
+   "end": "13:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 45,
+   "required_features": [],
+   "status": "confirmed",
+   "approved_at": "2025-01-20",
+   "approver": "J.Ortiz"
+  },
+  "room": {
+   "code": "HB2.14",
+   "aliases": [],
+   "capacity": 55,
+   "features": [
+    "projector"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "HB1.05",
+    "capacity": 60,
+    "features": [
+     "projector"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "change_request",
+    "state": "open",
+    "target_slot": "Wed 11:00"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 36,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.2,
+  "required_feature": "none",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 6,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.2,
+  "required_feature": "none",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "dismiss",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "genuine_clash": "Booking A ends 11:00 exactly when B starts 11:00 in the same room and the same weeks. The scan flagged the pair, and an open change request adds some doubt, but the times only touch.",
+  "alt_room_fits": "HB1.05 holds 60 against headcount 50 and is free for all clash weeks. No features are required, but its feature list is thin, so a reader might hesitate.",
+  "resolution": "Times are adjacent with no overlap once reconciled, so dismiss. The open change request leaves a small chance of hold.",
+  "urgency": "The first shared Tuesday of week 1 is 2025-03-11, 36 days after detection on 2025-02-03. That is distant.",
+  "parties_needed": "Two departments plus an open change request with its own approver could mean 2 or 3 to 4 actors. That splits readers."
+ },
+ "request": "rec-F405-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010228
+}

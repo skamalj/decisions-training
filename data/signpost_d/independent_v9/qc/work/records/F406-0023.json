@@ -1,0 +1,137 @@
+{
+ "id": "F406-0023",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-2290",
+   "gallery_code": "GAL-05",
+   "session_date": "2025-06-02",
+   "certified_limit": 100
+  },
+  "counts": {
+   "gate": "S1",
+   "intervals": [
+    {
+     "start": "13:00",
+     "occupancy": 88
+    },
+    {
+     "start": "13:15",
+     "occupancy": 101
+    },
+    {
+     "start": "13:30",
+     "occupancy": 101
+    },
+    {
+     "start": "13:45",
+     "occupancy": 99
+    }
+   ],
+   "summary_peak": 89,
+   "manual_tally_peak": 89
+  },
+  "variations": [
+   {
+    "ref": "V-90",
+    "gallery_code": "GAL-05",
+    "valid_from": "2025-05-26",
+    "valid_to": "2025-06-01",
+    "uplift_to": 120,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "tickets": [
+    {
+     "gate": "N2",
+     "raised_at": "2025-06-01T09:10"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": "done"
+  },
+  "history": {
+   "overages_30d": 6
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.95,
+  "intervals_over_limit": 2,
+  "section_mismatch": "session_date_mismatch",
+  "variation_present": true,
+  "variation_scope": "date_outside_validity",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "other_gate",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "factual",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.89,
+  "intervals_over_limit": 3,
+  "section_mismatch": "session_date_mismatch",
+  "variation_present": false,
+  "variation_scope": "date_outside_validity",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "other_gate",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_safety_lead",
+   "second": "amend_and_file",
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 37,
+ "deciding": {
+  "variation_applies": "V-90 valid_to 2025-06-01 ends the day before session_date 2025-06-02, so it does not apply.",
+  "fault_explains_overage": "The only ticket is for gate N2 while counts come from gate S1.",
+  "next_step": "Interval peak 101 against summary and tally peak 89, with 6 prior overages, favours escalation; the discrepancy could also be annotated and filed.",
+  "peak_excess": "summary_peak and manual tally are 89 (below 90% of 100) but the counter intervals reach 101, so levels 0 and 1 are both defensible.",
+  "intervals_over": "Two intervals (13:15 and 13:30) read 101 against the limit of 100; a reader may count one or two as marginal."
+ },
+ "request": "rec-F406-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010649
+}

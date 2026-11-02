@@ -1,0 +1,155 @@
+{
+ "id": "F413-0034",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "care_home",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ]
+  },
+  "visit": {
+   "type": "routine",
+   "start": "2025-07-09T10:00",
+   "end": "2025-07-09T10:50",
+   "client_signoff": "2025-07-09",
+   "tech_licence_expiry": "2026-05-31"
+  },
+  "treatments": [
+   {
+    "product_code": "MB1",
+    "zone": "Z1",
+    "area_m2": 40,
+    "qty_applied": 0.6,
+    "unit": "kg",
+    "label_max_per_m2": 0.03
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S2",
+    "zone": "Z1",
+    "activity": true
+   },
+   {
+    "id": "S4",
+    "zone": "Z1",
+    "activity": false,
+    "bait_taken_pct": 0
+   },
+   {
+    "id": "S1",
+    "zone": "Z1",
+    "activity": true
+   },
+   {
+    "id": "S3",
+    "zone": "Z1",
+    "activity": false
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product_code": "MB1",
+    "qty": 1.0,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 2,
+   "actions": [
+    {
+     "id": "CA2",
+     "status": "booked",
+     "booked": "2025-07-23"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "large_over_25pct",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "equal",
+  "previous_visit_available": true,
+  "dose_overage_pct": 0.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "booked",
+  "site_risk_tier": "care_home"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "large_over_25pct",
+  "stock_return_logged": false,
+  "station_count_gap": 1,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_before_visit_end",
+  "activity_trend": "decreased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 67.52,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "booked",
+  "site_risk_tier": "care_home"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 76,
+ "deciding": {
+  "usage_reconciled": "0.6 kg applied against 1.0 kg withdrawn with no return logged, an unexplained gap too large to be rounding.",
+  "activity_increased": "Two active stations against prev_active_stations 2, so the count is unchanged and an increase is only weakly arguable.",
+  "next_step": "All four stations checked, dates in order, signoff present, dose within limit and the corrective visit already booked, so the log can be filed.",
+  "breach_severity": "Dose 0.015/m2 against a 0.03 limit, no banned product, complete records and signoff, so no breach.",
+  "parties_needed": "Nothing is outstanding beyond the already booked corrective visit, so the reviewer can resolve it alone."
+ },
+ "request": "rec-F413-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010861
+}

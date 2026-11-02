@@ -1,0 +1,126 @@
+{
+ "id": "F407-0033",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "P-3308",
+   "channel": "public_app",
+   "received_at": "2025-05-06",
+   "photo_ref": null,
+   "linked_reports": [],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "local_access",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspected_at": "2025-05-08",
+   "depth_mm": 39,
+   "width_mm": 767.47
+  },
+  "works_history": [
+   {
+    "job": "J-88",
+    "done": "2025-01-20",
+    "offset_m": 9,
+    "guarantee_end": "2026-01-20"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "start": "2025-05-20",
+     "covers_offset": true
+    }
+   ],
+   "temp_measures": [
+    {
+     "expires": "2025-06-10",
+     "covers_offset": true
+    }
+   ]
+  },
+  "current_order": {
+   "status": "partially_complete",
+   "completed_items": 2,
+   "total_items": 9
+  }
+ },
+ "factors": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 0,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "partially_complete",
+  "defect_width_mm": 767.47,
+  "photo_attached": false
+ },
+ "factors_sampled": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 0,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "partially_complete",
+  "defect_width_mm": 767.47,
+  "photo_attached": false
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "repeat_failure": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "close_no_action",
+   "second": "order_repair",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 36,
+ "deciding": {
+  "meets_threshold": "depth_mm 39 vs intervention_depth_mm 40 on a valid inspection; just below.",
+  "repeat_failure": "J-88 offset_m 9 within ten metres and in guarantee, but the inspection records no offset to confirm the match.",
+  "next_step": "Depth is below threshold and a scheme starts 2025-05-20, favouring closure, but the partly complete order (2 of 9) argues for continuing it.",
+  "staff_effort": "Order 2 of 9 items complete plus a possible guarantee recall implies more than five days of work.",
+  "response_timescale": "Depth just below threshold and scheme soon vs a repeat failure on a partial order; priority or routine repair both defensible."
+ },
+ "request": "rec-F407-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00779
+}

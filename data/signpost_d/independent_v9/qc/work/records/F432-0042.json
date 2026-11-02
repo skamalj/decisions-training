@@ -1,0 +1,179 @@
+{
+ "id": "F432-0042",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E22",
+   "risk_cat": 3,
+   "doors": [
+    "A",
+    "B"
+   ],
+   "temp_range_c": [
+    18,
+    28
+   ],
+   "active_vet_case": false
+  },
+  "shift": {
+   "start": "08:00",
+   "end": "18:00",
+   "opening_count": 6,
+   "closing_count": 5
+  },
+  "movements": [
+   {
+    "animal_id": "b3",
+    "direction": "out",
+    "time": "17:55",
+    "dest": "E30"
+   }
+  ],
+  "feeding": {
+   "items": [
+    {
+     "sheet_g": 2000,
+     "offered_g": 2000,
+     "leftover": 0.82,
+     "unit": "kg",
+     "scatter_flag": true
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched_time": "08:00",
+    "logged": true,
+    "temp_c": 31
+   },
+   {
+    "sched_time": "10:00",
+    "logged": true,
+    "temp_c": 32,
+    "beh": [
+     "LAME"
+    ]
+   },
+   {
+    "sched_time": "12:00",
+    "logged": false,
+    "cctv_reviewed": true,
+    "reviewer_id": "K3"
+   },
+   {
+    "sched_time": "14:00",
+    "logged": false
+   },
+   {
+    "sched_time": "15:00",
+    "logged": false
+   },
+   {
+    "sched_time": "16:00",
+    "logged": true,
+    "temp_c": 31
+   },
+   {
+    "sched_time": "17:00",
+    "logged": false
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "A",
+     "time": "17:41"
+    },
+    {
+     "door": "B",
+     "time": "17:44"
+    }
+   ],
+   "ticket_state": "closed",
+   "retest_due": null
+  }
+ },
+ "factors": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.59,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 4,
+  "cctv_cover": true,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": false,
+  "field_mismatch": "unit_kg_vs_g",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "partial_doors_only",
+  "intake_ratio": 0.15,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 0,
+  "cctv_cover": true,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": false,
+  "field_mismatch": "unit_kg_vs_g",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "recheck_round",
+   "second": "sign_off",
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "count_reconciles": "6 minus the logged out of b3 gives 5, matching closing_count; the movement at 17:55 falls just before shift end, which leaves some doubt over count timing.",
+  "secure_at_close": "Both doors A and B are checked at 17:41 and 17:44, after the last round at 17:00, and the barrier ticket is closed.",
+  "next_step": "Three temp_c readings of 31 to 32 against a 18-28 range, with four unlogged rounds, argue for a recheck; a closed ticket and secure doors make sign-off defensible.",
+  "intake_shortfall": "Leftover 0.82 kg is 820 g, so intake is 1180 of 2000 g, 59%, right at the 60% boundary; the scatter flag adds ambiguity.",
+  "missed_rounds": "Four of seven rounds have logged false; the 12:00 one has CCTV review, so the count is 3 or 4, on the boundary between levels 2 and 3."
+ },
+ "request": "rec-F432-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011057
+}

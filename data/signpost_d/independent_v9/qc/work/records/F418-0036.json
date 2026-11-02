@@ -1,0 +1,167 @@
+{
+ "id": "F418-0036",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "KNB",
+   "plat": 2,
+   "date": "2025-03-11",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S3"
+   },
+   {
+    "post": "B",
+    "staff_id": "S5"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S3",
+    "sign_on": "05:50",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2026-01-10",
+    "dispatch_comp_exp": "2026-01-10"
+   },
+   {
+    "staff_id": "S5",
+    "sign_on": "05:55",
+    "sign_off": "08:10",
+    "safety_comp_exp": "2026-02-01",
+    "dispatch_comp_exp": "2026-02-01"
+   },
+   {
+    "staff_id": "S7",
+    "sign_on": "08:20",
+    "sign_off": "09:52",
+    "safety_comp_exp": "2026-03-05",
+    "dispatch_comp_exp": "2026-03-05"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "08:10",
+    "staff_id": "S5",
+    "platform": 2
+   },
+   {
+    "type": "cover_start",
+    "time": "08:10",
+    "staff_id": "S7",
+    "platform": 2
+   },
+   {
+    "type": "cover_end",
+    "time": "09:52",
+    "staff_id": "S7",
+    "platform": 2
+   },
+   {
+    "type": "gap_end",
+    "time": "09:52",
+    "staff_id": "S5",
+    "platform": 2
+   }
+  ],
+  "controls": {
+   "disp_ref": null,
+   "disp_platform": null,
+   "valid_from": null,
+   "valid_to": null,
+   "approved_by": null,
+   "prior_shortfalls_30d": 4
+  },
+  "remarks": [
+   "Single-staffing dispensation in force, ref to follow.",
+   "Platform fully covered."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 102,
+  "shortfall_timing": "peak",
+  "dispensation_present": false,
+  "dispensation_fit": "unknown",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 102,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": false,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_records",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "cover_arranged",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "headcount_verified": "All three people have attendance rows and in-date competence. S7 signed on at 08:20 but cover_start is 08:10, a small unmatched period that leaves some doubt.",
+  "next_step": "controls.disp_ref is null while remarks say a dispensation is in force with the ref to follow. The missing dispensation reference is the specific item to chase.",
+  "coverage_outcome": "cover_start and cover_end by S7 span the gap_start to gap_end window exactly, so every gap is filled by relief and none is left open.",
+  "reversal_time": "The shift is past and passengers were served under-minimum for at least 10 minutes. Whether that is permanent or only a records matter is open, and the dispensation ref is unresolved.",
+  "exposure_severity": "The gap is during service with S7 signing on at 08:20. Remarks claim a dispensation but disp_ref is null and approved_by is null, so level 1 against level 2 turns on whether the unreferenced dispensation counts."
+ },
+ "request": "rec-F418-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012319
+}

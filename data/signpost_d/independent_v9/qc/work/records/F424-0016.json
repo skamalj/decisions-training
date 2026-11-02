@@ -1,0 +1,137 @@
+{
+ "id": "F424-0016",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2411",
+   "vessel_id": "FV3",
+   "volume_hl": 20,
+   "og_target": 1.052,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 22
+  },
+  "readings": [
+   {
+    "ts": "2024-05-10",
+    "gravity_sg": 1.012,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-05-11",
+    "gravity_sg": 1.012,
+    "temp_c": 19
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-05-11",
+    "note": "Smells clean, all good."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2411",
+   "diacetyl_mgl": 0.16,
+   "micro_plate": {
+    "result": "positive",
+    "cfu_ml": 300
+   },
+   "retest": [
+    {
+     "result": "negative"
+    }
+   ],
+   "abv_pct": 5.2
+  },
+  "release_request": {
+   "vessel_id": "FV3",
+   "volume_hl": 20,
+   "note": "Routine."
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.16,
+  "discrepancy_count": 0,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.16,
+  "discrepancy_count": 5,
+  "decoy_mismatch": false,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "reassuring"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 67,
+ "deciding": {
+  "terminal_gravity": "Two consecutive readings of 1.012, inside 1.010-1.014; only two readings.",
+  "contamination_supported": "Positive plate at 300 cfu/ml against a negative retest, with no explanation; the two results offset.",
+  "batch_disposition": "Lab complete, retest negative, request routine; diacetyl 0.16 is slightly high.",
+  "deviation_severity": "Temps normal and gravity in band; only diacetyl 0.16 is mildly elevated.",
+  "record_discrepancies": "Vessel, volume and batch_ref agree across all sections."
+ },
+ "request": "rec-F424-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005879
+}

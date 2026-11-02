@@ -1,0 +1,162 @@
+{
+ "id": "F413-0023",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "id": "W31",
+   "tier": "warehouse",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "zones": {
+    "Z3": {
+     "banned_products": [
+      "BR7"
+     ]
+    }
+   }
+  },
+  "visit": {
+   "type": "routine",
+   "lic_exp": "2026-01-15",
+   "start": "2025-07-02T08:30",
+   "end": "2025-07-02T10:00",
+   "signoff": "2025-07-02T09:20"
+  },
+  "treatments": [
+   {
+    "prod": "BR7",
+    "zone": "Z3",
+    "area_m2": 40,
+    "qty": 400,
+    "unit": "g",
+    "label_max_per_m2": 15
+   }
+  ],
+  "monitoring": [
+   {
+    "st": "S4",
+    "act": true
+   },
+   {
+    "st": "S1",
+    "act": true
+   },
+   {
+    "st": "S5",
+    "act": false
+   },
+   {
+    "st": "S2",
+    "act": true
+   },
+   {
+    "st": "S3",
+    "act": true
+   }
+  ],
+  "van_stock": [
+   {
+    "mv": "withdraw",
+    "prod": "BR7",
+    "qty": 1000,
+    "unit": "g"
+   },
+   {
+    "mv": "return",
+    "prod": "BR7",
+    "qty": 300,
+    "unit": "g"
+   }
+  ],
+  "follow_up": {
+   "prev_active": 1,
+   "actions": []
+  }
+ },
+ "factors": {
+  "stock_mismatch": "substantial_over_25pct",
+  "stock_return_logged": true,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_before_visit_end",
+  "activity_trend": "increased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 0.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "warehouse"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": true,
+  "station_count_gap": 1,
+  "monitoring_sheet_missing": true,
+  "date_sequence": "signoff_before_visit_end",
+  "activity_trend": "decreased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 27.73,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "warehouse"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "book_revisit",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "usage_reconciled": "Net withdrawal is 700 g (1000 minus 300 returned) against 400 g applied, so 300 g is unaccounted for.",
+  "activity_increased": "4 active stations against prev_active 1.",
+  "next_step": "BR7 is applied in Z3, where it is banned, and the stock gap is open. Corrective treatment and a revisit with conditions look most likely, though escalation is arguable.",
+  "breach_severity": "BR7 appears in Z3 banned_products and was applied in Z3.",
+  "parties_needed": "The technician must explain the stock and the banned use, and the manager or office must arrange a revisit; two teams."
+ },
+ "request": "rec-F413-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009995
+}

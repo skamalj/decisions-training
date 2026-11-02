@@ -1,0 +1,121 @@
+{
+ "id": "F431-0032",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM2093",
+   "seal_state": "broken",
+   "seal_checked_date": "2024-05-14"
+  },
+  "period_read": {
+   "read_date": "2024-06-30",
+   "reg_kwh": 20982,
+   "src_code": "AMR"
+  },
+  "history": [
+   {
+    "date": "2024-05-31",
+    "reg_kwh": 20100,
+    "src": "AMR",
+    "ly_kwh": 500
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_COMMS"
+   ],
+   "flow_temp_c": 72,
+   "return_temp_c": 46,
+   "battery_pct": 18
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 126,
+   "hdd_prior_year": 100,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "open",
+     "date": "2024-06-20"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.4,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.26,
+  "diagnostic_error_count": 1,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "previous_read_null",
+  "consumption_ratio": 2.32,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.26,
+  "diagnostic_error_count": 3,
+  "meter_works_order": true,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "billable_actual": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "bill_estimate",
+   "second": "accept_reading",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "meter_fault": "Seal broken with no matching ENG visit, but delta-T is plausible (72/46) and only a lone E_COMMS code appears, so fault is leaning unsupported.",
+  "billable_actual": "AMR read in date and register order after the previous AMR read, diagnostics present; a valid actual.",
+  "next_step": "Unmatched broken seal and open RECAL work order argue for an estimate, while a clean in-sequence AMR read argues for acceptance.",
+  "staff_effort": "Broken seal without a visit plus open recalibration needs tracing and site work; this could run to days or more than a week.",
+  "consumption_deviation": "Consumption 882 kWh vs expected 500*126/100=630 kWh gives ratio 1.40, exactly at the 40% boundary between levels 1 and 2."
+ },
+ "request": "rec-F431-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009692
+}

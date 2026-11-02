@@ -1,0 +1,146 @@
+{
+ "id": "F432-0033",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E3",
+   "risk_cat": 1,
+   "active_vet_case": {
+    "pre_procedure_fast": true
+   },
+   "doors": [
+    "A"
+   ]
+  },
+  "shift": {
+   "opening_count": 2,
+   "closing_count": 2,
+   "end": "19:00"
+  },
+  "movements": [],
+  "feeding": [
+   {
+    "sheet_g": 800,
+    "offered_g": 800,
+    "leftover_g": 600
+   }
+  ],
+  "rounds": [
+   {
+    "t": "07:00",
+    "logged": true
+   },
+   {
+    "t": "09:00",
+    "logged": false,
+    "cctv_reviewed": true,
+    "reviewer_id": "k5"
+   },
+   {
+    "t": "11:00",
+    "logged": false
+   },
+   {
+    "t": "13:00",
+    "logged": false
+   },
+   {
+    "t": "15:00",
+    "logged": false
+   },
+   {
+    "t": "17:00",
+    "logged": true
+   }
+  ],
+  "close_check": {
+   "A": "18:40",
+   "ticket": "BF-87",
+   "ticket_state": "closed"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.25,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 4,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_1_high"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.37,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 3,
+  "cctv_cover": true,
+  "temp_excursion": "brief_single_reading",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_1_high"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "count_reconciles": "Opening 2 equals closing 2 and the movements list is empty.",
+  "secure_at_close": "Door A was checked at 18:40, after the last round at 17:00, and ticket BF-87 is closed; the earlier fault leaves slight doubt.",
+  "next_step": "The counts reconcile, the door was checked after the last round and the fault is closed. The low intake is explained by the pre-procedure fast and the unlogged rounds by CCTV review, so the log can be filed.",
+  "intake_shortfall": "Offered 800 g minus 600 g leftover leaves 200 g, 25% of the sheet, at the boundary between levels 2 and 3; the fast is only partly mitigating.",
+  "missed_rounds": "Four rounds are unlogged, but one has a CCTV review, so it is either three or four missing, on the boundary between levels 2 and 3."
+ },
+ "request": "rec-F432-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010348
+}

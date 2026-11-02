@@ -1,0 +1,136 @@
+{
+ "id": "F411-0007",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "PH2231",
+   "type": "private_hire",
+   "expiry": "2025-08-31",
+   "review_date": "2025-08-12"
+  },
+  "vehicle": {
+   "first_reg": "2014-03-20",
+   "odometer_km": 143700
+  },
+  "inspection": {
+   "date": "2025-08-05",
+   "result_code": "P",
+   "brake_efficiency_pct": 71
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2026-01-10"
+   },
+   {
+    "type": "mot",
+    "expires_on": "2026-02-02"
+   },
+   {
+    "type": "dbs",
+    "expires_on": "2027-05-01"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2023-08-09",
+     "result": "P",
+     "odometer_km": 104300
+    },
+    {
+     "date": "2024-09-01",
+     "result": "F",
+     "odometer_km": 141900
+    },
+    {
+     "date": "2024-11-12",
+     "result": "F",
+     "odometer_km": 142300
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 11
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 3,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 11
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 54,
+ "deciding": {
+  "odometer_consistent": "No drop, but only 1400 km since 2024-11 against about 37000 km the year before; the slowdown is mildly suspicious yet could be real.",
+  "next_step": "Result P, empty defects, all documents in date and a brake figure present; nothing calls for action.",
+  "inspection_outcome": "Defects list is empty and the result code is P; two earlier failures are history only.",
+  "document_gaps": "Insurance, MOT and DBS all expire well after review_date 2025-08-12.",
+  "outstanding_severity": "No defects listed, so nothing is outstanding."
+ },
+ "request": "rec-F411-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015553
+}

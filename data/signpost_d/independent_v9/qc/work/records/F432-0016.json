@@ -1,0 +1,179 @@
+{
+ "id": "F432-0016",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E14",
+   "sp": "MEER",
+   "risk_cat": 3,
+   "roster": [
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+   ],
+   "temp_range_c": [
+    14,
+    26
+   ],
+   "maint_window": "06:00-09:00",
+   "active_vet_case": null
+  },
+  "shift": {
+   "start": "08:00",
+   "end": "14:00",
+   "opening_count": 5,
+   "closing_count": 4
+  },
+  "movements": [
+   {
+    "animal_id": "a5",
+    "direction": "out",
+    "time": "14:02",
+    "dest": "E09"
+   }
+  ],
+  "feeding": {
+   "items": [
+    {
+     "sheet_g": 2000,
+     "offered_g": 2000,
+     "leftover_g": 1100,
+     "unit": "g",
+     "fast_flag": true
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched": "08:30",
+    "logged": true,
+    "entry_time": "08:31",
+    "temp_c": 18,
+    "beh": [
+     "LAME"
+    ]
+   },
+   {
+    "sched": "10:00",
+    "logged": false,
+    "cctv_reviewed": true,
+    "reviewer_id": "K2"
+   },
+   {
+    "sched": "11:00",
+    "logged": false
+   },
+   {
+    "sched": "12:00",
+    "logged": false,
+    "cctv_reviewed": true,
+    "reviewer_id": "K2"
+   },
+   {
+    "sched": "13:00",
+    "logged": false
+   },
+   {
+    "sched": "13:30",
+    "logged": true,
+    "entry_time": "13:31",
+    "temp_c": 19,
+    "beh": [
+     "STER",
+     "AGGR"
+    ]
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "D1",
+     "time": "12:50"
+    }
+   ],
+   "ticket": null
+  }
+ },
+ "factors": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_before_last_round",
+  "intake_ratio": 0.45,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 4,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": true,
+  "field_mismatch": "none",
+  "behaviour_codes": 3,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.7,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 2,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": true,
+  "field_mismatch": "none",
+  "behaviour_codes": 3,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "recheck_round",
+   "second": "sign_off",
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "count_reconciles": "Opening 5, closing 4 with one out movement logged at 14:02, two minutes after shift end at 14:00, so reconciliation depends on whether that transfer counts for this shift.",
+  "secure_at_close": "The only lock check is at 12:50, before the last logged round at 13:31, so it is early; no open fault ticket.",
+  "next_step": "Four unlogged rounds and an early lock check suggest a recheck, but the count roughly reconciles, two rounds have CCTV review and the fast flag explains low intake, so sign-off is also defensible.",
+  "intake_shortfall": "Offered 2000 g less 1100 g leftover gives 900 g, 45% of sheet; the fast flag softens it slightly.",
+  "missed_rounds": "Four of six rounds have logged false; CCTV review on two of them is the only doubt."
+ },
+ "request": "rec-F432-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011223
+}

@@ -1,0 +1,170 @@
+{
+ "id": "F413-0016",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "id": "CH-114",
+   "tier": "care_home",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "zones": [
+    {
+     "z": "kitchen",
+     "toxic_bait_permitted": false
+    },
+    {
+     "z": "yard",
+     "toxic_bait_permitted": true
+    }
+   ]
+  },
+  "visit": {
+   "id": "V-5521",
+   "type": "routine",
+   "tech_licence_expiry": "2026-03-01",
+   "start": "2025-06-10T09:00",
+   "end": "2025-06-10T10:40",
+   "client_signoff": null
+  },
+  "treatments": [
+   {
+    "product": "BRD-20",
+    "ai": "brodifacoum",
+    "zone": "kitchen",
+    "area_m2": 10,
+    "qty_applied": 514,
+    "unit": "g",
+    "label_max_per_m2": 34
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "activity": true
+   },
+   {
+    "id": "S2",
+    "activity": true
+   },
+   {
+    "id": "S3",
+    "activity": true
+   },
+   {
+    "id": "S4",
+    "activity": true
+   },
+   {
+    "id": "S5",
+    "activity": false,
+    "bait_taken_pct": 0
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product": "BRD-20",
+    "qty": 650,
+    "unit": "g"
+   },
+   {
+    "movement": "return",
+    "product": "BRD-20",
+    "qty": 100,
+    "unit": "g"
+   }
+  ],
+  "follow_up": {
+   "prev_visit": "V-5390",
+   "prev_active_stations": 3,
+   "actions": [
+    {
+     "a": "seal gap",
+     "status": "completed",
+     "date": "2025-06-10"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": true,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": true,
+  "dose_overage_pct": 51.2,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "care_home"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": true,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 51.34,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "care_home"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "sign_off",
+   "second": "request_records",
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 98,
+ "deciding": {
+  "usage_reconciled": "Net withdrawal 650-100=550 g against 514 g applied: a 36 g gap, about 6%, too big for a pure unit artefact yet small enough to be argued as rounding.",
+  "activity_increased": "4 stations active against prev_active_stations 3: a rise of one, with one visit's counts only.",
+  "next_step": "client_signoff is null (a missing item that suggests request_records), while the log is otherwise complete; the banned-zone treatment pushes toward escalation.",
+  "breach_severity": "BRD-20 brodifacoum bait applied in the kitchen zone where toxic_bait_permitted is false; the dose is also over label.",
+  "parties_needed": "Technician, technical manager, and possibly the client or care-home contact; the corrective seal-gap work is already completed."
+ },
+ "request": "rec-F413-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010903
+}

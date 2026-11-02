@@ -1,0 +1,168 @@
+{
+ "id": "F406-0003",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-7302",
+   "gallery_code": "G-07",
+   "session_date": "2025-06-14",
+   "open": "13:00",
+   "close": "15:00",
+   "certified_limit": 100
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "13:00",
+     "occupancy": 60
+    },
+    {
+     "start": "13:15",
+     "occupancy": 88
+    },
+    {
+     "start": "13:30",
+     "occupancy": 97
+    },
+    {
+     "start": "13:45",
+     "occupancy": 102
+    },
+    {
+     "start": "14:00",
+     "occupancy": 106
+    },
+    {
+     "start": "14:15",
+     "occupancy": 101
+    },
+    {
+     "start": "14:30",
+     "occupancy": 95
+    },
+    {
+     "start": "14:45",
+     "occupancy": 80
+    }
+   ],
+   "ticket_scans": 371,
+   "manual_tally_peak": 74,
+   "summary_peak": 106
+  },
+  "variations": [
+   {
+    "ref": "CV-4402",
+    "gallery_code": "G-07",
+    "valid_from": "2025-06-13",
+    "valid_to": "2025-06-15",
+    "uplift_to": 130,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "gates": [
+    "N1",
+    "N2"
+   ],
+   "last_calibrated": "2025-03-02",
+   "maintenance": []
+  },
+  "staff_log": {
+   "stewards": 3,
+   "egress_check": "done",
+   "notes": [
+    "Counter at north door seemed jumpy.",
+    "Gallery was packed, really unsafe, cap it next time."
+   ]
+  },
+  "history": {
+   "overages_30d": 5,
+   "dates": [
+    "2025-06-01",
+    "2025-06-04",
+    "2025-06-07",
+    "2025-06-08",
+    "2025-06-11"
+   ]
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.82,
+  "intervals_over_limit": 3,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "informal_note_only",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 5,
+  "staff_note_tone": "alarmed_unsupported",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.06,
+  "intervals_over_limit": 0,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": false,
+  "variation_scope": "wrong_gallery",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "informal_note_only",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 5,
+  "staff_note_tone": "alarmed_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "restrict_admissions",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 112,
+ "deciding": {
+  "variation_applies": "CV-4402 is approved, gallery code G-07 matches the session, and its window 2025-06-13 to 06-15 covers 2025-06-14.",
+  "fault_explains_overage": "No maintenance ticket exists; only a steward note that the north door counter 'seemed jumpy'.",
+  "next_step": "Five overages in 30 days and a counter peak of 106 over the 100 certified limit, plus an alarmed note, point to a reduced cap, though the approved uplift to 130 leaves some doubt.",
+  "peak_excess": "Counter peak 106 and tally peak 74 are both under 90% of the 130 uplift limit in force (82% and 57%).",
+  "intervals_over": "Against the certified 100, intervals at 102, 106 and 101 are over; 101 is marginal, so two or three, and the uplift to 130 adds a further reading."
+ },
+ "request": "rec-F406-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.020462
+}

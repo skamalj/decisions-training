@@ -1,0 +1,139 @@
+{
+ "id": "F425-0041",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "producer_code": "1UK-4F17",
+   "lay_dates": [
+    "2025-03-03"
+   ],
+   "declared_eggs": 9000
+  },
+  "grading_run": {
+   "run_end": "2025-03-05T10:00",
+   "eggs_in": 9000,
+   "by_size": {
+    "S": 900,
+    "M": 3600,
+    "L": 3600,
+    "XL": 800
+   },
+   "outgrades": {
+    "cracks": 50,
+    "dirties": 50
+   },
+   "class_a_total": 8900
+  },
+  "checks": {
+   "candling_sample": {
+    "sampled_at": "2025-03-05T09:00",
+    "defects": 0
+   }
+  },
+  "flock": {
+   "last_swab": {
+    "result": "negative"
+   }
+  },
+  "packing": {
+   "pack_date": "2025-03-05",
+   "packs": [
+    {
+     "size": "M",
+     "count": 8900
+    }
+   ],
+   "stamp_code": "1UK-4F17"
+  }
+ },
+ "factors": {
+  "count_gap_size": "none",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 2,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 1.11,
+  "dominant_defect": "none",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 24
+ },
+ "factors_sampled": {
+  "count_gap_size": "moderate",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 7,
+  "mixed_lay_dates": false,
+  "missing_check": "candling_null",
+  "swab_positive": false,
+  "outgrade_rate_pct": 12.09,
+  "dominant_defect": "dirties",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 24
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release_class_a",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "leaning",
+   "target": "no_anomaly",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "lay_to_pack": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "outgrade_share": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 37,
+ "deciding": {
+  "counts_reconcile": "declared_eggs 9000 equals eggs_in 9000; sizes 8900 plus outgrades 100 equals 9000; packs 8900 equal class_a_total.",
+  "batch_disposition": "Candling sampled before run_end, swab negative, stamp code matches producer code, counts agree, packed 2 days after lay.",
+  "anomaly_cause": "Counts agree and outgrades are only 100 of 9000, so there is nothing to explain.",
+  "lay_to_pack": "Lay date 2025-03-03, pack_date 2025-03-05: 2 days.",
+  "outgrade_share": "Outgrades 50+50=100 of 9000 eggs in, about 1.1%."
+ },
+ "request": "rec-F425-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008575
+}

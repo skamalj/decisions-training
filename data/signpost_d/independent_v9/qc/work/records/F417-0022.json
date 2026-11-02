@@ -1,0 +1,141 @@
+{
+ "id": "F417-0022",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V-2093",
+   "type": "motor yacht",
+   "loa_m": 9.4,
+   "draught_m": 2.1,
+   "draught_src": "declared",
+   "home_port": "Cowes"
+  },
+  "berth": {
+   "id": "B-7",
+   "max_loa_m": 11.0,
+   "fender_allow_m": 0.3,
+   "depth_lat_m": 2.0,
+   "bed": "soft mud, dries",
+   "waiver_ref": null
+  },
+  "booking": {
+   "arrival": "2025-07-14",
+   "departure": "2025-07-18",
+   "next_on_berth": {
+    "arrival": "2025-07-18"
+   }
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 9.4,
+    "draught_m": null
+   },
+   "insurance_expiry": "2026-02-01",
+   "inspection_date": "2025-04-02"
+  },
+  "account": {
+   "dues_outstanding_gbp": 0,
+   "deposit_paid": true
+  },
+  "history": [
+   {
+    "date": "2023-07-10",
+    "berth": "B-7",
+    "incidents": 0
+   },
+   {
+    "date": "2024-07-12",
+    "berth": "B-7",
+    "incidents": 1
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 0.0,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": -0.1,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 0,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 11.24,
+  "berth_length_fit": "exceeds_limit",
+  "ukc_margin_m": 0.65,
+  "draught_source": "owner_declared",
+  "insurance_status": "expires_during_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 1441,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "confirm_allocation",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "ukc_band": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "unresolved_count": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 46,
+ "deciding": {
+  "length_fits": "Survey loa 9.4 is well under max_loa 11.0. Doubt only because the survey draught is null.",
+  "next_step": "Insurance and inspection are current, dues are 0, the deposit is paid and the berth is a drying mud bed. Nothing is missing, so the allocation stands.",
+  "primary_issue": "Documents and account are clean. The only mild doubt is that next_on_berth arrives on the departure day, which is a turnover and not an overlap.",
+  "ukc_band": "Declared draught 2.1 against depth_lat 2.0: draught exceeds low-water depth.",
+  "unresolved_count": "Vessel loa matches survey loa (9.4), the length fits, and there is no waiver, arrears or document conflict."
+ },
+ "request": "rec-F417-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012066
+}

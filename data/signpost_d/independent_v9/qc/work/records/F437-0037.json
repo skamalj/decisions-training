@@ -1,0 +1,125 @@
+{
+ "id": "F437-0037",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": 2,
+   "target_locale": "fr-FR",
+   "glossary_version": 7,
+   "due_at": "2025-05-09T17:00"
+  },
+  "source": {
+   "version": 2,
+   "segment_count": 96
+  },
+  "deliverable": {
+   "built_from_version": 2,
+   "target_locale": "fr-FR",
+   "segments_translated": 96,
+   "glossary_version_used": 7,
+   "delivered_at": "2025-05-08T00:00"
+  },
+  "qa_report": {
+   "flags": 4,
+   "false_positive_marked": 3,
+   "fixed": 1,
+   "number_mismatches": [],
+   "unresolved": {
+    "minor": 0
+   }
+  },
+  "review": {
+   "signed_off": true,
+   "completed_at": "2025-05-08T00:00",
+   "errors": []
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-05-03"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_at_delivery_time",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.75,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 41,
+  "client_waiver": false,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": true,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.75,
+  "number_mismatch_count": 3,
+  "deadline_slack_hours": 41,
+  "client_waiver": false,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 40,
+ "deciding": {
+  "scope_matches": "Source version 2 in order, source and build; 96 segments in source and deliverable; locale matches.",
+  "reviewed_in_time": "review.completed_at equals deliverable.delivered_at (2025-05-08T00:00) exactly, so 'before delivery' is borderline.",
+  "next_step": "All versions, counts, glossary and locale agree, review is signed off and QA has no unresolved items, with 41h slack; the identical timestamps leave slight doubt.",
+  "open_severity": "qa_report.unresolved minor 0, review.errors empty and the number_mismatches list is empty.",
+  "parties_needed": "Nothing open; the only residual question is the timestamp tie, which one person can confirm."
+ },
+ "request": "rec-F437-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009538
+}

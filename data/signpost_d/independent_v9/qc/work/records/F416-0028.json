@@ -1,0 +1,177 @@
+{
+ "id": "F416-0028",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "date": "2025-01-20",
+   "end": "17:00",
+   "signoff": "G1"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-01-01"
+   },
+   {
+    "id": "G2",
+    "on": "09:00",
+    "off": "16:00",
+    "qual_expiry": "2026-02-01"
+   },
+   {
+    "id": "G3",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-03-01"
+   }
+  ],
+  "conditions": [
+   {
+    "time": "12:00",
+    "rip_risk": "high",
+    "flag": "red_yellow",
+    "bathing_zone_moved": false
+   }
+  ],
+  "incidents": [
+   {
+    "date": "2025-01-20",
+    "time": "10:00",
+    "type": "water_rescue",
+    "responders": [
+     "G1",
+     "G3"
+    ],
+    "outcome": "released"
+   },
+   {
+    "date": "2025-01-20",
+    "time": "11:00",
+    "type": "water_rescue",
+    "responders": [
+     "G1",
+     "G2"
+    ],
+    "outcome": "released"
+   },
+   {
+    "date": "2025-01-20",
+    "time": "13:00",
+    "type": "water_rescue",
+    "responders": [
+     "G1",
+     "G3"
+    ],
+    "outcome": "released"
+   },
+   {
+    "date": "2025-01-20",
+    "time": "16:00",
+    "type": "water_rescue",
+    "responders": [
+     "G2",
+     "G3"
+    ],
+    "outcome": "conveyed",
+    "aed_used": true,
+    "ambulance_ref": "A-77"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_board",
+    "out_from": "14:00",
+    "out_to": null,
+    "substitute_unit_id": null
+   }
+  ],
+  "handover": {
+   "rescues": 4,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "check_sheet_ref": "C-3"
+  }
+ },
+ "factors": {
+  "rescue_count": 4,
+  "rescue_cover_shortfall": "responder_off_roster",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "conveyed_with_aed_used",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 4,
+  "rescue_cover_shortfall": "responder_off_roster",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "conveyed",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "totals_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "corrective_order",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 68,
+ "deciding": {
+  "two_guard_cover": "The 16:00 rescue lists G2, whose roster off time is exactly 16:00, so presence at that moment is arguable; all other rescues have two in-date rostered guards.",
+  "totals_reconcile": "Rescues 4 and kit_defects 1 match the itemised entries, first_aid 0 matches, and all incident dates equal the shift date.",
+  "next_step": "The 12:00 reading shows rip_risk high with flag red_yellow and the zone not moved, and the kit item is out with no substitute and no end time, so a station fix is ordered.",
+  "outcome_severity": "The 16:00 incident outcome is conveyed, but aed_used is true, which points to a critical outcome.",
+  "kit_outage": "The board went out at 14:00 with out_to null and the shift ends at 17:00, which gives exactly 180 minutes, on the boundary between levels 2 and 3."
+ },
+ "request": "rec-F416-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.017717
+}

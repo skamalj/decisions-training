@@ -1,0 +1,100 @@
+{
+ "id": "F417-0033",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "loa_m": 9.5,
+   "draught_m": 1.6,
+   "draught_src": "owner"
+  },
+  "berth": {
+   "max_loa_m": 9.8,
+   "fender_allow_m": 0.0,
+   "depth_lat_m": 3.0,
+   "waiver_ref": "W-9"
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 10.1,
+    "draught_m": null
+   },
+   "insurance_expiry": null
+  }
+ },
+ "factors": {
+  "loa_mismatch_pct": 6.07,
+  "berth_length_fit": "over_limit",
+  "ukc_margin_m": 1.4,
+  "draught_source": "owner_declared",
+  "insurance_status": "missing",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 2079,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "one_night",
+  "trusted_regular": false,
+  "prior_incidents": 2,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 6.07,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 1.4,
+  "draught_source": "owner_declared",
+  "insurance_status": "missing",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 2079,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "one_night",
+  "trusted_regular": false,
+  "prior_incidents": 2,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_document",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "dimension_mismatch",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 28,
+ "deciding": {
+  "length_fits": "Survey loa 10.1 exceeds max 9.8 with zero fender allowance.",
+  "next_step": "insurance_expiry is null, so proof of insurance is needed.",
+  "primary_issue": "Declared 9.5 vs survey 10.1 exceeds berth max 9.8.",
+  "ukc_band": "Depth 3.0 minus owner-declared draught 1.6 is 1.4, but the draught is unverified.",
+  "unresolved_count": "Length mismatch is clear; missing insurance may count as a second."
+ },
+ "request": "rec-F417-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004934
+}

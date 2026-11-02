@@ -1,0 +1,156 @@
+{
+ "id": "F435-0038",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E-7103",
+   "zone_id": "BAL3",
+   "zone_type": "balcony",
+   "doors_open": "2025-06-11T19:00",
+   "check_filed_at": "2025-06-11T23:30",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 500,
+   "variation": null,
+   "stewards_required": 24,
+   "exit_routes": [
+    "N1",
+    "N2",
+    "N3",
+    "N4"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 500,
+   "issued": 460,
+   "comps_included": 35,
+   "scanned_in": 449
+  },
+  "ingress": {
+   "device_id": "D21",
+   "device_status": "ok",
+   "raw_peak": 495,
+   "peak_at": "2025-06-11T20:20",
+   "manual_recount": {
+    "count": 495,
+    "at": "2025-06-11T20:30"
+   }
+  },
+  "stewarding": {
+   "rostered": 25,
+   "signed_in": 24,
+   "relief": {
+    "called_at": "2025-06-11T18:40",
+    "eta_min": 15
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "N1",
+    "checked_at": "2025-06-11T18:05",
+    "status": "clear"
+   },
+   {
+    "route_id": "N2",
+    "checked_at": "2025-06-11T18:10",
+    "status": "clear"
+   },
+   {
+    "route_id": "N3",
+    "checked_at": "2025-06-11T18:15",
+    "status": "clear"
+   },
+   {
+    "route_id": "N4",
+    "checked_at": "2025-06-11T18:20",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "balcony",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.99,
+  "counter_status": "ok",
+  "counter_inflation": 0.0,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.92,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.0,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "balcony",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.01,
+  "counter_status": "ok",
+  "counter_inflation": 0.01,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.92,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.03,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "unconfirmed_exits": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 57,
+ "deciding": {
+  "verified_exceedance": "Counter is ok with peak 495 and the recount agrees at 495, just under the limit of 500 with no variation.",
+  "disposition": "Occupancy 495 under 500, issued 460 under limit, stewards 24 of 24 and all exits checked clear; nothing outstanding.",
+  "discrepancy_source": "Issued 460 and verified 495 are both within the limit of 500 that ticketing used.",
+  "steward_shortfall": "signed_in 24 equals stewards_required 24; the relief call is a precaution.",
+  "unconfirmed_exits": "All four routes were checked clear between 18:05 and 18:20, before doors at 19:00."
+ },
+ "request": "rec-F435-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010641
+}

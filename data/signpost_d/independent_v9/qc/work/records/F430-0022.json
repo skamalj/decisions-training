@@ -1,0 +1,154 @@
+{
+ "id": "F430-0022",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S07",
+   "assets": [
+    {
+     "id": "CB1",
+     "unit": "kPa",
+     "normal_band": [
+      580,
+      700
+     ],
+     "alarm_limit": 520,
+     "trip_limit": 500,
+     "customers_fed": 85,
+     "partner_id": "CB1B"
+    },
+    {
+     "id": "CB2",
+     "unit": "kPa",
+     "normal_band": [
+      580,
+      700
+     ],
+     "alarm_limit": 520,
+     "trip_limit": 500,
+     "customers_fed": 85,
+     "partner_id": "CB2B"
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-05-07",
+   "scheduled_assets": [
+    "CB1",
+    "CB2"
+   ],
+   "inspector_note": "CB2 not reachable, locked."
+  },
+  "readings": [
+   {
+    "asset_id": "CB1",
+    "param": "SF6",
+    "value": 5.78,
+    "unit": "bar",
+    "timestamp": "2024-05-07T00:00"
+   }
+  ],
+  "defects": [
+   {
+    "defect_id": "D2",
+    "asset_id": "CB1",
+    "category": "gas",
+    "photo_ref": "IMG-12",
+    "note": "SF6 leak, pressure dropping fast on CB1."
+   }
+  ],
+  "history": {
+   "previous_round": null,
+   "permits": [
+    {
+     "asset_id": "CB1",
+     "desc": "gas gauge work",
+     "from": "2024-05-05",
+     "to": "2024-05-06"
+    }
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "CB1B": "in_service"
+   },
+   "outage_plan": []
+  }
+ },
+ "factors": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": false,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 85,
+  "trivial_discrepancies": 4,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": false,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 3563,
+  "trivial_discrepancies": 4,
+  "near_boundary": true
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "balanced",
+   "target": "file_closed",
+   "second": "recheck_next_round",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 92,
+ "deciding": {
+  "defect_corroborated": "Note says leak with fast drop, but a single reading of 5.78 bar (578 kPa) sits just under the band and there is no previous round to show a drop.",
+  "benign_explanation": "Gauge work permit on CB1 ended the day before the round, so it plausibly explains the reading but does not strictly cover the visit date.",
+  "follow_up": "One marginal reading and an unreachable CB2 could be filed or flagged for recheck; CB1B is in service.",
+  "limit_deviation": "578 kPa against a 580 kPa lower band after converting from bar is a hair outside normal, well above alarm.",
+  "supply_exposure": "CB1 feeds 85 customers but CB1B is in service and would carry the load, so exposure is zero or few."
+ },
+ "request": "rec-F430-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011966
+}

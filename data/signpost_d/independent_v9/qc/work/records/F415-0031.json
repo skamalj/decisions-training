@@ -1,0 +1,158 @@
+{
+ "id": "F415-0031",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": [
+    {
+     "from": "10:00",
+     "to": "13:30",
+     "reason": "drain jetting",
+     "approved_by": "OF12"
+    }
+   ]
+  },
+  "shift": {
+   "start": "07:55",
+   "sched_slots": [
+    "08:00",
+    "10:00",
+    "12:00",
+    "14:00",
+    "16:00",
+    "18:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "status": "not_recorded"
+   },
+   {
+    "slot": "14:00",
+    "start": "14:02",
+    "end": "14:25",
+    "checklist": {
+     "pan": true,
+     "floor": true
+    },
+    "photo_ref": "p41"
+   },
+   {
+    "slot": "16:00",
+    "start": "16:01",
+    "end": "16:24",
+    "checklist": {
+     "pan": true,
+     "floor": true
+    },
+    "photo_ref": "p42"
+   },
+   {
+    "slot": "18:00",
+    "start": "18:01",
+    "end": "18:25",
+    "checklist": {
+     "pan": true,
+     "floor": true
+    },
+    "photo_ref": "p43"
+   }
+  ],
+  "faults": [
+   {
+    "type": "blocked_pan",
+    "reported_at": "2024-05-02T10:05:00",
+    "remedied_at": "2024-05-02T13:13:00",
+    "remedy_note": "pan cleared 12:40"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2024-05-02T18:40:00"
+  },
+  "history": {
+   "prior_defaults_90d": 3
+  }
+ },
+ "factors": {
+  "scheduled_slots": 6,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 188.27,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 3
+ },
+ "factors_sampled": {
+  "scheduled_slots": 6,
+  "missed_slots": "2",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 188.27,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 3
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "missed_clean": "The 08:00 slot is not_recorded and the closure starts at 10:00, so it does not cover that slot. The 10:00 and 12:00 slots sit inside the approved closure.",
+  "sign_off_valid": "A supervisor signed at 18:40, after the last visit ended at 18:25. The sign-off is nominally valid, but it covers a log with a not_recorded slot.",
+  "next_step": "The fault sits entirely inside the approved closure, the recorded visits are complete with photos, and the sign-off is valid, so no follow-up is needed.",
+  "staff_effort": "The only loose end is a quick check of the 08:00 slot, which is under an hour. The remedy note says 12:40 against remedied_at 13:13, which might add a little more time.",
+  "fault_exposure": "The fault ran 10:05 to 13:13, inside the 10:00-13:30 closure, so the block was not public while it was open. The note mismatch leaves slight doubt."
+ },
+ "request": "rec-F415-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009072
+}

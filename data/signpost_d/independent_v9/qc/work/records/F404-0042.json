@@ -1,0 +1,180 @@
+{
+ "id": "F404-0042",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "T1",
+   "date": "2024-06-04",
+   "age_band": "two_year",
+   "ratio_rule": "1:4",
+   "registered_places": 12,
+   "open": "07:30",
+   "close": "17:30"
+  },
+  "children": {
+   "booked": 8,
+   "slots": [
+    {
+     "t": "10:00",
+     "n": 9
+    },
+    {
+     "t": "10:15",
+     "n": 9
+    },
+    {
+     "t": "10:30",
+     "n": 9
+    },
+    {
+     "t": "10:45",
+     "n": 9
+    },
+    {
+     "t": "11:00",
+     "n": 9
+    },
+    {
+     "t": "11:15",
+     "n": 9
+    },
+    {
+     "t": "11:30",
+     "n": 8
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S041",
+    "q": 3,
+    "in_ratio": true,
+    "plan": "07:30-15:30"
+   },
+   {
+    "id": "S042",
+    "q": 3,
+    "in_ratio": true,
+    "plan": "07:30-15:30"
+   },
+   {
+    "id": "S043",
+    "q": 3,
+    "in_ratio": true,
+    "plan": "10:00-17:30"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S-041",
+    "in": "07:32",
+    "out": "15:31",
+    "q": 3
+   },
+   {
+    "id": "S-042",
+    "in": "07:30",
+    "out": "15:34",
+    "q": 3
+   },
+   {
+    "id": "S-043",
+    "in": "11:23",
+    "out": "17:30",
+    "q": 3
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F09",
+    "from": "10:00",
+    "to": "11:25",
+    "room": "T1",
+    "countersigned_by": null
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 3,
+   "last_audit_outcome": "satisfactory"
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 9,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 83,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 3
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 9,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 83,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 3
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "corrective_plan",
+   "second": null,
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "clear",
+   "target": "paperwork_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (zero_eligible_adult_slot = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 127,
+ "deciding": {
+  "below_ratio": "Without cover only two staff are signed in for 9 children (three needed at 1:4) from 10:00 to 11:23, but F09 spans the whole window for this room, though its countersigned_by is null, so the breach rests on unsigned cover.",
+  "disposition": "Unsigned cover and three prior breaches in 90 days lean towards an action plan, though the unsigned entry could instead be confirmed first.",
+  "primary_cause": "Sign-in ids differ only by format (S-041 vs S041) with small time differences, and the logged floater spans the window, so recomputed cover meets ratio and the issue is paperwork.",
+  "shortfall_duration": "S043 planned 10:00 but signed in 11:23, so the uncovered window is 83 minutes, above sixty.",
+  "breach_severity": "If F09 is disregarded, two staff cover 8 of 9 children, so one is beyond cover; if it is counted, none are, which splits level 0 and 1."
+ },
+ "request": "rec-F404-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012256
+}

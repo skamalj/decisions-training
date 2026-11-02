@@ -1,0 +1,105 @@
+{
+ "id": "F408-0032",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 5521,
+   "stream": "refuse",
+   "claimed": "2025-04-02",
+   "logged_at": "2025-04-04T09:10",
+   "photo": false
+  },
+  "schedule": {
+   "date": "2025-04-02",
+   "streams_due": [
+    "refuse"
+   ]
+  },
+  "round_log": {
+   "completed_at": "2025-04-02T15:30",
+   "stops": []
+  },
+  "history": []
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 0,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 0,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 25,
+ "deciding": {
+  "crew_missed": "No stop entry for the UPRN, but no photo from the resident and no evidence the bin was presented, so it is balanced.",
+  "report_matches": "Stream and date match, but logged_at 2025-04-04T09:10 falls just past scheduled date plus 48 hours.",
+  "next_step": "Late report with no photo and no further evidence of a miss favours closing, with some doubt.",
+  "return_urgency": "Nothing indicates an upheld miss or an assisted property, so no return is needed.",
+  "repeat_failures": "history is an empty list."
+ },
+ "request": "rec-F408-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012077
+}

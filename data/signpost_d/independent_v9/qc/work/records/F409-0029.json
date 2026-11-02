@@ -1,0 +1,130 @@
+{
+ "id": "F409-0029",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "Lena Ortiz",
+   "submitted_on": "2024-04-10",
+   "app_type": "new",
+   "message": "Moved flats within building, letter attached."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "tenancy_agreement",
+     "issued_on": "2024-02-15",
+     "address_line": "Flat 4, 6 Quay St",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2020-01-01",
+     "address_line": "Flat 4, 6 Quay St",
+     "verified": null
+    }
+   ],
+   "tenancy_start": "2024-02-01"
+  },
+  "request": {
+   "address": "Flat 5, 6 Quay St"
+  },
+  "account_history": {
+   "live_permits": [
+    1,
+    2
+   ],
+   "exceptions": [
+    {
+     "type": "carer",
+     "approved_on": "2023-09-01"
+    }
+   ],
+   "past_permits": [
+    {
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "different_flat",
+  "proof_age_days": 55,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 2,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "different_flat",
+  "proof_age_days": 55,
+  "docs_missing": 3,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 2,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": true,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 49,
+ "deciding": {
+  "residency_shown": "Verified tenancy is Flat 4 while request is Flat 5; explanation in message balances.",
+  "disposition": "Plan sets approve; verified tenancy and carer exception.",
+  "main_issue": "No single failing check dominates beyond the explained flat difference.",
+  "misuse_strength": "Past permit seized: cloned copy found on different vehicle.",
+  "document_gaps": "ID card verified null, otherwise tenancy verified; one unverified doc."
+ },
+ "request": "rec-F409-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006477
+}

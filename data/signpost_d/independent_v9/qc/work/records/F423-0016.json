@@ -1,0 +1,139 @@
+{
+ "id": "F423-0016",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-4471",
+   "product": "brochure",
+   "stock_spec": "GL115",
+   "run_qty": 10000,
+   "overs_pct": 2.69,
+   "due_date": "2024-06-12",
+   "customer_tier": "standard",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "P-882",
+   "ok_sheet_no": 3,
+   "signed_at": null,
+   "customer_present": false,
+   "concession": null
+  },
+  "colour_readings": {
+   "instrument": "SP-2",
+   "calibrated_on": "2024-04-20",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.1
+    },
+    {
+     "ink": "K",
+     "delta_e": 3.05
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "unit_pair": "1-2",
+     "offset_mm": 0.12,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press_id": "CD1",
+   "stock_loaded": "GL115",
+   "first_production_at": null,
+   "sheets_production": 0,
+   "sheets_makeready": 272,
+   "stoppages": [
+    {
+     "min": 6
+    },
+    {
+     "min": 4
+    },
+    {
+     "min": 9
+    }
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "single_patch_marginal_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 0,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.69,
+  "register_offset_mm": 0.12,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 42,
+  "customer_tier": "standard",
+  "prior_stoppages": 3
+ },
+ "factors_sampled": {
+  "colour_deviation": "multiple_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 272,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.69,
+  "register_offset_mm": 0.32,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 42,
+  "customer_tier": "standard",
+  "prior_stoppages": 3
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "run_before_signoff": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_for_signoff",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "colour_in_tolerance": "K patch delta_e 3.05 against spec_max_de 3.0 with no concession: marginally over, though a reviewer could round it as at limit.",
+  "run_before_signoff": "sheets_production is 0 and first_production_at is null, so no production sheets logged; but signed_at is also null, so a reviewer could read the run as unsigned.",
+  "next_step": "signed_at is null, register is in-image at only 0.12 mm, stock matches and readings are complete, so the press waits for the signed OK sheet.",
+  "staff_effort": "Obtaining the signature and re-measuring the marginal K patch is hours of work, but chasing an absent customer sign-off could stretch to days; both defensible.",
+  "scrap_exposure": "No production sheets yet (272 are make-ready only), so none suspect; yet the marginal K patch could make later sheets suspect within the 2.69% overs."
+ },
+ "request": "rec-F423-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011676
+}

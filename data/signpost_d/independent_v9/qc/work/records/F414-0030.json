@@ -1,0 +1,153 @@
+{
+ "id": "F414-0030",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SL-31",
+   "crit_fall_height_m": 1.8,
+   "surf_type": "rubber_tile"
+  },
+  "inspection": {
+   "insp_date": "2024-04-09",
+   "insp_grade": "operational",
+   "fall_height_m": 1.8,
+   "surf_type_found": "rubber_tile",
+   "surf_depth_mm": 60,
+   "surf_req_table": [
+    {
+     "h_max": 1.8,
+     "type": "rubber_tile",
+     "min_depth_mm": 45
+    }
+   ],
+   "probe_results": [],
+   "findings": [
+    {
+     "defect_code": "EX02",
+     "component_id": "C2",
+     "defect_ref": "D9",
+     "injury_mech": "serious"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "SL-31",
+    "component_id": "C1",
+    "defect_ref": "D8",
+    "status": "closed",
+    "closed_date": "2024-03-20"
+   },
+   {
+    "wo_id": "W2",
+    "asset_id": "SL-31",
+    "component_id": "C2",
+    "defect_ref": "D9",
+    "status": "closed",
+    "closed_date": "2024-04-10"
+   }
+  ],
+  "site": {
+   "usage_level": "high",
+   "incident_reports_90d": 2
+  },
+  "history": [
+   {
+    "date": "2024-02-12",
+    "defect_refs": [
+     "D8"
+    ]
+   },
+   {
+    "date": "2024-03-25",
+    "component_id": "C1",
+    "result": "pass"
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "slide",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": 15.0,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 1.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "high",
+  "incident_reports_90d": 2
+ },
+ "factors_sampled": {
+  "equipment_type": "slide",
+  "register_mismatch": "large",
+  "surfacing_depth_margin_mm": -1.96,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 3,
+  "work_orders_closed_fraction": 0.41,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "high",
+  "incident_reports_90d": 2
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "hazard_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "prior_defects_cleared": "D8 from the previous inspection closed 2024-03-20 and a C1 follow-up check passed on 2024-03-25.",
+  "surfacing_adequate": "Depth 60 mm against a 45 mm requirement for 1.8 m rubber_tile, with matching register and found types.",
+  "asset_disposition": "Both work orders are closed, including D9 on the finding component, and there are no failed probes or temporary measures. Sign-off is supported.",
+  "remedial_progress": "Both work orders show closed, but W2 closed on 2024-04-10, the day after the visit. That leaves a small doubt between all closed and one still open.",
+  "hazard_severity": "Finding EX02 has injury_mech serious, which places the worst hazard at level 3."
+ },
+ "request": "rec-F414-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013561
+}

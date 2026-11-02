@@ -1,0 +1,145 @@
+{
+ "id": "F427-0004",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V104",
+   "visit_date": "2024-05-22",
+   "surveyor_grade": "accredited"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 5,
+   "dams_total": 4
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 34
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 21,
+     "prev_depth_cm": 21
+    }
+   ],
+   "rain_30d_pct_normal": 114
+  },
+  "structures": {
+   "inspections": null,
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "score": 4
+    }
+   ],
+   "photos_uploaded": 5,
+   "photos_expected": 9,
+   "grazing_signs": true
+  },
+  "notes": {
+   "prior_visits": [
+    {
+     "date": "2023-03-10",
+     "dam_id": "D2",
+     "entry": "breach"
+    },
+    {
+     "date": "2023-10-05",
+     "dam_id": "D2",
+     "entry": "breach"
+    },
+    {
+     "date": "2024-02-01",
+     "dam_id": "D2",
+     "entry": "breach"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.2,
+  "photos_status": "partial",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": false,
+  "worst_dam_defect": "none logged (no inspection)",
+  "water_table_offset_cm": -9.0,
+  "rainfall_pct_normal": 114.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 3,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.59,
+  "photos_status": "partial",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": false,
+  "worst_dam_defect": "partial_breach",
+  "water_table_offset_cm": 7.1,
+  "rainfall_pct_normal": 114.46,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_lead",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "leaning",
+   "target": "below_band",
+   "second": null,
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 61,
+ "deciding": {
+  "dam_caused_drop": "Rain is 114% of normal and the control well is steady (21 vs 21), so dry weather is not the cause. The dam question is open because no dam inspection is logged.",
+  "next_step": "Three dated breach entries on D2 in under 12 months are a repeat failure, which calls for referral to the lead. The missing inspection also supports a data request.",
+  "hydro_state": "The single reading of 34 cm against floor 25 cm is 9 cm below, but only 1 of 5 wells was read, so doubt remains.",
+  "dam_severity": "Inspections is null, so no defect is logged, but absence of a log leaves doubt.",
+  "evidence_completeness": "Only 1 of 5 wells was read, which counts as not recorded. Photos are partial, quadrats are present and the dam log is missing, so two elements are recorded."
+ },
+ "request": "rec-F427-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013066
+}

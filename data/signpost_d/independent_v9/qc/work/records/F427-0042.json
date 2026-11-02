@@ -1,0 +1,164 @@
+{
+ "id": "F427-0042",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V102",
+   "site_ref": "CF-22",
+   "visit_date": "2024-08-14",
+   "surveyor_grade": "senior",
+   "weather_on_day": "showers"
+  },
+  "site_targets": {
+   "band_top_cm": 10,
+   "band_floor_cm": 30,
+   "dipwells_scheduled": 4,
+   "dams_total": 3
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "W1",
+     "depth_cm": 22,
+     "prev_depth_cm": 14
+    },
+    {
+     "id": "W2",
+     "depth_cm": 20,
+     "prev_depth_cm": 13
+    },
+    {
+     "id": "W3",
+     "depth_cm": 24,
+     "prev_depth_cm": 15
+    },
+    {
+     "id": "W4",
+     "depth_cm": 22,
+     "prev_depth_cm": 14
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "depth_cm": 16,
+     "prev_depth_cm": 16
+    }
+   ],
+   "rain_30d_pct_normal": 36
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D2",
+     "pool_level_cm": 34,
+     "design_pool_cm": 40,
+     "defect_code": "SEEP",
+     "remark": "Water passing round east wing; needs peat patching."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 6
+    },
+    {
+     "q": 2,
+     "score": null
+    }
+   ],
+   "photos_uploaded": 12,
+   "photos_expected": 12
+  },
+  "notes": {
+   "surveyor_note": "Dam is leaking badly, urgent!",
+   "prior_visits": []
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 1.0,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": 0.0,
+  "rainfall_pct_normal": 36.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "alarmed",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.6,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "partial_breach",
+  "water_table_offset_cm": -12.48,
+  "rainfall_pct_normal": 35.89,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 3,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "alarmed",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "schedule_repair",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "within_band",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 82,
+ "deciding": {
+  "dam_caused_drop": "Wells fell about 8 cm while the control is unchanged and the dam seeps, but rain is only 36% of normal, so dry weather is also plausible.",
+  "next_step": "Dam D2 has a logged defect needing patching, no open work order, no prior failures, all required evidence present.",
+  "hydro_state": "Mean depth 22 cm sits between band top 10 and floor 30.",
+  "dam_severity": "Code SEEP but pool 6 cm under design; seepage versus partial breach is arguable.",
+  "evidence_completeness": "All four elements present, with one quadrat score null; full versus partly recorded is arguable."
+ },
+ "request": "rec-F427-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010228
+}

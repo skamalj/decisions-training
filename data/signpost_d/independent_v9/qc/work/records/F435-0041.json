@@ -1,0 +1,153 @@
+{
+ "id": "F435-0041",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E101",
+   "zone_id": "T4",
+   "zone_type": "seated_tier",
+   "doors_open": "2025-06-07T18:00",
+   "check_filed_at": "2025-06-07T21:10",
+   "phase": "live"
+  },
+  "licence": {
+   "base_limit": 900,
+   "variation": {
+    "ref": "V7",
+    "new_limit": 1000,
+    "status": "approved",
+    "approved_on": "2025-06-05"
+   },
+   "stewards_required": 40,
+   "exit_routes": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 1000,
+   "issued": 980,
+   "scanned_in": 975
+  },
+  "ingress": {
+   "device_status": "fault_logged",
+   "raw_peak": 1090,
+   "manual_recount": {
+    "count": 1000,
+    "at": "2025-06-07T19:30"
+   }
+  },
+  "stewarding": {
+   "rostered": 41,
+   "signed_in": 38,
+   "relief": {
+    "called_at": "2025-06-07T18:40",
+    "eta_min": 20
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "a",
+    "checked_at": "2025-06-07T17:40",
+    "status": "clear"
+   },
+   {
+    "route_id": "b",
+    "checked_at": "2025-06-07T18:00",
+    "status": "clear"
+   },
+   {
+    "route_id": "c",
+    "checked_at": "2025-06-07T17:45",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "d",
+    "checked_at": null,
+    "status": "pending"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "seated_tier",
+  "event_phase": "live",
+  "occupancy_ratio": 1.0,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.09,
+  "manual_recount_present": true,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.98,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.05,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 4,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "seated_tier",
+  "event_phase": "live",
+  "occupancy_ratio": 1.1,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.09,
+  "manual_recount_present": true,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.98,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.05,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "escalate",
+   "second": "restrict_entry",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "balanced",
+   "target": "none",
+   "second": "counter_fault",
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "verified_exceedance": "Device is fault_logged, so the recount of 1000 is the verified figure; the variation was approved before doors, so the effective limit is 1000. The recount sits exactly at the limit, while raw_peak 1090 is above it.",
+  "disposition": "Recount equals the limit with raw_peak well above it, and the check was filed hours after doors while phase is still live. Restricting entry and escalating are both defensible.",
+  "discrepancy_source": "Tickets 980 are under the limit of 1000 and the recount is at the limit. Only the faulty counter reads over, 1090, so none and counter_fault both fit.",
+  "steward_shortfall": "signed_in 38 against 40 required is 5% short; rostered 41 is irrelevant.",
+  "unconfirmed_exits": "Routes c (obstructed, no later clear), d (null time), e and f (absent) are unconfirmed. Route b was checked clear at exactly doors time, which may be a fifth, so the count sits at the 4-versus-5 boundary."
+ },
+ "request": "rec-F435-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015789
+}

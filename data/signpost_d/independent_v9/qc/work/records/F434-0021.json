@@ -1,0 +1,153 @@
+{
+ "id": "F434-0021",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 3,
+   "closure_start": "10:00",
+   "riders_started": 120
+  },
+  "post": {
+   "post_id": "P12",
+   "km_marker": 41,
+   "on_post_from": "10:25",
+   "off_post_at": "13:41:30",
+   "relief": [
+    {
+     "marshal_ref": "M7",
+     "signed_in": "10:00",
+     "signed_out": "10:25"
+    }
+   ]
+  },
+  "incidents": [
+   {
+    "inc_ref": "I1",
+    "time": "12:10",
+    "km": 41,
+    "type": "mechanical",
+    "bibs": [
+     214
+    ],
+    "medic_called": false,
+    "rider_status": "continued"
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "11:00",
+     "ok": false
+    },
+    {
+     "time": "12:00",
+     "ok": false
+    },
+    {
+     "time": "13:00",
+     "ok": true
+    }
+   ],
+   "backup_phone": [
+    {
+     "time": "11:02",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C4",
+     "time": "12:10",
+     "km": 41,
+     "type": "mechanical",
+     "bibs": [
+      241
+     ]
+    }
+   ]
+  },
+  "sweep": {
+   "passed_at": "13:41:00",
+   "last_rider_bib": 118
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "bib_digit_swap",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "late_before_first_rider",
+  "relief_swap_logged": true,
+  "radio_check_failures": 2,
+  "medic_arrival_minutes": "none",
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "none",
+  "control_log_mismatch": "bib_digit_swap",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "late_before_first_rider",
+  "relief_swap_logged": true,
+  "radio_check_failures": 2,
+  "medic_arrival_minutes": 7.77,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file",
+   "second": null,
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "mechanical_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "coverage_held": "Relief M7 covers 10:00-10:25 and the post marshal is on from 10:25 before the first rider; off_post_at 13:41:30 is after sweep passed_at 13:41:00.",
+  "next_step": "Post and control agree on time, km and type. Only a bib digit swap (214 vs 241) and the failed radio checks, which have a backup phone ok, leave slight doubt about filing.",
+  "incident_class": "Both logs list only a mechanical stop with no medic and the rider continued; no fall or intrusion is recorded.",
+  "reversal_time": "No lasting consequence is recorded, but the bib mismatch leaves the outcome record ambiguous, so one to three months or longer is defensible.",
+  "consequence_severity": "Mechanical stop with the rider continuing and no medic. Whether the mismatched bib hides a minor fall (level 1) is not settled, so level 0 and 1 are both defensible."
+ },
+ "request": "rec-F434-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010094
+}

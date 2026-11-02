@@ -1,0 +1,126 @@
+{
+ "id": "F417-0049",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "loa_m": 11.1,
+   "draught_m": 1.9
+  },
+  "berth": {
+   "max_loa_m": 11.0,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 1.95
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 11.5,
+    "draught_m": 1.9
+   },
+   "insurance_expiry": "2027-01-15",
+   "inspection_date": "2026-05-02"
+  },
+  "account": {
+   "dues_outstanding_gbp": 0,
+   "deposit_paid": true
+  },
+  "booking": {
+   "arrival": "2026-06-01",
+   "departure": "2026-06-06"
+  },
+  "history": [
+   {
+    "d": "2023-06-01",
+    "inc": 1
+   },
+   {
+    "d": "2024-06-02",
+    "inc": 1
+   },
+   {
+    "d": "2025-06-01",
+    "inc": 1
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 3.61,
+  "berth_length_fit": "boundary",
+  "ukc_margin_m": 0.05,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 0,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 3,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 3.61,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 0.14,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 1198,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 3,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "allocate_with_conditions",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "clear",
+   "target": "dimension_mismatch",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "length_fits": "Survey loa 11.5 equals max 11.0 + fender 0.5 exactly.",
+  "next_step": "Surveyed draught 1.9 against depth 1.95 needs tide or stay conditions; nothing is missing.",
+  "primary_issue": "Surveyed draught 1.9 vs depth 1.95 and length at the limit are dimension problems; documents and account are clean.",
+  "ukc_band": "Depth 1.95 minus surveyed draught 1.9 = 0.05 m: tight, almost grounding.",
+  "unresolved_count": "Vessel loa 11.1 vs survey 11.5 is the only possible cross-section gap; whether it counts decides 0 or 1."
+ },
+ "request": "rec-F417-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008586
+}

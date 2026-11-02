@@ -1,0 +1,194 @@
+{
+ "id": "F440-0009",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "G-9023",
+   "review_date": "2025-06-02",
+   "arrival": "2025-06-14",
+   "departure": "2025-06-16",
+   "pax_by_band": {
+    "13_17": 20,
+    "adult": 4
+   },
+   "amendments": [
+    {
+     "type": "diet_change",
+     "logged_at": "2025-05-20"
+    }
+   ]
+  },
+  "roster": [
+   {
+    "role": "participant",
+    "sex": "F",
+    "n": 10,
+    "dob": "2008-2011"
+   },
+   {
+    "role": "participant",
+    "sex": "M",
+    "n": 11,
+    "dob": "2008-2011"
+   },
+   {
+    "role": "leader",
+    "n": 4,
+    "dob": "1975-1992"
+   }
+  ],
+  "allocation": [
+   {
+    "room": "F1",
+    "sex": "F",
+    "beds": 12,
+    "nights": [
+     "2025-06-14",
+     "2025-06-15"
+    ]
+   },
+   {
+    "room": "M1",
+    "sex": "M",
+    "beds": 12,
+    "nights": [
+     "2025-06-14",
+     "2025-06-15"
+    ]
+   },
+   {
+    "room": "L1",
+    "sex": "mixed",
+    "beds": 4,
+    "nights": [
+     "2025-06-14",
+     "2025-06-15"
+    ]
+   }
+  ],
+  "payment": {
+   "total_price": 2200,
+   "deposit_due": 600,
+   "paid_total": 500,
+   "paid_on": "2025-05-15",
+   "instalments": [
+    {
+     "due": "2025-05-15",
+     "amt": 500
+    },
+    {
+     "due": "2025-06-10",
+     "amt": 100
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "adult": "A1",
+    "status": "verified",
+    "expiry": "2026-02-01"
+   },
+   {
+    "adult": "A2",
+    "status": "verified",
+    "expiry": "2026-02-01"
+   },
+   {
+    "adult": "A3",
+    "status": "verified",
+    "expiry": "2026-03-01"
+   },
+   {
+    "adult": "A4",
+    "status": "pending",
+    "expiry": null
+   }
+  ],
+  "history": {
+   "org_id": "O-12",
+   "trusted": true,
+   "stays": 9,
+   "no_shows": 3,
+   "last_stay": "2025-01-18"
+  }
+ },
+ "factors": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "none",
+  "amendment_logged": false,
+  "supervision_level": "comfortable",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": true,
+  "days_to_arrival": 12,
+  "dorm_fit": "fits",
+  "leader_checks": "one_pending",
+  "trusted_organiser": true,
+  "prior_no_shows": 3,
+  "diet_count_drift": "none"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "comfortable",
+  "extra_cover_logged": true,
+  "deposit_position": "paid_full",
+  "instalment_approved": true,
+  "days_to_arrival": 111,
+  "dorm_fit": "cannot_fit",
+  "leader_checks": "one_pending",
+  "trusted_organiser": true,
+  "prior_no_shows": 3,
+  "diet_count_drift": "none"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "ratio_met": "21 teens need 3 adults and 4 leaders are rostered, a clear margin.",
+  "deposit_covered": "paid_total 500 is below deposit_due 600, but the 500 instalment due 2025-05-15 is met and the 100 is not due until 2025-06-10.",
+  "disposition": "Leader A4's safeguarding check is pending with no expiry or date. Everything else is workable, so the booking waits on that one confirmation.",
+  "urgency": "Review 2025-06-02, arrival 2025-06-14: 12 days, with a pending check still open.",
+  "conflict_count": "Unexplained: roster 25 vs booked 24, and A4 pending against the stay. The diet_change amendment does not explain the headcount. The payment shortfall is a debatable third, with a possible fourth."
+ },
+ "request": "rec-F440-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01636
+}

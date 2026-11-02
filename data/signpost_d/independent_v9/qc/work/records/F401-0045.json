@@ -1,0 +1,173 @@
+{
+ "id": "F401-0045",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P5518",
+   "planned_discharge_at": "2025-03-10T10:00",
+   "capacity_assessment": {
+    "status": "pending"
+   }
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 22,
+     "spo2": 89,
+     "hr": 96,
+     "at": "2025-03-09T20:00"
+    },
+    {
+     "rr": 21,
+     "spo2": 90,
+     "hr": 92,
+     "at": "2025-03-10T02:00"
+    }
+   ],
+   "targets": {
+    "spo2": "88-92"
+   },
+   "reviews": [
+    {
+     "role": "registrar",
+     "outcome": "fit_for_discharge",
+     "at": "2025-03-10T08:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P5518",
+   "reconciled": [
+    {
+     "drug": "prednisolone",
+     "dose": 30,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "prednisolone",
+     "action": "started",
+     "by": "Dr Lim",
+     "changed_at": "2025-03-08T11:00"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "prednisolone",
+     "dose": 30,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "signed_at": "2025-03-10T08:30",
+   "pharmacy_ready_at": "2025-03-10T15:00"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": "frame",
+    "transfer_assist_count": 1,
+    "adl_score": 14
+   },
+   "social": {
+    "lives_alone": false,
+    "carer_available": true
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "discharge summary",
+     "status": "done",
+     "completed_at": "2025-03-10T09:00",
+     "signed_by": null
+    }
+   ],
+   "transport": {
+    "booked_date": null,
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 1,
+  "false_completion": true,
+  "care_need": "rehab_need",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "transport_time_unknown",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": true
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "permanent_care",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": true
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "conditional_discharge",
+   "second": "escalate_senior",
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "contested",
+   "target": "intermediate_care",
+   "second": "home_independent",
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 84,
+ "deciding": {
+  "rx_matches": "Prednisolone 30 mg od is identical in both lists, with a start entry before signing.",
+  "next_step": "Pending capacity assessment favours escalation, balanced by a documented spo2 target of 88-92 explaining the obs and a registrar fit review at 08:00 after the last obs.",
+  "destination": "Frame, one-person transfer and ADL 14 with a carer at home leave home and step-down rehab both defensible; no arrangement is recorded.",
+  "outstanding_tasks": "The summary is marked done but signed_by is null, so it may count as one outstanding task or none.",
+  "discharge_delay": "Pharmacy is ready at 15:00, but transport date and pickup are null, so same day or next day are both possible."
+ },
+ "request": "rec-F401-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010808
+}

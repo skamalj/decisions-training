@@ -1,0 +1,120 @@
+{
+ "id": "F408-0039",
+ "family": "F408",
+ "state": {
+  "report": {
+   "logged_at": "2024-03-13T10:00",
+   "stream": "recycling",
+   "claimed": "2024-03-13",
+   "week": "A",
+   "photo": true
+  },
+  "schedule": {
+   "pattern": "B",
+   "streams_due": [
+    "recycling"
+   ],
+   "date": "2024-03-13"
+  },
+  "round_log": {
+   "done_at": "2024-03-13T08:30",
+   "stops": [
+    {
+     "exc": "contaminated",
+     "photo": null,
+     "gps_stop": null
+    }
+   ]
+  },
+  "history": [
+   {
+    "on": "2024-02-01",
+    "out": "upheld"
+   },
+   {
+    "on": "2024-01-10",
+    "out": "upheld"
+   },
+   {
+    "on": "2023-12-20",
+    "out": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "alt_week_confusion",
+  "report_timing": "after_round_complete",
+  "crew_exception": "contaminated",
+  "exception_supported": false,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "alt_week_confusion",
+  "report_timing": "after_round_complete",
+  "crew_exception": "contaminated",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "request_evidence",
+   "second": "return_conditional",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 66,
+ "deciding": {
+  "crew_missed": "Crew logged contaminated at the stop, though photo ref is null and gps_stop null.",
+  "report_matches": "Stream and date match schedule, but report week A conflicts with pattern B.",
+  "next_step": "Contamination exception has no photo, supporting a request for evidence; the resident's photo could support a conditional return.",
+  "return_urgency": "No assisted flag or deadline; three prior upheld cases weigh against a standard timescale.",
+  "repeat_failures": "Upheld cases 2024-02-01, 2024-01-10 and 2023-12-20, the last exactly on the 84-day boundary."
+ },
+ "request": "rec-F408-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008871
+}

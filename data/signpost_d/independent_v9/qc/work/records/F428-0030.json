@@ -1,0 +1,142 @@
+{
+ "id": "F428-0030",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "MG-0958",
+   "gate_type": "mitre",
+   "rated_closure_s": 180,
+   "seal_type": "J_bulb",
+   "consequence_class": "medium"
+  },
+  "inspection": {
+   "insp_id": "I-6302",
+   "asset_id": "MG-0958",
+   "insp_date": "2025-03-24",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-03-01",
+    "closure_s": 160,
+    "leakage_l_min": 7,
+    "leakage_limit_l_min": 10,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D3",
+    "component": "seal",
+    "grade": 3,
+    "status": "open",
+    "first_seen": "2025-02-10"
+   },
+   {
+    "code": "D6",
+    "component": "concrete",
+    "grade": 2,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W52",
+     "component": "seal",
+     "defect_code": "D3",
+     "grade_raised": 2,
+     "status": "in_progress",
+     "raised": "2025-03-10",
+     "completed": null,
+     "retest_insp_id": null
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2025-05-11",
+    "peak_level_mAOD": 2.4,
+    "sill_level_mAOD": 2.9
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.89,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 1,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "passed_current",
+  "repair_progress": "in_progress",
+  "mitigation_present": false,
+  "mitigation_kind": "none",
+  "days_to_forecast_peak": 48,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.89,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 0,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "passed_current",
+  "repair_progress": "in_progress",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 48,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "raise_repair",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "seal",
+   "second": null,
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 117,
+ "deciding": {
+  "closure_test_valid": "Test passes (160 s vs 180 s, leakage 7 vs 10) but dates from 2025-03-01, before the seal work order raised 2025-03-10 and still in progress; whether it counts is open.",
+  "next_step": "Open grade 3 seal defect with an in-progress order under-graded at 2 and no retest linked; issue or upgrade the repair with restrictions, with some doubt.",
+  "defect_class": "Open grade 3 seal defect outranks the open grade 2 concrete defect.",
+  "section_discrepancies": "Work order grade_raised 2 vs defect grade 3; asset IDs and other values agree.",
+  "flood_risk": "Closes within rated time and one open grade 3 defect gives level 1, but the seal repair is in progress and the test is slightly dated, so level 0 is defensible."
+ },
+ "request": "rec-F428-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011002
+}

@@ -1,0 +1,123 @@
+{
+ "id": "F409-0043",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A-6032",
+   "full_name": "Jean Pryce",
+   "submitted_on": "2025-05-12",
+   "app_type": "renewal",
+   "message": "Where do I collect my visitor vouchers?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2025-01-24",
+     "address_line": "2 Elm Court",
+     "verified": true
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "AB12 CDE",
+   "keeper_name": "Jean Pryce"
+  },
+  "request": {
+   "address": "2 Elm Court",
+   "plate_entered": "AB12 CDF"
+  },
+  "account_history": {
+   "live_permits": [],
+   "pcns": [
+    {
+     "status": "cancelled"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 108,
+  "docs_missing": 0,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 108,
+  "docs_missing": 0,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 0,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": true,
+  "date_order_anomaly": true,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 40,
+ "deciding": {
+  "residency_shown": "Verified utility bill matches the address exactly but was issued 108 days before submission, past 90 days.",
+  "disposition": "Renewal with a verified matching bill, the same keeper, a one-character plate typo and no live permits.",
+  "main_issue": "The only discrepancy is the last character of the plate (CDE vs CDF) with the keeper name matching.",
+  "misuse_strength": "One cancelled PCN, no seized permits, same keeper, address exact and no date anomalies.",
+  "document_gaps": "The one document on file is verified true."
+ },
+ "request": "rec-F409-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008907
+}

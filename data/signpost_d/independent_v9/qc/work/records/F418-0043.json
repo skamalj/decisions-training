@@ -1,0 +1,153 @@
+{
+ "id": "F418-0043",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "plat": 1,
+   "date": "2025-07-15",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S8",
+    "planned_start": "06:00"
+   },
+   {
+    "post": "B",
+    "staff_id": "S15",
+    "planned_start": "06:00"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S8",
+    "sign_on": "06:05",
+    "safety_comp_exp": "2026-04-01",
+    "dispatch_comp_exp": "2026-04-01"
+   },
+   {
+    "staff_id": "S15",
+    "sign_on": "06:00",
+    "safety_comp_exp": "2026-02-11",
+    "dispatch_comp_exp": "2026-02-11"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "10:10"
+   },
+   {
+    "type": "cover_start",
+    "time": "10:10",
+    "staff_id": "S8"
+   },
+   {
+    "type": "dispatch",
+    "time": "11:20",
+    "staff_id": "S8"
+   },
+   {
+    "type": "cover_end",
+    "time": "11:54"
+   },
+   {
+    "type": "gap_end",
+    "time": "11:54"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-204",
+   "disp_platform": 1,
+   "valid_to": "2025-07-15T11:00",
+   "approved_by": "ORM",
+   "prior_shortfalls_30d": 0
+  },
+  "remarks": [
+   "S15 on break, S8 covered."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 104,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "expired_midgap",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 0,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 104,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": true,
+  "dispensation_fit": "expired_midgap",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 0,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "correct_and_brief",
+   "second": "request_records",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "contested",
+   "target": "fully_rostered",
+   "second": "partial_cover",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 87,
+ "deciding": {
+  "headcount_verified": "Both S8 and S15 have sign-on rows and competences in date; S8's 5-minute late sign-on is trivial.",
+  "next_step": "Dispensation D-204 valid_to 11:00 expired before gap_end 11:54 while cover events span the gap; either amend and brief or ask for fuller records.",
+  "coverage_outcome": "cover_start 10:10 to cover_end 11:54 spans the gap, but cover is by on-shift S8 while S15 was on break, so fully rostered vs partial cover is contested.",
+  "reversal_time": "Past service exposure with a dispensation that lapsed mid-gap cannot be undone; the lapse stays on record.",
+  "exposure_severity": "Dispatch at 11:20 falls after the dispensation expired at 11:00 but S8 has valid dispatch competence; level 2 vs 3 is balanced."
+ },
+ "request": "rec-F418-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009965
+}

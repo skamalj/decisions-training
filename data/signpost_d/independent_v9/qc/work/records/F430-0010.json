@@ -1,0 +1,122 @@
+{
+ "id": "F430-0010",
+ "family": "F430",
+ "state": {
+  "site": {
+   "T3": {
+    "oil_level_pct": [
+     40,
+     80
+    ],
+    "partner": "T4",
+    "cust": 17282
+   }
+  },
+  "readings": [
+   {
+    "T3": 42
+   }
+  ],
+  "defects": [
+   {
+    "T3": "oil level low",
+    "photo": "p2"
+   }
+  ],
+  "history": {
+   "previous": 42,
+   "top_up": "T3 2024-07-02"
+  },
+  "network": {
+   "T4": "in_service"
+  }
+ },
+ "factors": {
+  "worst_reading_band": "within_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "recent_top_up",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 17282,
+  "trivial_discrepancies": 0,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "recent_top_up",
+  "benign_cause_covers": true,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 17282,
+  "trivial_discrepancies": 0,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "follow_up": {
+   "clarity": "clear",
+   "target": "file_closed",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 42,
+ "deciding": {
+  "defect_corroborated": "The low oil level defect is photographed, and 42% is close to the 40% floor, matching the note.",
+  "benign_explanation": "A logged top-up on T3 explains the low-side level.",
+  "follow_up": "The reading is in band and stable at 42, the top-up is recorded and the partner is in service, so no action is needed.",
+  "limit_deviation": "42% is inside the 40-80% band.",
+  "supply_exposure": "T4 is in service and carries the load if T3 fails, so there is no exposure."
+ },
+ "request": "rec-F430-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009217
+}

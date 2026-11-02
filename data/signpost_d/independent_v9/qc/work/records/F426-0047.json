@@ -1,0 +1,109 @@
+{
+ "id": "F426-0047",
+ "family": "F426",
+ "state": {
+  "applications": [
+   {
+    "app_id": "A1",
+    "date": "2024-06-01",
+    "product_code": "FZ40",
+    "qty_applied": 2.52,
+    "qty_unit": "L",
+    "area_treated_ha": 2
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "FZ40",
+    "max_rate_per_ha": 1,
+    "rate_unit": "L",
+    "phi_days": 21
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-08-20",
+   "residue_test": {
+    "sampled": true,
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "near_25_boundary",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "missing",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "app_date_missing",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "expired_under_30d_low_dev",
+  "missing_item": "product_ref_entry_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 5,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "balanced",
+   "target": "interval_breach",
+   "second": "label_deviation",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "phi_cleared": "Single application 2024-06-01, first pick 2024-08-20, phi_days 21: about 80 days, well cleared.",
+  "next_step": "All dates present, product reference entry present, residue sampled and below limit: record is complete with nothing to request.",
+  "finding_class": "Intervals are clearly respected; the only issue is the rate above maximum (label deviation), so interval_breach is hard to defend.",
+  "reversal_time": "Fruit already picked and residue-cleared lot accepted despite a rate above label; a released lot cannot be recalled within months.",
+  "rate_overrun": "2.52 L / 2 ha = 1.26 L/ha against max 1 L/ha: 26% over, just past the 25% boundary."
+ },
+ "request": "rec-F426-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010652
+}

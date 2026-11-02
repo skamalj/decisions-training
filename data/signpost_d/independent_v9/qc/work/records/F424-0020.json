@@ -1,0 +1,116 @@
+{
+ "id": "F424-0020",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2415",
+   "vessel_id": "FV6",
+   "fg_target_max": 1.012,
+   "strain_max_temp_c": 22
+  },
+  "readings": [
+   {
+    "ts": "2024-09-04",
+    "gravity_sg": 1.018,
+    "temp_c": 26
+   },
+   {
+    "ts": "2024-09-05",
+    "gravity_sg": 1.018,
+    "temp_c": 25
+   }
+  ],
+  "events": [
+   {
+    "note": "Temp control failed, worried!"
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2415",
+   "micro_plate": {
+    "result": "negative"
+   }
+  },
+  "release_request": {
+   "vessel_id": "FV7"
+  }
+ },
+ "factors": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": false,
+  "temp_excursion": "sustained_major",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.04,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": false,
+  "temp_excursion": "sustained_major",
+  "excursion_mitigated": true,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.04,
+  "discrepancy_count": 2,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "alarmed"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "balanced",
+   "target": "hold_retest",
+   "second": "release_conditional",
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "terminal_gravity": "Stable at 1.018 but above the 1.012 maximum, so the band is not reached; the statement is probably false.",
+  "contamination_supported": "Plate is negative; no corroborating signal.",
+  "batch_disposition": "Gravity outside band and a heat event; a retest is needed, though conditional release is arguable.",
+  "deviation_severity": "Temps up to 26 C against a 22 C max, over 10%; gravity also high.",
+  "record_discrepancies": "Batch vessel FV6 vs release request FV7; one mismatch."
+ },
+ "request": "rec-F424-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005879
+}

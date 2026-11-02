@@ -1,0 +1,126 @@
+{
+ "id": "F421-0023",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P3",
+   "fragile": true,
+   "contents": "glass lamp",
+   "qty": 1,
+   "weight_kg": 3.1,
+   "declared_value_gbp": 413.32
+  },
+  "handling_events": [
+   {
+    "ts": "2024-07-01T06:10",
+    "site": "DEP",
+    "ev": "INB"
+   },
+   {
+    "ts": "2024-07-01T08:20",
+    "site": "DEP",
+    "ev": "CONV-STD"
+   },
+   {
+    "ts": "2024-07-01T09:05",
+    "site": "DEP",
+    "ev": "SORT",
+    "exc": "CRUSH"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-07-01T11:00",
+   "observed_item": "glass lamp",
+   "qty_found": 1,
+   "weight_kg": 3.1,
+   "condition": "crushed, beyond repair",
+   "photos": [
+    "a",
+    "b"
+   ],
+   "repair_est_gbp": 396
+  },
+  "claim": {
+   "claimed_gbp": 851.4
+  }
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "none",
+  "inspection_state": "complete",
+  "loss_pct": 95.8,
+  "declared_value": 413.32,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": true,
+  "note_slant": "neutral",
+  "claim_amount_gap": 2.15
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "none",
+  "inspection_state": "report_null",
+  "loss_pct": 26.27,
+  "declared_value": 413.32,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": true,
+  "note_slant": "neutral",
+  "claim_amount_gap": 2.15
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_repack",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 66,
+ "deciding": {
+  "depot_fault": "Clean inbound scan, then the fragile parcel went onto the standard conveyor and a CRUSH code followed at the depot sort.",
+  "contents_match": "Item, quantity and weight match the manifest.",
+  "next_step": "Damage occurred in the depot after a misroute, so liability is clear and the item is beyond repair; approve the repack or write-off.",
+  "loss_share": "Estimate 396 against declared 413.32 is 95.8%, but the condition 'beyond repair' suggests a total loss, so level 2 and 3 are both defensible.",
+  "parties_needed": "Assessor, claims for the inflated claim (851.4), and sort operations for the misroute, with perhaps one more."
+ },
+ "request": "rec-F421-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007513
+}

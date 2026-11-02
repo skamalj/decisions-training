@@ -1,0 +1,178 @@
+{
+ "id": "F410-0023",
+ "family": "F410",
+ "state": {
+  "application": {
+   "app_ref": "A-6033",
+   "licence_no": "L-092",
+   "holder_ref": "H-7741",
+   "term_start": "2025-09-01",
+   "term_end": "2026-08-31",
+   "pitch_req": {
+    "market": "Central",
+    "width_m": 3.68,
+    "depth_m": 3.0
+   },
+   "commodities": [
+    "hot drinks"
+   ],
+   "docs_pending": [
+    "pli_cert",
+    "site_plan"
+   ]
+  },
+  "licence_current": {
+   "licence_no": "L-092",
+   "holder_ref": "H-7741",
+   "expires": "2025-08-31",
+   "pitch": {
+    "market": "Central",
+    "pitch_no": 3,
+    "width_m": 3.0,
+    "depth_m": 3.0
+   },
+   "commodities": [
+    "coffee"
+   ],
+   "conditions": {
+    "min_attendance_pct": 65
+   },
+   "variations": [
+    {
+     "type": "width",
+     "detail": "3.7m",
+     "approved": true,
+     "approved_on": "2025-02-11"
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-02-10",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": true,
+    "new_end": "2026-02-10"
+   },
+   "food_reg": {
+    "registered": true,
+    "fhrs_rating": 5,
+    "inspected_on": "2025-03-01"
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2024",
+     "amount_gbp": 602.03
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2024-09-05",
+     "amount_gbp": 500,
+     "method": "card"
+    }
+   ],
+   "payment_plan": null
+  },
+  "history": {
+   "allocated_12m": 48,
+   "attended_12m": 34,
+   "absence_notices": [
+    {
+     "date": "2025-01-09",
+     "reason": "illness",
+     "accepted": true
+    }
+   ],
+   "complaints": [
+    {
+     "date": "2025-05-20",
+     "category": "food safety",
+     "upheld": true,
+     "status": "open"
+    }
+   ],
+   "enforcement_notices": 0
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_more_than_14d_early",
+  "broker_confirmation_held": true,
+  "commodity_change": "synonym_only",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.68,
+  "variation_approved": true,
+  "fee_arrears_gbp": 102.03,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.71,
+  "absences_notified": true,
+  "complaint_profile": "upheld_open_safety",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "ends_more_than_14d_early",
+  "broker_confirmation_held": true,
+  "commodity_change": "synonym_only",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.68,
+  "variation_approved": true,
+  "fee_arrears_gbp": 102.03,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.71,
+  "absences_notified": true,
+  "complaint_profile": "upheld_open_safety",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "grant_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "leaning",
+   "target": "urgent_visit",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "pli_term_covered": "pli.end and broker new_end 2026-02-10 fall well before term_end 2026-08-31, though a pending pli_cert might extend it.",
+  "renewal_disposition": "Variation approved, coffee/hot drinks only a synonym, attendance 34/48 above 65%; remaining issues are minor, such as a small balance, so grant with conditions.",
+  "inspection_level": "Open upheld food safety complaint points to an urgent visit, though the food registration is current at rating 5.",
+  "reversal_time": "Held in balance: a conditional grant for a year may be undone only after months, or within three months if conditions are varied.",
+  "discrepancy_count": "The PLI end date short of term_end is the single unresolved item; the width and absences are explained by the variation and accepted notice."
+ },
+ "request": "rec-F410-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007446
+}

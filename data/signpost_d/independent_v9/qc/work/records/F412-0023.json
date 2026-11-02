@@ -1,0 +1,138 @@
+{
+ "id": "F412-0023",
+ "family": "F412",
+ "state": {
+  "premises": {
+   "ref": "P303",
+   "type": "restaurant"
+  },
+  "inspection": {
+   "date": "2025-03-17",
+   "contraventions": [
+    {
+     "ref": "C1",
+     "area": "CLN",
+     "requirement": "Clean extraction hood and grease filters",
+     "due_date": "2025-04-10"
+    }
+   ]
+  },
+  "revisit": {
+   "date": "2025-04-24",
+   "items": [
+    {
+     "ref": "C1",
+     "status": "part_remedied",
+     "observed": "grease residue on hood canopy"
+    }
+   ],
+   "officer_note": "Filters clean, canopy still marked."
+  },
+  "correspondence": {
+   "extensions": [],
+   "operator_reply": "Hood fully cleaned before the due date.",
+   "evidence": [
+    {
+     "ref": "C1",
+     "type": "contractor clean certificate",
+     "date": "2025-04-10",
+     "verified": true
+    }
+   ]
+  },
+  "history": {
+   "enforcement": [
+    {
+     "year": 2022
+    },
+    {
+     "year": 2024
+    }
+   ],
+   "complaints": [],
+   "samples": []
+  }
+ },
+ "factors": {
+  "contravention_count": 1,
+  "resolution_share": "none_resolved",
+  "worst_open_area": "fabric_cleaning",
+  "food_handling_open_count": 0,
+  "cross_section_mismatch": "reply_contradicts_revisit",
+  "days_past_original_due": 14,
+  "extension_agreed": false,
+  "benign_explanation": false,
+  "operator_evidence": "submitted_verified",
+  "adverse_sample": false,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 2,
+  "boundary_case": true,
+  "reassuring_note_decoy": false
+ },
+ "factors_sampled": {
+  "contravention_count": 1,
+  "resolution_share": "all_resolved",
+  "worst_open_area": "none",
+  "food_handling_open_count": 3,
+  "cross_section_mismatch": "reply_contradicts_revisit",
+  "days_past_original_due": 60,
+  "extension_agreed": false,
+  "benign_explanation": false,
+  "operator_evidence": "submitted_verified",
+  "adverse_sample": false,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 2,
+  "boundary_case": true,
+  "reassuring_note_decoy": false
+ },
+ "plan": {
+  "all_remedied": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_case",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "worst_hazard": {
+   "clarity": "clear",
+   "target": "premises_fabric",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "overdue_extent": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "residual_risk": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 78,
+ "deciding": {
+  "all_remedied": "The only item C1 is part_remedied at revisit, with residue observed on the hood, and the operator reply claiming full cleaning contradicts it.",
+  "next_step": "The verified contractor certificate dated before the due date supports closing, against the residue observed at revisit.",
+  "worst_hazard": "The only item C1 is a CLN (fabric) item that is not fully remedied.",
+  "overdue_extent": "The revisit is exactly 14 days after the 2025-04-10 due date with no extension; the certificate dated on the due date supports on-time completion.",
+  "residual_risk": "A single CLN item is partly open, which is low-risk; but the contradiction between reply, certificate and revisit leaves a higher reading arguable."
+ },
+ "request": "rec-F412-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009876
+}

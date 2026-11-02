@@ -1,0 +1,148 @@
+{
+ "id": "F423-0001",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-48213",
+   "product": "brochure",
+   "stock_spec": "GL-150",
+   "run_qty": 12500,
+   "overs_pct": 5.56,
+   "due_date": "2024-05-20",
+   "customer_tier": "trade",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "CP-7731",
+   "date": "2024-05-13",
+   "ok_sheet_no": 41,
+   "signed_at": "2024-05-14T07:40:00",
+   "customer_present": false,
+   "concession": null
+  },
+  "colour_readings": {
+   "instrument": "SPM-2",
+   "calibrated_on": "2024-03-14",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.9
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.0
+    },
+    {
+     "ink": "Y",
+     "delta_e": 2.8
+    },
+    {
+     "ink": "K",
+     "delta_e": 2.6
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "units": "C-K",
+     "offset_mm": 0.16,
+     "in_image": true
+    },
+    {
+     "units": "M-K",
+     "offset_mm": 0.07,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P3",
+   "stock_loaded": "GL-150",
+   "first_production_at": "2024-05-14T07:55:00",
+   "sheets_production": 1238,
+   "sheets_makeready": 220,
+   "stoppages": [
+    "09:10",
+    "10:30",
+    "11:45"
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 1238,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 5.56,
+  "register_offset_mm": 0.16,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 61,
+  "customer_tier": "trade",
+  "prior_stoppages": 3
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "section_null",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 1238,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 5.56,
+  "register_offset_mm": 0.16,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 61,
+  "customer_tier": "trade",
+  "prior_stoppages": 3
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "adjust_and_recheck",
+   "second": "release_run",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 93,
+ "deciding": {
+  "colour_in_tolerance": "All four patches read 2.6-3.0 against spec_max_de 3.0; the M patch sits exactly on the limit, so it is passing but marginal.",
+  "run_before_signoff": "signed_at 07:40 precedes first_production_at 07:55, but the 15-minute gap is small.",
+  "next_step": "Colour passes at the limit, while the C-K offset of 0.16 mm in image is just over the 0.15 mm threshold, so adjusting and release are both defensible.",
+  "staff_effort": "1238 sheets of a 12500 run may need sorting or reprinting, which plausibly takes more than five days or just under that.",
+  "scrap_exposure": "The 1238 production sheets printed with in-image misregister of 0.16 mm exceed overs (about 695) and sit just under 10% of run (1250)."
+ },
+ "request": "rec-F423-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009693
+}

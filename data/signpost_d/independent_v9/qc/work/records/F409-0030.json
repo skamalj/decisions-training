@@ -1,0 +1,144 @@
+{
+ "id": "F409-0030",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "Sam Okafor",
+   "submitted_on": "2024-06-03",
+   "app_type": "new",
+   "message": "Do you issue visitor vouchers?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-05-30",
+     "address_line": "Flat 2, 15 High St",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2021-02-02",
+     "address_line": "Flat 2, 15 High St",
+     "verified": true
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "GH20 JKL",
+   "keeper_name": "Sam Okafor",
+   "supporting_letters": []
+  },
+  "request": {
+   "address": "2/15 High Street",
+   "plate_entered": "GH20 JKL"
+  },
+  "account_history": {
+   "live_permits": [
+    {
+     "permit_no": "P5"
+    }
+   ],
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "pcns": [
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    }
+   ],
+   "exceptions": []
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "format_only",
+  "proof_age_days": 4,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "format_only",
+  "proof_age_days": 4,
+  "docs_missing": 3,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 3,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 6,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 45,
+ "deciding": {
+  "residency_shown": "Verified bill 4 days old, address matches in format only.",
+  "disposition": "Docs verified, keeper matches, one live permit under cap.",
+  "main_issue": "No check fails; PCNs are all cancelled.",
+  "misuse_strength": "Three PCNs all cancelled so mitigated; no other indicator.",
+  "document_gaps": "Both documents verified true."
+ },
+ "request": "rec-F409-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006477
+}

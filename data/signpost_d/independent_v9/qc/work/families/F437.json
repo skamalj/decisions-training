@@ -1,0 +1,306 @@
+{
+ "id": "F437",
+ "domain": "translation agency job quality checks",
+ "role": "Quality assurance linguist at a translation agency, checking each completed job record before the deliverable is released to the client",
+ "setting": "A mid-sized translation agency routes every finished job through a QA linguist. The QA linguist opens one job record at a time and compares several things: the order, the source file, the delivered target file, the automated QA report, the bilingual review and the job's history. They then decide whether the deliverable can go out, what is wrong with it and what happens next. Mismatches between sections are never flagged by the system. The reviewer must find them by comparing values.",
+ "questions": {
+  "scope_matches": {
+   "type": "noul",
+   "instructions": "Delivered file covers the full ordered source scope and version.",
+   "criteria": {
+    "true": "Segment counts and source version agree with the order.",
+    "false": "Segments missing, wrong version, or counts disagree materially."
+   }
+  },
+  "reviewed_in_time": {
+   "type": "noul",
+   "instructions": "Independent review was completed and signed off before client delivery.",
+   "criteria": null
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should happen to this job record now?",
+   "criteria": {
+    "release": "Deliver now; counts, checks and sign-off all consistent.",
+    "hold_for_item": "One named artefact missing; request it before deciding.",
+    "return_for_fix": "Fixable errors found; translator corrects and resubmits before deadline.",
+    "escalate_am": "Client terms breached or late; account manager must decide."
+   }
+  },
+  "open_severity": {
+   "type": "score",
+   "instructions": "What is the highest severity of errors still open?",
+   "criteria": [
+    "None: no open errors in QA or review",
+    "Minor: open errors are all minor severity",
+    "Major: at least one major error, none critical",
+    "Critical: at least one critical error still open"
+   ]
+  },
+  "parties_needed": {
+   "type": "score",
+   "instructions": "How many separate people or teams must act to resolve this?",
+   "criteria": [
+    "One person can resolve it alone",
+    "Two people or teams must act",
+    "Three or four people or teams must act",
+    "Five or more people or teams must act"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "scope_mismatch",
+   "description": "How the delivered segments and word count relate to the ordered source scope and version.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "trivial_count_drift",
+    "segments_missing",
+    "wrong_source_version"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S2",
+    "S5"
+   ]
+  },
+  {
+   "name": "locale_mismatch",
+   "description": "Delivered target locale differs from the locale on the order, e.g. pt-BR delivered against a pt-PT order.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.15,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "glossary_version_state",
+   "description": "Termbase version used in the deliverable compared with the version required by the order.",
+   "kind": "categorical",
+   "values": [
+    "match",
+    "older_version",
+    "not_recorded"
+   ],
+   "weights": [
+    0.6,
+    0.25,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "name": "review_status",
+   "description": "State and timing of the independent bilingual review relative to delivery.",
+   "kind": "categorical",
+   "values": [
+    "signed_before_delivery",
+    "signed_after_delivery",
+    "in_progress",
+    "not_assigned",
+    "section_missing"
+   ],
+   "weights": [
+    0.45,
+    0.15,
+    0.15,
+    0.1,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4",
+    "S5"
+   ]
+  },
+  {
+   "name": "open_error_profile",
+   "description": "Highest severity among errors still unresolved across the QA report and the review.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "minor_only",
+    "major",
+    "critical"
+   ],
+   "weights": [
+    0.35,
+    0.3,
+    0.22,
+    0.13
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "auto_qa_present",
+   "description": "Whether the automated QA report was run and attached; if false the qa_report section is null.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.8,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "qa_false_positive_share",
+   "description": "Share of automated QA flags the translator marked as false positives, which inflates raw flag counts as a decoy.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0.9,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S1"
+   ]
+  },
+  {
+   "name": "number_mismatch_count",
+   "description": "Numbers, dates or units in target segments that disagree with the source, found by comparing segment samples.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 6,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "deadline_slack_hours",
+   "description": "Hours between delivery (or now, if undelivered) and the client due time; negative means late.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": -48,
+   "max": 120,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "client_waiver",
+   "description": "Mitigation: the order terms record that the client accepted the older glossary, a locale variant or a revised due date.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S6",
+    "S4"
+   ]
+  },
+  {
+   "name": "prior_revision_rounds",
+   "description": "Count of earlier rejections or revision rounds on this job or the same client project.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S6"
+   ]
+  },
+  {
+   "name": "dtp_step_pending",
+   "description": "A required desktop publishing or layout step is listed in the workflow but has no completion date.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "job",
+   "description": "Order data: job_id, client_ref, lang_pair, target_locale, ordered_words, source_version, glossary_version, due_at, terms flags, workflow steps."
+  },
+  {
+   "name": "source",
+   "description": "Source file facts: file_id, version, segment_count, word_count, repetitions and fuzzy breakdown."
+  },
+  {
+   "name": "deliverable",
+   "description": "Target file facts: file_id, built_from_version, target_locale, segments_translated, word_count, glossary_version_used, delivered_at."
+  },
+  {
+   "name": "qa_report",
+   "description": "Automated QA run: run_at, flag counts by category, false_positive_marked, number_mismatches list, unresolved by severity; may be null."
+  },
+  {
+   "name": "review",
+   "description": "Bilingual review: reviewer_id, assigned_at, completed_at, signed_off, errors list with severity and status; may be null."
+  },
+  {
+   "name": "history",
+   "description": "Prior events: revision_rounds, previous rejections with dates, reassignments."
+  }
+ ],
+ "rendering_notes": "scope_mismatch shows only by comparing job.source_version, source.version and deliverable.built_from_version, and source.segment_count with deliverable.segments_translated. trivial_count_drift changes word_count by under 1% while segments match; this is a decoy explained by the repetitions breakdown. locale_mismatch appears as job.target_locale differing from deliverable.target_locale. glossary_version_state compares job.glossary_version with deliverable.glossary_version_used; not_recorded sets the latter to null. review_status is rendered through review.completed_at against deliverable.delivered_at, review.signed_off, or review being null; in_progress has assigned_at but completed_at null. open_error_profile is spread across review.errors items with status open/closed and qa_report.unresolved counts; closed critical errors are decoys. When auto_qa_present is false, qa_report is null. qa_false_positive_share inflates qa_report flag totals while false_positive_marked offsets them. number_mismatch_count appears as entries in qa_report.number_mismatches (source value vs target value) and may duplicate open review errors. deadline_slack_hours is implied only by job.due_at against deliverable.delivered_at; there is no lateness field. client_waiver appears as job.terms booleans (variant_accepted, glossary_exception, due_revised_to with a new date), which sometimes cover the exact mismatch present and sometimes an unrelated one. prior_revision_rounds is the length of history.revision_rounds. dtp_step_pending is a job.workflow entry with step 'dtp' and done_at null. No free-text fields. The record never contains fields such as release_ready, severity_overall, recommended_action or scope_ok. All dates are ISO, all counts are numbers, and unknowns are null.",
+ "skills": [
+  "S1",
+  "S2",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "parties_needed",
+ "next_step": {
+  "question": "next_step",
+  "info_option": "hold_for_item"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.114016
+}

@@ -1,0 +1,140 @@
+{
+ "id": "F415-0012",
+ "family": "F415",
+ "state": {
+  "site": {
+   "open": "08:00",
+   "closures": []
+  },
+  "shift": {
+   "sched_slots": [
+    "08:00",
+    "10:00",
+    "12:00",
+    "14:00",
+    "16:00",
+    "18:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "status": "done",
+    "photo_ref": null
+   },
+   {
+    "slot": "10:00",
+    "status": "done"
+   },
+   {
+    "slot": "12:00",
+    "status": "done"
+   },
+   {
+    "slot": "14:00",
+    "status": "done"
+   },
+   {
+    "slot": "16:00",
+    "status": "done"
+   },
+   {
+    "slot": "18:00",
+    "status": "done",
+    "end": "2025-06-02T18:20"
+   }
+  ],
+  "faults": [
+   {
+    "type": "blocked_pan",
+    "reported_at": "2025-06-02T09:40",
+    "remedied_at": "2025-06-02T13:41"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2025-06-02T18:35"
+  },
+  "history": {
+   "prior_defaults_90d": 3
+  }
+ },
+ "factors": {
+  "scheduled_slots": 6,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 241.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 3
+ },
+ "factors_sampled": {
+  "scheduled_slots": 6,
+  "missed_slots": "0",
+  "closure_covers_gap": true,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "none",
+  "fault_open_minutes": 197.39,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 3
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "missed_clean": "All six slots have a done visit; closures is empty and none is needed.",
+  "sign_off_valid": "Supervisor signed 18:35 after final visit end 18:20; photo refs are null, a small doubt.",
+  "next_step": "Visits and sign-off are complete; the only concern is the fault, which was remedied.",
+  "staff_effort": "No missing evidence, but the long fault and prior defaults could lead to a multi-day review; two to five days vs more is close.",
+  "fault_exposure": "Blocked pan open 09:40 to 13:41 is 241 minutes with the block open throughout, right on the 240-minute boundary."
+ },
+ "request": "rec-F415-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011244
+}

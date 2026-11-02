@@ -1,0 +1,161 @@
+{
+ "id": "F401-0013",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "MRN-0457",
+   "planned_discharge_at": "2025-04-08T14:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 16,
+     "spo2": 96,
+     "sbp": 130
+    }
+   ],
+   "investigations": [
+    {
+     "test": "CRP",
+     "status": "awaited",
+     "required_before_discharge": false,
+     "follow_up_owner": "GP"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "0457",
+   "reconciled": [
+    {
+     "drug": "ramipril",
+     "dose": 2.5,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "ramipril",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "pharmacy_ready_at": "2025-04-08T11:00"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": "frame",
+    "transfer_assist_count": 1,
+    "adl_score": 14
+   },
+   "social": {
+    "lives_alone": true
+   },
+   "care_arrangement": {
+    "type": "home_care",
+    "status": "confirmed",
+    "start_date": "2025-04-08"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "done",
+     "completed_at": "2025-04-08T10:00",
+     "signed_by": "RN"
+    },
+    {
+     "t": "carer handover",
+     "status": "pending"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-04-08",
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "frequency_regrouped_same_daily_total",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 1,
+  "false_completion": false,
+  "care_need": "new_package",
+  "care_arrangement_status": "confirmed_on_time",
+  "logistics_delay": "pickup_time_null_on_planned_date",
+  "identifier_consistency": "format_only",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": true,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 2,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "declined",
+  "logistics_delay": "none",
+  "identifier_consistency": "format_only",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "conditional_discharge",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "destination": {
+   "clarity": "balanced",
+   "target": "home_with_package",
+   "second": "intermediate_care",
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 41,
+ "deciding": {
+  "rx_matches": "Ramipril is 2.5 mg bd reconciled versus 5 mg od on the prescription. The daily total is the same but the dose and frequency are written differently, with no changes[] entry.",
+  "next_step": "Exactly one item, the carer handover, is pending, and the CRP result is non-blocking with a GP owner. IDs differ only in format, and there is no capacity concern or abnormal obs, so discharge proceeds once the handover is done.",
+  "destination": "A confirmed home_care package starting on the planned date supports home_with_package. A frame, one-person transfer assist and living alone make intermediate_care plausible.",
+  "outstanding_tasks": "The TTO is done and signed, and only the carer handover is pending.",
+  "discharge_delay": "Pharmacy is ready at 11:00 and the care start is the planned date. Transport is booked for that day with a null pickup_time, which is the boundary between ready on time and same-day late."
+ },
+ "request": "rec-F401-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013802
+}

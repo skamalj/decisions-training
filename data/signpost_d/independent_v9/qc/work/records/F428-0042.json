@@ -1,0 +1,135 @@
+{
+ "id": "F428-0042",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "FL-208",
+   "gate_type": "radial",
+   "rated_closure_s": 80,
+   "seal_type": "J_bulb"
+  },
+  "inspection": {
+   "asset_id": "FL-280",
+   "insp_date": "2025-06-10",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-06-10",
+    "closure_s": 51,
+    "leakage_l_min": 9,
+    "leakage_limit_l_min": 8,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "S1",
+    "component": "seal_music_note",
+    "grade": 3,
+    "status": "open"
+   },
+   {
+    "code": "M1",
+    "component": "motor",
+    "grade": 3,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W-9",
+     "defect_code": "S1",
+     "grade_raised": 2,
+     "status": "scheduled",
+     "completed": null,
+     "retest_insp_id": null
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": false
+  }
+ },
+ "factors": {
+  "gate_type": "radial",
+  "closure_time_ratio": 0.64,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 3,
+  "mismatch_location": "asset_id, seal_type, defect_grade_vs_work_order",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 50,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "radial",
+  "closure_time_ratio": 0.64,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 1,
+  "mismatch_location": "width_units",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 50,
+  "borderline_case": true,
+  "outage_beyond_permit": true
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "raise_repair",
+   "second": "escalate_engineer",
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "balanced",
+   "target": "seal",
+   "second": "drive_actuation",
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (outage_beyond_permit = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 56,
+ "deciding": {
+  "closure_test_valid": "The result says pass, but leakage of 9 l/min exceeds the 8 l/min limit, so the test is not within limits.",
+  "next_step": "Two open grade 3 defects and only one of them has a scheduled order, so raising repair is favoured. The leak above limit and the unordered motor defect leave escalation defensible.",
+  "defect_class": "A grade 3 seal defect and a grade 3 motor defect are tied for highest grade across components.",
+  "section_discrepancies": "The inspection asset_id FL-280 differs from the register's FL-208, the register's J_bulb seal differs from the defect's music_note seal, and the work order's grade 2 differs from defect grade 3.",
+  "flood_risk": "Closure of 51 s is well within the rated 80 s and there are grade 3 defects, which fits level 1. A scheduled order for the seal defect makes level 0 arguable."
+ },
+ "request": "rec-F428-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011489
+}

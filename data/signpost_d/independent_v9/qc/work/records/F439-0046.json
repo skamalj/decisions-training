@@ -1,0 +1,108 @@
+{
+ "id": "F439-0046",
+ "family": "F439",
+ "state": {
+  "test": {
+   "end_time": "10:40"
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "mirrors",
+     "driving": 2,
+     "serious": 0,
+     "dangerous": 0
+    }
+   ],
+   "driving_fault_total": 2
+  },
+  "outcome": {
+   "result": "pass",
+   "examiner_note": "Kerb strike with parked car, test abandoned.",
+   "examiner_signoff_at": "10:25"
+  },
+  "incident": {
+   "contact_type": "parked_vehicle",
+   "incident_time": "10:05",
+   "action_taken": "continued"
+  }
+ },
+ "factors": {
+  "fault_profile": "clear_pass",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "signoff_before_end",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": true,
+  "senior_countersigned": false,
+  "adverse_conditions": false,
+  "note_alignment": "contradicts_sheet",
+  "examiner_complaints_12m": 0,
+  "post_submission_edit": "no_edit"
+ },
+ "factors_sampled": {
+  "fault_profile": "clear_pass",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "signoff_before_end",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": true,
+  "senior_countersigned": false,
+  "adverse_conditions": false,
+  "note_alignment": "contradicts_sheet",
+  "examiner_complaints_12m": 0,
+  "post_submission_edit": "no_edit"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "report_complete": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "accept",
+   "second": "refer_investigation",
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "issue_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (continued_after_collision = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 44,
+ "deciding": {
+  "result_supported": "Note says test abandoned after the kerb strike, yet the sheet shows only 2 driving faults and no incident fault; the pass is contradicted.",
+  "report_complete": "examiner_signoff_at 10:25 is before end_time 10:40, so sign-off is misordered.",
+  "disposition": "Sheet and total are clean and could be filed, but the contradictory note and collision continuation make investigation plausible.",
+  "staff_effort": "Single examiner confirmation may suffice (under an hour), though checking the incident could take a few hours.",
+  "issue_severity": "Test continued after contact with a parked vehicle (incident_time 10:05, action continued), breaching mandatory procedure; some doubt since contact was minor."
+ },
+ "request": "rec-F439-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00447
+}

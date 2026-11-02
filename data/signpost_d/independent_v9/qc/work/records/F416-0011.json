@@ -1,0 +1,147 @@
+{
+ "id": "F416-0011",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "date": "2025-03-04",
+   "signoff": "G7"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "08:00",
+    "off": "18:00",
+    "qual": "2026-01-10"
+   },
+   {
+    "id": "G2",
+    "on": "08:00",
+    "off": "18:00",
+    "qual": "2025-11-02"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "11:00",
+    "rip": "med",
+    "flag": "yellow",
+    "zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "t": "11:20",
+    "type": "water_rescue",
+    "r": [
+     "G1",
+     "G2"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I2",
+    "t": "14:05",
+    "type": "water_rescue",
+    "r": [
+     "G1",
+     "G2"
+    ],
+    "out": "released"
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 1,
+   "kit_defects": 1
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "multiple",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "multiple",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "over_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "kit_outage": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 41,
+ "deciding": {
+  "two_guard_cover": "Both water rescues list G1 and G2, both rostered 08:00-18:00 with qual expiry after the shift date.",
+  "totals_reconcile": "handover first_aid is 1 but no first-aid incident is itemised, and kit_defects is 1 with no equipment entries.",
+  "next_step": "Cover is sound, nothing is missing, no kit outage and no flag lag; the only issue is a minor clerical totals slip, so the log is essentially routine.",
+  "outcome_severity": "Both rescues have outcome released; no ambulance or AED, though handover first_aid=1 leaves slight doubt.",
+  "kit_outage": "No equipment section entries, so no kit out of service."
+ },
+ "request": "rec-F416-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00993
+}

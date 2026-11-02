@@ -1,0 +1,142 @@
+{
+ "id": "F409-0031",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A-4471",
+   "full_name": "A. Verma",
+   "submitted_on": "2024-05-10",
+   "app_type": "new",
+   "message": "I have lived here since 2019."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-03-31",
+     "address_line": "14 Mill Lane",
+     "verified": null
+    }
+   ],
+   "ct_liability_from": "2024-04-02"
+  },
+  "vehicle": {
+   "plate": "KT19 BNR",
+   "keeper_name": "A. Verma",
+   "supporting_letters": []
+  },
+  "request": {
+   "zone_code": "C2",
+   "address": "14 Mill Lane",
+   "plate_entered": "KT19 BNR",
+   "duration_months": 12
+  },
+  "account_history": {
+   "live_permits": [],
+   "past_permits": [
+    {
+     "permit_no": "P-3321",
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    }
+   ],
+   "exceptions": [
+    {
+     "type": "carer",
+     "approved_on": "2023-11-02"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 40,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 0,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "contradicting_claim",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 194,
+  "docs_missing": 3,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 0,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "contradicting_claim",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "hold",
+   "second": "approve",
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 69,
+ "deciding": {
+  "residency_shown": "The only residence document (council tax bill) is unverified (verified null), and liability started 2024-04-02, which contradicts the claim of living there since 2019.",
+  "disposition": "Address matches and the bill is recent, which would favour approval. But the bill is unverified and a prior permit was seized as cloned, so holding is slightly more defensible.",
+  "main_issue": "Address, plate and keeper all match and the household has no permits. Only the history entries, which are not about the application's checks, point elsewhere.",
+  "misuse_strength": "The past permit P-3321 was seized with reason 'cloned copy found on different vehicle', which is a confirmed misuse.",
+  "document_gaps": "One document is unverified (the council tax bill, verified null). It is recent (40 days), so one reader could count it as received."
+ },
+ "request": "rec-F409-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011454
+}

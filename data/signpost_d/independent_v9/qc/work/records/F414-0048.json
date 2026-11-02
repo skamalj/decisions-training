@@ -1,0 +1,174 @@
+{
+ "id": "F414-0048",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "CF-88",
+   "equip_type": "climbing_frame",
+   "crit_fall_height_m": 2.0,
+   "surf_type": "wetpour",
+   "variance_ref": null
+  },
+  "inspection": {
+   "insp_date": "2024-03-28",
+   "insp_grade": "operational",
+   "fall_height_m": 2.0,
+   "surf_type_found": "wetpour",
+   "surf_depth_mm": 100,
+   "surf_req_table": [
+    {
+     "band": "<=2.0",
+     "type": "wetpour",
+     "min_depth_mm": 100
+    },
+    {
+     "band": ">2.0",
+     "type": "wetpour",
+     "min_depth_mm": 150
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "ROUGH-1",
+     "component_id": "C6",
+     "injury_mech": "minor"
+    },
+    {
+     "defect_code": "PNT-2",
+     "component_id": "C1",
+     "injury_mech": "none"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "CF-88",
+    "component_id": "C2",
+    "defect_ref": "D1",
+    "status": "closed",
+    "closed_date": "2024-02-01"
+   },
+   {
+    "wo_id": "W2",
+    "asset_id": "CF-88",
+    "component_id": "C6",
+    "defect_ref": "ROUGH-1",
+    "status": "closed",
+    "closed_date": "2024-04-02"
+   },
+   {
+    "wo_id": "W3",
+    "asset_id": "CF-88",
+    "component_id": "C1",
+    "defect_ref": "PNT-2",
+    "status": "open"
+   },
+   {
+    "wo_id": "W4",
+    "asset_id": "CF-88",
+    "component_id": "C6",
+    "defect_ref": "ROUGH-1",
+    "status": "open",
+    "temp_measure": {
+     "type": "taped off",
+     "date": "2024-03-28"
+    }
+   }
+  ],
+  "site": {
+   "usage_level": "low",
+   "incident_reports_90d": 2
+  },
+  "history": [
+   {
+    "date": "2023-09-12",
+    "grade": "operational",
+    "defect_refs": [
+     "D1"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 0.0,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.5,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "low",
+  "incident_reports_90d": 2
+ },
+ "factors_sampled": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 46.04,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 4,
+  "work_orders_closed_fraction": 0.51,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "low",
+  "incident_reports_90d": 2
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "balanced",
+   "target": "restrict_use",
+   "second": "sign_off",
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 104,
+ "deciding": {
+  "prior_defects_cleared": "Only prior ref D1 matches W1, closed 2024-02-01, before the inspection.",
+  "surfacing_adequate": "surf_depth_mm 100 equals the 100 mm minimum at a fall height of exactly 2.0 m, the band boundary.",
+  "asset_disposition": "Open minor-injury roughness on C6 with a taped-off measure, low use, and 2 incidents: isolate C6 or accept as is are both arguable.",
+  "remedial_progress": "2 of 4 orders show closed, but W2's closed_date (2024-04-02) is after the inspection, so effectively 1 of 4.",
+  "hazard_severity": "ROUGH-1 is coded minor injury, while the other finding has no mechanism; level 1 versus level 2 is a close call."
+ },
+ "request": "rec-F414-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012787
+}

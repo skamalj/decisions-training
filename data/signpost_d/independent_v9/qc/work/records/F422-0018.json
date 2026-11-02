@@ -1,0 +1,155 @@
+{
+ "id": "F422-0018",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-882",
+   "site": "S-31",
+   "delivered_at": "2025-02-21T10:00",
+   "received_at": "2025-03-07T09:00",
+   "review_date": "2025-03-20",
+   "reason": "ORDER_ERROR",
+   "lines": [
+    {
+     "gtin": "G3",
+     "qty_claimed": 30
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "DN-1207",
+   "date": "2025-02-18",
+   "lines": [
+    {
+     "gtin": "G3",
+     "batch": "K12",
+     "expiry": "2026-06",
+     "qty_dispatched": 30
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G3",
+     "batch": "K12",
+     "expiry": "2026-06-30",
+     "qty_counted": 23,
+     "packs_damaged": 0,
+     "seals_intact": 23
+    }
+   ],
+   "uid_scans": []
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": "L-9",
+   "logger_start": "2025-02-24T08:00",
+   "logger_end": "2025-03-07T08:00",
+   "min_c": 15.2,
+   "max_c": 27.1,
+   "minutes_out_of_range": 257,
+   "stability_ref": {
+    "max_hours": 8,
+    "max_c": 30
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2024-12-31",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "hold_limit_days": 14,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-04-18"
+   },
+   "max_days_out_of_control": 28,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 257,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "expiry_format_only",
+  "count_discrepancy_packs": 7,
+  "damaged_pack_fraction": 0.0,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 14,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 29,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 15
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 257,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 7,
+  "damaged_pack_fraction": 0.82,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 14,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": -1,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 15
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "storage_maintained": "Logger starts 2025-02-24, three days after delivery, leaving a gap, though recorded excursion of 257 minutes is within the stability allowance.",
+  "batch_traceable": "Batch K12 matches dispatch but expiry is 2026-06 on dispatch and 2026-06-30 counted, a format difference leaving it open.",
+  "next_step": "Audit expired 2024-12-31 and declaration_received is false: the storage declaration is the single named missing document.",
+  "resaleable_share": "All 23 packs are undamaged and sealed with long shelf life, but the logger gap and missing declaration leave doubt about whether all are fit.",
+  "disposition_urgency": "Approved extension sets the limit at 2025-04-18, 29 days after the 2025-03-20 review."
+ },
+ "request": "rec-F422-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013092
+}

@@ -1,0 +1,35 @@
+{
+ "persona": "by_the_book",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "crew_missed": {
+   "true": 0.35,
+   "false": 0.65
+  },
+  "report_matches": {
+   "true": 0.15,
+   "false": 0.85
+  },
+  "next_step": {
+   "close_no_action": 0.3,
+   "request_evidence": 0.45,
+   "return_conditional": 0.05,
+   "schedule_return": 0.1,
+   "escalate_supervisor": 0.1
+  },
+  "return_urgency": {
+   "0": 0.6,
+   "1": 0.25,
+   "2": 0.1,
+   "3": 0.05
+  },
+  "repeat_failures": {
+   "0": 0.9,
+   "1": 0.05,
+   "2": 0.03,
+   "3": 0.02
+  }
+ },
+ "cost": 0.000489
+}

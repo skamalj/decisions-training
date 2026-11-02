@@ -1,0 +1,118 @@
+{
+ "id": "F431-0019",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM-33950",
+   "seal_state": "intact",
+   "seal_checked_date": "2023-11-02"
+  },
+  "period_read": {
+   "read_date": "2024-04-30",
+   "reg_kwh": 3805,
+   "src_code": "EST",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2024-03-31",
+    "reg_kwh": 3000,
+    "src": "AMR",
+    "same_period_ly_kwh": 1000
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_COMMS"
+   ],
+   "battery_pct": 18
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 415,
+   "hdd_prior_year": 500,
+   "works_orders": [],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "system_estimate",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 0.97,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.83,
+  "diagnostic_error_count": 1,
+  "meter_works_order": false,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "system_estimate",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 2.35,
+  "occupancy_change": true,
+  "degree_day_ratio": 0.83,
+  "diagnostic_error_count": 4,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "billable_actual": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 30,
+ "deciding": {
+  "meter_fault": "There is no consumption anomaly, the seal is intact, and the only code is a lone E_COMMS, which affects transmission only. The estimate source leaves a little doubt.",
+  "billable_actual": "The src_code is EST with a null photo_ref, so it is not an actual read. The previous read was AMR and consumption is plausible, which leaves some doubt.",
+  "next_step": "The estimate is in sequence, consumption is plausible, and nothing is open. It can be released and corrected at the next actual read.",
+  "staff_effort": "There is no work to do, so under one hour is needed.",
+  "consumption_deviation": "Consumption is 3805-3000=805 against expected 1000*415/500=830, a ratio of 0.97 and a deviation of about 3%."
+ },
+ "request": "rec-F431-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010249
+}

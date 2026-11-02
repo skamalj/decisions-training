@@ -1,0 +1,180 @@
+{
+ "id": "F427-0007",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V-2210",
+   "site_ref": "KB12",
+   "visit_date": "2024-07-02",
+   "surveyor_grade": "senior",
+   "weather_on_day": "showers"
+  },
+  "site_targets": {
+   "band_top_cm": 8,
+   "band_floor_cm": 28,
+   "dipwells_scheduled": 12,
+   "dams_total": 6,
+   "last_visit_date": "2024-05-28"
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "W2",
+     "depth_cm": -6
+    },
+    {
+     "id": "W9",
+     "depth_cm": -3
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "depth_cm": -2,
+     "prev_depth_cm": -1
+    }
+   ],
+   "logger_download_at": "2024-07-02T15:10",
+   "rain_30d_pct_normal": 119
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "B1",
+     "pool_level_cm": 30,
+     "design_pool_cm": 30,
+     "defect_code": "OK",
+     "remark": "Sound."
+    },
+    {
+     "dam_id": "B2",
+     "pool_level_cm": 42,
+     "design_pool_cm": 42,
+     "defect_code": "OK",
+     "remark": "Damp patch at toe, no visible flow; pool at design."
+    }
+   ],
+   "open_work_orders": [
+    {
+     "dam_id": "B2",
+     "status": "raised"
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 6
+    },
+    {
+     "q": 2,
+     "score": null
+    },
+    {
+     "q": 3,
+     "score": null
+    },
+    {
+     "q": 4,
+     "score": null
+    },
+    {
+     "q": 5,
+     "score": null
+    }
+   ],
+   "photos_uploaded": 8,
+   "photos_expected": 8,
+   "grazing_signs": false
+  },
+  "notes": {
+   "surveyor_note": "Wet underfoot across the site.",
+   "prior_visits": []
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.17,
+  "photos_status": "full",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seep",
+  "water_table_offset_cm": 12.5,
+  "rainfall_pct_normal": 119.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.01,
+  "photos_status": "full",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "partial_breach",
+  "water_table_offset_cm": -14.57,
+  "rainfall_pct_normal": 119.21,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "above_band",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 183,
+ "deciding": {
+  "dam_caused_drop": "Water is above the band and the controls are steady, so there is no weather-driven drop. A raised work order on B2 is the only dam-side pointer.",
+  "next_step": "A work order for B2 is already raised, and every pool is at design with code OK, so nothing new needs requesting, repairing or escalating. File it.",
+  "hydro_state": "Dipwells read -6 and -3 cm (water above the surface, mean -4.5) against a band top of 8 cm, so the water is above the band.",
+  "dam_severity": "B2 is coded OK with its pool at design, but the remark notes a damp patch at the toe and a work order is open. Intact and seepage are both defensible.",
+  "evidence_completeness": "2 of 12 dipwells were read (17%, not recorded). Photos are 8/8 and the dam log is present. Quadrats have only 1 of 5 scored, so whether they count as recorded decides between three elements and two."
+ },
+ "request": "rec-F427-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014753
+}

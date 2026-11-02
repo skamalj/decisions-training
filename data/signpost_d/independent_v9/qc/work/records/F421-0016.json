@@ -1,0 +1,122 @@
+{
+ "id": "F421-0016",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-48213",
+   "service": "std",
+   "fragile": true,
+   "contents": "ceramic vase set",
+   "qty": 1,
+   "weight_kg": 4.2,
+   "declared_value_gbp": 2190.1
+  },
+  "handling_events": [
+   {
+    "ts": "2024-03-02T08:10",
+    "site": "HUB-N",
+    "code": "SCAN",
+    "exc": "ADDR"
+   },
+   {
+    "ts": "2024-03-03T07:50",
+    "site": "DEP-R",
+    "code": "INB"
+   },
+   {
+    "ts": "2024-03-03T11:20",
+    "site": "DEP-R",
+    "code": "CONV-STD"
+   },
+   {
+    "ts": "2024-03-03T11:42",
+    "site": "DEP-R",
+    "code": "SORT",
+    "exc": "CRUSH"
+   }
+  ],
+  "damage_report": null,
+  "notes": [
+   "Fragile parcel went down the standard conveyor; our error."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "report_null",
+  "loss_pct": 99.75,
+  "declared_value": 2190.1,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": true,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 0.81
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "report_null",
+  "loss_pct": 99.75,
+  "declared_value": 2190.1,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": true,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 0.81
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "close_no_action",
+   "second": "approve_repack",
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "depot_fault": "Clean inbound scan at DEP-R, then CRUSH exception at a depot sort event after a CONV-STD scan.",
+  "contents_match": "Damage report is null, so no observed item to compare; only the note and manifest, leaving it weakly supported.",
+  "next_step": "Report is null and depot admits fault; close versus approve repack/write-off both plausible.",
+  "loss_share": "Value 2190.10 with no report or repair estimate; crush on a fragile set sits between major and total.",
+  "parties_needed": "Missing inspection plus write-off and claim handling suggests several teams, or only two."
+ },
+ "request": "rec-F421-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005509
+}

@@ -1,0 +1,141 @@
+{
+ "id": "F404-0014",
+ "family": "F404",
+ "state": {
+  "session": {
+   "age_band": "two_year",
+   "ratio_rule": "1:4"
+  },
+  "children": {
+   "booked": 14,
+   "slots": [
+    {
+     "t": "15:45",
+     "in": 15
+    },
+    {
+     "t": "16:00",
+     "in": 15
+    },
+    {
+     "t": "16:45",
+     "in": 15
+    }
+   ]
+  },
+  "rota": {
+   "counts": [
+    "S3",
+    "S5",
+    "S6",
+    "S7"
+   ],
+   "end": "17:00"
+  },
+  "staff_signin": [
+   {
+    "id": "S7",
+    "out": "15:38"
+   },
+   {
+    "id": "S3",
+    "out": "17:00"
+   },
+   {
+    "id": "S5",
+    "out": "17:00"
+   },
+   {
+    "id": "S6",
+    "out": "17:00"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F2",
+    "room": "this",
+    "from": "15:38",
+    "to": "16:00",
+    "by": "mgr"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 2
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 15,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 82,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 2
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 15,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 82,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 2
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "escalate_notify",
+   "second": null,
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "balanced",
+   "target": "staff_shortfall",
+   "second": "none_found",
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "below_ratio": "After S7 left at 15:38, three staff remain for 15 children, which requires four. The signed floater cover ends at 16:00, so the 16:00 and 16:45 slots are uncovered.",
+  "disposition": "The gap is 82 minutes in total, though only about 60 are uncovered by the floater. It may be notifiable, but the partial cover leaves some doubt about escalating.",
+  "primary_cause": "S7 left before the rota end of 17:00, which is a staff shortfall. The signed floater cover for part of the gap makes none_found defensible.",
+  "shortfall_duration": "The total gap is 82 minutes (15:38 to 17:00), but the signed floater covers 22 of them, leaving about 60 uncovered. Reading it as 60 or 82 splits the score between levels 2 and 3.",
+  "breach_severity": "15 children against 3 eligible staff means one child beyond cover, but the floater cover and the booked-14 overrun of one child keep this near levels 0 and 1."
+ },
+ "request": "rec-F404-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013374
+}

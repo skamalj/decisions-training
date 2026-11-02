@@ -1,0 +1,129 @@
+{
+ "id": "F423-0038",
+ "family": "F423",
+ "state": {
+  "job": {
+   "stock_spec": "CB200",
+   "run_qty": 15000,
+   "overs_pct": 3.65,
+   "spec_max_de": 3.0,
+   "customer_tier": "key_account"
+  },
+  "proof_signoff": {
+   "signed_at": "2025-05-12T10:05",
+   "concession": {
+    "accepted_max_de": 4.5
+   }
+  },
+  "colour_readings": {
+   "checked_on": "2025-05-12",
+   "calibrated_on": "2025-03-16",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 3.8
+    },
+    {
+     "ink": "K",
+     "delta_e": 3.4
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.07,
+     "in_image": false
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "CB170",
+   "first_production_at": "2025-05-12T09:20",
+   "sheets_production": 2242,
+   "stoppages": []
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 2242,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 3.65,
+  "register_offset_mm": 0.07,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 57,
+  "customer_tier": "key_account",
+  "prior_stoppages": 0
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2242,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 3.65,
+  "register_offset_mm": 0.07,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 57,
+  "customer_tier": "key_account",
+  "prior_stoppages": 0
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_manager",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (wrong_stock_loaded = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 78,
+ "deciding": {
+  "colour_in_tolerance": "Patches read 3.8 and 3.4, over spec_max_de 3.0 but under the concession accepted_max_de 4.5. All are within the applicable limit.",
+  "run_before_signoff": "first_production_at 09:20 is before signed_at 10:05, with 2242 production sheets logged.",
+  "next_step": "CB170 is loaded against the CB200 spec with 2242 sheets run, so refer to the manager to decide on a reprint or customer contact.",
+  "staff_effort": "A wrong-stock reprint of about 15% of the run means reprint planning and customer contact, likely several days of effort.",
+  "scrap_exposure": "stock_loaded CB170 differs from stock_spec CB200. sheets_production 2242 is about 15% of run_qty 15000, over the 10% threshold."
+ },
+ "request": "rec-F423-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008885
+}

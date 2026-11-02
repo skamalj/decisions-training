@@ -1,0 +1,172 @@
+{
+ "id": "F432-0022",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E03",
+   "sp": "WLB",
+   "risk_cat": 3,
+   "doors": [
+    "A",
+    "B"
+   ],
+   "roster": [
+    "b11",
+    "b12",
+    "b13"
+   ],
+   "temp_range_c": [
+    10,
+    24
+   ],
+   "active_vet_case": "V7"
+  },
+  "shift": {
+   "date": "2024-06-02",
+   "keeper_id": "k09",
+   "end": "17:00",
+   "opening_count": 3,
+   "closing_count": 3
+  },
+  "movements": [],
+  "feeding": {
+   "sheet": "2024-01-15",
+   "items": [
+    {
+     "sheet_g": 3000,
+     "offered_g": 3000,
+     "leftover_g": 330,
+     "unit": "g",
+     "scatter_flag": true
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched": "09:00",
+    "logged": true,
+    "entry_time": "09:03",
+    "temp_c": 16,
+    "beh": [
+     "LAME"
+    ]
+   },
+   {
+    "sched": "11:00",
+    "logged": false
+   },
+   {
+    "sched": "13:00",
+    "logged": false
+   },
+   {
+    "sched": "15:00",
+    "logged": true,
+    "entry_time": "15:02",
+    "temp_c": 18,
+    "beh": [
+     "LAME",
+     "STER"
+    ]
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "A",
+     "time": "16:30"
+    },
+    {
+     "door": "B",
+     "time": "16:33"
+    }
+   ],
+   "ticket": "T-410",
+   "ticket_state": "closed"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "closed",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.89,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 2,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 3,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "unexplained_off_by_one",
+  "barrier_fault": "repaired_retest_pending",
+  "lock_check_timing": "partial_doors_only",
+  "intake_ratio": 0.96,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 1,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": true,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 3,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_entry",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 86,
+ "deciding": {
+  "count_reconciles": "Opening 3 equals closing 3 and movements is an empty list.",
+  "secure_at_close": "Both doors A and B locked 16:30-16:33 after the 15:02 round; ticket T-410 closed.",
+  "next_step": "Two rounds (11:00, 13:00) lack entries, so ask the keeper for them; nothing else needs action.",
+  "intake_shortfall": "3000 g offered, 330 g left over gives 89% of the sheet, right at the 90% boundary, with scatter_flag set.",
+  "missed_rounds": "Rounds 11:00 and 13:00 have logged false and no entry_time."
+ },
+ "request": "rec-F432-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013381
+}

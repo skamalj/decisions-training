@@ -1,0 +1,143 @@
+{
+ "id": "F417-0025",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V-6612",
+   "type": "trawler yacht",
+   "loa_m": 14.96,
+   "beam_m": 4.4,
+   "draught_m": 1.9,
+   "draught_src": "declared",
+   "home_port": "Whitby"
+  },
+  "berth": {
+   "id": "Q5-02",
+   "max_loa_m": 15.2,
+   "fender_allow_m": 0.3,
+   "depth_lat_m": 2.39,
+   "waiver_ref": "W-305",
+   "waiver_expiry": "2025-12-31"
+  },
+  "booking": {
+   "arrival": "2025-08-18",
+   "departure": "2025-08-28",
+   "nights": 10,
+   "next_on_berth": {
+    "arrival": "2025-09-05"
+   }
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 14.97,
+    "draught_m": null,
+    "date": "2021-05-09"
+   },
+   "insurance_expiry": "2025-08-23",
+   "inspection_date": "2025-09-20",
+   "inspection_booked": true
+  },
+  "account": {
+   "dues_outstanding_gbp": 1253,
+   "deposit_paid": true,
+   "plan_id": "PP-52",
+   "plan_status": "approved",
+   "credit_balance_gbp": 0
+  },
+  "history": [
+   {
+    "date": "2022-08-15",
+    "berth": "Q5-02",
+    "incidents": 0
+   },
+   {
+    "date": "2023-08-14",
+    "berth": "Q5-02",
+    "incidents": 1
+   },
+   {
+    "date": "2024-08-19",
+    "berth": "Q4-06",
+    "incidents": 0
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 0.04,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 0.49,
+  "draught_source": "owner_declared",
+  "insurance_status": "expires_during_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 1253,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 0.04,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 0.09,
+  "draught_source": "owner_declared",
+  "insurance_status": "expires_during_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 1253,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "multiple_nights",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "confirm_allocation",
+   "second": "request_document",
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "document_gap",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 186,
+ "deciding": {
+  "length_fits": "Survey loa 14.97 is under max_loa 15.2, so it fits clear of the fender allowance.",
+  "next_step": "Insurance lapses on 2025-08-23, five days before departure, and the inspection is booked for after departure, so a renewal or certificate could be requested. Against that, the plan is approved, the waiver is current and the owner is a regular, so confirming is also defensible.",
+  "primary_issue": "Insurance expiry 2025-08-23 falls before departure 2025-08-28 and the inspection date is after departure. Dues are covered by the plan and the dates do not clash.",
+  "ukc_band": "Depth 2.39 minus declared draught 1.9 gives 0.49 m, just under the half-metre line. There is no survey draught to confirm it.",
+  "unresolved_count": "The insurance expiry against departure is one discrepancy. The inspection dated after departure and the missing survey draught against the declared one are arguable second items; plan and waiver resolve the rest."
+ },
+ "request": "rec-F417-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012066
+}

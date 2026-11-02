@@ -1,0 +1,136 @@
+{
+ "id": "F432-0009",
+ "family": "F432",
+ "state": {
+  "shift": {
+   "end": "17:00",
+   "opening_count": 4,
+   "closing_count": 3
+  },
+  "movements": [
+   {
+    "id": "a2",
+    "dir": "out",
+    "time": "17:40"
+   }
+  ],
+  "feeding": [
+   {
+    "sheet_g": 1000,
+    "offered_g": 1000,
+    "leftover_g": 400
+   }
+  ],
+  "rounds": [
+   {
+    "sched": "08:00",
+    "logged": false
+   },
+   {
+    "sched": "10:00",
+    "logged": false
+   },
+   {
+    "sched": "12:00",
+    "logged": false,
+    "cctv_reviewed": true,
+    "reviewer_id": "k2"
+   },
+   {
+    "sched": "14:00",
+    "logged": false
+   },
+   {
+    "sched": "16:30",
+    "logged": true,
+    "entry_time": "16:31"
+   }
+  ],
+  "close_check": {
+   "D1": "17:05",
+   "ticket": "T91",
+   "ticket_state": "repaired",
+   "retest_due": "2025-03-12"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "movement_outside_shift",
+  "barrier_fault": "repaired_retest_pending",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.6,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 4,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "repaired_retest_pending",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.41,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 2,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 2,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "count_reconciles": "Count dropped from 4 to 3 but the only out-movement is at 17:40, after shift end 17:00, so it does not match.",
+  "secure_at_close": "The door check at 17:05 follows the last round at 16:31; ticket T91 is repaired, with a retest still due.",
+  "next_step": "The record is complete, the fault is repaired and the lock check is on time, which leans towards filing.",
+  "intake_shortfall": "Offered 1000 g with 400 g left is exactly 60%, on the boundary between minor and marked.",
+  "missed_rounds": "Four rounds are logged false, but the 12:00 one has a CCTV review, so the count is either 3 or 4, on the boundary between levels 2 and 3."
+ },
+ "request": "rec-F432-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009539
+}

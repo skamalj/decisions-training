@@ -1,0 +1,131 @@
+{
+ "id": "F407-0005",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-9120",
+   "received_at": "2025-02-10T11:20:00",
+   "channel": "councillor",
+   "photo_ref": "IMG-9120",
+   "linked_reports": [
+    "R-9101",
+    "R-9115"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "usrn": 31220456,
+   "road_class": "local_access",
+   "intervention_depth_mm": 40,
+   "speed_limit": 30
+  },
+  "inspection": {
+   "inspector": "HI-09",
+   "inspected_at": "2025-01-22",
+   "depth_mm": 70,
+   "width_mm": 1291.04,
+   "offset_m": 8
+  },
+  "works_history": [
+   {
+    "job": "J-6650",
+    "completed": "2024-11-12",
+    "offset_m": 3,
+    "guarantee_end": "2025-11-12"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "start": "2026-01-12",
+     "extent_m": [
+      300,
+      500
+     ]
+    }
+   ],
+   "temp_measures": []
+  },
+  "current_order": null
+ },
+ "factors": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 2,
+  "reporter_source": "councillor",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 1291.04,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "none",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 2,
+  "reporter_source": "councillor",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 1291.04,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "close_no_action",
+   "second": "request_inspection",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 117,
+ "deciding": {
+  "meets_threshold": "inspection.depth_mm 70 against threshold 40 is far above it.",
+  "repeat_failure": "Job J-6650 completed 2024-11-12 at 3 m from the defect, within 10 m and in guarantee until 2025-11-12.",
+  "next_step": "The inspection predates the report by three weeks, with a recent in-guarantee repair at the spot: closing as already handled versus re-inspecting are both arguable.",
+  "staff_effort": "Guarantee recall on J-6650 and a re-check need one to eight hours, or possibly a few days.",
+  "response_timescale": "Depth 70 mm on a 30 mph road with no temporary measure: five-day priority repair or a 24-hour make-safe are both defensible."
+ },
+ "request": "rec-F407-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007329
+}

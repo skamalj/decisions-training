@@ -1,0 +1,145 @@
+{
+ "id": "F404-0006",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "A2",
+   "date": "2025-03-11",
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty",
+   "registered_places": 16
+  },
+  "children": {
+   "booked": 5,
+   "slots": [
+    [
+     "08:00",
+     9
+    ],
+    [
+     "08:15",
+     9
+    ],
+    [
+     "08:30",
+     5
+    ]
+   ]
+  },
+  "rota": [
+   {
+    "id": "S041",
+    "q": 3,
+    "counts": true,
+    "start": "08:00"
+   },
+   {
+    "id": "S052",
+    "q": 3,
+    "counts": true,
+    "start": "08:00"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S041",
+    "in": "08:00",
+    "check": "ok",
+    "q": 3
+   },
+   {
+    "id": "S052",
+    "in": "08:31",
+    "check": "pending",
+    "q": 3
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F07",
+    "from": "08:00",
+    "to": "08:14",
+    "room": "A2",
+    "by": null
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 0
+  }
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 9,
+  "staff_signin_variance": "late_arrival",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 16,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 0
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 11,
+  "staff_signin_variance": "late_arrival",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 93,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": true,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 0
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "corrective_plan",
+   "second": "file_no_action",
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "balanced",
+   "target": "paperwork_only",
+   "second": "staff_shortfall",
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "below_ratio": "9 children at 08:15 need 2 staff, but only S041 is eligible (S052 is pending until 08:31) and the floater entry ends 08:14.",
+  "disposition": "The gap is only about 16 minutes, and an unsigned floater entry covers the start of the session. Corrective plan versus no action is a close call.",
+  "primary_cause": "The unsigned cover entry points to paperwork, but S052 was late and pending, so eligible staff were below rota.",
+  "shortfall_duration": "The uncovered window runs 08:14 to about 08:30, which is 16 minutes and sits on the 15/16 boundary between levels 1 and 2.",
+  "breach_severity": "At most one child is beyond cover (9 against 8 per eligible adult), and only if the unsigned cover is ignored."
+ },
+ "request": "rec-F404-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013367
+}

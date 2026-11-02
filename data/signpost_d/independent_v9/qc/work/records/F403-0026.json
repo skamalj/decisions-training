@@ -1,0 +1,155 @@
+{
+ "id": "F403-0026",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P4417",
+   "declared_allergens": [
+    "egg",
+    "milk",
+    "soy",
+    "sesame"
+   ],
+   "auto_injector": {
+    "prescribed": false,
+    "anaphylaxis_risk": false
+   },
+   "plan_start": "2025-02-17"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2024-11-04",
+   "expires": "2026-11-04",
+   "allergens": [
+    "egg",
+    "milk",
+    "soy",
+    "sesame"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-02-10",
+   "dishes": [
+    {
+     "dish": "quiche",
+     "contains": [
+      "egg",
+      "milk"
+     ],
+     "recipe_version_date": "2025-01-20",
+     "substitute": null,
+     "spec_checked_on": null
+    },
+    {
+     "dish": "curry",
+     "contains": [
+      "soy",
+      "sesame"
+     ],
+     "recipe_version_date": "2025-01-20",
+     "substitute": "plain rice dish",
+     "spec_checked_on": "2025-02-01"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "staff_trained": 3,
+   "last_trained": "2024-09-12"
+  },
+  "history": {
+   "review_date": "2025-03-05",
+   "packed_lunch_until": "2025-03-05",
+   "incidents": [
+    {
+     "date": "2025-02-17",
+     "dish": "quiche",
+     "note": "taster lunch, no reaction observed"
+    }
+   ],
+   "messages": [
+    "Cook: all calm, nothing to worry about."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 1,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 5,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "menu_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 44,
+ "deciding": {
+  "evidence_allergens_covered": "Egg and milk appear only in quiche with substitute null, while soy and sesame are substituted in the curry; the gap is modest, so false is leading.",
+  "next_step": "An incident on the quiche (contains egg, milk) is dated on the plan start 2025-02-17; despite the 'no reaction observed' note the record points to referral, not plain approval.",
+  "first_gap_stage": "Evidence is current to 2026 and the quiche has substitute null, so the menu is the first shortfall; the controls are verified.",
+  "exposure_proximity": "The incident entry dated 2025-02-17 (on plan_start) is for quiche, which contains declared egg and milk.",
+  "meal_urgency": "packed_lunch_until is 2025-03-05, the review date, so the first school meal is the next school day; it is borderline with the 2-5 day band."
+ },
+ "request": "rec-F403-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013105
+}

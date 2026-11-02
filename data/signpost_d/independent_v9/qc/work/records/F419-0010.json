@@ -1,0 +1,181 @@
+{
+ "id": "F419-0010",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "09/27",
+   "survey_dt": "2024-07-23T07:30",
+   "test_speed_kmh": 65,
+   "runway_length_m": 2400,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "thresholds_95": {
+    "design": 0.66,
+    "maint_planning": 0.47,
+    "minimum": 0.38
+   },
+   "weather": null
+  },
+  "device": {
+   "serial": "KT-7740",
+   "cal_cert_date": "2024-02-01",
+   "cal_expiry": "2025-02-01",
+   "tyre_pressure_kpa": null,
+   "tyre_spec_kpa": [
+    200,
+    220
+   ],
+   "water_depth_mm": null
+  },
+  "runs": [
+   {
+    "dir": "09",
+    "mean_speed_kmh": 65,
+    "thirds": [
+     0.78,
+     0.8,
+     0.88
+    ]
+   },
+   {
+    "dir": "27",
+    "mean_speed_kmh": 66,
+    "thirds": [
+     0.79,
+     0.81,
+     0.8
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.81,
+    0.84,
+    0.82
+   ],
+   "mtd_threshold_mm": 0.6,
+   "contaminant": "none"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2024-02-14",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start_date": "2024-07-30"
+    }
+   ],
+   "cross_checks": [
+    {
+     "serial": "KT-2209",
+     "date": "2024-07-23",
+     "thirds": [
+      0.78,
+      0.81,
+      0.8
+     ]
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2024-01-10",
+     "lowest_third": 0.84
+    },
+    {
+     "date": "2023-10-02",
+     "lowest_third": 0.88
+    }
+   ]
+  },
+  "review": {
+   "assigned": "A. Roy",
+   "signed_at": null,
+   "role": null
+  }
+ },
+ "factors": {
+  "min_third_band": "above_design",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "none",
+  "days_since_rubber_removal": 160,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 4,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "declining"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_planning",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 160,
+  "removal_scheduled": true,
+  "calibration_status": "expired",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "declining"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file_routine",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "deficit_driver": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 126,
+ "deciding": {
+  "genuine_deficit": "Every third (0.78-0.88) is above the 0.72 design level and the cross-check agrees, so no deficit is shown. The declining priors (0.88 to 0.84 to 0.78) and the planned removal are the only grounds for doubt. The plan answer of true conflicts with the record.",
+  "next_step": "All values are above planning level, so filing is the leading answer. The four missing items are the reason for doubt, since they could justify a hold.",
+  "deficit_driver": "No third is below planning level. A declining trend and a pending removal leave slight doubt.",
+  "friction_severity": "The lowest third of 0.78 is above the 0.72 design level, which gives level 0.",
+  "evidence_completeness": "Four elements are null: weather, tyre_pressure_kpa, water_depth_mm and signed_at. That is level 0."
+ },
+ "request": "rec-F419-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014812
+}

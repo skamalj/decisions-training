@@ -1,0 +1,148 @@
+{
+ "id": "F408-0042",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "MB-5190",
+   "uprn": 204417,
+   "postcode": "LS4 7QP",
+   "logged_at": "2025-06-03T16:30",
+   "stream": "refuse",
+   "claimed_date": "2025-06-03",
+   "photo_attached": true
+  },
+  "property": {
+   "uprn": 204417,
+   "postcode": "LS4 7QP",
+   "assisted_collection": false,
+   "bins_held": [
+    "refuse",
+    "recycling"
+   ]
+  },
+  "schedule": {
+   "round_id": "R14",
+   "collection_day": "TUE",
+   "week_pattern": "A",
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled_date": "2025-06-03"
+  },
+  "round_log": {
+   "round_status": "completed",
+   "round_completed_at": "2025-06-03T15:50",
+   "disruption_code": "vehicle_breakdown",
+   "catch_up_date": "2025-06-05",
+   "stops": [
+    {
+     "uprn": 204417,
+     "gps_stop": false,
+     "exception_code": null,
+     "photo_ref": null
+    }
+   ],
+   "sweep_collected_at": null
+  },
+  "history": [
+   {
+    "case_id": "C881",
+    "uprn": 204417,
+    "logged_on": "2025-03-11",
+    "stream": "refuse",
+    "outcome": "upheld"
+   },
+   {
+    "case_id": "C902",
+    "uprn": 204417,
+    "logged_on": "2025-04-22",
+    "stream": "refuse",
+    "outcome": "upheld"
+   },
+   {
+    "case_id": "C930",
+    "uprn": 204417,
+    "logged_on": "2025-05-16",
+    "stream": "recycling",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 4,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "close_no_action",
+   "second": "schedule_return",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 129,
+ "deciding": {
+  "crew_missed": "GPS shows no stop and there is no exception code, but a vehicle_breakdown disruption has a catch_up_date of 2025-06-05 that has not yet passed.",
+  "report_matches": "Refuse, Tuesday 2025-06-03, logged 16:30 after the 15:50 completion, all agree with the schedule.",
+  "next_step": "The open catch_up_date 2025-06-05 supports waiting and closing, while the passed_no_stop GPS and the photo support booking a return.",
+  "return_urgency": "The catch-up on 2025-06-05 falls near the boundary between waiting for the next round and a return within two working days.",
+  "repeat_failures": "Upheld entries on 2025-04-22 and 2025-05-16 are in the window, and 2025-03-11 is exactly 84 days before, so the count is two or three."
+ },
+ "request": "rec-F408-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01019
+}

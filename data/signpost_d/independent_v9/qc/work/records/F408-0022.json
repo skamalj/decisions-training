@@ -1,0 +1,127 @@
+{
+ "id": "F408-0022",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "MB-2210",
+   "uprn": 100302,
+   "logged_at": "2024-05-08T14:00",
+   "stream": "recycling",
+   "claimed_date": "2024-05-07",
+   "photo_attached": false
+  },
+  "schedule": {
+   "streams_due": [
+    "recycling"
+   ],
+   "scheduled_date": "2024-05-07"
+  },
+  "round_log": {
+   "completed_at": "2024-05-07T16:30",
+   "disruption_code": "RD_CLOSE",
+   "catch_up_date": null,
+   "stops": [
+    {
+     "uprn": 100302,
+     "exception_code": "contaminated",
+     "photo_ref": null,
+     "gps_stop": false
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 100302,
+    "logged_on": "2024-04-10",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100302,
+    "logged_on": "2024-03-02",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100302,
+    "logged_on": "2024-04-25",
+    "outcome": "pending"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "contaminated",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "road_closure",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "after_round_complete",
+  "crew_exception": "contaminated",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "road_closure",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "request_evidence",
+   "second": "return_conditional",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "crew_missed": "Contaminated exception has no photo and no GPS stop, but a road closure was logged with no catch-up.",
+  "report_matches": "Stream and claimed date equal the schedule, and the report was logged after the round completed.",
+  "next_step": "Missing photo supports requesting evidence, while the contamination exception supports a conditional return.",
+  "return_urgency": "Two upheld misses and an unsupported exception suggest same day, but standard two-day return is also defensible.",
+  "repeat_failures": "Two upheld entries are dated in window, but a pending case makes the count contestable."
+ },
+ "request": "rec-F408-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005721
+}

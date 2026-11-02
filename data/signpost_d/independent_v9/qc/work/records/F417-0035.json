@@ -1,0 +1,106 @@
+{
+ "id": "F417-0035",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "loa_m": 11.0,
+   "draught_m": 1.9,
+   "draught_src": "owner"
+  },
+  "berth": {
+   "max_loa_m": 11.2,
+   "fender_allow_m": 0.3,
+   "depth_lat_m": 2.74,
+   "waiver_ref": "W-5"
+  },
+  "booking": {
+   "departure": "2025-06-12",
+   "next_on_berth": "2025-06-12"
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 11.5
+   },
+   "insurance_expiry": "2026-02-01",
+   "inspection_date": null
+  }
+ },
+ "factors": {
+  "loa_mismatch_pct": 4.54,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 0.84,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "not_done",
+  "arrears_amount": 675,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": false,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 4.54,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 0.84,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 675,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": false,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "confirm_allocation",
+   "second": "refer_harbourmaster",
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "document_gap",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 30,
+ "deciding": {
+  "length_fits": "Survey 11.5 is over max 11.2 but within 11.5 with fender, exactly at the limit.",
+  "next_step": "Same-day turnover and waiver support confirming; the open inspection could go to the harbour master.",
+  "primary_issue": "inspection_date null.",
+  "ukc_band": "Depth 2.74 minus declared 1.9 is 0.84, near the 1.0 line given unverified draught.",
+  "unresolved_count": "Declared 11.0 vs survey 11.5 mismatch; missing inspection could be a second."
+ },
+ "request": "rec-F417-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004934
+}

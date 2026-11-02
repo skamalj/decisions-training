@@ -1,0 +1,136 @@
+{
+ "id": "F423-0034",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-60318",
+   "stock_spec": "UC-90",
+   "run_qty": 4400,
+   "overs_pct": 5.23,
+   "spec_max_de": 3.0,
+   "customer_tier": "standard"
+  },
+  "proof_signoff": {
+   "signed_at": null,
+   "ok_sheet_no": null,
+   "concession": null
+  },
+  "colour_readings": {
+   "calibrated_on": "2024-12-04",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.9
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.0
+    },
+    {
+     "ink": "K",
+     "delta_e": 2.7
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.29,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "UC-115",
+   "first_production_at": "2025-03-21T08:15",
+   "sheets_production": 457,
+   "sheets_makeready": 220,
+   "stoppages": [
+    "08:50",
+    "09:30",
+    "10:05",
+    "10:40"
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "marginal",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 457,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 5.23,
+  "register_offset_mm": 0.29,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 107,
+  "customer_tier": "standard",
+  "prior_stoppages": 4
+ },
+ "factors_sampled": {
+  "colour_deviation": "marginal",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 457,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 5.23,
+  "register_offset_mm": 0.29,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 107,
+  "customer_tier": "standard",
+  "prior_stoppages": 4
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_run",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (wrong_stock_loaded = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 80,
+ "deciding": {
+  "colour_in_tolerance": "All patches read 3.0 or less against spec_max_de 3.0, with M exactly at the limit. Calibration is 107 days old, which leaves some doubt.",
+  "run_before_signoff": "signed_at is null while 457 production sheets are logged, so the run proceeded without any signature. A reader might still argue that the sheets were not 'ahead of' a signature that never came.",
+  "next_step": "The colour readings are within limit, which supports release. However the signature is missing and the stock is wrong, so release_run is doubtful and the record is hard to read cleanly.",
+  "staff_effort": "Obtaining sign-off and dealing with the wrong stock and the in-image misregister would take one to five days. Level 2 is slightly favoured over level 3.",
+  "scrap_exposure": "stock_loaded UC-115 differs from stock_spec UC-90, and 457 production sheets are 10.4% of run_qty 4400, at or above 10%. The margin over 10% is small."
+ },
+ "request": "rec-F423-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008908
+}

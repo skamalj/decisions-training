@@ -1,0 +1,158 @@
+{
+ "id": "F416-0045",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "date": "2024-08-24",
+   "signoff": "G10"
+  },
+  "roster": [
+   {
+    "id": "G10",
+    "qe": "2025-02-01",
+    "on": "09:00",
+    "off": "18:00"
+   },
+   {
+    "id": "G11",
+    "qe": "2025-03-01",
+    "on": "09:00",
+    "off": "15:30"
+   }
+  ],
+  "conditions": [
+   {
+    "time": "14:00",
+    "rip_risk": "high",
+    "flag": "red",
+    "bathing_zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "t": "water_rescue",
+    "time": "10:00",
+    "r": [
+     "G10",
+     "G11"
+    ],
+    "out": "released"
+   },
+   {
+    "t": "water_rescue",
+    "time": "12:20",
+    "r": [
+     "G10",
+     "G11"
+    ],
+    "out": "released"
+   },
+   {
+    "t": "water_rescue",
+    "time": "15:30",
+    "r": [
+     "G10",
+     "G11"
+    ],
+    "out": "released",
+    "referral": "GP-4"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "oxygen_kit",
+    "out_from": "11:00",
+    "out_to": "11:58",
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 3,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "check_sheet_ref": "CS-40",
+   "beach_users_est": 3900
+  }
+ },
+ "factors": {
+  "rescue_count": 3,
+  "rescue_cover_shortfall": "responder_off_roster (boundary: G11 off at 15:30, incident at 15:30)",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "released with GP referral logged",
+  "kit_gap_band": "under_60 (58 min, near the 60 boundary)",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "factors_sampled": {
+  "rescue_count": 3,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "conveyed",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": false,
+  "missing_record": "aed_check_sheet",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "amend_and_file",
+   "second": "escalate_review",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 89,
+ "deciding": {
+  "two_guard_cover": "The 15:30 rescue lists G11, whose roster off time is 15:30. The other two rescues clearly have two in-date guards.",
+  "totals_reconcile": "Handover rescues 3 and kit_defects 1 match the itemised incidents and equipment, and all dates agree.",
+  "next_step": "The record is complete and consistent, but the boundary-time rescue with a referral keeps escalation arguable. Only a minor clerical fix would be needed.",
+  "outcome_severity": "All outcomes are released, but the third carries a GP referral reference. That sits between none and referred.",
+  "kit_outage": "The oxygen kit was out 11:00 to 11:58 with no substitute, which is 58 minutes. That is two minutes short of the 60-minute boundary."
+ },
+ "request": "rec-F416-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010911
+}

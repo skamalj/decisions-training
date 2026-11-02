@@ -1,0 +1,121 @@
+{
+ "id": "F429-0003",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "operator_id": "op44",
+   "licence_q_max_m3s": 90,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 84.5,
+    "action_m": 85.2
+   },
+   "readings": [
+    {
+     "level_m": 84.3
+    },
+    {
+     "level_m": 84.49
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G2",
+    "t": "10:05",
+    "open_before_m": 0.6,
+    "open_after_m": 0.9
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G2",
+     "opening_m": 0.8
+    }
+   ],
+   "calc_peak_m3s": 52,
+   "gauged_peak_m3s": null
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "not_started",
+    "completed_at": null
+   }
+  }
+ },
+ "factors": {
+  "reservoir_tier": "alert boundary (peak 0.01 m under alert)",
+  "near_boundary": true,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "material (0.1 m)",
+  "discharge_discrepancy_pct": "not computable (gauged null)",
+  "datum_mismatch": false,
+  "missing_section": "notifications_missing and gauged_peak_null",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "action",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "material",
+  "discharge_discrepancy_pct": 5.88,
+  "datum_mismatch": false,
+  "missing_section": "notifications_missing",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "gates_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate",
+   "second": "query_operator",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "within_licence": "calc peak 52 vs limit 90, but gauged_peak_m3s is null.",
+  "gates_reconciled": "G2 open_after 0.9 vs calc opening 0.8, a 0.1 m gap.",
+  "next_step": "Inspection not started, notifications absent and gauged peak missing; escalate or query operator both fit.",
+  "trigger_tier": "Peak level 84.49 m sits 0.01 m below the 84.5 alert trigger.",
+  "parties_needed": "Operator, inspection team, instrument/gauge team and comms may all be needed; the count is unclear."
+ },
+ "request": "rec-F429-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009701
+}

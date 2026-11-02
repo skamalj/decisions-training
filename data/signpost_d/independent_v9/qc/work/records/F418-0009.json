@@ -1,0 +1,156 @@
+{
+ "id": "F418-0009",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "HLM",
+   "plat": 3,
+   "date": "2025-06-08",
+   "service_from": "05:30",
+   "service_to": "23:30",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S20",
+    "planned_start": "05:30",
+    "planned_end": "14:00"
+   },
+   {
+    "post": "B",
+    "staff_id": "S21",
+    "planned_start": "05:30",
+    "planned_end": "14:00"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S20",
+    "sign_on": "05:25",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2026-02-01",
+    "dispatch_comp_exp": "2026-02-01"
+   },
+   {
+    "staff_id": "S21",
+    "sign_on": "05:28",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2026-03-01",
+    "dispatch_comp_exp": null
+   }
+  ],
+  "events": [
+   {
+    "type": "dispatch",
+    "time": "09:15",
+    "staff_id": "S21",
+    "platform": 3
+   },
+   {
+    "type": "gap_start",
+    "time": "02:00"
+   },
+   {
+    "type": "gap_end",
+    "time": "02:33"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-118",
+   "disp_platform": 3,
+   "valid_from": "2025-06-01",
+   "valid_to": "2025-06-30",
+   "approved_by": "ROM-7",
+   "prior_shortfalls_30d": 0
+  },
+  "remarks": [
+   "Full roster present, nobody redeployed.",
+   "Cover arranged for any absence."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 33,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 0,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 33,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 0,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_ops",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "balanced",
+   "target": "fully_rostered",
+   "second": "cover_arranged",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unqualified_dispatch = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 87,
+ "deciding": {
+  "headcount_verified": "Both rostered staff have sign-ons and safety competence valid to 2026.",
+  "next_step": "S21 dispatched at 09:15 in staff mode with null dispatch_comp_exp, a safety-critical breach needing referral.",
+  "coverage_outcome": "Roster and attendance show both posts filled, but the remark about cover arranged and the early gap entry leave doubt between fully rostered and cover arranged.",
+  "reversal_time": "The gap entry is outside service and easily amended, but the dispatch cannot be undone; one day versus several days is balanced.",
+  "exposure_severity": "Dispatch event by S21 with null dispatch_comp_exp while dispatch_mode is staff."
+ },
+ "request": "rec-F418-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005837
+}

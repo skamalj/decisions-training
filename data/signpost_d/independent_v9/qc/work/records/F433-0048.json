@@ -1,0 +1,125 @@
+{
+ "id": "F433-0048",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H058",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "result": "recheck"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 30
+   },
+   "arrived_at": "08:10"
+  },
+  "vet_card": {
+   "arrival_copied": "08:12",
+   "presented_at": "08:31",
+   "pulse_bpm": 60,
+   "cri": {
+    "first_bpm": 60,
+    "second_bpm": 63
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 0
+    }
+   ],
+   "tack": {
+    "site": "girth",
+    "finding": "minor rub"
+   },
+   "vet_signed_at": "08:34"
+  },
+  "notes": {
+   "rider_note": "Girth slipped on the climb."
+  }
+ },
+ "factors": {
+  "pulse_status": "borderline_late_by_1_min_on_gate_arrival",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "regular",
+  "gait_mitigation": false,
+  "metabolic_flags": 0,
+  "cri_rise": 3.93,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "minor_rub",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": false,
+  "metabolic_flags": 0,
+  "cri_rise": 3.93,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "minor_rub",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "invasive",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "clear_to_continue",
+   "second": "request_recheck",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "clear",
+   "target": "pass",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "welfare_risk": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 69,
+ "deciding": {
+  "pulse_met": "Gate arrival 08:10 plus 20 min is 08:30 and presentation was 08:31, so late. The card's copied arrival of 08:12 would put it inside, which leaves some doubt.",
+  "next_step": "The 2 min arrival discrepancy and the earlier recheck argue for a recheck, while the otherwise normal card favours continuing.",
+  "outcome_code": "The pulse is 60, the CRI is steady, the trot-up is grade 0 and the rub is minor, so all checks are within limits.",
+  "welfare_risk": "Only the minor girth rub and the borderline timing could count as a single parameter, so level 1 versus 0 is close.",
+  "record_completeness": "All readings and the signature are present. The 2 min gap between arrival_copied and gate.arrived_at is the only blemish, so level 3 versus 2 is contested."
+ },
+ "request": "rec-F433-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011691
+}

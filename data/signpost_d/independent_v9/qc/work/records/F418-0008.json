@@ -1,0 +1,116 @@
+{
+ "id": "F418-0008",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "OAK",
+   "plat": 4,
+   "date": "2025-05-20",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "attendance": null,
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "13:00"
+   },
+   {
+    "type": "dispatch",
+    "time": "13:20",
+    "staff_id": "S09"
+   }
+  ],
+  "controls": {
+   "disp_ref": null,
+   "prior_shortfalls_30d": 3
+  },
+  "remarks": [
+   "All posts rostered and filled."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 101,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": false,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": true,
+  "competence_lapse": true,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 101,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": false,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": true,
+  "competence_lapse": true,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unqualified_dispatch = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 30,
+ "deciding": {
+  "headcount_verified": "Attendance null, so no sign-on can be checked; the remark that posts were filled leans true, though it is unsupported.",
+  "next_step": "Remark contradicts the open gap and the dispatch at 13:20 lies inside it; amending and briefing fits, with doubt as the attendance is missing.",
+  "coverage_outcome": "Remarks say all posts filled, with no cover events, which a reviewer would read as fully rostered.",
+  "reversal_time": "Log amendments and records chase take about a day or a few days, so level 0 and level 1 are both defensible.",
+  "exposure_severity": "Dispatch event at 13:20 inside the open gap in staff mode with no dispensation and no attendance."
+ },
+ "request": "rec-F418-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005837
+}

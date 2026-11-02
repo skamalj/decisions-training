@@ -1,0 +1,127 @@
+{
+ "id": "F411-0041",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H214",
+   "type": "hackney",
+   "expiry": "2025-05-31",
+   "review_date": "2025-05-12"
+  },
+  "vehicle": {
+   "reg": "LK12ABC",
+   "make": "Ford",
+   "model": "Galaxy",
+   "first_reg": "2013-04-02",
+   "seats": 6,
+   "odometer_km": 187450
+  },
+  "inspection": {
+   "station": "ST07",
+   "date": "2025-05-05",
+   "result_code": "P",
+   "brake_efficiency_pct": 64,
+   "emissions": "pass",
+   "lighting": "pass, lens hazing noted"
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "ref": "INS-5531",
+    "expires_on": "2025-05-08",
+    "cover_note_ref": "CN-88",
+    "cover_until": "2025-05-16"
+   },
+   {
+    "type": "mot_cert",
+    "ref": "M-221",
+    "expires_on": "2026-01-10"
+   }
+  ],
+  "history": [
+   {
+    "date": "2024-05-10",
+    "result": "F",
+    "odometer_km": 171900
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "none_needed",
+  "deadline_passed": false,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 12
+ },
+ "factors_sampled": {
+  "worst_defect_found": "minor",
+  "rectification_state": "not_started",
+  "deadline_passed": false,
+  "documents_missing_count": 3,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": true,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 12
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "clean_pass",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 107,
+ "deciding": {
+  "odometer_consistent": "Current 187450 km is above the last history reading of 171900 km a year earlier; no drop, only one prior reading to compare.",
+  "next_step": "Defects list is empty, brake and emissions are recorded, and the insurance expiry is covered by a cover note running past the review date, so nothing is outstanding.",
+  "inspection_outcome": "Defects empty and result P, so no failing item; only a lighting remark about lens hazing leaves slight doubt about an advisory.",
+  "document_gaps": "Insurance expires_on 2025-05-08 is before review_date, but cover note CN-88 runs to 2025-05-16, only days past review; counts as in date (0) though a reader might count one gap.",
+  "outstanding_severity": "No defects listed, so nothing outstanding; the lens hazing remark could be read as an advisory (level 1)."
+ },
+ "request": "rec-F411-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010601
+}

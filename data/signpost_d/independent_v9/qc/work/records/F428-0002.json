@@ -1,0 +1,129 @@
+{
+ "id": "F428-0002",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "SL-08",
+   "gate_type": "demountable_stoplog",
+   "rated_closure_s": 900
+  },
+  "inspection": {
+   "insp_id": "I-77",
+   "asset_id": "SL-08",
+   "insp_date": "2025-05-02",
+   "closure_test": {
+    "performed": false,
+    "test_date": null,
+    "closure_s": null,
+    "result": null
+   }
+  },
+  "defects": [
+   {
+    "code": "D2",
+    "component": "frame",
+    "grade": 1,
+    "status": "closed"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W3",
+     "component": "frame",
+     "status": "complete",
+     "completed": "2025-04-20",
+     "retest_insp_id": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "gate_type": "demountable_stoplog",
+  "closure_time_ratio": "not_applicable",
+  "max_defect_grade": 1,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "not_performed",
+  "repair_progress": "completed_untested",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 47,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "demountable_stoplog",
+  "closure_time_ratio": 1.09,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 4,
+  "mismatch_location": "asset_id",
+  "test_status": "passed_current",
+  "repair_progress": "completed_untested",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 47,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 37,
+ "deciding": {
+  "closure_test_valid": "closure_test performed false with null timings and result, so no test is logged.",
+  "next_step": "The only defect is a closed grade 1 frame item with a completed order; nothing open needs action.",
+  "defect_class": "The only defect is closed and grade 1, so there is no open defect.",
+  "section_discrepancies": "asset_id SL-08 and the component match in all sections.",
+  "flood_risk": "No open defect above grade 1 and no failure or outage; risk is low."
+ },
+ "request": "rec-F428-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008804
+}

@@ -1,0 +1,117 @@
+{
+ "id": "F402-0008",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "urgent",
+   "received": "2025-02-03",
+   "onset": "2024-02-05",
+   "site": "knee R"
+  },
+  "clinical": {
+   "red_flags": [
+    "RF_NEURO"
+   ],
+   "neuro_signs": {
+    "progression": "stable"
+   },
+   "function_index": 73,
+   "anticoagulant": false,
+   "surgery_date": "2025-01-17"
+  },
+  "gp_record": {
+   "meds": [
+    "B01AA03"
+   ],
+   "falls_3m": 3,
+   "reviews": [
+    {
+     "date": "2025-01-20",
+     "type": "urgent"
+    }
+   ]
+  },
+  "history": {
+   "episodes": 2,
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "progressive_neuro_deficit",
+  "red_flag_mitigated": false,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 52,
+  "function_index": 72.58,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 3,
+  "post_op_days": 17,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "progressive_neuro_deficit",
+  "red_flag_mitigated": false,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 52,
+  "function_index": 72.58,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 3,
+  "post_op_days": 17,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_as_referred",
+   "second": "book_amended",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "self_management",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 69,
+ "deciding": {
+  "red_flag_unresolved": "Neuro flag is stable and a dated urgent GP review exists after surgery, partly explaining it; onset timing is unclear.",
+  "next_step": "Record is complete so accept is possible, but the anticoagulant code conflict could justify booking with amended precautions.",
+  "pathway": "Function index 73 and a year-long stable problem suit self-management; recent surgery and falls add doubt.",
+  "reversal_time": "Referral outcome is a delay or misrouting reversible within one to seven days.",
+  "clinical_urgency": "Stable sign and reviewed, but the urgent priority and falls leave six weeks versus two weeks open."
+ },
+ "request": "rec-F402-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004429
+}

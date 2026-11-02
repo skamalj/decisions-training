@@ -1,0 +1,166 @@
+{
+ "id": "F403-0041",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-4471",
+   "declared_allergens": [
+    "milk",
+    "egg",
+    "peanut",
+    "sesame"
+   ],
+   "auto_injector": true,
+   "plan_start": "2025-09-02"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2025-06-10",
+   "expires": "2026-06-10",
+   "allergens": [
+    "milk",
+    "egg",
+    "peanut",
+    "sesame"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-08-20",
+   "dishes": [
+    {
+     "dish": "wrap",
+     "contains": [
+      "milk",
+      "egg",
+      "peanut",
+      "sesame"
+     ],
+     "recipe_version_date": "2025-08-01",
+     "substitute": "plain wrap",
+     "spec_checked_on": "2025-08-18"
+    },
+    {
+     "dish": "cake",
+     "contains": [
+      "milk",
+      "peanut"
+     ],
+     "recipe_version_date": "2025-08-01",
+     "substitute": null,
+     "spec_checked_on": "2025-08-18"
+    },
+    {
+     "dish": "roll",
+     "contains": [
+      "sesame",
+      "egg"
+     ],
+     "recipe_version_date": "2025-08-01",
+     "substitute": null,
+     "spec_checked_on": "2025-08-18"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "staff_trained": [
+    "2024-05-14",
+    "2024-05-14"
+   ]
+  },
+  "history": {
+   "review_date": "2025-09-30",
+   "packed_lunch_until": "2025-09-30",
+   "incidents": [
+    {
+     "date": "2025-09-10",
+     "dish": "cake",
+     "note": "no reaction observed"
+    }
+   ],
+   "messages": [
+    "Cook: all sorted, pupil was fine."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "training_lapsed",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 1,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "training_lapsed",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 30,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_for_rework",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "balanced",
+   "target": "no_gap",
+   "second": "kitchen_gap",
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 67,
+ "deciding": {
+  "evidence_allergens_covered": "Each of the four allergens appears in the substituted wrap, but the cake and roll that contain them have substitute null, so coverage is arguable and leans false.",
+  "next_step": "Two dishes (cake, roll) have substitute null, which points to rework; the incident entry could push toward escalation but the unsubstituted count carries the answer.",
+  "first_gap_stage": "Evidence is current and two dishes are unsubstituted, so a menu gap is visible; staff training dated 2024-05 is past 12 months at the 2025-09-30 review, which leaves a kitchen gap arguable.",
+  "exposure_proximity": "Incident on 2025-09-10 is after plan_start 2025-09-02 and the cake contains peanut and milk, so a declared allergen was served, although the note says no reaction observed.",
+  "meal_urgency": "The incident shows the pupil was already served in September, but packed_lunch_until equals the review date, which makes the next school day the first meal."
+ },
+ "request": "rec-F403-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012998
+}

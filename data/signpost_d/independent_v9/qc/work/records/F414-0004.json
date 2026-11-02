@@ -1,0 +1,159 @@
+{
+ "id": "F414-0004",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SL-0118",
+   "equip_type": "slide",
+   "crit_fall_height_m": 1.5,
+   "surf_type": "wet_pour"
+  },
+  "inspection": {
+   "insp_date": "2024-06-12",
+   "insp_grade": "operational",
+   "fall_height_m": 1.5,
+   "surf_type_found": "wet_pour",
+   "surf_depth_mm": 45,
+   "surf_req_table": [
+    {
+     "band": "<=1.8",
+     "type": "wet_pour",
+     "min_depth_mm": 30
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "PT2",
+     "component_id": "C2",
+     "injury_mech": "cosmetic"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W12",
+    "asset_id": "SL-0118",
+    "component_id": "C2",
+    "defect_ref": "D40",
+    "status": "open"
+   },
+   {
+    "wo_id": "W13",
+    "asset_id": "SL-0118",
+    "component_id": "C2",
+    "defect_ref": "D41",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 0
+  },
+  "history": [
+   {
+    "date": "2024-03-04",
+    "defect_refs": [
+     "D9"
+    ],
+    "components": [
+     {
+      "component_id": "C3",
+      "result": "fail"
+     }
+    ]
+   },
+   {
+    "date": "2024-06-14",
+    "component_id": "C3",
+    "result": "pass"
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "slide",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": 15.0,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "medium",
+  "incident_reports_90d": 0
+ },
+ "factors_sampled": {
+  "equipment_type": "slide",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": -47.97,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 2,
+  "work_orders_closed_fraction": 0.7,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "medium",
+  "incident_reports_90d": 0
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 71,
+ "deciding": {
+  "prior_defects_cleared": "Previous defect D9 on C3 has a follow-up entry with result pass for C3.",
+  "surfacing_adequate": "Wet pour depth 45 mm against a 30 mm minimum for 1.5 m fall height.",
+  "asset_disposition": "The only finding is cosmetic and previous defects are cleared; two cosmetic orders remain open.",
+  "remedial_progress": "Both raised work orders, W12 and W13, are open with none closed.",
+  "hazard_severity": "The only finding, PT2, has injury_mech cosmetic."
+ },
+ "request": "rec-F414-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011782
+}

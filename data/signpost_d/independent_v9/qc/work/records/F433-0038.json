@@ -1,0 +1,128 @@
+{
+ "id": "F433-0038",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H330",
+   "age": 8,
+   "passport_remark": "known left fore irregularity, regular at loops 1-2",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "res": "pass"
+    },
+    {
+     "loop": 2,
+     "res": "pass"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 3,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 30
+   },
+   "arrived_at": "13:00",
+   "departed_at": null
+  },
+  "vet_card": {
+   "presented_at": "13:08",
+   "pulse_bpm": null,
+   "cri": {
+    "first_bpm": 52,
+    "second_bpm": null
+   },
+   "metabolic": {
+    "mm": "injected",
+    "crt_s": 3,
+    "skin_tent_s": 3
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": null
+    }
+   ],
+   "tack": null,
+   "vet_signed_at": null
+  }
+ },
+ "factors": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "none",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 14.02,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "none"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "none",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 14.02,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "none"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "clear_to_continue",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "leaning",
+   "target": "ftq_combined",
+   "second": null,
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 75,
+ "deciding": {
+  "pulse_met": "Presented at 13:08 within window and CRI first reading 52 is low, but pulse_bpm is null so it is not stated.",
+  "next_step": "Weight points to continuing, but missing readings make a recheck defensible.",
+  "outcome_code": "Injected mucous membranes, CRT 3 s and skin tent 3 s indicate metabolic problems; the gait grade is missing and the passport remark gives only partial context.",
+  "welfare_risk": "Metabolic signs abnormal with no signature or cleared pulse; level 2 or 3 both fit.",
+  "record_completeness": "Pulse, gait grade, second CRI and signature are null, so two or more items are missing, though some may be counted as one."
+ },
+ "request": "rec-F433-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005437
+}

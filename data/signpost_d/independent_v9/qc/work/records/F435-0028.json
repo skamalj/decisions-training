@@ -1,0 +1,152 @@
+{
+ "id": "F435-0028",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E310",
+   "zone_id": "SEAT4",
+   "zone_type": "seated_tier",
+   "doors_open": "2025-06-07T19:00",
+   "phase": "live"
+  },
+  "licence": {
+   "base_limit": 550,
+   "variation": {
+    "ref": "V2",
+    "new_limit": 600,
+    "status": "approved",
+    "approved_on": "2025-06-01T09:00"
+   },
+   "stewards_required": 30,
+   "exit_routes": [
+    "A",
+    "B",
+    "C"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 600,
+   "issued": 588,
+   "scanned_in": 580
+  },
+  "ingress": {
+   "device_status": "ok",
+   "raw_peak": 603,
+   "manual_recount": {
+    "count": 599,
+    "at": "2025-06-07T21:05"
+   }
+  },
+  "stewarding": {
+   "rostered": 31,
+   "signed_in": 30,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "A",
+    "checked_at": "2025-06-07T17:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "B",
+    "checked_at": "2025-06-07T17:35",
+    "status": "clear"
+   },
+   {
+    "route_id": "C",
+    "checked_at": "2025-06-07T17:40",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "seated_tier",
+  "event_phase": "live",
+  "occupancy_ratio": 1.005,
+  "counter_status": "ok",
+  "counter_inflation": 0.09,
+  "manual_recount_present": true,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.98,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.0,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "seated_tier",
+  "event_phase": "live",
+  "occupancy_ratio": 0.97,
+  "counter_status": "ok",
+  "counter_inflation": 0.09,
+  "manual_recount_present": true,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.98,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.08,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "unconfirmed_exits": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 39,
+ "deciding": {
+  "verified_exceedance": "The device is ok with raw_peak 603 against an effective limit of 600, but the recount of 599 is just under it. This is within 1% of the limit, so both answers are plausible.",
+  "disposition": "Stewards are fully signed in, all 3 exits are clear before doors, and issued 588 is under the limit, so the zone can be approved routinely.",
+  "discrepancy_source": "Issued 588 is below the limit of 600 that ticketing used; only the 3-person peak overshoot leaves slight doubt.",
+  "steward_shortfall": "30 signed in against 30 required, so the requirement is met.",
+  "unconfirmed_exits": "A, B and C were all checked clear before doors at 19:00."
+ },
+ "request": "rec-F435-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013993
+}

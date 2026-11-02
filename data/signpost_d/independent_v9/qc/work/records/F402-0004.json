@@ -1,0 +1,115 @@
+{
+ "id": "F402-0004",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-1180",
+   "priority": "soon",
+   "received": "2025-06-02",
+   "onset": "2024-01-01"
+  },
+  "clinical": {
+   "red_flags": [
+    "PCAH"
+   ],
+   "fi": 72.47
+  },
+  "gp_record": {
+   "falls_3m": 1,
+   "reviews": []
+  },
+  "attachments": [],
+  "history": {
+   "episodes": 3,
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "prior_malignancy_history",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "none",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 75,
+  "function_index": 72.47,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 1,
+  "post_op_days": "null",
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "surgery_date",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 75,
+  "function_index": 72.47,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 1,
+  "post_op_days": 17,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 36,
+ "deciding": {
+  "red_flag_unresolved": "clinical.red_flags lists PCAH with no review, imaging or oncology discharge anywhere in the record.",
+  "next_step": "The record is complete with no mismatches or missing items, so it can be accepted as referred.",
+  "pathway": "FI 72.47, one fall, no surgery and a long stable course suit self-management advice.",
+  "reversal_time": "A waiting-list placement for a stable problem is undone within a day.",
+  "clinical_urgency": "75 weeks of stable symptoms with a high FI mean the patient can safely wait over six weeks."
+ },
+ "request": "rec-F402-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008417
+}

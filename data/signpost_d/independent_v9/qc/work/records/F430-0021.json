@@ -1,0 +1,147 @@
+{
+ "id": "F430-0021",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S14",
+   "assets": [
+    {
+     "id": "CB2",
+     "unit": "kPa",
+     "normal_band": [
+      600,
+      700
+     ],
+     "alarm_limit": 520,
+     "trip_limit": 500,
+     "customers_fed": 64,
+     "partner_id": null
+    }
+   ]
+  },
+  "round": {
+   "id": "RD-0611",
+   "date": "2024-06-11",
+   "inspector": "j.m.",
+   "scheduled_assets": [
+    "CB2"
+   ],
+   "inspector_note": "Gas work ongoing, all fine on site."
+  },
+  "readings": [
+   {
+    "asset_id": "CB2",
+    "param": "SF6",
+    "value": 5.0,
+    "unit": "bar",
+    "timestamp": "2024-06-11T09:20"
+   }
+  ],
+  "defects": [
+   {
+    "defect_id": "D1",
+    "asset_id": "CB2",
+    "category": "thermal",
+    "photo_ref": "IMG-88",
+    "note": "Winding temp high on CB2."
+   }
+  ],
+  "history": {
+   "previous_round": [
+    {
+     "asset_id": "CB2",
+     "param": "SF6",
+     "value": 5.3,
+     "unit": "bar"
+    }
+   ],
+   "permits": [
+    {
+     "asset_id": "cb2",
+     "desc": "SF6 gas work",
+     "from": "2024-06-10",
+     "to": "2024-06-12"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_reading_band": "trip",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 64,
+  "trivial_discrepancies": 3,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "trip",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": false,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 23972,
+  "trivial_discrepancies": 3,
+  "near_boundary": true
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "benign_explanation": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "follow_up": {
+   "clarity": "leaning",
+   "target": "file_closed",
+   "second": null,
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "defect_corroborated": "Defect note cites winding temperature on CB2, but only SF6 pressure was recorded; no temperature reading supports it.",
+  "benign_explanation": "Valid permit 10-12 June on CB2 for SF6 gas work covers the visit date and the asset (ID casing differs only).",
+  "follow_up": "Low pressure is explained by the permitted gas work and the defect is unsupported, so filing is defensible, with some doubt from the falling trend.",
+  "limit_deviation": "5.0 bar equals 500 kPa, exactly the trip limit; the unit conversion leaves it split between trip and alarm.",
+  "supply_exposure": "CB2 feeds 64 customers with no partner, so failure would drop fewer than 100."
+ },
+ "request": "rec-F430-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011966
+}

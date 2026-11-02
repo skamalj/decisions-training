@@ -1,0 +1,131 @@
+{
+ "id": "F429-0032",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 150,
+   "ramp_max_m_per_10min": 0.4
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 88.0,
+    "action_m": 88.6
+   },
+   "readings": [
+    {
+     "level_m": 88.7,
+     "datum": "site"
+    },
+    {
+     "level_m": 88.9,
+     "datum": "gauge_zero"
+    }
+   ],
+   "gauge_zero_offset_m": 0.1
+  },
+  "gate_ops": [
+   {
+    "gate": "G2",
+    "t": "2024-06-11T14:00",
+    "open_after_m": 1.5
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G2",
+     "opening_m": 1.51
+    }
+   ],
+   "calc_peak_m3s": 153,
+   "gauged_peak_m3s": 125,
+   "tailwater_m": [
+    41.2,
+    41.9
+   ]
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "pending",
+    "completed_at": null
+   }
+  }
+ },
+ "factors": {
+  "reservoir_tier": "action",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 22.35,
+  "datum_mismatch": true,
+  "missing_section": "notifications_missing",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "action",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 22.35,
+  "datum_mismatch": true,
+  "missing_section": "notifications_missing",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold_for_inspection",
+   "second": "accept_log",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "within_licence": "Calculated peak 153 exceeds the 150 limit.",
+  "gates_reconciled": "G2 open_after 1.5 vs calc 1.51, a 0.01 m difference.",
+  "next_step": "Inspection is pending, which favours hold, but the calculated limit exceedance and action-level reading could argue for escalation or acceptance.",
+  "trigger_tier": "Levels 88.7 and 88.9 are above the 88.6 action trigger and calc is over the limit, but the gauged 125 is under the licence, so critical is only moderately likely.",
+  "parties_needed": "Inspection, a notification team, and a senior engineer are needed; whether more are needed is open, so the count is three or four."
+ },
+ "request": "rec-F429-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005425
+}

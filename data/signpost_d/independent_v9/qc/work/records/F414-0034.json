@@ -1,0 +1,160 @@
+{
+ "id": "F414-0034",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "CF-52",
+   "site_id": "P17",
+   "equip_type": "climbing_frame",
+   "crit_fall_height_m": 2.0,
+   "surf_type": "wood_chip",
+   "variance_ref": null
+  },
+  "inspection": {
+   "insp_date": "2025-07-08",
+   "insp_grade": "operational",
+   "inspector_id": "I-17",
+   "fall_height_m": 2.0,
+   "surf_type_found": "wood_chip",
+   "surf_depth_mm": 198,
+   "surf_req_table": [
+    {
+     "max_h_m": 3.0,
+     "type": "wood_chip",
+     "min_depth_mm": 200
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "O1",
+     "result": "pass"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "PT-02",
+     "component_id": "C1",
+     "injury_mech": "cosmetic"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W21",
+    "asset_id": "CF-52",
+    "component_id": "C1",
+    "defect_ref": "D7",
+    "raised_date": "2025-04-02",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "high",
+   "closure_status": "open",
+   "incident_reports_90d": 0
+  },
+  "history": [
+   {
+    "date": "2025-04-02",
+    "grade": "routine_visual",
+    "defect_refs": [
+     "D7"
+    ],
+    "component_results": {
+     "C3": "pass"
+    }
+   },
+   {
+    "date": "2025-07-22",
+    "grade": "follow_up",
+    "component_id": "C3",
+    "result": "pass"
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -2.0,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "high",
+  "incident_reports_90d": 0
+ },
+ "factors_sampled": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -101.07,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.38,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "high",
+  "incident_reports_90d": 0
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 146,
+ "deciding": {
+  "prior_defects_cleared": "Prior ref D7 still has an open work order W21 on C1; the passed follow-up concerns C3, a different component.",
+  "surfacing_adequate": "Depth 198 mm against a 200 mm requirement is a hair under the boundary, so either reading is defensible.",
+  "asset_disposition": "Only a cosmetic paint finding and a passing head_neck probe; nothing hazardous is open.",
+  "remedial_progress": "The single raised work order W21 is open, so none are closed.",
+  "hazard_severity": "The only finding PT-02 has injury_mech cosmetic."
+ },
+ "request": "rec-F414-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01002
+}

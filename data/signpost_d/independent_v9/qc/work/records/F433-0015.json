@@ -1,0 +1,134 @@
+{
+ "id": "F433-0015",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H505",
+   "earlier_gates": [
+    "pass",
+    "pass"
+   ]
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 30
+   },
+   "arrived_at": "12:00",
+   "departed_at": "12:34"
+  },
+  "vet_card": {
+   "arrival_copied": "12:01",
+   "presented_at": "12:20",
+   "pulse_bpm": 64,
+   "cri": {
+    "first_bpm": 52,
+    "second_bpm": null
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 2
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": null
+    }
+   ],
+   "vet_signed_at": null
+  },
+  "treatment": [
+   {
+    "time": "12:25",
+    "type": "iv_fluids",
+    "vet": "Dr M"
+   }
+  ],
+  "notes": {
+   "rider": "Old rub, nothing new.",
+   "vet": "Busy gate, long queue."
+  }
+ },
+ "factors": {
+  "pulse_status": "met_at_boundary",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "missing",
+  "gait_mitigation": false,
+  "metabolic_flags": 0,
+  "cri_rise": 0.39,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "invasive",
+  "departed_before_clearance": true,
+  "note_tone": "benign_explanation"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_at_boundary",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": false,
+  "metabolic_flags": 3,
+  "cri_rise": 0.39,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "invasive",
+  "departed_before_clearance": true,
+  "note_tone": "benign_explanation"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "eliminate_ftq",
+   "second": "clear_to_continue",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "leaning",
+   "target": "ftq_other",
+   "second": null,
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (departed_before_clearance = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 90,
+ "deciding": {
+  "pulse_met": "Pulse 64 equals the limit and presented_at 12:20 is exactly 20 min after arrival (12:01 on the copy).",
+  "next_step": "IV fluids were given and the horse left unsigned; elimination or continuing are both arguable.",
+  "outcome_code": "The invasive treatment and departure before clearance are procedural; metabolic values are normal.",
+  "welfare_risk": "departed_at 12:34 with vet_signed_at null means the horse is on course uncleared.",
+  "record_completeness": "CRI second reading, gait grade and signature are null, though times are in order."
+ },
+ "request": "rec-F433-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005885
+}

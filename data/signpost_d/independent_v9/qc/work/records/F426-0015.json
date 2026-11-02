@@ -1,0 +1,126 @@
+{
+ "id": "F426-0015",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B5",
+   "crop": "apple",
+   "planted_area_ha": 4
+  },
+  "applications": [
+   {
+    "date": "2024-01-15",
+    "product_code": "LV2",
+    "qty_applied": 6,
+    "qty_unit": "L",
+    "area_treated_ha": 4
+   },
+   {
+    "date": "2024-02-05",
+    "product_code": "LV2",
+    "qty_applied": 6,
+    "qty_unit": "L",
+    "area_treated_ha": 4
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "LV2",
+    "max_rate_per_ha": 2,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "approved_crops": [
+     "apple"
+    ]
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-03-01"
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 2,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "breached_short",
+  "rate_overrun_band": "above_10_to_25",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 6,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 58,
+ "deciding": {
+  "phi_cleared": "Last spray 2024-02-05, PHI 14 days, pick 2024-03-01: 25-day gap.",
+  "next_step": "Everything compliant; release.",
+  "finding_class": "No discrepancies in rates, crop or timing.",
+  "reversal_time": "Nothing to undo.",
+  "rate_overrun": "6 L over 4 ha is 1.5 L/ha, below max 2."
+ },
+ "request": "rec-F426-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004835
+}

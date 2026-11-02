@@ -1,0 +1,142 @@
+{
+ "id": "F438-0033",
+ "family": "F438",
+ "state": {
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "M17.1"
+   },
+   "comorbidities": [
+    "N17.9",
+    "N18.9"
+   ],
+   "theatre_log": [
+    {
+     "code": "W40.1",
+     "date": "2024-02-10",
+     "side": "L"
+    }
+   ],
+   "documents_present": {
+    "operation_note": false
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "M17.1"
+   },
+   "secondary_dx": [
+    "N17.9"
+   ],
+   "procedures": [
+    {
+     "code": "W40.1",
+     "date": "2024-02-11",
+     "side": "R"
+    },
+    {
+     "code": "Z94.2"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "HN12C",
+   "hrg_regrouped": "HN12B",
+   "submitted_to_commissioner": true
+  },
+  "audit_context": {
+   "queries": [
+    {
+     "target_code": "N18.9",
+     "status": "closed",
+     "response": "confirms"
+    }
+   ]
+  },
+  "coder_history": {
+   "error_rate": 0.26,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "date_or_side_differs",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "operation_note",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.26,
+  "boundary_case": true,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "date_or_side_differs",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "operation_note",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.26,
+  "boundary_case": true,
+  "unsupported_billable_code": true
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "amend_and_regroup",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unsupported_billable_code = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 25,
+ "deciding": {
+  "primary_supported": "The coded primary M17.1 matches the documented principal condition exactly.",
+  "hrg_shift": "HN12C is regrouped to HN12B. The operation note is missing, which leaves a little doubt.",
+  "next_step": "The record is already submitted and regrouping changes the HRG, so amend and regroup is favoured. The missing operation note and the unsupported code leave some doubt.",
+  "error_count": "N18.9 is documented but not coded. W40.1 has a different date and a different side from the log. Z94.2 is coded with no log entry. That is four errors. The acute/chronic renal pair makes the count slightly uncertain.",
+  "error_severity": "Z94.2 is a coded procedure with no documentation entry, which makes it critical. The HRG change makes the major level a close alternative."
+ },
+ "request": "rec-F438-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01254
+}

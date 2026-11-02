@@ -1,0 +1,190 @@
+{
+ "id": "F406-0025",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-8841",
+   "gallery_code": "GAL-09",
+   "session_date": "2025-07-11",
+   "open": "10:00",
+   "close": "12:00",
+   "certified_limit": 60
+  },
+  "counts": {
+   "gate": "G1",
+   "intervals": [
+    {
+     "start": "10:00",
+     "in": 25,
+     "out": 0,
+     "occupancy": 25
+    },
+    {
+     "start": "10:15",
+     "in": 22,
+     "out": 6,
+     "occupancy": 41
+    },
+    {
+     "start": "10:30",
+     "in": 18,
+     "out": 8,
+     "occupancy": 51
+    },
+    {
+     "start": "10:45",
+     "in": 16,
+     "out": 5,
+     "occupancy": 62
+    },
+    {
+     "start": "11:00",
+     "in": 6,
+     "out": 16,
+     "occupancy": 52
+    },
+    {
+     "start": "11:15",
+     "in": 4,
+     "out": 18,
+     "occupancy": 38
+    },
+    {
+     "start": "11:30",
+     "in": 2,
+     "out": 15,
+     "occupancy": 25
+    },
+    {
+     "start": "11:45",
+     "in": 0,
+     "out": 12,
+     "occupancy": 13
+    }
+   ],
+   "ticket_scans": 93,
+   "manual_tally_peak": 58,
+   "summary_peak": 62
+  },
+  "variations": [
+   {
+    "ref": "V-412",
+    "gallery_code": "GAL-09",
+    "valid_from": "2025-07-07",
+    "valid_to": "2025-07-20",
+    "uplift_to": 80,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "gates": [
+    "G1"
+   ],
+   "last_calibrated": "2025-06-15",
+   "maintenance": [
+    {
+     "gate": "G1",
+     "raised_at": "2025-07-11T08:20",
+     "summary": "counter double-counting entries at G1"
+    }
+   ]
+  },
+  "staff_log": {
+   "stewards": 2,
+   "egress_check": "done",
+   "notes": "Quiet school-holiday session. Engineer visited G1 before opening."
+  },
+  "history": {
+   "overages_30d": 2,
+   "last_overage": "2025-06-24"
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.78,
+  "intervals_over_limit": 0,
+  "section_mismatch": "none",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 2,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.75,
+  "intervals_over_limit": 7,
+  "section_mismatch": "gallery_code_mismatch",
+  "variation_present": true,
+  "variation_scope": "approval_pending",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": true,
+  "egress_check": "partial",
+  "prior_overages_30d": 2,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 134,
+ "deciding": {
+  "variation_applies": "V-412 is approved for GAL-09, valid 2025-07-07 to 2025-07-20 covering the session date, uplift to 80.",
+  "fault_explains_overage": "G1 ticket raised 08:20 on the session date before the 10:00 opening documents double-counting; the counter peak of 62 slightly above the certified 60 is explained by it.",
+  "next_step": "Counts sit under the uplifted limit of 80, the ticket explains the counter's high reading, the variation applies and the egress check is done, so no follow-up is needed.",
+  "peak_excess": "Peak 62 against the limit in force of 80 is about 78%, below 90%.",
+  "intervals_over": "No interval exceeds 62, so none is above the 80 limit in force."
+ },
+ "request": "rec-F406-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010649
+}

@@ -1,0 +1,114 @@
+{
+ "id": "F421-0009",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P3390",
+   "contents": "drone kit",
+   "qty": 1,
+   "weight_kg": 3.1,
+   "declared_value_gbp": 1877.96
+  },
+  "handling_events": [
+   {
+    "ts": "2024-08-09T06:00",
+    "site": "DEP-K",
+    "code": "INB",
+    "exc": null
+   },
+   {
+    "ts": "2024-08-09T11:40",
+    "site": "DEP-K",
+    "code": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "observed_item": "camera gimbal",
+   "qty_found": 1,
+   "weight_kg": 3.0,
+   "photos": [],
+   "repair_est_gbp": 94
+  },
+  "notes": [
+   "Needs sender, carrier, insurer, claims, depot lead."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "photos_missing",
+  "loss_pct": 5.0,
+  "declared_value": 1877.96,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 1.7
+ },
+ "factors_sampled": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "photos_missing",
+  "loss_pct": 10.21,
+  "declared_value": 1877.96,
+  "scan_order_anomaly": true,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 1.7
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "contents_match": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_evidence",
+   "second": "escalate_supervisor",
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "depot_fault": "Clean inbound at DEP-K, then DMG at the depot SORT event; no upstream codes.",
+  "contents_match": "'drone kit' declared vs 'camera gimbal' observed; a component could be meant, so some doubt.",
+  "next_step": "Empty photos list is a specific missing item, but the contents discrepancy and value could justify escalation.",
+  "loss_share": "repair_est 94 / 1877.96 = 5.0%, exactly on the 5% boundary.",
+  "parties_needed": "Note lists five parties, but the insurer and carrier may not be needed, leaving three or four."
+ },
+ "request": "rec-F421-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007462
+}

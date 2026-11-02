@@ -1,0 +1,153 @@
+{
+ "id": "F429-0043",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "spillway": "SP-5",
+   "operator_id": "op27",
+   "log_version": 3,
+   "licence_q_max_m3s": 250,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 64.5,
+    "action_m": 65.2
+   },
+   "rainfall_mm_24h": 12,
+   "readings": [
+    {
+     "t": "2024-07-03T00:00",
+     "level_m": 64.2,
+     "datum": "site"
+    },
+    {
+     "t": "2024-07-03T03:00",
+     "level_m": 64.49,
+     "datum": "site"
+    },
+    {
+     "t": "2024-07-03T06:00",
+     "level_m": 64.3,
+     "datum": "site"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "2024-07-03T01:20",
+    "open_after_m": 0.8
+   },
+   {
+    "gate": "G2",
+    "t": "2024-07-03T01:25",
+    "open_after_m": 0.8
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 0.815
+    },
+    {
+     "gate": "G2",
+     "opening_m": 0.8
+    }
+   ],
+   "calc_peak_m3s": 143,
+   "gauged_peak_m3s": 130
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "not_started",
+    "completed_at": null
+   },
+   "seepage_weir_lps": 4.1
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "2024-07-03T00:45",
+    "ack": false
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": true,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 9.09,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 9.11,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "query_operator",
+   "second": "hold_for_inspection",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 117,
+ "deciding": {
+  "within_licence": "Calc 143 and gauged 130 are both well under the 250 limit. The 9% gap between them leaves slight doubt.",
+  "gates_reconciled": "G1 is 0.8 against 0.815 (0.015 m, trivial) and G2 matches exactly.",
+  "next_step": "post_op_inspection is not_started, which argues for hold_for_inspection, while the unacknowledged warning (ack false) argues for a query to the operator.",
+  "trigger_tier": "The peak reading of 64.49 m is 0.01 m below alert_m 64.5, right on the boundary between level 0 and level 1.",
+  "parties_needed": "The inspector, the operator and whoever confirms the warning acknowledgement may all be needed, which is two or three parties."
+ },
+ "request": "rec-F429-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009197
+}

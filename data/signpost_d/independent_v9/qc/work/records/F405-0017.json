@@ -1,0 +1,152 @@
+{
+ "id": "F405-0017",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C207",
+   "detected_on": "2025-10-20",
+   "term_start": "2025-10-27",
+   "room": "LAB3"
+  },
+  "booking_a": {
+   "dept": "CHM",
+   "room": "LAB3",
+   "day": "Tue",
+   "start": "14:00",
+   "end": "17:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 95,
+   "required_features": [
+    "lab_benches"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "dept": "BIO",
+   "room": "L3",
+   "day": "Tue",
+   "start": "14:00",
+   "end": "17:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-09-12",
+   "approver": "mt"
+  },
+  "room": {
+   "code": "LAB3",
+   "aliases": [
+    "L3"
+   ],
+   "capacity": 100
+  },
+  "alternatives": [
+   {
+    "code": "LAB5",
+    "capacity": 60,
+    "features": [
+     "lab_benches"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "change_request",
+    "state": "open",
+    "target_slot": "Thu 14:00",
+    "booking": "b"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "full",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 8,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.63,
+  "required_feature": "lab_benches",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 0
+ },
+ "factors_sampled": {
+  "overlap_type": "full",
+  "room_code_alias": true,
+  "wrong_room_variant": true,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 58,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.63,
+  "required_feature": "lab_benches",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 0
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "contested",
+   "target": "reschedule",
+   "second": "dismiss",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "genuine_clash": "booking_b room L3 is an alias of LAB3; identical day, times and weeks. An open change request on b adds a little doubt.",
+  "alt_room_fits": "LAB5 capacity 60 vs headcount 95 despite lab_benches; short on capacity.",
+  "resolution": "Both confirmed and no room fits suggests reschedule, but the open change request moving b to Thu 14:00 could dissolve the overlap, making dismiss defensible.",
+  "urgency": "Detected 2025-10-20, first shared occurrence Tue 2025-10-28, 8 days away, at the 7/8 day boundary.",
+  "parties_needed": "Possibly one officer alone if the change request is applied, or CHM and BIO both needing to act."
+ },
+ "request": "rec-F405-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009361
+}

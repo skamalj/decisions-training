@@ -1,0 +1,145 @@
+{
+ "id": "F408-0046",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 100021,
+   "stream": "recycling",
+   "claimed": "2024-03-12",
+   "logged_at": "2024-03-15T09:05",
+   "photo": false
+  },
+  "property": {
+   "uprn": 100021,
+   "assisted": false
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "date": "2024-03-12",
+   "week": "A"
+  },
+  "round_log": {
+   "completed_at": "2024-03-12T15:10",
+   "disruption": "vehicle_breakdown",
+   "catch_up": "2024-03-13",
+   "stops": [
+    {
+     "uprn": 100021,
+     "exception": "overweight",
+     "photo_ref": null,
+     "gps_stop": true
+    }
+   ],
+   "sweep_at": null
+  },
+  "history": [
+   {
+    "uprn": 100021,
+    "on": "2024-02-20",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100021,
+    "on": "2024-01-30",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100021,
+    "on": "2023-12-22",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100021,
+    "on": "2024-02-02",
+    "outcome": "rejected"
+   },
+   {
+    "uprn": 100021,
+    "on": "2024-03-08",
+    "outcome": "pending"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "wrong_stream",
+  "report_timing": "after_round_complete",
+  "crew_exception": "overweight",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "overweight",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 4,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 80,
+ "deciding": {
+  "crew_missed": "Overweight exception has photo_ref null; breakdown catch_up 2024-03-13 passed with sweep_at null, so the exception and disruption are unsupported.",
+  "report_matches": "Report says recycling but streams_due is refuse only.",
+  "next_step": "Exception is unsupported because photo_ref is null, so the one missing item is the crew's photo evidence.",
+  "return_urgency": "Unresolved breakdown with no sweep argues for a two-day return, but no assisted flag and no other urgency field make next round defensible too.",
+  "repeat_failures": "Three upheld entries, the oldest on 2023-12-22, exactly 84 days before logging; a pending entry adds doubt, so 2 versus 3 is open."
+ },
+ "request": "rec-F408-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010405
+}

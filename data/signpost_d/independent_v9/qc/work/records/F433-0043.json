@@ -1,0 +1,144 @@
+{
+ "id": "F433-0043",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H08",
+   "age": 7,
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "result": "recheck"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 30
+   },
+   "arrived_at": "13:00",
+   "departed_at": "13:35"
+  },
+  "vet_card": {
+   "presented_at": "13:23",
+   "pulse_bpm": 68,
+   "cri": {
+    "first_bpm": 62,
+    "second_bpm": null
+   },
+   "metabolic": {
+    "mm": "pale",
+    "crt_s": 3,
+    "gut_sounds": {
+     "q1": "absent",
+     "q2": "absent",
+     "q3": "normal",
+     "q4": "normal"
+    }
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 1
+    },
+    {
+     "surface": "soft",
+     "grade": 0
+    }
+   ],
+   "tack": null,
+   "vet_signed_at": "13:30"
+  },
+  "treatment": [
+   {
+    "at": "13:26",
+    "type": "oral_electrolytes",
+    "vet": "Dr Hale"
+   }
+  ],
+  "notes": {
+   "rider_note": "Nearly lost a shoe on the road section."
+  }
+ },
+ "factors": {
+  "pulse_status": "not_met_marginal",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": 3,
+  "cri_rise": "unknown (second_bpm null)",
+  "missing_items": 1,
+  "out_of_sequence": true,
+  "tack_wound": "none",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": true,
+  "note_tone": "alarming_irrelevant"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": 3,
+  "cri_rise": 14.18,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": true,
+  "note_tone": "alarming_irrelevant"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_recheck",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "leaning",
+   "target": "ftq_combined",
+   "second": null,
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (departed_before_clearance = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 90,
+ "deciding": {
+  "pulse_met": "Presented 13:23, 3 min past the window, with pulse 68 above limit 64.",
+  "next_step": "cri.second_bpm is null, a specific missing reading, so recheck is leaning; the horse has already left.",
+  "outcome_code": "Hard-surface grade 1 with a regular soft trot-up is mitigated gait doubt; pale mm, crt 3 s and absent gut sounds point to combined failure.",
+  "welfare_risk": "departed_at 13:35 is later than signature 13:30 yet a recheck reading is missing; with pulse 68 the horse is out uncleared.",
+  "record_completeness": "One reading missing (cri.second_bpm) versus departure time out of order relative to clearance; either level 1 or 2."
+ },
+ "request": "rec-F433-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009112
+}

@@ -1,0 +1,144 @@
+{
+ "id": "F403-0013",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "egg",
+    "milk",
+    "soy",
+    "fish"
+   ],
+   "auto_injector": true,
+   "plan_start": "2025-10-20"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-06-30",
+   "allergens": [
+    "egg",
+    "milk",
+    "soy",
+    "fish"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-08-20",
+   "dishes": [
+    {
+     "dish": "fish pie",
+     "contains": [
+      "fish",
+      "milk",
+      "egg",
+      "soy"
+     ],
+     "recipe_version_date": "2025-08-28",
+     "substitute": "bean pie",
+     "spec_checked_on": "2025-09-02"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "trained": "2025-05-12"
+  },
+  "history": {
+   "review_date": "2025-09-15",
+   "packed_lunch_until": "2025-10-19",
+   "incidents": [],
+   "messages": [
+    "Cook: nothing to add."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 25,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "missing",
+  "allergen_count": 4,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 20,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "no_gap",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 40,
+ "deciding": {
+  "evidence_allergens_covered": "All four evidence allergens are in the fish pie entry, which has the substitute bean pie.",
+  "next_step": "The clinician letter is valid to 2026-06-30, the only dish is substituted with its spec checked after the recipe change, the controls are verified and there are no incidents, so release unchanged.",
+  "first_gap_stage": "Evidence is current, every dish is mapped and substituted, the spec was checked after the recipe date and the kitchen controls are complete.",
+  "exposure_proximity": "The dish is substituted, the segregated equipment is in place with a complete cleaning log and training dated 2025-05-12, and there is no incident. The level is Blocked, though the training date is the only thing a reader might question.",
+  "meal_urgency": "Packed lunch runs to 2025-10-19 and the plan starts 2025-10-20, about 25 school days from the 2025-09-15 review. That is above 20, though the half-term count adds slight doubt."
+ },
+ "request": "rec-F403-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014234
+}

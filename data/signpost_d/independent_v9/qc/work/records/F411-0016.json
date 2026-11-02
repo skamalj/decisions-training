@@ -1,0 +1,119 @@
+{
+ "id": "F411-0016",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "T114",
+   "type": "hackney",
+   "review_date": "2025-03-01"
+  },
+  "vehicle": {
+   "odometer_km": 84200
+  },
+  "inspection": {
+   "result_code": "P",
+   "brake_efficiency_pct": 68
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-09-01"
+   },
+   {
+    "type": "badge",
+    "expires_on": "2026-01-10"
+   }
+  ],
+  "history": [
+   {
+    "date": "2024-03-01",
+    "result": "P",
+    "odometer_km": 61000
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "not_applicable",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 0,
+  "vehicle_age_years": 7
+ },
+ "factors_sampled": {
+  "worst_defect_found": "dangerous",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 3,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 7
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 26,
+ "deciding": {
+  "odometer_consistent": "Current 84200 km exceeds last history reading 61000 km with no drop; only one earlier reading, so modest support.",
+  "next_step": "No defects, documents in date, brake figure present, no odometer drop: renew.",
+  "inspection_outcome": "defects list is empty.",
+  "document_gaps": "Documents listed expire after the review date 2025-03-01; nothing missing apparent.",
+  "outstanding_severity": "Empty defects list means nothing outstanding."
+ },
+ "request": "rec-F411-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009501
+}

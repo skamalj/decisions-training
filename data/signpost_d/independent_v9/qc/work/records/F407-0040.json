@@ -1,0 +1,127 @@
+{
+ "id": "F407-0040",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "PR-8001",
+   "channel": "public_app",
+   "photo_ref": "IMG-8001",
+   "linked_reports": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "footway",
+   "intervention_depth_mm": 20
+  },
+  "inspection": {
+   "depth_mm": 35,
+   "width_mm": 1291.27,
+   "offset_m": 3
+  },
+  "works_history": [
+   {
+    "job": "J-12",
+    "offset_m": 2,
+    "guarantee_end": "2023-01-01"
+   }
+  ],
+  "current_order": {
+   "status": "completed_awaiting_signoff",
+   "done": 3,
+   "total": 3
+  }
+ },
+ "factors": {
+  "road_category": "footway",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_out_guarantee",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 4,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "completed_awaiting_signoff",
+  "defect_width_mm": 1291.27,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "footway",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_out_guarantee",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": false,
+  "duplicate_count": 4,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "completed_awaiting_signoff",
+  "defect_width_mm": 1291.27,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "response_timescale": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 32,
+ "deciding": {
+  "meets_threshold": "Depth 35 vs threshold 20 mm.",
+  "repeat_failure": "J-12 offset 2 m, within ten metres, earlier completed repair.",
+  "next_step": "Order 3 of 3 complete awaiting signoff: already repaired, close.",
+  "staff_effort": "Only signoff and closing remain: under an hour.",
+  "response_timescale": "Works already complete, so no further repair is required."
+ },
+ "request": "rec-F407-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005513
+}

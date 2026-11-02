@@ -1,0 +1,129 @@
+{
+ "id": "F418-0001",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "KBW",
+   "plat": 2,
+   "date": "2025-03-11",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S41",
+    "planned_start": "05:00"
+   },
+   {
+    "staff_id": "S52",
+    "planned_start": "05:00"
+   }
+  ],
+  "attendance": null,
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "05:20",
+    "platform": 2
+   },
+   {
+    "type": "cover_start",
+    "time": "05:20",
+    "staff_id": "S77"
+   },
+   {
+    "type": "gap_end",
+    "time": "06:00",
+    "platform": 2
+   }
+  ],
+  "controls": {
+   "disp_ref": null,
+   "possession_from": "05:00",
+   "possession_to": "05:50",
+   "prior_shortfalls_30d": 4
+  },
+  "remarks": [
+   "All covered, S52 relief on platform all shift."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 40,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": false,
+  "dispensation_fit": "expired_midgap",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "contradicts",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 40,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": false,
+  "dispensation_fit": "expired_midgap",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "contradicts",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "balanced",
+   "target": "cover_arranged",
+   "second": "partial_cover",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "headcount_verified": "attendance is null, so no sign-on can be matched; remarks mention S52 relief and the event shows S77 cover, which conflict.",
+  "next_step": "The log contradicts itself (remarks name S52 as relief, event shows S77), so it needs amendment and a briefing; no sign-on sheet is the only missing item and the gap was outside service.",
+  "coverage_outcome": "cover_start for S77 at 05:20 coincides with gap_start and the gap ends at 06:00 with no cover_end, but the attendance is missing, so cover cannot be confirmed to span it.",
+  "reversal_time": "Attendance record is missing and cannot be reconstructed, so the log's integrity may not be recoverable; some doubt as the gap was non-service.",
+  "exposure_severity": "Gap 05:20-06:00 falls before service_from 06:00, so no period below minimum during passenger service."
+ },
+ "request": "rec-F418-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005827
+}

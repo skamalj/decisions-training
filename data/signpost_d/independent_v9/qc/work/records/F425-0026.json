@@ -1,0 +1,165 @@
+{
+ "id": "F425-0026",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "producer_code": "1UK-4F17",
+   "method": 1,
+   "lay_dates": [
+    "2025-03-03"
+   ],
+   "declared_eggs": 3600
+  },
+  "grading_run": {
+   "run_start": "2025-03-05T07:00",
+   "run_end": "2025-03-05T09:10",
+   "eggs_in": 3600,
+   "by_size": {
+    "S": 300,
+    "M": 1500,
+    "L": 1500,
+    "XL": 232
+   },
+   "outgrades": {
+    "cracks": 40,
+    "dirties": 10,
+    "blood_spots": 4,
+    "leakers": 2,
+    "misshapen": 2
+   },
+   "class_a_total": 3532
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2025-02-20",
+    "interval_days": 30
+   },
+   "candling_sample": {
+    "sampled_at": "2025-03-05T08:00"
+   },
+   "scale_check": "ok",
+   "store_temp": {
+    "minutes_above_limit": 0,
+    "max_c": 12
+   }
+  },
+  "flock": {
+   "age_weeks": 33,
+   "last_swab": {
+    "date": "2025-02-10",
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2025-03-05",
+   "packs": [
+    {
+     "size": "S",
+     "count": 300
+    },
+    {
+     "size": "M",
+     "count": 1500
+    },
+    {
+     "size": "L",
+     "count": 1500
+    },
+    {
+     "size": "XL",
+     "count": 232
+    }
+   ],
+   "stamp_code": "1UK-4F17"
+  }
+ },
+ "factors": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 2,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 1.6,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 33
+ },
+ "factors_sampled": {
+  "count_gap_size": "moderate",
+  "count_gap_location": "bins_vs_eggs_in",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 13,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 5.9,
+  "dominant_defect": "cracks",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 33
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release_class_a",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "clear",
+   "target": "no_anomaly",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "lay_to_pack": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "outgrade_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 79,
+ "deciding": {
+  "counts_reconcile": "Sizes plus outgrades total 3590 against eggs_in 3600, about 0.3% apart; packs match class_a_total. Small residual gives some doubt.",
+  "batch_disposition": "All checks present, swab negative, stamp matches, packed 2 days after lay, counts within tolerance; slight residual count gap leaves minor doubt.",
+  "anomaly_cause": "Outgrades are small, calibration is in date, store temperature never exceeded the limit, counts essentially agree.",
+  "lay_to_pack": "Lay date 2025-03-03, pack_date 2025-03-05, 2 days.",
+  "outgrade_share": "58 outgrades of 3600 eggs_in is about 1.6%, close enough to the 2% boundary to leave slight doubt."
+ },
+ "request": "rec-F425-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010228
+}

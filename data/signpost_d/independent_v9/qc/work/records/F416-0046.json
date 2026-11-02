@@ -1,0 +1,162 @@
+{
+ "id": "F416-0046",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "station_id": "S4",
+   "date": "2025-03-14",
+   "signoff": "G2",
+   "signoff_time": "17:10"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-01-10",
+    "home": "S4"
+   },
+   {
+    "id": "G2",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-02-01",
+    "home": "S4"
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-03-14",
+    "time": "11:20",
+    "type": "water_rescue",
+    "responders": [
+     "G1"
+    ],
+    "outcome": "released"
+   },
+   {
+    "id": "I2",
+    "date": "2025-03-14",
+    "time": "13:05",
+    "type": "first_aid",
+    "responders": [
+     "G2"
+    ],
+    "outcome": "released"
+   },
+   {
+    "id": "I3",
+    "date": "2025-03-14",
+    "time": "15:00",
+    "type": "minor_injury",
+    "responders": [
+     "G2"
+    ],
+    "outcome": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_board",
+    "unit": "B2",
+    "out_from": "2025-03-14T10:00",
+    "out_to": "2025-03-14T10:30",
+    "substitute_unit_id": "B5"
+   }
+  ],
+  "handover": {
+   "rescues": 1,
+   "first_aid": 2,
+   "kit_defects": 1,
+   "check_sheet_ref": "CS-114"
+  }
+ },
+ "factors": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 0,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "kit_outage": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 49,
+ "deciding": {
+  "two_guard_cover": "The only water_rescue I1 lists a single responder, G1.",
+  "totals_reconcile": "Rescues and kit_defects match, but first_aid 2 depends on whether the minor_injury I3 counts as first aid alongside I2, so it is held in balance.",
+  "next_step": "Signoff and check_sheet_ref are present, there is no missing item, and every outcome is released.",
+  "outcome_severity": "All outcomes are released, with no ambulance and no AED.",
+  "kit_outage": "The 30-minute board outage has substitute B5 logged, so there is no unsubstituted outage; the doubt is only that it is a short outage."
+ },
+ "request": "rec-F416-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013069
+}

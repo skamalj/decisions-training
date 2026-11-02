@@ -1,0 +1,134 @@
+{
+ "id": "F421-0042",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-77120",
+   "service": "exp",
+   "fragile": true,
+   "contents": "laptop",
+   "qty": 1,
+   "weight_kg": 2.1,
+   "declared_value_gbp": 1619.31
+  },
+  "handling_events": [
+   {
+    "ts": "2024-06-02T14:05",
+    "site": "HUB-W",
+    "ev": "SORT",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-06-03T06:40",
+    "site": "THIS-DEPOT",
+    "ev": "INBOUND",
+    "exc": null
+   },
+   {
+    "ts": "2024-06-03T09:15",
+    "site": "THIS-DEPOT",
+    "ev": "CONV-STD",
+    "exc": null
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-06-03T11:00",
+   "observed_item": "notebook computer",
+   "qty_found": 1,
+   "weight_kg": 2.1,
+   "condition": "written_off; tape cut and resealed",
+   "photos": [],
+   "repair_est_gbp": 1619.31
+  },
+  "claim": {
+   "claim_id": "C-5521",
+   "claimed_gbp": 3659.67,
+   "item_desc": "laptop",
+   "packaging_desc": "double-wall box, foam corners",
+   "submitted": "2024-06-04"
+  },
+  "notes": [
+   "Depot: we probably dropped it on the belt."
+  ]
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "photos_missing",
+  "loss_pct": 100.0,
+  "declared_value": 1619.31,
+  "scan_order_anomaly": false,
+  "tamper_signs": true,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": true,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 2.26
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "photos_missing",
+  "loss_pct": 55.41,
+  "declared_value": 1619.31,
+  "scan_order_anomaly": false,
+  "tamper_signs": true,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": true,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 2.26
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "contents_match": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_supervisor",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 74,
+ "deciding": {
+  "depot_fault": "DMG code at HUB-W before a clean inbound scan here, so damage predates intake; the note admitting fault is not decisive.",
+  "contents_match": "Laptop vs notebook computer, same weight and quantity; synonym only, slight doubt because of the resealed tape.",
+  "next_step": "Tape cut and resealed, claim of 3659.67 exceeds the declared 1619.31, and liability is disputed by the scans, so supervisor referral fits.",
+  "loss_share": "Condition is written_off, so total loss.",
+  "parties_needed": "Supervisor plus a photographer or the upstream hub could suffice; photos missing, tamper and inflated claim could pull in a third team."
+ },
+ "request": "rec-F421-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009441
+}

@@ -1,0 +1,161 @@
+{
+ "id": "F435-0048",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "EV-6310",
+   "zone_id": "BAL-1",
+   "zone_type": "balcony",
+   "doors_open": "2025-09-20T19:30",
+   "check_filed_at": "2025-09-21T00:05",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 600,
+   "variation": null,
+   "stewards_required": 20,
+   "exit_routes": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 600,
+   "issued": 558,
+   "comps_included": 30,
+   "scanned_in": 545
+  },
+  "ingress": {
+   "device_id": "CTR-7",
+   "device_status": "fault_logged",
+   "raw_peak": 617,
+   "peak_at": "2025-09-20T21:10",
+   "manual_recount": {
+    "count": 582,
+    "at": "2025-09-20T21:20"
+   }
+  },
+  "stewarding": {
+   "rostered": 17,
+   "signed_in": 15,
+   "relief": {
+    "called_at": "2025-09-20T19:35",
+    "eta_min": 15
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "B1",
+    "checked_at": "2025-09-20T18:40",
+    "status": "clear"
+   },
+   {
+    "route_id": "B2",
+    "checked_at": "2025-09-20T18:45",
+    "status": "clear"
+   },
+   {
+    "route_id": "B3",
+    "checked_at": "2025-09-20T18:50",
+    "status": "clear"
+   },
+   {
+    "route_id": "B4",
+    "checked_at": "2025-09-20T18:55",
+    "status": "clear"
+   },
+   {
+    "route_id": "B5",
+    "checked_at": "2025-09-20T19:05",
+    "status": "clear"
+   },
+   {
+    "route_id": "B6",
+    "checked_at": "2025-09-20T19:30",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "balcony",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.97,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.06,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.93,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.25,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "balcony",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.12,
+  "counter_status": "ok",
+  "counter_inflation": 0.06,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.93,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.08,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "balanced",
+   "target": "counter_fault",
+   "second": "none",
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 90,
+ "deciding": {
+  "verified_exceedance": "Device is fault_logged so the recount of 582 governs; it is under the limit of 600 (raw_peak 617 is the faulty reading).",
+  "disposition": "Recount settles occupancy within the limit, tickets issued 558 under 600, and all exit routes are logged clear; nothing needs withholding.",
+  "discrepancy_source": "Only the fault_logged counter's raw_peak 617 exceeds 600, which points to counter_fault; verified counts and tickets stay within the limit, so none is plausible.",
+  "steward_shortfall": "signed_in 15 of 20 required is exactly 25% below, on the line between marked and severe; relief called.",
+  "unconfirmed_exits": "B1 to B5 are clear before doors; B6 is clear at exactly doors_open 19:30, which is borderline for 'before doors'."
+ },
+ "request": "rec-F435-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015976
+}

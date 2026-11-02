@@ -1,0 +1,145 @@
+{
+ "id": "F428-0023",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "FL-077",
+   "gate_type": "flap",
+   "rated_closure_s": 60,
+   "seal_type": "J_bulb",
+   "clear_width": 1.8,
+   "clear_width_unit": "m",
+   "consequence_class": "high"
+  },
+  "inspection": {
+   "asset_id": "FL-077",
+   "insp_date": "2025-06-05",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2024-08-14",
+    "closure_s": 59,
+    "leakage_l_min": 19.8,
+    "leakage_limit_l_min": 20,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D4",
+    "component": "paintwork",
+    "grade": 1,
+    "status": "open",
+    "first_seen": "2024-12-01"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W12",
+     "component": "hinge",
+     "grade_raised": 2,
+     "status": "complete",
+     "completed": "2024-08-01",
+     "retest_insp_id": "I-4410"
+    }
+   ],
+   "last_service": "2025-01-15"
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "temp_barrier_deployed": false,
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2025-07-13"
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "flap",
+  "closure_time_ratio": 0.98,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "passed_but_old_and_leakage_near_limit",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 38,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.29,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 3,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 38,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 107,
+ "deciding": {
+  "closure_test_valid": "Pass with closure 59 s vs 60 s rated and leakage 19.8 vs limit 20 at the edge, test dated 2024-08-14 (10 months old), though after the hinge repair completed 2024-08-01 and linked to retest I-4410.",
+  "next_step": "The test passes within limits, the only open item is grade 1 paintwork, the earlier hinge order is complete with a retest linked, and no outage or alert applies.",
+  "defect_class": "Only open defect is a grade 1 cosmetic paintwork item; the grade 2 hinge order is complete.",
+  "section_discrepancies": "Asset ids match, the hinge order is complete with a linked retest, and no values conflict across sections.",
+  "flood_risk": "Closure 59 s is within 60 s rated, no defect above grade 1, in service, and the alert is inactive."
+ },
+ "request": "rec-F428-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009946
+}

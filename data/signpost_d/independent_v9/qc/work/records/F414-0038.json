@@ -1,0 +1,151 @@
+{
+ "id": "F414-0038",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SW-1135",
+   "equip_type": "swing",
+   "crit_fall_height_m": 1.4,
+   "surf_type": "bonded_rubber",
+   "variance_ref": null
+  },
+  "inspection": {
+   "insp_date": "2024-04-18",
+   "insp_grade": "routine_visual",
+   "fall_height_m": 1.5,
+   "surf_type_found": "bonded_rubber",
+   "surf_depth_mm": 60,
+   "surf_req_table": [
+    {
+     "max_h": 1.5,
+     "type": "bonded_rubber",
+     "min_depth_mm": 60
+    },
+    {
+     "max_h": 2.0,
+     "type": "bonded_rubber",
+     "min_depth_mm": 75
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "finger",
+     "opening_id": "O1",
+     "result": "fail"
+    },
+    {
+     "probe": "head_neck",
+     "opening_id": "O2",
+     "result": "pass"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "SEAT3",
+     "component_id": "C2",
+     "injury_mech": "minor"
+    }
+   ]
+  },
+  "maintenance": [],
+  "site": {
+   "usage_level": "high",
+   "incident_reports_90d": 1
+  },
+  "history": [
+   {
+    "date": "2023-10-12",
+    "grade": "annual_main",
+    "defect_refs": [
+     "D7"
+    ],
+    "component_results": {
+     "C3": "repaired_on_site"
+    }
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "swing",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": 0.0,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": "none raised",
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "high",
+  "incident_reports_90d": 1
+ },
+ "factors_sampled": {
+  "equipment_type": "swing",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": -73.44,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.44,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "high",
+  "incident_reports_90d": 1
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "clear",
+   "target": "restrict_use",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (head_neck_entrapment_fail = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 66,
+ "deciding": {
+  "prior_defects_cleared": "Prior D7 has no work order in the empty maintenance list; only a note of on-site repair on C3 in history supports closure, so it is unconfirmed.",
+  "surfacing_adequate": "Depth 60 mm equals the 60 mm minimum for 1.5 m exactly (at the band edge), though the register's crit height is 1.4 m; this holds it narrowly true.",
+  "asset_disposition": "The SEAT3 minor-injury defect on C2 is isolated by a temporary measure of seat removal, while the rest stays open, which is a restrict_use situation. The head_neck probe passed; only a finger probe failed.",
+  "remedial_progress": "The maintenance list is empty, so no orders are raised.",
+  "hazard_severity": "SEAT3 has injury_mech minor (cuts); head_neck probe O2 passed, and the finger-probe failure is a decoy."
+ },
+ "request": "rec-F414-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013525
+}

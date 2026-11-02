@@ -1,0 +1,173 @@
+{
+ "id": "F403-0005",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-7743",
+   "allergens": [
+    "milk",
+    "wheat",
+    "egg",
+    "lupin"
+   ],
+   "plan_start": "2025-01-27"
+  },
+  "medical_evidence": {
+   "doc_type": "parent_letter",
+   "issued": "2025-01-06",
+   "expires": "2026-01-06",
+   "allergens": [
+    "milk",
+    "wheat",
+    "egg",
+    "lupin"
+   ]
+  },
+  "menu_mapping": {
+   "dishes": [
+    {
+     "dish": "pasta bake",
+     "contains": [
+      "milk",
+      "wheat"
+     ],
+     "recipe_version_date": "2024-12-01",
+     "substitute": "oat pasta",
+     "spec_checked_on": "2025-01-10"
+    },
+    {
+     "dish": "egg mayo wrap",
+     "contains": [
+      "egg",
+      "lupin"
+     ],
+     "recipe_version_date": "2024-12-01",
+     "substitute": "tuna wrap",
+     "spec_checked_on": "2025-01-10"
+    },
+    {
+     "dish": "yoghurt pot",
+     "contains": [
+      "milk"
+     ],
+     "recipe_version_date": "2024-12-01",
+     "substitute": null,
+     "spec_checked_on": "2025-01-10"
+    },
+    {
+     "dish": "bread roll",
+     "contains": [
+      "wheat"
+     ],
+     "recipe_version_date": "2024-12-01",
+     "substitute": null,
+     "spec_checked_on": "2025-01-10"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": false,
+   "exceptions": []
+  },
+  "history": {
+   "review_date": "2025-02-10",
+   "packed_lunch_until": "2025-02-10",
+   "incidents": [
+    {
+     "date": "2025-01-30",
+     "dish": "yoghurt pot",
+     "contains": [
+      "milk"
+     ],
+     "note": "no reaction observed"
+    }
+   ],
+   "messages": [
+    "All fine, child ate well."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": -10,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": -10,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "menu_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 67,
+ "deciding": {
+  "evidence_allergens_covered": "All four evidence allergens appear in mapped dishes with substitutes (milk and wheat in pasta bake, egg and lupin in wrap), though two dishes carry substitute null.",
+  "next_step": "The evidence is a parent_letter, not clinician-signed, so request_evidence; the served incident adds a further serious concern.",
+  "first_gap_stage": "Two dishes have substitute null, the first gap beyond the evidence; the parent-letter evidence leaves some doubt.",
+  "exposure_proximity": "Incident dated 2025-01-30, after plan_start 2025-01-27, with yoghurt pot containing declared milk; 'no reaction observed' does not change this.",
+  "meal_urgency": "packed_lunch_until equals review_date 2025-02-10 so the next meal is the next school day, yet the January incident suggests the pupil already ate school meals."
+ },
+ "request": "rec-F403-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010549
+}

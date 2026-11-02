@@ -1,0 +1,160 @@
+{
+ "id": "F405-0028",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-3380",
+   "detected_on": "2025-09-02",
+   "term_start": "2025-09-29",
+   "room": "SR12",
+   "slot": "Tue 14:00"
+  },
+  "booking_a": {
+   "module": "ECO120",
+   "dept": "ECON",
+   "room": "SR12",
+   "day": "Tue",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "headcount": 90,
+   "staff": [
+    "Ng",
+    "Oye"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "ECO130",
+   "dept": "ECON",
+   "room": "SR12",
+   "day": "Tue",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    1,
+    2,
+    4,
+    6
+   ],
+   "headcount": 50,
+   "staff": [
+    "Pace",
+    "Lund"
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-07-01",
+   "approver": "K. Boyd"
+  },
+  "alternatives": [
+   {
+    "code": "SR14",
+    "capacity": 80,
+    "features": [],
+    "weeks_free": [
+     1,
+     3,
+     5,
+     7
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-02-11"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-03-04"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-05-20"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 28,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.13,
+  "required_feature": "none",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 3
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 8,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.13,
+  "required_feature": "none",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 3
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "contested",
+   "target": "dismiss",
+   "second": "relocate",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "genuine_clash": "The weeks mostly interleave ([1,3,5,7] and [1,2,4,6]), but both bookings share week 1 with identical Tue 14:00-16:00 times in SR12. Only one week overlaps.",
+  "alt_room_fits": "SR14 has capacity 80 against headcount 90. It is plainly too small.",
+  "resolution": "The overlap is confined to week 1, which favours dismissing it. Both bookings are confirmed and the one clashing session could still be relocated. The alternative is too small, which keeps the split.",
+  "urgency": "The shared week-1 Tuesday is 2025-09-30, exactly 28 days after detection on 2025-09-02. That is the edge of the 8-28 day band.",
+  "parties_needed": "Four teaching staff across two bookings plus approver K. Boyd make five people. A room-bookings officer could take it to six, or the count could be only four."
+ },
+ "request": "rec-F405-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01658
+}

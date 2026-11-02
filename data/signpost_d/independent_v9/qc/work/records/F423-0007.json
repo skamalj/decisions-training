@@ -1,0 +1,150 @@
+{
+ "id": "F423-0007",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-7710",
+   "product_type": "leaflet",
+   "stock_spec": "MT115",
+   "run_qty": 6000,
+   "overs_pct": 2.0,
+   "due_date": "2025-06-06",
+   "customer_tier": "standard",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "P-7710",
+   "ok_sheet_no": 88,
+   "signed_at": "2025-06-03T09:32",
+   "customer_present": false,
+   "concession": null
+  },
+  "colour_readings": {
+   "instrument": "SP-2",
+   "calibrated_on": "2025-03-07",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 1.2
+    },
+    {
+     "ink": "M",
+     "delta_e": 1.8
+    },
+    {
+     "ink": "Y",
+     "delta_e": 2.1
+    },
+    {
+     "ink": "K",
+     "delta_e": 2.6
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "unit_pair": "1-2",
+     "offset_mm": 0.34,
+     "in_image": true
+    },
+    {
+     "unit_pair": "2-3",
+     "offset_mm": 0.06,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P1",
+   "stock_loaded": "MT115",
+   "first_production_at": "2025-06-03T09:10",
+   "sheets_production": 114,
+   "sheets_makeready": 150,
+   "stoppages": [
+    {
+     "min": 8
+    }
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 114,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.0,
+  "register_offset_mm": 0.34,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 88,
+  "customer_tier": "standard",
+  "prior_stoppages": 1
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 114,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.0,
+  "register_offset_mm": 0.34,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 88,
+  "customer_tier": "standard",
+  "prior_stoppages": 1
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "adjust_and_recheck",
+   "second": "hold_for_signoff",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 104,
+ "deciding": {
+  "colour_in_tolerance": "All four patches 1.2 to 2.6, under spec_max_de 3.0.",
+  "run_before_signoff": "first_production_at 09:10 precedes signed_at 09:32 with 114 production sheets logged; the gap is only 22 minutes.",
+  "next_step": "In-image offset 0.34 mm on the 1-2 pair fails register (adjust), but the late signature could also argue for hold_for_signoff.",
+  "staff_effort": "Correcting register, re-pulling and remeasuring, plus filing the late signature, is a few hours.",
+  "scrap_exposure": "114 production sheets printed with in-image misregister, within the 120-sheet allowance (2% of 6000); close to the limit."
+ },
+ "request": "rec-F423-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009152
+}

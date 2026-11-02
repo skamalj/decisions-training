@@ -1,0 +1,175 @@
+{
+ "id": "F405-0041",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-4411",
+   "detected_on": "2025-07-17",
+   "term_start": "2025-09-15",
+   "room": "B2.14"
+  },
+  "booking_a": {
+   "module": "BIO120",
+   "dept": "BIO",
+   "day": "Mon",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "headcount": 40,
+   "required_features": [],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "BIO240",
+   "dept": "BIO",
+   "day": "Mon",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-06-02",
+   "approver": "jlee"
+  },
+  "room": {
+   "code": "B2.14",
+   "aliases": [],
+   "capacity": 45
+  },
+  "alternatives": [
+   {
+    "code": "B2.20",
+    "capacity": 50,
+    "features": [],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-03-02"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-04-11"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-05-20"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-06-09"
+   },
+   {
+    "type": "change_request",
+    "state": "open",
+    "target_slot": "Wed 14:00-16:00"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 60,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.25,
+  "required_feature": "none",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 4
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 60,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": true,
+  "headcount_ratio": 1.25,
+  "required_feature": "none",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 4
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 58,
+ "deciding": {
+  "genuine_clash": "Same slot but booking_a weeks 1-5 and booking_b weeks 6-10 never intersect; the open change request adds slight doubt.",
+  "alt_room_fits": "B2.20 holds 50 against headcount 40 with no features needed, but weeks_free omits week 5 of booking_a, which keeps it balanced.",
+  "resolution": "Disjoint weeks mean no overlap remains; the open change_request targets a different slot, leaving slight doubt.",
+  "urgency": "Detected 2025-07-17 and term starts 2025-09-15, about 60 days away.",
+  "parties_needed": "Same department on both bookings and nothing to move, so no one needs to act, though the open change request leaves some doubt."
+ },
+ "request": "rec-F405-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01201
+}

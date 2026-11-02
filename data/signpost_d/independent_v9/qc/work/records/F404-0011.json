@@ -1,0 +1,175 @@
+{
+ "id": "F404-0011",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "T2",
+   "date": "2024-03-11",
+   "age_band": "two_year",
+   "ratio_rule": "1:4",
+   "places": 30
+  },
+  "children": {
+   "booked": 23,
+   "slots": [
+    {
+     "t": "08:00",
+     "in": 4
+    },
+    {
+     "t": "09:00",
+     "in": 14
+    },
+    {
+     "t": "10:00",
+     "in": 25
+    }
+   ]
+  },
+  "rota": {
+   "counts_in_ratio": [
+    "S041",
+    "S052",
+    "S060",
+    "S061",
+    "S062",
+    "S063",
+    "S064",
+    "S065",
+    "S066"
+   ],
+   "start": "08:00"
+  },
+  "staff_signin": [
+   {
+    "id": "S-041",
+    "in": "07:55",
+    "check": "pending"
+   },
+   {
+    "id": "S-052",
+    "in": "07:58",
+    "check": "pending"
+   },
+   {
+    "id": "S060",
+    "in": "09:31",
+    "check": "ok"
+   },
+   {
+    "id": "S061",
+    "in": "09:31",
+    "check": "ok"
+   },
+   {
+    "id": "S062",
+    "in": "09:31",
+    "check": "ok"
+   },
+   {
+    "id": "S063",
+    "in": "09:31",
+    "check": "ok"
+   },
+   {
+    "id": "S064",
+    "in": "09:31",
+    "check": "ok"
+   },
+   {
+    "id": "S065",
+    "in": "09:31",
+    "check": "ok"
+   },
+   {
+    "id": "S066",
+    "in": "09:31",
+    "check": "ok"
+   }
+  ],
+  "cover_log": [],
+  "history": {
+   "prior_breaches_90d": 0
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 25,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 91,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 0
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 25,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 91,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 0
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "file_no_action",
+   "second": "corrective_plan",
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "clear",
+   "target": "paperwork_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (zero_eligible_adult_slot = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 83,
+ "deciding": {
+  "below_ratio": "Only S-041 and S-052 were signed in from 08:00 and both are pending, so eligible staff were 0 against children present until 09:31. There is no cover_log.",
+  "disposition": "A confirmed breach over 60 minutes with no cover and no prior breaches. A reviewer may weigh this against a corrective plan, but the evidence leans toward escalation.",
+  "primary_cause": "Rota counts two staff who are pending in staff_signin, so eligible staff fell short of the rota. The ID format differences are trivial.",
+  "shortfall_duration": "Eligible staff arrive at 09:31 and the room is below ratio from 08:00, which is 91 minutes and more than 60.",
+  "breach_severity": "At the 09:00 slot there are 14 children and 0 eligible staff. That is a slot with four or more children and no eligible adult, which is critical."
+ },
+ "request": "rec-F404-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013374
+}

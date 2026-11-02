@@ -1,0 +1,129 @@
+{
+ "id": "F429-0039",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 150
+  },
+  "reservoir": {
+   "gauge_zero_offset_m": 0.25,
+   "readings": [
+    {
+     "level_m": 104.1,
+     "datum": "site"
+    },
+    {
+     "level_m": 104.3,
+     "datum": "gauge_zero"
+    }
+   ],
+   "triggers": {
+    "alert_m": 103.5,
+    "action_m": 104.5
+   }
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "open_after_m": 1.0
+   },
+   {
+    "gate": "G2",
+    "open_after_m": 0.8
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.0
+    }
+   ],
+   "calc_peak_m3s": 50,
+   "gauged_peak_m3s": 44.87
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "not_started",
+    "completed_at": null
+   }
+  }
+ },
+ "factors": {
+  "reservoir_tier": "alert",
+  "near_boundary": true,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "large",
+  "discharge_discrepancy_pct": 11.43,
+  "datum_mismatch": true,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 11.43,
+  "datum_mismatch": true,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold_for_inspection",
+   "second": "query_operator",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "within_licence": "Calc 50 and gauged 44.87 are far under 150.",
+  "gates_reconciled": "G2 is in gate_ops but missing from the calc inputs.",
+  "next_step": "Inspection not_started suggests hold, but the datum and gate data issues could be settled by querying the operator.",
+  "trigger_tier": "Reading 104.3 on gauge_zero plus 0.25 offset is 104.55, above the 104.5 action trigger; as logged it is only alert.",
+  "parties_needed": "Operator, inspector and data/calc correction owners probably act, but the exact number is not fixed."
+ },
+ "request": "rec-F429-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008841
+}

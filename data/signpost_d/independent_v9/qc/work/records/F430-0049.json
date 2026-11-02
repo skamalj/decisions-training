@@ -1,0 +1,130 @@
+{
+ "id": "F430-0049",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "degC",
+     "normal_band": [
+      40,
+      80
+     ],
+     "alarm_limit": 90,
+     "customers_fed": 10020
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-08-02"
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 84,
+    "unit": "degC",
+    "timestamp": "10:40"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "T1",
+    "photo_ref": "P3",
+    "note": "Oil temp above band."
+   }
+  ],
+  "history": {
+   "previous_round": [
+    {
+     "asset_id": "T1",
+     "value": 78
+    }
+   ],
+   "permits": [
+    {
+     "asset_id": "T1",
+     "to": "2024-08-02T10:00"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 10020,
+  "trivial_discrepancies": 0,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 19436,
+  "trivial_discrepancies": 0,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "follow_up": {
+   "clarity": "balanced",
+   "target": "file_closed",
+   "second": "urgent_attendance",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 27,
+ "deciding": {
+  "defect_corroborated": "Note says oil temp above band and the 84 degC reading exceeds the 80 upper band.",
+  "benign_explanation": "The permit on T1 ended at 10:00 and the reading was taken at 10:40, so it only partly covers it.",
+  "follow_up": "Reading is 84 degC against a 90 alarm, but it is rising with no partner.",
+  "limit_deviation": "84 is just outside the 80 band and below the 90 alarm; the permit makes level 0 arguable.",
+  "supply_exposure": "T1 has no partner and feeds 10,020 customers, right at the 10,000 boundary."
+ },
+ "request": "rec-F430-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008421
+}

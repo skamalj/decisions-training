@@ -1,0 +1,175 @@
+{
+ "id": "F416-0023",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "S2",
+   "date": "2025-02-14",
+   "end": "15:00",
+   "signoff": "g2"
+  },
+  "roster": [
+   {
+    "id": "g1",
+    "hrs": "08-15",
+    "qual": "2025-01-10",
+    "home": "S2"
+   },
+   {
+    "id": "g2",
+    "hrs": "08-15",
+    "qual": "2026-03-01",
+    "home": "S2"
+   },
+   {
+    "id": "g4",
+    "hrs": "08-15",
+    "qual": "2026-06-01",
+    "home": "S5"
+   }
+  ],
+  "incidents": [
+   {
+    "id": "r1",
+    "date": "2025-02-14",
+    "type": "water_rescue",
+    "resp": [
+     "g2",
+     "g4"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "r2",
+    "date": "2025-02-14",
+    "type": "water_rescue",
+    "resp": [
+     "g1",
+     "g2",
+     "g4"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "r3",
+    "date": "2025-02-14",
+    "type": "water_rescue",
+    "resp": [
+     "g2",
+     "g4"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "f1",
+    "date": "2025-02-14",
+    "type": "first_aid",
+    "out": "released"
+   },
+   {
+    "id": "m1",
+    "date": "2025-02-14",
+    "type": "medical",
+    "resp": [
+     "g2"
+    ],
+    "out": "conveyed",
+    "aed_used": false,
+    "ambulance_ref": "AMB-310"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jetski",
+    "out_from": "14:00",
+    "out_to": null,
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 3,
+   "first_aid": 2,
+   "kit_defects": 1,
+   "check_sheet_ref": "C-0214"
+  }
+ },
+ "factors": {
+  "rescue_count": 3,
+  "rescue_cover_shortfall": "responder_qual_expired",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "conveyed",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 3,
+  "rescue_cover_shortfall": "responder_qual_expired",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "date_misentered",
+  "worst_outcome": "conveyed",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "two_guard_cover": "Each rescue has g2 and mutual-aid g4 (home S5, in date); g1's expired qual (2025-01-10) appears only as a third responder on r2.",
+  "totals_reconcile": "Handover first_aid 2 versus one first_aid incident (f1); it matches only if medical incident m1 is counted as first aid, so the totals are held in balance. Rescue and kit totals match and dates agree.",
+  "next_step": "Signed off, check_sheet_ref and ambulance_ref present, and no rescue lacked two qualified guards; the log is complete.",
+  "outcome_severity": "m1 outcome conveyed with ambulance_ref AMB-310, aed_used false; no CPR or AED.",
+  "kit_outage": "Jetski out_from 14:00, out_to null, no substitute, shift end 15:00: the outage is up to about 60 minutes, right at the boundary between levels 1 and 2."
+ },
+ "request": "rec-F416-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01458
+}

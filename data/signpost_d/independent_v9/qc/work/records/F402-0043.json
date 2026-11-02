@@ -1,0 +1,118 @@
+{
+ "id": "F402-0043",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "routine",
+   "received": "2025-02-11",
+   "onset": "2024-10-01",
+   "site": {
+    "part": "hip",
+    "side": "L"
+   }
+  },
+  "clinical": {
+   "diagnosis_code": "hip_oa",
+   "red_flags": [
+    "unexplained_weight_loss"
+   ],
+   "function_index": 34,
+   "weight_bearing": null
+  },
+  "gp_record": {
+   "falls_3m": 0,
+   "reviews": []
+  },
+  "attachments": [
+   {
+    "type": "xray",
+    "side": "R",
+    "result": "oa"
+   }
+  ],
+  "history": {
+   "episodes": 2,
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "major",
+  "missing_item": "weight_bearing_status",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 19,
+  "function_index": 34.17,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "routine",
+  "falls_last_3m": 0,
+  "post_op_days": 88,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "major",
+  "missing_item": "weight_bearing_status",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 19,
+  "function_index": 34.17,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "routine",
+  "falls_last_3m": 0,
+  "post_op_days": 88,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_as_referred",
+   "second": "request_info",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "community_msk",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "red_flag_unresolved": "A weight-loss red flag is recorded with no review, imaging result or oncology discharge to explain it.",
+  "next_step": "Weight-bearing is null and laterality conflicts, favouring a query, but the form is otherwise acceptable.",
+  "pathway": "Hip OA with function 34 and failed self-management needs face-to-face community MSK.",
+  "reversal_time": "Missed flag or wrong-side work could cause lasting harm; the three-month boundary is open.",
+  "clinical_urgency": "Open flag and function 34 suggest contact within six weeks."
+ },
+ "request": "rec-F402-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004677
+}

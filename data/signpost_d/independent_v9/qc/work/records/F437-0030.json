@@ -1,0 +1,126 @@
+{
+ "id": "F437-0030",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v6",
+   "terms": {
+    "variant_accepted": true
+   },
+   "workflow": [
+    {
+     "step": "dtp",
+     "done_at": null
+    }
+   ]
+  },
+  "source": {
+   "segment_count": 80,
+   "word_count": 1000
+  },
+  "deliverable": {
+   "segments_translated": 80,
+   "word_count": 1006,
+   "delivered_at": "2025-07-02"
+  },
+  "qa_report": null,
+  "review": {
+   "signed_off": true,
+   "completed_at": "2025-07-03",
+   "errors": [
+    {
+     "sev": "critical",
+     "status": "closed"
+    },
+    {
+     "sev": "major",
+     "status": "open"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_after_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": false,
+  "qa_false_positive_share": 0.51,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 30,
+  "client_waiver": true,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": true
+ },
+ "factors_sampled": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "critical",
+  "auto_qa_present": false,
+  "qa_false_positive_share": 0.51,
+  "number_mismatch_count": 1,
+  "deadline_slack_hours": 30,
+  "client_waiver": true,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": true
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "scope_matches": "The segment counts match at 80, and the 6-word drift (1000 vs 1006) is under 1%. source.version is missing, so the version cannot be confirmed.",
+  "reviewed_in_time": "review.completed_at 2025-07-03 is after deliverable.delivered_at 2025-07-02. Sign-off came after delivery.",
+  "next_step": "The client has a variant waiver and delivery is 30 hours early. The pending DTP and the open major error argue against release, but the plan leans towards releasing.",
+  "open_severity": "The review shows an open major error. The critical error is closed, which is a decoy, and qa_report is null, so a hidden critical cannot be ruled out.",
+  "parties_needed": "The open major needs the translator and a reviewer, and DTP is still pending. With 4 prior revision rounds, a PM or account manager might also be needed, which gives either two or three parties."
+ },
+ "request": "rec-F437-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008311
+}

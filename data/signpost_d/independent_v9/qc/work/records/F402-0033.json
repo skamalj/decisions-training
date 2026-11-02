@@ -1,0 +1,119 @@
+{
+ "id": "F402-0033",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-6103",
+   "source": "GP",
+   "received": "2025-05-06",
+   "priority": "routine",
+   "site": {
+    "part": "lumbar spine"
+   },
+   "onset_date": "2024-10-01"
+  },
+  "clinical": {
+   "red_flags": [
+    "cancer_hx_new_spinal_pain"
+   ],
+   "function_index": 98,
+   "weight_bearing": null
+  },
+  "gp_record": {
+   "first_presented": "2024-11-20",
+   "falls_3m": 0
+  },
+  "attachments": [],
+  "history": {
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "weight_bearing_status",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 31,
+  "function_index": 98.0,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 0,
+  "post_op_days": "none",
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "weight_bearing_status",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 31,
+  "function_index": 97.68,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 3,
+  "post_op_days": 103,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 43,
+ "deciding": {
+  "red_flag_unresolved": "Red flag listed; no MRI, review or oncology discharge.",
+  "next_step": "Record otherwise complete; weight_bearing null is minor.",
+  "pathway": "Function index 98 and self-management already tried; low impact.",
+  "reversal_time": "Little outcome to undo.",
+  "clinical_urgency": "Near-normal function, no neuro signs."
+ },
+ "request": "rec-F402-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004947
+}

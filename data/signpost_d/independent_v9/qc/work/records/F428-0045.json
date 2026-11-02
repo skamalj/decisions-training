@@ -1,0 +1,154 @@
+{
+ "id": "F428-0045",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "GT-55",
+   "gate_type": "mitre",
+   "rated_closure_s": 90.0,
+   "seal_type": "music_note",
+   "clear_width": 3.2,
+   "clear_width_unit": "m",
+   "consequence_class": "medium"
+  },
+  "inspection": {
+   "insp_id": "I-5120",
+   "asset_id": "GT-55",
+   "insp_date": "2025-09-18",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-08-30",
+    "closure_s": 63,
+    "leakage_l_min": 4,
+    "leakage_limit_l_min": 10,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "S4",
+    "component": "seal_music_note",
+    "grade": 4,
+    "status": "open",
+    "first_seen": "2025-06-02"
+   },
+   {
+    "code": "P1",
+    "component": "leaf_paint",
+    "grade": 1,
+    "status": "open",
+    "first_seen": "2025-06-02"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W-77",
+     "component": "seal_music_note",
+     "defect_code": "S4",
+     "grade_raised": 4,
+     "status": "complete",
+     "raised": "2025-07-01",
+     "completed": "2025-09-10",
+     "retest_insp_id": null,
+     "rated_closure_s": 90,
+     "clear_width": 3.2
+    }
+   ],
+   "last_service": "2024-12-05"
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "temp_barrier_deployed": false,
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2025-11-11",
+    "peak_level_mAOD": 3.9,
+    "sill_level_mAOD": 4.4
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.7,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "completed_untested",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 54,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.7,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "none",
+  "mismatch_count": 0,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 54,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_retest",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "balanced",
+   "target": "seal",
+   "second": "no_open_defect",
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 139,
+ "deciding": {
+  "closure_test_valid": "The test passed (63 s of 90 s, 4 of 10 l/min), but its test_date 2025-08-30 is before the seal work order completed on 2025-09-10, so it may not reflect the repaired seal.",
+  "next_step": "The seal repair was completed 2025-09-10 with retest_insp_id null and the only test predates it, so a post-repair retest is needed.",
+  "defect_class": "The grade 4 seal defect S4 is still listed open, but a completed work order covers it, so it may already be fixed, which leaves no_open_defect arguable.",
+  "section_discrepancies": "Differences such as 90.0 vs 90 and 3.20 vs 3.2 are only rounding. Grade 4 matches grade_raised 4 and asset_ids match, so zero is favoured, but the open status after a completed order could be read as one disagreement.",
+  "flood_risk": "A grade 4 defect is listed open, which puts the gate at high risk regardless of the passing closure time."
+ },
+ "request": "rec-F428-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011489
+}

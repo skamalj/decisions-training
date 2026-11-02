@@ -1,0 +1,148 @@
+{
+ "id": "F433-0040",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H509",
+   "age": 10,
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "res": "pass"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 30
+   },
+   "arrived_at": "12:00",
+   "departed_at": "12:41"
+  },
+  "vet_card": {
+   "arrival_copied": "12:01",
+   "presented_at": "12:19",
+   "pulse_bpm": 58,
+   "cri": {
+    "first_bpm": 56,
+    "second_bpm": 55
+   },
+   "metabolic": {
+    "mm": "injected",
+    "crt_s": 4,
+    "gut_sounds": [
+     "-",
+     "-",
+     "+",
+     "-"
+    ],
+    "skin_tent_s": 4
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 1
+    },
+    {
+     "surface": "soft",
+     "grade": 0
+    }
+   ],
+   "tack": null,
+   "vet_signed_at": "12:52"
+  },
+  "treatment": [
+   {
+    "t": "12:30",
+    "type": "iv_fluids",
+    "vet": "Dr Okoye"
+   }
+  ]
+ },
+ "factors": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 1.0,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "invasive",
+  "departed_before_clearance": true,
+  "note_tone": "none"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 2.26,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "invasive",
+  "departed_before_clearance": true,
+  "note_tone": "none"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "eliminate_ftq",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "clear",
+   "target": "ftq_metabolic",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "welfare_risk": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (departed_before_clearance = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 80,
+ "deciding": {
+  "pulse_met": "Pulse 58 presented at 12:19, within 20 min of either arrival time, though the 1 minute copy difference and IV treatment add slight doubt.",
+  "next_step": "Departed 12:41 before vet signature 12:52, with IV fluids given and injected membranes, CRT 4 s and skin tent 4 s; clear failure.",
+  "outcome_code": "Metabolic parameters failed (injected, CRT 4 s, skin tent 4 s, gut sounds mostly absent) while the second trot-up is regular.",
+  "welfare_risk": "gate.departed_at 12:41 precedes vet_signed_at 12:52, so the horse was on course uncleared.",
+  "record_completeness": "All readings and signature present and in sequence; the early departure is a procedural issue, not a missing item."
+ },
+ "request": "rec-F433-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005437
+}

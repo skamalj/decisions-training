@@ -1,0 +1,139 @@
+{
+ "id": "F418-0028",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "HLM",
+   "plat": 1,
+   "date": "2025-05-20",
+   "service_from": "05:30",
+   "service_to": "23:00",
+   "min_staff": 1,
+   "dispatch_mode": "staff"
+  },
+  "attendance": [
+   {
+    "staff_id": "S08",
+    "sign_on": "05:30",
+    "safety_comp_exp": "2026-02-01",
+    "dispatch_comp_exp": "2026-02-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "22:20"
+   },
+   {
+    "type": "gap_end",
+    "time": "22:57"
+   },
+   {
+    "type": "cover_start",
+    "time": "22:20",
+    "staff_id": "S31"
+   },
+   {
+    "type": "cover_end",
+    "time": "22:40",
+    "staff_id": "S31"
+   },
+   {
+    "type": "dispatch",
+    "time": "22:50",
+    "staff_id": "S08"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-77",
+   "disp_platform": 1,
+   "valid_to": "2025-05-20",
+   "approved_by": "RO3",
+   "prior_shortfalls_30d": 1
+  },
+  "remarks": [
+   "Handled as agreed."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 37,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "expired_midgap",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 1,
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 37,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "expired_midgap",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 1,
+  "boundary_case": true
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "leaning",
+   "target": "partial_cover",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "headcount_verified": "S08 is signed on and in date, but S31 appears in cover events with no attendance row.",
+  "next_step": "Gap inside service, dispensation D-77 valid_to 2025-05-20 expiring mid-gap, cover incomplete: amend and brief.",
+  "coverage_outcome": "Cover 22:20-22:40 ends before gap_end 22:57, leaving an open period.",
+  "reversal_time": "Dispatch happens at 22:50 with no signed-on cover; a log correction and briefing is one day or a few days.",
+  "exposure_severity": "Dispatch at 22:50 falls inside the open gap, where cover had ended, and staff on the platform is not certified-confirmed (S31 absent from attendance)."
+ },
+ "request": "rec-F418-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00554
+}

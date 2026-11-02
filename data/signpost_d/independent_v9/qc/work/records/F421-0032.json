@@ -1,0 +1,119 @@
+{
+ "id": "F421-0032",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P2",
+   "contents": "mug set 6",
+   "qty": 1,
+   "kg": 2.0,
+   "value_gbp": 548.8
+  },
+  "handling_events": [
+   {
+    "site": "HubB",
+    "ev": "SCAN",
+    "exc": "DMG"
+   },
+   {
+    "site": "DEP",
+    "ev": "INBOUND",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-05-02T10:00",
+   "observed_item": "glass tumbler set 6",
+   "qty_found": 1,
+   "kg": 2.0,
+   "condition": "one rim chipped",
+   "photos": [
+    "b.jpg"
+   ],
+   "repair_est_gbp": 12
+  }
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 2.19,
+  "declared_value": 548.8,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 1.0
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 45.83,
+  "declared_value": 548.8,
+  "scan_order_anomaly": true,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": 0.75
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "contents_match": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 35,
+ "deciding": {
+  "depot_fault": "DMG already on the upstream HubB scan and again on inbound.",
+  "contents_match": "Manifest says mug set, report observes glass tumbler set; weight and quantity agree, so some doubt remains.",
+  "next_step": "Inspection complete with photo, no claim, trivial estimate.",
+  "loss_share": "repair_est_gbp 12 on 548.8 is about 2.2%.",
+  "parties_needed": "Trivial chip, complete report, no claim; one person can close it."
+ },
+ "request": "rec-F421-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007847
+}

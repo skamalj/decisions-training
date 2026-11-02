@@ -1,0 +1,183 @@
+{
+ "id": "F403-0007",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-9032",
+   "yr": 5,
+   "school": "S208",
+   "declared_allergens": [
+    "peanut"
+   ],
+   "auto_injector": false,
+   "plan_start": "2025-04-28"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2025-03-10",
+   "expires": "2026-03-10",
+   "allergens": [
+    "peanut"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-04-14",
+   "cycle_weeks": 3,
+   "dishes": [
+    {
+     "dish": "satay chicken",
+     "contains": [
+      "peanut"
+     ],
+     "recipe_version_date": "2025-04-01",
+     "substitute": null,
+     "spec_checked_on": "2025-04-10"
+    },
+    {
+     "dish": "peanut cookie",
+     "contains": [
+      "peanut"
+     ],
+     "recipe_version_date": "2025-04-01",
+     "substitute": null,
+     "spec_checked_on": "2025-04-10"
+    },
+    {
+     "dish": "granola bar",
+     "contains": [
+      "peanut"
+     ],
+     "recipe_version_date": "2025-04-01",
+     "substitute": null,
+     "spec_checked_on": "2025-04-10"
+    },
+    {
+     "dish": "crumble",
+     "contains": [
+      "peanut"
+     ],
+     "recipe_version_date": "2025-04-01",
+     "substitute": "oat topping",
+     "spec_checked_on": "2025-04-10"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "prep_area": "B",
+   "segregated_equipment": true,
+   "trained": {
+    "count": 2,
+    "last": "2024-11-05"
+   },
+   "cleaning_log_complete": false,
+   "exceptions": [
+    {
+     "covers": "cleaning log wk1-2",
+     "signed_by": "Head cook",
+     "date": "2025-04-22"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-05-12",
+   "packed_lunch_until": null,
+   "incidents": [
+    {
+     "date": "2025-05-06",
+     "dish": "granola bar",
+     "contains": [
+      "peanut"
+     ],
+     "note": "no reaction observed"
+    }
+   ],
+   "messages": [
+    "Parent: Why was my child given a peanut bar?!",
+    "Cook: Kitchen is in a panic, we need help now."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": -14,
+  "packed_lunch_interim": false,
+  "note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 13,
+  "packed_lunch_interim": false,
+  "note_tone": "alarmed"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "contested",
+   "target": "menu_gap",
+   "second": "kitchen_gap",
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "clear",
+   "target": "4",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 161,
+ "deciding": {
+  "evidence_allergens_covered": "Peanut appears in the evidence and the crumble has a substitute, but three other peanut dishes have substitute null. Balanced between a lenient and a strict reading.",
+  "next_step": "Evidence is current and spec checks are present, which favours release, but the 2025-05-06 incident is a served peanut dish that a stricter reviewer would escalate. Left leaning approve_plan per the plan.",
+  "first_gap_stage": "Evidence is sound. Three peanut dishes have no substitute (menu gap), but the cleaning log is incomplete and the signed exception only covers weeks 1-2 (kitchen gap). Both defensible.",
+  "exposure_proximity": "The incident dated 2025-05-06, after plan_start 2025-04-28, is a granola bar containing peanut, a declared allergen. The 'no reaction observed' note does not change that.",
+  "meal_urgency": "Plan_start 2025-04-28 is before review 2025-05-12 and an incident dish was served on 2025-05-06, so the pupil is already eating school meals."
+ },
+ "request": "rec-F403-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013191
+}

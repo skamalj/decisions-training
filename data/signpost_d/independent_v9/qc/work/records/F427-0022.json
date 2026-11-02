@@ -1,0 +1,137 @@
+{
+ "id": "F427-0022",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V102",
+   "site_ref": "BB-07"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 20,
+   "dipwells_scheduled": 10,
+   "dams_total": 4
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 41
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 12,
+     "prev_depth_cm": 13
+    }
+   ],
+   "rain_30d_pct_normal": 132
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam": "D2",
+     "pool_level_cm": 25,
+     "design_pool_cm": 25,
+     "defect_code": "OK"
+    }
+   ],
+   "open_work_orders": [
+    {
+     "dam_id": "D2",
+     "status": "raised"
+    }
+   ]
+  },
+  "vegetation": null
+ },
+ "factors": {
+  "dipwell_coverage": 0.1,
+  "photos_status": "none",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "intact",
+  "water_table_offset_cm": -21.0,
+  "rainfall_pct_normal": 132.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.87,
+  "photos_status": "none",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -20.89,
+  "rainfall_pct_normal": 132.27,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "leaning",
+   "target": "well_below",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 27,
+ "deciding": {
+  "dam_caused_drop": "The control well is steady (12 vs 13 cm) and rain is 132% of normal, so weather does not explain the drop. An open work order on D2 points to a dam cause.",
+  "next_step": "D2 already has a raised work order and this visit's inspection shows OK, so filing the record is reasonable. Missing elements leave some doubt.",
+  "hydro_state": "The one dipwell reads 41 cm against a floor of 20 cm, which is 21 cm below.",
+  "dam_severity": "D2 pool is 25 cm against a design of 25 cm, with code OK.",
+  "evidence_completeness": "Only the inspection is recorded. Dipwells are 1 of 10, vegetation is null and there are no photos."
+ },
+ "request": "rec-F427-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01043
+}

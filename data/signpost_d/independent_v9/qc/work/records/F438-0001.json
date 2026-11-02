@@ -1,0 +1,135 @@
+{
+ "id": "F438-0001",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E1041",
+   "los": 3,
+   "adm": "elective"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "K80.2"
+   },
+   "comorbidities": [
+    "I10"
+   ],
+   "theatre_log": [
+    {
+     "proc": "J18.3",
+     "date": "2024-03-04"
+    }
+   ],
+   "documents_present": {
+    "discharge_summary": true,
+    "operation_note": true,
+    "pathology_report": true
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "K80.2"
+   },
+   "secondary_dx": [
+    "I10"
+   ],
+   "procedures": [
+    {
+     "code": "J18.3",
+     "date": "2024-03-04"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "GA11A",
+   "hrg_regrouped": "GA11B",
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "coder_history": {
+   "error_rate": 0.04,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.04,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "operation_note",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.04,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "primary_supported": "coded_record.primary_dx K80.2 equals documented principal_condition K80.2.",
+  "hrg_shift": "hrg_submitted GA11A differs from hrg_regrouped GA11B.",
+  "next_step": "All diagnoses and the procedure match documentation and all documents are present, so nothing is missing or queried; the HRG difference is the only tension.",
+  "error_count": "No code mismatch exists, yet the HRG differs; counting the regroup difference as an error gives 1, otherwise 0.",
+  "error_severity": "The only issue is the regrouped HRG difference (major, level 3); no unsupported code is shown, so level 4 is a stretch."
+ },
+ "request": "rec-F438-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010259
+}

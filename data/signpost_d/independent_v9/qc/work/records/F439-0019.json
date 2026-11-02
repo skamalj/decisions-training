@@ -1,0 +1,112 @@
+{
+ "id": "F439-0019",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T4418",
+   "end_time": "15:30"
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "junctions",
+     "driving": 8,
+     "serious": 0,
+     "dangerous": 0
+    },
+    {
+     "item": "control",
+     "driving": 7,
+     "serious": 1,
+     "dangerous": 0
+    }
+   ],
+   "driving_fault_total": 15
+  },
+  "outcome": {
+   "result": "fail",
+   "intervention": false,
+   "examiner_note": "Cyclist emerged; serious logged.",
+   "examiner_signoff_at": "15:10"
+  },
+  "review_trail": {
+   "upheld_complaints_12m": 4
+  }
+ },
+ "factors": {
+  "fault_profile": "borderline_count",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "signoff_before_end",
+  "intervention_recorded": false,
+  "intervention_explained": true,
+  "continued_after_collision": false,
+  "senior_countersigned": false,
+  "adverse_conditions": false,
+  "note_alignment": "vague",
+  "examiner_complaints_12m": 4,
+  "post_submission_edit": "no_edit"
+ },
+ "factors_sampled": {
+  "fault_profile": "borderline_count",
+  "result_mismatch": true,
+  "tally_error": false,
+  "documentation_gap": "signoff_before_end",
+  "intervention_recorded": false,
+  "intervention_explained": true,
+  "continued_after_collision": false,
+  "senior_countersigned": false,
+  "adverse_conditions": false,
+  "note_alignment": "vague",
+  "examiner_complaints_12m": 4,
+  "post_submission_edit": "no_edit"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_complete": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold_query",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "issue_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "result_supported": "Fail follows from one serious fault and a borderline 15 driving total that matches the item sum.",
+  "report_complete": "Sign-off 15:10 precedes end time 15:30, a misordering, while all sections are otherwise present.",
+  "disposition": "One open point, the sign-off time, needs examiner confirmation.",
+  "staff_effort": "A single examiner query and a timestamp check, a few hours.",
+  "issue_severity": "Sign-off before the test ended could undermine the result, though the serious fault already supports the fail, so a safety breach is arguable."
+ },
+ "request": "rec-F439-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005369
+}

@@ -1,0 +1,157 @@
+{
+ "id": "F432-0015",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E30",
+   "risk_cat": 3,
+   "roster": [
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+   ],
+   "temp_range_c": [
+    18,
+    28
+   ],
+   "maint_window": "13:00-17:00"
+  },
+  "shift": {
+   "keeper_id": "K5",
+   "start": "08:01",
+   "end": "18:00",
+   "opening_count": 4,
+   "closing_count": 3
+  },
+  "movements": [
+   {
+    "animal_id": "a2",
+    "direction": "out",
+    "time": "18:07",
+    "dest": "E9"
+   }
+  ],
+  "feeding": {
+   "items": [
+    {
+     "sheet_g": 5000,
+     "offered_g": 5000,
+     "leftover_g": 2100,
+     "unit": "g"
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched_time": "09:00",
+    "logged": true,
+    "entry_time": "09:02",
+    "temp_c": 22
+   },
+   {
+    "sched_time": "11:00",
+    "logged": true,
+    "entry_time": null,
+    "temp_c": 21
+   },
+   {
+    "sched_time": "13:00",
+    "logged": true,
+    "entry_time": "13:05",
+    "temp_c": 12
+   },
+   {
+    "sched_time": "15:00",
+    "logged": false,
+    "cctv_reviewed": true,
+    "reviewer_id": "V1"
+   },
+   {
+    "sched_time": "17:00",
+    "logged": true,
+    "entry_time": "17:04",
+    "temp_c": 11
+   }
+  ],
+  "close_check": null
+ },
+ "factors": {
+  "count_discrepancy": "movement_logged_just_after_shift_end",
+  "barrier_fault": "none",
+  "lock_check_timing": "absent",
+  "intake_ratio": 0.58,
+  "intake_mitigation": false,
+  "unrecorded_rounds": "1 (plus one null entry_time)",
+  "cctv_cover": true,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": true,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "close_check_absent",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "none",
+  "lock_check_timing": "absent",
+  "intake_ratio": 0.64,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 1,
+  "cctv_cover": true,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": true,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "close_check_absent",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "keeper_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 130,
+ "deciding": {
+  "count_reconciles": "Opening 4 and closing 3; the only movement out (a2) is timed 18:07, after the 18:00 shift end, though minute offsets could explain that.",
+  "secure_at_close": "The close_check section is null, so there are no lock checks at all.",
+  "next_step": "No close check is logged, and temps of 12 and 11 C in the heater window need someone on site to secure and verify.",
+  "intake_shortfall": "Offered 5000 g, leftover 2100 g gives 58% intake, just under the 60% boundary with no fast or scatter flag.",
+  "missed_rounds": "The 15:00 round has logged false (CCTV only), and the 11:00 round has logged true but a null entry_time, so one or two are missed."
+ },
+ "request": "rec-F432-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013783
+}

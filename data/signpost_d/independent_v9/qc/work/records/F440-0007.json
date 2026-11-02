@@ -1,0 +1,200 @@
+{
+ "id": "F440-0007",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "G-2087",
+   "review_date": "2025-05-01",
+   "arrival": "2025-05-15",
+   "departure": "2025-05-17",
+   "pax_by_band": {
+    "u13": 17,
+    "adult": 3
+   },
+   "diet_totals": {
+    "veg": 2
+   },
+   "amendments": [
+    {
+     "type": "pax_change",
+     "delta": 1,
+     "logged_at": "2025-04-20"
+    }
+   ]
+  },
+  "roster": [
+   {
+    "role": "participant",
+    "sex": "F",
+    "n": 9,
+    "dob": "2013-2015"
+   },
+   {
+    "role": "participant",
+    "sex": "M",
+    "n": 9,
+    "dob": "2013-2015",
+    "veg": 3
+   },
+   {
+    "role": "leader",
+    "n": 2,
+    "dob": "1985"
+   },
+   {
+    "role": "leader",
+    "n": 1,
+    "dob": "1990",
+    "depart_date": "2025-05-16"
+   }
+  ],
+  "allocation": [
+   {
+    "room": "F1",
+    "sex": "F",
+    "beds": 10,
+    "nights": [
+     "2025-05-15",
+     "2025-05-16"
+    ]
+   },
+   {
+    "room": "M1",
+    "sex": "M",
+    "beds": 10,
+    "nights": [
+     "2025-05-15",
+     "2025-05-16"
+    ]
+   },
+   {
+    "room": "L1",
+    "sex": "mixed",
+    "beds": 3,
+    "nights": [
+     "2025-05-15",
+     "2025-05-16"
+    ],
+    "warden_cover": [
+     "2025-05-16"
+    ]
+   }
+  ],
+  "payment": {
+   "total_price": 1260,
+   "deposit_due": 300,
+   "paid_total": 0,
+   "paid_on": null,
+   "instalments": [
+    {
+     "due": "2025-05-20",
+     "amt": 300
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "adult": "A1",
+    "status": "verified",
+    "expiry": "2026-04-01"
+   },
+   {
+    "adult": "A2",
+    "status": "verified",
+    "expiry": "2026-04-01"
+   },
+   {
+    "adult": "A3",
+    "status": "verified",
+    "expiry": "2026-06-01"
+   }
+  ],
+  "history": {
+   "org_id": "O-31",
+   "trusted": false,
+   "stays": 2,
+   "no_shows": 0,
+   "last_stay": "2024-10-12"
+  }
+ },
+ "factors": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": true,
+  "deposit_position": "nothing_paid",
+  "instalment_approved": true,
+  "days_to_arrival": 14,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 0,
+  "diet_count_drift": "minor"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": true,
+  "deposit_position": "nothing_paid",
+  "instalment_approved": false,
+  "days_to_arrival": 101,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 0,
+  "diet_count_drift": "minor"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "confirm_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 87,
+ "deciding": {
+  "ratio_met": "18 under-13s need 3 adults. One leader leaves 2025-05-16, but warden_cover lists that night, so cover is probably closed.",
+  "deposit_covered": "paid_total 0 against deposit_due 300, but the schedule shows the only instalment of 300 due 2025-05-20, after the review date. Its approval is implicit only.",
+  "disposition": "Only the first instalment, due 2025-05-20, remains open; the rest is in order, so it can be confirmed on condition that it clears.",
+  "urgency": "Review 2025-05-01, arrival 2025-05-15: 14 days, at the top edge of the 4-14 band.",
+  "conflict_count": "The 21 roster vs 20 booked headcount is explained by the pax_change +1 amendment. Only the diet drift (veg 3 vs 2) is unexplained."
+ },
+ "request": "rec-F440-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01636
+}

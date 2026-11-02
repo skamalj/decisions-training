@@ -1,0 +1,153 @@
+{
+ "id": "F424-0041",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B-2291",
+   "recipe": "Amber",
+   "brew_date": "2024-03-02",
+   "vessel_id": "FV3",
+   "volume_hl": 20,
+   "yeast_strain": "US-05",
+   "yeast_gen": 3,
+   "og_target": 1.052,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-03-02",
+    "gravity_sg": 1.052,
+    "temp_c": 18
+   },
+   {
+    "ts": "2024-03-06",
+    "gravity_sg": 1.012,
+    "temp_c": 26.5
+   },
+   {
+    "ts": "2024-03-10",
+    "gravity_sg": 1.009,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-03-12",
+    "gravity_plato": 2.3,
+    "temp_c": 19
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-03-02",
+    "type": "pitch",
+    "vessel_id": "FV3",
+    "note": "Pitched US-05 gen 2."
+   },
+   {
+    "ts": "2024-03-05",
+    "type": "temp_change",
+    "note": "Approved free-rise."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B-2291",
+   "abv_pct": 5.6,
+   "micro_plate": {
+    "result": "presumptive",
+    "plated_on": "2024-03-12"
+   },
+   "diacetyl_mgl": 0.1,
+   "retest": []
+  },
+  "release_request": {
+   "vessel_id": "FV4",
+   "volume_hl": 18.8,
+   "format": "keg",
+   "note": "Standard schedule."
+  }
+ },
+ "factors": {
+  "gravity_status": "over_attenuated",
+  "final_reading_gap": false,
+  "temp_excursion": "sustained_major",
+  "excursion_mitigated": true,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.1,
+  "discrepancy_count": 4,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": true,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "over_attenuated",
+  "final_reading_gap": false,
+  "temp_excursion": "sustained_major",
+  "excursion_mitigated": true,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.1,
+  "discrepancy_count": 4,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": true,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (hard_limit_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 117,
+ "deciding": {
+  "terminal_gravity": "Last readings 1.009 and 2.3 P (about 1.009) are stable but just below the 1.010 minimum band.",
+  "contamination_supported": "Presumptive plate with no negative retest; nothing explains it away.",
+  "batch_disposition": "Results are complete; the fix is a record correction at packaging.",
+  "deviation_severity": "Reading of 26.5 C exceeds the 24 C strain maximum, a hard-limit breach.",
+  "record_discrepancies": "Vessel FV3 vs FV4 and volume 20 vs 18.8 hl are clear mismatches; the yeast gen 3 vs 2 note is arguable. The Plato value is a decoy."
+ },
+ "request": "rec-F424-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006087
+}

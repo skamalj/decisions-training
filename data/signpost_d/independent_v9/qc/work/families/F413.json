@@ -1,0 +1,318 @@
+{
+ "id": "F413",
+ "domain": "pest control visit logs",
+ "role": "Technical compliance reviewer at a commercial pest control contractor, checking each completed technician visit log before it is filed and released to the client",
+ "setting": "A regional pest control contractor services food production units, warehouses, care homes and offices under contract. Technicians submit a structured visit log from a handheld device after each routine or call-out visit. The log covers treatments applied, bait and monitoring station checks, and van stock drawn and returned. A reviewer in the technical office reads one log at a time. The reviewer compares it with the site's contract profile and the previous visit, decides whether it can be filed, and judges how serious any breach is.",
+ "questions": {
+  "usage_reconciled": {
+   "type": "noul",
+   "instructions": "Product quantities applied agree with van stock withdrawals for this visit.",
+   "criteria": {
+    "true": "Every applied product matches its net stock withdrawal.",
+    "false": "At least one product quantity disagrees or is unlogged."
+   }
+  },
+  "activity_increased": {
+   "type": "noul",
+   "instructions": "Rodent activity has increased since the previous logged visit.",
+   "criteria": null
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the reviewer do with this visit log now?",
+   "criteria": {
+    "sign_off": "Log complete and compliant; file and release without further action.",
+    "request_records": "One missing sheet, quantity or date must be supplied first.",
+    "book_revisit": "Arrange corrective revisit or retreatment, with conditions stated to technician.",
+    "escalate": "Refer to technical manager for breach handling or client notification."
+   }
+  },
+  "breach_severity": {
+   "type": "score",
+   "instructions": "How severe is the worst breach of terms in this log?",
+   "criteria": [
+    "Clear: no record gap, all treatments within limits",
+    "Paperwork: record gap only, all treatments within limits",
+    "Treatment: a dose, label or licence limit exceeded",
+    "Prohibited: site-banned product or zone used in treatment"
+   ]
+  },
+  "parties_needed": {
+   "type": "score",
+   "instructions": "How many separate people or teams must act to resolve this?",
+   "criteria": [
+    "One person can resolve it alone",
+    "Two people or teams must act",
+    "Three or four people or teams must act",
+    "Five or more people or teams must act"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "stock_mismatch",
+   "description": "Size of disagreement between quantity applied in treatments and net quantity withdrawn in van_stock for one product",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "trivial_under_5pct",
+    "moderate_5_to_25pct",
+    "large_over_25pct",
+    "applied_qty_null"
+   ],
+   "weights": [
+    0.35,
+    0.2,
+    0.2,
+    0.12,
+    0.13
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S2",
+    "S5"
+   ]
+  },
+  {
+   "name": "stock_return_logged",
+   "description": "Whether van_stock carries a return entry that offsets an apparent surplus withdrawal, which can explain an otherwise alarming gap",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "station_count_gap",
+   "description": "Number of stations on the site register that do not appear as checked in the monitoring section",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "monitoring_sheet_missing",
+   "description": "Monitoring section is null although the visit type requires station checks",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.18,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "date_sequence",
+   "description": "Ordering of visit start, visit end, client sign-off and follow-up booking dates",
+   "kind": "categorical",
+   "values": [
+    "in_order",
+    "signoff_before_visit_end",
+    "followup_before_trigger_visit",
+    "signoff_null"
+   ],
+   "weights": [
+    0.62,
+    0.13,
+    0.1,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "activity_trend",
+   "description": "Count of stations showing rodent activity now compared with the previous visit's count",
+   "kind": "categorical",
+   "values": [
+    "decreased",
+    "stable",
+    "increased_by_one",
+    "increased_by_two_plus"
+   ],
+   "weights": [
+    0.28,
+    0.3,
+    0.2,
+    0.22
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "previous_visit_available",
+   "description": "Whether the previous visit's activity count is present in follow_up history; if absent, an increase cannot be supported",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.8,
+   "skills": [
+    "S2",
+    "S5"
+   ]
+  },
+  {
+   "name": "dose_overage_pct",
+   "description": "Percentage by which applied quantity per treated area exceeds the label maximum; zero for most records, small values sit on the boundary",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 80,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "licence_valid_on_visit",
+   "description": "Whether the technician's certification expiry date falls on or after the visit date",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.85,
+   "skills": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "name": "restricted_product_used",
+   "description": "Aggravating fact: a toxic rodenticide or banned product is applied in a zone where the site profile prohibits it",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "corrective_status",
+   "description": "State of corrective actions raised on this visit",
+   "kind": "categorical",
+   "values": [
+    "none_needed",
+    "completed_on_visit",
+    "booked",
+    "raised_not_booked"
+   ],
+   "weights": [
+    0.35,
+    0.25,
+    0.2,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "site_risk_tier",
+   "description": "Contract risk tier of the premises, which affects how far a borderline breach should be escalated",
+   "kind": "categorical",
+   "values": [
+    "office",
+    "warehouse",
+    "care_home",
+    "food_production"
+   ],
+   "weights": [
+    0.2,
+    0.3,
+    0.2,
+    0.3
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "site_profile",
+   "description": "Site ID, risk tier, registered station list, zones with permitted and banned products"
+  },
+  {
+   "name": "visit",
+   "description": "Visit ID, type, technician ID, licence expiry, start and end timestamps, client sign-off date"
+  },
+  {
+   "name": "treatments",
+   "description": "List of applications: product code, active ingredient, zone, area_m2, qty_applied with unit, label_max_per_m2"
+  },
+  {
+   "name": "monitoring",
+   "description": "List of station checks: station ID, zone, activity boolean, bait_taken_pct, condition; may be null"
+  },
+  {
+   "name": "van_stock",
+   "description": "Product movements for the visit: withdrawals and returns with product code, qty, unit, batch"
+  },
+  {
+   "name": "follow_up",
+   "description": "Previous visit ID and its active-station count, corrective actions with status and booked dates"
+  }
+ ],
+ "rendering_notes": "stock_mismatch shows only as treatments.qty_applied set against van_stock withdrawals minus returns for the same product_code. Trivial gaps are usually unit artefacts, such as 0.5 kg withdrawn against 480 g applied. applied_qty_null renders qty_applied as null. stock_return_logged adds a van_stock entry with movement 'return' that can close an apparent surplus. station_count_gap leaves station IDs from site_profile.stations missing from monitoring, and the check list is shuffled so the gap is not obvious. monitoring_sheet_missing sets monitoring to null for visit.type 'routine'. date_sequence is visible only by comparing visit.start, visit.end, visit.client_signoff and follow_up booked dates. activity_trend is the count of monitoring entries with activity true against follow_up.prev_active_stations. If previous_visit_available is false, prev_active_stations is null or the previous visit is absent. dose_overage_pct appears only as qty_applied divided by area_m2 against label_max_per_m2, sometimes in mixed units. licence_valid_on_visit compares visit.tech_licence_expiry with visit.start. restricted_product_used puts a treatment in a zone whose site_profile entry has toxic_bait_permitted false or lists the product under banned_products. When it is present, breach_severity is always Prohibited and next_step is escalate. corrective_status appears in follow_up.actions statuses and dates. site_risk_tier is site_profile.tier. Decoys include batch numbers, weather, visit duration, bait_taken_pct on inactive stations, and non-toxic monitoring blocks in banned zones, which are permitted. Never include fields that state compliance, breach level, trend, reconciliation result or recommended action.",
+ "skills": [
+  "S1",
+  "S2",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "parties_needed",
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_records"
+ },
+ "aggravating_factor": "restricted_product_used",
+ "design_cost": 0.125028
+}

@@ -1,0 +1,156 @@
+{
+ "id": "F410-0021",
+ "family": "F410",
+ "state": {
+  "application": {
+   "app_ref": "A-4471",
+   "licence_no": "L-218",
+   "holder_ref": "H-3302",
+   "term_start": "2025-04-01",
+   "term_end": "2026-03-31",
+   "pitch_req": {
+    "market": "Eastgate",
+    "width_m": 4.0,
+    "depth_m": 3.0
+   },
+   "commodities": [
+    "cards",
+    "hot snacks"
+   ],
+   "docs_pending": []
+  },
+  "licence_current": {
+   "licence_no": "L-218",
+   "holder_ref": "H-3302",
+   "expires": "2025-03-31",
+   "pitch": {
+    "market": "Eastgate",
+    "pitch_no": 14,
+    "width_m": 2.68,
+    "depth_m": 3.0
+   },
+   "commodities": [
+    "cards"
+   ],
+   "conditions": {
+    "min_attendance_pct": 75
+   },
+   "variations": []
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-03-31",
+    "indemnity_gbp": 2000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": true,
+    "new_end": "2026-03-31"
+   },
+   "food_reg": null
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2024",
+     "amount_gbp": 498.03
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2024-05-02",
+     "amount_gbp": 400,
+     "method": "card"
+    }
+   ],
+   "payment_plan": {
+    "active": true,
+    "instalments_left": 2,
+    "missed": 0
+   }
+  },
+  "history": {
+   "allocated_12m": 52,
+   "attended_12m": 31,
+   "absence_notices": [],
+   "complaints": [],
+   "enforcement_notices": 0
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "indemnity_below_required",
+  "broker_confirmation_held": true,
+  "commodity_change": "food_added",
+  "food_registration_state": "not_registered",
+  "stall_size_delta_m": 1.32,
+  "variation_approved": false,
+  "fee_arrears_gbp": 98.03,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.59,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "indemnity_below_required",
+  "broker_confirmation_held": true,
+  "commodity_change": "food_added",
+  "food_registration_state": "not_registered",
+  "stall_size_delta_m": 1.32,
+  "variation_approved": false,
+  "fee_arrears_gbp": 98.03,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.59,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "balanced",
+   "target": "refuse",
+   "second": "defer",
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "leaning",
+   "target": "scheduled_visit",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 72,
+ "deciding": {
+  "pli_term_covered": "pli.indemnity_gbp 2,000,000 is below pli_required_gbp 5,000,000; the broker confirmation only extends the end date.",
+  "renewal_disposition": "Unregistered food added, unapproved size increase and attendance far below 75% point to refuse; the active plan with no misses and no pending docs keep defer defensible.",
+  "inspection_level": "Unapproved stall widening and new food line suggest a visit; food_reg is null, which could argue urgent.",
+  "reversal_time": "A refusal or grant lasts a licence year; whether it can be reversed within three months is open, so levels 2 and 3 are both defensible.",
+  "discrepancy_count": "Held in balance: the food addition, the unapproved width and the attendance shortfall are each real, but a reviewer could count the unregistered food and size changes as one pitch change rather than separate discrepancies."
+ },
+ "request": "rec-F410-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007446
+}

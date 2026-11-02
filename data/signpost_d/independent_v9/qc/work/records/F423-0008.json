@@ -1,0 +1,149 @@
+{
+ "id": "F423-0008",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-3098",
+   "product_type": "carton",
+   "stock_spec": "GL150",
+   "run_qty": 18000,
+   "overs_pct": 1.93,
+   "due_date": "2025-06-14",
+   "customer_tier": "standard",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "P-3098",
+   "ok_sheet_no": 140,
+   "signed_at": "2025-06-10T06:50",
+   "customer_present": true,
+   "concession": {
+    "id": "C-77",
+    "accepted_max_de": 3.5
+   }
+  },
+  "colour_readings": {
+   "instrument": "SP-4",
+   "calibrated_on": "2025-03-13",
+   "patches": [
+    {
+     "ink": "C",
+     "target_lab": [
+      55,
+      -37,
+      -50
+     ],
+     "delta_e": 2.9
+    },
+    {
+     "ink": "M",
+     "target_lab": [
+      48,
+      74,
+      -3
+     ],
+     "delta_e": 3.52
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "unit_pair": "1-2",
+     "offset_mm": 0.31,
+     "in_image": false
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P2",
+   "stock_loaded": "UC90",
+   "first_production_at": "2025-06-10T07:05",
+   "sheets_production": 2063,
+   "sheets_makeready": 220,
+   "stoppages": [
+    {
+     "min": 15
+    }
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "marginal",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2063,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 1.93,
+  "register_offset_mm": 0.31,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 89,
+  "customer_tier": "standard",
+  "prior_stoppages": 1
+ },
+ "factors_sampled": {
+  "colour_deviation": "marginal",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2063,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 1.93,
+  "register_offset_mm": 0.31,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 89,
+  "customer_tier": "standard",
+  "prior_stoppages": 1
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "run_before_signoff": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_manager",
+   "second": "adjust_and_recheck",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (wrong_stock_loaded = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 142,
+ "deciding": {
+  "colour_in_tolerance": "Magenta 3.52 is just over the concession's accepted_max_de 3.5 (and over spec 3.0); the instrument is 89 days from calibration, so the margin is contestable.",
+  "run_before_signoff": "signed_at 06:50 precedes first_production_at 07:05.",
+  "next_step": "stock_loaded UC90 differs from stock_spec GL150 with 2063 production sheets, pointing to escalation; the marginal colour alone would mean adjust_and_recheck.",
+  "staff_effort": "Escalation is a short referral (under an hour), though a reprint decision may take a few hours.",
+  "scrap_exposure": "Wrong stock with 2063 sheets is 11.5% of the 18000 run, above 10%; the only doubt is whether all are suspect."
+ },
+ "request": "rec-F423-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009152
+}

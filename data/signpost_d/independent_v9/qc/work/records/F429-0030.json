@@ -1,0 +1,136 @@
+{
+ "id": "F429-0030",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 200
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "level_m": 100.9
+    }
+   ],
+   "triggers": {
+    "alert_m": 102.0,
+    "action_m": 102.5
+   }
+  },
+  "gate_ops": [
+   {
+    "gate_id": "G1",
+    "ts": "10:00",
+    "open_after_m": 0.9
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate_id": "G1",
+     "opening_m": 0.91
+    }
+   ],
+   "calc_peak_m3s": 88,
+   "gauged_peak_m3s": 67.1,
+   "tailwater_m": [
+    2.0,
+    2.5
+   ]
+  },
+  "instruments": {
+   "piezometers": [
+    {
+     "kpa": 84,
+     "alert_kpa": 80,
+     "ts": "10:20"
+    }
+   ],
+   "post_op_inspection": {
+    "status": "not_started",
+    "completed_at": null
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "10:15"
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 31.11,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": true,
+  "inspection_status": "not_started",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 31.11,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": true,
+  "inspection_status": "not_started",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "query_operator",
+   "second": null,
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "within_licence": "Calc 88 and gauged 67.1 are well under 200, though they differ by about 31%.",
+  "gates_reconciled": "G1 open_after 0.9 vs calc opening 0.91, trivial gap.",
+  "next_step": "Warning sent 10:15 after the 10:00 gate movement is one confirmation for the operator.",
+  "trigger_tier": "Piezometer 84 kPa is above alert 80 with no action value; the reservoir level is normal.",
+  "parties_needed": "Piezometer rise, inspection not started and late notice involve several teams, with the count uncertain."
+ },
+ "request": "rec-F429-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007045
+}

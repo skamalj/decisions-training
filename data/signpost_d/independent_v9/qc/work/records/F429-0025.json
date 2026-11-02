@@ -1,0 +1,141 @@
+{
+ "id": "F429-0025",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 350
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 55.0,
+    "action_m": 56.0
+   },
+   "readings": [
+    {
+     "level_m": 54.8,
+     "datum": "site"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "ts": "06:00",
+    "open_after_m": 0.8
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.2
+    }
+   ],
+   "calc_peak_m3s": 200,
+   "gauged_peak_m3s": 135,
+   "tailwater_m": [
+    {
+     "t": "10:00",
+     "v": 2.1
+    },
+    {
+     "t": "10:20",
+     "v": 2.6
+    }
+   ]
+  },
+  "instruments": {
+   "piezometer": [
+    {
+     "t": "10:10",
+     "kpa": 84,
+     "alert_kpa": 80
+    }
+   ],
+   "post_op_inspection": {
+    "status": "pending",
+    "completed_at": null
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "06:30"
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "large",
+  "discharge_discrepancy_pct": 32.52,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": true,
+  "inspection_status": "pending",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "large",
+  "discharge_discrepancy_pct": 32.52,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "accept_log",
+   "second": "hold_for_inspection",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 55,
+ "deciding": {
+  "within_licence": "Calc 200 and gauged 135 are well under 350.",
+  "gates_reconciled": "G1 open_after 0.8 differs from calc opening 1.2 by 0.4 m, but discharge is far below limit.",
+  "next_step": "Inspection is pending, but the piezometer rise is explained by tailwater, so accepting or holding are both defensible.",
+  "trigger_tier": "The level is just below alert, but the piezometer at 84 exceeds its 80 kPa alert.",
+  "parties_needed": "Gate mismatch, pending inspection and piezometer need several teams, and the count is open."
+ },
+ "request": "rec-F429-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005114
+}

@@ -1,0 +1,121 @@
+{
+ "id": "F431-0013",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "seal_state": "intact",
+   "seal_checked_date": "2024-01-20"
+  },
+  "period_read": {
+   "read_date": "2024-03-05",
+   "reg_kwh": 8345,
+   "src_code": "CUS",
+   "photo_ref": "IMG-77"
+  },
+  "history": [
+   {
+    "date": "2024-02-10",
+    "reg_kwh": 7700,
+    "src_code": "EST"
+   },
+   {
+    "date": "2024-03-10",
+    "reg_kwh": 8000,
+    "src_code": "EST",
+    "same_period_ly_kwh": 220
+   }
+  ],
+  "diagnostics": null,
+  "site_context": {
+   "hdd_current": 134,
+   "hdd_prior_year": 100,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "open",
+     "date": "2024-02-25"
+    }
+   ],
+   "dispute_open": true,
+   "occupancy": "occupied"
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "diagnostics_null",
+  "consumption_ratio": 1.17,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.34,
+  "diagnostic_error_count": 0,
+  "meter_works_order": true,
+  "consecutive_estimates": 2,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": true
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "diagnostics_null",
+  "consumption_ratio": 2.53,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.34,
+  "diagnostic_error_count": 2,
+  "meter_works_order": true,
+  "consecutive_estimates": 5,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": true
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_reading",
+   "second": "bill_estimate",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "meter_fault": "Open RECAL order and customer dispute hint at a meter issue, but diagnostics are null and the seal is intact, so corroboration is thin.",
+  "billable_actual": "Customer read dated 2024-03-05 precedes the latest history date 2024-03-10, which is an out-of-order read; the photo is present.",
+  "next_step": "Read has a photo and plausible consumption (accept), but out-of-order date and an open dispute argue for a flagged estimate.",
+  "staff_effort": "Diagnostics gap, a date check and the dispute require a few hours of work, not days.",
+  "consumption_deviation": "345 kWh against expected 220 x 134/100 = 295 is about 17% over, near the 15% boundary."
+ },
+ "request": "rec-F431-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010463
+}

@@ -1,0 +1,154 @@
+{
+ "id": "F403-0040",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-5861",
+   "declared_allergens": [
+    "milk"
+   ],
+   "auto_injector": true,
+   "plan_start": "2025-09-02"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-06-30",
+   "allergens": [
+    "milk"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-08-20",
+   "dishes": [
+    {
+     "dish": "cheese pasta",
+     "contains": [
+      "milk"
+     ],
+     "recipe_version_date": "2025-08-01",
+     "substitute": "dairy-free pasta",
+     "spec_checked_on": "2025-08-12"
+    },
+    {
+     "dish": "custard",
+     "contains": [
+      "milk"
+     ],
+     "recipe_version_date": "2025-09-10",
+     "substitute": "soya custard",
+     "spec_checked_on": null
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "trained": "2024-08-01",
+   "cleaning_log_complete": true,
+   "exceptions": [
+    {
+     "covers": "training refresh",
+     "signed_by": "LA safety lead",
+     "date": "2025-08-25"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-09-15",
+   "packed_lunch_until": "2025-10-13",
+   "incidents": [
+    {
+     "date": "2025-09-04",
+     "dish": "cheese pasta",
+     "contains": [
+      "milk"
+     ],
+     "note": "no reaction observed"
+    }
+   ],
+   "messages": [
+    "Cook: this is a serious breach, please act now."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "training_lapsed",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 20,
+  "packed_lunch_interim": true,
+  "note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 1,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 6,
+  "packed_lunch_interim": true,
+  "note_tone": "alarmed"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "approve_plan",
+   "second": "escalate_to_lead",
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "menu_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 47,
+ "deciding": {
+  "evidence_allergens_covered": "Milk is the only allergen and both milk dishes list substitutes, but the custard recipe changed after mapping without a spec check, so coverage is modestly supported.",
+  "next_step": "Incident on 2025-09-04 with a milk dish (escalate, despite 'no reaction observed') versus a plan whose substitutes exist and whose training lapse is covered by a signed exception (approve); balanced.",
+  "first_gap_stage": "Clinician letter is current, but the custard recipe (2025-09-10) postdates mapping (2025-08-20) with spec_checked_on null; the kitchen weakness is covered by a signed exception.",
+  "exposure_proximity": "Cheese pasta containing milk was served on 2025-09-04, after plan_start 2025-09-02.",
+  "meal_urgency": "Packed lunch until 2025-10-13 makes the first school meal 2025-10-14, about 20 school days after the 2025-09-15 review, on the boundary between the 0 and 1 levels."
+ },
+ "request": "rec-F403-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013104
+}

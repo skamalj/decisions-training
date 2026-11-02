@@ -1,0 +1,123 @@
+{
+ "id": "F415-0033",
+ "family": "F415",
+ "state": {
+  "shift": {
+   "start": "08:00",
+   "sched_slots": [
+    "09:00",
+    "11:00",
+    "13:00",
+    "15:00"
+   ]
+  },
+  "site": {
+   "closures": []
+  },
+  "visits": [
+   {
+    "slot": "09:00",
+    "end": "09:25",
+    "photo_ref": "b1"
+   },
+   {
+    "slot": "13:00",
+    "end": "13:20",
+    "photo_ref": "b3"
+   },
+   {
+    "slot": "15:00",
+    "end": "15:22",
+    "photo_ref": "b4"
+   }
+  ],
+  "faults": [
+   {
+    "type": "sharps_find",
+    "reported_at": "2024-07-03T09:10:00",
+    "remedied_at": "2024-07-03T12:27:00",
+    "remedy_note": "sharps bin cleared 09:50"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "operative",
+   "signed_at": "2024-07-03T15:40:00"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 4,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "unauthorised_signer",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 197.29,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 1
+ },
+ "factors_sampled": {
+  "scheduled_slots": 4,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "unauthorised_signer",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 197.29,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 1
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_noted",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "missed_clean": "The 11:00 slot has no visit and closures is empty, so no closure covers it.",
+  "sign_off_valid": "The signer role is operative, not supervisor, though signed_at falls after the last visit. That timing keeps some doubt about whether the sign-off is valid.",
+  "next_step": "The missing 11:00 visit and the operative sign-off look like recording lapses to note, but the sharps fault is not clearly a service failure that justifies default action.",
+  "staff_effort": "The staff job is to confirm the 11:00 clean and get a proper sign-off, plus resolve the note mismatch. That is probably one to eight hours, and more if the contractor is slow.",
+  "fault_exposure": "remedied_at is 12:27, 197 minutes after the report, but the note says the bin was cleared at 09:50. With sharps involved and the timing contradictory, the exposure could be rated level 2 or level 3."
+ },
+ "request": "rec-F415-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009072
+}

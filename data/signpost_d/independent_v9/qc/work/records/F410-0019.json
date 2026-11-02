@@ -1,0 +1,164 @@
+{
+ "id": "F410-0019",
+ "family": "F410",
+ "state": {
+  "application": {
+   "app_ref": "A-4815",
+   "term_end": "2026-08-31",
+   "pitch_req": {
+    "width_m": 3.5
+   },
+   "commodities": [
+    "bread",
+    "pastries"
+   ],
+   "docs_pending": []
+  },
+  "licence_current": {
+   "pitch": {
+    "width_m": 3.0
+   },
+   "commodities": [
+    "bread"
+   ],
+   "conditions": {
+    "min_attendance_pct": 80
+   },
+   "variations": [
+    {
+     "type": "add_commodity",
+     "detail": "pastries",
+     "approved": true
+    },
+    {
+     "type": "widen",
+     "detail": "3.5m",
+     "approved": true
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-08-10",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": "2026-04-20",
+    "new_end": null
+   },
+   "food_reg": {
+    "registered": true,
+    "fhrs_rating": 5,
+    "inspected_on": "2025-10-02"
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "amount_gbp": 255.7
+    }
+   ],
+   "ledger": [
+    {
+     "amount_gbp": 200
+    }
+   ],
+   "payment_plan": {
+    "active": true,
+    "instalments_left": 2,
+    "missed": 0
+   }
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 49,
+   "absence_notices": [],
+   "complaints": []
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_more_than_14d_early",
+  "broker_confirmation_held": false,
+  "commodity_change": "food_added",
+  "food_registration_state": "registered_rating_5",
+  "stall_size_delta_m": 0.5,
+  "variation_approved": true,
+  "fee_arrears_gbp": 55.7,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.98,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "ends_more_than_14d_early",
+  "broker_confirmation_held": false,
+  "commodity_change": "food_added",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.5,
+  "variation_approved": true,
+  "fee_arrears_gbp": 55.7,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.99,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "grant",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "leaning",
+   "target": "none_needed",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "discrepancy_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 53,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-08-10 is 21 days before term_end 2026-08-31; broker_conf received but new_end is null, so extension is not evidenced.",
+  "renewal_disposition": "Variations approved, no pending docs, arrears covered by active plan with no missed payments; broker confirmation on file.",
+  "inspection_level": "Food registered with FHRS 5 and the food addition is approved; pitch change is approved.",
+  "reversal_time": "Routine grant with no serious issues can be undone within a day.",
+  "discrepancy_count": "All differences are covered by approved variations, the plan, or broker confirmation; the missing new_end leaves slight doubt on cover."
+ },
+ "request": "rec-F410-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010389
+}

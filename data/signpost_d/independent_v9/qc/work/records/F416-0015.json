@@ -1,0 +1,154 @@
+{
+ "id": "F416-0015",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "station": "S9",
+   "date": "2025-09-11",
+   "signoff": "G6"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "home": "S9",
+    "on": "08:00",
+    "off": "18:00",
+    "qual": "2026-02-10"
+   },
+   {
+    "id": "G2",
+    "home": "S3",
+    "on": "08:00",
+    "off": "18:00",
+    "qual": "2026-06-01"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "10:00",
+    "wave_m": 2.4,
+    "wind_kt": 32,
+    "rip": "high",
+    "flag": "red_yellow",
+    "zone_moved": false
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "t": "10:15",
+    "type": "water_rescue",
+    "r": [
+     "G1",
+     "G2"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I2",
+    "t": "13:30",
+    "type": "water_rescue",
+    "r": [
+     "G1",
+     "G2"
+    ],
+    "out": "gp_advised"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jet_ski",
+    "unit": "JS3",
+    "out_from": "09:00",
+    "out_to": "12:05",
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 1,
+   "kit_defects": 1,
+   "advisories": 6,
+   "beach_users_est": 4200
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "referred",
+  "kit_gap_band": "over_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "corrective_order",
+   "second": "amend_and_file",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 64,
+ "deciding": {
+  "two_guard_cover": "Both rescues list G1 and G2, both rostered at the time; G2 is from station S3 (mutual aid) with qual expiry 2026-06-01, in date.",
+  "totals_reconcile": "handover first_aid=1 but no first_aid incident is itemised; rescues and kit_defects match.",
+  "next_step": "Unmitigated flag lag (rip high, red_yellow, zone_moved false) and a long unsubstituted outage point to corrective_order, while the first_aid off-by-one is a minor clerical error pointing to amend_and_file.",
+  "outcome_severity": "I2 outcome gp_advised with no ambulance or AED; whether this counts as a referral or on-site care is open.",
+  "kit_outage": "JS3 out 09:00-12:05 is 185 minutes with no substitute, just over the 180-minute boundary."
+ },
+ "request": "rec-F416-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00993
+}

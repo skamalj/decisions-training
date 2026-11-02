@@ -1,0 +1,135 @@
+{
+ "id": "F416-0001",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "N4",
+   "date": "2025-02-11",
+   "signoff": null
+  },
+  "roster": [
+   {
+    "id": "G7",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": null
+   }
+  ],
+  "conditions": [
+   {
+    "t": "11:00",
+    "wave_m": 3.2,
+    "wind_kt": 34,
+    "rip_risk": "mod",
+    "flag": "yellow",
+    "bathing_zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-02-11",
+    "time": "10:20",
+    "type": "water_rescue",
+    "resp": [
+     "G7"
+    ],
+    "outcome": "released",
+    "referral_ref": "RF-88"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jetski",
+    "out_from": "10:00",
+    "out_to": "11:00",
+    "substitute_unit_id": null
+   }
+  ],
+  "handover": {
+   "rescues": 1,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "beach_users_est": 5200,
+   "check_sheet_ref": "CS-1"
+  }
+ },
+ "factors": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": false,
+  "missing_record": "qual_record",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "factors_sampled": {
+  "rescue_count": 4,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "qual_record",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "corrective_order",
+   "second": "escalate_review",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "two_guard_cover": "The only rescue lists one responder, G7, whose qual_expiry is null. The single responder points to false, but the missing qualification date leaves the cover question not fully settled.",
+  "totals_reconcile": "Handover rescues 1, first_aid 0 and kit_defects 1 match the one incident and one equipment entry with out_from set. The incident date equals the shift date.",
+  "next_step": "A single-responder rescue and an unsubstituted jetski outage of exactly 60 minutes support corrective_order. The missing sign-off and null qualification date give escalate_review some weight.",
+  "outcome_severity": "Outcome is released, but a referral_ref is present. That leaves level 0 against level 1 near the boundary.",
+  "kit_outage": "Jetski out 10:00 to 11:00 is exactly 60 minutes with no substitute. This sits on the boundary between levels 1 and 2 and leans to 2."
+ },
+ "request": "rec-F416-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010773
+}

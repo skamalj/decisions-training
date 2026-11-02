@@ -1,0 +1,166 @@
+{
+ "id": "F415-0022",
+ "family": "F415",
+ "state": {
+  "site": {
+   "footfall_band": "medium",
+   "closures": [
+    {
+     "from": "12:00",
+     "to": "13:00",
+     "reason": "plumber attending",
+     "approved_by": null
+    }
+   ]
+  },
+  "shift": {
+   "date": "2024-06-03",
+   "start": "07:55",
+   "end": "18:30",
+   "sched_slots": [
+    "08:00",
+    "12:00",
+    "15:00",
+    "18:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "start": "08:01",
+    "end": "08:26",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "soap": true
+    }
+   },
+   {
+    "slot": "12:00",
+    "start": "12:10",
+    "end": "12:16",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "soap": true
+    }
+   },
+   {
+    "slot": "15:00",
+    "start": "15:02",
+    "end": "15:27",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "soap": true
+    }
+   },
+   {
+    "slot": "18:00",
+    "start": "18:01",
+    "end": "18:25",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "soap": true
+    }
+   }
+  ],
+  "faults": [],
+  "sign_off": {
+   "signer": "S08",
+   "signer_role": "supervisor",
+   "signed_at": "2024-06-03T18:40:00",
+   "comment": "all done"
+  },
+  "history": {
+   "prior_defaults_90d": 3,
+   "complaints_90d": 2,
+   "audits_passed": 2
+  }
+ },
+ "factors": {
+  "scheduled_slots": 4,
+  "missed_slots": "0",
+  "closure_covers_gap": true,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "none",
+  "fault_open_minutes": 0.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 3
+ },
+ "factors_sampled": {
+  "scheduled_slots": 4,
+  "missed_slots": "0",
+  "closure_covers_gap": true,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 116.49,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 3
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "sign_off_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 45,
+ "deciding": {
+  "missed_clean": "All four slots have done visits. However, the 12:00 visit lasted only 6 minutes inside a closure with approved_by null, which leaves some doubt that a real clean took place.",
+  "sign_off_valid": "Signer role is supervisor and signed_at 18:40 is after the last visit ended at 18:25.",
+  "next_step": "Every slot has a visit, the checklists are complete, there are no faults and the sign-off is valid. The history defaults are a decoy.",
+  "staff_effort": "Nothing is outstanding. At most a quick look at the short 12:00 visit is needed.",
+  "fault_exposure": "The faults list is empty, so no fault was open."
+ },
+ "request": "rec-F415-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012855
+}

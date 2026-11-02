@@ -1,0 +1,137 @@
+{
+ "id": "F418-0025",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "platform": 1,
+   "date": "2024-06-03",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S61",
+    "planned_start": "06:00"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S61",
+    "sign_on": "06:02",
+    "safety_comp_exp": "2025-02-01",
+    "dispatch_comp_exp": null
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "10:00"
+   },
+   {
+    "type": "dispatch",
+    "time": "10:20",
+    "staff_id": "S61"
+   },
+   {
+    "type": "cover_start",
+    "time": "11:05",
+    "staff_id": "S62"
+   },
+   {
+    "type": "gap_end",
+    "time": "11:15"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-9",
+   "disp_platform": 3
+  },
+  "remarks": [
+   "Covered throughout."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 75,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 75,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "balanced",
+   "target": "partial_cover",
+   "second": "uncovered",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unqualified_dispatch = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 35,
+ "deciding": {
+  "headcount_verified": "S61 has a sign-on that matches the roster to within 2 minutes, which leans true. The null dispatch_comp_exp gives the doubt.",
+  "next_step": "The record is complete, with attendance and controls present. The remark 'Covered throughout' contradicts the gap, so amend the log and brief rather than request records.",
+  "coverage_outcome": "S62 cover_start 11:05 comes only 10 minutes before gap_end 11:15, and the gap started at 10:00. This is a small cover after a long open gap, so partial cover or uncovered.",
+  "reversal_time": "The dispatch at 10:20 by an uncertified person cannot be undone. Whether recovery is under or over three months is open, so levels 3 and 2.",
+  "exposure_severity": "Dispatch at 10:20 by S61 inside the 10:00-11:15 gap, with dispatch_comp_exp null and dispatch_mode staff. D-9 is for platform 3, not platform 1."
+ },
+ "request": "rec-F418-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013499
+}

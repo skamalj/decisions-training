@@ -1,0 +1,160 @@
+{
+ "id": "F409-0014",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A7731",
+   "full_name": "Maya Okafor",
+   "submitted_on": "2024-05-20",
+   "app_type": "renewal",
+   "message": "Could you tell me about visitor vouchers?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-04-22",
+     "address_line": "Flat 5, 22 Park Row",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2021-08-02",
+     "address_line": "Flat 5, 22 Park Row",
+     "verified": true
+    }
+   ],
+   "note": "Scans clear."
+  },
+  "vehicle": {
+   "plate": "LM19 XYZ",
+   "keeper_name": "Maya Okafor",
+   "supporting_letters": []
+  },
+  "request": {
+   "zone_code": "D3",
+   "address": "5/22 Park Row",
+   "plate_entered": "LM19 XYZ",
+   "duration_months": 12,
+   "fee_band": "B"
+  },
+  "account_history": {
+   "live_permits": [
+    {
+     "permit_no": "P610"
+    }
+   ],
+   "past_permits": [
+    {
+     "permit_no": "P540",
+     "status": "surrendered",
+     "seize_reason": null
+    }
+   ],
+   "exceptions": [],
+   "pcns": [
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    },
+    {
+     "status": "cancelled"
+    }
+   ],
+   "officer_note": "Called applicant re payment, no answer."
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "format_only",
+  "proof_age_days": 28,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 5,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "format_only",
+  "proof_age_days": 28,
+  "docs_missing": 3,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 3,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 5,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 108,
+ "deciding": {
+  "residency_shown": "The council tax bill is verified and 28 days old, and its address (Flat 5, 22 Park Row) differs from 5/22 Park Row only in format.",
+  "disposition": "Both documents are verified, the keeper name matches the applicant, and the household holds 1 permit. The only doubt is the five old PCNs.",
+  "main_issue": "The plate and keeper match and the household holds 1 permit, below the cap. The record has no residence problem and no seized permit.",
+  "misuse_strength": "All five PCNs are cancelled and the past permit was surrendered. There is no mismatch and no date anomaly.",
+  "document_gaps": "The council tax bill and the ID card are both verified and nothing required is absent. The only doubt is the unrelated officer note."
+ },
+ "request": "rec-F409-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009388
+}

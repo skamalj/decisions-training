@@ -1,0 +1,136 @@
+{
+ "id": "F413-0043",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "id": "O-90",
+   "tier": "office",
+   "stations": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5"
+   ]
+  },
+  "visit": {
+   "id": "V-1288",
+   "type": "routine",
+   "tech_licence_expiry": "2026-08-30",
+   "start": "2025-04-09T13:00"
+  },
+  "treatments": [
+   {
+    "product": "RB-10",
+    "area_m2": 30,
+    "qty": 0.47,
+    "unit": "kg",
+    "label_max_per_m2": 0.011
+   }
+  ],
+  "monitoring": [
+   {
+    "st": "M1",
+    "activity": true
+   },
+   {
+    "st": "M2",
+    "activity": true
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product": "RB-10",
+    "qty": 0.2,
+    "unit": "kg"
+   },
+   {
+    "movement": "return",
+    "product": "RB-10",
+    "qty": 0.05,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 1
+  }
+ },
+ "factors": {
+  "stock_mismatch": "large_over_25pct",
+  "stock_return_logged": true,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": true,
+  "dose_overage_pct": 41.65,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "office"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "large_over_25pct",
+  "stock_return_logged": true,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "stable",
+  "previous_visit_available": true,
+  "dose_overage_pct": 41.65,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "office"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "activity_increased": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_records",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "usage_reconciled": "Applied 0.47 kg against net 0.15 kg, even after the return.",
+  "activity_increased": "2 active stations now against 1 previously.",
+  "next_step": "Three stations are missing from monitoring and the stock gap needs an explanation.",
+  "breach_severity": "Dose is above the label, and the 3 missing stations and stock gap sit near the line between levels 2 and 3.",
+  "parties_needed": "Technician, stock controller and manager are needed; the client could make four."
+ },
+ "request": "rec-F413-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005077
+}

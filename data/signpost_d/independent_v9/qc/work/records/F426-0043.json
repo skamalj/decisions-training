@@ -1,0 +1,155 @@
+{
+ "id": "F426-0043",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B31",
+   "grower_id": "G508",
+   "crop": "nectarine",
+   "planted_area_ha": 3.0,
+   "lot_id": "L760"
+  },
+  "applications": [
+   {
+    "app_id": "A1",
+    "date": "2024-05-02",
+    "product_code": "INS-C",
+    "qty_applied": 3.8,
+    "qty_unit": "kg",
+    "area_treated_ha": 3.0,
+    "sprayer_id": "SP-5",
+    "wind_kmh": 9
+   },
+   {
+    "app_id": "A2",
+    "date": "2024-05-10",
+    "product_code": "FUN-D",
+    "qty_applied": 2.4,
+    "qty_unit": "L",
+    "area_treated_ha": 3.0,
+    "sprayer_id": "SP-5",
+    "wind_kmh": 7
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "INS-C",
+    "max_rate_per_ha": 1.0,
+    "rate_unit": "kg",
+    "phi_days": 21,
+    "max_apps_per_season": 3,
+    "approved_crops": [
+     "nectarine"
+    ],
+    "minor_use_auth_ref": "MU-2290"
+   },
+   {
+    "product_code": "FUN-D",
+    "max_rate_per_ha": 0.8,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "max_apps_per_season": 4,
+    "approved_crops": [
+     "nectarine"
+    ],
+    "minor_use_auth_ref": null
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "SP-5",
+   "sprayer_type": "axial",
+   "last_calibration": "2023-10-20",
+   "calibration_valid_to": "2024-04-20",
+   "nozzle_dev_pct": 12
+  },
+  "harvest": {
+   "lot_id": "L760",
+   "block_id": "B31",
+   "first_pick_date": "2024-05-24",
+   "bins": 28,
+   "residue_test": {
+    "sampled": true,
+    "result_date": "2024-05-27",
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "above_25_borderline",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "expired_under_30d_high_dev",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 2,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "breached_long",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "expired_under_30d_high_dev",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 8,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "hold_and_test",
+   "second": "release_lot",
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 147,
+ "deciding": {
+  "phi_cleared": "FUN-D sprayed 2024-05-10 with phi_days 14 and first pick 2024-05-24 is exactly 14 days, so inclusive vs exclusive counting decides it. INS-C clears with 1 day to spare.",
+  "next_step": "Residue test is below limit (release), but calibration_valid_to 2024-04-20 is expired before the sprays and nozzle_dev_pct is 12, with the interval on the boundary (hold and test).",
+  "finding_class": "Identifiers match, the crop is approved, app counts are in limits, and INS-C's high rate has a minor use authorisation ref, so the sections agree and there is no finding.",
+  "reversal_time": "The residue result is already in and below limit, so any hold could be lifted within a day or take about a week to re-verify calibration.",
+  "rate_overrun": "INS-C computes 3.8 kg / 3.0 ha = 1.27 kg/ha against max 1.0 (about 27% over); the MU-2290 authorisation's rate is not given. This sits at the 25% boundary of levels 2 and 3."
+ },
+ "request": "rec-F426-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013776
+}

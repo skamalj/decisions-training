@@ -1,0 +1,182 @@
+{
+ "id": "F404-0015",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "U2",
+   "date": "2024-05-20",
+   "age_band": "under_2",
+   "ratio_rule": "1:3",
+   "places": 24
+  },
+  "children": {
+   "booked": 21,
+   "slots": [
+    {
+     "t": "09:00",
+     "in": 21
+    },
+    {
+     "t": "10:30",
+     "in": 21
+    },
+    {
+     "t": "10:45",
+     "in": 21
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S1",
+    "q": 3,
+    "counts": true,
+    "end": "11:00"
+   },
+   {
+    "id": "S2",
+    "q": 3,
+    "counts": true,
+    "end": "11:00"
+   },
+   {
+    "id": "S3",
+    "q": 3,
+    "counts": true,
+    "end": "11:00"
+   },
+   {
+    "id": "S4",
+    "q": 3,
+    "counts": true,
+    "end": "11:00"
+   },
+   {
+    "id": "S5",
+    "q": 3,
+    "counts": true,
+    "end": "11:00"
+   },
+   {
+    "id": "S8",
+    "q": 3,
+    "counts": true,
+    "end": "11:00"
+   },
+   {
+    "id": "S9",
+    "q": 6,
+    "counts": true,
+    "end": "11:00"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S1",
+    "in": "08:58"
+   },
+   {
+    "id": "S2",
+    "in": "09:00"
+   },
+   {
+    "id": "S3",
+    "in": "09:01"
+   },
+   {
+    "id": "S4",
+    "in": "08:55"
+   },
+   {
+    "id": "S5",
+    "in": "09:00"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F1",
+    "room": "U2",
+    "from": "09:00",
+    "to": "10:45",
+    "by": "mgr"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 1
+  }
+ },
+ "factors": {
+  "age_band": "under_2",
+  "children_peak": 21,
+  "staff_signin_variance": "absent",
+  "attendance_overrun": 0,
+  "shortfall_minutes": 119,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "absent",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 1
+ },
+ "factors_sampled": {
+  "age_band": "under_2",
+  "children_peak": 21,
+  "staff_signin_variance": "absent",
+  "attendance_overrun": 0,
+  "shortfall_minutes": 119,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "absent",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 1
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "file_no_action",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "staff_shortfall",
+   "second": null,
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 102,
+ "deciding": {
+  "below_ratio": "21 children need 7 staff. S8 and S9 have no sign-in, leaving 5. The signed floater adds 1 up to 10:45, giving 6 for the last slot, so the room is short only in the final slot, which makes the answer arguable.",
+  "disposition": "The signed floater cover for the same room covers nearly all of the gap, so the room is treated as filed with no further action. Other readings are possible but less well supported.",
+  "primary_cause": "Two rota staff (S8 and S9) have no sign-in, so staff on duty were below rota. The booked count equals the peak, so there is no overrun.",
+  "shortfall_duration": "The floater covers 09:00 to 10:45 and the gap runs to 11:00, so the uncovered time is about 15 minutes, which is at the boundary of level 1.",
+  "breach_severity": "Even with the floater, only 6 staff are eligible for 21 children, leaving 3 beyond cover. In the uncovered final slot, 5 eligible leaves 6 beyond cover. These are the two readings, level 2 or level 3."
+ },
+ "request": "rec-F404-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013374
+}

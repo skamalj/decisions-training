@@ -1,0 +1,162 @@
+{
+ "id": "F425-0017",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "producer_code": "1UK-9B03",
+   "method": 1,
+   "lay_dates": [
+    "2024-06-05",
+    "2024-05-29"
+   ],
+   "declared_eggs": 2400,
+   "trays": 79
+  },
+  "grading_run": {
+   "run_start": "2024-06-09T07:00",
+   "run_end": "2024-06-09T09:00",
+   "eggs_in": 2388,
+   "by_size": {
+    "S": 160,
+    "M": 900,
+    "L": 920,
+    "XL": 361
+   },
+   "outgrades": {
+    "cracks": 30,
+    "dirties": 8,
+    "blood_spots": 4,
+    "leakers": 3,
+    "misshapen": 2
+   },
+   "class_a_total": 2341
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-02-20",
+    "interval_days": 90
+   },
+   "candling_sample": {
+    "sampled_at": "2024-06-09T06:30",
+    "n": 100
+   },
+   "scale_check": {
+    "ok": true
+   },
+   "store_temp": {
+    "minutes_above_limit": 14,
+    "max_c": 14.2,
+    "defrost_logged": false
+   }
+  },
+  "flock": {
+   "age_weeks": 43,
+   "last_swab": {
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2024-06-10",
+   "packs": [
+    {
+     "size": "S",
+     "count": 160
+    },
+    {
+     "size": "M",
+     "count": 900
+    },
+    {
+     "size": "L",
+     "count": 920
+    },
+    {
+     "size": "XL",
+     "count": 361
+    }
+   ],
+   "stamp_code": "1UK-9B03",
+   "best_before": "2024-07-03",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 12,
+  "mixed_lay_dates": true,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 1.97,
+  "dominant_defect": "cracks",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "brief",
+  "temp_mitigated": false,
+  "flock_age_weeks": 43
+ },
+ "factors_sampled": {
+  "count_gap_size": "large",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 10,
+  "mixed_lay_dates": true,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 11.57,
+  "dominant_defect": "cracks",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "brief",
+  "temp_mitigated": false,
+  "flock_age_weeks": 43
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "downgrade_class_b",
+   "second": null,
+   "targets": []
+  },
+  "anomaly_cause": {
+   "clarity": "contested",
+   "target": "equipment_fault",
+   "second": "count_error",
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 72,
+ "deciding": {
+  "counts_reconcile": "declared_eggs 2400 against eggs_in 2388 is a 0.5% difference, right at the threshold.",
+  "batch_disposition": "packed 12 days after oldest lay with all checks present and stamp matching, so it fails Class A timing but is fit for processing.",
+  "anomaly_cause": "calibration overdue since 2024-05-20 with no recheck and cracks dominant (equipment_fault), against the declared vs grader count difference (count_error).",
+  "lay_to_pack": "oldest lay 2024-05-29, pack_date 2024-06-10 gives 12 days.",
+  "outgrade_share": "47 outgrades of 2388 eggs_in is 1.97%, just under the 2% boundary."
+ },
+ "request": "rec-F425-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011715
+}

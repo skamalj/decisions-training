@@ -1,0 +1,117 @@
+{
+ "id": "F438-0016",
+ "family": "F438",
+ "state": {
+  "coded_record": {
+   "primary_dx": {
+    "code": "K35.3"
+   },
+   "secondary_dx": [
+    "E11.9",
+    "I10",
+    "N18.3",
+    "J44.9",
+    "D64.9"
+   ]
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "K35.8"
+   },
+   "comorbidities": [
+    "E11.9",
+    "I10",
+    "N18.4",
+    "J44.1",
+    "E78.0"
+   ],
+   "documents_present": {
+    "pathology_report": false
+   }
+  },
+  "grouping": {
+   "hrg_submitted": "GA11A",
+   "hrg_regrouped": "GA11A"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "pathology_report",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.22,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "pathology_report",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.22,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "error_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unsupported_billable_code = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 42,
+ "deciding": {
+  "primary_supported": "K35.3 vs K35.8 share three characters; only the fourth differs, so the primary is broadly supported with some doubt.",
+  "hrg_shift": "hrg_submitted and hrg_regrouped are both GA11A, but the missing pathology report leaves some doubt.",
+  "next_step": "Plan fixes accept_as_coded; record shows a same-HRG outcome and no open query.",
+  "error_count": "Four secondary mismatches (N18.3/N18.4, J44.9/J44.1, D64.9 uncoded in documentation, E78.0 uncoded) plus the primary slip give four or more errors.",
+  "error_severity": "Primary specificity mismatch (level 3 view) against secondary-only errors with HRG unchanged (level 2 view) hold it contested."
+ },
+ "request": "rec-F438-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009282
+}

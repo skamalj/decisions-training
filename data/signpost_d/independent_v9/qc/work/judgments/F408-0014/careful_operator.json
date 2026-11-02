@@ -1,0 +1,35 @@
+{
+ "persona": "careful_operator",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "crew_missed": {
+   "true": 0.1,
+   "false": 0.9
+  },
+  "report_matches": {
+   "true": 0.88,
+   "false": 0.12
+  },
+  "next_step": {
+   "close_no_action": 0.25,
+   "request_evidence": 0.15,
+   "return_conditional": 0.45,
+   "schedule_return": 0.05,
+   "escalate_supervisor": 0.1
+  },
+  "return_urgency": {
+   "0": 0.6,
+   "1": 0.25,
+   "2": 0.12,
+   "3": 0.03
+  },
+  "repeat_failures": {
+   "0": 0.01,
+   "1": 0.09,
+   "2": 0.4,
+   "3": 0.5
+  }
+ },
+ "cost": 0.000517
+}

@@ -1,0 +1,162 @@
+{
+ "id": "F427-0001",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V101",
+   "visit_date": "2024-06-11",
+   "surveyor_grade": "senior"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 3,
+   "dams_total": 2
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "W1",
+     "depth_cm": 42
+    },
+    {
+     "id": "W2",
+     "depth_cm": 45
+    },
+    {
+     "id": "W3",
+     "depth_cm": 44
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 18,
+     "prev_depth_cm": 19
+    }
+   ],
+   "rain_30d_pct_normal": 78
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D1",
+     "pool_level_cm": 30,
+     "design_pool_cm": 30,
+     "defect_code": "OK"
+    },
+    {
+     "dam_id": "D2",
+     "pool_level_cm": 27,
+     "design_pool_cm": 30,
+     "defect_code": "SEEP",
+     "remark": "Water leaking round east end, pool slightly low."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 6
+    },
+    {
+     "q": 2,
+     "score": 5
+    }
+   ],
+   "photos_uploaded": 8,
+   "photos_expected": 8
+  },
+  "notes": {
+   "surveyor_note": "Minor leak, nothing to worry about.",
+   "prior_visits": [
+    {
+     "date": "2023-09-02",
+     "dam_id": "D2",
+     "entry": "breach"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 1.0,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage with pool slightly below design",
+  "water_table_offset_cm": -18.7,
+  "rainfall_pct_normal": 78.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.4,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": -11.79,
+  "rainfall_pct_normal": 41.82,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 3,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "recheck_next_visit",
+   "second": "request_data",
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "leaning",
+   "target": "well_below",
+   "second": null,
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 83,
+ "deciding": {
+  "dam_caused_drop": "Control well steady (18 vs 19) and rain 78% of normal, while the site is deep and D2 leaks with its pool 3 cm low and one prior breach. Mildly favours dams, but the dry-ish month keeps weather plausible.",
+  "next_step": "D2 seepage with low pool and no work order suggests a targeted recheck, but the prior breach and low pool could justify a data request or repair.",
+  "hydro_state": "Mean depth 43.7 cm against floor 25 cm is about 18.7 cm below the floor, so well below, though close enough to 15 for slight doubt.",
+  "dam_severity": "D2 is coded SEEP, but its pool of 27 against a design of 30 sits on the line between seepage and partial breach.",
+  "evidence_completeness": "3 of 3 dipwells, 8 of 8 photos, quadrats and the dam log are all present, so all four elements are in full."
+ },
+ "request": "rec-F427-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013066
+}

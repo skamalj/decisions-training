@@ -1,0 +1,153 @@
+{
+ "id": "F414-0040",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "RK-0907",
+   "equip_type": "spring_rocker",
+   "crit_fall_height_m": 0.8,
+   "surf_type": "rubber",
+   "variance_ref": {
+    "ref": "V-118",
+    "expires": "2026-01-31"
+   }
+  },
+  "inspection": {
+   "insp_date": "2024-08-14",
+   "insp_grade": "routine_visual",
+   "fall_height_m": 1.0,
+   "surf_type_found": "rubber",
+   "surf_depth_mm": 46,
+   "surf_req_table": [
+    {
+     "max_h": 1.0,
+     "type": "rubber",
+     "min_depth_mm": 50
+    }
+   ],
+   "probe_results": [],
+   "findings": [
+    {
+     "defect_code": "FT1",
+     "component_id": "C3",
+     "injury_mech": "minor"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W31",
+    "asset_id": "RK-0907",
+    "component_id": "C4",
+    "defect_ref": "D5",
+    "status": "closed",
+    "closed_date": "2024-08-15"
+   },
+   {
+    "wo_id": "W32",
+    "asset_id": "RK-0907",
+    "component_id": "C3",
+    "defect_ref": "FT1",
+    "status": "open",
+    "temp_measure": {
+     "type": "warning_sign",
+     "date": "2024-08-14"
+    }
+   }
+  ],
+  "site": {
+   "usage_level": "high",
+   "incident_reports_90d": 2
+  },
+  "history": [
+   {
+    "date": "2024-02-05",
+    "grade": "annual_main",
+    "defect_refs": [
+     "D5"
+    ],
+    "component_results": {
+     "C4": "fail"
+    }
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "moderate",
+  "surfacing_depth_margin_mm": -4.0,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": "0 (order closed one day after the visit)",
+  "work_orders_closed_fraction": "0 at the visit date",
+  "temporary_measure_in_place": true,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "high",
+  "incident_reports_90d": 2
+ },
+ "factors_sampled": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "moderate",
+  "surfacing_depth_margin_mm": -3.64,
+  "worst_defect_class": "no_mechanism",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.16,
+  "temporary_measure_in_place": true,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "high",
+  "incident_reports_90d": 2
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "contested",
+   "target": "sign_off",
+   "second": "hold",
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "prior_defects_cleared": "D5 order W31 is status closed, but closed_date 08-15 follows the 08-14 visit and no follow-up check confirms C4. Closed per the log, yet unverified.",
+  "surfacing_adequate": "Depth 46 mm against a 50 mm minimum at the measured 1.0 m (register 0.8 m): a few mm short, though a different height could change the requirement.",
+  "asset_disposition": "Use can continue with a warning sign on C3 and no head_neck failure, but D5 closure is unconfirmed and the surfacing is slightly short. Sign-off and hold are both defensible.",
+  "remedial_progress": "W31 closed after insp_date and W32 is open, so as of the visit nothing is closed; the later closure keeps doubt alive.",
+  "hazard_severity": "FT1 on C3 has injury_mech minor with only a warning sign in place; whether that is a cut-level hazard (level 2) or merely low (level 1) is open."
+ },
+ "request": "rec-F414-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013525
+}

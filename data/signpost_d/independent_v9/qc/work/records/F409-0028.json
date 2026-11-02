@@ -1,0 +1,117 @@
+{
+ "id": "F409-0028",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "Tom Reyes",
+   "submitted_on": "2024-07-02",
+   "app_type": "change_of_vehicle"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2024-05-28",
+     "address_line": "9 Elm Close",
+     "verified": null
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "BN18 QWE",
+   "keeper_name": "Tom Reyes"
+  },
+  "request": {
+   "address": "9 Elm Court",
+   "plate_entered": "BN18 QEW"
+  },
+  "account_history": {
+   "live_permits": [
+    1,
+    2,
+    3
+   ],
+   "past_permits": [
+    {
+     "status": "seized",
+     "seize_reason": "sold on"
+    }
+   ],
+   "pcns": []
+  }
+ },
+ "factors": {
+  "application_type": "change_of_vehicle",
+  "address_match_level": "different_street",
+  "proof_age_days": 35,
+  "docs_missing": 3,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 3,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "change_of_vehicle",
+  "address_match_level": "different_street",
+  "proof_age_days": 35,
+  "docs_missing": 1,
+  "keeper_mismatch": "plate_typo",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 3,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve_temporary",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "balanced",
+   "target": "no_issue",
+   "second": "household_cap",
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "residency_shown": "Bill is unverified (null) and Elm Close vs Elm Court is a near-match street difference.",
+  "disposition": "Temporary issue leans on an exception covering the cap, but evidence is incomplete.",
+  "main_issue": "Three live permits exceed the cap, but an approved exception is not shown here, balancing no_issue vs household_cap.",
+  "misuse_strength": "Past permit seized with reason 'sold on'.",
+  "document_gaps": "Only one doc, unverified; required set for change of vehicle unclear, so two or three missing."
+ },
+ "request": "rec-F409-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006477
+}

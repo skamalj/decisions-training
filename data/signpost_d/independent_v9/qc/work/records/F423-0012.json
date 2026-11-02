@@ -1,0 +1,136 @@
+{
+ "id": "F423-0012",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-20418",
+   "product": "carton",
+   "stock_spec": "CB-300",
+   "run_qty": 8000,
+   "overs_pct": 4.09,
+   "due_date": "2025-04-30",
+   "customer_tier": "key_account",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "CP-7720",
+   "ok_sheet_no": 9,
+   "signed_at": null,
+   "customer_present": true,
+   "concession": {
+    "accepted_max_de": 4.5
+   }
+  },
+  "colour_readings": {
+   "instrument": "SP-1",
+   "calibrated_on": "2025-02-14",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 3.8
+    },
+    {
+     "ink": "M",
+     "delta_e": 4.7
+    },
+    {
+     "ink": "Y",
+     "delta_e": 2.2
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "pair": "C/M",
+     "offset_mm": 0.31,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P5",
+   "stock_loaded": "CB-300",
+   "first_production_at": null,
+   "sheets_production": 0,
+   "sheets_makeready": 340,
+   "stoppages": [
+    "wash"
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "multiple_over",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 0,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 4.09,
+  "register_offset_mm": 0.31,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 67,
+  "customer_tier": "key_account",
+  "prior_stoppages": 1
+ },
+ "factors_sampled": {
+  "colour_deviation": "multiple_over",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 1220,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 4.09,
+  "register_offset_mm": 0.31,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 67,
+  "customer_tier": "key_account",
+  "prior_stoppages": 1
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_manager",
+   "second": "hold_for_signoff",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 62,
+ "deciding": {
+  "colour_in_tolerance": "Patch M reads 4.7, above even the concession accepted_max_de 4.5; C at 3.8 passes only under the concession.",
+  "run_before_signoff": "signed_at is null, but sheets_production is 0 and first_production_at is null, so no production sheets were logged.",
+  "next_step": "No signature is on file, which points to holding. The in-image 0.31 mm offset and the over-limit M patch could instead call for a manager decision.",
+  "staff_effort": "The signature chase and the colour and register correction add up to roughly one to a few days. Whether it stays under or goes past a day depends on how quickly the customer signs.",
+  "scrap_exposure": "sheets_production is 0, so no suspect production sheets exist yet, but the run could start with colour and register already failing."
+ },
+ "request": "rec-F423-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010077
+}

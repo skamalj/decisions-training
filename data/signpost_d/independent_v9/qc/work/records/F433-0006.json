@@ -1,0 +1,131 @@
+{
+ "id": "F433-0006",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H17",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "pulse_bpm": 58,
+     "result": "pass"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "09:10"
+  },
+  "vet_card": {
+   "arrival_copied": "09:11",
+   "presented_at": "09:28",
+   "pulse_bpm": 62,
+   "cri": {
+    "first_bpm": 52,
+    "second_bpm": 57.7
+   },
+   "metabolic": {
+    "mm": "pale",
+    "crt_s": 3
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 0
+    },
+    {
+     "surface": "soft",
+     "grade": 0
+    }
+   ],
+   "vet_signed_at": "09:25"
+  },
+  "notes": {
+   "rider_note": "nearly lost a shoe on the road section"
+  }
+ },
+ "factors": {
+  "pulse_status": "met_near_limit",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "regular",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 5.66,
+  "missing_items": 0,
+  "out_of_sequence": true,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "factors_sampled": {
+  "pulse_status": "not_met",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "regular",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 5.66,
+  "missing_items": 3,
+  "out_of_sequence": true,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "clear_to_continue",
+   "second": "eliminate_ftq",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "clear",
+   "target": "ftq_metabolic",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "welfare_risk": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "pulse_met": "Presented 09:28 is inside the 20 min window from 09:10 (copied 09:11 also fits) and pulse 62 is under the 64 limit; only the close margin leaves doubt.",
+  "next_step": "Pulse and gait are fine, but pale mucous membranes, CRT 3 s and a CRI rise of about 5.7 bpm make continuing versus eliminating a close call.",
+  "outcome_code": "Metabolic parameters (pale mm, CRT 3 s, CRI rise) fail while both trot-ups are grade 0 (regular), so only the metabolic code fits.",
+  "welfare_risk": "Two or more parameters are outside limits (membranes/CRT and CRI rise) and none is critical, which puts this at level 2.",
+  "record_completeness": "All readings and the signature are present, but vet_signed_at 09:25 is earlier than presented_at 09:28; whether that counts as out of sequence is the balance."
+ },
+ "request": "rec-F433-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011353
+}

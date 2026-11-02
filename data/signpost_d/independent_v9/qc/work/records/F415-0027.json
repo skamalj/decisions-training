@@ -1,0 +1,144 @@
+{
+ "id": "F415-0027",
+ "family": "F415",
+ "state": {
+  "site": {
+   "id": "TB-07",
+   "closures": []
+  },
+  "shift": {
+   "date": "2024-06-02",
+   "start": "08:00",
+   "end": "15:00",
+   "sched_slots": [
+    "08:00",
+    "09:30",
+    "11:00",
+    "12:30",
+    "14:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "status": "done",
+    "end": "08:20",
+    "photo_ref": "P1"
+   },
+   {
+    "slot": "09:30",
+    "status": "done",
+    "end": "09:50"
+   },
+   {
+    "slot": "11:00",
+    "status": "done",
+    "end": "11:20"
+   },
+   {
+    "slot": "12:30",
+    "status": "done",
+    "end": "12:50"
+   },
+   {
+    "slot": "14:00",
+    "status": "done",
+    "end": "14:20",
+    "photo_ref": "P5"
+   }
+  ],
+  "faults": [],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2024-06-02T14:20"
+  },
+  "history": {
+   "defaults": 3
+  }
+ },
+ "factors": {
+  "scheduled_slots": 5,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "none",
+  "fault_open_minutes": 0.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 3
+ },
+ "factors_sampled": {
+  "scheduled_slots": 5,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "spillage",
+  "fault_open_minutes": 346.45,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 3
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 44,
+ "deciding": {
+  "missed_clean": "All 5 scheduled slots have visits with status done.",
+  "sign_off_valid": "The signer is a supervisor, but signed_at 14:20 equals the final visit end 14:20 rather than falling clearly after it.",
+  "next_step": "All slots are done, no faults, and a supervisor sign-off is present, so nothing needs follow-up.",
+  "staff_effort": "Nothing is outstanding on the log.",
+  "fault_exposure": "The faults list is empty."
+ },
+ "request": "rec-F415-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008749
+}

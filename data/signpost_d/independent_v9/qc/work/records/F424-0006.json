@@ -1,0 +1,129 @@
+{
+ "id": "F424-0006",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B-2291",
+   "vessel_id": "FV3",
+   "volume_hl": 20,
+   "yeast_strain": "US-05",
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 22
+  },
+  "readings": [
+   {
+    "ts": "2024-05-10",
+    "gravity_sg": 1.0135,
+    "temp_c": 23.5
+   },
+   {
+    "ts": "2024-05-11",
+    "gravity_sg": 1.0135,
+    "temp_c": 21
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-05-12",
+    "vessel_id": "FV5",
+    "type": "blend",
+    "note": "Blended into FV5 before QA sign-off."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B-2291",
+   "diacetyl_mgl": 0.11,
+   "micro_plate": {
+    "result": "positive",
+    "cfu_ml": 300
+   },
+   "abv_pct": null,
+   "pending": true
+  },
+  "release_request": {
+   "vessel_id": "FV3",
+   "volume_hl": 20,
+   "note": "Rush, truck waiting."
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.11,
+  "discrepancy_count": 3,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": true,
+  "release_pressure": "rush",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.11,
+  "discrepancy_count": 0,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": true,
+  "release_pressure": "rush",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contamination_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "contested",
+   "target": "release",
+   "second": "release_conditional",
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (hard_limit_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 50,
+ "deciding": {
+  "terminal_gravity": "Two readings at 1.0135 are in band, but a 23.5C reading above the 22C strain limit and the breach cast doubt.",
+  "contamination_supported": "Positive plate at 300 cfu/ml with no negative retest.",
+  "batch_disposition": "Contested between release and release_conditional; the plate and blend breach would argue against either, but the plan keeps these two.",
+  "deviation_severity": "Blend into FV5 before QA sign-off is a hard-limit breach.",
+  "record_discrepancies": "Blend into FV5 versus vessel FV3 plus pending lab fields; count sits between 2 and 3 boundaries."
+ },
+ "request": "rec-F424-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005385
+}

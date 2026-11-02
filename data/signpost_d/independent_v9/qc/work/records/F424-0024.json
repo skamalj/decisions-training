@@ -1,0 +1,119 @@
+{
+ "id": "F424-0024",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2410",
+   "vessel_id": "FV6",
+   "volume_hl": 20,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.012
+  },
+  "readings": [
+   {
+    "ts": "2024-06-20",
+    "gravity_sg": 1.0125
+   },
+   {
+    "ts": "2024-06-21",
+    "gravity_sg": 1.0125
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2410",
+   "diacetyl_mgl": 0.12,
+   "micro_plate": {
+    "result": "negative"
+   }
+  },
+  "release_request": {
+   "volume_hl": 19.8,
+   "vessel_id": "FV6"
+  }
+ },
+ "factors": {
+  "gravity_status": "stuck_high (marginally above band)",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.12,
+  "discrepancy_count": 0,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.12,
+  "discrepancy_count": 4,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "rush",
+  "operator_note_tone": "reassuring"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contamination_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 34,
+ "deciding": {
+  "terminal_gravity": "Two stable readings of 1.0125 sit just above the 1.012 maximum, so they are outside the band.",
+  "contamination_supported": "The plate is negative and there are no sensory notes. The planned 'true' could not be reconciled with a routine release, so this record does not support contamination.",
+  "batch_disposition": "Plate negative, no pending results and no breach, so package as requested.",
+  "deviation_severity": "The gravity is only marginally above the limit and no other reading or lab value is out of range.",
+  "record_discrepancies": "Volume 20 vs 19.8 is within tolerance and vessel and batch_ref agree, so there are none."
+ },
+ "request": "rec-F424-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01201
+}

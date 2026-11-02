@@ -1,0 +1,138 @@
+{
+ "id": "F435-0035",
+ "family": "F435",
+ "state": {
+  "event": {
+   "phase": "post_event",
+   "doors_open": "2025-09-05T19:00"
+  },
+  "licence": {
+   "base_limit": 700,
+   "variation": {
+    "ref": "V-3",
+    "new_limit": 800,
+    "status": "approved",
+    "approved_on": "2025-09-03"
+   },
+   "stewards_required": 22,
+   "exit_routes": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 800,
+   "issued": 832
+  },
+  "ingress": {
+   "device_status": "ok",
+   "raw_peak": 888
+  },
+  "stewarding": {
+   "signed_in": 20
+  },
+  "exit_checks": [
+   {
+    "route_id": "A",
+    "checked_at": "2025-09-05T18:10",
+    "status": "clear"
+   },
+   {
+    "route_id": "B",
+    "checked_at": "2025-09-05T18:15",
+    "status": "clear"
+   },
+   {
+    "route_id": "C",
+    "checked_at": "2025-09-05T18:20",
+    "status": "clear"
+   },
+   {
+    "route_id": "D",
+    "checked_at": "2025-09-05T19:00",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.11,
+  "counter_status": "ok",
+  "counter_inflation": 0.06,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 1.04,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.09,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.11,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.06,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.85,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.07,
+  "relief_called": false,
+  "roster_missing": true,
+  "exits_unconfirmed": 1,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "conditional_sign_off",
+   "second": "restrict_entry",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "ticket_overissue",
+   "second": null,
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "verified_exceedance": "The counter is ok, so raw_peak 888 is verified. The variation was approved on 09-03, before doors, so the effective limit is 800 and the peak is clearly above it.",
+  "disposition": "The breach is verified but the event is already post_event and the exit and steward gaps are small. A conditional sign-off with follow-up is defensible, and so is a restriction of entry.",
+  "discrepancy_source": "Issued 832 exceeds zone_limit_used 800, which matches the effective limit, so over-issue is the main source. The occupancy overshoot also sits beyond the ticket count.",
+  "steward_shortfall": "signed_in 20 against required 22 is 9.1% short, just under the 10% line between Slight and Marked.",
+  "unconfirmed_exits": "Route D was checked clear at exactly 19:00, the doors_open time. A, B and C were clear beforehand, so D is borderline on whether it was before doors."
+ },
+ "request": "rec-F435-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012465
+}

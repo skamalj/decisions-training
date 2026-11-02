@@ -1,0 +1,139 @@
+{
+ "id": "F429-0013",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 150,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 95.0,
+    "action_m": 95.6
+   },
+   "readings": [
+    {
+     "level_m": 95.3,
+     "datum": "site"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "2024-03-09T06:00",
+    "open_after_m": 0.8
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 0.81
+    }
+   ],
+   "calc_peak_m3s": 62,
+   "gauged_peak_m3s": 68,
+   "tailwater_m": [
+    1.9,
+    1.9
+   ]
+  },
+  "instruments": {
+   "piezo_kpa": [
+    {
+     "v": 92,
+     "alert_kpa": 75,
+     "t": "2024-03-09T07:00"
+    }
+   ],
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "2024-03-09T10:00"
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "2024-03-09T05:30",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 9.73,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 9.73,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "query_operator",
+   "second": "accept_log",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "within_licence": "Both peaks, 62 and 68, are well under 150, but they differ by about 10%.",
+  "gates_reconciled": "The opening matches within 0.01 m, but the calculated and gauged peaks differ by about 10%.",
+  "next_step": "Inspection is done, but the piezometer rise has no tailwater explanation, so a query is arguable against accepting.",
+  "trigger_tier": "Level 95.3 m is between alert and action, but the unexplained piezometer rise 92 vs 75 kPa may count as a higher tier.",
+  "parties_needed": "The unexplained piezometer rise over its alert needs several teams: operator, geotechnical, senior engineer, downstream notification."
+ },
+ "request": "rec-F429-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005616
+}

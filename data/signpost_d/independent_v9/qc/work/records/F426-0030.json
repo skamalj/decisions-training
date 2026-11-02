@@ -1,0 +1,118 @@
+{
+ "id": "F426-0030",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B12",
+   "crop": "pear",
+   "planted_area_ha": 20
+  },
+  "applications": [
+   {
+    "date": null,
+    "product_code": "AZ5",
+    "qty_applied": 12.5,
+    "qty_unit": "L",
+    "area_treated_ha": 10
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "AZ5",
+    "max_rate_per_ha": 1,
+    "rate_unit": "L",
+    "phi_days": 21,
+    "approved_crops": [
+     "apple"
+    ]
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "S1"
+  },
+  "harvest": {
+   "block_id": "B13",
+   "first_pick_date": "2024-03-01",
+   "residue_test": {
+    "sampled": true,
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "app_date_missing",
+  "rate_overrun_band": "25_boundary",
+  "partial_block_spray": true,
+  "clerical_mismatch": "lot_block_id_mismatch",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "missing",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": true,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "breached_short",
+  "rate_overrun_band": "none",
+  "partial_block_spray": true,
+  "clerical_mismatch": "lot_block_id_mismatch",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "missing",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": true,
+  "num_applications": 9,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "balanced",
+   "target": "label_deviation",
+   "second": "clerical_only",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "phi_cleared": "The only application has a null date, so the 21-day phi_days to the first pick on 2024-03-01 can't be shown. The interval is unconfirmed.",
+  "next_step": "The residue test is sampled and below limit, which leans toward release. This is despite the null spray date and the off-label crop.",
+  "finding_class": "The crop 'pear' is absent from approved_crops ['apple'] and the rate is over the maximum, which is label_deviation. The harvest block_id B13 versus block B12 is a one-character clerical mismatch that could also be the main issue.",
+  "reversal_time": "The lot was picked off-label with an unconfirmed interval. Whether this can be undone within three months or not is arguable. The clear residue test lessens the harm.",
+  "rate_overrun": "12.5 L over the 10 ha treated is 1.25 L/ha against a max of 1, exactly 25% over. This is on the level 2 and level 3 boundary. Dividing by the planted 20 ha would give 0.625, a decoy."
+ },
+ "request": "rec-F426-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010079
+}

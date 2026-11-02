@@ -1,0 +1,138 @@
+{
+ "id": "F423-0009",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-4420",
+   "product_type": "poster",
+   "stock_spec": "GL200",
+   "run_qty": 40000,
+   "overs_pct": 1.95,
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "P-4420",
+   "ok_sheet_no": 61,
+   "signed_at": "2025-08-19T06:15",
+   "concession": {
+    "accepted_max_de": 3.8
+   }
+  },
+  "colour_readings": {
+   "instrument": "SP-1",
+   "calibrated_on": "2025-08-19",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 1.9
+    },
+    {
+     "ink": "M",
+     "delta_e": 2.2
+    },
+    {
+     "ink": "Y",
+     "delta_e": 2.4
+    },
+    {
+     "ink": "K",
+     "delta_e": null
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "unit_pair": "1-2",
+     "offset_mm": 0.08,
+     "in_image": false
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P4",
+   "stock_loaded": "GL200",
+   "first_production_at": "2025-08-19T06:30",
+   "sheets_production": 1660,
+   "sheets_makeready": 140,
+   "stoppages": []
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": true,
+  "readings_completeness": "some_patch_null",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 1660,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.95,
+  "register_offset_mm": 0.08,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 0,
+  "customer_tier": "standard",
+  "prior_stoppages": 0
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": true,
+  "readings_completeness": "section_null",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 1660,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.95,
+  "register_offset_mm": 0.08,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 0,
+  "customer_tier": "standard",
+  "prior_stoppages": 0
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "adjust_and_recheck",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "colour_in_tolerance": "Three patches 1.9 to 2.4 are under the limit, but the K patch delta_e is null, so the sheet is not fully measured.",
+  "run_before_signoff": "signed_at 06:15 precedes first_production_at 06:30; 1660 sheets came after signature.",
+  "next_step": "The null K delta_e is a specific missing reading; re-pull and measure.",
+  "staff_effort": "One re-pull and a remeasure takes under an hour, though a failure on K might lead to press adjustment.",
+  "scrap_exposure": "1660 sheets are printed against a 780-sheet allowance (1.95% of 40000) and are only suspect if K fails; unknown, and well below 10% of the run."
+ },
+ "request": "rec-F423-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009152
+}

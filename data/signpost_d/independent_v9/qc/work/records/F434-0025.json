@@ -1,0 +1,111 @@
+{
+ "id": "F434-0025",
+ "family": "F434",
+ "state": {
+  "post": {
+   "km_marker": 30,
+   "on_post_from": "09:45",
+   "off_post_at": "13:10:20"
+  },
+  "incidents": [
+   {
+    "time": "11:40",
+    "type": "mechanical",
+    "bibs": [
+     88
+    ],
+    "medic_called": true,
+    "medic_cancelled": true,
+    "rider_status": "continued"
+   }
+  ],
+  "control_record": {
+   "incident_log": [
+    {
+     "time": "11:42",
+     "km": 30,
+     "type": "vehicle_on_course",
+     "bibs": []
+    }
+   ]
+  },
+  "sweep": {
+   "passed_at": "13:10:00"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": "none",
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "none",
+  "control_log_mismatch": "incident_missing_from_post",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 27.12,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "query_marshal",
+   "second": null,
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "balanced",
+   "target": "mechanical_only",
+   "second": "course_intrusion",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "coverage_held": "Signed in from 09:45, and off_post_at 13:10:20 is after sweep passed_at 13:10:00.",
+  "next_step": "The control log has a vehicle_on_course entry at km 30 that is absent from the post list, a clerical gap the post marshal can explain.",
+  "incident_class": "The post logs a mechanical stop, while control logs a vehicle on course with no bibs. It may be an official vehicle, so mechanical_only and course_intrusion are both plausible.",
+  "reversal_time": "Little lasting harm is recorded, but the open vehicle entry leaves it unclear whether the outcome lasts months, so level 2 and 3 are both plausible.",
+  "consequence_severity": "The medic was called then cancelled and the rider continued (level 1), but whether the medic attended (level 2) is not stated."
+ },
+ "request": "rec-F434-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010094
+}

@@ -1,0 +1,127 @@
+{
+ "id": "F420-0002",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "AKE30417",
+   "flight": "LH7421",
+   "contour_max_cm": 160,
+   "tare_kg": 95,
+   "planned_gross_kg": 1000,
+   "straps_required": 4
+  },
+  "manifest_lines": [
+   {
+    "awb": "020-61184405",
+    "pcs": 14,
+    "weight_kg": 420
+   },
+   {
+    "awb": "020-61184416",
+    "pcs": 8,
+    "weight_kg": 310
+   },
+   {
+    "awb": "020-61184427",
+    "pcs": 5,
+    "weight_kg": 175
+   }
+  ],
+  "build_measured": {
+   "scale_gross_kg": 990,
+   "max_height_cm": 142,
+   "pcs_counted": {
+    "020-61184405": 14,
+    "020-61184416": 9,
+    "020-61184427": 5
+   },
+   "straps_fitted": 3,
+   "net_fitted": true,
+   "uld_serial_scanned": "AKE30417",
+   "built_utc": "2025-04-02T14:10:00Z"
+  },
+  "dg_notoc": null,
+  "approvals": {
+   "part_shipments": [],
+   "contour_waivers": []
+  },
+  "checks_log": {
+   "scale_cal_due": "2025-09-30",
+   "reweigh": null
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": -1.0,
+  "piece_count_gap": "-1 (one extra piece on one AWB)",
+  "part_shipment_on_file": false,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "one_strap_short",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 103,
+  "prior_rebuilds": 2
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -3.39,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "line_missing",
+  "securing_state": "one_strap_short",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 103,
+  "prior_rebuilds": 2
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "release_conditional",
+   "second": null,
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "contested",
+   "target": "none",
+   "second": "physical_build",
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 81,
+ "deciding": {
+  "pieces_reconciled": "020-61184416 manifests 8 pcs but 9 are counted and there are no part_shipments; this is one extra piece, but small.",
+  "disposition": "straps_fitted 3 against straps_required 4 is a single securing fix, which points to conditional release; the extra piece is the doubt.",
+  "worst_discrepancy": "The strap shortfall and the extra piece are minor and there is no DG or paperwork disagreement, so none and physical_build are both defensible.",
+  "weight_deviation": "Planned 1000 (95 + 905) against scale 990 is exactly 1.0%, at the boundary between levels 0 and 1.",
+  "rework_extent": "The extra piece on 020-61184416 would be removed or repositioned (Partial), alongside the one-strap fix."
+ },
+ "request": "rec-F420-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012911
+}

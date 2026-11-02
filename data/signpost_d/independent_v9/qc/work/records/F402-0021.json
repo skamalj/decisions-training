@@ -1,0 +1,118 @@
+{
+ "id": "F402-0021",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "routine",
+   "site": "knee",
+   "side": "L",
+   "onset": "2025-05-05",
+   "received": "2025-06-02"
+  },
+  "clinical": {
+   "dx": "post_op_knee",
+   "surgery_date": "2025-04-10",
+   "red_flags": [
+    "saddle_anaesthesia"
+   ],
+   "fi": 79,
+   "neuro_signs": {
+    "progression": "worsening"
+   }
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "side": "R",
+    "date": "2025-05-20",
+    "result": "pending"
+   }
+  ],
+  "gp_record": {
+   "falls_3m": 5
+  },
+  "history": {
+   "episodes": 3,
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "saddle_anaesthesia_bladder",
+  "red_flag_mitigated": false,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "neurological",
+  "symptom_duration_weeks": 4,
+  "function_index": 79.08,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "routine",
+  "falls_last_3m": 5,
+  "post_op_days": 53,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 4,
+  "function_index": 79.08,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "routine",
+  "falls_last_3m": 5,
+  "post_op_days": 53,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_lead",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "pathway": {
+   "clarity": "balanced",
+   "target": "specialist_rehab",
+   "second": "self_management",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "red_flag_unresolved": "Saddle anaesthesia flag with worsening neuro signs; only an MRI with result pending, and on the opposite side, so little explains it.",
+  "next_step": "Open saddle anaesthesia flag with worsening progression needs urgent medical review, so escalate despite routine priority.",
+  "pathway": "Post-op knee with neuro signs and 5 falls suggests specialist rehab, but function index 79 makes self-management plausible.",
+  "reversal_time": "A delayed cord or cauda equina problem would take days to weeks to reverse, leaning toward 1-7 days.",
+  "clinical_urgency": "Worsening saddle anaesthesia with a pending MRI is near the 48-hour boundary; the 4-week duration and high function index leave two weeks defensible."
+ },
+ "request": "rec-F402-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00483
+}

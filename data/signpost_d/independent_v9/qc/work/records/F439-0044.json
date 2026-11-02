@@ -1,0 +1,131 @@
+{
+ "id": "F439-0044",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T-8812",
+   "start": "13:00",
+   "end": "13:42",
+   "conditions": "fog"
+  },
+  "candidate": {
+   "attempt": 2,
+   "id_check": true
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "steering",
+     "driving": 6,
+     "serious": 0,
+     "dangerous": 0
+    },
+    {
+     "item": "positioning",
+     "driving": 5,
+     "serious": 0,
+     "dangerous": 0
+    },
+    {
+     "item": "signals",
+     "driving": 3,
+     "serious": 0,
+     "dangerous": 0
+    }
+   ],
+   "driving_fault_total": 15
+  },
+  "outcome": {
+   "result": "fail",
+   "debrief": true,
+   "examiner_note": "Several minor faults; result per sheet.",
+   "examiner_signoff_at": null
+  },
+  "review_trail": {
+   "countersigned_by": "SE03",
+   "upheld_complaints_12m": 1
+  }
+ },
+ "factors": {
+  "fault_profile": "borderline_count",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "signoff_missing",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": true,
+  "note_alignment": "consistent",
+  "examiner_complaints_12m": 1,
+  "post_submission_edit": "no_edit"
+ },
+ "factors_sampled": {
+  "fault_profile": "borderline_count",
+  "result_mismatch": true,
+  "tally_error": true,
+  "documentation_gap": "signoff_missing",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": true,
+  "note_alignment": "consistent",
+  "examiner_complaints_12m": 1,
+  "post_submission_edit": "no_edit"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_complete": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "issue_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 100,
+ "deciding": {
+  "result_supported": "Items sum 14 and total 15 agree within the pass limit, so the recorded outcome follows.",
+  "report_complete": "examiner_signoff_at is null.",
+  "disposition": "Countersigned by senior; a missing timestamp is trivial, file.",
+  "staff_effort": "Nothing to resolve beyond a quick check.",
+  "issue_severity": "No consequential discrepancy; routine report."
+ },
+ "request": "rec-F439-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00438
+}

@@ -1,0 +1,128 @@
+{
+ "id": "F417-0014",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V404",
+   "loa_m": 9.8,
+   "draught_m": 2.1,
+   "draught_src": "owner_declared"
+  },
+  "berth": {
+   "id": "P9",
+   "max_loa_m": 9.6,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 2.0
+  },
+  "booking": {
+   "arrival": "2025-09-01",
+   "departure": "2025-09-04"
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 9.8,
+    "draught_m": null
+   },
+   "insurance_expiry": "2026-04-01",
+   "inspection_date": "2025-08-10"
+  },
+  "account": {
+   "dues_outstanding_gbp": 0,
+   "deposit_paid": true
+  },
+  "history": [
+   {
+    "date": "2024-09-01",
+    "berth": "P9",
+    "incidents": 0
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 0.0,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": -0.1,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 0,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 11.83,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 1.88,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 2789,
+  "payment_plan_approved": false,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 3,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "confirm_allocation",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "ukc_band": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "unresolved_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 25,
+ "deciding": {
+  "length_fits": "Survey loa 9.8 is over max 9.6 but within the 0.5 fender allowance, with no explicit confirmation.",
+  "next_step": "Insurance valid, inspection done, dues zero and deposit paid, and the dates are clean.",
+  "primary_issue": "All sections agree and no document or account item is missing.",
+  "ukc_band": "Owner-declared draught 2.1 exceeds depth 2.0, with no survey draught to confirm it.",
+  "unresolved_count": "Vessel and survey loa are both 9.8 and the account, documents and dates are consistent."
+ },
+ "request": "rec-F417-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010286
+}

@@ -1,0 +1,158 @@
+{
+ "id": "F435-0019",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E7780",
+   "zone_id": "F2",
+   "zone_type": "standing_floor",
+   "doors_open": "2025-10-11T19:00",
+   "check_filed_at": "2025-10-11T21:00",
+   "phase": "live"
+  },
+  "licence": {
+   "base_limit": 1000,
+   "variation": {
+    "ref": "V-221",
+    "new_limit": 1100,
+    "status": "approved",
+    "approved_on": "2025-10-10"
+   },
+   "stewards_required": 40,
+   "exit_routes": [
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 1000,
+   "issued": 1001,
+   "comps_included": 50,
+   "scanned_in": 985
+  },
+  "ingress": {
+   "device_id": "C-09",
+   "device_status": "fault_logged",
+   "raw_peak": 1140,
+   "peak_at": "2025-10-11T20:15",
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 44,
+   "signed_in": 40,
+   "relief": {
+    "called_at": "2025-10-11T19:40",
+    "eta_min": 15
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "X1",
+    "checked_at": "2025-10-11T17:50",
+    "status": "clear"
+   },
+   {
+    "route_id": "X2",
+    "checked_at": null,
+    "status": "clear"
+   },
+   {
+    "route_id": "X3",
+    "checked_at": "2025-10-11T17:55",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "X4",
+    "checked_at": "2025-10-11T19:05",
+    "status": "clear"
+   },
+   {
+    "route_id": "X6",
+    "checked_at": "2025-10-11T19:00",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "live",
+  "occupancy_ratio": 0.96,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.08,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.91,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.0,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 4,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "live",
+  "occupancy_ratio": 0.96,
+  "counter_status": "ok",
+  "counter_inflation": 0.08,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.91,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.12,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "escalate",
+   "second": "sign_off",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "contested",
+   "target": "counter_fault",
+   "second": "ticket_overissue",
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "verified_exceedance": "The variation was approved on 10 Oct, before doors, so the effective limit is 1100. The counter is fault_logged with no recount, and the raw peak of 1140 is unverified. Verified occupancy is therefore not shown above the limit.",
+  "disposition": "Over-limit occupancy is unverified, but the ticketing limit differs, four or five exits are unconfirmed and relief is on its way. This could be signed off or referred up.",
+  "discrepancy_source": "Only the faulty counter's 1140 exceeds the effective 1100. But issued 1001 is above the 1000 limit ticketing used, while within the effective 1100.",
+  "steward_shortfall": "40 signed in against 40 required meets the requirement, but a relief call at 19:40 suggests a possible gap.",
+  "unconfirmed_exits": "X2 (null time), X3 (obstructed), X4 (checked after doors) and X5 (missing) are unconfirmed. X6 was checked clear at exactly the 19:00 doors time, which is ambiguous; that decides between level 3 and 4."
+ },
+ "request": "rec-F435-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013394
+}

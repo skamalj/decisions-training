@@ -1,0 +1,111 @@
+{
+ "id": "F417-0029",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "loa_m": 12.9,
+   "draught_src": "survey_certificate"
+  },
+  "berth": {
+   "max_loa_m": 12.0,
+   "depth_lat_m": 2.6
+  },
+  "booking": {
+   "departure": "2025-06-10",
+   "next_on_berth": {
+    "arrival": "2025-06-10"
+   }
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 11.63,
+    "draught_m": 2.6
+   },
+   "insurance_expiry": null,
+   "inspection_date": "2025-05-01"
+  },
+  "account": {
+   "dues_outstanding_gbp": 2953,
+   "plan_id": null
+  }
+ },
+ "factors": {
+  "loa_mismatch_pct": 10.93,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 0.0,
+  "draught_source": "survey_certificate",
+  "insurance_status": "missing",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 2953,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 10.93,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 0.48,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 2953,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "confirm_allocation",
+   "second": "refer_harbourmaster",
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "balanced",
+   "target": "document_gap",
+   "second": "account_arrears",
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "length_fits": "Survey loa 11.63 is below berth max_loa 12.0.",
+  "next_step": "Allocation stands on survey figures, but a null insurance date, unplanned arrears and a same-day turnover could justify referring it.",
+  "primary_issue": "insurance_expiry null (document gap) and dues 2953 with plan_id null (arrears) are of similar weight.",
+  "ukc_band": "Survey draught 2.6 equals depth_lat 2.6, which sits exactly on the boundary between grounding and tight.",
+  "unresolved_count": "Candidates are the loa gap (12.9 vs 11.63), the missing insurance, the arrears with no plan and the same-day turnover; whether the last counts is open."
+ },
+ "request": "rec-F417-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011897
+}

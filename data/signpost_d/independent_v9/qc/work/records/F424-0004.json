@@ -1,0 +1,125 @@
+{
+ "id": "F424-0004",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2414",
+   "vessel_id": "FV1",
+   "volume_hl": 30,
+   "yeast_strain": "S-04",
+   "yeast_gen": 2,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-06-15",
+    "gravity_plato": 3.1
+   },
+   {
+    "ts": "2024-06-16",
+    "gravity_sg": 1.012
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-06-16",
+    "type": "retest_request",
+    "vessel_id": "FV1",
+    "note": "ABV recheck requested; otherwise all looks fine."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2414",
+   "abv_pct": 5.5,
+   "abv_label_band": 5.0,
+   "diacetyl_mgl": 0.03,
+   "micro_plate": {
+    "result": "negative",
+    "cfu_ml": 0
+   },
+   "retest": []
+  },
+  "release_request": {
+   "volume_hl": 31,
+   "vessel_id": "FV1"
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.03,
+  "discrepancy_count": 1,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "gravity_status": "over_attenuated",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": true,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.03,
+  "discrepancy_count": 4,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "reassuring"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "hold_retest",
+   "second": null,
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 74,
+ "deciding": {
+  "terminal_gravity": "3.1 P (about 1.0124) and 1.012 SG are stable and inside the band. Only the unit change adds doubt.",
+  "contamination_supported": "Plate negative with 0 cfu and no sensory complaint.",
+  "batch_disposition": "ABV of 5.5 against a 5.0 band is borderline and a recheck is requested with no result yet, so one confirming retest is needed.",
+  "deviation_severity": "ABV exceeds the band by exactly 0.5, right at the hard-limit threshold, so major and critical are both defensible.",
+  "record_discrepancies": "Only the volume mismatch (30 vs 31 hl) counts. The Plato and SG values agree after conversion, and vessel and batch_ref match."
+ },
+ "request": "rec-F424-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012309
+}

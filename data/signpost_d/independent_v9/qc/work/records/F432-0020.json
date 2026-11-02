@@ -1,0 +1,167 @@
+{
+ "id": "F432-0020",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E05",
+   "sp": "TORT",
+   "risk_cat": 3,
+   "roster": [
+    "e1",
+    "e2",
+    "e3",
+    "e4"
+   ],
+   "temp_range_c": [
+    15,
+    32
+   ]
+  },
+  "shift": {
+   "start": "08:00",
+   "end": "16:00",
+   "opening_count": 4,
+   "closing_count": 3
+  },
+  "movements": [
+   {
+    "animal_id": "e9",
+    "direction": "out",
+    "time": "12:10",
+    "dest": "E06"
+   }
+  ],
+  "feeding": {
+   "items": [
+    {
+     "sheet_g": 800,
+     "offered_g": 800,
+     "leftover_g": 200,
+     "unit": "g"
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched": "09:00",
+    "logged": true,
+    "entry_time": "09:01",
+    "temp_c": 22,
+    "beh": [
+     "LAME"
+    ]
+   },
+   {
+    "sched": "10:30",
+    "logged": false
+   },
+   {
+    "sched": "12:00",
+    "logged": false,
+    "cctv_reviewed": true,
+    "reviewer_id": "K2"
+   },
+   {
+    "sched": "13:30",
+    "logged": false
+   },
+   {
+    "sched": "15:00",
+    "logged": false
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "D1",
+     "time": "15:50",
+     "ticket": "T77",
+     "ticket_state": "closed"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "count_discrepancy": "count_differs_unmatched_movement",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.75,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 4,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "animal_id_not_on_roster",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "absent",
+  "intake_ratio": 0.53,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 4,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": true,
+  "field_mismatch": "animal_id_not_on_roster",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "recheck_round",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 42,
+ "deciding": {
+  "count_reconciles": "Opening 4 and closing 3, but the only movement is animal e9, which is not on the roster, so no movement matches the missing animal.",
+  "secure_at_close": "Door D1 checked at 15:50 after the last scheduled round at 15:00, and fault ticket T77 has ticket_state closed.",
+  "next_step": "Four of five rounds are unlogged and the count is unexplained, which points to a targeted recheck of the animals; sending a keeper is the less likely alternative.",
+  "intake_shortfall": "Offered 800 g less 200 g leftover is 600 g, 75% of sheet, in the minor band.",
+  "missed_rounds": "Four rounds are logged false, but the 12:00 round has CCTV review, so the count is either three or four."
+ },
+ "request": "rec-F432-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011223
+}

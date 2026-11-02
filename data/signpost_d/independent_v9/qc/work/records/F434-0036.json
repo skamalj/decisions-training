@@ -1,0 +1,133 @@
+{
+ "id": "F434-0036",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 3,
+   "first_rider_at": "10:05"
+  },
+  "post": {
+   "km_marker": 14.0,
+   "marshals_rostered": 2,
+   "marshals_signed_in": 2,
+   "on_post_from": "09:40",
+   "off_post_at": "12:31:30"
+  },
+  "incidents": [],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:30",
+     "ok": false
+    },
+    {
+     "time": "11:30",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "time": "11:05",
+     "km": 14.4,
+     "type": "fall",
+     "bibs": [
+      27
+     ]
+    }
+   ],
+   "medical_handovers": [
+    {
+     "bib": 27,
+     "km": 14.4,
+     "destination": "St Anne Hospital"
+    }
+   ],
+   "road_reopened_at": {
+    "10-20": "12:10"
+   }
+  },
+  "sweep": {
+   "passed_at": "12:31:00",
+   "last_rider_bib": 212
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": true,
+  "incident_mix": "fall",
+  "control_log_mismatch": "control_incident_absent_from_post",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "hospital",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": 22.1,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": true,
+  "incident_mix": "fall",
+  "control_log_mismatch": "time_offset_minor",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "hospital",
+  "staffing_gap": "late_before_first_rider",
+  "relief_swap_logged": false,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": 22.1,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "file",
+   "second": "safety_review",
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "contested",
+   "target": "rider_fall",
+   "second": "no_incident",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (reopen_before_sweep = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 57,
+ "deciding": {
+  "coverage_held": "Two marshals signed in from 09:40, before first rider 10:05, and off_post_at 12:31:30 is after sweep passed_at 12:31:00.",
+  "next_step": "Control fall and hospital handover are missing from the empty post log (file-worthy clerical gap), against the road reopened at 12:10, before sweep 12:31 (safety_review). The two are balanced.",
+  "incident_class": "Post incidents list is empty, but control logs a fall at km 14.4, 0.4 km from the post at km 14.0. Whether it counts as this post's incident is contested.",
+  "reversal_time": "Hospital transfer for bib 27 with no stated duration and a possible traffic exposure. Level 3 against level 2 is balanced.",
+  "consequence_severity": "Hospital destination for bib 27 at km 14.4, and the road reopened at 12:10 before sweep 12:31 with rider bib 212 last. Level 3 is the clear lean."
+ },
+ "request": "rec-F434-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011139
+}

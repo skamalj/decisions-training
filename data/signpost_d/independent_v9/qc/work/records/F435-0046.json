@@ -1,0 +1,164 @@
+{
+ "id": "F435-0046",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "EV-4417",
+   "zone_id": "FLR-A",
+   "zone_type": "standing_floor",
+   "doors_open": "2025-03-14T19:00",
+   "check_filed_at": "2025-03-15T00:10",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 1100,
+   "variation": {
+    "ref": "V-221",
+    "new_limit": 1200,
+    "status": "approved",
+    "approved_on": "2025-03-13"
+   },
+   "stewards_required": 40,
+   "exit_routes": [
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6",
+    "X7"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 1200,
+   "issued": 1320,
+   "comps_included": 60,
+   "scanned_in": 1290
+  },
+  "ingress": {
+   "device_id": "CTR-3",
+   "device_status": "ok",
+   "raw_peak": 1209,
+   "peak_at": "2025-03-14T21:05",
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 36,
+   "signed_in": 28,
+   "relief": {
+    "called_at": "2025-03-14T19:40",
+    "eta_min": 25
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "X1",
+    "checked_at": "2025-03-14T18:20",
+    "status": "clear"
+   },
+   {
+    "route_id": "X2",
+    "checked_at": "2025-03-14T18:25",
+    "status": "clear"
+   },
+   {
+    "route_id": "X3",
+    "checked_at": "2025-03-14T18:30",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "X4",
+    "checked_at": null,
+    "status": null
+   },
+   {
+    "route_id": "X5",
+    "checked_at": "2025-03-14T19:12",
+    "status": "clear"
+   },
+   {
+    "route_id": "X7",
+    "checked_at": "2025-03-14T19:00",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.0075,
+  "counter_status": "ok",
+  "counter_inflation": 0.1,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 1.1,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.3,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.92,
+  "counter_status": "ok",
+  "counter_inflation": 0.1,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 0.9,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.08,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "escalate",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "ticket_overissue",
+   "second": null,
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 133,
+ "deciding": {
+  "verified_exceedance": "Counter ok, raw_peak 1209 vs effective limit 1200 (variation approved before doors); over by only 9 (0.75%), no recount.",
+  "disposition": "Post-event, healthy counter shows peak above the approved limit, plus severe steward gap and unchecked exits; supports referral, though the margin is slim.",
+  "discrepancy_source": "issued 1320 exceeds zone_limit_used 1200; counter is ok.",
+  "steward_shortfall": "signed_in 28 of 40 required is 30% below; relief only partly mitigates and rostered 36 is a decoy.",
+  "unconfirmed_exits": "X3 obstructed with no later clear, X4 null, X5 checked after doors, X6 absent: four. X7 clear exactly at doors_open is borderline, so the count is 4 or 5."
+ },
+ "request": "rec-F435-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015976
+}

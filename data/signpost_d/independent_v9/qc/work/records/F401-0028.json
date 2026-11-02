@@ -1,0 +1,155 @@
+{
+ "id": "F401-0028",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P303",
+   "planned_discharge_at": "2025-05-14T12:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 17,
+     "spo2": 95,
+     "sbp": 118,
+     "hr": 80,
+     "temp": 36.9,
+     "avpu": "A",
+     "at": "2025-05-14T07:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P303",
+   "reconciled": [
+    {
+     "drug": "metformin",
+     "dose": 500,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ],
+   "changes": [],
+   "discharge_rx": [
+    {
+     "drug": "metformin",
+     "dose": 500,
+     "unit": "mg",
+     "freq": "bd"
+    },
+    {
+     "drug": "apixaban",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ]
+  },
+  "function_social": {
+   "therapy": {
+    "transfer_assist_count": 2,
+    "adl_score": 4
+   },
+   "social": {
+    "lives_alone": true
+   },
+   "care_arrangement": {
+    "type": "package",
+    "status": "declined",
+    "start_date": null
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "pending"
+    },
+    {
+     "t": "district nurse referral",
+     "status": "pending"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "drug_added",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 2,
+  "false_completion": false,
+  "care_need": "new_package",
+  "care_arrangement_status": "declined",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "drug_added",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "new_package",
+  "care_arrangement_status": "declined",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_item",
+   "second": "escalate_senior",
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "remain_inpatient",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "rx_matches": "Apixaban appears in discharge_rx but not in reconciled, and the changes list is empty.",
+  "next_step": "Undocumented apixaban needs prescriber clarification (request item), but the declined package may call for a senior decision.",
+  "destination": "Needed package care_arrangement is declined with no start_date, so no safe destination is arranged.",
+  "outstanding_tasks": "Two checklist items, TTO and district nurse referral, are pending.",
+  "discharge_delay": "The declined arrangement with null start_date counts as three or more days."
+ },
+ "request": "rec-F401-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009629
+}

@@ -1,0 +1,148 @@
+{
+ "id": "F434-0049",
+ "family": "F434",
+ "state": {
+  "post": {
+   "km_marker": 23,
+   "on_post_from": "10:00",
+   "off_post_at": "14:20",
+   "relief": [
+    {
+     "marshal_ref": "M1",
+     "signed_in": "10:00",
+     "signed_out": "12:10"
+    },
+    {
+     "marshal_ref": "M4",
+     "signed_in": "12:16",
+     "signed_out": "14:20"
+    }
+   ]
+  },
+  "incidents": [
+   {
+    "inc_ref": "P1",
+    "time": "11:32",
+    "km": 23,
+    "type": "mechanical",
+    "bibs": [
+     15
+    ],
+    "medic_called": true,
+    "medic_cancelled": true,
+    "medic_arrival_min": 5.05,
+    "rider_status": "continued"
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "11:00",
+     "ok": false
+    }
+   ],
+   "backup_phone": [
+    {
+     "time": "11:05",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C9",
+     "time": "11:32",
+     "km": 23,
+     "type": "mechanical",
+     "bibs": [
+      15
+     ]
+    }
+   ],
+   "medical_handovers": []
+  },
+  "sweep": {
+   "passed_at": "14:05",
+   "last_rider_bib": 212
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "gap_during_race",
+  "relief_swap_logged": false,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": 5.05,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "medic_attended",
+  "staffing_gap": "gap_during_race",
+  "relief_swap_logged": false,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": 5.05,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "mechanical_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "coverage_held": "A six-minute gap lies between M1 signing out at 12:10 and M4 signing in at 12:16. Afterwards the post was held until 14:20, after the sweep at 14:05. A short gap makes true and false both defensible.",
+  "next_step": "The medic arrival of 5.05 min is recorded and the call was cancelled, but control lists no medical handover. The outcome awaits confirmation from medical.",
+  "incident_class": "Both the post and control list only a mechanical stop for bib 15, and no fall or intrusion is recorded.",
+  "reversal_time": "The medic outcome is unconfirmed. A hospital outcome would be hard to reverse, and a minor one would not, so level 2 or 3 are both defensible.",
+  "consequence_severity": "Bib 15 continued and the medic call was cancelled, which points to level 1. The recorded medic arrival at 5.05 min leaves doubt."
+ },
+ "request": "rec-F434-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012065
+}

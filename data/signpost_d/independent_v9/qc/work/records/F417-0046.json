@@ -1,0 +1,130 @@
+{
+ "id": "F417-0046",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "MV Kestrel",
+   "loa_m": 14.0,
+   "draught_m": 1.6,
+   "draught_src": "owner"
+  },
+  "berth": {
+   "id": "Q4",
+   "max_loa_m": 14.0,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 2.9,
+   "waiver_ref": "W-212",
+   "waiver_expiry": "2026-09-30"
+  },
+  "booking": {
+   "arrival": "2026-07-02",
+   "departure": "2026-07-09",
+   "next_on_berth": null
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 15.02,
+    "draught_m": null
+   },
+   "insurance_expiry": "2026-07-09",
+   "inspection_date": "2026-06-20"
+  },
+  "account": {
+   "dues_outstanding_gbp": 1830,
+   "plan_id": "PP-77",
+   "plan_status": "approved"
+  },
+  "history": [
+   {
+    "d": "2024-06-01",
+    "inc": 0
+   },
+   {
+    "d": "2025-06-03",
+    "inc": 0
+   },
+   {
+    "d": "2025-09-12",
+    "inc": 0
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 7.28,
+  "berth_length_fit": "exceeds_limit",
+  "ukc_margin_m": 1.3,
+  "draught_source": "owner_declared",
+  "insurance_status": "expires_on_departure_day",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 1830,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 0,
+  "boundary_placement": true
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 7.28,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": -0.28,
+  "draught_source": "owner_declared",
+  "insurance_status": "null",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 1830,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 0,
+  "boundary_placement": true
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "confirm_allocation",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "balanced",
+   "target": "document_gap",
+   "second": "no_issue",
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 79,
+ "deciding": {
+  "length_fits": "Survey loa 15.02 exceeds berth max 14.0 plus fender 0.5 = 14.5.",
+  "next_step": "Waiver W-212 covers the stay, the payment plan is approved and the history is clean, so the allocation can stand despite the length.",
+  "primary_issue": "Insurance expiry equals the departure date: valid but with no margin (document_gap), otherwise sections look fine (no_issue).",
+  "ukc_band": "Depth 2.9 minus declared draught 1.6 = 1.3 m, though the draught is owner-declared only.",
+  "unresolved_count": "Vessel loa 14.0 vs survey 15.02, length over the limit (waiver-covered), unsurveyed draught and borderline insurance: two or three, depending on what is counted."
+ },
+ "request": "rec-F417-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008586
+}

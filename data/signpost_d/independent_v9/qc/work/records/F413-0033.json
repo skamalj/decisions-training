@@ -1,0 +1,175 @@
+{
+ "id": "F413-0033",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "food_production",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+   ],
+   "zones": {
+    "Z1": {
+     "toxic_bait_permitted": true
+    },
+    "Z2": {
+     "toxic_bait_permitted": false,
+     "banned_products": [
+      "RB2"
+     ]
+    }
+   }
+  },
+  "visit": {
+   "type": "call-out",
+   "start": "2025-04-14T13:00",
+   "end": "2025-04-14T14:30",
+   "client_signoff": null,
+   "tech_licence_expiry": "2026-02-28"
+  },
+  "treatments": [
+   {
+    "product_code": "RB2",
+    "zone": "Z2",
+    "area_m2": 20,
+    "qty_applied": 0.942,
+    "unit": "kg",
+    "label_max_per_m2": 0.03
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S3",
+    "zone": "Z1",
+    "activity": true
+   },
+   {
+    "id": "S1",
+    "zone": "Z1",
+    "activity": true
+   },
+   {
+    "id": "S6",
+    "zone": "Z2",
+    "activity": false
+   },
+   {
+    "id": "S2",
+    "zone": "Z1",
+    "activity": true
+   },
+   {
+    "id": "S5",
+    "zone": "Z2",
+    "activity": false
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product_code": "RB2",
+    "qty": 1.05,
+    "unit": "kg",
+    "batch": "B771"
+   }
+  ],
+  "follow_up": {
+   "prev_visit": "V-2231",
+   "prev_active_stations": 3,
+   "actions": [
+    {
+     "id": "CA4",
+     "status": "completed",
+     "date": "2025-04-14"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "moderate_5_to_25pct",
+  "stock_return_logged": false,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "equal_with_unchecked_stations",
+  "previous_visit_available": true,
+  "dose_overage_pct": 57.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "food_production"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "moderate_5_to_25pct",
+  "stock_return_logged": false,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "decreased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 57.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "food_production"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate",
+   "second": "book_revisit",
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (restricted_product_used = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 96,
+ "deciding": {
+  "usage_reconciled": "1.05 kg withdrawn, 0.942 kg applied and no return logged, a gap of about 10% that could be waste or a real discrepancy.",
+  "activity_increased": "Three active stations against prev_active_stations 3, but 3 of the 8 registered stations were not checked, so an increase cannot be excluded.",
+  "next_step": "RB2 is banned in Z2 and was applied there, which points to escalation, but CA4 was completed on the visit, so a corrective revisit is also defensible.",
+  "breach_severity": "RB2 applied in Z2, where it is listed in banned_products.",
+  "parties_needed": "The banned-product breach needs the manager, technician and client, and the missing signoff and stock gap could add a fourth or fifth party."
+ },
+ "request": "rec-F413-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010861
+}

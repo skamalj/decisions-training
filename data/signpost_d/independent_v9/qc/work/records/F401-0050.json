@@ -1,0 +1,176 @@
+{
+ "id": "F401-0050",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P505",
+   "planned_discharge_at": "2025-07-08T13:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 14,
+     "spo2": 98,
+     "sbp": 130,
+     "hr": 68,
+     "at": "2025-07-08T07:00"
+    }
+   ],
+   "investigations": [
+    {
+     "test": "echo",
+     "status": "awaited",
+     "required_before_discharge": false,
+     "follow_up_owner": "cardiology",
+     "acknowledged_at": "2025-07-07T15:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P505",
+   "reconciled": [
+    {
+     "drug": "metformin",
+     "dose": 1000,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "metformin",
+     "dose": 500,
+     "unit": "mg",
+     "freq": "bd",
+     "signed_at": "2025-07-08T09:00"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "metformin",
+     "action": "reduce",
+     "reason": "eGFR",
+     "by": "Dr Hale",
+     "changed_at": "2025-07-08T09:05"
+    }
+   ]
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": null,
+    "adl_score": 20
+   },
+   "social": {
+    "lives_alone": false
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "pending"
+    },
+    {
+     "t": "GP letter",
+     "status": "pending"
+    },
+    {
+     "t": "bloods review",
+     "status": "pending"
+    },
+    {
+     "t": "education",
+     "status": "in_progress"
+    },
+    {
+     "t": "obs sheet",
+     "status": "done",
+     "completed_at": "2025-07-08T08:00",
+     "signed_by": "RN Fox"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-07-08",
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 4,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_needed",
+  "logistics_delay": "transport_time_unknown",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "awaited_blocking",
+  "missing_section": "function_assessment_null",
+  "outstanding_task_count": 5,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "confirmed_on_time",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "conditional_discharge",
+   "second": "discharge_now",
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "home_independent",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 66,
+ "deciding": {
+  "rx_matches": "Metformin 1000 mg versus 500 mg: the change entry is changed_at 09:05, after the 09:00 signing, so it does not strictly cover it, though the reason and prescriber are recorded.",
+  "next_step": "Obs are normal and the echo is non-blocking and acknowledged. Three tasks are pending and one is in progress, which favours conditional discharge, but discharge as planned is still arguable.",
+  "destination": "ADL 20, no aid, not living alone and no care arrangement, so home independent.",
+  "outstanding_tasks": "Three items are pending and education is only in progress; counting that as outstanding gives four (level 3), otherwise three (level 2).",
+  "discharge_delay": "Transport is booked for the planned date with pickup_time null and no pharmacy time, which is the boundary between level 0 and level 1."
+ },
+ "request": "rec-F401-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012737
+}

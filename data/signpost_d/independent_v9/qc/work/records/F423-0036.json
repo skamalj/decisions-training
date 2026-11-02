@@ -1,0 +1,125 @@
+{
+ "id": "F423-0036",
+ "family": "F423",
+ "state": {
+  "job": {
+   "stock_spec": "GL115",
+   "run_qty": 12000,
+   "overs_pct": 3.84,
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "signed_at": "2025-03-04T08:10",
+   "concession": null
+  },
+  "colour_readings": {
+   "checked_on": "2025-03-07",
+   "calibrated_on": "2024-12-31",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.9
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.0
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.2,
+     "in_image": false
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "MT130",
+   "first_production_at": "2025-03-04T08:40",
+   "sheets_production": 2677
+  }
+ },
+ "factors": {
+  "colour_deviation": "marginal",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2677,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 3.84,
+  "register_offset_mm": 0.2,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 66,
+  "customer_tier": "standard",
+  "prior_stoppages": 3
+ },
+ "factors_sampled": {
+  "colour_deviation": "marginal",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2677,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 3.84,
+  "register_offset_mm": 0.2,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 66,
+  "customer_tier": "standard",
+  "prior_stoppages": 3
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold_for_signoff",
+   "second": "adjust_and_recheck",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "scrap_exposure": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (wrong_stock_loaded = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 42,
+ "deciding": {
+  "colour_in_tolerance": "Patches read 2.9 and 3.0 against spec_max_de 3.0, with no concession. Both are at or under the limit, but one sits exactly on it. Calibration is 66 days old, inside the 90-day window.",
+  "run_before_signoff": "signed_at 08:10 precedes first_production_at 08:40, so no production sheets were logged before signature.",
+  "next_step": "The signature is present and the colour readings are borderline, so hold_for_signoff and adjust_and_recheck are both arguable. The wrong stock (MT130 loaded against GL115) would normally point to escalation, so this plan is only loosely supported.",
+  "staff_effort": "Signed, measured and complete, with the only offset in trim. Resolution is a modest one-to-eight-hour task, level 1.",
+  "scrap_exposure": "stock_loaded MT130 differs from stock_spec GL115. sheets_production 2677 is 22% of run_qty 12000, well over 10% and far above the overs allowance."
+ },
+ "request": "rec-F423-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008885
+}

@@ -1,0 +1,169 @@
+{
+ "id": "F415-0001",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": []
+  },
+  "shift": {
+   "date": "2025-04-14",
+   "sched_slots": [
+    "08:00",
+    "10:00",
+    "12:00",
+    "14:00",
+    "16:00",
+    "18:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "end": "2025-04-14T08:25",
+    "checklist": {
+     "floors": true,
+     "pans": true,
+     "stock": true
+    }
+   },
+   {
+    "slot": "10:00",
+    "end": "2025-04-14T10:22",
+    "checklist": {
+     "floors": true,
+     "pans": true,
+     "stock": true
+    }
+   },
+   {
+    "slot": "12:00",
+    "end": "2025-04-14T12:24",
+    "checklist": {
+     "floors": true,
+     "pans": true,
+     "stock": true
+    }
+   },
+   {
+    "slot": "14:00",
+    "status": "not_recorded",
+    "op_note": "tablet fault, crew say cleaned; CCTV DPA request lodged, 20 working days"
+   },
+   {
+    "slot": "16:00",
+    "end": "2025-04-14T16:21",
+    "checklist": {
+     "floors": true,
+     "pans": true,
+     "stock": true
+    }
+   },
+   {
+    "slot": "18:00",
+    "end": "2025-04-14T18:24:50",
+    "checklist": {
+     "floors": true,
+     "pans": true,
+     "stock": true
+    }
+   }
+  ],
+  "faults": [
+   {
+    "type": "blocked_pan",
+    "reported_at": "2025-04-14T10:05:00",
+    "remedied_at": "2025-04-14T12:19:07",
+    "remedy_note": "strong smell, traced to sewer works on road outside; pan cleared"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2025-04-14T18:25:10",
+   "comment": "signed on handset, clock may drift"
+  },
+  "history": {
+   "prior_defaults_90d": 4
+  }
+ },
+ "factors": {
+  "scheduled_slots": 6,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 134.11,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 4
+ },
+ "factors_sampled": {
+  "scheduled_slots": 6,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 134.11,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 4
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 107,
+ "deciding": {
+  "missed_clean": "The 14:00 slot is not_recorded and closures is empty, so there is no exemption. The crew's claim is unevidenced.",
+  "sign_off_valid": "The supervisor signed at 18:25:10, only 20 seconds after the final visit ended at 18:24:50. The handset clock-drift comment leaves some doubt.",
+  "next_step": "One specific item is outstanding: CCTV to confirm the 14:00 clean has been requested. The officer waits for it before deciding.",
+  "staff_effort": "The CCTV request carries a 20-working-day turnaround and needs review and follow-up, which points to the longest effort level.",
+  "fault_exposure": "The fault was reported at 10:05:00 and remedied at 12:19:07, about 134 minutes. There are no closures, so the block was open throughout."
+ },
+ "request": "rec-F415-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013412
+}

@@ -1,0 +1,193 @@
+{
+ "id": "F406-0032",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-7120",
+   "gallery_code": "B07",
+   "session_date": "2025-06-03",
+   "open": "10:00",
+   "close": "13:00",
+   "certified_limit": 80
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "10:00",
+     "in": 78,
+     "out": 0,
+     "occupancy": 78
+    },
+    {
+     "start": "10:15",
+     "in": 12,
+     "out": 7,
+     "occupancy": 83
+    },
+    {
+     "start": "10:30",
+     "in": 10,
+     "out": 7,
+     "occupancy": 86
+    },
+    {
+     "start": "10:45",
+     "in": 9,
+     "out": 6,
+     "occupancy": 89
+    },
+    {
+     "start": "11:00",
+     "in": 6,
+     "out": 7,
+     "occupancy": 88
+    },
+    {
+     "start": "11:15",
+     "in": 6,
+     "out": 7,
+     "occupancy": 87
+    },
+    {
+     "start": "11:30",
+     "in": 5,
+     "out": 7,
+     "occupancy": 85
+    },
+    {
+     "start": "11:45",
+     "in": 5,
+     "out": 6,
+     "occupancy": 84
+    },
+    {
+     "start": "12:00",
+     "in": 4,
+     "out": 5,
+     "occupancy": 83
+    },
+    {
+     "start": "12:15",
+     "in": 4,
+     "out": 6,
+     "occupancy": 81
+    },
+    {
+     "start": "12:30",
+     "in": 3,
+     "out": 5,
+     "occupancy": 79
+    }
+   ],
+   "ticket_scans": 140,
+   "manual_tally_peak": 87,
+   "summary_peak": 89
+  },
+  "variations": [
+   {
+    "ref": "CV-311",
+    "gallery_code": "B01",
+    "valid_from": "2025-05-30",
+    "valid_to": "2025-06-06",
+    "uplift_to": 90,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "gates": [
+    "B07-N"
+   ],
+   "last_calibrated": "2025-04-11",
+   "maintenance": [
+    {
+     "gate": "B07-N",
+     "raised_at": "2025-06-03T08:55",
+     "summary": "N counter drift, recalibrate"
+    }
+   ]
+  },
+  "staff_log": {
+   "stewards": 2,
+   "egress_check": "done"
+  },
+  "history": {
+   "overages_30d": 6
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 1.11,
+  "intervals_over_limit": 9,
+  "section_mismatch": "gallery_code_mismatch",
+  "variation_present": true,
+  "variation_scope": "gallery_code_one_character_off",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "none",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.8,
+  "intervals_over_limit": 8,
+  "section_mismatch": "gallery_code_mismatch",
+  "variation_present": false,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "informal_note_only",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "none",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "fault_explains_overage": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "variation_applies": "Variation CV-311 carries gallery_code B01, but the session is B07. The dates and status are fine, so the variation most likely does not apply.",
+  "fault_explains_overage": "A ticket on gate B07-N was raised 08:55 on the session date, before the 10:00 open, and reports counter drift. The counter peak of 89 is only slightly above the tally of 87, so the drift explains the overage only partly.",
+  "next_step": "A documented fault on the right gate and date plus a completed egress check point to filing. The 9 intervals over the limit and 6 prior overages leave some doubt.",
+  "peak_excess": "The counter peak is 89 against the limit of 80, about 11%. The tally peak is 87, about 9%. The two figures straddle the 10% line.",
+  "intervals_over": "Nine intervals read above 80. The ninth is only 81, so counting it gives level 4 and discounting it gives level 3."
+ },
+ "request": "rec-F406-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01535
+}

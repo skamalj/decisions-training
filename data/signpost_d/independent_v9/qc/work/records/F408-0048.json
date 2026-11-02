@@ -1,0 +1,138 @@
+{
+ "id": "F408-0048",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 310077,
+   "stream": "refuse",
+   "claimed": "2024-06-04",
+   "logged_at": "2024-06-06T08:30",
+   "photo": false
+  },
+  "property": {
+   "uprn": 310077,
+   "assisted": true,
+   "assisted_since": "2024-01-15"
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "date": "2024-06-05"
+  },
+  "round_log": {
+   "completed_at": "2024-06-05T13:20",
+   "stops": [
+    {
+     "uprn": 310077,
+     "exception": null,
+     "photo_ref": "P41",
+     "gps_stop": false
+    }
+   ],
+   "sweep_at": null
+  },
+  "history": [
+   {
+    "uprn": 310077,
+    "on": "2024-05-10",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 310077,
+    "on": "2024-03-14",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 310077,
+    "on": "2024-05-28",
+    "outcome": "pending"
+   },
+   {
+    "uprn": 310078,
+    "on": "2024-05-20",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 2,
+  "assisted_miss_breach": true
+ },
+ "factors_sampled": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 2,
+  "assisted_miss_breach": true
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "close_no_action",
+   "second": "schedule_return",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (assisted_miss_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 67,
+ "deciding": {
+  "crew_missed": "No exception and gps_stop false point to a missed bin, but a crew photo_ref P41 exists, so the answer is balanced.",
+  "report_matches": "Right stream and the claimed date is only one day before the scheduled 2024-06-05.",
+  "next_step": "The crew photo and an unclear stop make closing defensible; the false gps_stop and assisted status make a return defensible too.",
+  "return_urgency": "Assisted since 2024-01-15 and gps_stop false at the stop, so same day.",
+  "repeat_failures": "Upheld entries on 2024-05-10 and on 2024-03-14, exactly 84 days back, with a pending entry nearby; 1 versus 2 is in balance."
+ },
+ "request": "rec-F408-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010405
+}

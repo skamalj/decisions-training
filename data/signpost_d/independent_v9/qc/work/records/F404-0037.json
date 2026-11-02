@@ -1,0 +1,181 @@
+{
+ "id": "F404-0037",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "N1",
+   "date": "2025-04-02",
+   "age_band": "under_2",
+   "ratio_rule": "1:3",
+   "places": 24
+  },
+  "children": {
+   "booked": 20,
+   "slots": [
+    {
+     "t": "09:00",
+     "signed_in": 19
+    },
+    {
+     "t": "09:15",
+     "signed_in": 21
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S041",
+    "start": "08:00"
+   },
+   {
+    "id": "S042",
+    "start": "08:00"
+   },
+   {
+    "id": "S043",
+    "start": "08:00"
+   },
+   {
+    "id": "S044",
+    "start": "08:00"
+   },
+   {
+    "id": "S045",
+    "start": "08:00"
+   },
+   {
+    "id": "S046",
+    "start": "08:00"
+   },
+   {
+    "id": "S047",
+    "start": "09:00"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S041",
+    "in": "08:00",
+    "status": "ok"
+   },
+   {
+    "id": "S042",
+    "in": "08:00",
+    "status": "ok"
+   },
+   {
+    "id": "S043",
+    "in": "08:01",
+    "status": "ok"
+   },
+   {
+    "id": "S044",
+    "in": "08:00",
+    "status": "ok"
+   },
+   {
+    "id": "S045",
+    "in": "08:00",
+    "status": "ok"
+   },
+   {
+    "id": "S046",
+    "in": "08:02",
+    "status": "ok"
+   },
+   {
+    "id": "S047",
+    "in": "09:10",
+    "status": "ok"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F12",
+    "from": "09:00",
+    "to": "09:10",
+    "room": "N1",
+    "cosign": null
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 1
+  }
+ },
+ "factors": {
+  "age_band": "under_2",
+  "children_peak": 21,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 10,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 1
+ },
+ "factors_sampled": {
+  "age_band": "under_2",
+  "children_peak": 22,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 9,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 1
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 101,
+ "deciding": {
+  "below_ratio": "19 children need 7 staff; 6 are in until S047 arrives at 09:10, and the floater entry for N1 spans 09:00-09:10 exactly, so cover meets ratio; 21 children at 09:15 have all 7.",
+  "disposition": "The floater entry that closes the 09:00-09:10 window has cosign null, so the outcome turns on that one confirmation.",
+  "primary_cause": "Staff match rota apart from S047 starting later than planned, which the cover entry fills; the one-child overrun is covered, so sections largely agree.",
+  "shortfall_duration": "With the floater counted, the 10-minute window is covered (level 0); if the unsigned entry were disregarded it would be 10 minutes, level 1.",
+  "breach_severity": "Without the floater, 6 staff cover 18 of 19 children (1 beyond); the booking overrun of 1 to 21 children could push it to 3 beyond, so levels 1 and 2 are both defensible."
+ },
+ "request": "rec-F404-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014659
+}

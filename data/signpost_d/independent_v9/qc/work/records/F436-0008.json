@@ -1,0 +1,108 @@
+{
+ "id": "F436-0008",
+ "family": "F436",
+ "state": {
+  "article": {
+   "disputed_passage": "Brook Ltd cut 102 jobs",
+   "channels": [
+    "web",
+    "print"
+   ]
+  },
+  "complaint": {
+   "claimed_correct_value": 102
+  },
+  "desk_check": {
+   "source_doc": 102,
+   "reporter_notes": 102,
+   "filed_copy": 120
+  },
+  "history": [
+   "web amended 120->102 day 2",
+   "legal review ok",
+   "wire pickup unknown"
+  ]
+ },
+ "factors": {
+  "error_status": "confirmed_by_source",
+  "error_origin_stage": "reporter_drafting",
+  "discrepancy_field": "figure",
+  "discrepancy_size": "moderate",
+  "claim_type": "named_party_fact",
+  "hours_live": 266,
+  "distribution_channels": "print_and_possible_syndication",
+  "mitigation_present": true,
+  "missing_evidence": false,
+  "legal_signal": false,
+  "legal_cleared": true,
+  "draft_fix_mismatch": false,
+  "prior_corrections": 1,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "error_status": "matches_source",
+  "error_origin_stage": "none",
+  "discrepancy_field": "figure",
+  "discrepancy_size": "moderate",
+  "claim_type": "named_party_fact",
+  "hours_live": 266,
+  "distribution_channels": "online_only",
+  "mitigation_present": true,
+  "missing_evidence": false,
+  "legal_signal": false,
+  "legal_cleared": true,
+  "draft_fix_mismatch": false,
+  "prior_corrections": 1,
+  "boundary_case": false
+ },
+ "plan": {
+  "error_confirmed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "no_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_origin": {
+   "clarity": "clear",
+   "target": "reporter_drafting",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "spread": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "harm_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "error_confirmed": "Filed copy 120 differed from source 102, but the web text now reads 102, so whether the article still contains an error is open.",
+  "next_step": "Web was already amended and legal review is ok, so little remains; print remains uncorrected, which leaves some doubt.",
+  "error_origin": "Notes and source say 102 while the filed copy says 120, so the divergence arose in reporter drafting.",
+  "spread": "Web and print carried it; the wire pickup is listed as unknown, which holds levels 2 and 3 in balance.",
+  "harm_severity": "A wrong job-cut figure about a named company is a fact attributed to an organisation, though the size is moderate."
+ },
+ "request": "rec-F436-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010123
+}

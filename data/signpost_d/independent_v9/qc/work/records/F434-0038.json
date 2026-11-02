@@ -1,0 +1,147 @@
+{
+ "id": "F434-0038",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 4
+  },
+  "post": {
+   "km_marker": 22.0,
+   "marshals_rostered": 2,
+   "marshals_signed_in": 1,
+   "on_post_from": "10:03",
+   "off_post_at": "12:45",
+   "first_rider_at_post": "10:06"
+  },
+  "incidents": [
+   {
+    "inc_ref": "P1",
+    "time": "11:10",
+    "km": 22.0,
+    "type": "fall",
+    "bibs": [
+     61
+    ],
+    "medic_called": true,
+    "medic_arrival_min": 3.5,
+    "rider_status": "transferred"
+   },
+   {
+    "inc_ref": "P2",
+    "time": "11:32",
+    "km": 22.0,
+    "type": "mechanical",
+    "bibs": [
+     9
+    ]
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "11:00",
+     "ok": false
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C4",
+     "time": "11:10",
+     "km": 22.0,
+     "type": "fall",
+     "bibs": [
+      61
+     ]
+    }
+   ],
+   "medical_handovers": [],
+   "abandonments": [
+    61
+   ]
+  },
+  "sweep": {
+   "passed_at": "12:40",
+   "last_rider_bib": 140
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "extra_post_incident",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "transferred_unconfirmed",
+  "staffing_gap": "one_of_two_signed_in",
+  "relief_swap_logged": false,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": 3.48,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "extra_post_incident",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "abandoned",
+  "staffing_gap": "late_before_first_rider",
+  "relief_swap_logged": false,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": 3.48,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "rider_fall",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 70,
+ "deciding": {
+  "coverage_held": "on_post_from 10:03 precedes first rider at post 10:06 and off_post_at 12:45 is after sweep 12:40, but only 1 of 2 rostered marshals signed in and no relief is logged. Leaning true.",
+  "next_step": "Post says bib 61 was transferred, but control medical_handovers is empty, so the outcome awaits confirmation. Extra post incident P2 is minor.",
+  "incident_class": "Both post and control list a fall of bib 61 at km 22.0, with no intrusion.",
+  "reversal_time": "A fall with an abandonment and a transfer implies recovery measured in weeks to months, not days and not permanent.",
+  "consequence_severity": "Post rider_status transferred with medic called, but no control handover to confirm the hospital destination, so level 3 is likely but not certain."
+ },
+ "request": "rec-F434-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011139
+}

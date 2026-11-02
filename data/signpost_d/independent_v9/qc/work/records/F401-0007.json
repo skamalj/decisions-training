@@ -1,0 +1,195 @@
+{
+ "id": "F401-0007",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P202",
+   "planned_discharge_at": "2025-04-02T12:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 22,
+     "spo2": 93,
+     "sbp": 118,
+     "hr": 96,
+     "temp": 37.4,
+     "cons": "A",
+     "at": "2025-04-01T20:00"
+    },
+    {
+     "rr": 18,
+     "spo2": 96,
+     "sbp": 124,
+     "hr": 80,
+     "temp": 36.8,
+     "cons": "A",
+     "at": "2025-04-02T06:00"
+    }
+   ],
+   "reviews": [
+    {
+     "role": "consultant",
+     "outcome": "fit_for_discharge",
+     "reviewed_at": "2025-04-02T08:00"
+    }
+   ],
+   "investigations": [
+    {
+     "test": "urine culture",
+     "status": "awaited",
+     "required_before_discharge": false,
+     "follow_up_owner": "GP"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P202",
+   "reconciled": [
+    {
+     "drug": "bisoprolol",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "bisoprolol",
+     "action": "dose reduce",
+     "reason": "bradycardia",
+     "by": "Dr Wu",
+     "changed_at": "2025-04-02T10:30"
+    }
+   ],
+   "discharge_rx": {
+    "signed_at": "2025-04-02T09:30",
+    "items": [
+     {
+      "drug": "bisoprolol",
+      "dose": 2.5,
+      "unit": "mg",
+      "freq": "od"
+     }
+    ]
+   }
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": "frame",
+    "transfer_assist_count": 1,
+    "adl_score": 12
+   },
+   "social": null,
+   "care_arrangement": {
+    "type": "reablement",
+    "status": "requested",
+    "start_date": null
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "TTO",
+     "status": "pending"
+    },
+    {
+     "task": "equipment",
+     "status": "pending"
+    },
+    {
+     "task": "carer brief",
+     "status": "done",
+     "completed_at": "2025-04-02T09:00",
+     "signed_by": null
+    },
+    {
+     "task": "transfer letter",
+     "status": "in_progress"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-04-03",
+    "pickup_time": "10:00"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "social_history_null",
+  "outstanding_task_count": "3 to 4 (boundary)",
+  "false_completion": true,
+  "care_need": "new_package",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "next_day",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "social_history_null",
+  "outstanding_task_count": 2,
+  "false_completion": false,
+  "care_need": "new_package",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "next_day",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "discharge_now",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "balanced",
+   "target": "intermediate_care",
+   "second": "home_independent",
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "rx_matches": "Bisoprolol 5 mg reconciled vs 2.5 mg on the prescription; the change entry names the drug and reason but is dated an hour after signing.",
+  "next_step": "One abnormal set was followed by normal obs and a later consultant fit review; the pending culture is non-blocking. Open tasks and the missing social history give some doubt.",
+  "destination": "Frame and 1-person transfer with ADL 12 point to reablement, but social history is null so living situation is unknown and home independent stays plausible.",
+  "outstanding_tasks": "Two pending plus a done item with null signed_by make 3; the in_progress letter would make 4, so the count sits on the 3/4 boundary.",
+  "discharge_delay": "Reablement is requested with null start_date (counts as 3+ days), while transport is only the next day, which supports 1-2 days."
+ },
+ "request": "rec-F401-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010243
+}

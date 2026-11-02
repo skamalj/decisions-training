@@ -1,0 +1,124 @@
+{
+ "id": "F424-0030",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2415",
+   "vessel_id": "FV7",
+   "volume_hl": 22,
+   "fg_target_min": 1.011,
+   "fg_target_max": 1.014
+  },
+  "readings": [
+   {
+    "ts": "2024-09-08",
+    "gravity_sg": 1.0155
+   },
+   {
+    "ts": "2024-09-09",
+    "gravity_plato": 3.2
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-09-09",
+    "vessel_id": "FV7",
+    "note": "Smells infected, vinegar, dump it!"
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2415",
+   "diacetyl_mgl": 0.09,
+   "micro_plate": {
+    "result": "presumptive",
+    "cfu_ml": 300
+   },
+   "abv_pct": null,
+   "pending": true
+  },
+  "release_request": {
+   "volume_hl": 22.4,
+   "vessel_id": "FV7"
+  }
+ },
+ "factors": {
+  "gravity_status": "still_dropping",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.09,
+  "discrepancy_count": 1,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "gravity_status": "still_dropping",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.09,
+  "discrepancy_count": 3,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "alarmed"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "balanced",
+   "target": "hold_retest",
+   "second": "dump",
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 42,
+ "deciding": {
+  "terminal_gravity": "3.2 Plato (~1.0129) is in band after 1.0155, but there is only one in-band reading and gravity is still falling.",
+  "contamination_supported": "Presumptive plate at 300 cfu/ml plus a corroborating vinegar note, with no retest.",
+  "batch_disposition": "ABV is pending and the plate is only presumptive, so a confirming retest is plausible, though dumping fits the sensory evidence.",
+  "deviation_severity": "Contamination that is presumptive, corroborated by sensory notes and unexplained, is the worst deviation, and it is planned at Critical.",
+  "record_discrepancies": "Volume 22 vs 22.4 hl is within 0.5 hl; the Plato/SG difference is a decoy, leaving the one real mismatch."
+ },
+ "request": "rec-F424-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005293
+}

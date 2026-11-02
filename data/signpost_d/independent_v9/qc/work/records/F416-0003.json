@@ -1,0 +1,180 @@
+{
+ "id": "F416-0003",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "W6",
+   "date": "2025-01-20",
+   "signoff": "G4 17:30"
+  },
+  "roster": [
+   {
+    "id": "G4",
+    "on": "09:00",
+    "off": "17:30",
+    "home": "W6",
+    "qual_expiry": "2026-02-01"
+   },
+   {
+    "id": "G8",
+    "on": "09:00",
+    "off": "17:30",
+    "home": "W6",
+    "qual_expiry": "2025-11-30"
+   },
+   {
+    "id": "G12",
+    "on": "09:00",
+    "off": "17:30",
+    "home": "W2",
+    "qual_expiry": "2026-04-12"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "12:00",
+    "wave_m": 2.1,
+    "rip_risk": "high",
+    "flag": "red_yellow",
+    "bathing_zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-01-20",
+    "time": "11:15",
+    "type": "water_rescue",
+    "resp": [
+     "G4",
+     "G12"
+    ],
+    "outcome": "released"
+   },
+   {
+    "id": "I2",
+    "date": "2025-01-20",
+    "time": "13:40",
+    "type": "water_rescue",
+    "resp": [
+     "G4",
+     "G8"
+    ],
+    "outcome": "released",
+    "referral_ref": "RF-3"
+   },
+   {
+    "id": "I3",
+    "date": "2025-01-20",
+    "time": "14:00",
+    "type": "first_aid",
+    "resp": [
+     "G8"
+    ],
+    "outcome": "released"
+   },
+   {
+    "id": "I4",
+    "date": "2025-01-20",
+    "time": "15:00",
+    "type": "first_aid",
+    "resp": [
+     "G4"
+    ],
+    "outcome": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue board",
+    "out_from": "10:00",
+    "out_to": null,
+    "substitute_unit_id": "RB-4"
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 3,
+   "kit_defects": 1,
+   "check_sheet_ref": null
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": true,
+  "missing_record": "aed_check_sheet",
+  "flag_lag": true,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": true,
+  "missing_record": "aed_check_sheet",
+  "flag_lag": true,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": true,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_review",
+   "second": "amend_and_file",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "two_guard_cover": "Both rescues list two rostered responders with in-date expiry. G12 is mutual aid from W2 with expiry 2026-04-12.",
+  "totals_reconcile": "Handover first_aid is 3 but only two first_aid incidents are itemised, so it is off by one.",
+  "next_step": "Rip risk high with flag red_yellow is a flag lag, softened by bathing_zone_moved true. Check_sheet_ref is null and the first_aid total is off by one, which splits escalate_review against amend_and_file.",
+  "outcome_severity": "All outcomes are released, but I2 carries a referral_ref. That leaves level 0 against level 1.",
+  "kit_outage": "The rescue board has out_to null, so the end time is unknown, but substitute RB-4 is logged. That splits levels 0 and 1."
+ },
+ "request": "rec-F416-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010773
+}

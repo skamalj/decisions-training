@@ -1,0 +1,125 @@
+{
+ "id": "F433-0012",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H202",
+   "age": 9,
+   "earlier_gates": [
+    "pass"
+   ],
+   "passport_remark": "known left fore irregularity, regular at loops 1-2"
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "11:10"
+  },
+  "vet_card": {
+   "arrival_copied": "11:12",
+   "presented_at": null,
+   "pulse_bpm": 68,
+   "cri": {
+    "first_bpm": 56,
+    "second_bpm": null
+   },
+   "metabolic": {
+    "mm": "pale",
+    "crt_s": 3,
+    "skin_tent_s": 3
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": null
+    }
+   ],
+   "vet_signed_at": null
+  },
+  "treatment": null,
+  "notes": {
+   "rider": "Nearly lost a shoe on the road."
+  }
+ },
+ "factors": {
+  "pulse_status": "not_met",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 14.29,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "factors_sampled": {
+  "pulse_status": "not_met",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 14.29,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "clear_to_continue",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "leaning",
+   "target": "ftq_metabolic",
+   "second": null,
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 65,
+ "deciding": {
+  "pulse_met": "Pulse 68 is above the 64 limit; presentation time is null.",
+  "next_step": "Pulse is above limit and metabolic readings are poor, but several items are missing; it is not a clear continue.",
+  "outcome_code": "Pulse 68, pale mm and CRT 3 s are metabolic failures; gait is unrecorded and the passport remark explains it.",
+  "welfare_risk": "Pulse and mucous membranes are outside limits, with the gait unrecorded.",
+  "record_completeness": "presented_at, cri.second_bpm, gait grade and vet_signed_at are all null."
+ },
+ "request": "rec-F433-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005885
+}

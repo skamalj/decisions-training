@@ -1,0 +1,153 @@
+{
+ "id": "F429-0033",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 300,
+   "ramp_max_m_per_10min": 0.25,
+   "operator_id": "OP41"
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 64.0,
+    "action_m": 64.8
+   },
+   "readings": [
+    {
+     "level_m": 64.3,
+     "datum": "site"
+    },
+    {
+     "level_m": 64.4,
+     "datum": "site"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "2024-03-08T09:00",
+    "open_after_m": 0.4
+   },
+   {
+    "gate": "G1",
+    "t": "2024-03-08T09:10",
+    "open_after_m": 1.0
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.0
+    }
+   ],
+   "calc_peak_m3s": 120,
+   "gauged_peak_m3s": 110,
+   "tailwater_m": [
+    30.1,
+    30.1,
+    30.2
+   ]
+  },
+  "instruments": {
+   "piezometers": [
+    {
+     "id": "P3",
+     "kpa": 182,
+     "alert_kpa": 160
+    }
+   ],
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "2024-03-08T13:00"
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "2024-03-08T09:05",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 8.43,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": true
+ },
+ "factors_sampled": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 8.43,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": true
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "query_operator",
+   "second": null,
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (ramp_limit_breached = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 71,
+ "deciding": {
+  "within_licence": "Calculated 120 and gauged 110 are well under the 300 limit, so with a ramp breach the statement is not clearly false; adjusted: discharge itself is within limit.",
+  "gates_reconciled": "G1 open_after 1.0 matches calc opening 1.0; the 8% calc vs gauged gap is small.",
+  "next_step": "Inspection is complete and sections are present, but the piezometer reading is above alert with no tailwater rise, so a confirmation from the operator is needed.",
+  "trigger_tier": "G1 opened 0.6 m in 10 min against a 0.25 limit, which is a ramp breach.",
+  "parties_needed": "The ramp breach, piezometer rise and operator query involve operator, instrument and senior engineers, putting it between three and five parties."
+ },
+ "request": "rec-F429-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005425
+}

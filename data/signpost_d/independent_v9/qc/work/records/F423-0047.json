@@ -1,0 +1,132 @@
+{
+ "id": "F423-0047",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-50377",
+   "stock_spec": "GL130",
+   "run_qty": 15000,
+   "overs_pct": 5.46,
+   "spec_max_de": 3.5
+  },
+  "proof_signoff": {
+   "signed_at": "2025-04-22T06:50:00",
+   "concession": null
+  },
+  "colour_readings": {
+   "calibrated_on": "2025-01-06",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.4
+    },
+    {
+     "ink": "M",
+     "delta_e": 2.9
+    },
+    {
+     "ink": "K",
+     "delta_e": 1.7
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.15,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P1",
+   "stock_loaded": "MT115",
+   "first_production_at": "2025-04-22T06:58:00",
+   "sheets_production": 2331,
+   "stoppages": [
+    "web wipe"
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2331,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 5.46,
+  "register_offset_mm": 0.15,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 106,
+  "customer_tier": "standard",
+  "prior_stoppages": 1
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 2331,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 5.46,
+  "register_offset_mm": 0.15,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 106,
+  "customer_tier": "standard",
+  "prior_stoppages": 1
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_run",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (wrong_stock_loaded = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 61,
+ "deciding": {
+  "colour_in_tolerance": "All patches (2.4, 2.9, 1.7) are under spec_max_de 3.5.",
+  "run_before_signoff": "signed_at 06:50 precedes first_production_at 06:58, so no production sheets precede the signature.",
+  "next_step": "Colour, register (0.15 mm, not over limit) and signature all pass, which supports release, though the stock mismatch (MT115 vs GL130) gives real doubt.",
+  "staff_effort": "Paperwork is complete and nothing is missing, so it is either a quick call or a few hours handling the stock issue.",
+  "scrap_exposure": "stock_loaded MT115 differs from stock_spec GL130 with 2331 production sheets, over 10% of run_qty 15000 (1500)."
+ },
+ "request": "rec-F423-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009381
+}

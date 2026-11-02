@@ -1,0 +1,169 @@
+{
+ "id": "F405-0007",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-1874",
+   "detected_on": "2025-09-08",
+   "term_start": "2025-10-06",
+   "room": "LT-B07"
+  },
+  "booking_a": {
+   "module": "ART110",
+   "dept": "ARTS",
+   "day": "Mon",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "headcount": 40,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "HIRE-77",
+   "dept": "EXT",
+   "external_hire": true,
+   "day": "Mon",
+   "start": "15:45",
+   "end": "17:30",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-08-12",
+   "approver": "j.okoro"
+  },
+  "room": {
+   "code": "LT-B07",
+   "capacity": 60,
+   "features": [
+    "lecture_capture"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "LT-C02",
+    "capacity": 60,
+    "features": [
+     "lecture_capture"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-05-02"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-06-11"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-07-03"
+   },
+   {
+    "type": "change_request",
+    "state": "open",
+    "booking": "B",
+    "target_slot": "Wed 15:45-17:30"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 28,
+  "alt_room_fit": "fits",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.67,
+  "required_feature": "lecture_capture",
+  "owning_departments": "external_hire",
+  "prior_clash_count": 3
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 54,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.66,
+  "required_feature": "lecture_capture",
+  "owning_departments": "external_hire",
+  "prior_clash_count": 3
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "contested",
+   "target": "dismiss",
+   "second": "hold_confirm",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 90,
+ "deciding": {
+  "genuine_clash": "Times overlap only 15 minutes (15:45-16:00) in the same weeks, and an open change request moves booking_b to Wed, so it is two-sided.",
+  "alt_room_fits": "LT-C02 has capacity 60 for headcount 40, has lecture_capture, and is free in all weeks 1-5.",
+  "resolution": "Overlap is small and a change request may remove it (dismiss), but the request is still open and unconfirmed (hold_confirm).",
+  "urgency": "Detected 2025-09-08, week 1 Monday is 2025-10-06, exactly 28 days, on the boundary between levels 1 and 0.",
+  "parties_needed": "The external hirer and the ARTS convenor, with the officer; whether the change request needs extra action leaves one versus two additional parties open."
+ },
+ "request": "rec-F405-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013884
+}

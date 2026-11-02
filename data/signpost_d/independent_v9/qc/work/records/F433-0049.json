@@ -1,0 +1,133 @@
+{
+ "id": "F433-0049",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H331",
+   "passport_remark": "known left fore irregularity, regular at loops 1-2",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "result": "recheck"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 3,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 30
+   },
+   "arrived_at": "13:40"
+  },
+  "vet_card": {
+   "presented_at": "14:10",
+   "pulse_bpm": 62,
+   "cri": {
+    "first_bpm": 62,
+    "second_bpm": 69
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 1
+    },
+    {
+     "surface": "grass",
+     "grade": 0
+    }
+   ],
+   "vet_signed_at": "14:14"
+  },
+  "treatment": [
+   {
+    "at": "14:02",
+    "type": "iv_fluids",
+    "approved_by": null
+   }
+  ],
+  "notes": {
+   "rider_note": "Nearly lost a shoe on the road section."
+  }
+ },
+ "factors": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": "1 (CRI rise)",
+  "cri_rise": 11.31,
+  "missing_items": "1 (treatment approving vet)",
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "invasive",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "none",
+  "gait_grade": "inconsistent_g1",
+  "gait_mitigation": true,
+  "metabolic_flags": 1,
+  "cri_rise": 11.31,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "one_prior_recheck",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "refer_president",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "leaning",
+   "target": "ftq_metabolic",
+   "second": null,
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 83,
+ "deciding": {
+  "pulse_met": "Arrived 13:40 and treatment was logged 14:02, but the pulse of 62 was taken at presentation. The 14:10 presentation time is outside the window, which leaves doubt, but the pulse is under the limit.",
+  "next_step": "An iv_fluids treatment is logged with no approving vet, which calls for the commission president.",
+  "outcome_code": "The CRI rise from 62 to 69 is the metabolic failure. The grade 1 trot-up is mitigated by the passport remark and a regular second trot, so ftq_metabolic leads over combined.",
+  "welfare_risk": "The CRI rise is outside limits, and the mitigated grade 1 gait plus the iv treatment could count as a second, so level 2 versus 1 is contested.",
+  "record_completeness": "The treatment at 14:02 precedes presented_at 14:10, an out-of-sequence time. The null approved_by could be one missing signature."
+ },
+ "request": "rec-F433-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011691
+}

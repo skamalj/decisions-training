@@ -1,0 +1,147 @@
+{
+ "id": "F411-0022",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "P318",
+   "type": "private_hire",
+   "expiry": "2025-06-20",
+   "review_date": "2025-06-02"
+  },
+  "vehicle": {
+   "odometer_km": 141700,
+   "first_reg": "2014-05-01"
+  },
+  "inspection": {
+   "result_code": "F",
+   "brake_efficiency_pct": 55
+  },
+  "defects": [
+   {
+    "code": "STR1",
+    "grade": "major",
+    "rectify_by": "2025-06-15",
+    "repaired_on": "2025-05-28",
+    "retest_on": null,
+    "retest_result": null
+   },
+   {
+    "code": "LMP3",
+    "grade": "minor",
+    "rectify_by": "2025-05-20",
+    "repaired_on": null,
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-03-31",
+    "cover_note_ref": "CN88",
+    "cover_until": "2025-05-15"
+   },
+   {
+    "type": "badge",
+    "expires_on": "2025-05-20"
+   },
+   {
+    "type": "dbs",
+    "expires_on": "2025-06-02"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-07-01",
+     "result": "PA",
+     "odometer_km": 142000
+    }
+   ],
+   "replacements": [
+    {
+     "type": "instrument_cluster",
+     "date": "2024-11-02",
+     "old_km": 142300,
+     "new_km": 141100
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_defect_found": "major",
+  "rectification_state": "awaiting_retest",
+  "deadline_passed": true,
+  "documents_missing_count": 3,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": true,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 11
+ },
+ "factors_sampled": {
+  "worst_defect_found": "minor",
+  "rectification_state": "not_started",
+  "deadline_passed": false,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 11
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "refer_committee",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "major_fail",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 100,
+ "deciding": {
+  "odometer_consistent": "Current 141,700 km is 300 km under the 142,000 km history reading, but a cluster replacement dated between the readings (old 142,300, new 141,100) largely accounts for it.",
+  "next_step": "The small odometer drop with a replacement entry that does not match exactly could go to the committee; the awaiting-retest major and the document gaps would otherwise point to refusal.",
+  "inspection_outcome": "Defect STR1 is graded major at inspection, even though it has since been repaired.",
+  "document_gaps": "The insurance cover note ended 2025-05-15 and the badge expired 2025-05-20, both before the 2025-06-02 review. The DBS check expires exactly on the review date, which makes it a third gap or not.",
+  "outstanding_severity": "The minor LMP3 item is past its 2025-05-20 deadline (level 3). The major STR1 was repaired 2025-05-28 but has no retest, so it may still count as outstanding (level 4)."
+ },
+ "request": "rec-F411-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012187
+}

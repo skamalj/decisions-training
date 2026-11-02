@@ -1,0 +1,368 @@
+{
+ "id": "F432",
+ "domain": "zoo enclosure keeper logs",
+ "role": "Section lead keeper reviewing end-of-shift enclosure logs before they are filed",
+ "setting": "A mid-sized zoo's animal records system holds one structured log per enclosure per shift, built from keeper hand-held entries. The section lead opens each log the morning after and reconciles head counts, feeding, check rounds and close-of-shift security. They then decide whether to file it, chase a missing entry, act or refer it upward. Logs contain only coded and numeric fields, with no free-text notes.",
+ "questions": {
+  "count_reconciles": {
+   "type": "noul",
+   "instructions": "Closing animal count reconciles with opening count and logged movements.",
+   "criteria": {
+    "true": "Closing count equals opening plus logged ins minus outs",
+    "false": "Counts differ with no matching movement entry"
+   }
+  },
+  "secure_at_close": {
+   "type": "noul",
+   "instructions": "Enclosure was confirmed secure at close with no open barrier fault.",
+   "criteria": {
+    "true": "Lock checks logged after last round; no unresolved fault",
+    "false": "Lock check absent, early, or barrier fault still open"
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the section lead do with this log now?",
+   "criteria": {
+    "sign_off": "Log complete and consistent; file it with no follow-up.",
+    "request_entry": "One named entry or section missing; ask the keeper first.",
+    "recheck_round": "Schedule a targeted recheck next round; animals left as they are.",
+    "keeper_action": "Send a keeper now to recount, secure or correct on site.",
+    "escalate": "Refer to duty vet or curator for a decision beyond lead."
+   }
+  },
+  "intake_shortfall": {
+   "type": "score",
+   "instructions": "How large is the gap between diet sheet and logged intake?",
+   "criteria": [
+    "None: logged intake at least 90% of diet sheet",
+    "Minor: logged intake between 60% and 89% of sheet",
+    "Marked: logged intake between 25% and 59% of sheet",
+    "Severe: logged intake below 25% of diet sheet"
+   ]
+  },
+  "missed_rounds": {
+   "type": "score",
+   "instructions": "How many scheduled check rounds have no logged entry?",
+   "criteria": [
+    "Every scheduled round has a logged entry",
+    "Exactly one scheduled round has no entry",
+    "Two or three scheduled rounds have no entry",
+    "Four or more scheduled rounds lack entries"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "count_discrepancy",
+   "description": "Relationship between shift.opening_count, shift.closing_count and movements list; a gap may be covered by a transfer entry or left unexplained",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "movement_logged_elsewhere",
+    "unexplained_off_by_one",
+    "unexplained_larger"
+   ],
+   "weights": [
+    0.4,
+    0.2,
+    0.25,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "barrier_fault",
+   "description": "State of any barrier or door fault ticket in close_check",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "minor_ticket_closed",
+    "repaired_retest_pending",
+    "fault_unresolved"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S3",
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "lock_check_timing",
+   "description": "Whether lock checks are logged and whether their timestamps fall after the last round and before shift end",
+   "kind": "categorical",
+   "values": [
+    "logged_after_last_round",
+    "logged_before_last_round",
+    "partial_doors_only",
+    "absent"
+   ],
+   "weights": [
+    0.55,
+    0.15,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4",
+    "S5"
+   ]
+  },
+  {
+   "name": "intake_ratio",
+   "description": "Offered weight minus leftover weight divided by diet sheet weight; values cluster near the 0.6 and 0.9 boundaries",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0.05,
+   "max": 1.1,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "intake_mitigation",
+   "description": "Benign reason for low intake present: diet sheet flags fast day, pre-procedure fast, or scatter feed marked unweighable",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "unrecorded_rounds",
+   "description": "Number of scheduled rounds in the rounds list with logged false or null entry time",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 5,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "cctv_cover",
+   "description": "Gap rounds carry a cctv_reviewed flag with reviewer id, lowering concern without filling the entry",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "temp_excursion",
+   "description": "Enclosure temperature readings in rounds compared with enclosure set range",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "brief_single_reading",
+    "sustained_outside_range"
+   ],
+   "weights": [
+    0.6,
+    0.25,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "heater_maintenance_window",
+   "description": "Enclosure lists a scheduled maintenance window overlapping the out-of-range readings",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "field_mismatch",
+   "description": "Minor or major cross-section inconsistency unrelated or related to answers: diet unit kg vs g, animal id in feeding absent from roster, diet sheet date after shift date",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "unit_kg_vs_g",
+    "animal_id_not_on_roster",
+    "diet_sheet_date_mismatch"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "behaviour_codes",
+   "description": "Count of concerning coded behaviour observations across rounds (LETH, LAME, STER, AGGR)",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "vet_case_open",
+   "description": "An active vet case id already covers the flagged animal, lowering need to escalate",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "missing_section",
+   "description": "One section absent or null, making a decision depend on a single missing item",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "feeding_absent",
+    "close_check_absent",
+    "movements_absent"
+   ],
+   "weights": [
+    0.7,
+    0.1,
+    0.1,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S5",
+    "S7"
+   ]
+  },
+  {
+   "name": "risk_category",
+   "description": "Dangerous-animal category of the species, affecting how far a security or count gap must be escalated",
+   "kind": "categorical",
+   "values": [
+    "cat_3_low",
+    "cat_2_medium",
+    "cat_1_high"
+   ],
+   "weights": [
+    0.45,
+    0.35,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "enclosure",
+   "description": "Enclosure id, species code, risk_cat, roster of animal ids, temp_range_c, maint_window, active_vet_case"
+  },
+  {
+   "name": "shift",
+   "description": "Shift date, keeper_id, start and end times, opening_count, closing_count"
+  },
+  {
+   "name": "movements",
+   "description": "List of transfers in or out with animal_id, direction, time, destination enclosure"
+  },
+  {
+   "name": "feeding",
+   "description": "Diet sheet version date and items with sheet_g, offered_g, leftover_g, unit, fast_flag, scatter_flag"
+  },
+  {
+   "name": "rounds",
+   "description": "Scheduled check rounds with sched_time, logged, entry_time, temp_c, behaviour codes, cctv_reviewed, reviewer_id"
+  },
+  {
+   "name": "close_check",
+   "description": "Lock checks per door with time, barrier fault ticket id, ticket_state, retest_due"
+  }
+ ],
+ "rendering_notes": "count_discrepancy appears only as numbers in shift.opening_count and shift.closing_count against movements entries; movement_logged_elsewhere puts the transfer in movements with a time inside the shift. barrier_fault shows in close_check.ticket_state (closed, repaired, open) with retest_due date; repaired_retest_pending is a deliberate boundary case for secure_at_close. lock_check_timing shows as per-door times compared with the last rounds.entry_time and shift.end; partial_doors_only omits one door listed in the enclosure. intake_ratio is never stated: it is derived from offered_g minus leftover_g against sheet_g. intake_mitigation sets fast_flag or scatter_flag on an item, or a pre-procedure fast in active_vet_case. unrecorded_rounds shows as logged false or entry_time null; cctv_cover adds cctv_reviewed true with reviewer_id on those rounds only. temp_excursion shows as temp_c values outside enclosure.temp_range_c; heater_maintenance_window overlaps their times. field_mismatch is a decoy or real inconsistency: unit_kg_vs_g records leftover in kg beside sheet in g, so the reader must convert. Behaviour concerns are coded only (LETH, LAME, STER, AGGR) and never explained. A missing_section is rendered as null or an absent key. No field may state a verdict, risk level, shortfall percentage, count of missed rounds, secure/insecure status or recommended action. Timestamps carry harmless minute-level offsets as decoys. No free-text fields at all.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_entry"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.152048
+}

@@ -1,0 +1,171 @@
+{
+ "id": "F419-0002",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "16/34",
+   "date": "2024-08-20",
+   "test_speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": {
+    "precip_mm": 0,
+    "wind_kt": 8
+   }
+  },
+  "device": {
+   "type": "CFME",
+   "serial": "C-2093",
+   "cal_cert_date": null,
+   "cal_expiry": null,
+   "tyre_pressure_kpa": 175,
+   "tyre_spec_kpa": [
+    135,
+    145
+   ],
+   "water_depth_mm": null
+  },
+  "runs": [
+   {
+    "dir": "16",
+    "mean_speed_kmh": 65,
+    "thirds": [
+     0.78,
+     0.74,
+     0.79
+    ],
+    "segments_100m": [
+     0.8,
+     0.77,
+     0.76,
+     0.38,
+     0.75,
+     0.78
+    ]
+   },
+   {
+    "dir": "34",
+    "mean_speed_kmh": 64,
+    "thirds": [
+     0.77,
+     0.75,
+     0.8
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.7,
+    0.68,
+    0.72
+   ],
+   "mtd_threshold_mm": 0.5,
+   "contaminant": "dry"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-07-21",
+   "works_orders": [
+    {
+     "type": "apron_repaint",
+     "start_date": "2024-09-02"
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2024-02-20",
+     "lowest_third": 0.84
+    },
+    {
+     "date": "2024-05-21",
+     "lowest_third": 0.79
+    }
+   ],
+   "cross_checks": []
+  },
+  "review": {
+   "analyst": "M. Kerr",
+   "signed_at": null
+  }
+ },
+ "factors": {
+  "min_third_band": "above_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "mid_section",
+  "days_since_rubber_removal": 396,
+  "removal_scheduled": false,
+  "calibration_status": "missing",
+  "missing_elements_count": 2,
+  "test_condition_anomaly": "tyre_pressure_off",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "factors_sampled": {
+  "min_third_band": "above_design",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "mid_section",
+  "days_since_rubber_removal": 396,
+  "removal_scheduled": false,
+  "calibration_status": "missing",
+  "missing_elements_count": 4,
+  "test_condition_anomaly": "tyre_pressure_off",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "schedule_works",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deficit_driver": {
+   "clarity": "leaning",
+   "target": "test_artefact",
+   "second": null,
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 132,
+ "deciding": {
+  "genuine_deficit": "One 100 m segment reads 0.38, below minimum 0.42, while thirds are all above design; but tyre pressure 175 is outside spec 135-145 and calibration is absent, giving some doubt.",
+  "next_step": "A segment is below minimum with no rubber-removal works order (only an unrelated apron order), so works need scheduling.",
+  "deficit_driver": "Tyre pressure 175 kPa is outside the 135-145 spec and the dip is isolated in an otherwise good mid-section, while texture is adequate and thirds are high; this points to test artefact, with mild doubt.",
+  "friction_severity": "The 0.38 segment is below minimum 0.42, so level 3, though the test settings are off.",
+  "evidence_completeness": "Calibration fields are null, water depth is null and signed_at is null: three missing; the off-spec tyre pressure could be counted as a fourth."
+ },
+ "request": "rec-F419-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011286
+}

@@ -1,0 +1,121 @@
+{
+ "id": "F431-0018",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM-61882",
+   "seal_state": "broken",
+   "seal_checked_date": "2024-05-10"
+  },
+  "period_read": {
+   "read_date": "2024-06-10",
+   "reg_kwh": 6128,
+   "src_code": "CUS",
+   "photo_ref": "P-3305"
+  },
+  "history": [
+   {
+    "date": "2024-05-10",
+    "reg_kwh": 5000,
+    "src": "ENG",
+    "same_period_ly_kwh": 600
+   }
+  ],
+  "diagnostics": {
+   "error_codes": []
+  },
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2024-05-20",
+   "hdd_current": 470,
+   "hdd_prior_year": 500,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "closed",
+     "date": "2024-05-10"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 2.0,
+  "occupancy_change": true,
+  "degree_day_ratio": 0.94,
+  "diagnostic_error_count": 0,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "duplicate_timestamp",
+  "missing_section": "diagnostics_null",
+  "consumption_ratio": 1.36,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.94,
+  "diagnostic_error_count": 0,
+  "meter_works_order": true,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "meter_fault": "There are no error codes, and the broken seal matches the ENG visit and closed RECAL order on 2024-05-10. A tenancy change in the period explains the consumption.",
+  "billable_actual": "The customer read has a photo and is in sequence, and the tenancy change explains the high use. Against that, it is a customer read with consumption double the expected figure.",
+  "next_step": "Everything is evidenced: the photo, the logged seal visit, clean diagnostics and the tenancy change. The reading can be released.",
+  "staff_effort": "The checks are mostly done, but confirming the tenancy explanation could take somewhere between one hour and a couple of days.",
+  "consumption_deviation": "Consumption is 6128-5000=1128 against expected 600*470/500=564, a ratio of 2.0. That is on the 100% boundary between levels 2 and 3."
+ },
+ "request": "rec-F431-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010249
+}

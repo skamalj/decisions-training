@@ -1,0 +1,294 @@
+{
+ "id": "F423",
+ "domain": "printing plant press-check records",
+ "role": "Press-check approver (pressroom quality lead) at a commercial sheet-fed litho plant",
+ "setting": "Each record is one press-check event for a single job on a single press: the approver compares the OK sheet's colour and register readings with the job spec and the signed proof, checks the run log for sheets already printed, and decides whether the run may continue.",
+ "questions": {
+  "colour_in_tolerance": {
+   "type": "noul",
+   "instructions": "Every measured patch on the OK sheet is within the applicable tolerance.",
+   "criteria": {
+    "true": "All patches read at or under the applicable delta E limit",
+    "false": "A patch exceeds the limit, or patch readings are missing"
+   }
+  },
+  "run_before_signoff": {
+   "type": "noul",
+   "instructions": "Production sheets were logged before the OK sheet was signed.",
+   "criteria": {
+    "true": "Production sheets precede signature, or run without any signature",
+    "false": "No production sheets logged ahead of a signature"
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the press-check approver do with this record now?",
+   "criteria": {
+    "release_run": "Check passes and is signed; press continues the run unchanged.",
+    "hold_for_signoff": "Press waits until the missing signed OK sheet is received.",
+    "adjust_and_recheck": "Correct colour or register on press, re-pull and remeasure sheet.",
+    "escalate_manager": "Refer to production manager to decide reprint or customer contact."
+   }
+  },
+  "staff_effort": {
+   "type": "score",
+   "instructions": "How much staff time would fully resolving this record require?",
+   "criteria": [
+    "Under one hour of staff time needed",
+    "One to eight hours of staff time",
+    "One to five working days of staff time",
+    "More than five working days of staff time"
+   ]
+  },
+  "scrap_exposure": {
+   "type": "score",
+   "instructions": "How many production sheets are at risk of being scrapped?",
+   "criteria": [
+    "No suspect production sheets printed yet",
+    "Suspect sheets within the job's overs allowance",
+    "Suspect sheets exceed overs, below 10% of run",
+    "Suspect sheets at or above 10% of run"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "colour_deviation",
+   "description": "How far the worst OK-sheet patch sits from the spec delta E limit: none over, marginal (within 0.2 of the limit either side), one patch over, several patches over.",
+   "kind": "categorical",
+   "values": [
+    "none_over",
+    "marginal",
+    "single_patch_over",
+    "multiple_over"
+   ],
+   "weights": [
+    0.35,
+    0.2,
+    0.25,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "concession_on_file",
+   "description": "Customer has signed a concession raising the allowed delta E for the job; when present the concession limit replaces the spec limit.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "readings_completeness",
+   "description": "Whether the colour readings section is complete, has some patch values null, or is null altogether.",
+   "kind": "categorical",
+   "values": [
+    "complete",
+    "some_patches_null",
+    "section_null"
+   ],
+   "weights": [
+    0.65,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S5"
+   ]
+  },
+  {
+   "name": "signoff_state",
+   "description": "Customer OK-sheet signature status: signed before production, not signed, or signed with a timestamp later than the first production sheet.",
+   "kind": "categorical",
+   "values": [
+    "signed_in_order",
+    "unsigned",
+    "signed_after_production"
+   ],
+   "weights": [
+    0.5,
+    0.25,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "sheets_before_check",
+   "description": "Production sheets counted in the run log ahead of the OK sheet or its signature.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3000,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S5"
+   ]
+  },
+  {
+   "name": "wrong_stock_loaded",
+   "description": "Stock code loaded on press differs from the job's specified stock and production sheets were printed on it, at least 10% of run quantity.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "overs_allowance_pct",
+   "description": "Percentage of run quantity the job allows as overs and spoilage; sets the boundary between the second and third scrap levels.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 1,
+   "max": 6,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "register_offset_mm",
+   "description": "Worst measured misregister between colour units on the OK sheet, against a 0.15 mm spec.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0.4,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "offset_in_trim_only",
+   "description": "The worst misregister reading comes from a target in the trim area outside the finished image, so it does not affect saleable product.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "spectro_calibration_age_days",
+   "description": "Days since the spectrophotometer used for readings was last calibrated; over 90 days makes marginal readings arguable.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 120,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "customer_tier",
+   "description": "Account tier of the customer; a decoy that does not change any answer.",
+   "kind": "categorical",
+   "values": [
+    "trade",
+    "standard",
+    "key_account"
+   ],
+   "weights": [
+    0.3,
+    0.45,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "prior_stoppages",
+   "description": "Count of earlier press stoppages on this job in the run log; a decoy unless tied to a reading.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "job",
+   "description": "Job id, product type, stock_spec code, run_qty, overs_pct, due_date, customer_tier, spec_max_de."
+  },
+  {
+   "name": "proof_signoff",
+   "description": "Contract proof id and date, ok_sheet_no, signed_at, customer_present flag, concession object or null."
+  },
+  {
+   "name": "colour_readings",
+   "description": "Instrument id, calibrated_on date, list of patches with ink, target_lab and measured delta_e."
+  },
+  {
+   "name": "registration",
+   "description": "List of register targets with unit pair, offset_mm and in_image boolean."
+  },
+  {
+   "name": "run_log",
+   "description": "Press id, stock_loaded code, first_production_at, sheets_production, sheets_makeready, stoppages list."
+  }
+ ],
+ "rendering_notes": "colour_deviation appears only as colour_readings.patches[].delta_e numbers compared with job.spec_max_de, or with proof_signoff.concession.accepted_max_de when concession_on_file is true (otherwise concession is null). The same over-limit patch values occur with and without a concession about equally. readings_completeness: some patch delta_e values null, or colour_readings itself null; missing readings make colour_in_tolerance false and point next_step to adjust_and_recheck (re-pull and measure). signoff_state: proof_signoff.signed_at null when unsigned; when signed_after_production, signed_at is later than run_log.first_production_at. sheets_before_check is visible only as run_log.sheets_production with first_production_at timestamps relative to signed_at. wrong_stock_loaded shows only as run_log.stock_loaded differing from job.stock_spec, with sheets_production at least 10% of run_qty; this alone sets scrap_exposure to its top level and next_step to escalate_manager. Suspect sheets are production sheets printed while a spec failure held: wrong stock, colour over the applicable limit, or in-image misregister over 0.15 mm; compare their count with job.overs_pct times run_qty. register_offset_mm sits in registration.targets[].offset_mm; offset_in_trim_only sets in_image false on the worst target, so a large offset there is harmless. calibrated_on older than 90 days before the check date makes marginal readings contestable. Decoys: customer_tier, customer_present, prior_stoppages, sheets_makeready (make-ready waste is not production) and due_date. next_step ordering: release_run when readings pass and signature precedes production; hold_for_signoff when readings and register pass but signature is missing; adjust_and_recheck when colour, in-image register or readings fail but no wrong stock and suspect sheets are within overs; escalate_manager for wrong stock or suspect sheets beyond overs. No field states pass/fail, severity, tolerance verdict or recommended action; there are no free-text fields.",
+ "skills": [
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "staff_effort",
+ "next_step": {
+  "question": "next_step",
+  "info_option": "hold_for_signoff"
+ },
+ "aggravating_factor": "wrong_stock_loaded",
+ "design_cost": 0.140796
+}

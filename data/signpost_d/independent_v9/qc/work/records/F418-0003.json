@@ -1,0 +1,143 @@
+{
+ "id": "F418-0003",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "WRN",
+   "plat": 3,
+   "date": "2025-05-20",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "T09",
+    "planned_start": "05:45"
+   },
+   {
+    "staff_id": "T33",
+    "planned_start": "05:45"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "T09",
+    "sign_on": "05:44",
+    "safety_comp_exp": "2026-02-01",
+    "dispatch_comp_exp": "2026-02-01"
+   },
+   {
+    "staff_id": "T33",
+    "sign_on": "05:46",
+    "safety_comp_exp": "2025-05-23",
+    "dispatch_comp_exp": "2025-05-23"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "14:00",
+    "platform": 3
+   },
+   {
+    "type": "cover_start",
+    "time": "14:00",
+    "staff_id": "T09",
+    "platform": 4
+   },
+   {
+    "type": "cover_end",
+    "time": "14:35",
+    "staff_id": "T09"
+   },
+   {
+    "type": "gap_end",
+    "time": "15:14",
+    "platform": 3
+   }
+  ],
+  "controls": null,
+  "remarks": [
+   "T33 on break, dispensation held by ops."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 74,
+  "shortfall_timing": "peak",
+  "dispensation_present": false,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 74,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": false,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "leaning",
+   "target": "partial_cover",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 96,
+ "deciding": {
+  "headcount_verified": "Sign-ons exist and competence is in date (T33 expires 3 days after shift, still valid), but T09 is logged on platform 4 during cover, so doubt remains.",
+  "next_step": "Controls is null while remarks say ops holds the dispensation; the planned answer is to accept the log as reconciled.",
+  "coverage_outcome": "cover_end 14:35 vs gap_end 15:14 leaves 39 minutes open after partial cover.",
+  "reversal_time": "Unfilled period in service with no recorded dispensation; whether lasting effects extend beyond a few months is balanced.",
+  "exposure_severity": "No dispatch event in the gap, but controls is null so whether a dispensation applies is unknown; level 0 vs 1 is balanced."
+ },
+ "request": "rec-F418-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005827
+}

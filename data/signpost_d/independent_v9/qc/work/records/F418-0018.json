@@ -1,0 +1,118 @@
+{
+ "id": "F418-0018",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "plat": 3,
+   "date": "2025-05-06",
+   "dispatch_mode": "staff",
+   "min_staff": 2
+  },
+  "attendance": [
+   {
+    "staff_id": "S77",
+    "dispatch_comp_exp": null
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "10:00"
+   },
+   {
+    "type": "dispatch",
+    "time": "10:10",
+    "staff_id": "S77"
+   },
+   {
+    "type": "cover_end",
+    "time": "10:48"
+   }
+  ],
+  "controls": {
+   "disp_ref": null
+  }
+ },
+ "factors": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 48,
+  "shortfall_timing": "in_service",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 6,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 48,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 6,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "cover_arranged",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unqualified_dispatch = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 25,
+ "deciding": {
+  "headcount_verified": "S77 has null dispatch competence, but roster mismatch leaves it modest.",
+  "next_step": "Dispatch in gap by S77 with no competence; amend and brief.",
+  "coverage_outcome": "Cover events span the gap fully.",
+  "reversal_time": "Unqualified dispatch is a safety event; permanence of consequences arguable between levels 2 and 3.",
+  "exposure_severity": "Dispatch at 10:10 inside gap by S77 with null dispatch_comp_exp in staff mode."
+ },
+ "request": "rec-F418-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005159
+}

@@ -1,0 +1,130 @@
+{
+ "id": "F407-0013",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "PR-7752",
+   "received_at": "2025-02-11T14:05:00Z",
+   "channel": "utility_contractor",
+   "photo_ref": "IMG-3320",
+   "linked_reports": [
+    "PR-7740",
+    "PR-7748"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "usrn": 30018842,
+   "road_class": "main_distributor",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspector": "HI-02",
+   "inspected_at": "2025-02-09",
+   "depth_mm": 62,
+   "width_mm": 903,
+   "offset_m": 45
+  },
+  "works_history": [
+   {
+    "job": "J-6104",
+    "completed": "2024-12-02",
+    "offset_m": 47,
+    "guarantee_end": "2025-12-02"
+   }
+  ],
+  "programme": {
+   "schemes": [],
+   "temp_measures": []
+  },
+  "current_order": {
+   "id": "WO-1530",
+   "raised": "2025-02-11",
+   "status": "completed",
+   "completed_items": 1,
+   "total_items": 1
+  }
+ },
+ "factors": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 2,
+  "reporter_source": "utility_contractor",
+  "injury_or_claim": false,
+  "order_status": "completed",
+  "defect_width_mm": 903.0,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "not_done",
+  "prior_repair_match": "none",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 2,
+  "reporter_source": "utility_contractor",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 902.89,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 83,
+ "deciding": {
+  "meets_threshold": "Depth 62 vs 40 threshold, but the inspection predates the report by two days and the order has since been completed.",
+  "repeat_failure": "works_history J-6104 completed offset 47 m vs inspected defect offset 45 m, within 10 m and inside guarantee.",
+  "next_step": "current_order WO-1530 is completed 1/1 after the report, so the defect is already repaired.",
+  "staff_effort": "Closing a completed order is under an hour, though checking the repeat may add some time.",
+  "response_timescale": "62 mm deep at 2.5 times the threshold on a main distributor: policy make-safe within 24 hours."
+ },
+ "request": "rec-F407-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008011
+}

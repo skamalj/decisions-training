@@ -1,0 +1,145 @@
+{
+ "id": "F432-0038",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E03",
+   "risk_cat": 1,
+   "doors": [
+    "D1",
+    "D2"
+   ]
+  },
+  "shift": {
+   "opening_count": 3,
+   "closing_count": 3
+  },
+  "movements": [],
+  "feeding": [
+   {
+    "sheet_date": "2023-11-01",
+    "sheet_g": 2000,
+    "offered_g": 2000,
+    "leftover_g": 1500,
+    "unit": "g"
+   }
+  ],
+  "rounds": [
+   {
+    "t": "08:30",
+    "logged": true,
+    "beh": [
+     "LAME"
+    ]
+   },
+   {
+    "t": "10:30",
+    "logged": false
+   },
+   {
+    "t": "12:30",
+    "logged": false
+   },
+   {
+    "t": "14:30",
+    "logged": false
+   },
+   {
+    "t": "16:30",
+    "logged": false
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "D1",
+     "time": null
+    },
+    {
+     "door": "D2",
+     "time": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "absent",
+  "intake_ratio": 0.25,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 4,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_1_high"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "absent",
+  "intake_ratio": 0.39,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 1,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 3,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_1_high"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "recheck_round",
+   "second": "sign_off",
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "count_reconciles": "Opening 3 equals closing 3 with no movements.",
+  "secure_at_close": "Both door lock check times are null, though no barrier fault ticket is open.",
+  "next_step": "The record has no lock checks and four missing rounds on a high-risk enclosure but no active alarm, so a recheck at the next round or a plain sign-off are both defensible.",
+  "intake_shortfall": "Offered 2000 g with 1500 g left gives 25% intake, exactly at the boundary between marked and severe; the diet sheet date is also old.",
+  "missed_rounds": "Four of the five scheduled rounds have logged false and no CCTV review."
+ },
+ "request": "rec-F432-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009666
+}

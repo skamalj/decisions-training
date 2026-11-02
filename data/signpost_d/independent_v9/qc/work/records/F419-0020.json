@@ -1,0 +1,142 @@
+{
+ "id": "F419-0020",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "03/21",
+   "date": "2024-09-12",
+   "speed_kmh": 65,
+   "thr": {
+    "design": 0.72,
+    "plan": 0.52,
+    "min": 0.42
+   },
+   "weather": {
+    "precip_mm": 0,
+    "air_c": 19
+   }
+  },
+  "device": {
+   "cal_expiry": "2025-04-30",
+   "tyre_kpa": 118,
+   "tyre_spec_kpa": [
+    135,
+    165
+   ],
+   "water_mm": null
+  },
+  "runs": [
+   {
+    "dir": "03",
+    "mean_speed": 65,
+    "thirds": [
+     0.4,
+     0.44,
+     0.46
+    ]
+   },
+   {
+    "dir": "21",
+    "mean_speed": 65,
+    "thirds": [
+     0.46,
+     0.45,
+     0.41
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.85,
+    0.9,
+    0.88
+   ],
+   "mtd_thr_mm": 0.6
+  },
+  "maintenance": {
+   "last_rubber_removal": "2024-08-02",
+   "works_orders": [],
+   "cross_checks": [],
+   "prior_surveys": []
+  },
+  "review": {
+   "signed_at": null
+  }
+ },
+ "factors": {
+  "min_third_band": "below_minimum",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 41,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 2,
+  "test_condition_anomaly": "tyre_pressure_off",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "no_prior"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_planning",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 41,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 2,
+  "test_condition_anomaly": "tyre_pressure_off",
+  "macrotexture_band": "low",
+  "cross_check_result": "none",
+  "prior_survey_trend": "no_prior"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "restrict_ops",
+   "second": null,
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "test_artefact",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "genuine_deficit": "Tyre pressure of 118 kPa is outside the 135 to 165 spec, so the low readings cannot be taken as a genuine deficit; there is no cross-check or prior survey.",
+  "next_step": "Thirds of 0.40 and 0.41 are below the 0.42 minimum, which points to restrict_ops; the off-spec tyre pressure leaves some doubt, making hold_retest the alternative.",
+  "deficit_driver": "Pressure 118 kPa is below spec, mtd is adequate at 0.85 to 0.9, and rubber was removed only 41 days ago, so the artefact explains the low values.",
+  "friction_severity": "Lowest third averages are 0.40 and 0.41, below the 0.42 minimum, which is level 3; the invalid tyre pressure reduces certainty.",
+  "evidence_completeness": "water_mm and signed_at are null and the tyre pressure is outside spec, which makes three elements missing or unreliable, so level 1."
+ },
+ "request": "rec-F419-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012637
+}

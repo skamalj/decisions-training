@@ -1,0 +1,134 @@
+{
+ "id": "F438-0006",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E1041",
+   "los": 4,
+   "method": "emergency"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "K35.8"
+   },
+   "comorbidities": [
+    "E11.9"
+   ],
+   "theatre_log": [
+    {
+     "proc": "H01.1",
+     "date": "2024-03-02"
+    }
+   ]
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "K80.2"
+   },
+   "secondary_dx": [
+    "E11.9"
+   ],
+   "procedures": [
+    {
+     "code": "H01.1",
+     "date": "2024-03-02"
+    },
+    {
+     "code": "Y53.2",
+     "date": "2024-03-02"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "FD05Z",
+   "hrg_regrouped": "FD05Z",
+   "tariff_submitted": 3100,
+   "tariff_regrouped": 3380,
+   "submitted_to_commissioner": true
+  },
+  "coder_history": {
+   "prior_audits": 6,
+   "error_rate": 0.21,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "extra coded procedure with no theatre entry",
+  "regroup_outcome": "same_hrg in grouping.hrg fields, tariff differs",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.21,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.21,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 95,
+ "deciding": {
+  "primary_supported": "K80.2 coded vs K35.8 documented: different condition, though HRG fields identical, so doubt remains.",
+  "hrg_shift": "Tariff_regrouped differs from tariff_submitted, so the regroup implies a different HRG despite matching HRG code fields.",
+  "next_step": "HRG codes match, so accepting as coded is plausible despite the other discrepancies.",
+  "error_count": "Wrong primary plus unsupported Y53.2 gives 2, with tariff gap possibly a third error; split between levels 2 and 3.",
+  "error_severity": "Y53.2 is coded with no theatre log entry and a positive tariff difference, pointing to critical."
+ },
+ "request": "rec-F438-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005975
+}

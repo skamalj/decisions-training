@@ -1,0 +1,124 @@
+{
+ "id": "F411-0046",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H214",
+   "review_date": "2024-03-01"
+  },
+  "vehicle": {
+   "odometer_km": 148000
+  },
+  "inspection": {
+   "result_code": "F",
+   "brake_efficiency_pct": 52
+  },
+  "defects": [
+   {
+    "code": "BRK1",
+    "grade": "major",
+    "rectify_by": "2024-02-01",
+    "repaired_on": null,
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2024-02-10"
+   },
+   {
+    "type": "dbs",
+    "expires_on": "2024-02-20"
+   },
+   {
+    "type": "badge",
+    "expires_on": "2024-03-01"
+   }
+  ],
+  "history": [
+   {
+    "date": "2023-03-02",
+    "result": "P",
+    "odometer_km": 151000
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "major",
+  "rectification_state": "not_started",
+  "deadline_passed": true,
+  "documents_missing_count": 3,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": true,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 13
+ },
+ "factors_sampled": {
+  "worst_defect_found": "major",
+  "rectification_state": "retest_passed",
+  "deadline_passed": true,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 13
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "conditional_renewal",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "clean_pass",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "clear",
+   "target": "4",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 27,
+ "deciding": {
+  "odometer_consistent": "Current 148000 km is below the earlier 151000 km history reading, with no instrument cluster replacement logged.",
+  "next_step": "Unexplained odometer drop and an unrepaired major brake defect past its deadline; the plan's conditional renewal cannot be met honestly alongside the other planned answers.",
+  "inspection_outcome": "Result code F with a brake defect graded major; a clean pass is not supportable alongside a clear outstanding major defect.",
+  "document_gaps": "Insurance and DBS expire before the review date and the badge expires exactly on it with no cover note, so it is either 2 or 3 gaps.",
+  "outstanding_severity": "The major BRK1 defect has no repair or retest and its rectify_by date has passed."
+ },
+ "request": "rec-F411-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008139
+}

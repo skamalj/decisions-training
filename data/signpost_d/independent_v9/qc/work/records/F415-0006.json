@@ -1,0 +1,143 @@
+{
+ "id": "F415-0006",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": [
+    {
+     "from": "2024-05-14T10:00",
+     "to": "2024-05-14T10:15",
+     "reason": "water off",
+     "approved_by": "OFF114"
+    }
+   ]
+  },
+  "shift": {
+   "sched_slots": [
+    "08:00",
+    "11:00",
+    "14:00",
+    "17:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "status": "done"
+   },
+   {
+    "slot": "11:00",
+    "status": "not_recorded",
+    "op_note": "tablet froze, cleaned approx 11:20"
+   },
+   {
+    "slot": "14:00",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "pans": false
+    },
+    "photo_ref": "P881"
+   },
+   {
+    "slot": "17:00",
+    "status": "done",
+    "end": "17:35"
+   }
+  ],
+  "faults": [
+   {
+    "type": "spillage",
+    "reported_at": "09:00",
+    "remedied_at": "13:10"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "17:36"
+  },
+  "history": {
+   "prior_defaults_90d": 2
+  }
+ },
+ "factors": {
+  "scheduled_slots": 4,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "spillage",
+  "fault_open_minutes": "250 total, 235 while open to public",
+  "block_closed_during_fault": false,
+  "checklist_completion": "partial",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 2
+ },
+ "factors_sampled": {
+  "scheduled_slots": 4,
+  "missed_slots": "2",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "spillage",
+  "fault_open_minutes": 141.76,
+  "block_closed_during_fault": true,
+  "checklist_completion": "partial",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 2
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 54,
+ "deciding": {
+  "missed_clean": "11:00 slot is not_recorded; the note says cleaned about 11:20 but is unevidenced, and the only closure (10:00-10:15) does not cover it.",
+  "sign_off_valid": "Supervisor signed 17:36, one minute after the last visit end 17:35; the margin is thin.",
+  "next_step": "One specific unconfirmed item: the 11:00 clean has no recorded visit, only a note, so evidence is needed before deciding.",
+  "staff_effort": "Resolving needs crew statements, tablet data and a fault review across the shift, which could take one to five days or more.",
+  "fault_exposure": "Fault open 09:00-13:10 (250 min) minus a 15-minute closure leaves 235 minutes, just under the 240 boundary."
+ },
+ "request": "rec-F415-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010082
+}

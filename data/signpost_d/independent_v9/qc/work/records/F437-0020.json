@@ -1,0 +1,113 @@
+{
+ "id": "F437-0020",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v1",
+   "target_locale": "de-DE",
+   "glossary_version": "g1"
+  },
+  "source": {
+   "version": "v1",
+   "segment_count": 60
+  },
+  "deliverable": {
+   "built_from_version": "v1",
+   "target_locale": "de-DE",
+   "segments_translated": 60,
+   "glossary_version_used": "g1"
+  },
+  "qa_report": {
+   "flags": 9,
+   "false_positive_marked": 7,
+   "unresolved": {}
+  },
+  "review": {
+   "signed_off": true
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.78,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 92,
+  "client_waiver": false,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": true,
+  "glossary_version_state": "match",
+  "review_status": "not_assigned",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.78,
+  "number_mismatch_count": 3,
+  "deadline_slack_hours": 92,
+  "client_waiver": false,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 28,
+ "deciding": {
+  "scope_matches": "Versions all v1 and 60 of 60 segments translated.",
+  "reviewed_in_time": "review.signed_off is true, with review dates absent.",
+  "next_step": "Counts, locale and glossary agree, qa unresolved is empty, and the review is signed off, so nothing blocks release.",
+  "open_severity": "7 of 9 QA flags are marked false positive and unresolved is empty, with no review errors listed.",
+  "parties_needed": "Nothing is open, so no one needs to act."
+ },
+ "request": "rec-F437-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008059
+}

@@ -1,0 +1,109 @@
+{
+ "id": "F402-0035",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-8042",
+   "source": "GP",
+   "priority": "routine",
+   "onset_date": "2024-08-20"
+  },
+  "patient": {
+   "dob": "1955-03-03"
+  },
+  "clinical": {
+   "red_flags": [
+    "cancer_hx_new_spinal_pain"
+   ],
+   "neuro_signs": {
+    "progression": "worsening"
+   },
+   "function_index": 60
+  },
+  "gp_record": {
+   "dob": "1955-03-04"
+  },
+  "attachments": []
+ },
+ "factors": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "date_of_birth",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "imaging_report",
+  "condition_group": "neurological",
+  "symptom_duration_weeks": 36,
+  "function_index": 60.0,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 0,
+  "post_op_days": "none",
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": true,
+  "mismatch_field": "date_of_birth",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "imaging_report",
+  "condition_group": "neurological",
+  "symptom_duration_weeks": 36,
+  "function_index": 60.14,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "routine",
+  "falls_last_3m": 3,
+  "post_op_days": 30,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "red_flag_unresolved": "Cancer-history spinal flag with worsening neuro signs; no imaging or review.",
+  "next_step": "Record lacks imaging; routine acceptance leaning despite gaps.",
+  "pathway": "Worsening neuro signs point to specialist care.",
+  "reversal_time": "Progressive neurological loss may be permanent.",
+  "clinical_urgency": "Worsening neuro signs with cancer history: medical review within 48 hours versus two weeks."
+ },
+ "request": "rec-F402-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004947
+}

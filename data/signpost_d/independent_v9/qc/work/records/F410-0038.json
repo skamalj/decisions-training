@@ -1,0 +1,179 @@
+{
+ "id": "F410-0038",
+ "family": "F410",
+ "state": {
+  "application": {
+   "licence_no": "ML-3305",
+   "holder_ref": "H-7012",
+   "holder_name": "S. Okafor",
+   "term_end": "2026-06-30",
+   "pitch_req": {
+    "width_m": 3.65
+   },
+   "commodities": [
+    "hot food",
+    "sauces"
+   ],
+   "docs_pending": [
+    "hygiene_cert_copy"
+   ]
+  },
+  "licence_current": {
+   "holder_ref": "H-7012",
+   "pitch": {
+    "width_m": 3.0
+   },
+   "commodities": [
+    "hot food"
+   ],
+   "conditions": {
+    "min_attendance_pct": 70
+   },
+   "variations": [
+    {
+     "type": "width_commodity",
+     "detail": "3.65 m, sauces",
+     "approved": true,
+     "approved_on": "2025-12-01"
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-06-20",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": "2026-01-12",
+    "new_end": "2026-07-15"
+   },
+   "food_reg": {
+    "registered": true,
+    "fhrs_rating": 4,
+    "inspected_on": "2025-08-14"
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2026",
+     "amount_gbp": 600
+    }
+   ],
+   "ledger": [
+    {
+     "date": "2026-01-05",
+     "amount_gbp": 346.69,
+     "method": "card"
+    }
+   ],
+   "payment_plan": {
+    "active": true,
+    "instalments_left": 3,
+    "missed": 0
+   }
+  },
+  "history": {
+   "allocated_12m": 52,
+   "attended_12m": 24,
+   "absence_notices": [
+    {
+     "date": "2025-05-02",
+     "reason": "illness",
+     "accepted": true
+    },
+    {
+     "date": "2025-09-18",
+     "reason": "holiday",
+     "accepted": false
+    }
+   ],
+   "complaints": [
+    {
+     "date": "2025-10-09",
+     "category": "food hygiene",
+     "upheld": false,
+     "status": "open"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_within_14d_of_term_end",
+  "broker_confirmation_held": true,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.65,
+  "variation_approved": true,
+  "fee_arrears_gbp": 253.31,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.46,
+  "absences_notified": true,
+  "complaint_profile": "not_upheld_open_food_hygiene",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 1
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "ends_within_14d_of_term_end",
+  "broker_confirmation_held": true,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 0.65,
+  "variation_approved": true,
+  "fee_arrears_gbp": 253.31,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.46,
+  "absences_notified": true,
+  "complaint_profile": "not_upheld_only",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 1
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "contested",
+   "target": "defer",
+   "second": "grant_conditional",
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "contested",
+   "target": "none_needed",
+   "second": "urgent_visit",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 133,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-06-20 is before term_end 2026-06-30, but broker_conf.new_end 2026-07-15 covers the full term at the required sum.",
+  "renewal_disposition": "One document, hygiene_cert_copy, is pending, which points to defer. The active plan with no missed instalments and the approved variation would also support a conditional grant.",
+  "inspection_level": "Changes are approved and food registration is current, but a food hygiene complaint is still open with upheld false. This splits none needed and urgent visit.",
+  "reversal_time": "Holding or conditioning the licence can be undone within a day, although re-processing might take a few days.",
+  "discrepancy_count": "Arrears of 253.31 are covered by the active plan, and the width and commodity changes are approved. Attendance of 46% against 70% is only partly offset, since one of two absences is accepted. Whether that leaves one or two unresolved holds the balance."
+ },
+ "request": "rec-F410-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009793
+}

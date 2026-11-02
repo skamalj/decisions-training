@@ -1,0 +1,175 @@
+{
+ "id": "F419-0012",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "14/32",
+   "date": "2024-03-20",
+   "speed_kmh": 95,
+   "thresholds": {
+    "design": 0.66,
+    "maint_planning": 0.47,
+    "minimum": 0.34
+   },
+   "weather": {
+    "precip_mm": 0,
+    "temp_c": 11
+   }
+  },
+  "device": {
+   "cal_cert": "2023-11-02",
+   "cal_expiry": "2024-11-02",
+   "tyre_kpa": 210,
+   "tyre_spec_kpa": [
+    190,
+    230
+   ],
+   "water_mm": 1.0
+  },
+  "runs": [
+   {
+    "dir": "14",
+    "mean_speed_kmh": 95,
+    "thirds": [
+     0.45,
+     0.62,
+     0.66
+    ],
+    "seg_100m_t1": [
+     0.34,
+     0.46,
+     0.55
+    ]
+   },
+   {
+    "dir": "32",
+    "mean_speed_kmh": 94,
+    "thirds": [
+     0.66,
+     0.63,
+     0.46
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    1.2,
+    1.1,
+    1.2
+   ],
+   "mtd_threshold_mm": 0.8,
+   "contaminant": "dry"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-04-09",
+   "works_orders": [
+    {
+     "id": "WO-211",
+     "type": "taxiway_resurface",
+     "start_date": "2024-04-02"
+    },
+    {
+     "id": "WO-170",
+     "type": "rubber_removal",
+     "status": "closed",
+     "start_date": "2023-04-05"
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2023-12-12",
+     "lowest_third": 0.45
+    },
+    {
+     "date": "2023-09-14",
+     "lowest_third": 0.46
+    }
+   ],
+   "cross_checks": []
+  },
+  "review": {
+   "signed_at": "2024-03-21T10:30",
+   "role": "engineer"
+  }
+ },
+ "factors": {
+  "min_third_band": "below_planning",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 346,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_planning",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 346,
+  "removal_scheduled": true,
+  "calibration_status": "post_dated",
+  "missing_elements_count": 2,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "low",
+  "cross_check_result": "none",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "schedule_works",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "rubber_deposits",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "clear",
+   "target": "4",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 87,
+ "deciding": {
+  "genuine_deficit": "Touchdown thirds at 0.45 sit just under the 0.47 planning level with a stable prior trend (0.45-0.46); the margin is small, so a genuine deficit is favoured only modestly.",
+  "next_step": "Valid test, deficit below planning, and the only works orders are a closed past removal and an unrelated taxiway job, so no corrective works are scheduled.",
+  "deficit_driver": "Low values only in touchdown thirds (14 first, 32 last), texture adequate (1.1-1.2 vs 0.8), last removal 346 days before survey.",
+  "friction_severity": "Lowest segment is 0.34, exactly equal to the 0.34 minimum and not clearly below it, while thirds are below planning but above minimum; level 2 or 3.",
+  "evidence_completeness": "Calibration cert dated before survey and unexpired; tyre pressure, water depth, weather, both directions and sign-off all present."
+ },
+ "request": "rec-F419-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011885
+}

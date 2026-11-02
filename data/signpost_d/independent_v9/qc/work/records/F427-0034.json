@@ -1,0 +1,167 @@
+{
+ "id": "F427-0034",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V422",
+   "visit_date": "2024-05-29",
+   "surveyor_grade": "trainee",
+   "weather_on_day": "overcast"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 20,
+   "dipwells_scheduled": 4,
+   "dams_total": 3,
+   "last_visit_date": "2024-03-12"
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "DW1",
+     "depth_cm": -4
+    },
+    {
+     "id": "DW2",
+     "depth_cm": 0
+    },
+    {
+     "id": "DW3",
+     "depth_cm": 47
+    },
+    {
+     "id": "DW4",
+     "depth_cm": 45
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "depth_cm": 18,
+     "prev_depth_cm": 18
+    }
+   ],
+   "logger_download_at": "2024-05-29T11:40",
+   "rain_30d_pct_normal": 104
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D1",
+     "pool_level_cm": 40,
+     "design_pool_cm": 40,
+     "defect_code": "SEEP",
+     "remark": "Seep below dam drains the hags; the deepest wells are downslope of it."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 7
+    },
+    {
+     "q": 2,
+     "score": 6
+    },
+    {
+     "q": 3,
+     "score": 8
+    }
+   ],
+   "photos_uploaded": 12,
+   "photos_expected": 12,
+   "grazing_signs": false
+  },
+  "notes": {
+   "surveyor_note": "Seep is small, otherwise fine.",
+   "prior_visits": []
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 1.0,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -2.0,
+  "rainfall_pct_normal": 104.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.18,
+  "photos_status": "partial",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": 4.88,
+  "rainfall_pct_normal": 103.86,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 2,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "contested",
+   "target": "below_band",
+   "second": "above_band",
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 127,
+ "deciding": {
+  "dam_caused_drop": "Control steady and rain 104% of normal exclude weather; the D1 seep remark ties the deepest wells DW3 and DW4 to the dam.",
+  "next_step": "All elements are present, the seep is small with pool at design, no history, so it is filed routinely.",
+  "hydro_state": "Mean of -4, 0, 47, 45 is 22 cm, 2 below the floor of 20 (below_band), but two wells show surface ponding above the band top, so above_band is arguable.",
+  "dam_severity": "D1 is coded SEEP with pool 40 equal to design 40 and no other defect: seepage.",
+  "evidence_completeness": "4 of 4 wells read, 12 of 12 photos, 3 quadrats scored, and the inspection logged, so all four in full; only the thin quadrat set gives slight doubt."
+ },
+ "request": "rec-F427-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012532
+}

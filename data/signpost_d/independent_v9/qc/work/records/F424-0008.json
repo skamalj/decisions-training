@@ -1,0 +1,138 @@
+{
+ "id": "F424-0008",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B-3340",
+   "vessel_id": "FV1",
+   "volume_hl": 25,
+   "brew_date": "2024-06-01",
+   "yeast_strain": "WLP001",
+   "og_target": 1.052,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 22
+  },
+  "readings": [
+   {
+    "ts": "2024-06-01",
+    "gravity_sg": 1.052,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-06-08",
+    "gravity_sg": 1.012,
+    "temp_c": 19
+   },
+   {
+    "ts": "2024-06-09",
+    "gravity_sg": 1.012,
+    "temp_c": 19
+   }
+  ],
+  "events": [
+   {
+    "type": "pitch",
+    "note": "Pitched WLP001 gen 3, all looks fine."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B-3340",
+   "diacetyl_mgl": 0.15,
+   "micro_plate": {
+    "result": "negative"
+   },
+   "abv_pct": 5.3
+  },
+  "release_request": {
+   "vessel_id": "FV1",
+   "volume_hl": 23.8,
+   "note": "Package when ready."
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.15,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.15,
+  "discrepancy_count": 2,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "reassuring"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 73,
+ "deciding": {
+  "terminal_gravity": "Two consecutive 1.012 readings in band; a single stable pair gives mild doubt.",
+  "contamination_supported": "Negative plate and no sensory signal; contamination unsupported.",
+  "batch_disposition": "All results in and in spec; the only issue is the volume mismatch.",
+  "deviation_severity": "No out-of-spec reading; temps below 22C, gravity in band, diacetyl 0.15 not flagged.",
+  "record_discrepancies": "Only the release volume 23.8 vs 25 hl differs by over 0.5 hl; mild doubt about 0 vs 1."
+ },
+ "request": "rec-F424-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005385
+}

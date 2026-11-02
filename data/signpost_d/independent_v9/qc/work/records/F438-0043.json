@@ -1,0 +1,117 @@
+{
+ "id": "F438-0043",
+ "family": "F438",
+ "state": {
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "M16.1"
+   },
+   "documents_present": {
+    "operation_note": false
+   },
+   "theatre_log": []
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "M16.0"
+   },
+   "procedures": [
+    {
+     "code": "W37.1",
+     "date": "2024-03-02"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_regrouped": null,
+   "regroup_status": "blocked_missing_source"
+  },
+  "audit_context": {
+   "queries": [
+    {
+     "target_code": "M16.0",
+     "status": "closed",
+     "response": "confirms"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "not_regroupable",
+  "missing_source": "operation_note",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.18,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "not_regroupable",
+  "missing_source": "operation_note",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.18,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "accept_as_coded",
+   "second": "request_records",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "primary_supported": "M16.0 vs M16.1 share three characters, and the closed query confirms M16.0.",
+  "hrg_shift": "hrg_regrouped is null and blocked, so a shift cannot be checked; the unresolved difference keeps a shift plausible.",
+  "next_step": "Operation note is missing, so W37.1 cannot be checked (request_records); the closed confirming query supports accepting.",
+  "error_count": "The primary difference is only specificity and the query confirms it; nothing else mismatches.",
+  "error_severity": "Coded procedure W37.1 has no operation note or theatre_log entry, so it may be an unsupported billed code."
+ },
+ "request": "rec-F438-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009158
+}

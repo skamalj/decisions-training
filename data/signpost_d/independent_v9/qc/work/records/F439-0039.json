@@ -1,0 +1,122 @@
+{
+ "id": "F439-0039",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T-61150",
+   "date": "2024-10-03",
+   "end": "15:10",
+   "conditions": "dry"
+  },
+  "candidate": {
+   "ref": "C-2096",
+   "attempt": 3,
+   "id_check": "licence"
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "speed",
+     "driving": 5
+    },
+    {
+     "item": "positioning",
+     "driving": 4
+    },
+    {
+     "item": "signals",
+     "driving": 3
+    },
+    {
+     "item": "mirrors",
+     "driving": 3
+    }
+   ],
+   "driving_fault_total": 14
+  },
+  "outcome": {
+   "result": "pass",
+   "debrief": "given",
+   "examiner_note": "Pass at limit.",
+   "examiner_signoff_at": "15:25"
+  },
+  "review_trail": {
+   "upheld_complaints_12m": 4,
+   "countersigned_by": "SE-03"
+  }
+ },
+ "factors": {
+  "fault_profile": "borderline_count",
+  "result_mismatch": false,
+  "tally_error": true,
+  "documentation_gap": "none",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": false,
+  "note_alignment": "consistent",
+  "examiner_complaints_12m": 4,
+  "post_submission_edit": "no_edit"
+ },
+ "factors_sampled": {
+  "fault_profile": "borderline_count",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "none",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": false,
+  "note_alignment": "consistent",
+  "examiner_complaints_12m": 4,
+  "post_submission_edit": "no_edit"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "report_complete": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "refer_investigation",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "issue_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 86,
+ "deciding": {
+  "result_supported": "Items sum to 15 but the total reads 14, so the pass sits at the boundary and is likely unsupported.",
+  "report_complete": "Everything is present, but the countersignature has no timestamp, which leaves the sign-off order arguable.",
+  "disposition": "Total versus item sum differs across the pass line, so the result needs formal investigation.",
+  "staff_effort": "Rechecking the sheet and examiner may take hours or a few days.",
+  "issue_severity": "Tally error straddling 15 could change the pass (level 2), and a reader might see a wrongly passed test as a safety matter (level 3)."
+ },
+ "request": "rec-F439-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004747
+}

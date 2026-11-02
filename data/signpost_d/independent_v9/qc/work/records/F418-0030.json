@@ -1,0 +1,138 @@
+{
+ "id": "F418-0030",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "ASH",
+   "plat": 2,
+   "date": "2025-07-15",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 1,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S33",
+    "planned_start": "05:00"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S33",
+    "sign_on": "05:00",
+    "safety_comp_exp": "2025-06-30",
+    "dispatch_comp_exp": null
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "05:30"
+   },
+   {
+    "type": "cover_start",
+    "time": "05:30",
+    "staff_id": "S33"
+   },
+   {
+    "type": "gap_end",
+    "time": "05:46"
+   },
+   {
+    "type": "dispatch",
+    "time": "06:40",
+    "staff_id": "S33"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-93",
+   "disp_platform": 2,
+   "valid_to": "2025-12-31",
+   "approved_by": null,
+   "prior_shortfalls_30d": 4
+  },
+  "remarks": [
+   "Sorted on the day."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 16,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": true,
+  "competence_lapse": true,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 16,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": true,
+  "competence_lapse": true,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "leaning",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unqualified_dispatch = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 79,
+ "deciding": {
+  "headcount_verified": "S33 has a matching sign-on, but safety_comp_exp 2025-06-30 is lapsed and dispatch_comp_exp is null.",
+  "next_step": "Dispatch by uncertified S33 with approved_by null and repeats 4: correction and briefing leaning, escalation plausible.",
+  "coverage_outcome": "Gap 05:30-05:46 was before service and covered by S33 from 05:30; no open period during service.",
+  "reversal_time": "Competence renewal and dispensation approval may take one to seven days or longer than eight days.",
+  "exposure_severity": "Dispatch at 06:40 by S33 with dispatch_comp_exp null and shift dispatch_mode staff is a safety-critical duty without certified staff."
+ },
+ "request": "rec-F418-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00554
+}

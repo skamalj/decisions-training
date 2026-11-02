@@ -1,0 +1,108 @@
+{
+ "id": "F426-0050",
+ "family": "F426",
+ "state": {
+  "applications": [
+   {
+    "date": "2024-07-10",
+    "product_code": "M2",
+    "qty_applied": 3,
+    "qty_unit": "kg",
+    "area_treated_ha": 3,
+    "operator_cert_no": null
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "M2",
+    "max_rate_per_ha": 1,
+    "rate_unit": "kg",
+    "phi_days": 14,
+    "minor_use_auth_ref": "MU-5"
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-07-23",
+   "residue_test": {
+    "sampled": true,
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "breached_short",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "operator_cert_null",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "up_to_10",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "operator_cert_null",
+  "season_count_excess": false,
+  "off_label_crop": true,
+  "num_applications": 9,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "request_evidence",
+   "second": "release_lot",
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "interval_breach",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "phi_cleared": "M2 applied 2024-07-10, first pick 2024-07-23, phi_days 14: only 13 days, one day short; a clear residue result adds slight doubt.",
+  "next_step": "operator_cert_no is null, a named missing item to request, while residue test is below limit and could support release.",
+  "finding_class": "Picking began 13 days after application against a 14-day withholding period.",
+  "reversal_time": "A lot packed despite a withholding breach is hard to recall; whether undoing takes under three months or longer is arguable given the clear residue test.",
+  "rate_overrun": "3 kg / 3 ha = 1.0 kg/ha against max 1: exactly at maximum, not over."
+ },
+ "request": "rec-F426-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010652
+}

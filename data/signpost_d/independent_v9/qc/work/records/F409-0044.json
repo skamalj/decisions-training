@@ -1,0 +1,125 @@
+{
+ "id": "F409-0044",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A-7788",
+   "full_name": "Tariq Boyle",
+   "submitted_on": "2025-06-03",
+   "app_type": "renewal",
+   "message": "Is there a visitor voucher limit?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2025-01-27",
+     "address_line": "6 Quay Street",
+     "verified": true
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "GH70 RTY",
+   "keeper_name": "Boyle Leasing Ltd",
+   "supporting_letters": []
+  },
+  "request": {
+   "zone_code": "D1",
+   "address": "6 Quay Street",
+   "plate_entered": "GH70 RTY"
+  },
+  "account_history": {
+   "live_permits": [
+    "P-88",
+    "P-89"
+   ],
+   "past_permits": [
+    {
+     "status": "seized",
+     "seize_reason": "clone suspected, displayed on other vehicle, unconfirmed"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "cancelled"
+    }
+   ],
+   "exceptions": []
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 127,
+  "docs_missing": 0,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 127,
+  "docs_missing": 0,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "contested",
+   "target": "no_issue",
+   "second": "household_cap",
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 75,
+ "deciding": {
+  "residency_shown": "Verified bill matches the address exactly but is dated 127 days before submission, past 90 days.",
+  "disposition": "Documents are verified and the address matches; renewal looks approvable despite the age of the bill.",
+  "main_issue": "Two live permits equal the cap on a renewal with no exception, but nothing else clearly fails.",
+  "misuse_strength": "Keeper is a company with no letter, plus a seized permit with an unconfirmed clone reason; it is unclear whether that counts as confirmed.",
+  "document_gaps": "The one required bill is on file and verified true."
+ },
+ "request": "rec-F409-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008907
+}

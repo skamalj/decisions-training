@@ -1,0 +1,172 @@
+{
+ "id": "F427-0020",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V505",
+   "visit_date": "2024-09-17",
+   "surveyor_grade": "senior",
+   "weather_on_day": "cloud"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 20,
+   "dipwells_scheduled": 10,
+   "dams_total": 4
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 28
+    },
+    {
+     "depth_cm": 32
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 14,
+     "prev_depth_cm": 13
+    }
+   ],
+   "rain_30d_pct_normal": 95
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D3",
+     "pool_level_cm": 2,
+     "design_pool_cm": 35,
+     "defect_code": "BRCH",
+     "remark": "Side-cut breach, small residual pool in scour hole."
+    }
+   ],
+   "open_work_orders": [
+    {
+     "dam_id": "D3",
+     "status": "raised"
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 5
+    },
+    {
+     "q": 2,
+     "score": null
+    },
+    {
+     "q": 3,
+     "score": null
+    }
+   ],
+   "photos_uploaded": null
+  },
+  "notes": {
+   "surveyor_note": "D3 breached again.",
+   "prior_visits": [
+    {
+     "date": "2023-06-05",
+     "dam_id": "D3",
+     "event": "breach"
+    },
+    {
+     "date": "2023-11-20",
+     "dam_id": "D3",
+     "event": "breach"
+    },
+    {
+     "date": "2024-03-12",
+     "dam_id": "D3",
+     "event": "breach"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.2,
+  "photos_status": "none",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "failed_or_partial_breach",
+  "water_table_offset_cm": -10.0,
+  "rainfall_pct_normal": 95.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 3,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.63,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "partial_breach",
+  "water_table_offset_cm": -25.01,
+  "rainfall_pct_normal": 42.07,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 3,
+  "date_sequence_fault": false,
+  "surveyor_grade": "senior",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_lead",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "below_band",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "dam_caused_drop": "Normal rain (95%) and steady controls rule out weather; D3 is breached with a pool of 2 vs design 35.",
+  "next_step": "Three prior breaches on D3 plus an open raised order show a repeat failure, which calls for referral to the lead.",
+  "hydro_state": "Mean depth 30 cm against floor 20 cm is 10 cm below, within 15.",
+  "dam_severity": "D3 code BRCH with pool 2 vs 35; the small residual pool leaves partial breach (level 2) defensible against failed.",
+  "evidence_completeness": "2 of 10 wells (not recorded), photos null, dam log present, quadrats mostly null: either two or three of four elements."
+ },
+ "request": "rec-F427-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009654
+}

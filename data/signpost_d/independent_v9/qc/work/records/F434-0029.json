@@ -1,0 +1,160 @@
+{
+ "id": "F434-0029",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 5,
+   "riders_started": 88
+  },
+  "post": {
+   "km_marker": 9,
+   "post_type": "descent",
+   "on_post_from": "09:40",
+   "off_post_at": "12:10"
+  },
+  "incidents": [
+   {
+    "inc_ref": "P2",
+    "time": "10:55",
+    "km": 9,
+    "type": "mechanical",
+    "bibs": [
+     17
+    ]
+   },
+   {
+    "inc_ref": "P3",
+    "time": "11:20",
+    "km": 9,
+    "type": "fall",
+    "bibs": [
+     50
+    ],
+    "medic_called": true,
+    "medic_arrival_min": 29.64,
+    "rider_status": "abandoned"
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:30",
+     "ok": false
+    },
+    {
+     "time": "11:00",
+     "ok": false
+    },
+    {
+     "time": "11:30",
+     "ok": false
+    },
+    {
+     "time": "12:00",
+     "ok": false
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C2",
+     "time": "11:20",
+     "km": 9,
+     "type": "fall",
+     "bibs": [
+      50
+     ]
+    }
+   ],
+   "road_reopened_at": {
+    "0-20": "11:50"
+   }
+  },
+  "sweep": {
+   "passed_at": "12:05",
+   "last_rider_bib": 88
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": true,
+  "incident_mix": "fall",
+  "control_log_mismatch": "extra_post_incident",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "medic_attended",
+  "staffing_gap": "gap_during_race",
+  "relief_swap_logged": false,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": 29.64,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": true,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "extra_post_incident",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "medic_attended",
+  "staffing_gap": "gap_during_race",
+  "relief_swap_logged": false,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": 29.64,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "safety_review",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "rider_fall",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (reopen_before_sweep = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 51,
+ "deciding": {
+  "coverage_held": "on_post_from 09:40 and off_post_at 12:10 after sweep 12:05; all checks failed but post stayed manned.",
+  "next_step": "Road reopened 11:50 before sweep passed 12:05 with last rider 88 later: a confirmed safety failure.",
+  "incident_class": "Fall of bib 50 at 11:20 in both post and control logs.",
+  "reversal_time": "Medic attended and rider abandoned with no confirmed handover; days of recovery likely.",
+  "consequence_severity": "Reopening 11:50 precedes sweep passage 12:05, so riders met reopened traffic."
+ },
+ "request": "rec-F434-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005805
+}

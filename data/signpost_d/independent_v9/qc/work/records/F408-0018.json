@@ -1,0 +1,134 @@
+{
+ "id": "F408-0018",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "M303",
+   "uprn": 3003,
+   "stream": "garden",
+   "claimed": "2025-05-06",
+   "logged_at": "2025-05-12T08:20",
+   "photo": true
+  },
+  "property": {
+   "uprn": 3003,
+   "assisted": true,
+   "assisted_since": "2024-09-01"
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled": "2025-05-06",
+   "week": "A"
+  },
+  "round_log": {
+   "status": "suspended",
+   "disruption": "weather_suspension",
+   "catch_up": "2025-05-14",
+   "stops": [
+    {
+     "uprn": 3003,
+     "exception_code": "not_presented",
+     "photo_ref": null,
+     "gps_stop": false
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 3003,
+    "logged_on": "2025-02-17",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 3003,
+    "logged_on": "2025-03-25",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 3003,
+    "logged_on": "2025-04-20",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "wrong_stream",
+  "report_timing": "beyond_window",
+  "crew_exception": "not_presented",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "weather_suspension",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 0,
+  "assisted_miss_breach": true
+ },
+ "factors_sampled": {
+  "stream_mismatch": "wrong_stream",
+  "report_timing": "beyond_window",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "street_not_visited",
+  "round_disruption": "weather_suspension",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 0,
+  "assisted_miss_breach": true
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (assisted_miss_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 68,
+ "deciding": {
+  "crew_missed": "Stop shows not_presented with no photo and gps_stop false, but a weather suspension with catch-up on 05-14 still pending offers an innocent reading.",
+  "report_matches": "Reported stream garden while only refuse was due, and the claim is six days old.",
+  "next_step": "Wrong stream and a suspension with catch-up not yet reached favour closing, though the assisted flag gives doubt.",
+  "return_urgency": "property.assisted is true since 2024-09-01 and the stop shows not_presented with gps_stop false, an assisted-collection breach.",
+  "repeat_failures": "Three upheld misses, the oldest exactly 84 days before logged_at, so on the window edge the count is 2 or 3."
+ },
+ "request": "rec-F408-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009575
+}

@@ -1,0 +1,118 @@
+{
+ "id": "F428-0040",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "FL-3",
+   "gate_type": "flap"
+  },
+  "inspection": {
+   "asset_id": "FL-8",
+   "insp_date": "2025-07-01",
+   "closure_test": {
+    "performed": true,
+    "closure_s": null,
+    "result": "fail"
+   }
+  },
+  "defects": [
+   {
+    "component": "hinge",
+    "grade": 3,
+    "status": "open"
+   }
+  ],
+  "operations": {
+   "outage": {
+    "status": "out_of_service",
+    "permit_expiry": "2025-06-20"
+   },
+   "flood_alert_active": true
+  }
+ },
+ "factors": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.13,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 3,
+  "mismatch_location": "asset_id",
+  "test_status": "failed",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "none",
+  "days_to_forecast_peak": 24,
+  "borderline_case": false,
+  "outage_beyond_permit": true
+ },
+ "factors_sampled": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.13,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 0,
+  "mismatch_location": "asset_id",
+  "test_status": "failed",
+  "repair_progress": "completed_untested",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 24,
+  "borderline_case": false,
+  "outage_beyond_permit": true
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "drive_actuation",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (outage_beyond_permit = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 25,
+ "deciding": {
+  "closure_test_valid": "Test result fail with null closure_s, so the gate did not seal within limits.",
+  "next_step": "Outage permit expired 2025-06-20 while out of service with flood alert active; requires engineer escalation.",
+  "defect_class": "Only open defect is a grade 3 hinge.",
+  "section_discrepancies": "Asset_id FL-3 vs FL-8 differs; the other cross-section differences are also visible in the record, giving three.",
+  "flood_risk": "out_of_service, permit_expiry before insp_date, flood alert true; critical, with slight doubt."
+ },
+ "request": "rec-F428-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005562
+}

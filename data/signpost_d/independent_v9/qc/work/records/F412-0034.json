@@ -1,0 +1,137 @@
+{
+ "id": "F412-0034",
+ "family": "F412",
+ "state": {
+  "inspection": {
+   "contraventions": [
+    {
+     "ref": "C1",
+     "area": "TMP",
+     "due_date": "2024-02-01"
+    },
+    {
+     "ref": "C2",
+     "area": "PST",
+     "due_date": "2024-02-01"
+    },
+    {
+     "ref": "C3",
+     "area": "REC",
+     "due_date": "2024-02-01"
+    }
+   ]
+  },
+  "revisit": {
+   "date": "2024-04-28",
+   "items": [
+    {
+     "ref": "C1",
+     "status": "not_remedied"
+    },
+    {
+     "ref": "C2",
+     "status": "not_remedied"
+    },
+    {
+     "ref": "C3",
+     "status": "remedied"
+    }
+   ]
+  },
+  "correspondence": {
+   "extensions": [
+    {
+     "ref": "C1",
+     "agreed": true,
+     "new_due_date": "2024-03-16"
+    },
+    {
+     "ref": "C2",
+     "agreed": true,
+     "new_due_date": "2024-03-16"
+    }
+   ],
+   "operator_reply": "C1 fixed."
+  }
+ },
+ "factors": {
+  "contravention_count": 3,
+  "resolution_share": "few_resolved",
+  "worst_open_area": "food_handling",
+  "food_handling_open_count": 2,
+  "cross_section_mismatch": "reply_contradicts_revisit",
+  "days_past_original_due": 87,
+  "extension_agreed": true,
+  "benign_explanation": false,
+  "operator_evidence": "none_submitted",
+  "adverse_sample": false,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 2,
+  "boundary_case": false,
+  "reassuring_note_decoy": false
+ },
+ "factors_sampled": {
+  "contravention_count": 7,
+  "resolution_share": "few_resolved",
+  "worst_open_area": "none",
+  "food_handling_open_count": 2,
+  "cross_section_mismatch": "reply_contradicts_revisit",
+  "days_past_original_due": 87,
+  "extension_agreed": true,
+  "benign_explanation": true,
+  "operator_evidence": "none_submitted",
+  "adverse_sample": false,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 2,
+  "boundary_case": false,
+  "reassuring_note_decoy": false
+ },
+ "plan": {
+  "all_remedied": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_case",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "worst_hazard": {
+   "clarity": "leaning",
+   "target": "food_handling",
+   "second": null,
+   "targets": []
+  },
+  "overdue_extent": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "residual_risk": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "all_remedied": "C1 and C2 are not_remedied; the operator reply claiming C1 fixed contradicts the revisit and no evidence was submitted.",
+  "next_step": "Two food handling items remain open after the agreed extension with no proof offered: serve a notice.",
+  "worst_hazard": "Open items C1 (TMP) and C2 (PST) are food handling.",
+  "overdue_extent": "Original due 2024-02-01 is 87 days before the revisit, but both extensions run to 2024-03-16, which is 43 days before 2024-04-28, just over the 42-day boundary.",
+  "residual_risk": "Two open temperature/pest items, 2 or more, so serious; there is no sample."
+ },
+ "request": "rec-F412-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012462
+}

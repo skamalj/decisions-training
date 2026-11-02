@@ -1,0 +1,141 @@
+{
+ "id": "F431-0031",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM4471",
+   "type": "ultrasonic",
+   "last_verified_date": "2021-03-10",
+   "seal_state": "intact",
+   "seal_checked_date": "2023-09-02"
+  },
+  "period_read": {
+   "read_date": "2024-06-28",
+   "reg_kwh": 13420,
+   "src_code": "ENG",
+   "photo_ref": "P-88213"
+  },
+  "history": [
+   {
+    "date": "2024-03-31",
+    "reg_kwh": 11500,
+    "src": "EST"
+   },
+   {
+    "date": "2024-04-30",
+    "reg_kwh": 11900,
+    "src": "EST"
+   },
+   {
+    "date": "2024-05-31",
+    "reg_kwh": 12150,
+    "src": "EST"
+   },
+   {
+    "date": "2024-06-30",
+    "reg_kwh": 12400,
+    "src": "EST",
+    "ly_kwh": 900
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW",
+    "E_TPROBE"
+   ],
+   "flow_temp_c": 70,
+   "return_temp_c": 69,
+   "battery_pct": 80
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 200,
+   "hdd_prior_year": 180,
+   "works_orders": [],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "engineer_manual",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "none",
+  "consumption_ratio": 1.02,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.11,
+  "diagnostic_error_count": 2,
+  "meter_works_order": false,
+  "consecutive_estimates": 4,
+  "delta_t_implausible": true,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "engineer_manual",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "none",
+  "consumption_ratio": 2.25,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.11,
+  "diagnostic_error_count": 2,
+  "meter_works_order": false,
+  "consecutive_estimates": 4,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": true
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 100,
+ "deciding": {
+  "meter_fault": "diagnostics shows E_FLOW and E_TPROBE with flow 70 C vs return 69 C, an implausible delta-T that corroborates a device fault.",
+  "billable_actual": "ENG read with photo, but read_date 2024-06-28 is earlier than the latest history entry 2024-06-30 after four estimates; modest doubt on sequence.",
+  "next_step": "Consumption is in line with expectation, the seal is intact and there is no dispute or works order, so the reading can be released.",
+  "staff_effort": "No open dispute, works order or missing section; only a quick date-order check remains.",
+  "consumption_deviation": "Consumption 1020 kWh (13420-12400) vs expected 900*200/180=1000 kWh, ratio 1.02."
+ },
+ "request": "rec-F431-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009692
+}

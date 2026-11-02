@@ -1,0 +1,138 @@
+{
+ "id": "F437-0044",
+ "family": "F437",
+ "state": {
+  "job": {
+   "ordered_words": 2800,
+   "source_version": 1,
+   "glossary_version": "g3",
+   "due_at": "2025-07-14T12:00",
+   "terms": {
+    "glossary_exception": true
+   },
+   "workflow": [
+    {
+     "step": "dtp",
+     "done_at": "2025-07-10"
+    }
+   ]
+  },
+  "source": {
+   "version": 1,
+   "segment_count": 180,
+   "word_count": 2800,
+   "repetitions_words": 35
+  },
+  "deliverable": {
+   "built_from_version": 1,
+   "segments_translated": 180,
+   "word_count": 2770,
+   "glossary_version_used": null,
+   "delivered_at": "2025-07-11T20:00"
+  },
+  "qa_report": {
+   "flags": {
+    "term": 3
+   },
+   "false_positive_marked": 3,
+   "number_mismatches": [],
+   "unresolved": {}
+  },
+  "review": {
+   "completed_at": "2025-07-12T09:00",
+   "signed_off": true,
+   "errors": []
+  },
+  "history": {
+   "revision_rounds": [
+    {
+     "date": "2025-07-05"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_after_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 1.0,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 64,
+  "client_waiver": true,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.42,
+  "number_mismatch_count": 6,
+  "deadline_slack_hours": -16,
+  "client_waiver": true,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": true
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 73,
+ "deciding": {
+  "scope_matches": "Versions are 1 and 1, segments are 180/180, and the 30-word drop is within the 35 repetition words; the glossary version is unrecorded, which leaves slight doubt.",
+  "reviewed_in_time": "review.completed_at 2025-07-12T09:00 is after deliverable.delivered_at 2025-07-11T20:00.",
+  "next_step": "Counts, versions and checks are consistent, the null glossary is covered by the glossary_exception term, and there are 64 hours of slack; the late sign-off leaves some doubt.",
+  "open_severity": "The review errors list is empty and the QA unresolved object is empty, with all 3 flags marked false positive.",
+  "parties_needed": "There are no open errors, mismatches or pending steps, since the DTP step is done, so one person can finish."
+ },
+ "request": "rec-F437-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013189
+}

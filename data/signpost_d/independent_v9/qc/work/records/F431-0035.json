@@ -1,0 +1,125 @@
+{
+ "id": "F431-0035",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM7715",
+   "seal_state": "broken",
+   "seal_checked_date": "2024-04-22"
+  },
+  "period_read": {
+   "read_date": "2024-06-30",
+   "reg_kwh": 15883,
+   "src_code": "EST",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2024-05-31",
+    "reg_kwh": 15000,
+    "src": "AMR",
+    "ly_kwh": 600
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_COMMS",
+    "E_AIR",
+    "E_FLOW"
+   ],
+   "flow_temp_c": 68,
+   "return_temp_c": 43
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 115,
+   "hdd_prior_year": 100,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "open",
+     "date": "2024-06-25"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "read_source": "system_estimate",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.28,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.15,
+  "diagnostic_error_count": 3,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "system_estimate",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.69,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.15,
+  "diagnostic_error_count": 3,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 68,
+ "deciding": {
+  "meter_fault": "Broken seal with no visit, three error codes and an open RECAL order suggest a fault, but delta-T is plausible (68/43) and consumption is moderate.",
+  "billable_actual": "src_code EST with null photo_ref argues against an actual read, yet it is in sequence after an AMR read and consumption is plausible.",
+  "next_step": "Estimate follows an AMR actual, is in sequence with plausible consumption and no dispute, so release to billing is appropriate.",
+  "staff_effort": "Broken seal without a visit and the open recalibration need site follow-up; effort could be one to five days or a few hours.",
+  "consumption_deviation": "Consumption 883 kWh vs expected 600*115/100=690 kWh, ratio 1.28, a 28% deviation."
+ },
+ "request": "rec-F431-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009692
+}

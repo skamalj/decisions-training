@@ -1,0 +1,145 @@
+{
+ "id": "F401-0021",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P101",
+   "planned_discharge_at": "2025-03-10T12:00",
+   "capacity_assessment": {
+    "status": "complete"
+   }
+  },
+  "clinical": {
+   "obs": [
+    {
+     "spo2": 89,
+     "recorded_at": "2025-03-09T20:00"
+    }
+   ],
+   "targets": {
+    "spo2_target": "88-92"
+   },
+   "investigations": [
+    {
+     "test": "CXR",
+     "status": "awaited",
+     "required_before_discharge": true
+    }
+   ]
+  },
+  "medications": {
+   "reconciled": [
+    {
+     "drug": "calcium",
+     "dose": 1,
+     "unit": "g"
+    }
+   ],
+   "discharge_rx": null
+  },
+  "function_social": {
+   "care_arrangement": {
+    "type": "reablement",
+    "status": "confirmed",
+    "start_date": "2025-03-12"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "pending"
+    },
+    {
+     "t": "letter",
+     "status": "pending"
+    },
+    {
+     "t": "equipment",
+     "status": "done",
+     "completed_at": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "unit_expression_only",
+  "rx_change_documented": true,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 2,
+  "false_completion": true,
+  "care_need": "rehab",
+  "care_arrangement_status": "confirmed_later_start",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "unit_expression_only",
+  "rx_change_documented": true,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "awaited_blocking",
+  "missing_section": "discharge_rx_absent",
+  "outstanding_task_count": 5,
+  "false_completion": true,
+  "care_need": "rehab",
+  "care_arrangement_status": "confirmed_later_start",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": true
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "discharge_now",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "intermediate_care",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 55,
+ "deciding": {
+  "rx_matches": "discharge_rx is null, which would mean no match; this contradicts the plan, so it is a weak point of this record.",
+  "next_step": "Only one abnormal obs set, covered by documented spo2 target; but a required CXR is awaited.",
+  "destination": "Reablement arrangement confirmed with a start date.",
+  "outstanding_tasks": "Two pending items plus one done item with null completed_at: two or three outstanding.",
+  "discharge_delay": "Care start 2025-03-12 is two days after planned date."
+ },
+ "request": "rec-F401-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005411
+}

@@ -1,0 +1,146 @@
+{
+ "id": "F435-0047",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "EV-5092",
+   "zone_id": "FLR-B",
+   "zone_type": "standing_floor",
+   "doors_open": "2025-06-07T18:30",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 1000,
+   "variation": null,
+   "stewards_required": 30,
+   "exit_routes": [
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N5",
+    "N6"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 1000,
+   "issued": 1000
+  },
+  "ingress": {
+   "device_status": "calibration_due",
+   "raw_peak": 1000,
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 29,
+   "signed_in": 27,
+   "relief": {
+    "called_at": "2025-06-07T19:00",
+    "eta_min": 20
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "N1",
+    "checked_at": "2025-06-07T17:50",
+    "status": "clear"
+   },
+   {
+    "route_id": "N2",
+    "checked_at": "2025-06-07T18:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "N3",
+    "checked_at": "2025-06-07T17:55",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "N4",
+    "checked_at": null,
+    "status": null
+   },
+   {
+    "route_id": "N5",
+    "checked_at": "2025-06-07T18:45",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.0,
+  "counter_status": "calibration_due",
+  "counter_inflation": 0.03,
+  "manual_recount_present": false,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 1.0,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.1,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.14,
+  "counter_status": "ok",
+  "counter_inflation": 0.03,
+  "manual_recount_present": false,
+  "capacity_variation": "approved_in_time",
+  "tickets_issued_ratio": 1.0,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.16,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 1,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "balanced",
+   "target": "none",
+   "second": "counter_fault",
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "verified_exceedance": "Counter is calibration_due (still valid) and raw_peak 1000 equals the base limit of 1000 with no variation; at the limit, not over, but with no margin.",
+  "disposition": "Counts sit at the limit, tickets match the limit, relief is already called; open gaps look minor relative to a post-event sign-off.",
+  "discrepancy_source": "issued, zone_limit_used and raw_peak all equal 1000; no device fault logged, though the calibration_due flag leaves slight doubt.",
+  "steward_shortfall": "signed_in 27 of 30 required is exactly 10% below, on the line between slight and marked; rostered 29 is a decoy.",
+  "unconfirmed_exits": "N3 obstructed with no clear, N4 null, N5 checked after doors, N6 has no check: four. N2 clear exactly at doors_open is borderline, so 4 or 5."
+ },
+ "request": "rec-F435-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015976
+}

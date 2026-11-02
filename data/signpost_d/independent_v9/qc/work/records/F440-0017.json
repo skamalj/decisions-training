@@ -1,0 +1,167 @@
+{
+ "id": "F440-0017",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "review": "2025-05-05",
+   "arrival": "2025-05-20",
+   "departure": "2025-05-23",
+   "pax": {
+    "adult": 3,
+    "13_17": 25
+   },
+   "diet": {
+    "veg": 4
+   },
+   "amendments": [
+    {
+     "type": "diet_change",
+     "delta": 0,
+     "logged_at": "2025-04-28"
+    }
+   ]
+  },
+  "roster": {
+   "adult": 3,
+   "13_17": 30,
+   "f": 16,
+   "m": 14,
+   "diet": {
+    "veg": 6
+   }
+  },
+  "allocation": {
+   "rooms": [
+    {
+     "sex": "F",
+     "beds": 12
+    },
+    {
+     "sex": "M",
+     "beds": 20
+    }
+   ],
+   "nights": [
+    "2025-05-20",
+    "2025-05-21",
+    "2025-05-22",
+    "2025-05-23"
+   ]
+  },
+  "payment": {
+   "total": 3000,
+   "due": 1000,
+   "paid": 500,
+   "instalments": [
+    {
+     "due": "2025-04-20",
+     "amt": 500
+    },
+    {
+     "due": "2025-05-13",
+     "amt": 500
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "id": "A1",
+    "status": "verified",
+    "exp": "2026-03-01"
+   },
+   {
+    "id": "A2",
+    "status": "verified",
+    "exp": "2026-03-01"
+   },
+   {
+    "id": "A3",
+    "status": "verified",
+    "exp": "2026-04-01"
+   }
+  ],
+  "history": {
+   "trusted": true,
+   "stays": 9,
+   "no_shows": 3
+  }
+ },
+ "factors": {
+  "pax_mismatch": "five_plus",
+  "night_mismatch": "one_night_extra",
+  "amendment_logged": false,
+  "supervision_level": "exactly_meets_policy",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": true,
+  "days_to_arrival": 15,
+  "dorm_fit": "cannot_fit",
+  "leader_checks": "all_verified",
+  "trusted_organiser": true,
+  "prior_no_shows": 3,
+  "diet_count_drift": "minor"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "five_plus",
+  "night_mismatch": "one_night_extra",
+  "amendment_logged": true,
+  "supervision_level": "short_all_nights",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": true,
+  "days_to_arrival": 73,
+  "dorm_fit": "cannot_fit",
+  "leader_checks": "all_verified",
+  "trusted_organiser": true,
+  "prior_no_shows": 3,
+  "diet_count_drift": "minor"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "confirm",
+   "second": "refer_manager",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 88,
+ "deciding": {
+  "ratio_met": "Roster has 3 adults for 30 aged 13-17, which exactly meets 1:10; no doubts on extra pax since all are in the roster.",
+  "deposit_covered": "Paid 500 meets the first scheduled instalment (due 2025-04-20); the second is not due until 2025-05-13, but deposit due is 1000.",
+  "disposition": "Verified leaders, trusted organiser and instalments favour confirm; roster 33 vs booked 28, an extra night and 16 girls versus 12 F beds favour manager referral.",
+  "urgency": "Arrival 2025-05-20 is 15 days after review, right on the line between 'soon' and 'pressing'.",
+  "conflict_count": "Pax 28 vs roster 33, four allocation nights vs three booked, F beds 12 vs 16 girls, and veg 4 vs 6; only a diet_change entry is logged, which explains none of them."
+ },
+ "request": "rec-F440-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014301
+}

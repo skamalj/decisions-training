@@ -1,0 +1,141 @@
+{
+ "id": "F401-0018",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "K9",
+   "planned_discharge_at": "2025-05-06T10:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "hr": 118
+    },
+    {
+     "hr": 122
+    }
+   ],
+   "targets": {
+    "hr": "<100"
+   }
+  },
+  "medications": {
+   "patient_id": "K9",
+   "changes": [
+    {
+     "drug": "bisoprolol",
+     "action": "stop",
+     "changed_at": "before signing"
+    }
+   ]
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": "frame",
+    "transfer_assist_count": 2
+   },
+   "care_arrangement": {
+    "type": "reablement bed",
+    "status": "confirmed",
+    "start_date": "2025-05-09"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "s": "pending"
+    },
+    {
+     "s": "pending"
+    },
+    {
+     "s": "pending"
+    },
+    {
+     "s": "done",
+     "completed_at": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "drug stopped, documented by change entry",
+  "rx_change_documented": true,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none shown",
+  "missing_section": "none",
+  "outstanding_task_count": "3 pending plus one done with null completed_at",
+  "false_completion": true,
+  "care_need": "step-down rehabilitation",
+  "care_arrangement_status": "confirmed, starts 3 days after planned",
+  "logistics_delay": "care start 3 days later",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 1,
+  "false_completion": true,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_senior",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "intermediate_care",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "rx_matches": "Change entry documents the stop, but its date is vague ('before signing') and there is no prescription section.",
+  "next_step": "Two HR readings over the target of under 100 and no senior review.",
+  "destination": "Frame, 2-person transfers and a confirmed reablement bed.",
+  "outstanding_tasks": "Three pending plus a done item with null completed_at: four or three.",
+  "discharge_delay": "Bed start 2025-05-09, three days after the plan, borderline with level 2."
+ },
+ "request": "rec-F401-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009603
+}

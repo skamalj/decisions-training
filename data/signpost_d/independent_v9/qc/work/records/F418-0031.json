@@ -1,0 +1,123 @@
+{
+ "id": "F418-0031",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "WLM",
+   "plat": 2,
+   "date": "2025-03-11",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S41"
+   },
+   {
+    "post": "B",
+    "staff_id": "S52"
+   }
+  ],
+  "attendance": null,
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "13:10",
+    "platform": 2
+   },
+   {
+    "type": "gap_end",
+    "time": "14:48",
+    "platform": 2
+   }
+  ],
+  "controls": {
+   "disp_ref": null,
+   "possession_from": "13:00",
+   "possession_to": "15:00",
+   "prior_shortfalls_30d": 5
+  },
+  "remarks": [
+   "Quiet midday, line blocked."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 98,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": false,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 5,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 98,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": false,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 5,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_log",
+   "second": "escalate_ops",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "balanced",
+   "target": "fully_rostered",
+   "second": "partial_cover",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 41,
+ "deciding": {
+  "headcount_verified": "attendance is null, so no sign-on can be matched to rostered S41 and S52.",
+  "next_step": "The gap sits fully inside a possession (13:00-15:00), favouring accept; the null attendance and 5 prior shortfalls with no dispensation keep escalation plausible.",
+  "coverage_outcome": "No cover events. The gap lies within the possession, so a reader may treat it as fully rostered; the open 98-minute gap in service supports partial_cover.",
+  "reversal_time": "A completed past staffing shortfall cannot be reversed; no dispensation or cover exists to retroactively remedy it.",
+  "exposure_severity": "Below minimum 13:10-14:48 within service with no dispensation (disp_ref null). Staff-mode dispatch with no attendance leaves doubt whether duties were performed uncertified."
+ },
+ "request": "rec-F418-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006704
+}

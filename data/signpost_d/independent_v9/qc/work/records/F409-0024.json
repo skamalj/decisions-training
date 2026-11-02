@@ -1,0 +1,118 @@
+{
+ "id": "F409-0024",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "J. Price",
+   "submitted_on": "2024-05-02",
+   "app_type": "new",
+   "message": "Can I pay monthly?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-03-16",
+     "address_line": "3 Ash Ct",
+     "verified": true
+    }
+   ]
+  },
+  "vehicle": {
+   "keeper_name": "J. Price",
+   "supporting_letters": []
+  },
+  "request": {
+   "address": "3 Ash Ct"
+  },
+  "account_history": {
+   "live_permits": [],
+   "pcns": []
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 47,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 47,
+  "docs_missing": 2,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 6,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "contradicting_claim",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 33,
+ "deciding": {
+  "residency_shown": "Verified bill 47 days old with exact address match, so residency is shown.",
+  "disposition": "All documents verified, keeper matches, no permits held.",
+  "main_issue": "No check fails.",
+  "misuse_strength": "No PCNs, keeper matches, no claim contradictions.",
+  "document_gaps": "Only document required is present and verified."
+ },
+ "request": "rec-F409-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004824
+}

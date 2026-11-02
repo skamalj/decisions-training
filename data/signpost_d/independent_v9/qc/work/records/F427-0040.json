@@ -1,0 +1,153 @@
+{
+ "id": "F427-0040",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "visit_date": "2024-09-02",
+   "surveyor_grade": "trainee"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 20,
+   "dipwells_scheduled": 11,
+   "dams_total": 5
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "W1",
+     "depth_cm": 46
+    },
+    {
+     "id": "W3",
+     "depth_cm": 44
+    },
+    {
+     "id": "W5",
+     "depth_cm": 41
+    },
+    {
+     "id": "W8",
+     "depth_cm": 38
+    },
+    {
+     "id": "W9",
+     "depth_cm": 12
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 18,
+     "prev_depth_cm": 18
+    }
+   ],
+   "rain_30d_pct_normal": 108
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D5",
+     "pool_level_cm": 17,
+     "design_pool_cm": 20,
+     "defect_code": "SEEP",
+     "remark": "Seep widening on east side."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 5
+    },
+    {
+     "q": 2,
+     "score": 4
+    }
+   ],
+   "photos_uploaded": 0,
+   "photos_expected": 8
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.45,
+  "photos_status": "none",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": 16.2,
+  "rainfall_pct_normal": 108.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.45,
+  "photos_status": "partial",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "partial_breach",
+  "water_table_offset_cm": -19.71,
+  "rainfall_pct_normal": 107.51,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "neutral",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "schedule_repair",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "balanced",
+   "target": "well_below",
+   "second": "within_band",
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "dam_caused_drop": "The control well is stable and rain is normal, which favours dams; a seep on D5 is the only defect and the drop is large.",
+  "next_step": "D5 shows a widening seep with the pool 3 cm under design and no open work order, so a repair order is the lean.",
+  "hydro_state": "The five wells average 36.2 cm against floor 20 cm, about 16 cm below; the W9 reading of 12 cm is inside the band and leaves doubt.",
+  "dam_severity": "D5 is coded SEEP with a pool of 17 against a design of 20, and the widening seep is weak evidence of a defect either way.",
+  "evidence_completeness": "Quadrats and the dam log are present and 5 of 11 wells were read, but photos are 0 of 8; whether the thin well coverage counts is open."
+ },
+ "request": "rec-F427-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011596
+}

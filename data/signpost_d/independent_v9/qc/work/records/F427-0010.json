@@ -1,0 +1,145 @@
+{
+ "id": "F427-0010",
+ "family": "F427",
+ "state": {
+  "site_targets": {
+   "band_top_cm": 10,
+   "band_floor_cm": 30,
+   "dipwells_scheduled": 7
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 41
+    },
+    {
+     "depth_cm": 43
+    },
+    {
+     "depth_cm": 45
+    },
+    {
+     "depth_cm": 47
+    },
+    {
+     "depth_cm": 49
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 38,
+     "prev_depth_cm": 30
+    }
+   ],
+   "rain_30d_pct_normal": 82
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "E1",
+     "pool_level_cm": 24,
+     "design_pool_cm": 30,
+     "defect_code": "SEEP",
+     "remark": "Seep at east end; some overtopping in spate."
+    }
+   ],
+   "open_work_orders": []
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "score": 5
+    },
+    {
+     "score": 6
+    }
+   ],
+   "photos_uploaded": 3,
+   "photos_expected": 8,
+   "grazing_signs": true
+  },
+  "notes": {
+   "surveyor_note": "Minor seep only."
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.71,
+  "photos_status": "partial",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seep_with_overtopping",
+  "water_table_offset_cm": -15.0,
+  "rainfall_pct_normal": 82.0,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "reassuring",
+  "grazing_signs": true
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.71,
+  "photos_status": "none",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "failed",
+  "water_table_offset_cm": -34.8,
+  "rainfall_pct_normal": 117.53,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "reassuring",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "schedule_repair",
+   "second": "escalate_lead",
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "balanced",
+   "target": "below_band",
+   "second": "well_below",
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "dam_caused_drop": "The control well dropped (30 to 38 cm) and rain is at 82% of normal, which points to dry weather. E1 has a seep and a pool below design, which keeps a dam contribution possible.",
+  "next_step": "E1 has a pool 6 cm under design and no work order is open, which favours raising a repair order. The lower pool and the deep water table leave escalation defensible.",
+  "hydro_state": "Mean depth is 45 cm against a band floor of 30 cm, which is 15 cm below the floor, exactly on the line between below_band and well_below.",
+  "dam_severity": "E1 is coded SEEP (level 1) but the pool is 24 against a design of 30 and the remark mentions overtopping in spate, which suggests level 2.",
+  "evidence_completeness": "5 of 7 wells were read (71%, partly recorded) and photos are 3 of 8 (partial). Quadrats are complete and the dam log is present, so all four are recorded with some only partly."
+ },
+ "request": "rec-F427-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014753
+}

@@ -1,0 +1,134 @@
+{
+ "id": "F440-0004",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "review": "2025-02-10",
+   "arr": "2025-04-09",
+   "dep": "2025-04-11",
+   "pax": 22,
+   "diet": 3,
+   "amendments": [
+    {
+     "type": "diet_change",
+     "logged_at": "2025-02-01"
+    }
+   ]
+  },
+  "roster": {
+   "n": 22,
+   "minors_13_17": 20,
+   "diet": 3,
+   "leaders": 2
+  },
+  "allocation": {
+   "nights": [
+    "04-09",
+    "04-10"
+   ]
+  },
+  "payment": {
+   "due": 300,
+   "paid": 300
+  },
+  "safeguarding": [
+   {
+    "status": "verified",
+    "exp": "2026-02-01"
+   },
+   {
+    "status": "verified",
+    "exp": "2026-05-01"
+   }
+  ],
+  "history": {
+   "trusted": true,
+   "no_shows": 2
+  }
+ },
+ "factors": {
+  "pax_mismatch": "none",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "exactly_at_ratio",
+  "extra_cover_logged": false,
+  "deposit_position": "paid_full",
+  "instalment_approved": false,
+  "days_to_arrival": 58,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": true,
+  "prior_no_shows": 2,
+  "diet_count_drift": "none"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "none",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "exactly_at_ratio",
+  "extra_cover_logged": false,
+  "deposit_position": "paid_full",
+  "instalment_approved": false,
+  "days_to_arrival": 58,
+  "dorm_fit": "fits",
+  "leader_checks": "one_pending",
+  "trusted_organiser": true,
+  "prior_no_shows": 2,
+  "diet_count_drift": "none"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "confirm",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "conflict_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 71,
+ "deciding": {
+  "ratio_met": "2 leaders for 20 minors aged 13-17: exactly the required 1:10 on both nights.",
+  "deposit_covered": "Paid 300 equals deposit due 300.",
+  "disposition": "Checks are verified past departure and payment is complete; the prior no-shows are the only small doubt.",
+  "urgency": "Review 2025-02-10, arrival 2025-04-09: 58 days.",
+  "conflict_count": "Pax 22 = roster 22, diet 3 = 3 and nights match; the only amendment is an unrelated diet_change."
+ },
+ "request": "rec-F440-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011206
+}

@@ -1,0 +1,136 @@
+{
+ "id": "F430-0015",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "CB1",
+     "param": "sf6",
+     "unit": "bar",
+     "normal_band": [
+      5.8,
+      6.5
+     ],
+     "alarm": 5.6,
+     "trip": 5.2,
+     "customers_fed": 60,
+     "partner_id": "CB4"
+    }
+   ]
+  },
+  "round": {
+   "scheduled_assets": [
+    "CB1",
+    "B1"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "CB1",
+    "value": 5.2,
+    "unit": "bar"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "CB1",
+    "photo_ref": "P2",
+    "note": "SF6 low."
+   }
+  ],
+  "history": {
+   "previous_round": null,
+   "open_work_orders": [
+    {
+     "asset_id": "CB1",
+     "desc": "SF6 gauge on CB1 faulty, replacement ordered"
+    }
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "CB4": "out_of_service"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "trip",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 60,
+  "trivial_discrepancies": 2,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 23001,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "follow_up": {
+   "clarity": "contested",
+   "target": "file_closed",
+   "second": "hold_return",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 39,
+ "deciding": {
+  "defect_corroborated": "Note 'SF6 low' matches the 5.2 bar reading, but the open work order says that gauge is faulty, so the reading may be unreliable.",
+  "benign_explanation": "Open work order on CB1 states the SF6 gauge is faulty with replacement ordered, which directly explains the reading.",
+  "follow_up": "Known faulty gauge supports filing; battery B1 was scheduled with no reading and there is no previous round, so return to inspector is also defensible.",
+  "limit_deviation": "Reading 5.2 bar equals the 5.2 trip limit, level 3, while the faulty gauge keeps level 2 plausible.",
+  "supply_exposure": "CB1 feeds 60 customers and partner CB4 is out of service, so a failure would drop fewer than 100 customers."
+ },
+ "request": "rec-F430-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010711
+}

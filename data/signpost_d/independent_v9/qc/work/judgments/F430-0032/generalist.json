@@ -1,0 +1,36 @@
+{
+ "persona": "generalist",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "defect_corroborated": {
+   "true": 0.85,
+   "false": 0.15
+  },
+  "benign_explanation": {
+   "true": 0.12,
+   "false": 0.88
+  },
+  "follow_up": {
+   "file_closed": 0.01,
+   "recheck_next_round": 0.1,
+   "hold_return": 0.03,
+   "work_order": 0.6,
+   "urgent_attendance": 0.26
+  },
+  "limit_deviation": {
+   "0": 0.02,
+   "1": 0.85,
+   "2": 0.11,
+   "3": 0.02
+  },
+  "supply_exposure": {
+   "0": 0.02,
+   "1": 0.01,
+   "2": 0.02,
+   "3": 0.05,
+   "4": 0.9
+  }
+ },
+ "cost": 0.000294
+}

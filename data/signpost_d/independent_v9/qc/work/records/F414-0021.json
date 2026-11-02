@@ -1,0 +1,158 @@
+{
+ "id": "F414-0021",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SW-114",
+   "equip_type": "swing",
+   "crit_fall_height_m": 1.8,
+   "surf_type": "wetpour",
+   "variance_ref": "VAR-22 exp 2026-03-01"
+  },
+  "inspection": {
+   "insp_date": "2025-05-12",
+   "insp_grade": "annual_main",
+   "fall_height_m": 1.8,
+   "surf_type_found": "wetpour",
+   "surf_depth_mm": 41,
+   "surf_req_table": [
+    {
+     "band": "<=2.0",
+     "type": "wetpour",
+     "min_depth_mm": 40
+    }
+   ],
+   "chain_wear_pct": null,
+   "probe_results": [],
+   "findings": [
+    {
+     "defect_code": "PNT-01",
+     "component_id": "C2",
+     "injury_mech": "cosmetic"
+    },
+    {
+     "defect_code": "LBL-03",
+     "component_id": "C5",
+     "injury_mech": "none"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "SW-114",
+    "component_id": "C3",
+    "defect_ref": "D-41",
+    "status": "closed",
+    "closed_date": "2025-05-13"
+   },
+   {
+    "wo_id": "W2",
+    "asset_id": "SW-114",
+    "component_id": "C4",
+    "defect_ref": "D-42",
+    "status": "open"
+   },
+   {
+    "wo_id": "W3",
+    "asset_id": "SW-114",
+    "component_id": "C2",
+    "defect_ref": "D-43",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "low",
+   "closure_status": "open",
+   "incident_reports_90d": 3
+  },
+  "history": [
+   {
+    "date": "2024-05-10",
+    "grade": "annual_main",
+    "defect_refs": [
+     "D-41",
+     "D-42"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "swing",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 1.0,
+  "worst_defect_class": "no_mechanism",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": "0.33 (closed one day after inspection)",
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": true,
+  "inspector_grade": "annual_main",
+  "usage_level": "low",
+  "incident_reports_90d": 3
+ },
+ "factors_sampled": {
+  "equipment_type": "swing",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -12.44,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 2,
+  "work_orders_closed_fraction": 0.69,
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": true,
+  "inspector_grade": "annual_main",
+  "usage_level": "low",
+  "incident_reports_90d": 3
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "balanced",
+   "target": "hold",
+   "second": "sign_off",
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 99,
+ "deciding": {
+  "prior_defects_cleared": "D-42 order still open; D-41 order closed only the day after insp_date, so partly arguable.",
+  "surfacing_adequate": "41 mm measured against 40 mm minimum; margin is thin.",
+  "asset_disposition": "chain_wear_pct is null (missing measurement) against otherwise minor findings, which balances hold and sign_off.",
+  "remedial_progress": "Only W1 shows closed, dated after the inspection, so level 0 versus 1 is open.",
+  "hazard_severity": "Worst finding LBL-03 has injury_mech none; the other is cosmetic."
+ },
+ "request": "rec-F414-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012927
+}

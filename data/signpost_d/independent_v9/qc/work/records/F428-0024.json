@@ -1,0 +1,120 @@
+{
+ "id": "F428-0024",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "RG-5",
+   "gate_type": "radial",
+   "rated_closure_s": 240
+  },
+  "inspection": {
+   "asset_id": "RG-5",
+   "insp_date": "2025-04-20",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-04-20",
+    "closure_s": 221,
+    "leakage_l_min": 3,
+    "leakage_limit_l_min": 12,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D1",
+    "component": "seal",
+    "grade": 4,
+    "status": "closed",
+    "first_seen": "2023-05-01"
+   }
+  ]
+ },
+ "factors": {
+  "gate_type": "radial",
+  "closure_time_ratio": 0.92,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "passed_current",
+  "repair_progress": "none_needed",
+  "mitigation_present": false,
+  "mitigation_kind": "none",
+  "days_to_forecast_peak": 34,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "radial",
+  "closure_time_ratio": 0.92,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 4,
+  "mismatch_location": "test_date_vs_repair",
+  "test_status": "failed",
+  "repair_progress": "none_needed",
+  "mitigation_present": false,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 34,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 25,
+ "deciding": {
+  "closure_test_valid": "Test performed on the visit date, result pass, 221 s vs 240 s rated, leakage 3 vs limit 12.",
+  "next_step": "Current passing test and no open defects, so the record is complete.",
+  "defect_class": "The only defect is closed (a closed grade 4 seal), so no open defect; slight doubt because of the old closed entry.",
+  "section_discrepancies": "Asset ids match and no other cross-section values conflict; few sections are present.",
+  "flood_risk": "Closes in 221 s, within 240 s rated, no open defects, so low."
+ },
+ "request": "rec-F428-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009946
+}

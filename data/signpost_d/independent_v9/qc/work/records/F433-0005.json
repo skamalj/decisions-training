@@ -1,0 +1,129 @@
+{
+ "id": "F433-0005",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H31",
+   "passport_remark": "known left fore irregularity, regular at loops 1-2"
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "12:10"
+  },
+  "vet_card": {
+   "arrival_copied": "12:11",
+   "presented_at": "12:24",
+   "pulse_bpm": 54,
+   "cri": {
+    "first_bpm": 54,
+    "second_bpm": 58
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 2,
+    "skin_tent_s": 1
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 0
+    },
+    {
+     "surface": "soft",
+     "grade": 0
+    }
+   ],
+   "tack": {
+    "finding": "none"
+   },
+   "vet_signed_at": "12:28"
+  },
+  "notes": {
+   "rider_note": "Nearly lost a shoe."
+  }
+ },
+ "factors": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "regular",
+  "gait_mitigation": true,
+  "metabolic_flags": 0,
+  "cri_rise": 3.75,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "regular",
+  "gait_mitigation": true,
+  "metabolic_flags": 2,
+  "cri_rise": 3.75,
+  "missing_items": 1,
+  "out_of_sequence": false,
+  "tack_wound": "open_wound",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "alarming_irrelevant"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "clear_to_continue",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "contested",
+   "target": "ftq_combined",
+   "second": "ftq_gait",
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "pulse_met": "Pulse 54 was taken 14 min after arrival (13 min by the copied time), inside the window and under the limit of 64.",
+  "next_step": "Every reading is present, the trot-ups are regular, the tack is clear and the card is signed, so the horse can proceed.",
+  "outcome_code": "The record is clean (regular gait, pink mm, CRT 2 s, no tack finding). The passport remark about a known irregularity is the only residual doubt, so pass is likely.",
+  "welfare_risk": "The pulse is 54, the CRI is 54 to 58, the mm are pink with CRT 2 s, both trot-ups are grade 0 and tack is clear, so all parameters are within limits.",
+  "record_completeness": "All readings are present and signed at 12:28. The 1 min gap between arrival_copied and arrived_at is the only possible time doubt."
+ },
+ "request": "rec-F433-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013306
+}

@@ -1,0 +1,136 @@
+{
+ "id": "F433-0033",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H33",
+   "passport_remark": "known left fore irregularity, regular at loops 1-2",
+   "earlier_gates": [
+    {
+     "loop": 2,
+     "pulse_bpm": 63
+    }
+   ]
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "12:00",
+   "departed_at": "12:20"
+  },
+  "vet_card": {
+   "arrival_copied": "12:07",
+   "presented_at": "12:18",
+   "pulse_bpm": 58,
+   "cri": {
+    "first_bpm": 58,
+    "second_bpm": null
+   },
+   "metabolic": {
+    "mm": "pale",
+    "crt_s": 3,
+    "skin_tent_s": 4
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 2
+    },
+    {
+     "surface": "soft",
+     "grade": 1
+    }
+   ],
+   "tack": {
+    "site": "girth",
+    "finding": "minor rub"
+   },
+   "vet_signed_at": "12:27"
+  }
+ },
+ "factors": {
+  "pulse_status": "met_within_window",
+  "time_mismatch": "major_over_5min",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": true,
+  "metabolic_flags": 3,
+  "cri_rise": 10.23,
+  "missing_items": 1,
+  "out_of_sequence": false,
+  "tack_wound": "minor_rub",
+  "prior_gate_history": "prior_borderline",
+  "treatment_logged": "none",
+  "departed_before_clearance": true,
+  "note_tone": "none"
+ },
+ "factors_sampled": {
+  "pulse_status": "not_met",
+  "time_mismatch": "major_over_5min",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": true,
+  "metabolic_flags": 3,
+  "cri_rise": 10.23,
+  "missing_items": 1,
+  "out_of_sequence": false,
+  "tack_wound": "minor_rub",
+  "prior_gate_history": "prior_borderline",
+  "treatment_logged": "none",
+  "departed_before_clearance": true,
+  "note_tone": "none"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "clear_to_continue",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "balanced",
+   "target": "ftq_metabolic",
+   "second": "ftq_combined",
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (departed_before_clearance = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 75,
+ "deciding": {
+  "pulse_met": "Pulse 58 presented 12:18, within 20 min of arrival at 12:00 (and 12:07 copy); met.",
+  "next_step": "Only plausible reading: pulse met and vet-signed; departure issue noted but plan sets continue.",
+  "outcome_code": "Metabolic flags (pale, crt 3, tent 4) with a g2 hard-surface trot-up offset by regular-ish soft trot and passport remark; metabolic vs combined balanced.",
+  "welfare_risk": "departed_at 12:20 before vet_signed_at 12:27: on course uncleared.",
+  "record_completeness": "Second CRI null, but arrival_copied 12:07 differs from gate arrived_at 12:00, giving a timing inconsistency."
+ },
+ "request": "rec-F433-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006071
+}

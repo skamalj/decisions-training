@@ -1,0 +1,118 @@
+{
+ "id": "F402-0011",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-1041",
+   "priority": "routine",
+   "received": "2024-06-10",
+   "onset": "2024-03-11"
+  },
+  "clinical": {
+   "red_flags": [],
+   "function_index": 79.5,
+   "surgery_date": "2024-04-23",
+   "weight_bearing": null
+  },
+  "gp_record": {
+   "falls_3m": 4
+  },
+  "attachments": [
+   {
+    "type": "op_protocol",
+    "date": "2024-04-24"
+   }
+  ],
+  "history": {
+   "episodes": 3,
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "surgery_date",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "weight_bearing_status",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 13,
+  "function_index": 79.53,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "routine",
+  "falls_last_3m": 4,
+  "post_op_days": 48,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "surgery_date",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "weight_bearing_status",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 13,
+  "function_index": 79.53,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "routine",
+  "falls_last_3m": 4,
+  "post_op_days": 48,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 28,
+ "deciding": {
+  "red_flag_unresolved": "red_flags list is empty, so a flag finding is only weakly in play; the null weight_bearing leaves a little doubt.",
+  "next_step": "One-day surgery date gap is trivial; routine priority with nothing urgent, so add as referred.",
+  "pathway": "High function index 79.5 and no red flags favour self-management, but 4 falls and a recent op leave doubt.",
+  "reversal_time": "Adding to the waiting list is undone within a day.",
+  "clinical_urgency": "Function index high, routine priority, no red flag; falls and post-op status leave a little doubt."
+ },
+ "request": "rec-F402-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004905
+}

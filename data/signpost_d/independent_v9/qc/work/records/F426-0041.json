@@ -1,0 +1,150 @@
+{
+ "id": "F426-0041",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B14",
+   "grower_id": "G220",
+   "crop": "apple",
+   "planted_area_ha": 4.0,
+   "lot_id": "L881"
+  },
+  "applications": [
+   {
+    "app_id": "A1",
+    "date": "2024-02-10",
+    "product_code": "FUN-A",
+    "qty_applied": 8.08,
+    "qty_unit": "L",
+    "area_treated_ha": 4.0,
+    "sprayer_id": "SP-03",
+    "wind_kmh": 21
+   },
+   {
+    "app_id": "A2",
+    "date": "2024-02-24",
+    "product_code": "INS-B",
+    "qty_applied": 3.0,
+    "qty_unit": "L",
+    "area_treated_ha": 4.0,
+    "sprayer_id": "SP-03",
+    "wind_kmh": 8
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "FUN-A",
+    "max_rate_per_ha": 2.0,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "approved_crops": [
+     "apple"
+    ],
+    "minor_use_auth_ref": null
+   },
+   {
+    "product_code": "INS-B",
+    "max_rate_per_ha": 0.75,
+    "rate_unit": "L",
+    "phi_days": 21,
+    "approved_crops": [
+     "apple"
+    ],
+    "minor_use_auth_ref": null
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "SP03",
+   "sprayer_type": "tunnel_recycling",
+   "calibration_valid_to": "2024-07-15",
+   "nozzle_dev_pct": 3
+  },
+  "harvest": {
+   "lot_id": "L881",
+   "block_id": "B14",
+   "first_pick_date": "2024-03-20",
+   "residue_test": {
+    "sampled": true,
+    "result_date": null,
+    "below_limit": null
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "cleared",
+  "rate_overrun_band": "up_to_10",
+  "partial_block_spray": false,
+  "clerical_mismatch": "sprayer_id_format",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 2,
+  "high_wind_decoy": true
+ },
+ "factors_sampled": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "up_to_10",
+  "partial_block_spray": false,
+  "clerical_mismatch": "sprayer_id_format",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 8,
+  "high_wind_decoy": true
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "release_lot",
+   "second": "hold_and_test",
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "label_deviation",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 110,
+ "deciding": {
+  "phi_cleared": "Last application 2024-02-24 (INS-B, 21 d) and first pick 2024-03-20 give a 25-day gap; FUN-A gap is 39 days against 14. Both clear.",
+  "next_step": "Residue test sampled but result_date and below_limit are null. That argues for waiting on the result, but all intervals and rates are essentially fine and favour release.",
+  "finding_class": "FUN-A 8.08 L over 4.0 ha is 2.02 L/ha against a max of 2.0, marginally over. The sprayer id SP-03 vs SP03 is clerical, so a rate deviation is the leading class.",
+  "reversal_time": "A hold pending the pending residue result could resolve in days or take a few weeks; the pending lab result sets the duration.",
+  "rate_overrun": "FUN-A computes at 2.02 vs 2.0 (1% over) and INS-B exactly at 0.75. Level 0 or 1 depending on tolerance for rounding."
+ },
+ "request": "rec-F426-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013776
+}

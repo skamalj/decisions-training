@@ -1,0 +1,142 @@
+{
+ "id": "F410-0008",
+ "family": "F410",
+ "state": {
+  "application": {
+   "term_end": "2026-03-31",
+   "commodities": [
+    "coffee"
+   ],
+   "pitch_req": {
+    "width_m": 3
+   },
+   "docs_pending": [
+    "ID",
+    "plan"
+   ]
+  },
+  "licence_current": {
+   "commodities": [
+    "hot drinks"
+   ],
+   "pitch": {
+    "width_m": 3
+   },
+   "conditions": {
+    "min_attendance_pct": 60
+   }
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-03-25",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": "2026-02-10",
+    "new_end": null
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "period": "2025-26",
+     "amount_gbp": 400
+    }
+   ],
+   "ledger": [
+    {
+     "amount_gbp": 74.45
+    }
+   ]
+  },
+  "history": {
+   "allocated_12m": 49,
+   "attended_12m": 23,
+   "absence_notices": [],
+   "complaints": [
+    {
+     "upheld": false
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_within_14d",
+  "broker_confirmation_held": false,
+  "commodity_change": "synonym_only",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.0,
+  "variation_approved": false,
+  "fee_arrears_gbp": 325.55,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.47,
+  "absences_notified": false,
+  "complaint_profile": "not_upheld_only",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "ends_more_than_14d_early",
+  "broker_confirmation_held": false,
+  "commodity_change": "synonym_only",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.95,
+  "variation_approved": false,
+  "fee_arrears_gbp": 325.55,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.47,
+  "absences_notified": false,
+  "complaint_profile": "not_upheld_only",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "leaning",
+   "target": "grant_conditional",
+   "second": null,
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "clear",
+   "target": "none_needed",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-03-25 is six days before term_end, while broker_conf was received but gives new_end null; renewal of cover is plausible but not evidenced.",
+  "renewal_disposition": "Arrears of 325.55, attendance 23/49 below 60% with no absence notices, and a short insurance end are conditionable, not refusal-level.",
+  "inspection_level": "Pitch width equal, coffee versus hot drinks is wording only, non-food stall.",
+  "reversal_time": "Whether a full-year licence once granted can be undone within three months or takes longer is genuinely open; no field settles it.",
+  "discrepancy_count": "Insurance end short of term, unpaid fees (400 less 74.45) and attendance shortfall give three; the two pending documents could push it to four or more."
+ },
+ "request": "rec-F410-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015237
+}

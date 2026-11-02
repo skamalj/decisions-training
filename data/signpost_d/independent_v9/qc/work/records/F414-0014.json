@@ -1,0 +1,169 @@
+{
+ "id": "F414-0014",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SR-9",
+   "equip_type": "spring_rocker",
+   "crit_fall_height_m": 1.0,
+   "surf_type": "wood_chip"
+  },
+  "inspection": {
+   "insp_date": "2024-08-12",
+   "insp_grade": "operational",
+   "fall_height_m": 1.0,
+   "surf_type_found": "wood_chip",
+   "surf_depth_mm": 169,
+   "surf_req_table": [
+    {
+     "max_h": 1.5,
+     "type": "wood_chip",
+     "min_depth_mm": 200
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "O1",
+     "result": null
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "EN1",
+     "component_id": "C-spring",
+     "injury_mech": "serious"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "SR-9",
+    "component_id": "C-seat",
+    "defect_ref": "D2",
+    "status": "closed",
+    "closed_date": "2024-04-01"
+   },
+   {
+    "wo_id": "W2",
+    "asset_id": "SR-9",
+    "component_id": "C-base",
+    "defect_ref": "D3",
+    "status": "closed",
+    "closed_date": "2024-04-20"
+   },
+   {
+    "wo_id": "W3",
+    "asset_id": "SR-9",
+    "component_id": "C-handle",
+    "defect_ref": "D6",
+    "status": "closed",
+    "closed_date": "2024-05-02"
+   },
+   {
+    "wo_id": "W4",
+    "asset_id": "SR-9",
+    "component_id": "C-spring",
+    "defect_ref": "D8",
+    "status": "awaiting_verify",
+    "temp_measure": {
+     "type": "taped_off",
+     "date": "2024-08-12"
+    }
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 3
+  },
+  "history": [
+   {
+    "date": "2023-08-10",
+    "defect_refs": [
+     "D2",
+     "D3",
+     "D6"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -31.0,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.75,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": true,
+  "inspector_grade": "operational",
+  "usage_level": "medium",
+  "incident_reports_90d": 3
+ },
+ "factors_sampled": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -31.07,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 4,
+  "work_orders_closed_fraction": 0.76,
+  "temporary_measure_in_place": true,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": true,
+  "inspector_grade": "operational",
+  "usage_level": "medium",
+  "incident_reports_90d": 3
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 68,
+ "deciding": {
+  "prior_defects_cleared": "Previous refs D2, D3 and D6 match orders W1-W3, all closed before insp_date.",
+  "surfacing_adequate": "Depth 169 mm against a 200 mm minimum for wood chip at 1.0 m.",
+  "asset_disposition": "The head_neck probe result is null while finding EN1 is rated serious. That missing result is the specific item to confirm, and the component is already taped off.",
+  "remedial_progress": "Three of four orders are closed. W4 is 'awaiting_verify' rather than open or closed, so it is level 2 or 3 depending on how it is counted.",
+  "hazard_severity": "Finding EN1 is on the spring with injury_mech serious, but the head-neck probe result is null, so entrapment is unconfirmed. Level 4 and level 3 are both defensible."
+ },
+ "request": "rec-F414-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015177
+}

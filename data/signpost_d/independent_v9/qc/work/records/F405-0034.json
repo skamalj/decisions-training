@@ -1,0 +1,146 @@
+{
+ "id": "F405-0034",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-6102",
+   "detected_on": "2025-10-14",
+   "term_start": "2025-09-29",
+   "room": "MR-5",
+   "slot": "Tue 09:00"
+  },
+  "booking_a": {
+   "module": "LAW1010",
+   "dept": "LAW",
+   "day": "Tue",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "headcount": 48,
+   "required_features": [],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "LAW2040",
+   "dept": "LAW",
+   "room": "MR-5",
+   "day": "Tue",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "status": "cancelled",
+   "room_released": false
+  },
+  "room": {
+   "code": "MR-5",
+   "aliases": [],
+   "capacity": 64
+  },
+  "alternatives": [
+   {
+    "room": "MR-9",
+    "capacity": 48,
+    "features": [],
+    "weeks_free": [
+     3,
+     4,
+     5,
+     6
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "cancelled_not_released",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "borderline_capacity_equal",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.0,
+  "required_feature": "none",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 1
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "cancelled_not_released",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 44,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.75,
+  "required_feature": "none",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 1
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "genuine_clash": "Times overlap 10:00-11:00 in the same room, but booking_b is cancelled, so no teaching occupies the room; the unreleased hold gives some doubt.",
+  "alt_room_fits": "MR-9 capacity 48 equals headcount 48 exactly, with no feature needs and all weeks free; fits with no margin.",
+  "resolution": "booking_b is cancelled but room_released is false, so the officer must confirm and release the booking before anything else.",
+  "urgency": "Detected Tue 2025-10-14; week 3 Tuesday is 2025-10-14, so the first occurrence is today.",
+  "parties_needed": "Same department, but confirming the cancellation, releasing the room, the lecturers and room services could total three to five, so a split between levels 2 and 3."
+ },
+ "request": "rec-F405-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013731
+}

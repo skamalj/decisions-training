@@ -1,0 +1,129 @@
+{
+ "id": "F408-0026",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 1001,
+   "flat_no": "2",
+   "logged_at": "2024-05-14T16:00",
+   "stream": "refuse",
+   "claimed_date": "2024-05-14",
+   "photo_attached": false
+  },
+  "property": {
+   "uprn": 1001,
+   "flat_no": "4",
+   "assisted_collection": true,
+   "assisted_since": "2023-01-10"
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled_date": "2024-05-14",
+   "week_pattern": "B"
+  },
+  "round_log": {
+   "round_completed_at": "2024-05-14T14:30",
+   "disruption_code": null,
+   "stops": [
+    {
+     "uprn": 1001,
+     "exception_code": "access_blocked",
+     "photo_ref": "P77",
+     "gps_stop": true
+    }
+   ]
+  },
+  "history": [
+   {
+    "outcome": "upheld",
+    "logged_on": "2024-02-20"
+   },
+   {
+    "outcome": "upheld",
+    "logged_on": "2024-03-30"
+   },
+   {
+    "outcome": "upheld",
+    "logged_on": "2024-04-22"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "access_blocked",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 3,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "access_blocked",
+  "exception_supported": false,
+  "telematics_pass": "street_not_visited",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 2,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "schedule_return",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "crew_missed": "Stop for this UPRN has exception_code access_blocked with photo_ref P77 and gps_stop true, so the exception is supported.",
+  "report_matches": "Stream and claimed date equal the schedule, but week_pattern B and the flat 2 vs 4 mismatch keep it doubtful.",
+  "next_step": "The record holds what is needed and no information is missing, so booking a return is the likely action; the flat mismatch and the supported exception leave some doubt.",
+  "return_urgency": "Assisted collection is true but the stop shows no not_presented or gps false, so same day versus two working days is open.",
+  "repeat_failures": "Upheld entries on 2024-03-30 and 2024-04-22 are clearly within 84 days; the one on 2024-02-20 is exactly 84 days before logging, on the boundary."
+ },
+ "request": "rec-F408-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009869
+}

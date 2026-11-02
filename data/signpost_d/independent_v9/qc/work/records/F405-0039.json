@@ -1,0 +1,160 @@
+{
+ "id": "F405-0039",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-1190",
+   "detected_on": "2025-01-13",
+   "term_start": "2025-03-03",
+   "room": "AR2.08"
+  },
+  "booking_a": {
+   "module": "ART210",
+   "dept": "ART",
+   "day": "Thu",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 40,
+   "required_features": [],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "HIRE-0912",
+   "dept": null,
+   "external_hire": true,
+   "room": "AR2.08",
+   "day": "Thu",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "headcount": 30,
+   "required_features": [],
+   "status": "provisional",
+   "approved_at": "2025-01-08",
+   "approver": "F.Webb"
+  },
+  "room": {
+   "code": "AR2.08",
+   "aliases": [],
+   "capacity": 45,
+   "features": [
+    "projector"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "AR1.02",
+    "capacity": 45,
+    "features": [
+     "projector"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   }
+  ],
+  "history": []
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": "none (no shared week; earliest booking is 54 days after detection)",
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.12,
+  "required_feature": "none",
+  "owning_departments": "external_hire",
+  "prior_clash_count": 0
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": -13,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.12,
+  "required_feature": "none",
+  "owning_departments": "external_hire",
+  "prior_clash_count": 0
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 92,
+ "deciding": {
+  "genuine_clash": "Same room, day and time, but A runs weeks 1-4 and B weeks 5-8, so the weeks never intersect. B being an external hire on a provisional status adds a little doubt.",
+  "alt_room_fits": "AR1.02 holds 45 against headcount 40, has the projector, and is free in weeks 1-8.",
+  "resolution": "No shared week means no overlap remains, so dismiss. B's provisional status gives mild doubt.",
+  "urgency": "Term starts 2025-03-03, well over 28 days after detection on 2025-01-13, and no weeks are shared.",
+  "parties_needed": "Dismissal needs only the officer, with no change request pending and no history."
+ },
+ "request": "rec-F405-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010228
+}

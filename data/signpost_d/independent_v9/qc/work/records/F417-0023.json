@@ -1,0 +1,154 @@
+{
+ "id": "F417-0023",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V-8120",
+   "type": "sloop",
+   "loa_m": 12.12,
+   "beam_m": 3.9,
+   "draught_m": 2.1,
+   "draught_src": "survey",
+   "home_port": "Poole"
+  },
+  "berth": {
+   "id": "P1-04",
+   "max_loa_m": 12.0,
+   "fender_allow_m": 0.1,
+   "depth_lat_m": 2.1,
+   "waiver_ref": null,
+   "waiver_expiry": null
+  },
+  "booking": {
+   "arrival": "2025-08-05",
+   "departure": "2025-08-12",
+   "nights": 7,
+   "next_on_berth": {
+    "arrival": "2025-08-20"
+   }
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 12.15,
+    "draught_m": 2.1,
+    "date": "2022-03-14"
+   },
+   "insurance_expiry": "2026-01-31",
+   "inspection_date": "2025-07-30",
+   "inspection_booked": true
+  },
+  "account": {
+   "dues_outstanding_gbp": 918,
+   "deposit_paid": true,
+   "plan_id": "PP-31",
+   "plan_status": "approved",
+   "credit_balance_gbp": 40
+  },
+  "history": [
+   {
+    "date": "2022-08-01",
+    "berth": "P1-04",
+    "incidents": 0
+   },
+   {
+    "date": "2023-08-03",
+    "berth": "P1-04",
+    "incidents": 1
+   },
+   {
+    "date": "2024-05-20",
+    "berth": "P2-11",
+    "incidents": 0
+   },
+   {
+    "date": "2024-08-06",
+    "berth": "P1-04",
+    "incidents": 1
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 0.25,
+  "berth_length_fit": "marginally_over_limit",
+  "ukc_margin_m": 0.0,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 918,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 2,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 7.8,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 1.0,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 918,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 2,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "confirm_allocation",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "ukc_band": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "unresolved_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 101,
+ "deciding": {
+  "length_fits": "Survey loa 12.15 against max_loa 12.0 plus fender allowance 0.1 (12.1) is over by 0.05 m, with no waiver. The overshoot is tiny, so a reader could still call it a fit.",
+  "next_step": "Insurance valid, inspection booked, plan approved, no date clash and a regular visitor. The marginal length and the pending inspection leave a little doubt.",
+  "primary_issue": "Insurance and plan are in order and dates are clear. No required item is missing or overdue.",
+  "ukc_band": "Survey draught 2.1 equals depth_lat 2.1, which meets the grounding condition (draught equals depth).",
+  "unresolved_count": "Vessel and survey loa agree and the draught matches. Only the 0.05 m length overshoot could be counted as a discrepancy."
+ },
+ "request": "rec-F417-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012066
+}

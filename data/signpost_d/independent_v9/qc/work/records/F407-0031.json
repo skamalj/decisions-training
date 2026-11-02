@@ -1,0 +1,124 @@
+{
+ "id": "F407-0031",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "P-1041",
+   "received_at": "2025-03-12T08:10",
+   "channel": "public_app",
+   "photo_ref": "IMG-7731",
+   "linked_reports": [
+    "P-1030",
+    "P-1033",
+    "P-1038"
+   ],
+   "claim_ref": "CLM-2291"
+  },
+  "location": {
+   "road_class": "main_distributor",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspector": "I-14",
+   "inspected_at": "2025-03-10",
+   "depth_mm": 38,
+   "width_mm": 561.51
+  },
+  "works_history": [],
+  "programme": {
+   "schemes": [
+    {
+     "start": "2025-04-01",
+     "covers_offset": true
+    }
+   ],
+   "temp_measures": [
+    {
+     "type": "cones",
+     "expires": "2025-03-30"
+    }
+   ]
+  },
+  "current_order": {
+   "id": "WO-552",
+   "status": "completed_awaiting_signoff",
+   "completed_items": 4,
+   "total_items": 4
+  }
+ },
+ "factors": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "none",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 3,
+  "reporter_source": "public_app",
+  "injury_or_claim": true,
+  "order_status": "completed_awaiting_signoff",
+  "defect_width_mm": 561.51,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "just_below",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "none",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 3,
+  "reporter_source": "public_app",
+  "injury_or_claim": true,
+  "order_status": "completed_awaiting_signoff",
+  "defect_width_mm": 561.51,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "repeat_failure": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_engineer",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "meets_threshold": "inspection depth_mm 38 vs intervention_depth_mm 40, but inspected_at 2025-03-10 precedes the report, so doubt remains.",
+  "repeat_failure": "works_history is empty; no prior repair matched.",
+  "next_step": "report.claim_ref CLM-2291 is set, which calls for engineer referral.",
+  "staff_effort": "Claim handling plus a stale inspection and order sign-off suggest days of work; a longer effort is plausible.",
+  "response_timescale": "A claim and a temporary cone measure expiring 2025-03-30 make a make-safe plausible, but a priority repair is also defensible."
+ },
+ "request": "rec-F407-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00779
+}

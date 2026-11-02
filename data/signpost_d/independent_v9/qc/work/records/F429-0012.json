@@ -1,0 +1,157 @@
+{
+ "id": "F429-0012",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 200,
+   "ramp_max_m_per_10min": 0.25,
+   "operator_id": "OP-114"
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 88.0,
+    "action_m": 88.8
+   },
+   "readings": [
+    {
+     "level_m": 86.9,
+     "datum": "site"
+    },
+    {
+     "level_m": 87.1,
+     "datum": "site"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "2024-06-11T14:00",
+    "open_after_m": 1.5
+   },
+   {
+    "gate": "G2",
+    "t": "2024-06-11T14:05",
+    "open_after_m": 1.4
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.5
+    },
+    {
+     "gate": "G2",
+     "opening_m": 1.3
+    }
+   ],
+   "calc_peak_m3s": 214,
+   "gauged_peak_m3s": 191,
+   "tailwater_m": [
+    2.0,
+    2.6
+   ]
+  },
+  "instruments": {
+   "piezo_kpa": [
+    {
+     "v": 60,
+     "alert_kpa": 75,
+     "t": "2024-06-11T14:30"
+    }
+   ],
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "2024-06-11T18:00"
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "2024-06-11T13:30",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "above_limit",
+  "gate_position_mismatch": "material",
+  "discharge_discrepancy_pct": 11.73,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "above_limit",
+  "gate_position_mismatch": "material",
+  "discharge_discrepancy_pct": 11.73,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "trigger_tier": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 155,
+ "deciding": {
+  "within_licence": "Gauged peak 191 is under 200, but the calculated peak 214 exceeds it; the gauged figure favours true.",
+  "gates_reconciled": "G2 opening 1.4 m vs 1.3 m in the calculation, a 0.1 m material gap, while G1 matches.",
+  "next_step": "Inspection completed, notice sent before release and nothing is outstanding, so the log is accepted.",
+  "trigger_tier": "The calculated peak 214 exceeds the 200 limit, suggesting level 3, but the gauged peak is under it.",
+  "parties_needed": "Nothing is outstanding, so no one needs to act."
+ },
+ "request": "rec-F429-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005616
+}

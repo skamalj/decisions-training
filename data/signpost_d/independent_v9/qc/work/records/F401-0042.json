@@ -1,0 +1,153 @@
+{
+ "id": "F401-0042",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P2207",
+   "planned_discharge_at": "2025-03-10T12:00"
+  },
+  "medications": {
+   "patient_id": "P2207",
+   "reconciled": [
+    {
+     "drug": "furosemide",
+     "dose": 40,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "furosemide",
+     "action": "reduce to 20 mg",
+     "by": "Dr Rao",
+     "changed_at": "2025-03-10T10:20"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "furosemide",
+     "dose": 20,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "signed_at": "2025-03-10T10:05"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": null,
+    "adl_score": 20
+   },
+   "social": {
+    "carer_available": true
+   },
+   "care_arrangement": {
+    "type": "home_care",
+    "status": "confirmed",
+    "start_date": "2025-03-14"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "TTO",
+     "status": "pending"
+    },
+    {
+     "task": "GP letter",
+     "status": "pending"
+    },
+    {
+     "task": "district nurse",
+     "status": "pending"
+    },
+    {
+     "task": "obs sheet",
+     "status": "done",
+     "completed_at": "2025-03-10T09:00",
+     "signed_by": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 4,
+  "false_completion": true,
+  "care_need": "new_package",
+  "care_arrangement_status": "confirmed_later_start",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "unit_expression_only",
+  "rx_change_documented": true,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "discharge_rx_absent",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "new_package",
+  "care_arrangement_status": "confirmed_later_start",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "discharge_now",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "destination": {
+   "clarity": "balanced",
+   "target": "home_independent",
+   "second": "remain_inpatient",
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "rx_matches": "Furosemide 40 mg reconciled vs 20 mg on the prescription; the change entry (10:20) is dated after signed_at (10:05), so it may not cover it.",
+  "next_step": "No clinical, identity or capacity concern is recorded; the record shows nothing needing a senior decision.",
+  "destination": "ADL 20 with no aid and a carer point to home, but the home care start date of 2025-03-14 is later than the planned date.",
+  "outstanding_tasks": "Three pending items plus a done item with null signed_by, which counts as outstanding; a reader might count only three.",
+  "discharge_delay": "Care start 2025-03-14 is four days after the 2025-03-10 plan."
+ },
+ "request": "rec-F401-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010808
+}

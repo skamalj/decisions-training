@@ -1,0 +1,138 @@
+{
+ "id": "F422-0007",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "delivered_at": "2025-04-01",
+   "received_at": "2025-04-12",
+   "review_date": "2025-05-02",
+   "lines": [
+    {
+     "qty_claimed": 30
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "lines": [
+    {
+     "batch": "C77",
+     "expiry": "2026-05"
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "batch": "C77",
+     "expiry": "2026-05-31",
+     "qty_counted": 30,
+     "packs_damaged": 0,
+     "seals_intact": 30
+    }
+   ],
+   "uid_scans": []
+  },
+  "temperature": {
+   "labelled_range": "2-8",
+   "logger_id": "L5",
+   "logger_start": "2025-04-01",
+   "logger_end": "2025-04-12",
+   "min_c": 3.1,
+   "max_c": 7.4,
+   "minutes_out_of_range": 0
+  },
+  "quarantine_control": {
+   "hold_limit_days": 17,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-05-02"
+   },
+   "max_days_out_of_control": 14,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "full",
+  "excursion_minutes": 0,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "expiry_format_only",
+  "count_discrepancy_packs": 0,
+  "damaged_pack_fraction": 0.0,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 11,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 0,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 12
+ },
+ "factors_sampled": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 263,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "one_foreign_batch",
+  "count_discrepancy_packs": 10,
+  "damaged_pack_fraction": 0.69,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 11,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": -3,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 5
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_stock",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 51,
+ "deciding": {
+  "storage_maintained": "Logger spans delivery to receipt, min/max 3.1-7.4 within 2-8, zero minutes out of range, 11 days under the 14-day limit.",
+  "batch_traceable": "Batch C77 matches; expiry is month-year on dispatch and a full date on the count, which is probably only formatting.",
+  "next_step": "All 30 packs are intact, in range, in date with 12 months of shelf life against a 6-month minimum, and no UID alerts.",
+  "resaleable_share": "No damage and all packs match, but the expiry notation difference leaves slight doubt over full fitness.",
+  "disposition_urgency": "Original limit has passed, but the approved extension's new_limit_date equals the review date, so 0 days remain."
+ },
+ "request": "rec-F422-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01102
+}

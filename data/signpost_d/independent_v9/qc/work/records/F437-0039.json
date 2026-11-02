@@ -1,0 +1,116 @@
+{
+ "id": "F437-0039",
+ "family": "F437",
+ "state": {
+  "job": {
+   "glossary_version": 6,
+   "due_at": "2025-07-14T12:00",
+   "terms": {
+    "glossary_exception": true
+   },
+   "workflow": [
+    {
+     "step": "dtp",
+     "done_at": null
+    }
+   ]
+  },
+  "source": {
+   "segment_count": 90
+  },
+  "deliverable": {
+   "segments_translated": 88,
+   "glossary_version_used": 5,
+   "delivered_at": "2025-07-10T05:00"
+  },
+  "qa_report": {
+   "unresolved": {
+    "major": 1
+   }
+  },
+  "review": null,
+  "history": {
+   "revision_rounds": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "minor_segment_gap",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "section_missing",
+  "open_error_profile": "major_open",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.43,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 103,
+  "client_waiver": true,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": true
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "section_missing",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.43,
+  "number_mismatch_count": 4,
+  "deadline_slack_hours": 103,
+  "client_waiver": true,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": true
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "scope_matches": "deliverable.segments_translated 88 against source.segment_count 90; no version fields to settle whether two segments are repetitions, so it sits near the boundary.",
+  "reviewed_in_time": "review is null, so no sign-off is recorded before delivered_at; a review may exist elsewhere.",
+  "next_step": "glossary_exception waiver covers the older glossary version 5 vs 6 and 103h of slack remain; the record is thin and the planned release rests on that waiver.",
+  "open_severity": "qa unresolved shows major:1 with no review to confirm or reclassify it, so level 3 versus 2 is balanced.",
+  "parties_needed": "Open major issue, missing review, pending dtp step and the segment gap involve several roles; whether it is three or four or only two people is balanced."
+ },
+ "request": "rec-F437-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009538
+}

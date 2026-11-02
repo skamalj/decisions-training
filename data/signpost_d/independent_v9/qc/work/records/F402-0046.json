@@ -1,0 +1,116 @@
+{
+ "id": "F402-0046",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-1041",
+   "received": "2025-06-10",
+   "priority": "routine",
+   "site": "lumbar",
+   "onset": "2024-10-01"
+  },
+  "clinical": {
+   "dx": "G95.9",
+   "red_flags": [
+    "night_pain_weight_loss"
+   ],
+   "neuro_signs": {
+    "progression": "worsening"
+   },
+   "function_index": 7.06,
+   "surgery_date": "2025-02-20"
+  },
+  "gp_record": {
+   "first_presented": "2024-10-04",
+   "falls_3m": 3,
+   "weight_change_kg": -8
+  },
+  "history": {
+   "episodes": [],
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": false,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "neurological",
+  "symptom_duration_weeks": 36,
+  "function_index": 7.06,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 3,
+  "post_op_days": 110,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": true,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "neurological",
+  "symptom_duration_weeks": 36,
+  "function_index": 7.06,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 3,
+  "post_op_days": 110,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate_lead",
+   "second": "accept_as_referred",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "contested",
+   "target": "specialist_rehab",
+   "second": "self_management",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "red_flag_unresolved": "clinical.red_flags lists night_pain_weight_loss with weight_change -8 kg; no MRI, urgent review or oncology discharge anywhere.",
+  "next_step": "Worsening neuro signs with an unexplained flag favour escalation, while the routine priority, complete record and no missing item leave accepting defensible.",
+  "pathway": "Neurological diagnosis, recent surgery and a very low function index of 7.06 point to specialist rehab; no self-management trial yet keeps self_management arguable.",
+  "reversal_time": "Progressive neurological deterioration with an unexplained red flag, a possible irreversible loss, cannot be undone within three months.",
+  "clinical_urgency": "neuro_signs progression worsening plus an unmitigated night pain and weight loss flag need medical review within 48 hours."
+ },
+ "request": "rec-F402-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00817
+}

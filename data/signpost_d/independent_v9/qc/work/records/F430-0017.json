@@ -1,0 +1,138 @@
+{
+ "id": "F430-0017",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S207",
+   "assets": [
+    {
+     "id": "T1",
+     "param": "oil_temp",
+     "unit": "C",
+     "normal_band": [
+      40,
+      85
+     ],
+     "alarm_limit": 95,
+     "trip_limit": 105,
+     "customers_fed": 21030,
+     "partner_id": null
+    },
+    {
+     "id": "CB1",
+     "param": "sf6",
+     "unit": "bar"
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-06-02",
+   "inspector": "A.K.",
+   "scheduled_assets": [
+    "T1",
+    "CB1"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 104,
+    "unit": "C"
+   }
+  ],
+  "defects": [
+   {
+    "id": "D2",
+    "asset_id": "T1",
+    "photo_ref": null,
+    "note": "T1 running very hot."
+   }
+  ],
+  "history": {
+   "previous_round": {
+    "T1": 103
+   },
+   "open_work_orders": [
+    "Temperature gauge on T1 known faulty, replacement ordered"
+   ]
+  },
+  "network": {
+   "outage_plan": []
+  }
+ },
+ "factors": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": true,
+  "redundancy_state": "no_partner",
+  "customers_fed": 21030,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": true,
+  "redundancy_state": "no_partner",
+  "customers_fed": 21030,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "benign_explanation": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "follow_up": {
+   "clarity": "contested",
+   "target": "hold_return",
+   "second": "work_order",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 78,
+ "deciding": {
+  "defect_corroborated": "Hot note matches 104 C, but photo_ref is null and CB1 has no reading, so corroboration is unsupported.",
+  "benign_explanation": "Faulty gauge work order exists, but the reading is stable and the order is ambiguous about coverage, so it mostly does not explain it.",
+  "follow_up": "Missing CB1 reading and photo suggest return; stable known issue suggests work order.",
+  "limit_deviation": "104 C is one degree under the 105 trip, so alarm or trip is arguable.",
+  "supply_exposure": "21030 customers with no partner; level 3 or 4 is arguable."
+ },
+ "request": "rec-F430-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006034
+}

@@ -1,0 +1,112 @@
+{
+ "id": "F436-0031",
+ "family": "F436",
+ "state": {
+  "article": {
+   "channels": [
+    "web"
+   ],
+   "first_published_at": "2024-05-02T08:00Z",
+   "disputed_passage": "Hartley Haulage was fined £4,500 over driver-hours breaches"
+  },
+  "complaint": {
+   "received_at": "2024-05-03T14:00Z",
+   "summary": "Fine was £4,050."
+  },
+  "desk_check": {
+   "source_doc": null,
+   "attachments": [
+    {
+     "court_listing": null
+    }
+   ],
+   "reporter_notes": "fined £4,050",
+   "filed_copy": "fined £4,500"
+  },
+  "draft_correction": {
+   "stated_value": "£4,005"
+  }
+ },
+ "factors": {
+  "error_status": "confirmed_by_source",
+  "error_origin_stage": "reporter_drafting",
+  "discrepancy_field": "figure",
+  "discrepancy_size": "trivial",
+  "claim_type": "named_party_fact",
+  "hours_live": 30,
+  "distribution_channels": "online_only",
+  "mitigation_present": false,
+  "missing_evidence": true,
+  "legal_signal": false,
+  "legal_cleared": false,
+  "draft_fix_mismatch": true,
+  "prior_corrections": 0,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "error_status": "confirmed_by_source",
+  "error_origin_stage": "reporter_drafting",
+  "discrepancy_field": "figure",
+  "discrepancy_size": "trivial",
+  "claim_type": "named_party_fact",
+  "hours_live": 8,
+  "distribution_channels": "print",
+  "mitigation_present": false,
+  "missing_evidence": true,
+  "legal_signal": false,
+  "legal_cleared": false,
+  "draft_fix_mismatch": true,
+  "prior_corrections": 0,
+  "boundary_case": false
+ },
+ "plan": {
+  "error_confirmed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_origin": {
+   "clarity": "clear",
+   "target": "reporter_drafting",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "spread": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "harm_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "error_confirmed": "Reporter notes say £4,050 against filed £4,500 and the complaint agrees, but the court listing is null, so no document confirms it.",
+  "next_step": "The court_listing attachment is null and the draft value £4,005 matches neither figure, so the listing should be requested first.",
+  "error_origin": "Reporter notes say £4,050 while filed copy and article say £4,500; the first divergence is at filing.",
+  "spread": "Channels are web only and publication to review is about 30 hours, so online only for 24 hours or longer.",
+  "harm_severity": "The passage ties a named firm to a fine for breaches, which can read as wrongdoing, but the wrongdoing is real and only the amount is off (level 2 or 3)."
+ },
+ "request": "rec-F436-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011447
+}

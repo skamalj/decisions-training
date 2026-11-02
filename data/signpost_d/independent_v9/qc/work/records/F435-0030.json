@@ -1,0 +1,161 @@
+{
+ "id": "F435-0030",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E518",
+   "zone_id": "FLR3",
+   "zone_type": "standing_floor",
+   "doors_open": "2025-08-02T20:00",
+   "phase": "live"
+  },
+  "licence": {
+   "base_limit": 800,
+   "variation": {
+    "ref": "V9",
+    "new_limit": 900,
+    "status": "pending",
+    "approved_on": null
+   },
+   "stewards_required": 21,
+   "exit_routes": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 900,
+   "issued": 792,
+   "comps_included": 30,
+   "scanned_in": 780
+  },
+  "ingress": {
+   "device_status": "fault_logged",
+   "raw_peak": 836,
+   "manual_recount": {
+    "count": 804,
+    "at": "2025-08-02T21:15"
+   }
+  },
+  "stewarding": {
+   "rostered": 21,
+   "signed_in": 19,
+   "relief": null
+  },
+  "exit_checks": [
+   {
+    "route_id": "A",
+    "checked_at": "2025-08-02T18:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "B",
+    "checked_at": "2025-08-02T18:40",
+    "status": "clear"
+   },
+   {
+    "route_id": "D",
+    "checked_at": null,
+    "status": "pending"
+   },
+   {
+    "route_id": "E",
+    "checked_at": "2025-08-02T19:10",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "F",
+    "checked_at": "2025-08-02T20:03",
+    "status": "clear"
+   },
+   {
+    "route_id": "G",
+    "checked_at": "2025-08-02T20:00",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "live",
+  "occupancy_ratio": 1.005,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.04,
+  "manual_recount_present": true,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 0.99,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.095,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "live",
+  "occupancy_ratio": 0.93,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.04,
+  "manual_recount_present": true,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 1.06,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.04,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "restrict_entry",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "verified_exceedance": "The device is fault_logged, so the recount of 804 is the verified figure. The variation is pending, so the effective limit is the base of 800, and 804 is only 4 over. This is a narrow margin.",
+  "disposition": "The event is live with a verified count above the base limit, a pending variation and unconfirmed exits. Pausing admissions is likely, but the 4-person margin leaves some doubt.",
+  "discrepancy_source": "Issued 792 is under the effective 800, so no ticketing source is evident. Ticketing used the pending 900, but this did not cause over-issue.",
+  "steward_shortfall": "19 of 21 signed in is 9.5% short, just under the 10% boundary, so level 1 and level 2 are both defensible.",
+  "unconfirmed_exits": "Route C has no entry, D has a null checked_at, E is obstructed with no later clear, and F was checked after doors. G was cleared at 20:00, exactly at doors, which is not before them. That is 5 routes, or 4 if G is counted."
+ },
+ "request": "rec-F435-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013993
+}

@@ -1,0 +1,175 @@
+{
+ "id": "F416-0027",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "ST-07",
+   "date": "2025-04-19",
+   "start": "09:00",
+   "end": "17:00",
+   "signoff": {
+    "guard": "G1",
+    "time": "17:10"
+   }
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-02-01",
+    "home": "ST-07"
+   },
+   {
+    "id": "G2",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-05-01",
+    "home": "ST-07"
+   },
+   {
+    "id": "G5",
+    "on": "09:00",
+    "off": "11:00",
+    "qual_expiry": "2026-01-10",
+    "home": "ST-07"
+   }
+  ],
+  "conditions": [
+   {
+    "time": "12:00",
+    "wave_m": 2.1,
+    "wind_kt": 26,
+    "water_c": 12,
+    "rip_risk": "moderate",
+    "flag": "yellow",
+    "bathing_zone_moved": false
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-04-19",
+    "time": "11:12",
+    "type": "water_rescue",
+    "responders": [
+     "G2",
+     "G5"
+    ],
+    "outcome": "released",
+    "aed_used": false
+   },
+   {
+    "id": "I2",
+    "date": "2025-04-19",
+    "time": "14:30",
+    "type": "medical",
+    "responders": [
+     "G1"
+    ],
+    "outcome": "conveyed",
+    "aed_used": false,
+    "ambulance_ref": "AMB-912",
+    "referral_ref": "CL-55"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_board",
+    "unit": "RB-1",
+    "last_check": "2025-04-18",
+    "out_from": "13:00",
+    "out_to": "14:02",
+    "substitute_unit_id": null
+   }
+  ],
+  "handover": {
+   "rescues": 1,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "advisories": 4,
+   "beach_users_est": 3800,
+   "check_sheet_ref": "CS-0419-07"
+  }
+ },
+ "factors": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "responder_off_roster",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "conveyed_with_referral_ref",
+  "kit_gap_band": "around_62_min",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "factors_sampled": {
+  "rescue_count": 0,
+  "rescue_cover_shortfall": "responder_off_roster",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "referred",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 112,
+ "deciding": {
+  "two_guard_cover": "Rescue I1 at 11:12 lists G5, whose roster off time is 11:00, so only one rostered responder was present.",
+  "totals_reconcile": "Rescues 1, first_aid 0 and kit_defects 1 match the itemised entries, and the incident dates equal the shift date.",
+  "next_step": "The log is complete and signed with no missing item, but the off-roster responder and the kit outage could argue for a corrective order, so some doubt remains.",
+  "outcome_severity": "I2 outcome is conveyed with an ambulance_ref, but a referral_ref is also logged, so a referral reading is possible.",
+  "kit_outage": "RB-1 out 13:00 to 14:02 is 62 minutes with no substitute, just over the 60-minute boundary."
+ },
+ "request": "rec-F416-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.017717
+}

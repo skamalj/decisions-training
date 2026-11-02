@@ -1,0 +1,137 @@
+{
+ "id": "F406-0011",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-1041",
+   "gallery_code": "G4A",
+   "session_date": "2025-03-08",
+   "certified_limit": 100
+  },
+  "counts": {
+   "gate": "G4A-E",
+   "intervals": [
+    {
+     "start": "11:00",
+     "occupancy": 104
+    },
+    {
+     "start": "11:15",
+     "occupancy": 119
+    },
+    {
+     "start": "11:30",
+     "occupancy": 112
+    }
+   ],
+   "manual_tally_peak": 122
+  },
+  "variations": [
+   {
+    "ref": "V-21",
+    "gallery_code": "G4A",
+    "valid_from": "2025-03-08",
+    "valid_to": "2025-03-09",
+    "uplift_to": 120,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "maintenance": [
+    {
+     "gate": "G4A-E",
+     "raised_at": "2025-03-08T08:10",
+     "summary": "count drift"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": "done",
+   "notes": "Busy but all fine."
+  },
+  "history": {
+   "overages_30d": 0
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.99,
+  "intervals_over_limit": 0,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.89,
+  "intervals_over_limit": 7,
+  "section_mismatch": "gallery_code_mismatch",
+  "variation_present": true,
+  "variation_scope": "approval_pending",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_counter_data",
+   "second": "restrict_admissions",
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "variation_applies": "V-21 matches gallery G4A, is approved, and its window covers the session date (valid_to is the next day). A reader may still doubt it for lack of an explicit scope check.",
+  "fault_explains_overage": "The maintenance ticket is for gate G4A-E, the gate used in counts, raised 08:10 on the session date before the session.",
+  "next_step": "The counter peak (119) and the steward tally (122) sit either side of the 120 uplift, and the counter gate has a drift ticket. Requesting the raw counter data is slightly favoured over restricting admissions.",
+  "peak_excess": "The interval peak is 119 against an uplift of 120 (level 1), but the tally peak of 122 is just above it (level 2).",
+  "intervals_over": "No interval exceeds 120; the maximum is 119."
+ },
+ "request": "rec-F406-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012853
+}

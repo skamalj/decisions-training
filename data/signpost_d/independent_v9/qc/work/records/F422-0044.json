@@ -1,0 +1,152 @@
+{
+ "id": "F422-0044",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "delivered_at": "2025-03-03T08:00",
+   "received_at": "2025-04-07T09:00",
+   "review_date": "2025-05-20",
+   "lines": [
+    {
+     "gtin": "G4",
+     "qty_claimed": 48
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "lines": [
+    {
+     "gtin": "G4",
+     "batch": "LT4471",
+     "expiry": "2027-10-31",
+     "qty_dispatched": 48
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G4",
+     "batch": "LT4471B",
+     "expiry": "2027-10-31",
+     "qty_counted": 48,
+     "packs_damaged": 0,
+     "seals_intact": 48
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "active"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "cold_2_8",
+   "labelled_range": "2-8C",
+   "logger_id": "LG-5",
+   "logger_start": "2025-03-03T14:00",
+   "logger_end": "2025-04-07T09:00",
+   "min_c": 2.4,
+   "max_c": 9.6,
+   "minutes_out_of_range": 357,
+   "stability_ref": {
+    "max_hours": 8,
+    "max_c": 12
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-01-15",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "hold_limit_days": 30,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-05-20"
+   },
+   "max_days_out_of_control": 45,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 357,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "near_match_suffix",
+  "count_discrepancy_packs": 0,
+  "damaged_pack_fraction": 0.0,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 35,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 0,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 29
+ },
+ "factors_sampled": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 357,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 0,
+  "damaged_pack_fraction": 0.29,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 35,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 24,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 29
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 60,
+ "deciding": {
+  "storage_maintained": "Excursion of 357 minutes at 9.6C is within the 8-hour, 12C allowance, but the logger starts 6 hours after delivery, leaving a gap.",
+  "batch_traceable": "Counted batch LT4471B versus dispatched LT4471 is a one-character suffix difference that could be a typo or a different batch.",
+  "next_step": "The customer storage declaration is missing (declaration_received false, audit lapsed); that one document should be obtained before deciding.",
+  "resaleable_share": "All 48 packs are undamaged with intact seals and 29 months of shelf life, so all appear fit, subject to the open batch and storage doubts.",
+  "disposition_urgency": "Extended limit 2025-05-20 equals the review date: zero days remain, on the line between urgent and overdue."
+ },
+ "request": "rec-F422-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013349
+}

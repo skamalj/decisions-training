@@ -1,0 +1,159 @@
+{
+ "id": "F413-0019",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "warehouse",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "zones": [
+    {
+     "z": "bay",
+     "toxic_bait_permitted": true
+    }
+   ]
+  },
+  "visit": {
+   "type": "routine",
+   "tech_licence_expiry": "2026-06-30",
+   "start": "2025-03-18T13:00",
+   "end": "2025-03-18T14:05",
+   "client_signoff": "2025-03-18"
+  },
+  "treatments": [
+   {
+    "product": "RB-2",
+    "zone": "bay",
+    "area_m2": 20,
+    "qty_applied": 480,
+    "unit": "g",
+    "label_max_per_m2": 40,
+    "batch": "B771"
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product": "RB-2",
+    "qty": 0.5,
+    "unit": "kg"
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "activity": true
+   },
+   {
+    "id": "S2",
+    "activity": true
+   },
+   {
+    "id": "S3",
+    "activity": true
+   },
+   {
+    "id": "S4",
+    "activity": false
+   },
+   {
+    "id": "S5",
+    "activity": false
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 1,
+   "actions": []
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 0.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "warehouse"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "stable",
+  "previous_visit_available": true,
+  "dose_overage_pct": 51.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "warehouse"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 75,
+ "deciding": {
+  "usage_reconciled": "0.5 kg withdrawn against 480 g applied is a unit-conversion artefact; no return is logged.",
+  "activity_increased": "3 active stations against prev_active_stations 1: a rise of two.",
+  "next_step": "All five stations checked, dates in order, sign-off present, 24 g/m2 against a 40 g/m2 limit, a permitted zone and a valid licence: file and release.",
+  "breach_severity": "No record gap and the dose is within label in a toxic-bait-permitted zone, with the 20 g gap explained by units.",
+  "parties_needed": "Nothing needs resolving; at most the reviewer files it alone."
+ },
+ "request": "rec-F413-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010903
+}

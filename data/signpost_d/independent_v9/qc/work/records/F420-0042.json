@@ -1,0 +1,164 @@
+{
+ "id": "F420-0042",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PMC55012",
+   "serial": "55012",
+   "flight": "XX204",
+   "dest": "LHR",
+   "position": "11L",
+   "contour_max_cm": 163,
+   "tare_kg": 120,
+   "planned_gross_kg": 2000,
+   "straps_required": 6,
+   "cutoff_utc": "2024-06-03T14:00Z"
+  },
+  "manifest_lines": [
+   {
+    "awb": "406-11820",
+    "dest": "LHR",
+    "pcs": 10,
+    "weight_kg": 900,
+    "shc": [
+     "GEN"
+    ]
+   },
+   {
+    "awb": "406-11831",
+    "dest": "LHR",
+    "pcs": 6,
+    "weight_kg": 600,
+    "shc": [
+     "GEN"
+    ]
+   },
+   {
+    "awb": "406-11847",
+    "dest": "LHR",
+    "pcs": 8,
+    "weight_kg": 380,
+    "shc": [
+     "GEN"
+    ]
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2024-06-03T08:20Z",
+   "scale_id": "S4",
+   "scale_gross_kg": 2101,
+   "max_height_cm": 168,
+   "pcs_counted": {
+    "406-11820": 10,
+    "406-11831": 3,
+    "406-11847": 8
+   },
+   "straps_fitted": 6,
+   "net_fitted": true,
+   "uld_serial_scanned": "55012"
+  },
+  "dg_notoc": null,
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "406-11831",
+     "pcs_this_flight": 3
+    }
+   ],
+   "contour_waivers": [
+    {
+     "uld": "PMC55012",
+     "position": "12R",
+     "max_cm": 175
+    }
+   ]
+  },
+  "checks_log": {
+   "scale_cal_due": "2024-05-20",
+   "reweigh": null,
+   "rebuilds": [
+    {
+     "at": "2024-06-02T21:00Z"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 5.05,
+  "piece_count_gap": 3,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "over_at_5cm_boundary",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": true,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 352,
+  "prior_rebuilds": 1
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 1.4,
+  "piece_count_gap": 3,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "over_more_than_5cm",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": true,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 352,
+  "prior_rebuilds": 1
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "rebuild",
+   "second": "hold",
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "clear",
+   "target": "physical_build",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "weight_deviation": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 200,
+ "deciding": {
+  "pieces_reconciled": "Line 406-11831 counted 3 of 6, matched by a part shipment pcs_this_flight 3; other lines match.",
+  "disposition": "Height 168 cm against a 163 cm limit with no matching waiver (the waiver is for position 12R) points to rebuild; the overdue scale with no reweigh leaves hold as the alternative.",
+  "worst_discrepancy": "Unwaived over-height and about 5% weight excess, with no DG and no paperwork conflict.",
+  "weight_deviation": "Scale 2101 kg against planned 2000 kg is +5.05%, right on the 5% line, and the scale's calibration is overdue with no reweigh.",
+  "rework_extent": "Over-height is exactly 5 cm (Partial or Full boundary) and weight is about 5% (same boundary)."
+ },
+ "request": "rec-F420-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010665
+}

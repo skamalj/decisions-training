@@ -1,0 +1,125 @@
+{
+ "id": "F407-0035",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "P-5516",
+   "received_at": "2025-09-08T07:45",
+   "channel": "own_inspector",
+   "photo_ref": null,
+   "linked_reports": [
+    "P-5490",
+    "P-5493",
+    "P-5497",
+    "P-5502",
+    "P-5508",
+    "P-5511"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "local_access",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspector": "I-07",
+   "inspected_at": "2025-09-08",
+   "depth_mm": 40,
+   "width_mm": 1268.45,
+   "offset_m": 4
+  },
+  "works_history": [
+   {
+    "job": "J-1204",
+    "done": "2024-03-05",
+    "offset_m": 6,
+    "guarantee_end": "2025-03-05"
+   }
+  ],
+  "programme": {
+   "schemes": [],
+   "temp_measures": []
+  },
+  "current_order": null
+ },
+ "factors": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "at_threshold",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "same_spot_guarantee_expired",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 6,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 1268.45,
+  "photo_attached": false
+ },
+ "factors_sampled": {
+  "road_category": "local_access",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": false,
+  "duplicate_count": 6,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 1268.45,
+  "photo_attached": false
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "meets_threshold": "depth_mm 40 equals intervention_depth_mm 40; at the boundary, so it can be read as met or marginal.",
+  "repeat_failure": "J-1204 offset_m 6 is within ten metres of the defect and completed, though its guarantee ended 2025-03-05.",
+  "next_step": "Depth only at the threshold, no claim, no order, no scheme; closure favoured, though the old repair gives some pause.",
+  "staff_effort": "Six linked reports to close and a possible order versus a quick close; one hour or several is plausible.",
+  "response_timescale": "Depth does not exceed the threshold and there is no claim or hazard flag, so no urgent repair is required."
+ },
+ "request": "rec-F407-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00779
+}

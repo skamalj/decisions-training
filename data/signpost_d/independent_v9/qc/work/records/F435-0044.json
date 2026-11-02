@@ -1,0 +1,157 @@
+{
+ "id": "F435-0044",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E418",
+   "zone_id": "S6",
+   "zone_type": "seated_tier",
+   "doors_open": "2025-07-02T19:30",
+   "check_filed_at": "2025-07-02T21:00",
+   "phase": "live",
+   "note": "Crowd crush reported at stair 3, admissions continuing."
+  },
+  "licence": {
+   "base_limit": 600,
+   "variation": {
+    "ref": "V2",
+    "new_limit": 700,
+    "status": "pending",
+    "approved_on": null
+   },
+   "stewards_required": 20,
+   "exit_routes": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 600,
+   "issued": 582,
+   "scanned_in": 570
+  },
+  "ingress": {
+   "device_status": "ok",
+   "raw_peak": 498,
+   "manual_recount": null
+  },
+  "stewarding": {
+   "rostered": 19,
+   "signed_in": 18,
+   "relief": {
+    "called_at": "2025-07-02T20:10",
+    "eta_min": 15
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "a",
+    "checked_at": "2025-07-02T18:40",
+    "status": "clear"
+   },
+   {
+    "route_id": "b",
+    "checked_at": "2025-07-02T18:45",
+    "status": "clear"
+   },
+   {
+    "route_id": "c",
+    "checked_at": "2025-07-02T18:50",
+    "status": "clear"
+   },
+   {
+    "route_id": "d",
+    "checked_at": "2025-07-02T18:55",
+    "status": "clear"
+   },
+   {
+    "route_id": "e",
+    "checked_at": "2025-07-02T19:30",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "seated_tier",
+  "event_phase": "live",
+  "occupancy_ratio": 0.83,
+  "counter_status": "ok",
+  "counter_inflation": 0.06,
+  "manual_recount_present": false,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 0.97,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.1,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "seated_tier",
+  "event_phase": "live",
+  "occupancy_ratio": 0.83,
+  "counter_status": "ok",
+  "counter_inflation": 0.06,
+  "manual_recount_present": false,
+  "capacity_variation": "pending",
+  "tickets_issued_ratio": 1.04,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.27,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 3,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "restrict_entry",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "verified_exceedance": "The device is ok, so raw_peak 498 is verified. The variation is pending, so the limit is the base 600. Occupancy is well under it, though the live crush note leaves a little doubt.",
+  "disposition": "The event is live and the note reports a crowd crush at stair 3 with admissions continuing, so admissions should be paused even though counts are under the limit.",
+  "discrepancy_source": "Issued 582, limit used 600 and peak 498 all sit within the effective 600, and the counter is ok.",
+  "steward_shortfall": "18 signed in against 20 required is exactly 10% short, on the line between slight and marked.",
+  "unconfirmed_exits": "Routes a to d were clear before doors. Route e was checked clear at 19:30, exactly doors time, so the count is 0 or 1."
+ },
+ "request": "rec-F435-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015789
+}

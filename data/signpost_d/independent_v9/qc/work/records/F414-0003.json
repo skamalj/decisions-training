@@ -1,0 +1,170 @@
+{
+ "id": "F414-0003",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "CF-0933",
+   "equip_type": "climbing_frame",
+   "crit_fall_height_m": 2.5,
+   "surf_type": "bark",
+   "variance_ref": {
+    "id": "V12",
+    "expires": "2026-03-01"
+   }
+  },
+  "inspection": {
+   "insp_date": "2024-08-05",
+   "insp_grade": "routine_visual",
+   "fall_height_m": 2.5,
+   "surf_type_found": "bark",
+   "surf_depth_mm": 296,
+   "surf_req_table": [
+    {
+     "band": "<=3.0",
+     "type": "bark",
+     "min_depth_mm": 300
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "finger",
+     "opening_id": "O1",
+     "result": "fail"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "RW2",
+     "component_id": "C5",
+     "injury_mech": "serious"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W55",
+    "asset_id": "CF-0933",
+    "component_id": "C5",
+    "defect_ref": "D31",
+    "status": "closed",
+    "closed_date": "2024-08-03",
+    "temp_measure": {
+     "type": "taped_off",
+     "date": "2024-07-20"
+    }
+   },
+   {
+    "wo_id": "W56",
+    "asset_id": "CF-0933",
+    "component_id": "C8",
+    "defect_ref": "D32",
+    "status": "closed",
+    "closed_date": "2024-07-28"
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 1
+  },
+  "history": [
+   {
+    "date": "2024-07-10",
+    "defect_refs": [
+     "D31",
+     "D32"
+    ],
+    "components": [
+     {
+      "component_id": "C5",
+      "result": "fail"
+     },
+     {
+      "component_id": "C3",
+      "result": "fail"
+     }
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": -4.0,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 2,
+  "work_orders_closed_fraction": 1.0,
+  "temporary_measure_in_place": true,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "medium",
+  "incident_reports_90d": 1
+ },
+ "factors_sampled": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": 6.37,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 2,
+  "work_orders_closed_fraction": 0.94,
+  "temporary_measure_in_place": true,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "medium",
+  "incident_reports_90d": 1
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "contested",
+   "target": "sign_off",
+   "second": "hold",
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (head_neck_entrapment_fail = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 100,
+ "deciding": {
+  "prior_defects_cleared": "No follow-up check is recorded, the C5 repair was closed after the previous inspection and still appears as a finding, and D32 is closed against C8 while the failed component was C3.",
+  "surfacing_adequate": "Depth 296 mm against a 300 mm minimum, just under the requirement; variance V12 is current but does not state it covers depth.",
+  "asset_disposition": "The C5 order is closed (sign off), but no follow-up check confirms the repair of the serious finding on C5 (hold).",
+  "remedial_progress": "Both raised work orders, W55 and W56, are closed.",
+  "hazard_severity": "Finding RW2 on C5 is coded serious, but W55 is closed with a temporary measure beforehand, so minor-injury level 2 stays plausible; the finger-probe fail is a decoy."
+ },
+ "request": "rec-F414-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011782
+}

@@ -1,0 +1,132 @@
+{
+ "id": "F431-0015",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM-33920",
+   "last_verified_date": "2020-09-01",
+   "seal_state": null,
+   "seal_checked_date": null
+  },
+  "period_read": {
+   "read_date": "2024-02-28",
+   "reg_kwh": 3512,
+   "src_code": "CUS",
+   "photo_ref": "IMG-58"
+  },
+  "history": [
+   {
+    "date": "2024-01-28",
+    "reg_kwh": 3000,
+    "src_code": "AMR",
+    "same_period_ly_kwh": 600
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_COMMS"
+   ],
+   "flow_temp_c": 55,
+   "return_temp_c": 52,
+   "battery_pct": 18
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 410,
+   "hdd_prior_year": 500,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "closed",
+     "date": "2022-06-10"
+    }
+   ],
+   "dispute_open": false,
+   "tariff_code": "RES-B"
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.04,
+  "occupancy_change": false,
+  "degree_day_ratio": 0.82,
+  "diagnostic_error_count": 1,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": true,
+  "seal_status": "not_recorded",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "duplicate_timestamp",
+  "missing_section": "previous_read_null",
+  "consumption_ratio": 1.04,
+  "occupancy_change": true,
+  "degree_day_ratio": 0.82,
+  "diagnostic_error_count": 3,
+  "meter_works_order": true,
+  "consecutive_estimates": 4,
+  "delta_t_implausible": true,
+  "seal_status": "not_recorded",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 57,
+ "deciding": {
+  "meter_fault": "Flow/return 55/52 gives a narrow 3 K delta-T and the seal state is not recorded, but the only error is a lone E_COMMS and consumption is normal.",
+  "billable_actual": "Customer read with photo, dated after the previous AMR read, and consumption is in line with expectation; the unrecorded seal leaves slight doubt.",
+  "next_step": "In-sequence photo-backed read with consumption close to expected can be released.",
+  "staff_effort": "A quick release check is enough; the narrow delta-T might warrant a short look.",
+  "consumption_deviation": "512 kWh against expected 600 x 410/500 = 492 is about 4% over, far under 15%."
+ },
+ "request": "rec-F431-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010463
+}

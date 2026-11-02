@@ -1,0 +1,133 @@
+{
+ "id": "F430-0035",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "C",
+     "normal_band": [
+      40,
+      75
+     ],
+     "alarm_limit": 90,
+     "customers_fed": 87,
+     "partner_id": "T2"
+    }
+   ]
+  },
+  "round": {
+   "scheduled_assets": [
+    "T1",
+    "CB1"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 167,
+    "unit": "F"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "T1",
+    "photo_ref": "IMG3",
+    "note": "Oil temp running hot."
+   }
+  ],
+  "history": {
+   "previous_round": {
+    "oil_temp": 160,
+    "unit": "F"
+   },
+   "load_events": [
+    "T2 load transferred to T1, 08:00-18:00"
+   ]
+  },
+  "network": {
+   "partner_status": "in_service"
+  }
+ },
+ "factors": {
+  "worst_reading_band": "near upper normal limit",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 87,
+  "trivial_discrepancies": 1,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "normal",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": false,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": true,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "worsening",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 17169,
+  "trivial_discrepancies": 1,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "follow_up": {
+   "clarity": "leaning",
+   "target": "work_order",
+   "second": null,
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 82,
+ "deciding": {
+  "defect_corroborated": "Hot note matches 167 F, about 75 C, at the band edge, which is modest support.",
+  "benign_explanation": "Load event moving T2 load onto T1 covers the round window.",
+  "follow_up": "Temperature rose from 160 F, so planned work is warranted despite the transfer; CB1 reading missing.",
+  "limit_deviation": "167 F is about 75 C against a 75 C band top, so it is borderline.",
+  "supply_exposure": "87 customers fed; partner T2 in service but it also carries the transferred load."
+ },
+ "request": "rec-F430-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008903
+}

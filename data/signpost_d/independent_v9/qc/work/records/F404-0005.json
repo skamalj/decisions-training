@@ -1,0 +1,147 @@
+{
+ "id": "F404-0005",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "P5",
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty",
+   "places": 30
+  },
+  "children": {
+   "booked": 22,
+   "slots": [
+    {
+     "from": "11:00",
+     "to": "11:29",
+     "signed_in": 25
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S31",
+    "counts": true
+   },
+   {
+    "id": "S32",
+    "counts": true
+   },
+   {
+    "id": "S33",
+    "counts": true
+   },
+   {
+    "id": "S34",
+    "counts": true
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S31",
+    "in": "08:00",
+    "out": "16:00"
+   },
+   {
+    "id": "S32",
+    "in": "08:00",
+    "out": "16:00"
+   },
+   {
+    "id": "S34",
+    "in": "08:05",
+    "out": "16:00",
+    "check_status": "pending"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F6",
+    "room": "P5",
+    "from": "11:00",
+    "to": "11:29",
+    "countersigned_by": null
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 3
+  }
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 25,
+  "staff_signin_variance": "absent",
+  "attendance_overrun": 3,
+  "shortfall_minutes": 29,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 3
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 25,
+  "staff_signin_variance": "absent",
+  "attendance_overrun": 3,
+  "shortfall_minutes": 29,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 3
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "escalate_notify",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "child_overrun",
+   "second": null,
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "below_ratio": "25 children need 4 staff at 1:8; S33 is absent and S34 is pending, leaving two eligible staff. The only cover entry F6 is unsigned.",
+  "disposition": "25 children against two eligible adults (capacity 16) is a critical gap, so it is referred to the safeguarding lead despite being under sixty minutes.",
+  "primary_cause": "Children are 25 against 22 booked, but staff are also below rota (S33 absent, S34 pending), so staff shortfall fits better than the planned child_overrun lean.",
+  "shortfall_duration": "The gap is 11:00-11:29, 29 minutes (level 2); the plan's level 3 is not supported by the times.",
+  "breach_severity": "Two eligible staff cover 16 of 25 children, leaving 9 beyond cover; the unsigned floater F6 would reduce this to 1 if counted."
+ },
+ "request": "rec-F404-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011484
+}

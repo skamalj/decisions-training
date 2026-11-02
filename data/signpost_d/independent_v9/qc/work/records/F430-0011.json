@@ -1,0 +1,150 @@
+{
+ "id": "F430-0011",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S1",
+   "assets": [
+    {
+     "id": "T1",
+     "param": "oil_temp",
+     "unit": "C",
+     "normal_band": [
+      40,
+      85
+     ],
+     "alarm": 95,
+     "trip": 105,
+     "customers_fed": 84,
+     "partner_id": "T2"
+    }
+   ]
+  },
+  "round": {
+   "date": "2025-03-12",
+   "scheduled_assets": [
+    "T1",
+    "CB1",
+    "B1"
+   ],
+   "inspector_note": "Burning smell near panel."
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 85.4,
+    "unit": "C"
+   }
+  ],
+  "defects": [
+   {
+    "defect_id": "D1",
+    "asset_id": "T1",
+    "photo_ref": "P1",
+    "note": "Oil temperature slightly high."
+   }
+  ],
+  "history": {
+   "previous_round": [
+    {
+     "asset_id": "T1",
+     "value": 88
+    }
+   ],
+   "permits": [
+    {
+     "asset_id": "T2",
+     "valid_to": "2025-03-10"
+    }
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "T2": "in_service"
+   },
+   "outage_plan": [
+    {
+     "asset_id": "T2",
+     "from": "2025-03-13"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "improving",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 84,
+  "trivial_discrepancies": 4,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "improving",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 7008,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "benign_explanation": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "follow_up": {
+   "clarity": "balanced",
+   "target": "urgent_attendance",
+   "second": "hold_return",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "defect_corroborated": "Note says oil temperature slightly high; reading 85.4 is only just over the 85 band edge and below the prior 88, so support is thin.",
+  "benign_explanation": "The only permit is on T2, not T1, and ended 2025-03-10 before the round date; nothing documented explains the T1 reading.",
+  "follow_up": "Unsupported burning-smell note, and two scheduled assets (CB1, B1) have no readings; urgent attendance versus return to the inspector is balanced.",
+  "limit_deviation": "85.4 against a normal band top of 85 and an alarm of 95; it sits on the boundary between level 0 and level 1.",
+  "supply_exposure": "T1 feeds 84 customers; partner T2 is in service on round date but its outage starts 2025-03-13, so exposure is level 1 or 0."
+ },
+ "request": "rec-F430-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010711
+}

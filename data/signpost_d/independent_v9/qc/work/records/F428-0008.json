@@ -1,0 +1,130 @@
+{
+ "id": "F428-0008",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "FL-31",
+   "gate_type": "flap",
+   "rated_closure_s": 60,
+   "seal_type": "J_bulb",
+   "clear_width": 1.8,
+   "clear_width_unit": "m"
+  },
+  "inspection": {
+   "asset_id": "FL-31",
+   "insp_date": "2025-05-06",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-02-10",
+    "closure_s": 78,
+    "leakage_l_min": 3,
+    "leakage_limit_l_min": 8,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D2",
+    "component": "hinge",
+    "grade": 1,
+    "status": "open",
+    "first_seen": "2025-01-20"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W41",
+     "component": "hinge",
+     "defect_code": "D2",
+     "grade_raised": 3,
+     "status": "in_progress",
+     "rated_closure_s": 62,
+     "raised": "2025-03-01",
+     "completed": null,
+     "retest_insp_id": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.3,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 2,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "in_progress",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 42,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "flap",
+  "closure_time_ratio": 0.74,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 2,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "in_progress",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 42,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "raise_repair",
+   "second": "escalate_engineer",
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "closure_test_valid": "closure_s 78 exceeds rated_closure_s 60, and the test (2025-02-10) predates the in-progress hinge work, so it is not within rated time despite result 'pass'.",
+  "next_step": "Late closure with a repair already in progress suggests raising or progressing repair, but the late closure could justify engineer referral.",
+  "defect_class": "The only open defect is grade 1, so no open defect above grade 1 exists.",
+  "section_discrepancies": "D2 grade 1 vs W41 grade_raised 3 is a clear mismatch; rated_closure_s 60 vs 62 in the work order is a small difference that may or may not count.",
+  "flood_risk": "closure_s 78 is later than rated 60, which places the gate at High; no grade 4 defect or failure to close is shown."
+ },
+ "request": "rec-F428-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009068
+}

@@ -1,0 +1,144 @@
+{
+ "id": "F430-0002",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "SS-207",
+   "assets": [
+    {
+     "id": "CB2",
+     "unit": "bar",
+     "normal_band": [
+      6.0,
+      7.0
+     ],
+     "alarm_limit": 5.5,
+     "trip_limit": 5.0,
+     "partner_id": "CB3",
+     "customers_fed": 795
+    }
+   ]
+  },
+  "round": {
+   "id": "rd-0832",
+   "date": "2024-06-03",
+   "scheduled_assets": [
+    "CB2"
+   ],
+   "inspector_note": "Gauge a bit low, otherwise OK."
+  },
+  "readings": [
+   {
+    "asset_id": "CB2",
+    "param": "sf6_pressure",
+    "value": 5.6,
+    "unit": "bar",
+    "timestamp": "2024-06-03T00:00:00"
+   }
+  ],
+  "defects": [
+   {
+    "defect_id": "D1",
+    "asset_id": "CB2",
+    "category": "sf6",
+    "photo_ref": "IMG-4410",
+    "note": "SF6 pressure slightly low on gauge."
+   }
+  ],
+  "history": {
+   "previous_round": [
+    {
+     "asset_id": "CB2",
+     "param": "sf6_pressure",
+     "value": 5.6
+    }
+   ],
+   "open_work_orders": [],
+   "permits": []
+  },
+  "network": {
+   "outage_plan": [],
+   "partner_status": {
+    "CB3": "in_service"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "none",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 795,
+  "trivial_discrepancies": 4,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "recent_top_up",
+  "benign_cause_covers": true,
+  "defect_claim": "none_logged",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 795,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "follow_up": {
+   "clarity": "clear",
+   "target": "file_closed",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 77,
+ "deciding": {
+  "defect_corroborated": "Defect note says SF6 slightly low and reading 5.6 bar is below the 6.0 band, but it is mild.",
+  "benign_explanation": "No permit, work order or load event documents the low SF6 reading.",
+  "follow_up": "Stable at 5.6 bar versus last round, photo present, all assets read; accept as filed.",
+  "limit_deviation": "5.6 bar is below the band but just above the 5.5 alarm limit, so level 1 or 2 near the boundary.",
+  "supply_exposure": "CB2 feeds 795 customers, and no confirmed in-service partner info; count sits near the 100-999 range's upper end relative to level 1 doubt."
+ },
+ "request": "rec-F430-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006385
+}

@@ -1,0 +1,169 @@
+{
+ "id": "F432-0013",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E8",
+   "risk_cat": 3,
+   "roster": [
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+   ],
+   "temp_range_c": [
+    18,
+    28
+   ],
+   "doors": [
+    "D1",
+    "D2"
+   ]
+  },
+  "shift": {
+   "end": "18:00",
+   "opening_count": 5,
+   "closing_count": 4
+  },
+  "movements": [],
+  "feeding": {
+   "items": [
+    {
+     "sheet_g": 3000,
+     "offered_g": 3000,
+     "leftover_g": 2.3,
+     "unit": "kg"
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched_time": "08:00",
+    "logged": true,
+    "entry_time": "08:02",
+    "temp_c": 34
+   },
+   {
+    "sched_time": "10:00",
+    "logged": false
+   },
+   {
+    "sched_time": "12:00",
+    "logged": false
+   },
+   {
+    "sched_time": "14:00",
+    "logged": false,
+    "cctv_reviewed": true,
+    "reviewer_id": "V2"
+   },
+   {
+    "sched_time": "16:00",
+    "logged": false
+   },
+   {
+    "sched_time": "17:30",
+    "logged": true,
+    "entry_time": "17:36",
+    "temp_c": 35,
+    "behaviour": [
+     "STER",
+     "LAME"
+    ]
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "D1",
+     "time": "17:52"
+    },
+    {
+     "door": "D2",
+     "time": "17:34"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "count_discrepancy": "unexplained_off_by_one",
+  "barrier_fault": "none",
+  "lock_check_timing": "one_door_just_before_last_round",
+  "intake_ratio": 0.23,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 4,
+  "cctv_cover": true,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": false,
+  "field_mismatch": "unit_kg_vs_g",
+  "behaviour_codes": 2,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "unexplained_off_by_one",
+  "barrier_fault": "none",
+  "lock_check_timing": "partial_doors_only",
+  "intake_ratio": 0.13,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 1,
+  "cctv_cover": true,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": false,
+  "field_mismatch": "unit_kg_vs_g",
+  "behaviour_codes": 2,
+  "vet_case_open": false,
+  "missing_section": "feeding_absent",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "secure_at_close": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "count_reconciles": "Opening 5, closing 4, and movements is an empty list, so there is no movement to explain the loss.",
+  "secure_at_close": "D1 was checked at 17:52, after the last round entry at 17:36, but D2 at 17:34 is 2 minutes before it.",
+  "next_step": "An unexplained missing animal, sustained 34-35 C against a 28 C ceiling and codes STER and LAME call for a duty vet or curator decision.",
+  "intake_shortfall": "Leftover is in kg (2.3 kg is 2300 g), so intake is about 700/3000, roughly 23%, just under the 25% boundary.",
+  "missed_rounds": "Four rounds are logged false; one has CCTV review but no entry, so some readers count three."
+ },
+ "request": "rec-F432-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013783
+}

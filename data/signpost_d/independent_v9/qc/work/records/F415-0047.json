@@ -1,0 +1,147 @@
+{
+ "id": "F415-0047",
+ "family": "F415",
+ "state": {
+  "site": {
+   "hours": "08:00-20:00",
+   "closures": [
+    {
+     "from": "2025-05-14T12:00",
+     "to": "2025-05-14T20:00",
+     "reason": "deep clean",
+     "approved_by": "OFF-09"
+    }
+   ]
+  },
+  "shift": {
+   "start": "2025-05-14T08:00",
+   "sched_slots": [
+    "08:00",
+    "11:30",
+    "15:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "start": "2025-05-14T07:50",
+    "end": "2025-05-14T08:25",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "pans": true
+    },
+    "photo_ref": "P55"
+   },
+   {
+    "slot": "15:00",
+    "start": "2025-05-14T14:55",
+    "end": "2025-05-14T15:20",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "pans": true
+    },
+    "photo_ref": "P56"
+   }
+  ],
+  "faults": [
+   {
+    "type": "spillage",
+    "reported_at": "2025-05-14T12:10",
+    "remedied_at": null
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2025-05-14T15:22",
+   "comment": "routine shift"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 3,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "spillage",
+  "fault_open_minutes": 441.07,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "routine",
+  "prior_defaults_90d": 0
+ },
+ "factors_sampled": {
+  "scheduled_slots": 3,
+  "missed_slots": "2",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "spillage",
+  "fault_open_minutes": 441.07,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "routine",
+  "prior_defaults_90d": 0
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 76,
+ "deciding": {
+  "missed_clean": "The 11:30 slot has no visit entry and the closure starts at 12:00, so it does not span the slot; doubt remains because other visits are complete.",
+  "sign_off_valid": "Supervisor signed 15:22, just after the last visit end of 15:20, but the first visit starts at 07:50, before shift start, which casts mild doubt on the timestamps.",
+  "next_step": "Visits complete with photos and checklists, the sign-off is in place and the fault fell inside an approved closure, so little is needed.",
+  "staff_effort": "Nothing outstanding; a quick check settles the log in under an hour.",
+  "fault_exposure": "Spillage reported 12:10 falls wholly within the 12:00-20:00 closure, so the block was not public while it was open."
+ },
+ "request": "rec-F415-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009797
+}

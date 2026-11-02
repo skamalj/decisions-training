@@ -1,0 +1,133 @@
+{
+ "id": "F430-0018",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S052",
+   "assets": [
+    {
+     "id": "BAT1",
+     "param": "float_v",
+     "unit": "V",
+     "normal_band": [
+      108,
+      114
+     ],
+     "alarm_limit": 105,
+     "trip_limit": 100,
+     "customers_fed": 1512,
+     "partner_id": "BAT2"
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-03-09",
+   "scheduled_assets": [
+    "BAT1"
+   ],
+   "inspector_note": "all fine on site"
+  },
+  "readings": [
+   {
+    "asset_id": "BAT1",
+    "value": 104.8,
+    "unit": "V"
+   }
+  ],
+  "defects": [
+   {
+    "id": "D3",
+    "asset_id": "BAT1",
+    "photo_ref": "P3",
+    "note": "Float voltage low."
+   }
+  ],
+  "history": {
+   "previous_round": {
+    "BAT1": 104.9
+   },
+   "load_events": []
+  },
+  "network": {
+   "partner_status": {
+    "BAT2": "in_service"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 1512,
+  "trivial_discrepancies": 3,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 1512,
+  "trivial_discrepancies": 3,
+  "near_boundary": true
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "benign_explanation": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "contested",
+   "target": "file_closed",
+   "second": "hold_return",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "defect_corroborated": "Note matches 104.8 V, but the reading is only just under the 105 alarm and inspector says all fine.",
+  "benign_explanation": "Nothing documented explains the reading; no permit, order or load event.",
+  "follow_up": "Stable, partner in service suggests filing; alarm-level reading suggests return.",
+  "limit_deviation": "104.8 V is just beyond the 105 alarm, far from the 100 trip.",
+  "supply_exposure": "1512 customers, partner BAT2 in service, so exposure is arguable."
+ },
+ "request": "rec-F430-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006034
+}

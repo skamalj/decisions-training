@@ -1,0 +1,150 @@
+{
+ "id": "F423-0005",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-70455",
+   "product": "catalogue",
+   "stock_spec": "GL-115",
+   "run_qty": 20000,
+   "overs_pct": 5.77,
+   "due_date": "2024-09-24",
+   "customer_tier": "trade",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "CP-8810",
+   "ok_sheet_no": 58,
+   "signed_at": "2024-09-17T10:40:00",
+   "customer_present": true,
+   "concession": null
+  },
+  "colour_readings": {
+   "instrument": "SPM-4",
+   "calibrated_on": "2024-07-03",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.7
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.1
+    },
+    {
+     "ink": "Y",
+     "delta_e": 2.5
+    },
+    {
+     "ink": "K",
+     "delta_e": 2.2
+    },
+    {
+     "ink": "PMS-186",
+     "delta_e": 2.9
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "units": "C-K",
+     "offset_mm": 0.08,
+     "in_image": true
+    },
+    {
+     "units": "M-K",
+     "offset_mm": 0.05,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P4",
+   "stock_loaded": "GL-115",
+   "first_production_at": "2024-09-17T10:05:00",
+   "sheets_production": 798,
+   "sheets_makeready": 240,
+   "stoppages": [
+    "11:30",
+    "13:15"
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "one_marginal_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 798,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 5.77,
+  "register_offset_mm": 0.08,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 76,
+  "customer_tier": "trade",
+  "prior_stoppages": 2
+ },
+ "factors_sampled": {
+  "colour_deviation": "multiple_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 798,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 5.77,
+  "register_offset_mm": 0.08,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 76,
+  "customer_tier": "trade",
+  "prior_stoppages": 2
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "release_run",
+   "second": "adjust_and_recheck",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 122,
+ "deciding": {
+  "colour_in_tolerance": "Only the M patch at 3.1 is over the 3.0 limit, by a small margin; the other four pass and calibration is 76 days old.",
+  "run_before_signoff": "signed_at 10:40 is after first_production_at 10:05, with 798 production sheets logged.",
+  "next_step": "The single M patch is only 0.1 over and register is fine, so release is defensible, but the over-limit patch could justify adjusting.",
+  "staff_effort": "Possible sorting or reprint work on a 20000 run could take around five days, either side of the boundary.",
+  "scrap_exposure": "798 production sheets are the most that could be suspect, below the overs allowance of about 1154."
+ },
+ "request": "rec-F423-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009693
+}

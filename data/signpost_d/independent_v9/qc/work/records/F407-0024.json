@@ -1,0 +1,134 @@
+{
+ "id": "F407-0024",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "P-4086",
+   "received_at": "2025-02-10T14:30",
+   "channel": "public_app",
+   "photo_ref": "IMG-7720",
+   "linked_reports": [
+    "P-4079"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "main_distributor",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspected_at": "2025-01-15",
+   "depth_mm": 41,
+   "width_mm": 275.65,
+   "offset_m": 8
+  },
+  "works_history": [
+   {
+    "job": "J-612",
+    "completed": "2024-09-01",
+    "offset_m": 18,
+    "guarantee_end": "2025-09-01"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "id": "S-22",
+     "start": "2025-02-24",
+     "extent_m": [
+      0,
+      50
+     ]
+    }
+   ],
+   "temp_measures": [
+    {
+     "type": "plate",
+     "offset_m": 8,
+     "expiry": "2025-03-31"
+    }
+   ]
+  },
+  "current_order": {
+   "id": "WO-905",
+   "raised": "2025-01-20",
+   "status": "awaiting_signoff",
+   "completed_items": 3,
+   "total_items": 3
+  }
+ },
+ "factors": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 1,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "completed_awaiting_signoff",
+  "defect_width_mm": 275.65,
+  "photo_attached": true
+ },
+ "factors_sampled": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "same_spot_in_guarantee",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 1,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "completed_awaiting_signoff",
+  "defect_width_mm": 275.65,
+  "photo_attached": true
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "repeat_failure": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "close_no_action",
+   "second": "request_inspection",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "meets_threshold": "Depth 41 against 40 is just above, but the inspection of 2025-01-15 predates the report of 2025-02-10, so it may not be a valid measurement of this defect.",
+  "repeat_failure": "J-612 at offset 18 m versus defect at 8 m is exactly 10 m, at the boundary, within guarantee until 2025-09-01; whether it is the same spot is open.",
+  "next_step": "WO-905 raised after the inspection is complete, 3 of 3 items, awaiting signoff, which suggests it is already repaired; the stale inspection would justify a fresh one.",
+  "staff_effort": "Signoff, verifying the repair, a guarantee check and coordination with S-22 could take 2 to 5 days or more.",
+  "response_timescale": "Depth marginally above threshold with a plate in place until 2025-03-31 and scheme S-22 starting 2025-02-24 points to routine 28-day repair."
+ },
+ "request": "rec-F407-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008718
+}

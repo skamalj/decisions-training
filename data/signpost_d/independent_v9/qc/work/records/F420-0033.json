@@ -1,0 +1,168 @@
+{
+ "id": "F420-0033",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PAG70418",
+   "serial": "70418",
+   "flight": "XY518",
+   "flight_dest": "FRA",
+   "contour_max_cm": 160,
+   "tare_kg": 110,
+   "planned_gross_kg": 1000,
+   "straps_required": 4
+  },
+  "manifest_lines": [
+   {
+    "awb": "057-30011",
+    "dest": "FRA",
+    "pcs": 12,
+    "weight_kg": 500,
+    "shc": [
+     "GEN"
+    ],
+    "un_no": null,
+    "dg_class": null
+   },
+   {
+    "awb": "057-30012",
+    "dest": "FRA",
+    "pcs": 5,
+    "weight_kg": 250,
+    "shc": [
+     "RFL"
+    ],
+    "un_no": "UN1993",
+    "dg_class": "3"
+   },
+   {
+    "awb": "057-30013",
+    "dest": "FRA",
+    "pcs": 2,
+    "weight_kg": 140,
+    "shc": [
+     "RMD"
+    ],
+    "un_no": "UN3077",
+    "dg_class": "9"
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2025-06-10T09:15Z",
+   "scale_gross_kg": 995.7,
+   "max_height_cm": 150,
+   "pcs_counted": {
+    "057-30011": 12,
+    "057-30012": 5,
+    "057-30013": 2
+   },
+   "straps_fitted": 4,
+   "net_fitted": true,
+   "uld_serial_scanned": "70418"
+  },
+  "dg_notoc": [
+   {
+    "awb": "057-30012",
+    "un_no": "UN1993",
+    "dg_class": "3",
+    "pcs": 5,
+    "position": "12L"
+   },
+   {
+    "awb": "057-30013",
+    "un_no": "UN3077",
+    "dg_class": "9",
+    "pcs": 2,
+    "position": "12L"
+   }
+  ],
+  "checks_log": {
+   "scale_cal_due": "2025-12-01"
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": -0.43,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "within_limit",
+  "contour_waiver": false,
+  "dg_state": "dg_compatible",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 85,
+  "prior_rebuilds": 0
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -0.43,
+  "piece_count_gap": -2,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "over_up_to_5cm",
+  "contour_waiver": false,
+  "dg_state": "dg_compatible",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": true,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "dest_code_differs",
+  "minutes_to_cutoff": 85,
+  "prior_rebuilds": 0
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "weight_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "rework_extent": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 92,
+ "deciding": {
+  "pieces_reconciled": "pcs_counted 12, 5 and 2 equal the manifest pcs on every line.",
+  "disposition": "Calibration is not due until 2025-12-01, the NOTOC matches, the serial and destination agree, and straps and net are complete.",
+  "worst_discrepancy": "Class 3 and class 9 are compatible and the NOTOC matches the manifest; height 150 against 160; no identifier differs.",
+  "weight_deviation": "995.7 against planned 1000 is -0.43%, within 1%.",
+  "rework_extent": "Straps 4 of 4, net fitted, height within limit, counts match; nothing physical needed."
+ },
+ "request": "rec-F420-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011153
+}

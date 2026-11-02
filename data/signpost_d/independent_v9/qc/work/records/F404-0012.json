@@ -1,0 +1,112 @@
+{
+ "id": "F404-0012",
+ "family": "F404",
+ "state": {
+  "session": {
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty"
+  },
+  "children": {
+   "booked": 9,
+   "slots": [
+    {
+     "t": "09:00",
+     "in": 11
+    }
+   ]
+  },
+  "staff_signin": [
+   {
+    "id": "S9",
+    "check": "pending"
+   }
+  ],
+  "cover_log": [
+   {
+    "room": "R2",
+    "from": "09:00",
+    "to": "10:24",
+    "by": null
+   }
+  ]
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 11,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 84,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 1
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 11,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 84,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 1
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "file_no_action",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "contested",
+   "target": "none_found",
+   "second": "child_overrun",
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (zero_eligible_adult_slot = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 26,
+ "deciding": {
+  "below_ratio": "11 children are signed in and the only signed-in staff member is pending, so 0 are eligible. The cover entry has by null, so cover is unconfirmed, which leaves some doubt.",
+  "disposition": "The cover entry from 09:00 to 10:24 is unsigned (by null) and the outcome depends on that confirmation, so the record is held pending confirmation. A plain file-with-no-action reading is not well supported.",
+  "primary_cause": "11 children against 9 booked suggests overrun, but the unsigned cover and the pending staff member also point to a staffing gap. The two readings are in genuine tension.",
+  "shortfall_duration": "The cover window of 09:00 to 10:24 is 84 minutes with no confirmed cover, which is more than 60.",
+  "breach_severity": "11 children against 0 eligible staff, with the unsigned floater cover as the only mitigation. Whether to count 2 to 3 or 4+ beyond cover depends on whether the floater is credited."
+ },
+ "request": "rec-F404-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013374
+}

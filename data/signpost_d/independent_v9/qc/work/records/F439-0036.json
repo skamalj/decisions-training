@@ -1,0 +1,125 @@
+{
+ "id": "F439-0036",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T-48213",
+   "date": "2024-11-12",
+   "cat": "B",
+   "start": "10:00",
+   "end": "10:40",
+   "conditions": "heavy rain, standing water"
+  },
+  "candidate": {
+   "ref": "C-7731",
+   "attempt": 2,
+   "id_check": null
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "junction observation",
+     "driving": 0,
+     "serious": 0,
+     "dangerous": 1
+    },
+    {
+     "item": "mirrors",
+     "driving": 2,
+     "serious": 0,
+     "dangerous": 0
+    }
+   ],
+   "driving_fault_total": 2
+  },
+  "outcome": {
+   "result": "pass",
+   "intervention": false,
+   "debrief": "given",
+   "examiner_note": "Drive was fine overall.",
+   "examiner_signoff_at": "2024-11-12T10:52"
+  },
+  "incident": null,
+  "review_trail": {
+   "upheld_complaints_12m": 2,
+   "countersigned_by": "SE-04",
+   "countersigned_at": "2024-11-13T09:10"
+  }
+ },
+ "factors": {
+  "fault_profile": "dangerous_fault",
+  "result_mismatch": true,
+  "tally_error": false,
+  "documentation_gap": "id_check_null",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": true,
+  "note_alignment": "vague",
+  "examiner_complaints_12m": 2,
+  "post_submission_edit": "no_edit"
+ },
+ "factors_sampled": {
+  "fault_profile": "dangerous_fault",
+  "result_mismatch": false,
+  "tally_error": false,
+  "documentation_gap": "id_check_null",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": true,
+  "adverse_conditions": true,
+  "note_alignment": "vague",
+  "examiner_complaints_12m": 2,
+  "post_submission_edit": "no_edit"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "report_complete": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "accept",
+   "second": "hold_query",
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "issue_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 128,
+ "deciding": {
+  "result_supported": "Result is pass but the sheet has a dangerous fault on junction observation.",
+  "report_complete": "candidate.id_check is null, so a mandatory field is missing.",
+  "disposition": "Countersigned and debrief given, so accept is plausible; but the null ID check and pass with a dangerous fault could justify a query to the examiner.",
+  "staff_effort": "One query and a result recheck might take hours, but re-verifying the ID and the pass/dangerous conflict could take days.",
+  "issue_severity": "Missing ID check is paperwork only (level 1), but the pass despite a dangerous fault could change the result (level 2)."
+ },
+ "request": "rec-F439-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004747
+}

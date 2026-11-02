@@ -1,0 +1,131 @@
+{
+ "id": "F404-0046",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "T2",
+   "date": "2024-05-14",
+   "age_band": "two_year",
+   "ratio_rule": "1:4"
+  },
+  "children": {
+   "booked": 4,
+   "slots": [
+    {
+     "t": "09:00",
+     "signed_in": 4
+    },
+    {
+     "t": "09:15",
+     "signed_in": 5
+    },
+    {
+     "t": "09:30",
+     "signed_in": 5
+    }
+   ]
+  },
+  "staff_signin": [
+   {
+    "staff_id": "S-041",
+    "time_in": "08:00",
+    "time_out": "16:00",
+    "check_status": "ok",
+    "qual_level": 3
+   },
+   {
+    "staff_id": "S017",
+    "time_in": "08:02",
+    "time_out": "09:20",
+    "check_status": "ok",
+    "qual_level": 3
+   }
+  ],
+  "cover_log": [
+   {
+    "staff_id": "F09",
+    "from": "09:20",
+    "to": "09:45",
+    "room_id": "T2",
+    "countersigned_by": "mgr"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 4
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 5,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 0,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 5,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 0,
+  "shortfall_minutes": 27,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "partial_day",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "file_no_action",
+   "second": null,
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "child_overrun",
+   "second": null,
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "below_ratio": "5 children need 2 staff; S017 leaves 09:20 but countersigned floater F09 covers 09:20-09:45, so every slot has 2.",
+  "disposition": "Ratio met in every slot once countersigned cover counts; prior breaches are history only.",
+  "primary_cause": "Signed_in 5 exceeds booked 4, but staff cover it; the only gap is the overrun with no breach, so a mild doubt remains.",
+  "shortfall_duration": "No slot lacks 2 eligible staff after the signed floater cover, so no time below ratio.",
+  "breach_severity": "No child is beyond cover in any slot once F09 is counted."
+ },
+ "request": "rec-F404-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008014
+}

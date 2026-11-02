@@ -1,0 +1,130 @@
+{
+ "id": "F417-0026",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V1",
+   "loa_m": 14.0,
+   "draught_m": 1.9,
+   "draught_src": null
+  },
+  "berth": {
+   "max_loa_m": 14.0,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 2.92,
+   "waiver_ref": null
+  },
+  "booking": {
+   "departure": "2025-07-14",
+   "next_on_berth": {
+    "arrival": "2025-07-14"
+   }
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 14.3,
+    "draught_m": null
+   },
+   "insurance_expiry": "2026-01-01",
+   "inspection_date": "2025-05-20"
+  },
+  "account": {
+   "dues_outstanding_gbp": 2564,
+   "plan_id": null
+  },
+  "history": [
+   {
+    "d": "2022-06-01",
+    "inc": 0
+   },
+   {
+    "d": "2023-06-03",
+    "inc": 1
+   },
+   {
+    "d": "2024-06-02",
+    "inc": 0
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 2.1,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 1.02,
+  "draught_source": "null",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 2564,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 11.27,
+  "berth_length_fit": "exceeds_limit",
+  "ukc_margin_m": 0.43,
+  "draught_source": "null",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 2564,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "confirm_allocation",
+   "second": "request_document",
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "clear",
+   "target": "account_arrears",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "ukc_band": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "length_fits": "Survey loa 14.3 is just over berth max_loa 14.0 but inside the 0.5 fender allowance; no waiver. Fit is defensible either way.",
+  "next_step": "Allocation is mostly coherent and insurance and inspection are in order, but the large arrears with no plan could prompt a request for a further document or figure.",
+  "primary_issue": "dues_outstanding_gbp 2564 with plan_id null; no other problem is present.",
+  "ukc_band": "Depth 2.92 minus declared draught 1.9 (survey draught null) = 1.02, right at the 1 m boundary between adequate and ample.",
+  "unresolved_count": "Only the small gap between declared loa 14.0 and surveyed 14.3 could count as a discrepancy; whether it counts is borderline."
+ },
+ "request": "rec-F417-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011897
+}

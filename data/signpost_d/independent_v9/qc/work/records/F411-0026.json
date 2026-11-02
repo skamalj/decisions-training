@@ -1,0 +1,128 @@
+{
+ "id": "F411-0026",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H2041",
+   "type": "hackney",
+   "expiry": "2025-03-31",
+   "review_date": "2025-03-10"
+  },
+  "vehicle": {
+   "reg": "KX13ABC",
+   "first_reg": "2013-04-02",
+   "odometer_km": 118250
+  },
+  "inspection": {
+   "station": "TS07",
+   "date": "2025-03-04",
+   "result_code": "P",
+   "brake_efficiency_pct": 64
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-12-01"
+   },
+   {
+    "type": "mot",
+    "expires_on": "2025-09-01"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2024-03-05",
+     "result": "P",
+     "odometer_km": 104200
+    }
+   ],
+   "replacements": [
+    {
+     "type": "instrument_cluster",
+     "date": "2024-11-02",
+     "old_km": 118400,
+     "new_km": 118100
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "none_needed",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 0,
+  "vehicle_age_years": 12
+ },
+ "factors_sampled": {
+  "worst_defect_found": "none",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": true,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 0,
+  "vehicle_age_years": 12
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "clean_pass",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 60,
+ "deciding": {
+  "odometer_consistent": "Cluster replacement is logged (old 118400, new 118100), but only 150 km was added since, which is low for a taxi; holds the answer in balance.",
+  "next_step": "Empty defects list, passing brake figure, current documents: nothing outstanding, so renew.",
+  "inspection_outcome": "Result code P and empty defects list point to clean_pass; code alone cannot rule out unrecorded advisories.",
+  "document_gaps": "Both listed documents are in date; no gap is visible, so the contested plan is not met.",
+  "outstanding_severity": "No defects are recorded, so nothing is outstanding (level 0); the planned balance between levels 2 and 1 could not be met."
+ },
+ "request": "rec-F411-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009362
+}

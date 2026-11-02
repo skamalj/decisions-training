@@ -1,0 +1,182 @@
+{
+ "id": "F405-0031",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-5521",
+   "detected_on": "2025-11-04",
+   "term_start": "2025-09-29",
+   "room": "HB-2.14",
+   "slot": "Tue 14:00"
+  },
+  "booking_a": {
+   "module": "BIO2101",
+   "dept": "BIO",
+   "day": "Tue",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "headcount": 92,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "BIO3207",
+   "dept": "BIO",
+   "room": "HB-2.14",
+   "day": "Tue",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-07-02",
+   "approver": "m.hale"
+  },
+  "room": {
+   "code": "HB-2.14",
+   "aliases": [],
+   "capacity": 100,
+   "features": [
+    "lecture_capture"
+   ]
+  },
+  "alternatives": [
+   {
+    "room": "HB-2.20",
+    "capacity": 100,
+    "features": [
+     "lecture_capture"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "change_request",
+    "state": "open",
+    "module": "BIO2101",
+    "target_weeks": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "opened": "2025-10-30"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.92,
+  "required_feature": "lecture_capture",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 4
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 39,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.92,
+  "required_feature": "lecture_capture",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 4
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "genuine_clash": "Weeks 1-5 vs 6-10 do not intersect (favours false), but an open change request extends booking_a into week 6, which would create overlap.",
+  "alt_room_fits": "HB-2.20 has capacity 100 and lecture_capture for 92 students but weeks_free omits week 6, the week the overlap would arise.",
+  "resolution": "Both bookings are confirmed but the open change request on booking_a is unresolved, so the overlap depends on an unconfirmed change.",
+  "urgency": "Detected 2025-11-04, a Tuesday; week 6 Tuesday is the same date (today, level 3), with a next-day or earlier reading plausible.",
+  "parties_needed": "Same department, but the change request approver, both module leads and the lecture-capture requirement point to three or four actors versus two."
+ },
+ "request": "rec-F405-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013731
+}

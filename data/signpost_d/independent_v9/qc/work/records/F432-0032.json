@@ -1,0 +1,153 @@
+{
+ "id": "F432-0032",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E22",
+   "risk_cat": 3,
+   "temp_range_c": [
+    18,
+    28
+   ],
+   "maint_window": "15:00-17:00",
+   "active_vet_case": false
+  },
+  "shift": {
+   "opening_count": 3,
+   "closing_count": 2,
+   "end": "21:00"
+  },
+  "movements": null,
+  "feeding": {
+   "sheet_date": "2023-11-02",
+   "items": [
+    {
+     "sheet_g": 2000,
+     "offered_g": 2000,
+     "leftover_g": 1500
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "t": "08:00",
+    "logged": true,
+    "temp_c": 22,
+    "beh": [
+     "LETH"
+    ]
+   },
+   {
+    "t": "10:00",
+    "logged": false
+   },
+   {
+    "t": "12:00",
+    "logged": false
+   },
+   {
+    "t": "14:00",
+    "logged": false
+   },
+   {
+    "t": "16:00",
+    "logged": true,
+    "temp_c": 14
+   },
+   {
+    "t": "18:00",
+    "logged": false
+   }
+  ],
+  "close_check": {
+   "doors": {
+    "A": "21:10"
+   },
+   "ticket": "BF-311",
+   "ticket_state": "closed",
+   "retest_due": null
+  }
+ },
+ "factors": {
+  "count_discrepancy": "unexplained_smaller",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.25,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 4,
+  "cctv_cover": false,
+  "temp_excursion": "brief_single_reading",
+  "heater_maintenance_window": true,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "movements_absent",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_before_last_round",
+  "intake_ratio": 0.29,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 0,
+  "cctv_cover": false,
+  "temp_excursion": "brief_single_reading",
+  "heater_maintenance_window": true,
+  "field_mismatch": "diet_sheet_date_mismatch",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "movements_absent",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "secure_at_close": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 81,
+ "deciding": {
+  "count_reconciles": "Opening 3 and closing 2 differ, and movements is null, so a transfer may simply be unrecorded; a missing animal is more likely but not certain.",
+  "secure_at_close": "Door A was checked at 21:10, after the last round at 18:00, and the only barrier ticket BF-311 is closed.",
+  "next_step": "One animal is unaccounted for, four rounds are unlogged, intake is very low with no mitigation, and the one logged round carries a LETH code, which together need the duty vet or curator.",
+  "intake_shortfall": "Offered 2000 g minus 1500 g leftover leaves 500 g, 25% of the sheet, on the line between levels 2 and 3, with an old diet sheet date adding doubt.",
+  "missed_rounds": "Four of six rounds have logged false and no CCTV review; the exact threshold of four makes level 3 likely."
+ },
+ "request": "rec-F432-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010348
+}

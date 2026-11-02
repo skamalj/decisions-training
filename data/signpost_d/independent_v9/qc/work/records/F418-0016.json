@@ -1,0 +1,131 @@
+{
+ "id": "F418-0016",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "KWB",
+   "plat": 2,
+   "date": "2025-03-11",
+   "svc_from": "06:00",
+   "svc_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S41",
+    "planned_start": "05:30",
+    "planned_end": "14:00"
+   },
+   {
+    "post": "B",
+    "staff_id": "S52",
+    "planned_start": "05:30",
+    "planned_end": "14:00"
+   }
+  ],
+  "attendance": null,
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "09:10",
+    "platform": 2
+   },
+   {
+    "type": "gap_end",
+    "time": "10:20",
+    "platform": 2
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-883",
+   "disp_platform": 4,
+   "valid_from": "2025-03-01",
+   "valid_to": "2025-03-31",
+   "approved_by": "RO-12",
+   "prior_shortfalls_30d": 3
+  },
+  "remarks": [
+   "Sign-on sheet to follow. Cover was sorted I think."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 70,
+  "shortfall_timing": "in_service",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 70,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate_ops",
+   "second": "correct_and_brief",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "leaning",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 103,
+ "deciding": {
+  "headcount_verified": "attendance is null so no sign-ons or competence can be matched, though roster names two staff; weakly favours true.",
+  "next_step": "Gap with wrong-platform dispensation (D-883 on plat 4) and missing attendance; escalation versus correction both defensible.",
+  "coverage_outcome": "Roster has both minimum posts filled; no cover events, gap only inferred from events, so fully_rostered is leaning.",
+  "reversal_time": "A 70-minute gap with no valid dispensation and no attendance record; permanence of record or sanction is open between levels 2 and 3.",
+  "exposure_severity": "Gap 09:10-10:20 in service, dispensation platform 4 not 2, no attendance to show if safety duties were done by certified staff; level 2 vs 3."
+ },
+ "request": "rec-F418-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005159
+}

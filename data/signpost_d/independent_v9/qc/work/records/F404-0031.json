@@ -1,0 +1,145 @@
+{
+ "id": "F404-0031",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "Acorn",
+   "date": "2024-03-12",
+   "age_band": "two_year",
+   "ratio_rule": "1:4"
+  },
+  "children": {
+   "booked": 10,
+   "slots": [
+    {
+     "t": "14:15",
+     "signed_in": 12
+    },
+    {
+     "t": "15:00",
+     "signed_in": 12
+    },
+    {
+     "t": "15:45",
+     "signed_in": 12
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S1",
+    "out": "17:00"
+   },
+   {
+    "id": "S2",
+    "out": "17:00"
+   },
+   {
+    "id": "S3",
+    "out": "16:00"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S1",
+    "out": "17:00"
+   },
+   {
+    "id": "S2",
+    "out": "17:00"
+   },
+   {
+    "id": "S3",
+    "out": "14:20"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F9",
+    "from": "14:20",
+    "to": "16:00",
+    "room": "Acorn",
+    "countersigned_by": "M. Reid"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 4
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 12,
+  "staff_signin_variance": "early_departure",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 100,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 5,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 100,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "file_no_action",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "balanced",
+   "target": "none_found",
+   "second": "paperwork_only",
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "below_ratio": "12 children need 3 staff; S3 left at 14:20, but signed floater F9 for the same room covers 14:20-16:00, so every slot has 3.",
+  "disposition": "Once the countersigned cover is counted, ratio is met in every slot and nothing is outstanding.",
+  "primary_cause": "S3's early out differs from the rota, but the cover fully fills it; this is a paperwork-level mismatch, and a reader could also say nothing was found.",
+  "shortfall_duration": "Staff alone were short from 14:20 to the 16:00 rota end (100 minutes). The signed cover is what removes it, so reviewers ignoring it would say over 60 and others would say none.",
+  "breach_severity": "Without the cover, 2 staff cover 8 of 12 children (4 beyond). With it, none are beyond. Whether to count the cover splits readers."
+ },
+ "request": "rec-F404-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011351
+}

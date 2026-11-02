@@ -1,0 +1,178 @@
+{
+ "id": "F440-0037",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "B2",
+   "review_date": "2025-08-07",
+   "arrival": "2025-08-10",
+   "departure": "2025-08-14",
+   "pax": {
+    "13-17": 18,
+    "adult": 2
+   },
+   "diet": {
+    "veg": 4
+   },
+   "amendments": []
+  },
+  "roster": [
+   {
+    "role": "leader",
+    "dob": "1979-04-03",
+    "sex": "F"
+   },
+   {
+    "role": "leader",
+    "dob": "2007-08-12",
+    "sex": "M"
+   },
+   {
+    "role": "participant",
+    "n": 11,
+    "dob": "2010",
+    "sex": "F",
+    "veg": 3
+   },
+   {
+    "role": "participant",
+    "n": 9,
+    "dob": "2009",
+    "sex": "M",
+    "veg": 2
+   }
+  ],
+  "allocation": [
+   {
+    "room": "D1",
+    "sex": "F",
+    "beds": 10,
+    "nights": [
+     "2025-08-10",
+     "2025-08-11",
+     "2025-08-12"
+    ]
+   },
+   {
+    "room": "D2",
+    "sex": "M",
+    "beds": 10,
+    "nights": [
+     "2025-08-10",
+     "2025-08-11",
+     "2025-08-12"
+    ]
+   }
+  ],
+  "payment": {
+   "total": 1500,
+   "deposit_due": 0,
+   "paid_total": 0,
+   "schedule": [
+    {
+     "due": "2025-08-10",
+     "amt": 1500
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "adult": "L1",
+    "status": "missing",
+    "expiry": null
+   },
+   {
+    "adult": "L2",
+    "status": "missing",
+    "expiry": null
+   }
+  ],
+  "history": {
+   "org": "O22",
+   "trusted": true,
+   "stays": 6,
+   "no_shows": 4
+  }
+ },
+ "factors": {
+  "pax_mismatch": "two_to_four",
+  "night_mismatch": "one_night_short",
+  "amendment_logged": false,
+  "supervision_level": "short_early_nights",
+  "extra_cover_logged": false,
+  "deposit_position": "nothing_paid_none_due",
+  "instalment_approved": true,
+  "days_to_arrival": 3,
+  "dorm_fit": "needs_one_swap",
+  "leader_checks": "several_missing",
+  "trusted_organiser": true,
+  "prior_no_shows": 4,
+  "diet_count_drift": "minor"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "none",
+  "night_mismatch": "one_night_short",
+  "amendment_logged": false,
+  "supervision_level": "short_all_nights",
+  "extra_cover_logged": false,
+  "deposit_position": "nothing_paid",
+  "instalment_approved": false,
+  "days_to_arrival": 7,
+  "dorm_fit": "fits",
+  "leader_checks": "several_missing",
+  "trusted_organiser": true,
+  "prior_no_shows": 4,
+  "diet_count_drift": "minor"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "deposit_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "decline",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 88,
+ "deciding": {
+  "ratio_met": "20 minors aged 13-17 need 2 adults; leader 2 (dob 2007-08-12) is 17 on arrival and turns 18 on 08-12, so the first two nights have one adult. Later nights meet it, so he is a borderline leader.",
+  "deposit_covered": "deposit_due is 0 and the whole price is scheduled for 2025-08-10, so nothing due is unpaid.",
+  "disposition": "Both leaders' safeguarding checks are missing, one leader is a minor, and the group is short of cover with 4 prior no-shows, so it cannot be safely accommodated.",
+  "urgency": "Review 08-07 to arrival 08-10 is exactly 3 days, at the boundary between pressing and immediate.",
+  "conflict_count": "Four unexplained conflicts and empty amendments: roster 22 vs booked 20, 4 booked nights vs 3 allocated, veg 5 vs 4, and 11 girls vs 10 beds."
+ },
+ "request": "rec-F440-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.018845
+}

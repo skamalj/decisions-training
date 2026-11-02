@@ -1,0 +1,145 @@
+{
+ "id": "F426-0008",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B7",
+   "crop": "pear",
+   "planted_area_ha": 5,
+   "lot_id": "L120"
+  },
+  "applications": [
+   {
+    "date": "2024-02-14",
+    "product_code": "HRB5",
+    "qty_applied": 6,
+    "qty_unit": "L",
+    "area_treated_ha": 5
+   },
+   {
+    "date": "2024-02-28",
+    "product_code": "HRB5",
+    "qty_applied": 6,
+    "qty_unit": "L",
+    "area_treated_ha": 5
+   },
+   {
+    "date": "2024-03-14",
+    "product_code": "HRB5",
+    "qty_applied": 6,
+    "qty_unit": "L",
+    "area_treated_ha": 5
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "HRB5",
+    "max_rate_per_ha": 1.5,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "max_apps_per_season": 4,
+    "approved_crops": [
+     "pear"
+    ]
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "SP-2",
+   "calibration_valid_to": "2024-10-01",
+   "nozzle_dev_pct": 4
+  },
+  "harvest": {
+   "lot_id": "L120",
+   "block_id": "B7",
+   "first_pick_date": "2024-03-30",
+   "residue_test": {
+    "sampled": true,
+    "result_date": "2024-04-01",
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 3,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "over_25",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "expired_under_30d_high_dev",
+  "missing_item": "product_ref_entry_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 3,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 39,
+ "deciding": {
+  "phi_cleared": "Last HRB5 app 2024-03-14 and first pick 2024-03-30 are 16 days apart against phi 14, a modest margin.",
+  "next_step": "Intervals are met, rates are under the maximum, calibration is valid and the residue result is below limit, so the lot is released.",
+  "finding_class": "All sections agree on codes, crop, rates and calibration; no discrepancy appears.",
+  "reversal_time": "A routine acceptance has nothing to undo beyond a quick re-check, so it is reversible within a day.",
+  "rate_overrun": "6 L over 5 ha is 1.2 L/ha against the 1.5 maximum, so it is under the limit."
+ },
+ "request": "rec-F426-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01283
+}

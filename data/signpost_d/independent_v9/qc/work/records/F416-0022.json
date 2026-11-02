@@ -1,0 +1,141 @@
+{
+ "id": "F416-0022",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "E7",
+   "date": "2025-05-20",
+   "signoff": "g5"
+  },
+  "roster": [
+   {
+    "id": "g5",
+    "hrs": "08-16",
+    "qual": "2026-02-01"
+   },
+   {
+    "id": "g6",
+    "hrs": "08-16",
+    "qual": "2026-04-01"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "12:00",
+    "wave_m": 0.6,
+    "rip_risk": "low",
+    "flag": "red_yellow",
+    "bathing_zone_moved": false
+   }
+  ],
+  "incidents": [
+   {
+    "id": "f1",
+    "date": "2025-05-20",
+    "type": "first_aid",
+    "out": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue board",
+    "last_check": "2025-05-20",
+    "out_from": null,
+    "out_to": null
+   }
+  ],
+  "handover": {
+   "rescues": 0,
+   "first_aid": 1,
+   "kit_defects": 0,
+   "check_sheet_ref": "CS-0520"
+  }
+ },
+ "factors": {
+  "rescue_count": 0,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 0,
+  "rescue_cover_shortfall": "responder_qual_expired",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "multiple",
+  "worst_outcome": "referred",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "aed_check_sheet",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "kit_outage": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 76,
+ "deciding": {
+  "two_guard_cover": "No water_rescue incidents are logged, so the statement holds only vacuously; both rostered guards are in date.",
+  "totals_reconcile": "Handover rescues 0, first_aid 1, kit_defects 0 match the one itemised first_aid incident and no equipment out_from.",
+  "next_step": "Signed off, check_sheet_ref present, totals match and no outage; the red_yellow flag with low rip_risk is unremarkable, so the log can simply be accepted.",
+  "outcome_severity": "Only one first_aid incident, outcome released on site.",
+  "kit_outage": "Equipment out_from and out_to are null; no kit was out of service."
+ },
+ "request": "rec-F416-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01458
+}

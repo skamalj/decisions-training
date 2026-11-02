@@ -1,0 +1,178 @@
+{
+ "id": "F416-0050",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "station_id": "S7",
+   "date": "2025-09-02",
+   "signoff": "G1",
+   "signoff_time": "17:00"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-04-01"
+   },
+   {
+    "id": "G2",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2025-09-01"
+   },
+   {
+    "id": "G3",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-02-14"
+   }
+  ],
+  "conditions": [
+   {
+    "time": "12:00",
+    "wave_m": 2.4,
+    "wind_kt": 30,
+    "rip_risk": "moderate",
+    "flag": "yellow",
+    "bathing_zone_moved": false
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-09-02",
+    "time": "10:15",
+    "type": "water_rescue",
+    "responders": [
+     "G1",
+     "G3"
+    ],
+    "outcome": "released"
+   },
+   {
+    "id": "I2",
+    "date": "2025-09-02",
+    "time": "13:20",
+    "type": "water_rescue",
+    "responders": [
+     "G1",
+     "G2"
+    ],
+    "outcome": "released"
+   },
+   {
+    "id": "I3",
+    "date": "2025-09-02",
+    "time": "15:40",
+    "type": "first_aid",
+    "responders": [
+     "G3"
+    ],
+    "outcome": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_board",
+    "unit": "B1",
+    "last_check": "2025-09-02",
+    "out_from": null,
+    "out_to": null
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 1,
+   "kit_defects": 0,
+   "beach_users_est": 6000,
+   "check_sheet_ref": "CS-203"
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "responder_qual_expired",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "rescue_off_by_one",
+  "worst_outcome": "referred",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": true,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "kit_outage": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 54,
+ "deciding": {
+  "two_guard_cover": "Responder G2 on rescue I2 has qual_expiry 2025-09-01, the day before the shift date, so that rescue had only one in-date guard; the one-day margin leaves slight doubt.",
+  "totals_reconcile": "Rescues 2, first_aid 1 and kit_defects 0 match the itemised incidents and equipment, and the dates match the shift date.",
+  "next_step": "The log is signed, the check sheet is referenced, and no outcome, outage or flag issue appears.",
+  "outcome_severity": "All outcomes are released or first aid, with no ambulance or AED.",
+  "kit_outage": "The only equipment entry has out_from and out_to null, with a check dated on the shift date, so no kit was out of service."
+ },
+ "request": "rec-F416-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013069
+}

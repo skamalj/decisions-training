@@ -1,0 +1,150 @@
+{
+ "id": "F403-0045",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-9032",
+   "declared_allergens": [
+    "wheat",
+    "soya",
+    "mustard"
+   ],
+   "auto_injector": false,
+   "plan_start": "2025-10-03"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2025-05-12",
+   "expires": "2026-05-12",
+   "allergens": [
+    "wheat",
+    "soya",
+    "mustard"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-09-10",
+   "dishes": [
+    {
+     "dish": "gravy",
+     "contains": [
+      "wheat",
+      "soya"
+     ],
+     "recipe_version_date": "2025-09-24",
+     "substitute": "GF gravy",
+     "spec_checked_on": null
+    },
+    {
+     "dish": "pie",
+     "contains": [
+      "mustard"
+     ],
+     "recipe_version_date": "2025-08-30",
+     "substitute": "plain pie",
+     "spec_checked_on": "2025-09-05"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "staff_trained": [
+    "2024-07-01"
+   ],
+   "exceptions": [
+    {
+     "date": "2025-09-15",
+     "signed_by": "safety lead",
+     "covers": "staff training refresh"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-10-03",
+   "packed_lunch_until": null,
+   "incidents": [],
+   "messages": [
+    "Cook: gravy recipe was reworked last week."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "training_lapsed",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 0,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 16,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_restricted",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "menu_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "evidence_allergens_covered": "All three evidence allergens match the declared list and each appears in a dish with a named substitute (gravy for wheat and soya, pie for mustard).",
+  "next_step": "Only the gravy is unconfirmed: its recipe dated 2025-09-24 is after mapped_on 2025-09-10 with spec_checked_on null, so release with that dish withheld.",
+  "first_gap_stage": "Evidence is current, and the gravy recipe change without a spec check is the first shortfall; the training lapse is covered by the signed exception.",
+  "exposure_proximity": "The gravy has a substitute but its recipe changed after mapping with no spec check, so level 1 versus 2 depends on whether it counts as substituted.",
+  "meal_urgency": "plan_start equals review_date 2025-10-03 with no packed lunch deferral, so the pupil eats the same day, which sits between already eating and the next school day."
+ },
+ "request": "rec-F403-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012998
+}

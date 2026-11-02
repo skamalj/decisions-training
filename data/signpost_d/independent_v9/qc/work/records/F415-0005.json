@@ -1,0 +1,155 @@
+{
+ "id": "F415-0005",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": [
+    {
+     "from": "2025-06-02T10:00",
+     "to": "2025-06-02T13:04",
+     "reason": "police incident",
+     "approved_by": "OF31"
+    }
+   ]
+  },
+  "shift": {
+   "sched_slots": [
+    "08:00",
+    "09:30",
+    "11:00",
+    "12:30",
+    "14:00",
+    "16:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "end": "2025-06-02T08:20",
+    "checklist": {
+     "floors": true,
+     "bins": true,
+     "basins": true
+    }
+   },
+   {
+    "slot": "09:30",
+    "end": "2025-06-02T09:50",
+    "checklist": {
+     "floors": true,
+     "bins": true,
+     "basins": true
+    }
+   },
+   {
+    "slot": "14:00",
+    "end": "2025-06-02T14:20",
+    "checklist": {
+     "floors": true,
+     "bins": true,
+     "basins": true
+    }
+   },
+   {
+    "slot": "16:00",
+    "end": "2025-06-02T16:25",
+    "status": "partial",
+    "checklist": {
+     "floors": false,
+     "bins": true,
+     "basins": false
+    }
+   }
+  ],
+  "faults": [
+   {
+    "type": "vandalised_basin",
+    "reported_at": "2025-06-02T10:00",
+    "remedied_at": "2025-06-02T14:04",
+    "remedy_note": "basin isolated, taps replaced"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2025-06-02T17:00"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 6,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "vandalised_basin",
+  "fault_open_minutes": 244.0,
+  "block_closed_during_fault": true,
+  "checklist_completion": "partial",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 2
+ },
+ "factors_sampled": {
+  "scheduled_slots": 6,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "missing",
+  "fault_type": "vandalised_basin",
+  "fault_open_minutes": 244.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "partial",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 2
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "missed_clean": "The 11:00 and 12:30 slots are inside the approved closure. The 16:00 visit is marked partial, with floors and basins false. Whether that counts as a missed clean is arguable.",
+  "sign_off_valid": "A supervisor signed at 17:00, after the last visit ended at 16:25. The sign-off may endorse a partial clean.",
+  "next_step": "The one open item is the incomplete 16:00 checklist, which the contractor should explain or evidence.",
+  "staff_effort": "A single query to the contractor about the 16:00 partial visit takes under an hour.",
+  "fault_exposure": "The fault ran 10:00 to 14:04. The block was closed until 13:04, leaving exactly 60 minutes open to the public, which is the boundary between levels 1 and 2."
+ },
+ "request": "rec-F415-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013412
+}

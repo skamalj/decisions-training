@@ -1,0 +1,130 @@
+{
+ "id": "F435-0001",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E-2291",
+   "zone_id": "FLR-A",
+   "zone_type": "standing_floor",
+   "doors_open": "2025-06-14T18:00:00",
+   "check_filed_at": "2025-06-14T19:20:00",
+   "phase": "live"
+  },
+  "licence": {
+   "base_limit": 1000,
+   "variation": null,
+   "stewards_required": 20,
+   "exit_routes": [
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 1000,
+   "issued": 860,
+   "comps_included": 40,
+   "scanned_in": 840
+  },
+  "ingress": {
+   "device_id": "CTR-7",
+   "device_status": "fault_logged",
+   "raw_peak": 1025,
+   "peak_at": "2025-06-14T19:05:00",
+   "manual_recount": {
+    "count": 995,
+    "at": "2025-06-14T19:12:00"
+   }
+  },
+  "stewarding": {
+   "rostered": 22,
+   "signed_in": 20,
+   "relief": null
+  },
+  "exit_checks": null
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "live",
+  "occupancy_ratio": 0.995,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.03,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.86,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.0,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": true
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "live",
+  "occupancy_ratio": 0.82,
+  "counter_status": "ok",
+  "counter_inflation": 0.03,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.86,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.31,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "restrict_entry",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "clear",
+   "target": "counter_fault",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "steward_shortfall": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "clear",
+   "target": "4",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 51,
+ "deciding": {
+  "verified_exceedance": "Counter is fault_logged, so the recount of 995 is the verified figure, just under the limit of 1000; the raw peak of 1025 is the only count above it.",
+  "disposition": "Event is live and exit_checks is null, so no exit route was confirmed clear before doors; admissions should be paused.",
+  "discrepancy_source": "Only the fault_logged counter's raw_peak of 1025 exceeds the limit; issued 860 is under zone_limit_used 1000.",
+  "steward_shortfall": "signed_in 20 equals stewards_required 20; the roster is present.",
+  "unconfirmed_exits": "exit_checks is null, so there is no exit log across 5 routes."
+ },
+ "request": "rec-F435-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014489
+}

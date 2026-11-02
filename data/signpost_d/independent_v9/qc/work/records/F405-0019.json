@@ -1,0 +1,165 @@
+{
+ "id": "F405-0019",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C422",
+   "detected_on": "2025-09-01",
+   "term_start": "2025-09-29",
+   "room": "B12A"
+  },
+  "booking_a": {
+   "dept": "MTH",
+   "room": "B12A",
+   "day": "Mon",
+   "start": "13:00",
+   "end": "15:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "headcount": 80,
+   "required_features": [
+    "accessible_entry"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "dept": "MTH",
+   "room": "B12-A",
+   "day": "Mon",
+   "start": "13:00",
+   "end": "15:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-07-08",
+   "approver": "rs"
+  },
+  "room": {
+   "code": "B12A",
+   "aliases": [
+    "B12A/G"
+   ],
+   "capacity": 85
+  },
+  "alternatives": [
+   {
+    "code": "B14",
+    "capacity": 84,
+    "features": [
+     "accessible_entry"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-05-03"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-06-10"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-07-21"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": true,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 28,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.05,
+  "required_feature": "accessible_entry",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 3
+ },
+ "factors_sampled": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": true,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 4,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.94,
+  "required_feature": "accessible_entry",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 3
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "relocate",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 55,
+ "deciding": {
+  "genuine_clash": "Times and weeks identical, but b room B12-A is not in room.aliases (B12A/G), so it may be a different room; 3 past reports are decoys.",
+  "alt_room_fits": "B14 capacity 84 vs headcount 80, has accessible_entry, free in weeks 1-6.",
+  "resolution": "Both bookings confirmed and B14 fits points to relocate; the unreconciled room code adds doubt.",
+  "urgency": "Detected 2025-09-01, first shared occurrence Mon 2025-09-29, exactly 28 days away, at the 1/0 boundary.",
+  "parties_needed": "Both bookings are MTH, so one department can act alone, though a second may be needed to confirm the room code."
+ },
+ "request": "rec-F405-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009361
+}

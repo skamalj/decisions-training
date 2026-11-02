@@ -1,0 +1,145 @@
+{
+ "id": "F437-0024",
+ "family": "F437",
+ "state": {
+  "job": {
+   "job_id": "J-5129",
+   "target_locale": "it-IT",
+   "source_version": "v1",
+   "glossary_version": "g4",
+   "due_at": "2025-06-20T09:00",
+   "terms": {
+    "variant_accepted": true
+   }
+  },
+  "source": {
+   "version": "v1",
+   "segment_count": 180,
+   "word_count": 2900
+  },
+  "deliverable": {
+   "built_from_version": "v1",
+   "target_locale": "it-IT",
+   "segments_translated": 162,
+   "word_count": 2610,
+   "glossary_version_used": null,
+   "delivered_at": "2025-06-17T04:00"
+  },
+  "qa_report": {
+   "flags": 37,
+   "false_positive_marked": 18,
+   "number_mismatches": [
+    [
+     14,
+     41
+    ],
+    [
+     250,
+     205
+    ],
+    [
+     8,
+     80
+    ],
+    [
+     66,
+     6
+    ]
+   ],
+   "unresolved": {
+    "critical": 0,
+    "major": 3,
+    "minor": 2
+   }
+  },
+  "review": null,
+  "history": {
+   "revision_rounds": [
+    {
+     "round": 1
+    },
+    {
+     "round": 2
+    }
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "not_assigned",
+  "open_error_profile": "major_or_critical_unclear",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.49,
+  "number_mismatch_count": 4,
+  "deadline_slack_hours": 77,
+  "client_waiver": true,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "not_recorded",
+  "review_status": "not_assigned",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.49,
+  "number_mismatch_count": 4,
+  "deadline_slack_hours": 77,
+  "client_waiver": true,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold_for_item",
+   "second": "return_for_fix",
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 87,
+ "deciding": {
+  "scope_matches": "segments_translated 162 vs segment_count 180 and word count 2610 vs 2900; the waiver covers variants, not missing segments.",
+  "reviewed_in_time": "review is null.",
+  "next_step": "Missing segments and the unassigned review could be named items to request; but the major errors could also go back for fixing, with 77h slack.",
+  "open_severity": "qa unresolved major 3, and the four number mismatches could be critical, which would make it level 3.",
+  "parties_needed": "The translator may fix it alone, or a reviewer must also be assigned: one or two parties."
+ },
+ "request": "rec-F437-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010678
+}

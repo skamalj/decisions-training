@@ -1,0 +1,156 @@
+{
+ "id": "F427-0024",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V104",
+   "site_ref": "BB-21",
+   "visit_date": "2024-07-03"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 20,
+   "dipwells_scheduled": 4,
+   "dams_total": 5
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 45
+    },
+    {
+     "depth_cm": 43
+    },
+    {
+     "depth_cm": 46
+    },
+    {
+     "depth_cm": 42
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 14,
+     "prev_depth_cm": 15
+    }
+   ],
+   "rain_30d_pct_normal": 142
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam": "D1",
+     "pool_level_cm": 22,
+     "design_pool_cm": 22,
+     "defect_code": "SEEP",
+     "remark": "Minor seep round east end, pool held."
+    }
+   ],
+   "open_work_orders": [
+    {
+     "dam_id": "D1",
+     "status": "raised"
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 4
+    },
+    {
+     "q": 2,
+     "score": 3
+    }
+   ],
+   "photos_uploaded": 8,
+   "photos_expected": 8
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 1.0,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -24.0,
+  "rainfall_pct_normal": 142.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.23,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -6.34,
+  "rainfall_pct_normal": 142.17,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "well_below",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "dam_caused_drop": "D1 only seeps and its pool is held at 22 of 22 cm. The control is steady and rain is 142% of normal, so the dam defect does not explain the drop.",
+  "next_step": "All evidence is present. The seep is minor and D1 already has a raised work order, so the record can be filed.",
+  "hydro_state": "The four wells average 44 cm against a floor of 20 cm, which is 24 cm below and more than 15.",
+  "dam_severity": "D1 has code SEEP with the pool at design level, which is seepage with the pool maintained.",
+  "evidence_completeness": "Dipwells are 4 of 4, photos are 8 of 8, both quadrats are scored and the inspection is logged. A single quadrat score pair leaves a little doubt."
+ },
+ "request": "rec-F427-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01043
+}

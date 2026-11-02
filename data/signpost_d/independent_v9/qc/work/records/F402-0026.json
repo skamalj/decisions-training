@@ -1,0 +1,115 @@
+{
+ "id": "F402-0026",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "A101",
+   "priority": "soon",
+   "site": "knee_R",
+   "onset": "2025-01-06",
+   "received": "2025-03-10"
+  },
+  "clinical": {
+   "dx": "M25.56",
+   "red_flags": [
+    "night_pain"
+   ],
+   "function_index": 74,
+   "surgery_date": null
+  },
+  "gp_record": {
+   "falls_3m": 0
+  },
+  "history": {
+   "episodes": [],
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_mild",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 9,
+  "function_index": 74.0,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "soon",
+  "falls_last_3m": 0,
+  "post_op_days": "none",
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 9,
+  "function_index": 21.92,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "soon",
+  "falls_last_3m": 5,
+  "post_op_days": 4,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 33,
+ "deciding": {
+  "red_flag_unresolved": "A night_pain code is listed with no MRI, urgent review or oncology discharge. The code is mild and nothing else supports it, so doubt remains.",
+  "next_step": "No missing item, mismatch or serious sign. Referral is complete and the stated priority is plausible, so it is accepted as referred.",
+  "pathway": "Simple knee problem, function index 74, no falls, no surgery and no prior episodes. This fits self-management, with some doubt from the night_pain code.",
+  "reversal_time": "A routine accept and wait can be undone within a day. Nothing irreversible is in the record.",
+  "clinical_urgency": "Stable 9-week simple knee problem with good function and no neuro signs or falls. It can safely wait more than six weeks."
+ },
+ "request": "rec-F402-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00964
+}

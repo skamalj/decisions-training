@@ -1,0 +1,146 @@
+{
+ "id": "F409-0040",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "T. Varga",
+   "submitted_on": "2024-09-16",
+   "app_type": "new",
+   "message": "I have lived in this building since 2019."
+  },
+  "residence_evidence": {
+   "ct_liability_from": "2024-05-01",
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-08-22",
+     "address_line": "Flat 4, 12 Elm St",
+     "verified": true
+    },
+    {
+     "doc_type": "tenancy_agreement",
+     "issued_on": "2024-05-17",
+     "address_line": "Flat 2, 12 Elm St",
+     "verified": false
+    },
+    {
+     "doc_type": "utility_bill",
+     "issued_on": null,
+     "address_line": null,
+     "verified": null
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": null,
+     "address_line": null,
+     "verified": null
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "WX70PQR",
+   "keeper_name": "T. Varga",
+   "supporting_letters": []
+  },
+  "request": {
+   "zone_code": "Z3",
+   "address": "Flat 4, 12 Elm St",
+   "plate_entered": "WX70PQR",
+   "duration_months": 12
+  },
+  "account_history": {
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "live_permits": [],
+   "past_permits": [],
+   "pcns": [
+    {
+     "issued_on": "2024-07-08",
+     "contravention_code": "01",
+     "status": "cancelled"
+    }
+   ],
+   "exceptions": []
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "exact",
+  "proof_age_days": 25,
+  "docs_missing": 3,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "contradicting_claim",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "different_flat",
+  "proof_age_days": 122,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 0,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 1,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "contradicting_claim",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve_temporary",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "residence_proof",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "residency_shown": "A verified council tax bill for 'Flat 4, 12 Elm St' was issued 25 days before submission and matches the request exactly, with no date-order anomaly.",
+  "disposition": "Residency is proven by the council tax bill, but the other documents are unverified or missing, so a time-limited permit fits. The number of outstanding documents is a reason for some doubt.",
+  "main_issue": "The tenancy agreement is for Flat 2 against the requested Flat 4 and was issued 122 days before submission. It is unverified, and the utility bill and id_card are also unverified, so the address evidence is the problem.",
+  "misuse_strength": "The claim of living in the building since 2019 conflicts with the council tax liability starting 2024-05-01, but the Flat 2 tenancy partly supports it. The only PCN is cancelled, so level 0 and level 1 are both defensible.",
+  "document_gaps": "The tenancy agreement is unverified and stale, and the utility bill and id_card are unverified, giving three gaps, though the verified council tax bill makes some readers count fewer."
+ },
+ "request": "rec-F409-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011907
+}

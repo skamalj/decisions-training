@@ -1,0 +1,180 @@
+{
+ "id": "F415-0024",
+ "family": "F415",
+ "state": {
+  "site": {
+   "hours": "07:00-19:00",
+   "closures": []
+  },
+  "shift": {
+   "date": "2024-08-22",
+   "start": "06:58",
+   "end": "17:20",
+   "sched_slots": [
+    "07:00",
+    "09:00",
+    "11:00",
+    "13:00",
+    "15:00",
+    "17:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "07:00",
+    "start": "07:01",
+    "end": "07:24",
+    "status": "done",
+    "checklist": {
+     "soap": true,
+     "floor": true
+    },
+    "photo_ref": "IMG_0701"
+   },
+   {
+    "slot": "09:00",
+    "start": "09:02",
+    "end": "09:30",
+    "status": "done",
+    "checklist": {
+     "soap": false,
+     "floor": true
+    },
+    "photo_ref": "IMG_0902"
+   },
+   {
+    "slot": "11:00",
+    "start": "08:55",
+    "end": "11:22",
+    "status": "done",
+    "checklist": {
+     "soap": true,
+     "floor": true
+    },
+    "photo_ref": "IMG_1103"
+   },
+   {
+    "slot": "15:00",
+    "start": "15:01",
+    "end": "15:25",
+    "status": "done",
+    "checklist": {
+     "soap": true,
+     "floor": false
+    },
+    "photo_ref": "IMG_1501"
+   },
+   {
+    "slot": "17:00",
+    "start": "17:01",
+    "end": "17:08",
+    "status": "done",
+    "checklist": {
+     "soap": true,
+     "floor": true
+    },
+    "photo_ref": "IMG_1702"
+   }
+  ],
+  "faults": [
+   {
+    "type": "no_soap_or_paper",
+    "reported_at": "2024-08-22T09:20:00",
+    "remedied_at": "2024-08-22T12:46:00",
+    "source": "public_app",
+    "remedy_note": "restocked 10:40"
+   }
+  ],
+  "sign_off": {
+   "signer": "S44",
+   "signer_role": "supervisor",
+   "signed_at": "2024-08-22T17:05:00",
+   "comment": "signed on handheld"
+  },
+  "history": {
+   "prior_defaults_90d": 3,
+   "complaints_90d": 5,
+   "audits_passed": 1
+  }
+ },
+ "factors": {
+  "scheduled_slots": 6,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "signed_before_last_visit",
+  "fault_type": "no_soap_or_paper",
+  "fault_open_minutes": 206.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "partial",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 3
+ },
+ "factors_sampled": {
+  "scheduled_slots": 6,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "none",
+  "fault_open_minutes": 206.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "partial",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 3
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "missed_clean": "The 13:00 slot has no visit and closures is empty. The 11:00 visit starts at 08:55, which is out of order and could be a mislabelled record, so some doubt remains.",
+  "sign_off_valid": "signed_at 17:05 is 3 minutes before the final visit ended at 17:08, which is a small gap. Out-of-order timestamps and a handheld sign-off cast some doubt on the clock, so both answers are defensible.",
+  "next_step": "The 13:00 slot is unconfirmed and the restock note (10:40) contradicts remedied_at (12:46). The log needs evidence before any decision.",
+  "staff_effort": "Getting the contractor's proof for 13:00 and reconciling the fault times is a matter of hours, not days.",
+  "fault_exposure": "The fault was open 09:20-12:46, which is 206 minutes, with no closure. That is in the 60-240 minute range. The note claiming 10:40 leaves slight doubt."
+ },
+ "request": "rec-F415-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012855
+}

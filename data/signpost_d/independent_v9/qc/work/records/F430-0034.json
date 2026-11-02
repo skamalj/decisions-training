@@ -1,0 +1,126 @@
+{
+ "id": "F430-0034",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "C",
+     "normal_band": [
+      40,
+      75
+     ],
+     "alarm_limit": 90,
+     "trip_limit": 105,
+     "customers_fed": 10150,
+     "partner_id": "T2"
+    }
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 108,
+    "unit": "C"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "T1",
+    "photo_ref": "IMG5",
+    "note": "Oil temp high."
+   }
+  ],
+  "history": {
+   "previous_round": null,
+   "load_events": [
+    "T2 load transferred to T1; ~300 customers moved to F9"
+   ]
+  },
+  "network": {
+   "partner_status": "on_outage"
+  }
+ },
+ "factors": {
+  "worst_reading_band": "trip",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 10150,
+  "trivial_discrepancies": 4,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 2,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 21408,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "clear",
+   "target": "file_closed",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "defect_corroborated": "Oil temp high note with photo matches 108 C.",
+  "benign_explanation": "Load event transferring T2 load onto T1 explains the high temperature, though the reading is above trip.",
+  "follow_up": "Documented transfer on T1 explains the temperature; accept as filed.",
+  "limit_deviation": "108 C exceeds the 105 C trip limit.",
+  "supply_exposure": "T2 on outage; 10150 customers on T1 less ~300 moved to F9 straddles 10,000."
+ },
+ "request": "rec-F430-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008903
+}

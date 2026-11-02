@@ -1,0 +1,185 @@
+{
+ "id": "F440-0006",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "G-4410",
+   "review_date": "2025-03-10",
+   "arrival": "2025-03-12",
+   "departure": "2025-03-15",
+   "pax_by_band": {
+    "13_17": 20,
+    "adult": 3
+   },
+   "diet_totals": {
+    "veg": 2
+   },
+   "amendments": []
+  },
+  "roster": [
+   {
+    "role": "participant",
+    "sex": "F",
+    "n": 10,
+    "dob": "2009-2010",
+    "veg": 2
+   },
+   {
+    "role": "participant",
+    "sex": "M",
+    "n": 11,
+    "dob": "2009-2010",
+    "veg": 1
+   },
+   {
+    "role": "leader",
+    "n": 3,
+    "dob": "1980-1990"
+   }
+  ],
+  "allocation": [
+   {
+    "room": "F1",
+    "sex": "F",
+    "beds": 12,
+    "nights": [
+     "2025-03-12",
+     "2025-03-13"
+    ]
+   },
+   {
+    "room": "M1",
+    "sex": "M",
+    "beds": 12,
+    "nights": [
+     "2025-03-12",
+     "2025-03-13"
+    ]
+   },
+   {
+    "room": "L1",
+    "sex": "mixed",
+    "beds": 3,
+    "nights": [
+     "2025-03-12",
+     "2025-03-13"
+    ]
+   }
+  ],
+  "payment": {
+   "total_price": 1380,
+   "priced_nights": 3,
+   "deposit_due": 400,
+   "paid_total": 400,
+   "paid_on": "2025-02-01",
+   "instalments": null
+  },
+  "safeguarding": [
+   {
+    "adult": "A1",
+    "status": "verified",
+    "expiry": "2026-01-01"
+   },
+   {
+    "adult": "A2",
+    "status": "verified",
+    "expiry": "2026-02-01"
+   },
+   {
+    "adult": "A3",
+    "status": "verified",
+    "expiry": "2026-03-01"
+   }
+  ],
+  "history": {
+   "org_id": "O-77",
+   "trusted": false,
+   "stays": 4,
+   "no_shows": 2,
+   "last_stay": "2024-06-01"
+  }
+ },
+ "factors": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "one_night_short",
+  "amendment_logged": false,
+  "supervision_level": "comfortable",
+  "extra_cover_logged": false,
+  "deposit_position": "paid_full",
+  "instalment_approved": false,
+  "days_to_arrival": 2,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 2,
+  "diet_count_drift": "minor"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "one_night_short",
+  "amendment_logged": false,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 106,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 2,
+  "diet_count_drift": "minor"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "confirm_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 90,
+ "deciding": {
+  "ratio_met": "21 teen participants need 3 adults; 3 leaders are rostered. The roster/booking headcount gap adds some doubt.",
+  "deposit_covered": "paid_total 400 equals deposit_due 400.",
+  "disposition": "Everything is otherwise in order, with verified checks and a fitting dorm, but allocation covers only 2 of 3 nights. That one item must clear before arrival.",
+  "urgency": "Review date 2025-03-10, arrival 2025-03-12: 2 days.",
+  "conflict_count": "Unexplained: pax 24 vs 23, allocation 2 nights vs booked 3, diet veg 3 vs 2. priced_nights 3 vs allocation 2 is a debatable fourth. Amendments empty."
+ },
+ "request": "rec-F440-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01636
+}

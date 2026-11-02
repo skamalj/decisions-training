@@ -1,0 +1,116 @@
+{
+ "id": "F417-0032",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "Sea Wren",
+   "type": "motor cruiser",
+   "loa_m": 10.0,
+   "draught_m": 1.2,
+   "draught_src": "survey"
+  },
+  "berth": {
+   "id": "Q3",
+   "max_loa_m": 11.0,
+   "fender_allow_m": 0.3,
+   "depth_lat_m": 3.5
+  },
+  "booking": {
+   "arrival": "2025-08-01",
+   "departure": "2025-08-05"
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 11.1,
+    "draught_m": 1.2
+   },
+   "insurance_expiry": "2026-03-01",
+   "inspection_booked": true
+  },
+  "account": {
+   "dues_outstanding_gbp": 2239,
+   "plan_id": "PP-88",
+   "plan_status": "approved"
+  }
+ },
+ "factors": {
+  "loa_mismatch_pct": 11.06,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 2.3,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 2239,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 0,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 11.06,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 0.03,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 2239,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 0,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "confirm_allocation",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "ukc_band": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 64,
+ "deciding": {
+  "length_fits": "Survey loa 11.1 is above max 11.0 but within the 0.3 fender allowance; leaning true is a stretch, the plan expects false so the record leaves it marginal.",
+  "next_step": "Insurance valid, plan approved, inspection booked; only the length gap remains.",
+  "primary_issue": "Insurance valid, plan approved, inspection booked, no overlaps.",
+  "ukc_band": "Depth 3.5 minus survey draught 1.2 is 2.3, well over 1m.",
+  "unresolved_count": "Declared loa 10.0 vs survey 11.1 is one clear discrepancy; the vessel draught_src label 'survey' is a possible second."
+ },
+ "request": "rec-F417-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004934
+}

@@ -1,0 +1,139 @@
+{
+ "id": "F403-0004",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-5520",
+   "allergens": [
+    "fish",
+    "lupin",
+    "mustard"
+   ],
+   "plan_start": "2025-01-13"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-02-01",
+   "allergens": [
+    "fish",
+    "lupin",
+    "mustard",
+    "sulphite"
+   ]
+  },
+  "menu_mapping": {
+   "dishes": [
+    {
+     "dish": "fish pie",
+     "contains": [
+      "fish"
+     ],
+     "substitute": null
+    },
+    {
+     "dish": "wine gravy",
+     "contains": [
+      "sulphite"
+     ],
+     "substitute": null
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true
+  },
+  "history": {
+   "review_date": "2025-01-21",
+   "incidents": [
+    {
+     "date": "2025-01-13",
+     "dish": "wine gravy",
+     "contains": [
+      "sulphite"
+     ]
+    }
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current clinician letter",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": -8,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "missing",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": -8,
+  "packed_lunch_interim": true,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "return_for_rework",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "menu_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 48,
+ "deciding": {
+  "evidence_allergens_covered": "Evidence lists sulphite, which is not in pupil allergens and has no mapped substitution; fish dish also has none.",
+  "next_step": "Two dishes have substitute null, pointing to rework; the gravy incident adds some doubt.",
+  "first_gap_stage": "Evidence is a current clinician letter, but unsubstituted dishes make the menu the first gap; kitchen controls are verified.",
+  "exposure_proximity": "Incident on plan_start involved wine gravy with sulphite, which is on the evidence but not the declared list, so Reached versus Open is balanced.",
+  "meal_urgency": "plan_start 2025-01-13 is before review_date 2025-01-21 with no packed_lunch_until, so the pupil is already eating; the unclear incident adds slight doubt."
+ },
+ "request": "rec-F403-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010549
+}

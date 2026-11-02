@@ -1,0 +1,134 @@
+{
+ "id": "F431-0044",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM30456",
+   "seal_state": "intact",
+   "seal_checked_date": "2023-08-01"
+  },
+  "period_read": {
+   "read_date": "2024-02-05",
+   "reg_kwh": 14998,
+   "src_code": "CUS",
+   "photo_ref": "IMG-3381"
+  },
+  "history": [
+   {
+    "date": "2023-11-05",
+    "reg_kwh": 14400,
+    "src": "EST"
+   },
+   {
+    "date": "2023-12-05",
+    "reg_kwh": 14600,
+    "src": "EST"
+   },
+   {
+    "date": "2024-01-05",
+    "reg_kwh": 14800,
+    "src": "EST"
+   },
+   {
+    "date": "2024-01-20",
+    "reg_kwh": 15000,
+    "src": "EST",
+    "same_period_ly_kwh": 900
+   }
+  ],
+  "diagnostics": null,
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2024-01-25",
+   "hdd_current": 113,
+   "hdd_prior_year": 100,
+   "works_orders": [
+    {
+     "type": "METER_EXCH",
+     "status": "open",
+     "date": "2024-01-30"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "register_rollback",
+  "missing_section": "diagnostics_null",
+  "consumption_ratio": -0.002,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.13,
+  "diagnostic_error_count": 0,
+  "meter_works_order": true,
+  "consecutive_estimates": 4,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "customer_submitted",
+  "read_sequence_issue": "register_rollback",
+  "missing_section": "diagnostics_null",
+  "consumption_ratio": 1.49,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.13,
+  "diagnostic_error_count": 0,
+  "meter_works_order": true,
+  "consecutive_estimates": 4,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_engineer",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "meter_fault": "The register fell from 15000 to 14998 and an open METER_EXCH works order exists, which points to a device fault.",
+  "billable_actual": "A customer read with a register below the previous read after four estimates is not a valid actual.",
+  "next_step": "The open meter exchange and rollback call for a site visit, although a photo request is a conceivable first step.",
+  "staff_effort": "Meter exchange, estimate history and a tenancy change need reconciliation, borderline between 1-8 hours and days.",
+  "consumption_deviation": "Consumption is -2 kWh against expected 900x1.13=1017 kWh, a deviation of about 100% at the level 2/3 edge."
+ },
+ "request": "rec-F431-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009937
+}

@@ -1,0 +1,114 @@
+{
+ "id": "F428-0039",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "MT-9",
+   "gate_type": "mitre",
+   "rated_closure_s": 200
+  },
+  "inspection": {
+   "asset_id": "MT-9",
+   "insp_date": "2025-04-08",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-04-08",
+    "closure_s": 144,
+    "leakage_l_min": 6,
+    "leakage_limit_l_min": 15,
+    "result": "pass"
+   }
+  },
+  "defects": [],
+  "maintenance": {
+   "work_orders": []
+  }
+ },
+ "factors": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.72,
+  "max_defect_grade": 0,
+  "dominant_defect_component": "none",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "passed",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "none",
+  "days_to_forecast_peak": 15,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.72,
+  "max_defect_grade": 4,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 2,
+  "mismatch_location": "rated_closure_time",
+  "test_status": "failed",
+  "repair_progress": "in_progress",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 15,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 31,
+ "deciding": {
+  "closure_test_valid": "Test same day passed: 144s under 200s rated, leakage 6 under limit 15.",
+  "next_step": "Clean passing test, no defects or open orders; file.",
+  "defect_class": "defects list is empty.",
+  "section_discrepancies": "asset_id and rated time consistent; nothing disagrees.",
+  "flood_risk": "Closes in time, no defects."
+ },
+ "request": "rec-F428-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005562
+}

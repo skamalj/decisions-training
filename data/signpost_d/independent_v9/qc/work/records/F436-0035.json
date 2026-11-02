@@ -1,0 +1,125 @@
+{
+ "id": "F436-0035",
+ "family": "F436",
+ "state": {
+  "article": {
+   "channels": [
+    "web"
+   ],
+   "first_published_at": "2024-08-10T09:00Z",
+   "disputed_passage": "Alan Moss, finance director of Tarn Foods, said the recall cost £2m."
+  },
+  "complaint": {
+   "received_at": "2024-08-11T09:30Z",
+   "summary": "Company counsel says Moss was called chief executive; wants it corrected.",
+   "attachments": [
+    {
+     "screenshot": null
+    }
+   ]
+  },
+  "desk_check": {
+   "source_doc": "company filing: finance director",
+   "reporter_notes": "finance director",
+   "filed_copy": "finance director"
+  },
+  "history": {
+   "prior_corrections": 2,
+   "edits": [
+    {
+     "t": "2024-08-10T09:00Z",
+     "by": "sub_j",
+     "change": "finance director -> chief executive"
+    },
+    {
+     "t": "2024-08-10T15:10Z",
+     "by": "sub_k",
+     "change": "chief executive -> finance director"
+    }
+   ],
+   "legal": [
+    "2024-08-10 reviewed, cleared"
+   ]
+  }
+ },
+ "factors": {
+  "error_status": "matches_source",
+  "error_origin_stage": "editing_stage",
+  "discrepancy_field": "title_role",
+  "discrepancy_size": "large",
+  "claim_type": "named_party_fact",
+  "hours_live": 24,
+  "distribution_channels": "online_only",
+  "mitigation_present": true,
+  "missing_evidence": true,
+  "legal_signal": true,
+  "legal_cleared": true,
+  "draft_fix_mismatch": false,
+  "prior_corrections": 2,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "error_status": "confirmed_by_source",
+  "error_origin_stage": "none",
+  "discrepancy_field": "title_role",
+  "discrepancy_size": "large",
+  "claim_type": "named_party_fact",
+  "hours_live": 57,
+  "distribution_channels": "online_only",
+  "mitigation_present": true,
+  "missing_evidence": true,
+  "legal_signal": true,
+  "legal_cleared": true,
+  "draft_fix_mismatch": false,
+  "prior_corrections": 2,
+  "boundary_case": false
+ },
+ "plan": {
+  "error_confirmed": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "no_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_origin": {
+   "clarity": "clear",
+   "target": "editing_stage",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "spread": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "harm_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 72,
+ "deciding": {
+  "error_confirmed": "The current passage matches the filing's finance director after sub_k's fix, but the complaint's screenshot is null, so the wrong version cannot be shown and the complaint may predate or ignore the fix.",
+  "next_step": "The text was already corrected at 15:10 on 10 August and legal has cleared it, so nothing further is needed.",
+  "error_origin": "The filing, notes and filed copy all say finance director; sub_j's edit after filing introduced chief executive.",
+  "spread": "The channel is web only and the page was live about 24 hours, but the wrong title stood only about 6 hours before the fix.",
+  "harm_severity": "The wrong title was attributed to a named person at a named company and corrected within hours, with no wrongdoing implied."
+ },
+ "request": "rec-F436-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011447
+}

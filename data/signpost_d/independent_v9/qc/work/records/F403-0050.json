@@ -1,0 +1,133 @@
+{
+ "id": "F403-0050",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-7714",
+   "declared_allergens": [
+    "peanut"
+   ],
+   "plan_start": "2025-04-01"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-03-01",
+   "allergens": [
+    "peanut"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-03-20",
+   "dishes": [
+    {
+     "dish": "Satay chicken",
+     "contains": [
+      "peanut"
+     ],
+     "substitute": "plain chicken"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": false,
+   "exceptions": []
+  },
+  "history": {
+   "review_date": "2025-04-22",
+   "packed_lunch_until": null,
+   "incidents": [
+    {
+     "date": "2025-04-10",
+     "dish": "Satay chicken",
+     "contains": [
+      "peanut"
+     ],
+     "note": "no reaction observed"
+    }
+   ],
+   "messages": [
+    "Cook: nothing to worry about."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "shared_equipment",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": -21,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "shared_equipment",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 3,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "kitchen_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 41,
+ "deciding": {
+  "evidence_allergens_covered": "Peanut has a substituted dish, but that same dish was served with peanut on 2025-04-10, so the mapping may not be effective.",
+  "next_step": "The 2025-04-10 Satay chicken incident after plan_start contained peanut; it forces referral to the safety lead despite the note of no reaction (the plan's approve_plan reading cannot stand).",
+  "first_gap_stage": "Evidence current and the dish is mapped, but segregated_equipment is false with no exceptions, so the gap is in the kitchen.",
+  "exposure_proximity": "Incident on 2025-04-10, after plan_start 2025-04-01, served a dish containing declared peanut.",
+  "meal_urgency": "Meals began at plan_start with no packed_lunch_until and the incident shows service; the pupil is already eating."
+ },
+ "request": "rec-F403-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.0122
+}

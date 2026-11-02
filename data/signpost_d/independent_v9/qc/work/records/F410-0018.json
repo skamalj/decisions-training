@@ -1,0 +1,155 @@
+{
+ "id": "F410-0018",
+ "family": "F410",
+ "state": {
+  "application": {
+   "app_ref": "A-3377",
+   "holder_ref": "H-4172",
+   "holder_name": "M Doyle",
+   "term_end": "2026-04-30",
+   "pitch_req": {
+    "width_m": 4.45
+   },
+   "docs_pending": [
+    "id_photo"
+   ]
+  },
+  "licence_current": {
+   "holder_ref": "H-4127",
+   "holder_name": "M Doyle",
+   "pitch": {
+    "width_m": 3.0
+   },
+   "conditions": {
+    "min_attendance_pct": 75
+   },
+   "variations": [
+    {
+     "type": "widen",
+     "detail": "4.45m",
+     "approved": true
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-06-30",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000
+  },
+  "account": {
+   "fees_due": [
+    {
+     "amount_gbp": 404.33
+    }
+   ],
+   "ledger": [
+    {
+     "amount_gbp": 300
+    }
+   ],
+   "payment_plan": {
+    "active": true,
+    "instalments_left": 2,
+    "missed": 0
+   }
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 37,
+   "absence_notices": [
+    {
+     "accepted": true
+    },
+    {
+     "accepted": false
+    }
+   ],
+   "complaints": [
+    {
+     "category": "gas safety",
+     "upheld": null,
+     "status": "open"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": false,
+  "commodity_change": "none",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 1.45,
+  "variation_approved": true,
+  "fee_arrears_gbp": 104.33,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.74,
+  "absences_notified": true,
+  "complaint_profile": "open_safety_not_yet_upheld",
+  "holder_ref_mismatch": "transcription_error",
+  "docs_outstanding": 1
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": false,
+  "commodity_change": "none",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 1.45,
+  "variation_approved": true,
+  "fee_arrears_gbp": 104.33,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.74,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "transcription_error",
+  "docs_outstanding": 1
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "contested",
+   "target": "defer",
+   "second": "grant_conditional",
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "balanced",
+   "target": "urgent_visit",
+   "second": "none_needed",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 51,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-06-30 is after term_end 2026-04-30 at the required 5M.",
+  "renewal_disposition": "One pending doc (id_photo) points to defer, while the active plan with no missed payments and approved widening make conditional grant defensible.",
+  "inspection_level": "Open gas safety complaint with upheld null: urgent visit if treated as a safety complaint, but it is not upheld and nothing else changed.",
+  "reversal_time": "Resolving the ref, doc and complaint and reissuing takes weeks, not days.",
+  "discrepancy_count": "Holder_ref digits swapped (H-4172/H-4127) is unresolved; attendance 37/50 at min 75% with one of two absences accepted is borderline as a second. Width and arrears are explained by variation and active plan."
+ },
+ "request": "rec-F410-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010389
+}

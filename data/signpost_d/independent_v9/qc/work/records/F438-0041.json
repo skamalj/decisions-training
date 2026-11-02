@@ -1,0 +1,126 @@
+{
+ "id": "F438-0041",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E1041",
+   "los": 3,
+   "method": "elective"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "K80.2"
+   },
+   "comorbidities": [
+    "I10"
+   ],
+   "theatre_log": []
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "K80.2"
+   },
+   "secondary_dx": [
+    "I10"
+   ],
+   "procedures": []
+  },
+  "grouping": {
+   "hrg_submitted": "GB11C",
+   "hrg_regrouped": "GB11C",
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "coder_history": {
+   "prior_audits": 12,
+   "error_rate": 0.08,
+   "last_audit_result": "pass"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.08,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 3,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "outstanding",
+  "approved_local_convention": true,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.25,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "error_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 60,
+ "deciding": {
+  "primary_supported": "coded_record.primary_dx K80.2 equals clinical_documentation.principal_condition K80.2.",
+  "hrg_shift": "Submitted and regrouped HRG are both GB11C; no tariff figures given, so a shift is only weakly excluded.",
+  "next_step": "Primary, secondary and procedure lists all match, the HRG is unchanged and there are no queries or missing documents.",
+  "error_count": "No mismatches in any compared section; only the absence of an explicit audit conclusion leaves slight doubt.",
+  "error_severity": "No code differs from documentation, so no error alters any assigned code."
+ },
+ "request": "rec-F438-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009158
+}

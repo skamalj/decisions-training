@@ -1,0 +1,137 @@
+{
+ "id": "F414-0010",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "E47",
+   "equip_type": "multi_play",
+   "crit_fall_height_m": 1.0,
+   "surf_type": "sand",
+   "variance_ref": {
+    "ref": "VAR-9",
+    "expiry": "2027-03-31"
+   }
+  },
+  "inspection": {
+   "insp_date": "2024-08-01",
+   "insp_grade": "operational",
+   "fall_height_m": 1.4,
+   "surf_type_found": "bark",
+   "surf_depth_mm": 110,
+   "surf_req_table": [
+    {
+     "max_h": 1.5,
+     "type": "bark",
+     "min_depth_mm": 200
+    }
+   ],
+   "findings": []
+  },
+  "maintenance": [
+   {
+    "asset_id": "E47",
+    "component_id": "C5",
+    "defect_ref": "D4",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "low",
+   "incident_reports_90d": 1
+  },
+  "history": [
+   {
+    "date": "2024-04-02",
+    "defect_refs": [
+     "D4"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "multi_play",
+  "register_mismatch": "moderate",
+  "surfacing_depth_margin_mm": -90.0,
+  "worst_defect_class": "none",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "low",
+  "incident_reports_90d": 1
+ },
+ "factors_sampled": {
+  "equipment_type": "multi_play",
+  "register_mismatch": "moderate",
+  "surfacing_depth_margin_mm": -90.76,
+  "worst_defect_class": "no_mechanism",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.93,
+  "temporary_measure_in_place": true,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "low",
+  "incident_reports_90d": 1
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 51,
+ "deciding": {
+  "prior_defects_cleared": "D4 work order still open with no follow-up check, but the current visit records no findings, so the defect may be gone.",
+  "surfacing_adequate": "Depth 110 mm vs 200 mm required for bark at 1.4 m, far short; register entry (1.0 m, sand) does not match.",
+  "asset_disposition": "No findings or probe fails and a valid variance VAR-9 on the register; the shallow surfacing leaves some doubt.",
+  "remedial_progress": "The only work order, D4, is open; none closed.",
+  "hazard_severity": "Findings list is empty, so no defects recorded."
+ },
+ "request": "rec-F414-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012908
+}

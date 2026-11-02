@@ -1,0 +1,119 @@
+{
+ "id": "F402-0012",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-2207",
+   "priority": "routine",
+   "site": {
+    "part": "lumbar_hip",
+    "side": "left"
+   },
+   "received": "2024-06-10",
+   "onset": "2023-04-24"
+  },
+  "clinical": {
+   "diagnosis_code": "M54.5",
+   "red_flags": [
+    "cancer_hx_new_spinal_pain"
+   ],
+   "function_index": 4.2,
+   "anticoagulant": false
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2024-05-20",
+    "side": "right",
+    "result": "no_sinister"
+   }
+  ],
+  "gp_record": {
+   "falls_3m": 1
+  },
+  "history": {
+   "episodes": 4,
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": true,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "major",
+  "missing_item": "none",
+  "condition_group": "specialist_rehab_needs",
+  "symptom_duration_weeks": 59,
+  "function_index": 4.18,
+  "prior_episodes_12m": 4,
+  "referrer_priority": "routine",
+  "falls_last_3m": 1,
+  "post_op_days": 74,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": true,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "major",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 59,
+  "function_index": 4.18,
+  "prior_episodes_12m": 4,
+  "referrer_priority": "routine",
+  "falls_last_3m": 1,
+  "post_op_days": 74,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_info",
+   "second": "book_amended",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "specialist_rehab",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "red_flag_unresolved": "MRI dated within 8 weeks with result no_sinister explains the cancer-history flag.",
+  "next_step": "Referral side left vs MRI side right: could ask for confirmation or book with corrected side.",
+  "pathway": "Function index 4.2 with 4 prior episodes and long duration needs specialist rehabilitation.",
+  "reversal_time": "Delayed or misdirected care for severe disability reverses over weeks to months; one-week versus longer is arguable.",
+  "clinical_urgency": "Very low function index vs benign MRI and routine priority: two weeks versus six weeks is arguable."
+ },
+ "request": "rec-F402-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004905
+}

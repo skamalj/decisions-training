@@ -1,0 +1,143 @@
+{
+ "id": "F419-0014",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "05/23",
+   "date": "2024-03-05",
+   "speed_kmh": 70,
+   "thresholds": {
+    "design": 0.7,
+    "maint_planning": 0.5,
+    "minimum": 0.4
+   },
+   "weather": {
+    "temp_c": 8,
+    "wind_kmh": 9
+   }
+  },
+  "device": {
+   "cal_cert": "2023-10-20",
+   "cal_expiry": "2024-10-20",
+   "tyre_kpa": 290,
+   "tyre_spec_kpa": [
+    220,
+    260
+   ],
+   "water_mm": 0.5
+  },
+  "runs": [
+   {
+    "dir": "05",
+    "mean_speed_kmh": 70,
+    "thirds": [
+     0.74,
+     0.7,
+     0.73
+    ]
+   },
+   {
+    "dir": "23",
+    "mean_speed_kmh": 69,
+    "thirds": [
+     0.72,
+     0.71,
+     0.74
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    1.0,
+    1.1,
+    1.0
+   ],
+   "mtd_threshold_mm": 0.8,
+   "contaminant": "dry"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-03-01",
+   "works_orders": [],
+   "prior_surveys": [],
+   "cross_checks": []
+  },
+  "review": {
+   "signed_at": "2024-03-06T08:15",
+   "role": "engineer"
+  }
+ },
+ "factors": {
+  "min_third_band": "at_design",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 370,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 1,
+  "test_condition_anomaly": "tyre_pressure_off",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "no_prior"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_minimum",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 370,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 1,
+  "test_condition_anomaly": "tyre_pressure_off",
+  "macrotexture_band": "low",
+  "cross_check_result": "none",
+  "prior_survey_trend": "no_prior"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "hold_retest",
+   "second": "schedule_works",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 101,
+ "deciding": {
+  "genuine_deficit": "Every third is at or above the 0.70 design level (lowest 0.70), well above the 0.50 planning level, so no deficit, though tyre pressure 290 is outside spec 220-260.",
+  "next_step": "Tyre pressure 290 vs spec 220-260 casts doubt on the run and favours a retest; the 370 days since rubber removal with no works planned gives some pull toward scheduling works.",
+  "deficit_driver": "No third or segment below planning level, texture adequate (1.0-1.1 vs 0.8).",
+  "friction_severity": "Lowest third 0.70 equals the design threshold of 0.70 (level 0), while a reader could treat 0.70 vs 0.71 neighbours and the suspect tyre pressure as watch level.",
+  "evidence_completeness": "Weather block holds temp and wind but no precip_mm; whether this counts as a missing element is borderline, otherwise calibration, device settings, both runs and sign-off are present."
+ },
+ "request": "rec-F419-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011885
+}

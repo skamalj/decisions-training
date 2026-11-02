@@ -1,0 +1,123 @@
+{
+ "id": "F425-0045",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "producer_code": "2UK-6A11",
+   "lay_dates": [
+    "2025-07-01"
+   ],
+   "declared_eggs": 6000
+  },
+  "grading_run": {
+   "run_end": "2025-07-05T08:50",
+   "eggs_in": 5970,
+   "by_size": {
+    "S": 600,
+    "M": 2400,
+    "L": 2400,
+    "XL": 510
+   },
+   "outgrades": {
+    "cracks": 20,
+    "dirties": 40
+   },
+   "class_a_total": 5910
+  },
+  "checks": {
+   "candling_sample": {
+    "sampled_at": "2025-07-05T09:30"
+   }
+  },
+  "packing": {
+   "pack_date": "2025-07-05",
+   "packs": [
+    {
+     "size": "M",
+     "count": 5910
+    }
+   ],
+   "stamp_code": "2UK-6A11"
+  }
+ },
+ "factors": {
+  "count_gap_size": "borderline",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 4,
+  "mixed_lay_dates": false,
+  "missing_check": "candling_after_run",
+  "swab_positive": false,
+  "outgrade_rate_pct": 1.01,
+  "dominant_defect": "dirties",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 39
+ },
+ "factors_sampled": {
+  "count_gap_size": "moderate",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 6,
+  "mixed_lay_dates": false,
+  "missing_check": "candling_after_run",
+  "swab_positive": false,
+  "outgrade_rate_pct": 2.83,
+  "dominant_defect": "dirties",
+  "calibration_overdue": false,
+  "calibration_mitigated": true,
+  "temp_excursion": "brief",
+  "temp_mitigated": true,
+  "flock_age_weeks": 39
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "hold_pending",
+   "second": null,
+   "targets": []
+  },
+  "anomaly_cause": {
+   "clarity": "contested",
+   "target": "no_anomaly",
+   "second": "count_error",
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "counts_reconcile": "declared 6000 vs eggs_in 5970 is a gap of 30, exactly 0.5%; the other sections agree internally.",
+  "batch_disposition": "candling_sample.sampled_at 09:30 is later than run_end 08:50, so the candling check is not valid for this run and release should wait for it.",
+  "anomaly_cause": "Outgrades are low and nothing else is flagged, but the 0.5% intake gap could be read as a count error.",
+  "lay_to_pack": "Lay 2025-07-01 to pack 2025-07-05 is 4 days, just past the Prompt limit of 3.",
+  "outgrade_share": "Outgrades 20+40=60 of 5970, about 1.0%."
+ },
+ "request": "rec-F425-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008575
+}

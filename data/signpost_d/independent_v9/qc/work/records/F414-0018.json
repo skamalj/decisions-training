@@ -1,0 +1,132 @@
+{
+ "id": "F414-0018",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "CF-31",
+   "site_id": "S04",
+   "equip_type": "climbing_frame",
+   "crit_fall_height_m": 1.5,
+   "surf_type": "wet_pour",
+   "variance_ref": "VAR-7 exp 2026-01-01"
+  },
+  "inspection": {
+   "insp_date": "2024-07-02",
+   "insp_grade": "operational",
+   "fall_height_m": 1.5,
+   "surf_type_found": "wet_pour",
+   "surf_depth_mm": 50,
+   "surf_req_table": [
+    {
+     "band_m": "<=2.0",
+     "type": "wet_pour",
+     "min_depth_mm": 35
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "OP-1",
+     "result": "fail"
+    }
+   ],
+   "findings": []
+  },
+  "maintenance": [],
+  "site": {
+   "usage_level": "low",
+   "incident_reports_90d": 0
+  },
+  "history": [
+   {
+    "date": "2024-01-09",
+    "defect_refs": [
+     "D-12"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 15.0,
+  "worst_defect_class": "no_mechanism",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": "none raised",
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "low",
+  "incident_reports_90d": 0
+ },
+ "factors_sampled": {
+  "equipment_type": "climbing_frame",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": -96.26,
+  "worst_defect_class": "minor_injury",
+  "head_neck_entrapment_fail": true,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.43,
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "low",
+  "incident_reports_90d": 0
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "balanced",
+   "target": "sign_off_actions",
+   "second": "hold",
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (head_neck_entrapment_fail = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 57,
+ "deciding": {
+  "prior_defects_cleared": "D-12 raised previously has no matching work order and no follow-up, so closure is not shown; it could still be treated as cleared given the approved variance.",
+  "surfacing_adequate": "50 mm wet_pour against 35 mm minimum at 1.5 m.",
+  "asset_disposition": "Head-neck probe fail on OP-1 with no findings entry and an approved variance VAR-7; between scheduling actions and holding for confirmation.",
+  "remedial_progress": "No work orders are raised.",
+  "hazard_severity": "Findings empty, so negligible, but the head_neck probe fail is unexplained and could count as a logged defect."
+ },
+ "request": "rec-F414-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005865
+}

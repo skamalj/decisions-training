@@ -1,0 +1,153 @@
+{
+ "id": "F410-0033",
+ "family": "F410",
+ "state": {
+  "application": {
+   "app_ref": "A-6033",
+   "holder_ref": "H-7714",
+   "holder_name": "T Lindqvist",
+   "term_end": "2026-06-30",
+   "pitch_req": {
+    "width_m": 4.0,
+    "depth_m": 3.0
+   },
+   "commodities": [
+    "bread",
+    "pies"
+   ],
+   "docs_pending": []
+  },
+  "licence_current": {
+   "holder_ref": "H-7714",
+   "pitch": {
+    "width_m": 3.02,
+    "depth_m": 3.0
+   },
+   "commodities": [
+    "bread"
+   ],
+   "conditions": {
+    "min_attendance_pct": 75
+   },
+   "variations": [
+    {
+     "type": "commodity",
+     "detail": "pies",
+     "approved": true,
+     "approved_on": "2025-03-02"
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-02-28",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": "2026-01-15",
+    "new_end": "2026-06-30"
+   },
+   "food_reg": null
+  },
+  "account": {
+   "fees_due": [
+    {
+     "amount_gbp": 497.09
+    }
+   ],
+   "ledger": [
+    {
+     "amount_gbp": 400,
+     "method": "card"
+    }
+   ]
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 39,
+   "absence_notices": [
+    {
+     "reason": "family",
+     "accepted": true
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": true,
+  "commodity_change": "food_added",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.98,
+  "variation_approved": true,
+  "fee_arrears_gbp": 97.09,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.78,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": true,
+  "commodity_change": "food_added",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 0.98,
+  "variation_approved": true,
+  "fee_arrears_gbp": 97.09,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.78,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 0
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "grant_conditional",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "contested",
+   "target": "scheduled_visit",
+   "second": "desk_check",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 79,
+ "deciding": {
+  "pli_term_covered": "pli.end 2026-02-28 precedes term_end 2026-06-30; broker_conf new_end 2026-06-30 covers it but is only a confirmation, not a policy document.",
+  "renewal_disposition": "No documents pending, but arrears of 97.09 and a size increase of 0.98 m remain, which call for conditions.",
+  "inspection_level": "Pies variation approved yet food_reg is null and a 0.98 m larger pitch is requested with no size variation; visit versus desk check is open.",
+  "reversal_time": "A renewed licence for the full year and a pitch allocation are hard to unwind; the boundary lies between eight days to three months and beyond.",
+  "discrepancy_count": "One unresolved item: requested width 4.0 vs allocated 3.02 with no size variation; commodity is approved and PLI is explained by broker_conf."
+ },
+ "request": "rec-F410-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005927
+}

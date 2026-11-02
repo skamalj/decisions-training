@@ -1,0 +1,144 @@
+{
+ "id": "F437-0041",
+ "family": "F437",
+ "state": {
+  "job": {
+   "job_id": "J-4412",
+   "lang_pair": "en>de",
+   "target_locale": "de-DE",
+   "ordered_words": 4200,
+   "source_version": 3,
+   "glossary_version": "g2",
+   "due_at": "2025-03-11T22:00",
+   "terms": {
+    "variant_accepted": true
+   },
+   "workflow": [
+    {
+     "step": "translate",
+     "done_at": "2025-03-09"
+    },
+    {
+     "step": "dtp",
+     "done_at": "2025-03-10"
+    }
+   ]
+  },
+  "source": {
+   "version": 3,
+   "segment_count": 310,
+   "word_count": 4200,
+   "repetitions_words": 30
+  },
+  "deliverable": {
+   "built_from_version": 3,
+   "target_locale": "de-DE",
+   "segments_translated": 310,
+   "word_count": 4176,
+   "glossary_version_used": "g2",
+   "delivered_at": "2025-03-10T09:00"
+  },
+  "qa_report": null,
+  "review": {
+   "reviewer_id": "R-17",
+   "assigned_at": "2025-03-09T14:00",
+   "completed_at": "2025-03-10",
+   "signed_off": true,
+   "errors": []
+  },
+  "history": {
+   "revision_rounds": [
+    {
+     "date": "2025-02-20"
+    },
+    {
+     "date": "2025-03-01"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "trivial_count_drift",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": false,
+  "qa_false_positive_share": 0.19,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": 37,
+  "client_waiver": true,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": true,
+  "glossary_version_state": "match",
+  "review_status": "signed_after_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": false,
+  "qa_false_positive_share": 0.19,
+  "number_mismatch_count": 5,
+  "deadline_slack_hours": 37,
+  "client_waiver": true,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 133,
+ "deciding": {
+  "scope_matches": "Versions all 3 and segments 310/310; the 24-word drop is under 1% and covered by the 30 repetition words.",
+  "reviewed_in_time": "Review is signed off with a date-only completed_at of 2025-03-10, the same day as delivered_at 09:00, so the order is not certain.",
+  "next_step": "Locale, glossary and versions match, the review is signed with no errors, and delivery is 37 hours before the deadline.",
+  "open_severity": "The review errors list is empty and qa_report is null, so nothing is open.",
+  "parties_needed": "There are no errors or mismatches to fix; at most a single release step remains."
+ },
+ "request": "rec-F437-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013189
+}

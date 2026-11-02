@@ -1,0 +1,178 @@
+{
+ "id": "F416-0033",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "E07",
+   "date": "2025-01-22",
+   "signoff": "G41"
+  },
+  "roster": [
+   {
+    "id": "G41",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_exp": "2026-03-01"
+   },
+   {
+    "id": "G42",
+    "on": "09:00",
+    "off": "15:00",
+    "qual_exp": "2026-05-12"
+   },
+   {
+    "id": "G43",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_exp": "2025-12-20"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "10:00",
+    "wave_m": 1.8,
+    "wind_kt": 22,
+    "rip_risk": "mod",
+    "flag": "red_yellow"
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-01-22",
+    "time": "10:40",
+    "type": "water_rescue",
+    "resp": [
+     "G41",
+     "G42"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I2",
+    "date": "2025-01-22",
+    "time": "15:00",
+    "type": "water_rescue",
+    "resp": [
+     "G42",
+     "G43"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I3",
+    "date": "2025-01-22",
+    "time": "12:10",
+    "type": "first_aid",
+    "resp": [
+     "G43"
+    ],
+    "out": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_tube",
+    "unit": "T5",
+    "last_check": "2025-01-22"
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 1,
+   "kit_defects": 0,
+   "advisories": 3,
+   "users": 1400,
+   "chk": "CS-19"
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "rescue_off_by_one",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "over_180",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "kit_outage": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 87,
+ "deciding": {
+  "two_guard_cover": "Both rescues have two in-date responders, but I2 is at 15:00, exactly when G42's roster off time is 15:00, which leaves a doubt.",
+  "totals_reconcile": "Rescues 2, first_aid 1 and kit_defects 0 match the itemised incidents and the equipment entry with no out_from; all dates equal the shift date.",
+  "next_step": "Sign-off and check sheet are present, totals match, no kit outage, and the flag is consistent with the rip risk; accept as is.",
+  "outcome_severity": "Every incident outcome is released, with no AED or ambulance ref.",
+  "kit_outage": "The only equipment entry has no out_from or out_to, so no kit was out of service."
+ },
+ "request": "rec-F416-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010774
+}

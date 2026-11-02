@@ -1,0 +1,134 @@
+{
+ "id": "F410-0044",
+ "family": "F410",
+ "state": {
+  "application": {
+   "term_end": "2025-12-31",
+   "pitch_req": {
+    "width_m": 4.04
+   },
+   "docs_pending": [
+    "policy schedule",
+    "hygiene cert",
+    "signed form"
+   ]
+  },
+  "licence_current": {
+   "pitch": {
+    "width_m": 3.0
+   },
+   "conditions": {
+    "min_attendance_pct": 80
+   },
+   "variations": []
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2026-01-10",
+    "indemnity_gbp": 2000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "new_end": "2026-01-10"
+   },
+   "food_reg": null
+  },
+  "account": {
+   "fees_due": [
+    {
+     "amount_gbp": 600
+    }
+   ],
+   "ledger": [
+    {
+     "amount_gbp": 555.88
+    }
+   ]
+  },
+  "history": {
+   "allocated_12m": 52,
+   "attended_12m": 42,
+   "complaints": [
+    {
+     "category": "safety",
+     "upheld": true,
+     "status": "open"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "indemnity_below_required",
+  "broker_confirmation_held": true,
+  "commodity_change": "none",
+  "food_registration_state": "not_registered",
+  "stall_size_delta_m": 1.04,
+  "variation_approved": false,
+  "fee_arrears_gbp": 44.12,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.81,
+  "absences_notified": false,
+  "complaint_profile": "upheld_open_safety",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 3
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "indemnity_below_required",
+  "broker_confirmation_held": true,
+  "commodity_change": "none",
+  "food_registration_state": "not_registered",
+  "stall_size_delta_m": 1.04,
+  "variation_approved": false,
+  "fee_arrears_gbp": 44.12,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.81,
+  "absences_notified": false,
+  "complaint_profile": "upheld_open_safety",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 3
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "renewal_disposition": {
+   "clarity": "balanced",
+   "target": "defer",
+   "second": "grant_conditional",
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "contested",
+   "target": "desk_check",
+   "second": "none_needed",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 64,
+ "deciding": {
+  "pli_term_covered": "Dates cover the term but indemnity 2,000,000 is below pli_required 5,000,000; broker_conf only confirms the end date.",
+  "renewal_disposition": "Three pending documents and the indemnity shortfall point to deferral; small arrears and acceptable attendance allow conditional grant.",
+  "inspection_level": "There is an open upheld safety complaint, but no food is evidenced; desk check versus none is contested.",
+  "reversal_time": "A deferral or conditions can be undone in days once documents arrive.",
+  "discrepancy_count": "Indemnity shortfall and unapproved size increase of 1.04 m; whether the open complaint counts as a second is arguable."
+ },
+ "request": "rec-F410-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00521
+}

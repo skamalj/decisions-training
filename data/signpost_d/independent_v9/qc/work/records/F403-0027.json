@@ -1,0 +1,163 @@
+{
+ "id": "F403-0027",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P2086",
+   "year": "Y3",
+   "school": "S112",
+   "declared_allergens": [
+    "peanut",
+    "tree nut"
+   ],
+   "auto_injector": {
+    "prescribed": true,
+    "anaphylaxis_risk": true
+   },
+   "plan_start": "2025-06-02"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2025-03-10",
+   "expires": "2026-03-10",
+   "allergens": [
+    "peanut",
+    "tree nut"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-04-14",
+   "cycle_weeks": 3,
+   "dishes": [
+    {
+     "dish": "satay chicken",
+     "contains": [
+      "peanut"
+     ],
+     "recipe_version_date": "2025-03-01",
+     "substitute": "plain grilled chicken",
+     "spec_checked_on": "2025-04-10"
+    },
+    {
+     "dish": "flapjack",
+     "contains": [
+      "nuts"
+     ],
+     "recipe_version_date": "2025-03-01",
+     "substitute": "oat bar",
+     "spec_checked_on": "2025-04-10"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "prep_area": "allergen bay",
+   "segregated_equipment": true,
+   "cleaning_log_complete": false,
+   "staff_trained": 4,
+   "last_trained": "2024-10-02",
+   "exceptions": [
+    {
+     "date": "2025-04-15",
+     "signed_by": "catering lead",
+     "covers": "cleaning_log_complete"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-04-22",
+   "packed_lunch_until": null,
+   "incidents": [],
+   "messages": [
+    "Cook: all in hand, no worries."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 2,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 28,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "expired",
+  "allergen_count": 2,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": -7,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "no_gap",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 116,
+ "deciding": {
+  "evidence_allergens_covered": "Peanut is substituted in the satay chicken; the tree nut is covered only through the flapjack's looser 'nuts' label, which leaves slight doubt.",
+  "next_step": "The evidence is current, every dish has a substitute with a spec check after its recipe date, and the log gap has a signed exception, so the plan can be released.",
+  "first_gap_stage": "No evidence or menu gap; the only weakness, the incomplete cleaning log, is covered by the signed 2025-04-15 exception.",
+  "exposure_proximity": "All allergen dishes are substituted, controls count as verified through the exception, and there are no incidents.",
+  "meal_urgency": "With packed_lunch_until null, the first meal is on plan_start 2025-06-02, well over 20 school days after the 2025-04-22 review."
+ },
+ "request": "rec-F403-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013105
+}

@@ -1,0 +1,140 @@
+{
+ "id": "F405-0011",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-1041",
+   "detected_on": "2025-09-01",
+   "term_start": "2025-09-01",
+   "room": "B2.14"
+  },
+  "booking_a": {
+   "module": "BIO120",
+   "dept": "BIO",
+   "day": "Mon",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3
+   ],
+   "headcount": 74,
+   "features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "HIS210",
+   "dept": "HIS",
+   "day": "Mon",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    4,
+    5,
+    6
+   ],
+   "status": "provisional",
+   "approved_at": null,
+   "approver": null
+  },
+  "room": {
+   "code": "B2.14",
+   "capacity": 100
+  },
+  "alternatives": null,
+  "history": [
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "change_request",
+    "state": "open"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 24,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": true,
+  "headcount_ratio": 0.74,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 3
+ },
+ "factors_sampled": {
+  "overlap_type": "full",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 24,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": true,
+  "headcount_ratio": 0.74,
+  "required_feature": "lecture_capture",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 3
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "balanced",
+   "target": "hold_confirm",
+   "second": "dismiss",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "genuine_clash": "Same slot but weeks [1,2,3] vs [4,5,6] never intersect; the full-overlap factor was changed to disjoint weeks. The provisional status adds slight doubt.",
+  "alt_room_fits": "alternatives is null, so nothing is listed; the capacity_short and missing-list factors conflict with the plan, so the fit is unsupported. Room capacity 100 against headcount 74 leaves a little doubt.",
+  "resolution": "Weeks do not intersect (dismiss), but booking_b is provisional with an open change_request (hold_confirm). The two are balanced.",
+  "urgency": "Detection date equals term_start and booking_a is in week 1 on Monday, so the first occurrence is today if the clash were real. The disjoint weeks give some doubt.",
+  "parties_needed": "Two departments, an approver, an open change request and a room owner could be needed; whether that comes to 5 or 3-4 people is the split."
+ },
+ "request": "rec-F405-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006018
+}

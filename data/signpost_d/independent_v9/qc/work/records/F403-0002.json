@@ -1,0 +1,172 @@
+{
+ "id": "F403-0002",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-2086",
+   "year": 4,
+   "school": "S112",
+   "allergens": [
+    "egg",
+    "soya",
+    "mustard",
+    "celery"
+   ],
+   "auto_injector": false,
+   "plan_start": "2025-03-24"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issuer": "paediatric allergist",
+   "issued": "2024-11-12",
+   "expires": "2026-11-12",
+   "allergens": [
+    "egg",
+    "soya",
+    "mustard",
+    "celery"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-01-30",
+   "cycle_weeks": 3,
+   "dishes": [
+    {
+     "dish": "quiche",
+     "contains": [
+      "egg"
+     ],
+     "recipe_version_date": "2024-10-01",
+     "substitute": "jacket potato",
+     "spec_checked_on": "2025-01-28"
+    },
+    {
+     "dish": "veg stir fry",
+     "contains": [
+      "soya",
+      "celery"
+     ],
+     "recipe_version_date": "2024-10-01",
+     "substitute": "roast veg",
+     "spec_checked_on": "2025-01-28"
+    },
+    {
+     "dish": "hot dog",
+     "contains": [
+      "mustard"
+     ],
+     "recipe_version_date": "2024-10-01",
+     "substitute": "plain sausage",
+     "spec_checked_on": "2025-01-28"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "prep_area": "allergen bench",
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "staff_trained": [
+    "2024-09-05",
+    "2024-09-05",
+    "2024-09-12"
+   ],
+   "exceptions": []
+  },
+  "history": {
+   "review_date": "2025-02-03",
+   "packed_lunch_until": "2025-03-21",
+   "incidents": [],
+   "messages": [
+    "Parent happy with the mapped menu."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current clinician letter",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 34,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 28,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "no_gap",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 86,
+ "deciding": {
+  "evidence_allergens_covered": "Evidence lists egg, soya, mustard and celery; the three mapped dishes carry substitutes covering all four.",
+  "next_step": "Current clinician letter, every dish substituted with later spec checks, controls verified, no incidents: release unchanged.",
+  "first_gap_stage": "Evidence expires 2026-11-12, all dishes substituted, training within 12 months, segregated equipment and complete cleaning log.",
+  "exposure_proximity": "All dishes substituted and controls verified, with no incidents; only slight doubt as no meal has been served yet.",
+  "meal_urgency": "packed_lunch_until 2025-03-21 versus review_date 2025-02-03 puts the first meal 2025-03-24, over 20 school days away."
+ },
+ "request": "rec-F403-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010549
+}

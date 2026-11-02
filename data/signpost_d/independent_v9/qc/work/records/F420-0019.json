@@ -1,0 +1,123 @@
+{
+ "id": "F420-0019",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "AKE40004QQ",
+   "flt": "QQ321",
+   "dest": "CDG",
+   "contour_max_cm": 163,
+   "tare_kg": 150,
+   "planned_gross_kg": 1000,
+   "straps_required": 3
+  },
+  "manifest_lines": [
+   {
+    "awb": "125-60000006",
+    "dest": "CDG",
+    "pcs": 9,
+    "weight_kg": 850
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2025-03-04T11:10:00Z",
+   "scale_gross_kg": 990,
+   "max_height_cm": 150,
+   "pcs_counted": {
+    "125-60000006": 5
+   },
+   "straps_fitted": 3,
+   "uld_serial_scanned": "AKE40004QQ"
+  },
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "125-60000060",
+     "pcs_this_flight": 5
+    }
+   ]
+  },
+  "dg_notoc": null,
+  "checks_log": {
+   "scale_cal_due": "2030-01-01"
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": -1.0,
+  "piece_count_gap": -4,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "awb_transposed_in_part_shipment",
+  "minutes_to_cutoff": 72,
+  "prior_rebuilds": 3
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -6.4,
+  "piece_count_gap": 4,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "dg_segregation_conflict",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 72,
+  "prior_rebuilds": 3
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "release",
+   "second": "release_conditional",
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "clear",
+   "target": "paperwork_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "weight_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "pieces_reconciled": "AWB 125-60000006 counted 5 of 9; the part shipment lists 125-60000060 (transposed digits) with 5 pcs, so it may or may not cover the shortfall.",
+  "disposition": "Physical build is within limits, but the transposed AWB in part_shipments is a document point that could be released past or confirmed first.",
+  "worst_discrepancy": "The only disagreement is the transposed AWB in part_shipments; weight, height and straps are within limits and there is no DG.",
+  "weight_deviation": "Planned 1000 kg against scale 990 kg is exactly 1.0%, at the boundary between levels 0 and 1.",
+  "rework_extent": "Weight is at 1%, height is fine and straps are complete; no physical change is needed."
+ },
+ "request": "rec-F420-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009956
+}

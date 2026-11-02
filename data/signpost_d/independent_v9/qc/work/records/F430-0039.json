@@ -1,0 +1,126 @@
+{
+ "id": "F430-0039",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "C",
+     "alarm": 85,
+     "trip": 95,
+     "partner_id": "T2",
+     "customers_fed": 1073
+    }
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 188,
+    "unit": "F"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "T1",
+    "note": "winding temp high"
+   }
+  ],
+  "history": {
+   "previous_round": {
+    "oil_temp": 187,
+    "unit": "F"
+   },
+   "load_events": [
+    "T2 to T1 transfer ended 3d earlier"
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "T2": "in_service"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": false,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 1073,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": false,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 1073,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "leaning",
+   "target": "work_order",
+   "second": null,
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 29,
+ "deciding": {
+  "defect_corroborated": "The note says winding temp is high, and winding temperature was never recorded. The oil temperature at alarm is related, so either answer is defensible.",
+  "benign_explanation": "The load transfer ended 3 days before the round, so it only partly explains an alarm-level reading today. That keeps this balanced.",
+  "follow_up": "The alarm-level reading is stable against last round and has no firm explanation, which points to a planned work order. The partly relevant load transfer leaves some doubt.",
+  "limit_deviation": "188 F converts to 86.7 C, above the 85 C alarm limit and below the 95 C trip limit, so it is level 2.",
+  "supply_exposure": "T2 is in service and carries the load, so no customers would be lost. There is slight doubt because the alarm defect is still open."
+ },
+ "request": "rec-F430-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009872
+}

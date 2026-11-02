@@ -1,0 +1,119 @@
+{
+ "id": "F409-0022",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "A. Rowe",
+   "submitted_on": "2024-06-01",
+   "app_type": "renewal",
+   "message": "Where do I collect vouchers?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-03-16",
+     "address_line": "9 Elm St",
+     "verified": false
+    }
+   ]
+  },
+  "vehicle": {
+   "keeper_name": "T. Hale",
+   "supporting_letters": []
+  },
+  "request": {
+   "address": "9 Elm St"
+  },
+  "account_history": {
+   "live_permits": [
+    1,
+    2,
+    3
+   ],
+   "exceptions": [
+    {
+     "type": "medical",
+     "approved_on": "2023-02-01"
+    }
+   ],
+   "pcns": []
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 77,
+  "docs_missing": 1,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 3,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 77,
+  "docs_missing": 1,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 3,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "contested",
+   "target": "misuse_record",
+   "second": "residence_proof",
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "residency_shown": "Council tax bill verified false, so residency is not shown.",
+  "disposition": "Unverified residence document and keeper differs without a letter.",
+  "main_issue": "Different keeper with no letter versus unverified bill; both could drive the outcome.",
+  "misuse_strength": "Different keeper without a letter is one indicator; a second is arguable from the unverified evidence.",
+  "document_gaps": "Bill unverified and keeper letter absent; count of two or three is arguable."
+ },
+ "request": "rec-F409-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004824
+}

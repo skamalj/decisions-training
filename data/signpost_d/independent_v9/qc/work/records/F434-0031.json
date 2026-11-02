@@ -1,0 +1,118 @@
+{
+ "id": "F434-0031",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 3,
+   "riders_started": 120
+  },
+  "post": {
+   "km_marker": 41,
+   "post_type": "junction",
+   "marshals_rostered": 2,
+   "marshals_signed_in": 2,
+   "on_post_from": "09:00",
+   "off_post_at": "11:40"
+  },
+  "incidents": [],
+  "control_record": {
+   "incident_log": [
+    {
+     "time": "10:22",
+     "km": 41,
+     "type": "fall",
+     "bibs": [
+      57
+     ]
+    }
+   ],
+   "medical_handovers": [
+    {
+     "bib": 57,
+     "km": 41,
+     "destination": "St Mary Hospital"
+    }
+   ],
+   "road_reopened_at": {
+    "38-45": "11:20"
+   }
+  },
+  "sweep": null
+ },
+ "factors": {
+  "reopen_before_sweep": true,
+  "incident_mix": "fall",
+  "control_log_mismatch": "control incident absent from post list",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "hospital transfer",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 21.3,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": true,
+  "incident_mix": "fall",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "medic_attended",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 21.3,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file",
+   "second": null,
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "balanced",
+   "target": "no_incident",
+   "second": "mechanical_only",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (reopen_before_sweep = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 50,
+ "deciding": {
+  "coverage_held": "Sweep is null so passage cannot be verified, though the post was staffed 09:00-11:40 with full sign-in.",
+  "next_step": "The post is staffed and control has a confirmed handover; the missing post incident and null sweep are the doubts.",
+  "incident_class": "The post list is empty but control logs a fall at km 41, so no_incident versus a fall is the open question.",
+  "reversal_time": "The fall and hospital handover have a short recovery, but the early road reopening is a process lapse that is hard to size.",
+  "consequence_severity": "The handover goes to a hospital and the road reopened at 11:20 before the sweep was confirmed."
+ },
+ "request": "rec-F434-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.002427
+}

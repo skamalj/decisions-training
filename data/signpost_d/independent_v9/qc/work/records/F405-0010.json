@@ -1,0 +1,160 @@
+{
+ "id": "F405-0010",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-4102",
+   "detected_on": "2025-11-03",
+   "term_start": "2025-11-03",
+   "room": "EN-3.07"
+  },
+  "booking_a": {
+   "module": "CHE210",
+   "dept": "CHEM",
+   "day": "Mon",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "headcount": 45,
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "CHE230",
+   "dept": "CHEM",
+   "day": "Mon",
+   "start": "11:00",
+   "end": "13:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "headcount": 30,
+   "status": "pending_approval",
+   "approved_at": null,
+   "approver": null
+  },
+  "room": {
+   "code": "EN-3.07",
+   "capacity": 50,
+   "features": []
+  },
+  "alternatives": [
+   {
+    "code": "EN-1.15",
+    "capacity": 55,
+    "features": [],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "pending_approval",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "fits",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.82,
+  "required_feature": "none",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 3
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "pending_approval",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": -7,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.81,
+  "required_feature": "none",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 3
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 94,
+ "deciding": {
+  "genuine_clash": "Same room and weeks, but booking_a ends 11:00 exactly when booking_b starts 11:00; b being unapproved adds some doubt, so it is borderline.",
+  "alt_room_fits": "EN-1.15 has capacity 55 for headcount 45, needs no features, and is free in weeks 1-6.",
+  "resolution": "The times are back-to-back with no overlap in the same room, so the report is dismissed.",
+  "urgency": "detected_on equals term_start and the slot is Monday of week 1, so the first occurrence is today; a back-to-back near-miss leaves level 2 defensible.",
+  "parties_needed": "With no overlap the officer alone can close the report, though the unapproved booking_b leaves slight doubt."
+ },
+ "request": "rec-F405-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013884
+}

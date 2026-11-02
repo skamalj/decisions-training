@@ -1,0 +1,151 @@
+{
+ "id": "F414-0024",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SR-056",
+   "equip_type": "spring_rocker",
+   "crit_fall_height_m": 0.4,
+   "surf_type": "loose_fill",
+   "variance_ref": null
+  },
+  "inspection": {
+   "insp_date": "2025-03-18",
+   "insp_grade": "operational",
+   "fall_height_m": 0.4,
+   "surf_type_found": "loose_fill",
+   "surf_depth_mm": 150,
+   "surf_req_table": [
+    {
+     "band": "<=0.6",
+     "type": "loose_fill",
+     "min_depth_mm": 200
+    }
+   ],
+   "probe_results": [],
+   "findings": [
+    {
+     "defect_code": "PNT-04",
+     "component_id": "C1",
+     "injury_mech": "cosmetic"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "SR-056",
+    "component_id": "C2",
+    "defect_ref": "D-12",
+    "status": "open"
+   },
+   {
+    "wo_id": "W2",
+    "asset_id": "SR-056",
+    "component_id": "C1",
+    "defect_ref": "D-13",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "high",
+   "incident_reports_90d": 1
+  },
+  "history": [
+   {
+    "date": "2024-12-10",
+    "grade": "operational",
+    "defect_refs": [
+     "D-12",
+     "D-13"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -50.0,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 2,
+  "work_orders_closed_fraction": 0.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "high",
+  "incident_reports_90d": 1
+ },
+ "factors_sampled": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "large",
+  "surfacing_depth_margin_mm": -55.39,
+  "worst_defect_class": "no_mechanism",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 2,
+  "work_orders_closed_fraction": 0.64,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": true,
+  "inspector_grade": "operational",
+  "usage_level": "high",
+  "incident_reports_90d": 3
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 91,
+ "deciding": {
+  "prior_defects_cleared": "Both previous defects D-12 and D-13 have open orders.",
+  "surfacing_adequate": "150 mm measured against 200 mm minimum.",
+  "asset_disposition": "Only a cosmetic finding and no hazard, though open orders and thin surfacing cast some doubt.",
+  "remedial_progress": "Both orders are open and none is closed.",
+  "hazard_severity": "The only finding is PNT-04, cosmetic."
+ },
+ "request": "rec-F414-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012927
+}

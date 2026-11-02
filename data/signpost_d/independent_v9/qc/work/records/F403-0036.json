@@ -1,0 +1,132 @@
+{
+ "id": "F403-0036",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-4417",
+   "declared_allergens": [
+    "milk",
+    "egg",
+    "soy",
+    "sesame"
+   ],
+   "auto_injector": false,
+   "plan_start": "2025-03-03"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-01-31",
+   "allergens": [
+    "milk",
+    "egg",
+    "soy",
+    "sesame"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-02-20",
+   "dishes": [
+    {
+     "dish": "sesame flatbread",
+     "contains": [
+      "sesame"
+     ],
+     "recipe_version_date": "2025-03-01",
+     "substitute": "plain wrap",
+     "spec_checked_on": null
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "trained": "2024-01-15",
+   "cleaning_log_complete": true
+  },
+  "history": {
+   "review_date": "2025-03-10",
+   "packed_lunch_until": "2025-03-10",
+   "incidents": [],
+   "messages": [
+    "Cook: this plan worries me, please look today."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "training_lapsed",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 1,
+  "packed_lunch_interim": true,
+  "note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "training_lapsed",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 22,
+  "packed_lunch_interim": true,
+  "note_tone": "alarmed"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "approve_plan",
+   "second": "return_for_rework",
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "clear",
+   "target": "menu_gap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "exposure_proximity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 42,
+ "deciding": {
+  "evidence_allergens_covered": "Evidence lists milk, egg, soy and sesame, but only one dish (sesame) is mapped; the other three may simply not appear on the cycle, so coverage is doubtful but defensible either way.",
+  "next_step": "Single substituted dish has a recipe dated after mapping with no spec check (argues for rework or restriction), yet a substitute exists and the first meal is a day away; approve vs rework is contested.",
+  "first_gap_stage": "Evidence is current and clinician-signed, but the sesame flatbread recipe (2025-03-01) postdates mapping (2025-02-20) and spec_checked_on is null, so the menu is the first shortfall.",
+  "exposure_proximity": "The dish has a substitute (level 0 reading), but training dated 2024-01-15 is past 12 months at the 2025-03-10 review (level 1 reading); contested.",
+  "meal_urgency": "packed_lunch_until 2025-03-10 equals review_date, so the first school meal is the next school day."
+ },
+ "request": "rec-F403-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013104
+}

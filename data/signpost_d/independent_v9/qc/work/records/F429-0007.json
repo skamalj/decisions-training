@@ -1,0 +1,168 @@
+{
+ "id": "F429-0007",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 100,
+   "ramp_max_m_per_10min": 0.5,
+   "operator_id": "OP17"
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "t": "05:30",
+     "level_m": 101.49
+    }
+   ],
+   "triggers": {
+    "alert_m": 100.5,
+    "action_m": 101.5
+   },
+   "rainfall_mm_24h": 22
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "05:00",
+    "open_before_m": 1.0,
+    "open_after_m": 1.2
+   },
+   {
+    "gate": "G2",
+    "t": "05:00",
+    "open_before_m": 0.8,
+    "open_after_m": 0.8
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.12
+    },
+    {
+     "gate": "G2",
+     "opening_m": 0.8
+    }
+   ],
+   "calc_peak_m3s": 97.5,
+   "gauged_peak_m3s": 83.8,
+   "tailwater_m": [
+    {
+     "t": "05:40",
+     "m": 42.1
+    },
+    {
+     "t": "06:05",
+     "m": 42.6
+    }
+   ]
+  },
+  "instruments": {
+   "piezometers": [
+    {
+     "id": "P1",
+     "t": "05:50",
+     "kpa": 140,
+     "alert_kpa": 180
+    }
+   ],
+   "seepage_weir_lps": [
+    {
+     "t": "05:50",
+     "v": 2.4,
+     "alert": 8
+    }
+   ],
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "07:10"
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "04:40",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "alert",
+  "near_boundary": true,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "material",
+  "discharge_discrepancy_pct": 16.4,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": true,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 16.4,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "trigger_tier": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 98,
+ "deciding": {
+  "within_licence": "Calculated 97.5 and gauged 83.8 are both under the 100 limit. The calculated figure is within 3% of it, which leaves some doubt.",
+  "gates_reconciled": "G1 open_after_m is 1.2 but the calculation used 1.12, so the gate openings do not match.",
+  "next_step": "Inspection is completed, the warning was sent before the first gate move at 05:00, and the instruments are in limits. The record is ready to accept.",
+  "trigger_tier": "Level 101.49 is 0.01 m under the 101.5 action trigger and well above the 100.5 alert trigger. Alert and action are both defensible.",
+  "parties_needed": "The gate data discrepancy likely needs the operator, the calculation owner and a senior engineer, so three or four parties. This is somewhat uncertain."
+ },
+ "request": "rec-F429-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009729
+}

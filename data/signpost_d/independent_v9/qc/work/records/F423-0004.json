@@ -1,0 +1,121 @@
+{
+ "id": "F423-0004",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-60318",
+   "stock_spec": "GL-200",
+   "run_qty": 14000,
+   "overs_pct": 3.4,
+   "customer_tier": "key_account",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "signed_at": "2024-08-20T09:20:00",
+   "concession": {
+    "accepted_max_de": 4.0
+   }
+  },
+  "colour_readings": null,
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.13,
+     "in_image": false
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P2",
+   "stock_loaded": "GL-200",
+   "first_production_at": "2024-08-20T08:35:00",
+   "sheets_production": 1329,
+   "sheets_makeready": 260,
+   "stoppages": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": true,
+  "readings_completeness": "section_null",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 1329,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 3.4,
+  "register_offset_mm": 0.13,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 74,
+  "customer_tier": "key_account",
+  "prior_stoppages": 4
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": true,
+  "readings_completeness": "section_null",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 1329,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 3.4,
+  "register_offset_mm": 0.13,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 74,
+  "customer_tier": "key_account",
+  "prior_stoppages": 4
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "adjust_and_recheck",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "colour_in_tolerance": "colour_readings is null, so no patch was measured.",
+  "run_before_signoff": "signed_at 09:20 is after first_production_at 08:35, with 1329 production sheets between them.",
+  "next_step": "The colour readings are missing, so the sheet must be re-pulled and measured; register is fine and stock matches.",
+  "staff_effort": "Re-pulling and measuring a sheet takes under an hour, though the printed sheets add some doubt.",
+  "scrap_exposure": "1329 sheets ran without verified colour; overs are about 476 and 10% of run is 1400, so the count sits just under the top threshold."
+ },
+ "request": "rec-F423-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009693
+}

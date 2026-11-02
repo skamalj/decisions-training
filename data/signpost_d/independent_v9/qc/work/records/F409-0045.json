@@ -1,0 +1,141 @@
+{
+ "id": "F409-0045",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A-9015",
+   "full_name": "Priya Sethi",
+   "submitted_on": "2025-07-14",
+   "app_type": "change_of_address",
+   "message": "Do you issue permits by post?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2025-02-06",
+     "address_line": "Flat 3, 21 Dale Road",
+     "verified": true
+    },
+    {
+     "doc_type": "tenancy_agreement",
+     "issued_on": "2025-02-01",
+     "address_line": "Flat 3, 21 Dale Road",
+     "verified": null
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2022-05-10",
+     "address_line": "Flat 5, 21 Dale Road",
+     "verified": false
+    }
+   ],
+   "note": "No council tax bill received."
+  },
+  "vehicle": {
+   "plate": "NP65 WXA",
+   "keeper_name": "Sethi Motors Ltd",
+   "supporting_letters": []
+  },
+  "request": {
+   "zone_code": "A3",
+   "address": "Flat 5, 21 Dale Road",
+   "plate_entered": "NP65 WXA"
+  },
+  "account_history": {
+   "live_permits": [
+    "P-401",
+    "P-402"
+   ],
+   "past_permits": [
+    {
+     "status": "seized",
+     "seize_reason": "altered expiry date suspected"
+    }
+   ],
+   "pcns": [],
+   "exceptions": [
+    {
+     "type": "medical",
+     "approved_on": "2024-03-05"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "change_of_address",
+  "address_match_level": "different_flat",
+  "proof_age_days": 158,
+  "docs_missing": 3,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 2,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "change_of_address",
+  "address_match_level": "different_flat",
+  "proof_age_days": 158,
+  "docs_missing": 3,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": true,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "refuse",
+   "second": "hold",
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 84,
+ "deciding": {
+  "residency_shown": "Bill and tenancy agreement say Flat 3 while the request and ID say Flat 5; the bill is 158 days old and the tenancy is unverified.",
+  "disposition": "Unverified flat-mismatched proof and an unletted company keeper suggest refusal, though missing items could instead justify a hold.",
+  "main_issue": "Cap is reached but covered by a medical exception; the plan treats no single check as failing.",
+  "misuse_strength": "Company keeper with no letter plus a seized permit with an altered-expiry suspicion that is not confirmed as altered.",
+  "document_gaps": "Council tax bill absent, tenancy unverified, ID unverified; the stale bill may also count, giving three or two."
+ },
+ "request": "rec-F409-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008907
+}

@@ -1,0 +1,126 @@
+{
+ "id": "F411-0021",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H214",
+   "type": "hackney",
+   "expiry": "2025-06-30",
+   "review_date": "2025-06-10"
+  },
+  "vehicle": {
+   "odometer_km": 152800
+  },
+  "inspection": {
+   "result_code": "F",
+   "brake_efficiency_pct": 62
+  },
+  "defects": [
+   {
+    "code": "TYR2",
+    "grade": "minor",
+    "note": "tread 1.7mm",
+    "rectify_by": "2025-06-01",
+    "repaired_on": null,
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-06-10"
+   },
+   {
+    "type": "badge",
+    "expires_on": "2025-05-01"
+   }
+  ],
+  "history": [
+   {
+    "date": "2024-06-05",
+    "result": "P",
+    "odometer_km": 121000
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "not_started",
+  "deadline_passed": true,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": true,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 14
+ },
+ "factors_sampled": {
+  "worst_defect_found": "advisory",
+  "rectification_state": "retest_passed",
+  "deadline_passed": true,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 14
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "minor_fail",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "odometer_consistent": "Current 152,800 km is above the only history reading (121,000 km a year earlier); no drop, no replacement.",
+  "next_step": "The badge is expired (one clear gap), pointing to request_evidence; the insurance expiring on the review date could push it to two gaps and refusal.",
+  "inspection_outcome": "The only defect is graded minor and the result code is F, so the worst failing item is minor.",
+  "document_gaps": "Badge expired 2025-05-01 is a clear gap; insurance expires_on equals review_date 2025-06-10 with no cover note, so it is one or two.",
+  "outstanding_severity": "The minor tyre item (rectify_by 2025-06-01) is past its deadline and not repaired; tread 1.7mm is near the limit, so a reviewer might rate it as major."
+ },
+ "request": "rec-F411-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012187
+}

@@ -1,0 +1,144 @@
+{
+ "id": "F411-0008",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "TX0457",
+   "type": "hackney",
+   "expiry": "2025-06-30",
+   "review_date": "2025-06-10"
+  },
+  "vehicle": {
+   "first_reg": "2015-02-17",
+   "odometer_km": 88190
+  },
+  "inspection": {
+   "date": "2025-05-14",
+   "result_code": "F",
+   "brake_efficiency_pct": 68
+  },
+  "defects": [
+   {
+    "code": "BP2",
+    "grade": "minor",
+    "rectify_by": "2025-06-01",
+    "repaired_on": "2025-05-20",
+    "retest_on": "2025-05-22",
+    "retest_result": "pass"
+   },
+   {
+    "code": "LT1",
+    "grade": "advisory",
+    "rectify_by": null,
+    "repaired_on": null,
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-06-05",
+    "cover_note_ref": "CN-5521",
+    "cover_until": "2025-07-05"
+   },
+   {
+    "type": "mot",
+    "expires_on": "2025-11-20"
+   }
+  ],
+  "history": {
+   "inspections": [
+    {
+     "date": "2023-06-15",
+     "result": "P",
+     "odometer_km": 61900
+    },
+    {
+     "date": "2024-06-12",
+     "result": "F",
+     "odometer_km": 88130
+    },
+    {
+     "date": "2024-12-03",
+     "result": "F",
+     "odometer_km": 88150
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 10
+ },
+ "factors_sampled": {
+  "worst_defect_found": "dangerous",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": true,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 2,
+  "vehicle_age_years": 10
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "renew",
+   "second": "conditional_renewal",
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "balanced",
+   "target": "minor_fail",
+   "second": "major_fail",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "odometer_consistent": "Only 40 km since the 2024-12 reading (88150 to 88190) for a hackney that did about 26000 km a year earlier; implausibly low use, though not a drop.",
+  "next_step": "Minor defect repaired and retested pass before its deadline, insurance covered by a note; a plain renewal fits, but the leftover advisory and cover-note reliance make a conditional renewal equally arguable.",
+  "inspection_outcome": "BP2 is graded minor in the defects list; its code relates to brake pipework, so some could treat it as more serious.",
+  "document_gaps": "Insurance expires_on 2025-06-05 is before review_date but cover note CN-5521 runs to 2025-07-05; counts as in date, yet a strict reader could count it as a gap.",
+  "outstanding_severity": "BP2 repaired with retest pass; only advisory LT1 stays unrectified, so level 0 or 1."
+ },
+ "request": "rec-F411-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015553
+}

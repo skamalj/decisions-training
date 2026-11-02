@@ -1,0 +1,133 @@
+{
+ "id": "F430-0005",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "SS-402",
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "C",
+     "normal_band": [
+      30,
+      80
+     ],
+     "alarm_limit": 95,
+     "trip_limit": 105,
+     "customers_fed": 15768
+    }
+   ]
+  },
+  "round": {
+   "id": "RD-88",
+   "date": "2024-09-10",
+   "scheduled_assets": [
+    "T1"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 62,
+    "unit": "C",
+    "timestamp": "2024-09-10T08:30:00"
+   }
+  ],
+  "defects": [],
+  "history": {
+   "previous_round": [
+    {
+     "asset_id": "T1",
+     "param": "oil_temp",
+     "value": 66
+    }
+   ],
+   "load_events": []
+  },
+  "network": {}
+ },
+ "factors": {
+  "worst_reading_band": "normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "none",
+  "benign_cause_covers": false,
+  "defect_claim": "none_logged",
+  "trend_vs_last_round": "improving",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 15768,
+  "trivial_discrepancies": 0,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "improving",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 15768,
+  "trivial_discrepancies": 3,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "follow_up": {
+   "clarity": "clear",
+   "target": "file_closed",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 29,
+ "deciding": {
+  "defect_corroborated": "No defects logged.",
+  "benign_explanation": "Oil temp 62 C is normal, and no explanation is documented because none is needed.",
+  "follow_up": "All in band, nothing logged: file closed.",
+  "limit_deviation": "62 C within the 30-80 band.",
+  "supply_exposure": "No open defect, so no exposure despite 15768 customers fed."
+ },
+ "request": "rec-F430-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006385
+}

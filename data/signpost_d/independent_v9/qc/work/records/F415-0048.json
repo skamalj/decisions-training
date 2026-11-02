@@ -1,0 +1,137 @@
+{
+ "id": "F415-0048",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": [
+    {
+     "from": "12:00",
+     "to": "13:10",
+     "approved_by": "OFF-31"
+    }
+   ]
+  },
+  "shift": {
+   "sched_slots": [
+    "08:00",
+    "10:00",
+    "12:00",
+    "14:00",
+    "16:00",
+    "18:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "checklist": null,
+    "photo_ref": null
+   },
+   {
+    "slot": "10:00",
+    "checklist": null
+   },
+   {
+    "slot": "14:00",
+    "status": "not_recorded",
+    "op_note": "strong smell, traced to sewer works on road outside"
+   },
+   {
+    "slot": "16:00",
+    "checklist": null
+   }
+  ],
+  "faults": [
+   {
+    "type": "no_soap_or_paper",
+    "reported_at": "12:20",
+    "remedied_at": "13:15"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "18:30",
+   "comment": "signed from depot"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 6,
+  "missed_slots": "2",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "no_soap_or_paper",
+  "fault_open_minutes": 55.0,
+  "block_closed_during_fault": true,
+  "checklist_completion": "absent",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 2
+ },
+ "factors_sampled": {
+  "scheduled_slots": 6,
+  "missed_slots": "2",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "no_soap_or_paper",
+  "fault_open_minutes": 408.34,
+  "block_closed_during_fault": true,
+  "checklist_completion": "absent",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 2
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_noted",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "missed_clean": "12:00 and 18:00 have no visit; 12:00 sits in an approved closure but 14:00 is not_recorded and 18:00 has no visit; the benign sewer-works note and no checklists leave it two-sided.",
+  "sign_off_valid": "Supervisor role and signed 18:30, but the comment says signed from depot and no visit end times or checklists exist to check against.",
+  "next_step": "Recording lapses with a benign external cause and no confirmed contractor failure point to accepting with a note.",
+  "staff_effort": "Missing slots, absent checklists and photos, and the sewer works dispute would take extended work to resolve, though doubt remains.",
+  "fault_exposure": "Fault 12:20-13:15 lies almost entirely inside the 12:00-13:10 closure, leaving only about 5 minutes public, near the boundary between none and under an hour."
+ },
+ "request": "rec-F415-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009797
+}

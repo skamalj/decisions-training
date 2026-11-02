@@ -1,0 +1,155 @@
+{
+ "id": "F405-0033",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-7310",
+   "detected_on": "2025-10-03",
+   "term_start": "2025-09-29",
+   "room": "LAB-3A",
+   "slot": "Thu 10:00"
+  },
+  "booking_a": {
+   "module": "CHM2050",
+   "dept": "CHM",
+   "day": "Thu",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "headcount": 36,
+   "required_features": [
+    "lab_benches"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "PHY2010",
+   "dept": "PHY",
+   "room": "LAB-3A-N",
+   "day": "Thu",
+   "start": "12:00",
+   "end": "14:00",
+   "weeks": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "status": "confirmed"
+  },
+  "room": {
+   "code": "LAB-3A",
+   "aliases": [
+    "LAB-3A-N"
+   ],
+   "capacity": 40
+  },
+  "alternatives": [
+   {
+    "room": "LAB-4B",
+    "capacity": 40,
+    "features": [
+     "lab_benches"
+    ],
+    "weeks_free": [
+     2,
+     3,
+     4,
+     5
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "change_request",
+    "state": "open",
+    "module": "PHY2010",
+    "target_start": "12:15"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 6,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.9,
+  "required_feature": "lab_benches",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 1
+ },
+ "factors_sampled": {
+  "overlap_type": "full",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 44,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.1,
+  "required_feature": "lab_benches",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 1
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "balanced",
+   "target": "reschedule",
+   "second": "dismiss",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "genuine_clash": "LAB-3A-N is an alias, so the room is shared, but booking_a ends 12:00 exactly when booking_b starts, so no times overlap.",
+  "alt_room_fits": "LAB-4B has capacity 40 for 36 students and lab_benches, free in weeks 2-5; the margin is thin and it is unclear which booking would move.",
+  "resolution": "Back-to-back times point to dismissal, while the open change request and the rooms list leave some chance a move is wanted.",
+  "urgency": "Detected Fri 2025-10-03; shared week 2 Thursday is 2025-10-09, six days later.",
+  "parties_needed": "Two departments are involved, but with no overlap one officer could close it, so one or two parties are both defensible."
+ },
+ "request": "rec-F405-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013731
+}

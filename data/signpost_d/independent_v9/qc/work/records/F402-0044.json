@@ -1,0 +1,114 @@
+{
+ "id": "F402-0044",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "priority": "soon",
+   "received": "2025-03-05",
+   "onset": "2025-01-15"
+  },
+  "patient": {
+   "consent_to_refer": null
+  },
+  "clinical": {
+   "red_flags": [
+    "cancer_history_new_spinal_pain"
+   ],
+   "function_index": 95
+  },
+  "gp_record": {
+   "first_presented": "2024-11-04",
+   "falls_3m": 4
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-02-20",
+    "result": "no_sinister"
+   }
+  ],
+  "history": {
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "major",
+  "missing_item": "consent_to_refer",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 7,
+  "function_index": 95.12,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "soon",
+  "falls_last_3m": 4,
+  "post_op_days": 88,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "major",
+  "missing_item": "consent_to_refer",
+  "condition_group": "post_op_orthopaedic",
+  "symptom_duration_weeks": 7,
+  "function_index": 95.12,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "soon",
+  "falls_last_3m": 4,
+  "post_op_days": 88,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_as_referred",
+   "second": "request_info",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "red_flag_unresolved": "MRI within 8 weeks with no_sinister explains the cancer-history spinal pain flag.",
+  "next_step": "Consent is null favouring a query, but the rest is acceptable.",
+  "pathway": "Function index 95 with self-management tried and a benign MRI suits self-management.",
+  "reversal_time": "Onset conflict and the consent gap take weeks to undo; boundary with 1-7 days.",
+  "clinical_urgency": "Four falls in 3 months need contact within two weeks."
+ },
+ "request": "rec-F402-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004677
+}

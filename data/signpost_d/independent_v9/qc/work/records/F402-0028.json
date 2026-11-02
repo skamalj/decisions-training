@@ -1,0 +1,136 @@
+{
+ "id": "F402-0028",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "C318",
+   "priority": "routine",
+   "site": "thoracic_spine",
+   "onset": "2024-10-28",
+   "received": "2025-04-07"
+  },
+  "clinical": {
+   "dx": "M54.6",
+   "red_flags": [
+    "cancer_history_new_spinal_pain"
+   ],
+   "neuro_signs": {
+    "progression": "stable"
+   },
+   "function_index": 90.41,
+   "surgery_date": null
+  },
+  "gp_record": {
+   "falls_3m": 1,
+   "reviews": [
+    "2024-12-10"
+   ],
+   "med_codes": [
+    "analgesic_opioid_weak"
+   ]
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-03-28",
+    "result": "pending"
+   }
+  ],
+  "history": {
+   "episodes": [
+    {
+     "start": "2024-06-01"
+    },
+    {
+     "start": "2024-08-20"
+    },
+    {
+     "start": "2024-11-15"
+    },
+    {
+     "start": "2025-01-20"
+    }
+   ],
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 23,
+  "function_index": 90.41,
+  "prior_episodes_12m": 4,
+  "referrer_priority": "routine",
+  "falls_last_3m": 1,
+  "post_op_days": "none",
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 23,
+  "function_index": 90.41,
+  "prior_episodes_12m": 4,
+  "referrer_priority": "routine",
+  "falls_last_3m": 4,
+  "post_op_days": 65,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_lead",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "pathway": {
+   "clarity": "balanced",
+   "target": "redirect_out",
+   "second": "specialist_rehab",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "red_flag_unresolved": "Cancer-history spinal pain flag. MRI is pending, so there is no result. A GP review exists after onset, but it is not shown as urgent or as explaining the flag.",
+  "next_step": "New spinal pain with a cancer-history flag, four episodes in 12 months and a pending MRI needs medical or lead review. Routine acceptance is not right.",
+  "pathway": "The cancer flag with a pending MRI points to a medical service (redirect_out). Stable neuro signs and very good function leave specialist rehab plausible.",
+  "reversal_time": "A short delay can be undone within a week if the MRI is clear. A missed metastasis could take weeks to months to recover, so level 1 and level 2 are both defensible.",
+  "clinical_urgency": "The MRI was done 2025-03-28 and the result is pending, with stable neuro signs and function index 90. First contact within six weeks is plausible. Waiting longer is arguable."
+ },
+ "request": "rec-F402-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00964
+}

@@ -1,0 +1,154 @@
+{
+ "id": "F415-0009",
+ "family": "F415",
+ "state": {
+  "site": {
+   "id": "WB-42",
+   "hours": "07:00-19:00",
+   "footfall_band": "medium",
+   "closures": [
+    {
+     "from": "2024-07-09T11:15",
+     "to": "2024-07-09T12:00",
+     "reason": "police incident",
+     "approved_by": "OFF088"
+    }
+   ]
+  },
+  "shift": {
+   "date": "2024-07-09",
+   "start": "07:00",
+   "end": "15:00",
+   "crew": "C9",
+   "sched_slots": [
+    "07:30",
+    "11:00",
+    "14:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "07:30",
+    "start": "07:31",
+    "end": "07:58",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "pans": true,
+     "basins": true
+    },
+    "photo_ref": "P310"
+   },
+   {
+    "slot": "11:00",
+    "status": "not_recorded",
+    "op_note": "block shut from 11:00, police incident"
+   },
+   {
+    "slot": "14:00",
+    "start": "14:02",
+    "end": "14:30",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "pans": true,
+     "basins": true
+    },
+    "photo_ref": "P311"
+   }
+  ],
+  "faults": [],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "14:40"
+  },
+  "history": {
+   "prior_defaults_90d": 4,
+   "complaints_90d": 2
+  }
+ },
+ "factors": {
+  "scheduled_slots": 3,
+  "missed_slots": "1 apparent gap (11:00), closure begins 15 minutes later",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "none",
+  "fault_open_minutes": "none",
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "explains_gap_unbacked",
+  "prior_defaults_90d": 4
+ },
+ "factors_sampled": {
+  "scheduled_slots": 3,
+  "missed_slots": "0",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "missing",
+  "fault_type": "none",
+  "fault_open_minutes": 10.75,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "explains_gap_unbacked",
+  "prior_defaults_90d": 4
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "sign_off_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 119,
+ "deciding": {
+  "missed_clean": "The 11:00 slot is not_recorded and the approved closure starts at 11:15, while the note says shut from 11:00; the 15-minute mismatch keeps it balanced.",
+  "sign_off_valid": "Supervisor signed 14:40, after the final visit ended 14:30.",
+  "next_step": "The gap is explained by an approved police-incident closure, the other visits are complete with photos and the sign-off is valid, so accept.",
+  "staff_effort": "At most a quick check of the 15-minute window mismatch against the closure record is needed.",
+  "fault_exposure": "The faults list is empty."
+ },
+ "request": "rec-F415-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010082
+}

@@ -1,0 +1,112 @@
+{
+ "id": "F418-0004",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "PLT",
+   "plat": 1,
+   "date": "2025-06-09",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "A1"
+   },
+   {
+    "staff_id": "A2"
+   }
+  ],
+  "attendance": null,
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "02:10"
+   }
+  ],
+  "controls": {
+   "possession_from": "01:00",
+   "possession_to": "04:00",
+   "prior_shortfalls_30d": 0
+  },
+  "remarks": [
+   "Staffed as rostered."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 92,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "vague",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 0,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 92,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "vague",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 0,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_ops",
+   "second": "request_records",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "leaning",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "headcount_verified": "attendance is null so no sign-ons can be checked, though remarks say staffed as rostered.",
+  "next_step": "Missing attendance suggests requesting records, while the unclosed gap on a staff-dispatch platform could justify escalation.",
+  "coverage_outcome": "Remarks say staffed as rostered and the gap lies inside the possession window.",
+  "reversal_time": "Missing attendance record can be recovered within days.",
+  "exposure_severity": "Unverified staffing, gap_start with no end and no dispensation shown; leaning on missing certified-staff evidence."
+ },
+ "request": "rec-F418-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005827
+}

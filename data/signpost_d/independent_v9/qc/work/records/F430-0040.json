@@ -1,0 +1,131 @@
+{
+ "id": "F430-0040",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "TX7",
+     "param": "oil_temp",
+     "unit": "C",
+     "normal": [
+      55,
+      80
+     ],
+     "alarm": 85,
+     "trip": 95,
+     "partner_id": "TX8",
+     "customers_fed": 9960
+    }
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "TX7",
+    "param": "oil_temp",
+    "value": 86,
+    "unit": "C"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "TX7",
+    "note": "oil temp indicator high",
+    "photo_ref": "IMG-318"
+   }
+  ],
+  "history": {
+   "previous_round": {
+    "oil_temp": 85
+   },
+   "load_events": [
+    "TX8 load transferred to TX7"
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "TX8": "outage"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "alarm",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": true,
+  "defect_claim": "supported",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 9960,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": true,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": true,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 19017,
+  "trivial_discrepancies": 4,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "balanced",
+   "target": "recheck_next_round",
+   "second": "file_closed",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "defect_corroborated": "The high temperature indicator defect matches the 86 C reading, which is above the 85 C alarm limit, and a photo is attached.",
+  "benign_explanation": "A load transfer from TX8 to TX7 is logged and plausibly explains the heat. It is undated and the reading is above alarm, so a fault is still possible.",
+  "follow_up": "The load transfer and stable trend (85 to 86 C) support acceptance with a recheck. The alarm-level reading with the partner on outage argues for closing or for a recheck equally.",
+  "limit_deviation": "86 C is above the 85 C alarm limit and well below the 95 C trip limit, so it is level 2.",
+  "supply_exposure": "Partner TX8 is on outage, so TX7 failing would drop all 9,960 customers. That is just under 10,000, which makes level 3 lead and level 4 defensible."
+ },
+ "request": "rec-F430-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009872
+}

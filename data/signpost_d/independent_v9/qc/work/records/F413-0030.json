@@ -1,0 +1,146 @@
+{
+ "id": "F413-0030",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "care_home",
+   "stations": [
+    "S1",
+    "S2",
+    "S3"
+   ],
+   "zones": [
+    {
+     "z": "K1",
+     "banned_products": [
+      "RDX4"
+     ]
+    }
+   ]
+  },
+  "visit": {
+   "type": "routine",
+   "start": "2025-08-19T09:15",
+   "client_signoff": "2025-08-19"
+  },
+  "treatments": [
+   {
+    "product_code": "RDX4",
+    "zone": "K1",
+    "area_m2": 10,
+    "qty_applied": 200,
+    "unit": "g"
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "activity": true
+   },
+   {
+    "id": "S2",
+    "activity": false
+   },
+   {
+    "id": "S3",
+    "activity": false
+   }
+  ],
+  "van_stock": [
+   {
+    "product_code": "RDX4",
+    "movement": "withdrawal",
+    "qty": 200,
+    "unit": "g"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 1,
+   "actions": [
+    {
+     "status": "booked",
+     "date": "2025-08-26"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "flat",
+  "previous_visit_available": true,
+  "dose_overage_pct": 0.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "booked",
+  "site_risk_tier": "care_home"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "large_over_25pct",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 55.39,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "booked",
+  "site_risk_tier": "care_home"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (restricted_product_used = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 49,
+ "deciding": {
+  "usage_reconciled": "200 g applied equals 200 g withdrawn for RDX4.",
+  "activity_increased": "One active station versus 1 previously, so unchanged.",
+  "next_step": "RDX4 is banned in K1 and was applied there, which calls for referral to the manager despite a booked action.",
+  "breach_severity": "Banned product RDX4 used in zone K1 on a care-home site.",
+  "parties_needed": "A booked action exists, so one person might handle it, but the manager may also need to act."
+ },
+ "request": "rec-F413-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006054
+}

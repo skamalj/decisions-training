@@ -1,0 +1,127 @@
+{
+ "id": "F437-0047",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v3",
+   "glossary_version": "g2",
+   "due_at": "2025-04-01T12:00",
+   "workflow": [
+    {
+     "step": "dtp",
+     "done_at": null
+    }
+   ]
+  },
+  "source": {
+   "version": "v3",
+   "segment_count": 120
+  },
+  "deliverable": {
+   "built_from_version": "v3",
+   "segments_translated": 112,
+   "glossary_version_used": "g2",
+   "delivered_at": "2025-04-03"
+  },
+  "qa_report": null,
+  "review": {
+   "assigned_at": "2025-03-30",
+   "completed_at": null,
+   "signed_off": false,
+   "errors": [
+    {
+     "sev": "minor",
+     "status": "open"
+    },
+    {
+     "sev": "major",
+     "status": "open"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-03-20",
+    "2025-03-25",
+    "2025-03-28"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "in_progress",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": false,
+  "qa_false_positive_share": 0.8,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": -47,
+  "client_waiver": false,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": true
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "in_progress",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": false,
+  "qa_false_positive_share": 0.8,
+  "number_mismatch_count": 4,
+  "deadline_slack_hours": -47,
+  "client_waiver": false,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": true
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold_for_item",
+   "second": "escalate_am",
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 41,
+ "deciding": {
+  "scope_matches": "segments_translated 112 vs segment_count 120 while versions agree; segments missing.",
+  "reviewed_in_time": "Review assigned but completed_at null and signed_off false, so not signed before delivery; statement false.",
+  "next_step": "DTP step pending and review incomplete point to hold, but 47 hours late with 3 revision rounds supports escalation.",
+  "open_severity": "One minor and one major open error in review; borderline between minor and major.",
+  "parties_needed": "Reviewer could finish alone, but DTP and translator may also need to act."
+ },
+ "request": "rec-F437-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005927
+}

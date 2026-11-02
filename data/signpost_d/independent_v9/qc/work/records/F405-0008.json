@@ -1,0 +1,167 @@
+{
+ "id": "F405-0008",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-3310",
+   "detected_on": "2025-10-13",
+   "term_start": "2025-10-20",
+   "room": "SC-1.02"
+  },
+  "booking_a": {
+   "module": "PHY120",
+   "dept": "PHYS",
+   "day": "Mon",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "headcount": 85,
+   "required_features": [
+    "hearing_loop"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "LAW105",
+   "dept": "LAW",
+   "day": "Mon",
+   "start": "11:30",
+   "end": "13:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-07-02",
+   "approver": "m.hale"
+  },
+  "room": {
+   "code": "SC-1.02",
+   "capacity": 90,
+   "features": [
+    "hearing_loop"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "SC-2.10",
+    "capacity": 100,
+    "features": [
+     "hearing_loop"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 7,
+  "alt_room_fit": "fits",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.85,
+  "required_feature": "hearing_loop",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 4
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 15,
+  "alt_room_fit": "missing_feature",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.23,
+  "required_feature": "hearing_loop",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 4
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "contested",
+   "target": "reschedule",
+   "second": "relocate",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 58,
+ "deciding": {
+  "genuine_clash": "Same room, day and weeks with a 30-minute overlap (11:30-12:00), both confirmed; the partial overlap leaves slight doubt.",
+  "alt_room_fits": "SC-2.10 has capacity 100 for headcount 85, has hearing_loop, and is free in weeks 1-6.",
+  "resolution": "Both confirmed and SC-2.10 fits (relocate), but the overlap is only partial, so moving a time is also defensible (reschedule).",
+  "urgency": "Detected 2025-10-13, first shared occurrence Monday 2025-10-20, 7 days, at the level 2 / level 1 boundary.",
+  "parties_needed": "PHYS and LAW are different departments: two convenors, a room-allocation contact and the officer, which makes three or four."
+ },
+ "request": "rec-F405-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013884
+}

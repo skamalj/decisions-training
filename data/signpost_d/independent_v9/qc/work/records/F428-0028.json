@@ -1,0 +1,150 @@
+{
+ "id": "F428-0028",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-0630",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 90,
+   "seal_type": "music_note",
+   "clear_width": 3.2,
+   "clear_width_unit": "m"
+  },
+  "inspection": {
+   "insp_id": "I-5120",
+   "asset_id": "VL-0360",
+   "insp_date": "2025-02-14",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-02-14",
+    "closure_s": 86,
+    "leakage_l_min": 3,
+    "leakage_limit_l_min": 8,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D8",
+    "component": "motor",
+    "grade": 2,
+    "status": "open"
+   },
+   {
+    "code": "D9",
+    "component": "frame",
+    "grade": 2,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W77",
+     "component": "motor",
+     "defect_code": "D8",
+     "grade_raised": 2,
+     "status": "in_progress",
+     "rated_closure_s": 100,
+     "clear_width_mm": 3600,
+     "retest_insp_id": null
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "out_of_service",
+    "since": "2025-01-20",
+    "permit_expiry": "2025-02-07"
+   },
+   "temp_barrier_deployed": false,
+   "flood_alert_active": true,
+   "forecast": {
+    "peak_date": "2025-02-25",
+    "peak_level_mAOD": 3.0,
+    "sill_level_mAOD": 2.6
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.96,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "drive_actuation and structural tied at grade 2",
+  "mismatch_count": 3,
+  "mismatch_location": "asset_id, rated_closure_s, clear_width",
+  "test_status": "passed_current",
+  "repair_progress": "in_progress",
+  "mitigation_present": false,
+  "mitigation_kind": "none (outage permit already expired)",
+  "days_to_forecast_peak": 11,
+  "borderline_case": false,
+  "outage_beyond_permit": true
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.06,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 2,
+  "mismatch_location": "asset_id",
+  "test_status": "not_performed",
+  "repair_progress": "in_progress",
+  "mitigation_present": true,
+  "mitigation_kind": "approved_outage_permit",
+  "days_to_forecast_peak": 11,
+  "borderline_case": false,
+  "outage_beyond_permit": true
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "sign_off",
+   "second": "escalate_engineer",
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "balanced",
+   "target": "drive_actuation",
+   "second": "structural",
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (outage_beyond_permit = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 119,
+ "deciding": {
+  "closure_test_valid": "Closure 86 s within rated 90 s, leakage 3 vs limit 8, pass dated on inspection day; doubt only because the inspection asset_id differs from the register.",
+  "next_step": "Test and defects look acceptable (sign off), but the gate is out of service past its permit expiry (2025-02-07) with an active flood alert, which points to the engineer.",
+  "defect_class": "Open motor and frame defects are both grade 2; the in-progress motor work order is the only tie-breaker.",
+  "section_discrepancies": "Asset ID VL-0630 vs VL-0360, rated closure 90 vs 100 s in the work order, and width 3.2 m vs 3600 mm: three disagreements.",
+  "flood_risk": "out_of_service with permit_expiry 2025-02-07 before the 2025-02-14 inspection and flood_alert_active true; the passing test and grade 2 defects are the only pull toward level 2."
+ },
+ "request": "rec-F428-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011002
+}

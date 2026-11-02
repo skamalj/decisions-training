@@ -1,0 +1,158 @@
+{
+ "id": "F438-0032",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "los": 6
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "J18.1"
+   },
+   "comorbidities": [
+    "E11.9"
+   ],
+   "theatre_log": [
+    "E43.1 2024-05-03",
+    "E48.2 2024-05-03"
+   ],
+   "documents_present": {
+    "discharge_summary": true,
+    "operation_note": true,
+    "pathology_report": false
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "J18.9"
+   },
+   "secondary_dx": [
+    "E11.9"
+   ],
+   "procedures": [
+    {
+     "code": "Y91.1",
+     "date": "2024-05-04"
+    },
+    {
+     "code": "Z50.2",
+     "date": "2024-05-04"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "DZ11A",
+   "hrg_regrouped": "DZ11B",
+   "regroup_status": "provisional",
+   "tariff_submitted": 2300,
+   "tariff_regrouped": 2450,
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    {
+     "code_pair": [
+      "J18.9",
+      "J18.1"
+     ]
+    }
+   ],
+   "queries": [
+    {
+     "target_code": "E43.1",
+     "status": "open",
+     "response": null
+    }
+   ]
+  },
+  "coder_history": {
+   "prior_audits": 8,
+   "error_rate": 0.25,
+   "last_audit_result": "pass"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "documented_not_coded",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "pathology_report",
+  "clinician_query": "outstanding",
+  "approved_local_convention": true,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.25,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "documented_not_coded",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "pathology_report",
+  "clinician_query": "outstanding",
+  "approved_local_convention": true,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.25,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "amend_and_regroup",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unsupported_billable_code = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 97,
+ "deciding": {
+  "primary_supported": "J18.9 vs J18.1 differ only in the fourth character, and an approved convention lists exactly that pair.",
+  "hrg_shift": "DZ11A is regrouped to DZ11B, but the regroup is provisional with the pathology report missing and the tariff change is small (2300 to 2450). Both answers are defensible.",
+  "next_step": "Errors are found and the submission is still pending, with a tariff change on regrouping, so the sample needs amendment and regrouping.",
+  "error_count": "E43.1 and E48.2 are in the theatre log with no coded counterpart. Y91.1 and Z50.2 are coded with no log entry. That is four errors.",
+  "error_severity": "Y91.1 and Z50.2 are coded procedures with no documentation entry, which makes the severity critical. The provisional HRG change leaves major plausible."
+ },
+ "request": "rec-F438-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01254
+}

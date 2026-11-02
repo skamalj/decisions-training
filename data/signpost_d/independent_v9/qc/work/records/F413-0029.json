@@ -1,0 +1,149 @@
+{
+ "id": "F413-0029",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "office",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "zones": [
+    {
+     "z": "Z1",
+     "toxic_bait_permitted": false
+    }
+   ]
+  },
+  "visit": {
+   "start": "2025-07-01T11:00",
+   "client_signoff": "2025-07-01"
+  },
+  "treatments": [
+   {
+    "product_code": "BAIT7",
+    "zone": "Z1",
+    "qty_applied": 420,
+    "unit": "g"
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "activity": false
+   },
+   {
+    "id": "S5",
+    "activity": false
+   }
+  ],
+  "van_stock": [
+   {
+    "product_code": "BAIT7",
+    "movement": "withdrawal",
+    "qty": 600,
+    "unit": "g"
+   },
+   {
+    "product_code": "BAIT7",
+    "movement": "return",
+    "qty": 130,
+    "unit": "g"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 3,
+   "actions": [
+    {
+     "status": "raised",
+     "date": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "moderate_5_to_25pct",
+  "stock_return_logged": true,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "decreased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 0.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "office"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "moderate_5_to_25pct",
+  "stock_return_logged": true,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "decreased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 71.15,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "office"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (restricted_product_used = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 55,
+ "deciding": {
+  "usage_reconciled": "Net withdrawal 470 g vs 420 g applied, about 11% gap after the return.",
+  "activity_increased": "Zero active stations versus 3 previously.",
+  "next_step": "The plan expects sign-off with activity falling, though the record shows toxic bait in a non-permitted zone.",
+  "breach_severity": "BAIT7 toxic bait applied in Z1 where toxic_bait_permitted is false; unchecked stations add slight doubt.",
+  "parties_needed": "Corrective action raised but not booked; the technician alone or with the office could resolve it."
+ },
+ "request": "rec-F413-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006054
+}

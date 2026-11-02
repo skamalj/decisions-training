@@ -1,0 +1,151 @@
+{
+ "id": "F403-0044",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-5528",
+   "declared_allergens": [
+    "celery",
+    "lupin",
+    "fish"
+   ],
+   "auto_injector": true,
+   "plan_start": "2025-09-01"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2025-04-14",
+   "expires": "2026-04-14",
+   "allergens": [
+    "celery",
+    "lupin",
+    "fish",
+    "mustard"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-08-12",
+   "dishes": [
+    {
+     "dish": "soup",
+     "contains": [
+      "celery"
+     ],
+     "recipe_version_date": "2025-07-01",
+     "substitute": "tomato soup",
+     "spec_checked_on": "2025-08-05"
+    },
+    {
+     "dish": "fish bake",
+     "contains": [
+      "fish",
+      "lupin"
+     ],
+     "recipe_version_date": "2025-07-01",
+     "substitute": "bean bake",
+     "spec_checked_on": "2025-08-05"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "staff_trained": [
+    "2025-02-10",
+    "2025-02-10"
+   ]
+  },
+  "history": {
+   "review_date": "2025-09-22",
+   "packed_lunch_until": null,
+   "incidents": [
+    {
+     "date": "2025-08-28",
+     "dish": "salad dressing",
+     "note": "mustard variant nearly served in trial"
+    }
+   ],
+   "messages": [
+    "Reviewer: mapping complete."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 0,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 3,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 12,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "return_for_rework",
+   "second": "escalate_to_lead",
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "no_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "clear",
+   "target": "4",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "evidence_allergens_covered": "The evidence lists mustard, which is absent from declared_allergens and from every mapped dish, so it has no substitution.",
+  "next_step": "Evidence is current, but the unmapped mustard allergen suggests rework, and the near-miss on 2025-08-28 (before plan_start) leaves escalation defensible.",
+  "first_gap_stage": "Evidence is current, both mapped dishes are substituted and controls are verified; the only issue is the extra mustard item, which no listed dish contains.",
+  "exposure_proximity": "Both dishes are substituted, controls are verified, and the only incident predates plan_start, so the pupil is blocked from the declared allergens.",
+  "meal_urgency": "plan_start 2025-09-01 is before review_date 2025-09-22 with no packed lunch deferral, so the pupil is already eating."
+ },
+ "request": "rec-F403-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012998
+}

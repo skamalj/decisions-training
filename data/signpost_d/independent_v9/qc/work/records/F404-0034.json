@@ -1,0 +1,135 @@
+{
+ "id": "F404-0034",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "Cedar",
+   "date": "2024-06-18",
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty"
+  },
+  "children": {
+   "booked": 17,
+   "slots": [
+    {
+     "t": "10:00",
+     "signed_in": 19
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S1"
+   },
+   {
+    "id": "S2"
+   },
+   {
+    "id": "S3"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S1",
+    "in": "08:00"
+   },
+   {
+    "id": "S2",
+    "in": "08:00"
+   },
+   {
+    "id": "S3",
+    "in": "08:02"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 0
+  }
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 19,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 0,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 0
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 19,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 2,
+  "shortfall_minutes": 15,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 4
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "file_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 33,
+ "deciding": {
+  "below_ratio": "The plan's true value would contradict its own file-and-no-action and level 0 answers, so the record is routine: 19 children need 3 staff at 1:8 and S1-S3 are all signed in, so ratio is met.",
+  "disposition": "Three signed-in staff against the 3 required, no cover or gaps, and no prior breaches mean nothing further is needed.",
+  "primary_cause": "Rota and sign-in agree with only trivial minute differences and ratio is met; the slight overrun of 19 against 17 booked is still covered.",
+  "shortfall_duration": "Staff on duty equal the required 3 in the only logged slot, so there is no time below ratio.",
+  "breach_severity": "3 staff cover up to 24 children at 1:8, so no child is beyond cover."
+ },
+ "request": "rec-F404-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011351
+}

@@ -1,0 +1,126 @@
+{
+ "id": "F438-0004",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E4562",
+   "los": 6,
+   "adm": "emergency"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "I21.4"
+   },
+   "comorbidities": [
+    "E78.0"
+   ],
+   "theatre_log": [],
+   "documents_present": {
+    "discharge_summary": false,
+    "operation_note": true,
+    "pathology_report": true
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "I50.9"
+   },
+   "secondary_dx": [
+    "E78.5"
+   ],
+   "procedures": []
+  },
+  "grouping": {
+   "hrg_submitted": "EB10E",
+   "hrg_regrouped": "EB10A",
+   "tariff_submitted": 1450,
+   "tariff_regrouped": 2310,
+   "submitted_to_commissioner": true,
+   "submission_date": "2024-04-22"
+  },
+  "coder_history": {
+   "error_rate": 0.06,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_hrg",
+  "missing_source": "discharge_summary",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.06,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 3,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "discharge_summary",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.06,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_records",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 88,
+ "deciding": {
+  "primary_supported": "Coded I50.9 vs documented I21.4 are different conditions.",
+  "hrg_shift": "hrg_submitted EB10E differs from hrg_regrouped EB10A.",
+  "next_step": "documents_present.discharge_summary is false, so that document is needed before correcting.",
+  "error_count": "The primary mismatch plus the E78.5 vs E78.0 secondary slip gives two; the second is a near-miss that could be counted with the first.",
+  "error_severity": "The E78 specificity slip is cosmetic, but the wrong primary and HRG change make a higher level arguable."
+ },
+ "request": "rec-F438-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010259
+}

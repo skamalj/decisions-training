@@ -1,0 +1,146 @@
+{
+ "id": "F406-0012",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-2210",
+   "gallery_code": "G7",
+   "session_date": "2025-04-19",
+   "open": "10:00",
+   "close": "16:00",
+   "certified_limit": 90
+  },
+  "counts": {
+   "gate": "G7-S",
+   "intervals": [
+    {
+     "start": "11:00",
+     "occupancy": 88
+    },
+    {
+     "start": "11:15",
+     "occupancy": 102
+    },
+    {
+     "start": "11:30",
+     "occupancy": 96
+    }
+   ],
+   "entries": 238,
+   "ticket_scans": 240,
+   "manual_tally_peak": 101
+  },
+  "variations": [
+   {
+    "ref": "V-33",
+    "gallery_code": "G7",
+    "valid_from": "2025-04-18",
+    "valid_to": "2025-04-20",
+    "uplift_to": 120,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "last_calibrated": "2025-03-30",
+   "maintenance": [
+    {
+     "gate": "G7-S",
+     "raised_at": "2025-04-19T08:30",
+     "summary": "sensor recalibrated"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": "done",
+   "notes": "Weekend uplift in use. Normal flow."
+  },
+  "history": {
+   "overages_30d": 0
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.85,
+  "intervals_over_limit": 0,
+  "section_mismatch": "none",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.06,
+  "intervals_over_limit": 1,
+  "section_mismatch": "none",
+  "variation_present": false,
+  "variation_scope": "matches",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 5,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 68,
+ "deciding": {
+  "variation_applies": "V-33 is approved for G7, and its window 04-18 to 04-20 covers 2025-04-19. The uplift to 120 is also noted in the staff log.",
+  "fault_explains_overage": "A ticket for gate G7-S was raised on the session date before opening. There is no real overage, so the ticket's explanatory role is only loosely relevant.",
+  "next_step": "Scans (240) and entries (238) agree, the tally (101) matches the interval peak (102), egress is done and there are no prior overages, so the log reconciles.",
+  "peak_excess": "The peak of 102 is about 85% of the 120 uplift in force, which is level 0. Measured against the 90 certified limit it would look over, which leaves some doubt.",
+  "intervals_over": "No interval exceeds 120; the maximum is 102."
+ },
+ "request": "rec-F406-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012853
+}

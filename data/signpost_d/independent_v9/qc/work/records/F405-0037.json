@@ -1,0 +1,170 @@
+{
+ "id": "F405-0037",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-3302",
+   "detected_on": "2025-01-06",
+   "term_start": "2025-02-24",
+   "room": "EN1.20"
+  },
+  "booking_a": {
+   "module": "PHY150",
+   "dept": "PHY",
+   "day": "Fri",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    3,
+    5,
+    7
+   ],
+   "headcount": 50,
+   "required_features": [],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "MTH120",
+   "dept": "MTH",
+   "room": "EN1.20",
+   "day": "Fri",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    2,
+    4,
+    6,
+    8
+   ],
+   "headcount": 50,
+   "required_features": [
+    "accessible_entry"
+   ],
+   "status": "provisional",
+   "approved_at": "2025-01-02",
+   "approver": "R.Dane"
+  },
+  "room": {
+   "code": "EN1.20",
+   "aliases": [],
+   "capacity": 55,
+   "features": [
+    "accessible_entry"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "EN2.03",
+    "capacity": 63,
+    "features": [
+     "accessible_entry"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 53,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.26,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "provisional",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 53,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.26,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 67,
+ "deciding": {
+  "genuine_clash": "Same room, day and time, but A runs odd weeks [1,3,5,7] and B even weeks [2,4,6,8]. The weeks never intersect, which points to no clash. The scan flag and B's provisional status leave slight doubt.",
+  "alt_room_fits": "EN2.03 holds 63 against headcount 50, has accessible_entry as B requires, and is free in weeks 1-8.",
+  "resolution": "Weeks are disjoint, so no overlap remains and the report is dismissed.",
+  "urgency": "Detected 2025-01-06 with term starting 2025-02-24; the earliest occurrence is about 53 days away and there is no shared week.",
+  "parties_needed": "A dismissal needs only the officer, with no change request pending."
+ },
+ "request": "rec-F405-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010228
+}

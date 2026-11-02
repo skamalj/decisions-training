@@ -1,0 +1,156 @@
+{
+ "id": "F413-0015",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "id": "S-6150",
+   "tier": "care_home",
+   "stations": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+   ],
+   "zones": [
+    {
+     "z": "kitchen",
+     "toxic_bait_permitted": false
+    },
+    {
+     "z": "yard",
+     "toxic_bait_permitted": true
+    }
+   ]
+  },
+  "visit": {
+   "id": "V-9902",
+   "type": "routine",
+   "licence_expiry": "2025-04-30",
+   "start": "2024-06-10T09:30",
+   "end": "2024-06-10T10:30",
+   "client_signoff": "2024-06-10"
+  },
+  "treatments": [
+   {
+    "product": "RB-3",
+    "type": "toxic_bait",
+    "zone": "kitchen",
+    "area_m2": 40,
+    "qty": 200,
+    "unit": "g",
+    "label_max_per_m2": 10
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "C1",
+    "activity": true
+   },
+   {
+    "id": "C2",
+    "activity": true
+   },
+   {
+    "id": "C4",
+    "activity": false
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product": "RB-3",
+    "qty": 200,
+    "unit": "g"
+   }
+  ],
+  "follow_up": {
+   "prev_visit": null,
+   "prev_active_stations": null,
+   "actions": [
+    {
+     "item": "bait removed",
+     "status": "done"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 1,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": false,
+  "dose_overage_pct": 0.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "care_home"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "applied_qty_null",
+  "stock_return_logged": false,
+  "station_count_gap": 1,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": false,
+  "dose_overage_pct": 63.44,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "care_home"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_records",
+   "second": "sign_off",
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (restricted_product_used = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 71,
+ "deciding": {
+  "usage_reconciled": "200 g withdrawn, nothing returned, 200 g applied. The quantities agree.",
+  "activity_increased": "There is no previous visit and prev_active_stations is null. 2 stations are active now, but no comparison is possible.",
+  "next_step": "C3 is missing from monitoring, which argues for requesting records. The bait was removed on the visit and sign-off exists, which supports filing.",
+  "breach_severity": "RB-3 toxic bait was applied in the kitchen, where toxic_bait_permitted is false.",
+  "parties_needed": "The technician must supply the missing C3 check. A technical manager may need to be informed, so one or two parties."
+ },
+ "request": "rec-F413-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009791
+}

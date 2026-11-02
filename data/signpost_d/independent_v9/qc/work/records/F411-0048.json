@@ -1,0 +1,140 @@
+{
+ "id": "F411-0048",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H391",
+   "type": "hackney",
+   "expiry": "2024-07-01",
+   "review_date": "2024-06-10"
+  },
+  "vehicle": {
+   "reg": "KX15 TLR",
+   "make": "Peugeot",
+   "model": "E7",
+   "seats": 5,
+   "odometer_km": 112400
+  },
+  "inspection": {
+   "station_id": "TS04",
+   "date": "2024-06-03",
+   "result_code": "P",
+   "brake_efficiency_pct": 71,
+   "emissions": "pass",
+   "lighting": "pass"
+  },
+  "defects": [],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-01-15"
+   },
+   {
+    "type": "dbs",
+    "expires_on": "2025-09-30"
+   },
+   {
+    "type": "badge",
+    "expires_on": "2025-03-01"
+   }
+  ],
+  "history": [
+   {
+    "date": "2023-06-05",
+    "result": "P",
+    "odometer_km": 84100
+   },
+   {
+    "date": "2022-06-07",
+    "result": "P",
+    "odometer_km": 56300
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "none",
+  "rectification_state": "not_applicable",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 0,
+  "vehicle_age_years": 9
+ },
+ "factors_sampled": {
+  "worst_defect_found": "major",
+  "rectification_state": "retest_passed",
+  "deadline_passed": true,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 0,
+  "vehicle_age_years": 9
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "outstanding_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 81,
+ "deciding": {
+  "odometer_consistent": "112400 km now, rising steadily from 84100 and 56300 in earlier inspections.",
+  "next_step": "Empty defects list, brake test recorded at 71%, all documents in date; nothing to condition or request.",
+  "inspection_outcome": "Result P and the defects list is empty.",
+  "document_gaps": "Insurance, DBS and badge all expire well after the review date 2024-06-10.",
+  "outstanding_severity": "No defects are listed, so nothing is outstanding."
+ },
+ "request": "rec-F411-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008139
+}

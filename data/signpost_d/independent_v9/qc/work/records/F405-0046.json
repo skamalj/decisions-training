@@ -1,0 +1,172 @@
+{
+ "id": "F405-0046",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C-1042",
+   "detected_on": "2025-09-01",
+   "term_start": "2025-09-29",
+   "room": "HB-204",
+   "slot": "Tue 11:00"
+  },
+  "booking_a": {
+   "module": "HIS210",
+   "dept": "HIS",
+   "day": "Tue",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    3,
+    5,
+    7,
+    9
+   ],
+   "headcount": 47,
+   "required_features": [
+    "hearing_loop"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "BIO115",
+   "dept": "BIO",
+   "room": "HB-204",
+   "day": "Tue",
+   "start": "11:00",
+   "end": "13:00",
+   "weeks": [
+    2,
+    4,
+    6,
+    8,
+    10
+   ],
+   "headcount": 40,
+   "status": "confirmed",
+   "approved_at": "2025-06-12",
+   "approver": "jlee"
+  },
+  "room": {
+   "code": "HB-204",
+   "aliases": [],
+   "capacity": 50,
+   "features": [
+    "hearing_loop"
+   ]
+  },
+  "alternatives": [
+   {
+    "code": "HB-210",
+    "capacity": 60,
+    "features": [
+     "hearing_loop"
+    ],
+    "weeks_free": [
+     1,
+     3,
+     5,
+     7
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "date": "2025-05-02"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-06-20"
+   },
+   {
+    "type": "clash_report",
+    "date": "2025-07-15"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 29,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.94,
+  "required_feature": "hearing_loop",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 3
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": -9,
+  "alt_room_fit": "fit_wrong_weeks",
+  "alternatives_missing": true,
+  "headcount_ratio": 0.94,
+  "required_feature": "hearing_loop",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 3
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "dismiss",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 102,
+ "deciding": {
+  "genuine_clash": "Same room and weekday with overlapping clock times, but weeks lists are odd [1,3,5,7,9] vs even [2,4,6,8,10]; no shared week.",
+  "alt_room_fits": "HB-210 has capacity 60 and hearing_loop, but weeks_free [1,3,5,7] omits week 9 of booking A; a minor gap keeps it balanced.",
+  "resolution": "No shared weeks and both confirmed, so dismiss; the three past clash reports are the small residual doubt.",
+  "urgency": "Term starts 2025-09-29, about four weeks after detection, and no clashing occurrence exists; distant.",
+  "parties_needed": "Nothing to resolve; no pending change, both approved; one officer can close it."
+ },
+ "request": "rec-F405-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011686
+}

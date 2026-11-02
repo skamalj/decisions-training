@@ -1,0 +1,130 @@
+{
+ "id": "F424-0049",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B404",
+   "vessel_id": "FV1",
+   "volume_hl": 30,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014
+  },
+  "readings": [
+   {
+    "ts": "2024-07-02",
+    "gravity_sg": 1.011
+   },
+   {
+    "ts": "2024-07-03",
+    "gravity_sg": 1.01
+   },
+   {
+    "ts": "2024-07-04",
+    "gravity_sg": 1.01
+   }
+  ],
+  "lab": {
+   "batch_ref": "B404",
+   "diacetyl_mgl": 0.1,
+   "micro_plate": {
+    "result": "presumptive",
+    "cfu_ml": 10
+   },
+   "retest": [
+    {
+     "result": "negative"
+    }
+   ],
+   "lab_note": "Initial plate likely handling error."
+  },
+  "release_request": {
+   "vessel_id": "FV1",
+   "volume_hl": 30,
+   "note": "Routine."
+  }
+ },
+ "factors": {
+  "gravity_status": "at_lower_band_edge_stable",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.1,
+  "discrepancy_count": 0,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "over_attenuated",
+  "final_reading_gap": true,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "confirmed_plate",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.18,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 71,
+ "deciding": {
+  "terminal_gravity": "Last two readings 1.010, 1.010 at the band minimum edge after a fall from 1.011.",
+  "contamination_supported": "Presumptive plate at 10 cfu/ml, but negative retest and lab note blaming handling.",
+  "batch_disposition": "Negative retest and complete results; the earlier plate leaves slight doubt.",
+  "deviation_severity": "All values within limits; plate explained by retest.",
+  "record_discrepancies": "Batch ID, vessel FV1 and volume 30 agree across sections."
+ },
+ "request": "rec-F424-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009075
+}

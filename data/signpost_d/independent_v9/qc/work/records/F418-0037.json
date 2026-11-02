@@ -1,0 +1,175 @@
+{
+ "id": "F418-0037",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "WLH",
+   "plat": 1,
+   "date": "2025-04-22",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S2"
+   },
+   {
+    "post": "B",
+    "staff_id": "S4"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S2",
+    "sign_on": "05:55",
+    "sign_off": "15:00",
+    "safety_comp_exp": "2026-02-14",
+    "dispatch_comp_exp": "2026-02-14"
+   },
+   {
+    "staff_id": "S4",
+    "sign_on": "05:58",
+    "sign_off": "07:30",
+    "safety_comp_exp": "2026-05-01",
+    "dispatch_comp_exp": "2026-05-01"
+   },
+   {
+    "staff_id": "S9",
+    "sign_on": "07:30",
+    "sign_off": "09:24",
+    "safety_comp_exp": "2026-06-30",
+    "dispatch_comp_exp": null
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "07:30",
+    "staff_id": "S4",
+    "platform": 1
+   },
+   {
+    "type": "cover_start",
+    "time": "07:30",
+    "staff_id": "S9",
+    "platform": 1
+   },
+   {
+    "type": "dispatch",
+    "time": "07:41",
+    "staff_id": "S9",
+    "platform": 1
+   },
+   {
+    "type": "cover_end",
+    "time": "09:24",
+    "staff_id": "S9",
+    "platform": 1
+   },
+   {
+    "type": "gap_end",
+    "time": "09:24",
+    "staff_id": "S4",
+    "platform": 1
+   }
+  ],
+  "controls": {
+   "disp_ref": "DSP-2208",
+   "disp_platform": 1,
+   "valid_from": "2025-04-01",
+   "valid_to": "2025-06-30",
+   "approved_by": "ROM-Hale",
+   "prior_shortfalls_30d": 3
+  },
+  "remarks": [
+   "S9 relief covered the gap.",
+   "All dispatches by rostered qualified staff."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 114,
+  "shortfall_timing": "peak",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 114,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": true
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "cover_arranged",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unqualified_dispatch = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 46,
+ "deciding": {
+  "headcount_verified": "Every logged person has a matching attendance row and in-date safety competence. The only doubt is S9's null dispatch_comp_exp.",
+  "next_step": "The dispensation and attendance are present and complete, so the log needs amending and a briefing. The remarks claim qualified dispatch while S9 has a null dispatch_comp_exp. Escalation is the doubtful alternative.",
+  "coverage_outcome": "S9's cover_start and cover_end span the 07:30 to 09:24 gap exactly.",
+  "reversal_time": "A dispatch has already been done by uncertified staff. The dispensation is valid, and the briefing and records fix could take days or a few months.",
+  "exposure_severity": "A dispatch event for S9 at 07:41 sits inside the gap, S9's dispatch_comp_exp is null and dispatch_mode is staff. A safety-critical duty was performed uncertified, despite the valid dispensation."
+ },
+ "request": "rec-F418-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012319
+}

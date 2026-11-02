@@ -1,0 +1,144 @@
+{
+ "id": "F425-0023",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "declared_eggs": 1800,
+   "lay_dates": [
+    "2024-03-01"
+   ]
+  },
+  "grading_run": {
+   "run_start": "2024-03-09T08:00",
+   "run_end": "2024-03-09T10:00",
+   "eggs_in": 1798,
+   "by_size": {
+    "S": 100,
+    "M": 500,
+    "L": 800,
+    "XL": 306
+   },
+   "outgrades": {
+    "cracks": 20,
+    "dirties": 50,
+    "blood_spots": 10,
+    "leakers": 8,
+    "misshapen": 4
+   },
+   "class_a_total": 1706
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2023-12-01",
+    "interval_days": 90,
+    "manual_recheck": {
+     "n": 150,
+     "cracks_found": 2
+    }
+   },
+   "candling_sample": {
+    "sampled_at": "2024-03-09T08:40",
+    "defects": 1
+   },
+   "scale_check": {
+    "ok": true
+   },
+   "store_temp": {
+    "minutes_above_limit": 0,
+    "max_c": 7
+   }
+  },
+  "flock": {
+   "age_weeks": 75,
+   "last_swab": {
+    "date": null,
+    "result": null
+   },
+   "swab_pending": true
+  },
+  "packing": {
+   "pack_date": "2024-03-11"
+  }
+ },
+ "factors": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 10,
+  "mixed_lay_dates": false,
+  "missing_check": "swab_pending",
+  "swab_positive": false,
+  "outgrade_rate_pct": 5.12,
+  "dominant_defect": "dirties",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 75
+ },
+ "factors_sampled": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 10,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 13.58,
+  "dominant_defect": "dirties",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 75
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "hold_pending",
+   "second": null,
+   "targets": []
+  },
+  "anomaly_cause": {
+   "clarity": "clear",
+   "target": "no_anomaly",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "lay_to_pack": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 59,
+ "deciding": {
+  "counts_reconcile": "declared_eggs 1800 vs eggs_in 1798 (0.1%); sizes 1706 plus outgrades 92 equal 1798.",
+  "batch_disposition": "flock.swab_pending is true with last_swab result null, so a check is outstanding; the late packing makes other readings possible.",
+  "anomaly_cause": "Counts agree, calibration recheck found 2 cracks in 150, temperature has no excursion, and outgrades are about 5%, so there is no anomaly.",
+  "lay_to_pack": "Lay date 2024-03-01 and pack date 2024-03-11 give exactly 10 days, on the edge of the late level and the overdue level (an inclusive count would give 11).",
+  "outgrade_share": "Outgrades 92 of 1798 eggs_in, 5.1%, just above the 5% boundary between levels 1 and 2."
+ },
+ "request": "rec-F425-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012296
+}

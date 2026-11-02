@@ -1,0 +1,328 @@
+{
+ "id": "F408",
+ "domain": "missed bin collection reports",
+ "role": "Waste services case officer at a district council, reviewing each resident report of a missed bin collection",
+ "setting": "A district council's waste team receives online and phone reports that a household bin was not emptied. For each report the case officer compares the resident's report with the property record, the round schedule, the crew's round log and in-cab telematics, and the address's case history. The officer then decides whether the miss is genuine, whether a return visit is due and how soon, and whether the case needs a supervisor.",
+ "questions": {
+  "crew_missed": {
+   "type": "noul",
+   "instructions": "Round records show the crew missed a correctly presented bin.",
+   "criteria": {
+    "true": "Crew passed or skipped without a supported exception",
+    "false": "Supported exception, disruption, catch-up, or no evidence of miss"
+   }
+  },
+  "report_matches": {
+   "type": "noul",
+   "instructions": "Reported stream and date match the property's scheduled collection.",
+   "criteria": {
+    "true": "Stream, week and day agree with schedule",
+    "false": "Wrong stream, off-week, or reported before round finished"
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the case officer do with this report now?",
+   "criteria": {
+    "close_no_action": "Not a valid miss or already emptied; close the case.",
+    "request_evidence": "Ask resident or crew for one specific missing item first.",
+    "return_conditional": "Book a return once the resident fixes presentation or contamination.",
+    "schedule_return": "Book an unconditional return visit for the missed bin.",
+    "escalate_supervisor": "Refer to round supervisor for policy breach or repeated failure."
+   }
+  },
+  "return_urgency": {
+   "type": "score",
+   "instructions": "How soon must a return collection reach this property?",
+   "criteria": [
+    "None: bin already emptied or report not upheld",
+    "Next round: waste waits for next scheduled collection day",
+    "Standard: return visit within two working days",
+    "Same day: return visit before end of today"
+   ]
+  },
+  "repeat_failures": {
+   "type": "score",
+   "instructions": "How many upheld misses does this address have in twelve weeks?",
+   "criteria": [
+    "No upheld misses in the prior twelve weeks",
+    "Exactly one upheld miss in prior twelve weeks",
+    "Exactly two upheld misses in prior twelve weeks",
+    "Three or more upheld misses in twelve weeks"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "stream_mismatch",
+   "description": "Whether the reported bin stream or date disagrees with the schedule: none, alternate-week confusion, a stream not due that week, or a claimed date one day off but within the reporting window",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "alt_week_confusion",
+    "wrong_stream",
+    "date_one_day_off"
+   ],
+   "weights": [
+    0.5,
+    0.2,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "report_timing",
+   "description": "When the report was logged relative to the round: after the round was marked complete, before the round finished, or after the 48-hour reporting window closed",
+   "kind": "categorical",
+   "values": [
+    "after_round_complete",
+    "before_round_complete",
+    "beyond_window"
+   ],
+   "weights": [
+    0.65,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "crew_exception",
+   "description": "Exception code the crew logged against this address's stop",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "not_presented",
+    "contaminated",
+    "access_blocked",
+    "overweight"
+   ],
+   "weights": [
+    0.35,
+    0.25,
+    0.15,
+    0.15,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S5",
+    "S7"
+   ]
+  },
+  {
+   "name": "exception_supported",
+   "description": "Whether the crew exception is backed by a timestamped photo reference and a GPS stop at the address; when false, the code stands alone",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "telematics_pass",
+   "description": "What in-cab telematics show at the address: a stop, a pass without stopping, no GPS data, or the street not visited",
+   "kind": "categorical",
+   "values": [
+    "stopped_at_address",
+    "passed_no_stop",
+    "no_gps_data",
+    "street_not_visited"
+   ],
+   "weights": [
+    0.35,
+    0.3,
+    0.15,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S3",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "round_disruption",
+   "description": "A declared disruption on the round with a catch-up date: none, vehicle breakdown, road closure or weather suspension",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "vehicle_breakdown",
+    "road_closure",
+    "weather_suspension"
+   ],
+   "weights": [
+    0.55,
+    0.2,
+    0.15,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "already_collected",
+   "description": "Whether a sweep or catch-up vehicle has since emptied the bin, per a later round-log entry",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "photo_attached",
+   "description": "Whether the resident attached a photo of the presented bin; its absence matters when a crew exception is unsupported",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "address_id_mismatch",
+   "description": "Disagreement between report and property identifiers: none, flat number giving a different UPRN, or a postcode typo with the same UPRN",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "uprn_flat_mismatch",
+    "postcode_typo"
+   ],
+   "weights": [
+    0.7,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "prior_upheld_misses",
+   "description": "Upheld misses for this UPRN within the twelve weeks before the report",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "history_decoys",
+   "description": "History entries that must not be counted: older than twelve weeks, rejected, pending, or logged against a neighbouring UPRN",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "assisted_miss_breach",
+   "description": "Property is on the assisted collection register, where crews must fetch the bin themselves, yet the crew logged not_presented or passed without stopping",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "report",
+   "description": "Resident's report: id, UPRN, address, postcode, logged time, stream, claimed date, photo flag"
+  },
+  {
+   "name": "property",
+   "description": "Property record: UPRN, flat number, postcode, assisted collection flag and date, bins held"
+  },
+  {
+   "name": "schedule",
+   "description": "Round schedule: round id, collection day, week pattern, streams due, scheduled date"
+  },
+  {
+   "name": "round_log",
+   "description": "Crew log: round status and completion time, disruption, catch-up date, stops with GPS, exception code, photo ref, sweep collection time"
+  },
+  {
+   "name": "history",
+   "description": "List of earlier cases: case id, UPRN, date logged, stream, outcome"
+  }
+ ],
+ "rendering_notes": "stream_mismatch: compare report.stream_reported and report.claimed_date with schedule.streams_due and schedule.scheduled_date (week_pattern A/B drives alternate-week confusion). Never write a match flag. report_timing: compare report.logged_at with round_log.round_completed_at and with schedule.scheduled_date plus 48 hours. crew_exception: round_log.stops[] entry for the report's UPRN, field exception_code (null when none). exception_supported: the same stop has photo_ref non-null and gps_stop true; when false, photo_ref is null and gps_stop false or null. telematics_pass: stop gps_stop true/false, gps_stop null for no data, or no stop entry for the UPRN at all when the street was not visited. round_disruption: round_log.disruption_code plus catch_up_date (null when none). A disruption is a decoy if catch_up_date has already passed without a sweep entry. already_collected: round_log.sweep_collected_at is a timestamp later than logged_at; otherwise null. photo_attached: report.photo_attached boolean. address_id_mismatch: report.flat_no versus property.flat_no and report.uprn versus property.uprn, or report.postcode differing by one character from property.postcode. prior_upheld_misses: history[] entries for the same UPRN, outcome 'upheld', logged_on within 84 days before report.logged_at. history_decoys: add entries with outcome 'rejected' or 'pending', entries dated more than 84 days earlier, or entries for a neighbouring UPRN. Pending entries make the repeat count contestable. assisted_miss_breach: property.assisted_collection true with assisted_since date, and the stop for this UPRN shows exception_code 'not_presented' or gps_stop false. As a decoy, assisted_collection is also true on some records where the stop was normal. When assisted_miss_breach is present, return_urgency is Same day regardless of other fields. No record carries fields such as upheld, urgency, priority, fault or recommended_action. No free-text fields: all values are codes, numbers, booleans, ISO dates or null.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_evidence"
+ },
+ "aggravating_factor": "assisted_miss_breach",
+ "design_cost": 0.160972
+}

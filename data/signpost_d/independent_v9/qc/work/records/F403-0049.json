@@ -1,0 +1,140 @@
+{
+ "id": "F403-0049",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-5520",
+   "declared_allergens": [
+    "fish",
+    "soy",
+    "egg"
+   ],
+   "plan_start": "2025-06-23"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-02-01",
+   "allergens": [
+    "fish",
+    "soy",
+    "egg",
+    "sesame"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-04-01",
+   "dishes": [
+    {
+     "dish": "Fish pie",
+     "contains": [
+      "fish"
+     ],
+     "substitute": null
+    },
+    {
+     "dish": "Tofu stir fry",
+     "contains": [
+      "soy"
+     ],
+     "recipe_version_date": "2025-04-20",
+     "substitute": null
+    },
+    {
+     "dish": "Omelette",
+     "contains": [
+      "egg"
+     ],
+     "substitute": null
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true
+  },
+  "history": {
+   "review_date": "2025-05-05",
+   "packed_lunch_until": "2025-06-20",
+   "messages": [
+    "Parent: all good, no worries."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 34,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "expired",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 3,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 5,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_for_rework",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "menu_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 64,
+ "deciding": {
+  "evidence_allergens_covered": "Evidence lists sesame, which is absent from declared allergens and the mapping; fish, soy and egg dishes also have substitute null.",
+  "next_step": "Current evidence, no incident, and three dishes with substitute null, so two or more need remapping.",
+  "first_gap_stage": "Evidence expires 2026-02-01, so it is current; all three dishes are unsubstituted, so the first gap is the menu.",
+  "exposure_proximity": "All three allergen dishes lack a substitute and there is no incident, so Open.",
+  "meal_urgency": "packed_lunch_until 2025-06-20 puts the first meal on 2025-06-23, many school days after review_date 2025-05-05."
+ },
+ "request": "rec-F403-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.0122
+}

@@ -1,0 +1,125 @@
+{
+ "id": "F409-0050",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "submitted_on": "2024-05-02",
+   "app_type": "renewal",
+   "message": "Moved to Flat 6 in the same building; the bill is for my old flat."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-03-06",
+     "address_line": "Flat 4, 3 Quay Rd",
+     "verified": true
+    }
+   ]
+  },
+  "request": {
+   "address": "Flat 6, 3 Quay Rd"
+  },
+  "account_history": {
+   "live_permits": [
+    "P61"
+   ],
+   "pcns": [
+    {
+     "status": "cancelled",
+     "reason": "signage fault"
+    },
+    {
+     "status": "cancelled",
+     "reason": "signage fault"
+    }
+   ],
+   "officer_note": "Called applicant re payment, no answer."
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "different_flat",
+  "proof_age_days": 57,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 2,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "different_flat",
+  "proof_age_days": 57,
+  "docs_missing": 2,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 3,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 2,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 64,
+ "deciding": {
+  "residency_shown": "The bill address is Flat 4 but the request is Flat 6; it does not match the requested flat.",
+  "disposition": "The documents are verified and nothing else fails, so approval is the lean, with doubt from the flat mismatch.",
+  "main_issue": "Plate and keeper are unchanged, one live permit is below the cap, and the PCNs are cancelled.",
+  "misuse_strength": "Both PCNs cancelled for a signage fault, no seized permits; the officer note is routine.",
+  "document_gaps": "The one required document is verified true and within 90 days; the mismatch is about the address, not a missing document."
+ },
+ "request": "rec-F409-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009577
+}

@@ -1,0 +1,134 @@
+{
+ "id": "F415-0044",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": [
+    {
+     "from": "11:50",
+     "to": "12:30",
+     "approved_by": "OFF-31"
+    }
+   ]
+  },
+  "shift": {
+   "sched_slots": [
+    "08:00",
+    "09:30",
+    "11:45",
+    "13:00",
+    "14:30",
+    "16:00",
+    "17:15"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "11:45",
+    "status": "not_recorded"
+   },
+   {
+    "slot": "17:15",
+    "end": "17:30",
+    "checklist": {
+     "pans": true,
+     "soap": false
+    },
+    "photo_ref": "IMG-5521"
+   }
+  ],
+  "faults": [
+   {
+    "type": "no_soap_or_paper",
+    "reported_at": "09:00",
+    "remedied_at": null,
+    "remedy_note": "restocked 10:30"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "17:31",
+   "comment": "signed remotely"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 7,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "no_soap_or_paper",
+  "fault_open_minutes": "null",
+  "block_closed_during_fault": true,
+  "checklist_completion": "partial",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 3
+ },
+ "factors_sampled": {
+  "scheduled_slots": 7,
+  "missed_slots": "1",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "no_soap_or_paper",
+  "fault_open_minutes": 127.18,
+  "block_closed_during_fault": true,
+  "checklist_completion": "partial",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 3
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_noted",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 36,
+ "deciding": {
+  "missed_clean": "The 11:45 slot is not_recorded and the approved closure starts at 11:50, five minutes after the slot, so coverage is marginal.",
+  "sign_off_valid": "A supervisor signed at 17:31, one minute after the last visit ended at 17:30, with the comment 'signed remotely'.",
+  "next_step": "The recording lapses (remedied_at null despite the restock note, one slot unrecorded) point to a noted lapse more than a default, though a default notice is possible.",
+  "staff_effort": "Reconciling the restock note, the slot gap and the remote sign-off could take one to several days.",
+  "fault_exposure": "remedied_at is null on a fault reported at 09:00 and the closure covers only 40 minutes, so it stayed open to the public for over 240 minutes."
+ },
+ "request": "rec-F415-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007844
+}

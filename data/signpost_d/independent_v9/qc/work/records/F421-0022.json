@@ -1,0 +1,135 @@
+{
+ "id": "F421-0022",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P2",
+   "service": "STD",
+   "fragile": true,
+   "contents": "ceramic vase set",
+   "qty": 2,
+   "weight_kg": 4.5,
+   "declared_value_gbp": 590.7
+  },
+  "handling_events": [
+   {
+    "ts": "2024-06-10T14:05",
+    "site": "HUB-W",
+    "ev": "SORT",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-06-11T05:50",
+    "site": "HUB-W",
+    "ev": "SORT",
+    "exc": "CRUSH"
+   },
+   {
+    "ts": "2024-06-11T19:30",
+    "site": "DEP",
+    "ev": "INB"
+   },
+   {
+    "ts": "2024-06-12T07:15",
+    "site": "DEP",
+    "ev": "SORT"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-06-12T09:00",
+   "observed_item": "ceramic vase set",
+   "qty_found": 2,
+   "weight_kg": 4500,
+   "weight_unit": "g",
+   "condition": "written_off",
+   "photos": [
+    "p1",
+    "p2"
+   ],
+   "repair_est_gbp": 590.7
+  },
+  "claim": {
+   "claimed_gbp": 596.6,
+   "packaging_desc": "thin carton, little padding"
+  },
+  "notes": [
+   "Arrived already broken."
+  ]
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "complete",
+  "loss_pct": 100.0,
+  "declared_value": 590.7,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.01
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 56.73,
+  "declared_value": 590.7,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.01
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_repack",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 94,
+ "deciding": {
+  "depot_fault": "DMG and CRUSH codes at upstream HUB-W precede a clean inbound scan at the depot.",
+  "contents_match": "Same item and quantity; weight differs only in unit (4.5 kg versus 4500 g).",
+  "next_step": "Item is written off, claim matches the estimate, nothing is disputed, so the depot can write it off or forward it; the upstream damage leaves some doubt over who is liable.",
+  "loss_share": "Condition written_off with estimate equal to declared value 590.7.",
+  "parties_needed": "Assessor plus one other team (claims or finance) for the write-off."
+ },
+ "request": "rec-F421-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007513
+}

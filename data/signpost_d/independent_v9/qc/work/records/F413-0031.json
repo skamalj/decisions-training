@@ -1,0 +1,143 @@
+{
+ "id": "F413-0031",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "food_production",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "zones": {
+    "Z1": {
+     "toxic_bait_permitted": false,
+     "banned_products": [
+      "BR7"
+     ]
+    }
+   }
+  },
+  "visit": {
+   "type": "routine",
+   "start": "2025-05-06T09:00",
+   "end": "2025-05-06T10:10",
+   "client_signoff": "2025-05-06",
+   "tech_licence_expiry": "2026-03-01"
+  },
+  "treatments": [
+   {
+    "product_code": "BR7",
+    "zone": "Z1",
+    "area_m2": 30,
+    "qty_applied": 1.18,
+    "unit": "kg",
+    "label_max_per_m2": 0.03
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "zone": "Z1",
+    "activity": true
+   },
+   {
+    "id": "S4",
+    "zone": "Z1",
+    "activity": true
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product_code": "BR7",
+    "qty": 1.2,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 1,
+   "actions": []
+  }
+ },
+ "factors": {
+  "stock_mismatch": "trivial",
+  "stock_return_logged": false,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": true,
+  "dose_overage_pct": 31.14,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "food_production"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "moderate_5_to_25pct",
+  "stock_return_logged": false,
+  "station_count_gap": 3,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "increased_by_one",
+  "previous_visit_available": false,
+  "dose_overage_pct": 31.14,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "none_needed",
+  "site_risk_tier": "food_production"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "usage_reconciled": "BR7 applied 1.18 kg against 1.2 kg withdrawn, a small gap that looks like rounding.",
+  "activity_increased": "Two monitored stations active against prev_active_stations 1, though three stations were not checked.",
+  "next_step": "BR7 is listed in Z1 banned_products, which calls for referral to the technical manager.",
+  "breach_severity": "BR7 used in a zone where it is banned (level 3), but the dose of 0.039/m2 against a 0.03 label limit is also an overage (level 2), so both are plausible.",
+  "parties_needed": "Manager, technician and client notification suggest three parties, but it could be argued that only the manager and technician need to act."
+ },
+ "request": "rec-F413-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010861
+}

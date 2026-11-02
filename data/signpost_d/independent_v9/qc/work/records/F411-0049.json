@@ -1,0 +1,127 @@
+{
+ "id": "F411-0049",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "P152",
+   "review_date": "2024-04-15"
+  },
+  "vehicle": {
+   "odometer_km": 61200
+  },
+  "inspection": {
+   "result_code": "F",
+   "brake_efficiency_pct": 63
+  },
+  "defects": [
+   {
+    "code": "STR3",
+    "grade": "major",
+    "rectify_by": "2024-05-01",
+    "repaired_on": "2024-04-05",
+    "retest_on": "2024-04-09",
+    "retest_result": "pass"
+   },
+   {
+    "code": "TYR9",
+    "grade": "advisory"
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2024-04-10",
+    "cover_note_ref": "CN41",
+    "cover_until": "2024-04-20"
+   },
+   {
+    "type": "badge",
+    "expires_on": "2025-02-01"
+   }
+  ],
+  "history": [
+   {
+    "date": "2023-04-12",
+    "result": "P",
+    "odometer_km": 61900
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "major",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "small",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 13
+ },
+ "factors_sampled": {
+  "worst_defect_found": "major",
+  "rectification_state": "not_started",
+  "deadline_passed": false,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "large",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": true,
+  "retest_before_repair": true,
+  "prior_failures_12m": 4,
+  "vehicle_age_years": 13
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "refer_committee",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "leaning",
+   "target": "major_fail",
+   "second": null,
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 55,
+ "deciding": {
+  "odometer_consistent": "61200 km now is 700 km below the 61900 km reading last year with no replacement logged; small, so a minor drop could be read as a typo or as tampering.",
+  "next_step": "Odometer is lower than history and no cluster replacement is documented, so it goes to the committee under precedence.",
+  "inspection_outcome": "STR3 is graded major at inspection, with result code F.",
+  "document_gaps": "Insurance expired 2024-04-10 but a cover note runs to 2024-04-20, after the review date; counts in date, though a reader may still count a gap.",
+  "outstanding_severity": "The major item was repaired and retested with a pass; only the TYR9 advisory remains, so level 0 or 1."
+ },
+ "request": "rec-F411-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008139
+}

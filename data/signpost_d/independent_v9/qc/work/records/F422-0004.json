@@ -1,0 +1,176 @@
+{
+ "id": "F422-0004",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-6648",
+   "site": "C-309",
+   "delivered_at": "2025-04-07T08:00",
+   "received_at": "2025-05-11T09:00",
+   "review_date": "2025-05-21",
+   "reason": "ORDER_ERROR",
+   "lines": [
+    {
+     "gtin": "G4",
+     "qty_claimed": 40
+    },
+    {
+     "gtin": "G5",
+     "qty_claimed": 10
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "D-760",
+   "lines": [
+    {
+     "gtin": "G4",
+     "batch": "B30",
+     "expiry": "2026-08-31",
+     "qty_dispatched": 40
+    },
+    {
+     "gtin": "G5",
+     "batch": "C12",
+     "expiry": "2026-08-31",
+     "qty_dispatched": 10
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G4",
+     "batch": "B30",
+     "expiry": "2026-08-31",
+     "qty_counted": 36,
+     "packs_damaged": 9,
+     "seals_intact": 27
+    },
+    {
+     "gtin": "G5",
+     "batch": "C44",
+     "expiry": "2026-08-31",
+     "qty_counted": 7,
+     "packs_damaged": 4,
+     "seals_intact": 3
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "active"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "ambient_25",
+   "labelled_range": "15-25C",
+   "logger_id": "L7",
+   "logger_start": "2025-04-07T07:00",
+   "logger_end": "2025-05-11T12:00",
+   "min_c": 16.0,
+   "max_c": 31.5,
+   "minutes_out_of_range": 244,
+   "stability_ref": {
+    "max_hours": 2,
+    "max_c": 30
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-02-28",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "location": "Q4",
+   "hold_limit_days": 24,
+   "extension": {
+    "approved": false,
+    "new_limit_date": null
+   },
+   "max_days_out_of_control": 14,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 244,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "one_foreign_batch",
+  "count_discrepancy_packs": 7,
+  "damaged_pack_fraction": 0.3,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 34,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 14,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 15
+ },
+ "factors_sampled": {
+  "storage_class": "ambient_25",
+  "logger_coverage": "full",
+  "excursion_minutes": 244,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "exact",
+  "count_discrepancy_packs": 7,
+  "damaged_pack_fraction": 0.3,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 34,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 14,
+  "hold_extension_approved": false,
+  "shelf_life_months_remaining": 15
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "batch_traceable": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "partial_release",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 51,
+ "deciding": {
+  "storage_maintained": "max_c 31.5 and 244 minutes (about 4 h) out of range exceed the stability_ref limits of 2 h and 30C, and the return was out 34 days against a 14-day maximum.",
+  "batch_traceable": "Counted G5 batch C44 is not on the dispatch, which lists C12 for G5.",
+  "next_step": "The allowance is exceeded for the whole return and a counted batch is foreign, so nothing is safely saleable. Destroy the return; this departs from the planned partial release, which cannot coexist with the failed storage.",
+  "resaleable_share": "Because storage is clearly exceeded for all packs, none are fit (level 0). This departs from the planned balanced 3/2 to stay consistent with the clear storage and batch failures.",
+  "disposition_urgency": "Received 2025-05-11 plus a 24-day limit gives 2025-06-04, which is 14 days after the 2025-05-21 review, with no extension (level 1)."
+ },
+ "request": "rec-F422-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.017261
+}

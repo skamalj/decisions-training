@@ -1,0 +1,123 @@
+{
+ "id": "F420-0032",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "AKE20931",
+   "serial": "20931",
+   "tare_kg": 90,
+   "planned_gross_kg": 1000,
+   "straps_required": 4,
+   "contour_max_cm": 160
+  },
+  "manifest_lines": [
+   {
+    "awb": "020-55501",
+    "pcs": 10,
+    "weight_kg": 700
+   },
+   {
+    "awb": "020-55502",
+    "pcs": 3,
+    "weight_kg": 210
+   }
+  ],
+  "build_measured": {
+   "scale_gross_kg": 1006,
+   "max_height_cm": 158,
+   "pcs_counted": {
+    "020-55501": 8,
+    "020-55502": 3
+   },
+   "straps_fitted": 4,
+   "net_fitted": true,
+   "uld_serial_scanned": "20931"
+  },
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "020-55501",
+     "pcs_this_flight": 8
+    }
+   ]
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 0.6,
+  "piece_count_gap": -2,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "within_limit",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 73,
+  "prior_rebuilds": 2
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 4.87,
+  "piece_count_gap": -2,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "over_more_than_5cm",
+  "contour_waiver": false,
+  "dg_state": "dg_segregation_conflict",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 73,
+  "prior_rebuilds": 2
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "release",
+   "second": "hold",
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "clear",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "weight_deviation": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "pieces_reconciled": "020-55501 counted 8 of 10, covered by a part shipment of 8; the shortfall is explained, but a reader may still doubt it.",
+  "disposition": "Weight, height, straps and net are all in order, so release is favoured, but the 2-piece shortfall leaves a reason to hold for confirmation.",
+  "worst_discrepancy": "Serial matches, no DG, weight and height within limits, straps 4 of 4, and the shortfall is covered by the part shipment.",
+  "weight_deviation": "1006 against planned 1000 is +0.6%, within 1%.",
+  "rework_extent": "Nothing physical is outstanding: straps and net are complete and height is 158 against 160."
+ },
+ "request": "rec-F420-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011153
+}

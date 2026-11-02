@@ -1,0 +1,134 @@
+{
+ "id": "F434-0015",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 2,
+   "riders_started": 120
+  },
+  "post": {
+   "km_marker": 30,
+   "on_post_from": "10:05",
+   "off_post_at": "12:20",
+   "relief": [
+    {
+     "marshal_ref": "M4",
+     "signed_in": "10:05",
+     "signed_out": "12:20"
+    }
+   ]
+  },
+  "incidents": [],
+  "comms": {
+   "radio_checks": [
+    {
+     "ok": false
+    },
+    {
+     "ok": false
+    },
+    {
+     "ok": false
+    },
+    {
+     "ok": false
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [],
+   "road_reopened_at": {
+    "28-34": "12:40"
+   }
+  },
+  "sweep": {
+   "passed_at": "12:18",
+   "last_rider_bib": 118,
+   "post_cleared_at": "12:22"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "none",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "late_before_first_rider",
+  "relief_swap_logged": true,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": "none",
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "late_before_first_rider",
+  "relief_swap_logged": true,
+  "radio_check_failures": 4,
+  "medic_arrival_minutes": 5.17,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "incident_class": {
+   "clarity": "leaning",
+   "target": "no_incident",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "consequence_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 66,
+ "deciding": {
+  "coverage_held": "Marshals on post 10:05 to 12:20, past sweep 12:18, but the first rider time is not given and relief only partly explains the late start.",
+  "next_step": "Logs agree and nothing is open, though failed radio checks add slight doubt.",
+  "incident_class": "No incident in post or control lists.",
+  "reversal_time": "Nothing to undo; road reopened 12:40 after sweep 12:18.",
+  "consequence_severity": "No incidents, handovers or abandonments; reopening came after sweep."
+ },
+ "request": "rec-F434-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005621
+}

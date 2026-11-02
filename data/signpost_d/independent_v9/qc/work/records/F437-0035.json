@@ -1,0 +1,132 @@
+{
+ "id": "F437-0035",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v3",
+   "due_at": "2025-07-12T12:00:00Z",
+   "terms": {
+    "glossary_exception": true
+   }
+  },
+  "source": {
+   "version": "v3",
+   "segment_count": 60
+  },
+  "deliverable": {
+   "built_from_version": "v3",
+   "segments_translated": 60,
+   "delivered_at": "2025-07-09T16:00:00Z"
+  },
+  "qa_report": {
+   "number_mismatches": [
+    [
+     "8",
+     "18"
+    ],
+    [
+     "25",
+     "52"
+    ]
+   ],
+   "unresolved": {
+    "minor": 1
+   }
+  },
+  "review": {
+   "completed_at": "2025-07-09",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "major",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-06-10",
+    "2025-06-20",
+    "2025-07-01"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_same_day_date_only",
+  "open_error_profile": "one_minor_qa_item_review_closed",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.12,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": 68,
+  "client_waiver": true,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.12,
+  "number_mismatch_count": 5,
+  "deadline_slack_hours": 68,
+  "client_waiver": true,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_am",
+   "second": "release",
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 37,
+ "deciding": {
+  "scope_matches": "Versions all v3 and 60 of 60 segments translated.",
+  "reviewed_in_time": "Signed off with a date-only completed_at on the delivery date, so the order is not certain.",
+  "next_step": "Three prior revision rounds suggest repeat failure and the glossary exception is unrelated to the remaining items, so escalate; otherwise the single minor flag and 68 hours of slack allow release.",
+  "open_severity": "Review errors are closed, but QA shows 1 unresolved minor and 2 number mismatches, so the level is 0 or 1.",
+  "parties_needed": "The translator, the reviewer and the account manager may all need to act, though the translator and reviewer alone might suffice."
+ },
+ "request": "rec-F437-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009205
+}

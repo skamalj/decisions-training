@@ -1,0 +1,140 @@
+{
+ "id": "F404-0004",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "T4",
+   "age_band": "two_year",
+   "ratio_rule": "1:5"
+  },
+  "children": {
+   "booked": 5,
+   "slots": [
+    {
+     "from": "09:00",
+     "to": "10:09",
+     "signed_in": 9
+    },
+    {
+     "from": "10:09",
+     "to": "11:00",
+     "signed_in": 6
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S041",
+    "counts": true
+   },
+   {
+    "id": "S052",
+    "counts": true
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S-041",
+    "in": "08:02",
+    "out": "16:00"
+   },
+   {
+    "id": "S-052",
+    "in": "08:01",
+    "out": "10:09"
+   },
+   {
+    "id": "S-052",
+    "in": "11:00",
+    "out": "16:00"
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F3",
+    "room": "T4",
+    "from": "10:09",
+    "to": "11:00",
+    "countersigned_by": null
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 2
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 9,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 51,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": true,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "absent",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 2
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 9,
+  "staff_signin_variance": "trivial",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 51,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "absent",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": false,
+  "prior_breaches_90d": 2
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "balanced",
+   "target": "paperwork_only",
+   "second": "staff_shortfall",
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 60,
+ "deciding": {
+  "below_ratio": "From 10:09 to 11:00, 6 children need 2 staff while only S-041 is signed in; the F3 cover is unsigned and cannot be counted. Earlier slots with 9 children had both staff.",
+  "disposition": "F3 has countersigned_by null; the outcome depends on that single missing confirmation.",
+  "primary_cause": "S-052 left for 51 minutes, which is staff shortfall, but the F3 entry covers the exact window, so it may be paperwork only. Id format differences are trivial.",
+  "shortfall_duration": "The window 10:09-11:00 is 51 minutes if uncovered (level 2); the plan's lean is not supported, and if cover counts the shortfall is zero.",
+  "breach_severity": "6 children against one staff (capacity 5) leaves one child beyond cover, or none if F3 counts."
+ },
+ "request": "rec-F404-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011484
+}

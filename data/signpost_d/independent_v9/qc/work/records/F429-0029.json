@@ -1,0 +1,115 @@
+{
+ "id": "F429-0029",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 200
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "level_m": 102.51
+    }
+   ],
+   "triggers": {
+    "alert_m": 102.0,
+    "action_m": 102.5
+   }
+  },
+  "gate_ops": [
+   {
+    "gate_id": "G1",
+    "open_after_m": 1.4
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate_id": "G1",
+     "opening_m": 1.4
+    }
+   ],
+   "calc_peak_m3s": 199.6,
+   "gauged_peak_m3s": 188.2
+  }
+ },
+ "factors": {
+  "reservoir_tier": "action",
+  "near_boundary": true,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 6.07,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "alert",
+  "near_boundary": true,
+  "discharge_vs_licence": "above_limit",
+  "gate_position_mismatch": "material",
+  "discharge_discrepancy_pct": 6.07,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "trigger_tier": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 26,
+ "deciding": {
+  "within_licence": "Calc 199.6 and gauged 188.2 are both under 200, though calc is very close.",
+  "gates_reconciled": "G1 open_after 1.4 equals calc opening 1.4.",
+  "next_step": "Level 102.51 is above the 102.5 action trigger.",
+  "trigger_tier": "Action trigger just exceeded; calc discharge near the limit could be read as critical.",
+  "parties_needed": "Action-level reading needs senior engineer, operator and downstream notification, with unclear extras."
+ },
+ "request": "rec-F429-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007045
+}

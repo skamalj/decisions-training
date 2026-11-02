@@ -1,0 +1,132 @@
+{
+ "id": "F421-0043",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-30911",
+   "service": "std",
+   "fragile": false,
+   "contents": "desk lamp",
+   "qty": 1,
+   "weight_kg": 1.8,
+   "declared_value_gbp": 2715.82
+  },
+  "handling_events": [
+   {
+    "ts": "2024-07-11T07:30",
+    "site": "THIS-DEPOT",
+    "ev": "INBOUND",
+    "exc": null
+   },
+   {
+    "ts": "2024-07-11T10:20",
+    "site": "THIS-DEPOT",
+    "ev": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-07-11T12:00",
+   "observed_item": "table fan",
+   "qty_found": 1,
+   "weight_kg": 1.8,
+   "condition": "grille dented, working",
+   "photos": [
+    "b1.jpg"
+   ],
+   "repair_est_gbp": 54.32
+  },
+  "claim": {
+   "claim_id": "C-2043",
+   "claimed_gbp": 34.22
+  },
+  "notes": [
+   "Scuffed at sort belt."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 2.0,
+  "declared_value": 2715.82,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 0.63
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 32.71,
+  "declared_value": 2715.82,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": true,
+  "note_slant": "admits_fault",
+  "claim_amount_gap": 0.63
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 41,
+ "deciding": {
+  "depot_fault": "Clean inbound scan then DMG at depot sort; the note agrees, though the item mismatch leaves slight doubt.",
+  "contents_match": "Manifest says desk lamp, report says table fan, a different product.",
+  "next_step": "Inspection complete with photo, tiny repair estimate and claim, nothing outstanding.",
+  "loss_share": "Repair 54.32 against 2715.82 is about 2%, under 5%.",
+  "parties_needed": "Small, complete record that one person can close, with some doubt over the mismatch."
+ },
+ "request": "rec-F421-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009441
+}

@@ -1,0 +1,140 @@
+{
+ "id": "F431-0012",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM-70418",
+   "type": "ultrasonic",
+   "install_date": "2019-05-20",
+   "last_verified_date": "2019-05-20",
+   "seal_state": "broken",
+   "seal_checked_date": "2024-01-15"
+  },
+  "period_read": {
+   "read_date": "2024-02-15",
+   "reg_kwh": 20488,
+   "vol_m3": 311.2,
+   "src_code": "AMR",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2023-12-15",
+    "reg_kwh": 19400,
+    "src_code": "AMR",
+    "same_period_ly_kwh": 620
+   },
+   {
+    "date": "2024-01-15",
+    "reg_kwh": 20000,
+    "src_code": "ENG",
+    "same_period_ly_kwh": 500
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_COMMS"
+   ],
+   "flow_temp_c": 68,
+   "return_temp_c": 44,
+   "battery_pct": 22,
+   "firmware": "2.3.1"
+  },
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 477,
+   "hdd_prior_year": 450,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "closed",
+     "date": "2024-01-15"
+    }
+   ],
+   "dispute_open": false,
+   "tariff_code": "RES-A"
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 0.92,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.06,
+  "diagnostic_error_count": 1,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "previous_read_null",
+  "consumption_ratio": 0.92,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.06,
+  "diagnostic_error_count": 1,
+  "meter_works_order": true,
+  "consecutive_estimates": 3,
+  "delta_t_implausible": false,
+  "seal_status": "broken_logged_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 92,
+ "deciding": {
+  "meter_fault": "Seal broken on 2024-01-15 but matched by an ENG entry and closed RECAL the same date; flow/return 68/44 plausible; lone E_COMMS affects transmission only.",
+  "billable_actual": "Remote AMR read in sequence with plausible consumption (488 vs expected 530); the earlier broken seal and RECAL leave slight doubt.",
+  "next_step": "In-sequence AMR read, ratio about 0.92, no open orders or dispute, so release it.",
+  "staff_effort": "Routine read needing a quick release check; the earlier seal event adds a small chance of extra checking.",
+  "consumption_deviation": "488 kWh against expected 500 x 477/450 = 530 is about 8% under, well below 15%."
+ },
+ "request": "rec-F431-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010463
+}

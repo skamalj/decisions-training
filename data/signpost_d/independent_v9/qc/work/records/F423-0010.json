@@ -1,0 +1,118 @@
+{
+ "id": "F423-0010",
+ "family": "F423",
+ "state": {
+  "job": {
+   "run_qty": 40000,
+   "overs_pct": 1.53,
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "signed_at": "2025-04-07T08:04",
+   "concession": {
+    "accepted_max_de": 4.0
+   }
+  },
+  "colour_readings": {
+   "calibrated_on": "2025-01-11",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.4
+    },
+    {
+     "ink": "M",
+     "delta_e": 4.1
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.21,
+     "in_image": false
+    }
+   ]
+  },
+  "run_log": {
+   "first_production_at": "2025-04-07T08:01",
+   "sheets_production": 1039
+  }
+ },
+ "factors": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 1039,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.53,
+  "register_offset_mm": 0.21,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 86,
+  "customer_tier": "trade",
+  "prior_stoppages": 1
+ },
+ "factors_sampled": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 1039,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.53,
+  "register_offset_mm": 0.21,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 86,
+  "customer_tier": "trade",
+  "prior_stoppages": 1
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "run_before_signoff": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "adjust_and_recheck",
+   "second": "release_run",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "colour_in_tolerance": "Magenta 4.1 exceeds the concession's accepted_max_de 4.0 by only 0.1; calibration is 86 days old.",
+  "run_before_signoff": "first_production_at 08:01 is three minutes before signed_at 08:04, with 1039 production sheets logged.",
+  "next_step": "The 4.1 patch over the 4.0 concession limit favours adjust_and_recheck, but a 0.1 margin on an old calibration could justify release.",
+  "staff_effort": "A colour correction, re-pull and remeasure fits a few hours.",
+  "scrap_exposure": "1039 sheets against a 612-sheet allowance (1.53% of 40000) is over overs and about 2.6% of the run, if the magenta failure counts."
+ },
+ "request": "rec-F423-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009152
+}

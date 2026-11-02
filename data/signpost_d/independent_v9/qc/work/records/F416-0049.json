@@ -1,0 +1,170 @@
+{
+ "id": "F416-0049",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "station_id": "S2",
+   "date": "2025-07-19",
+   "signoff": null
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-02-01"
+   },
+   {
+    "id": "G2",
+    "on": "09:00",
+    "off": "17:00",
+    "qual_expiry": "2026-03-05"
+   },
+   {
+    "id": "G3",
+    "on": "09:00",
+    "off": "14:00",
+    "qual_expiry": "2026-01-20"
+   }
+  ],
+  "conditions": [
+   {
+    "time": "11:00",
+    "rip_risk": "moderate",
+    "flag": "yellow",
+    "bathing_zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-07-19",
+    "time": "10:10",
+    "type": "water_rescue",
+    "responders": [
+     "G1",
+     "G2"
+    ],
+    "outcome": "released"
+   },
+   {
+    "id": "I2",
+    "date": "2025-07-19",
+    "time": "12:30",
+    "type": "water_rescue",
+    "responders": [
+     "G1",
+     "G3"
+    ],
+    "outcome": "released"
+   },
+   {
+    "id": "I3",
+    "date": "2025-07-19",
+    "time": "14:00",
+    "type": "water_rescue",
+    "responders": [
+     "G2",
+     "G3"
+    ],
+    "outcome": "conveyed",
+    "aed_used": null,
+    "ambulance_ref": "AMB-5521"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jet_ski",
+    "out_from": "2025-07-19T12:00",
+    "out_to": "2025-07-19T15:05",
+    "substitute_unit_id": null
+   }
+  ],
+  "handover": {
+   "rescues": 3,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "check_sheet_ref": null
+  }
+ },
+ "factors": {
+  "rescue_count": 3,
+  "rescue_cover_shortfall": "responder_off_roster",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "conveyed",
+  "kit_gap_band": "over_180",
+  "kit_substitute_logged": false,
+  "missing_record": "aed_check_sheet",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 3,
+  "rescue_cover_shortfall": "responder_off_roster",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": false,
+  "missing_record": "aed_check_sheet",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_item",
+   "second": "corrective_order",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "two_guard_cover": "G3's roster off time 14:00 equals the time of I3 (14:00), so whether G3 was rostered at that moment is borderline; all qualifications are in date.",
+  "totals_reconcile": "Rescues 3 and kit_defects 1 match the itemised entries and all dates equal the shift date; the reviewer may still doubt it because the log is unsigned.",
+  "next_step": "check_sheet_ref is null and signoff is null, which points to requesting the item, while the unsubstituted jet ski outage of over 3 hours could justify a corrective order.",
+  "outcome_severity": "I3 is conveyed with an ambulance ref, but aed_used is null (unknown) with the AED check sheet missing, leaving level 3 possible.",
+  "kit_outage": "The jet ski was out 12:00 to 15:05, 185 minutes with no substitute, just past the 180-minute boundary."
+ },
+ "request": "rec-F416-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013069
+}

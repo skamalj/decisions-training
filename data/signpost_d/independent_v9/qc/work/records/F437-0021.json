@@ -1,0 +1,160 @@
+{
+ "id": "F437-0021",
+ "family": "F437",
+ "state": {
+  "job": {
+   "job_id": "J-4417",
+   "target_locale": "de-DE",
+   "source_version": "v3",
+   "glossary_version": "g5",
+   "due_at": "2025-03-12T12:00",
+   "workflow": [
+    {
+     "step": "dtp",
+     "done_at": null
+    }
+   ]
+  },
+  "source": {
+   "version": "v3",
+   "segment_count": 210,
+   "word_count": 3480
+  },
+  "deliverable": {
+   "built_from_version": "v3",
+   "target_locale": "de-DE",
+   "segments_translated": 210,
+   "word_count": 3480,
+   "glossary_version_used": "g5",
+   "delivered_at": "2025-03-10T22:00"
+  },
+  "qa_report": {
+   "flags": 44,
+   "false_positive_marked": 12,
+   "number_mismatches": [
+    [
+     12,
+     21
+    ],
+    [
+     40,
+     14
+    ],
+    [
+     7,
+     17
+    ],
+    [
+     300,
+     330
+    ],
+    [
+     18,
+     81
+    ],
+    [
+     5,
+     50
+    ]
+   ],
+   "unresolved": {
+    "critical": 1,
+    "major": 0,
+    "minor": 0
+   }
+  },
+  "review": {
+   "signed_off": true,
+   "completed_at": "2025-03-10T20:00",
+   "errors": [
+    {
+     "sev": "critical",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": []
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "critical_open",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.27,
+  "number_mismatch_count": 6,
+  "deadline_slack_hours": 38,
+  "client_waiver": false,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": true
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "section_missing",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.27,
+  "number_mismatch_count": 6,
+  "deadline_slack_hours": 38,
+  "client_waiver": false,
+  "prior_revision_rounds": 0,
+  "dtp_step_pending": true
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 79,
+ "deciding": {
+  "scope_matches": "Versions all v3 and segment counts 210 = 210.",
+  "reviewed_in_time": "review.signed_off true, completed_at two hours before delivered_at.",
+  "next_step": "Counts, locale, glossary and sign-off all agree and delivery is 38h ahead of due.",
+  "open_severity": "qa_report.unresolved critical 1 while review shows its critical error closed; the QA count leans to critical.",
+  "parties_needed": "Open critical and six number mismatches plus pending DTP could involve three or four or five parties; the count is uncertain."
+ },
+ "request": "rec-F437-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010678
+}

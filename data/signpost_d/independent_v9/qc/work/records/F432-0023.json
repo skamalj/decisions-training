@@ -1,0 +1,155 @@
+{
+ "id": "F432-0023",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E21",
+   "risk_cat": 1,
+   "temp_range_c": [
+    20,
+    30
+   ],
+   "maint_window": "10:00/14:00",
+   "active_vet_case": "V3",
+   "doors": [
+    "A"
+   ]
+  },
+  "shift": {
+   "end": "17:00",
+   "opening_count": 4,
+   "closing_count": 4
+  },
+  "movements": [],
+  "feeding": {
+   "items": [
+    {
+     "sheet_g": 2500,
+     "offered_g": 2500,
+     "leftover_g": 1900,
+     "unit": "g",
+     "scatter_flag": true
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched": "09:00",
+    "logged": true,
+    "entry_time": "09:02",
+    "temp_c": 24
+   },
+   {
+    "sched": "11:00",
+    "logged": true,
+    "entry_time": "11:01",
+    "temp_c": 16
+   },
+   {
+    "sched": "13:00",
+    "logged": true,
+    "entry_time": "13:03",
+    "temp_c": 15
+   },
+   {
+    "sched": "15:00",
+    "logged": false
+   },
+   {
+    "sched": "16:00",
+    "logged": true,
+    "entry_time": "16:02",
+    "temp_c": 22
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "A",
+     "time": "14:50"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "early",
+  "intake_ratio": 0.24,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 1,
+  "cctv_cover": false,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": true,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_1_high"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "unexplained_off_by_one",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.56,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 4,
+  "cctv_cover": true,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": true,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_1_high"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "recheck_round",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 66,
+ "deciding": {
+  "count_reconciles": "Opening 4 equals closing 4 with no movements.",
+  "secure_at_close": "Only lock check for door A is at 14:50, before the 16:02 last round entry, so it is early.",
+  "next_step": "Temps 16 and 15 against a 20-30 range overlap the 10:00-14:00 maintenance window; recheck at next round.",
+  "intake_shortfall": "1900 g left of 2500 g offered is 24% intake, just under the 25% boundary, with scatter_flag set.",
+  "missed_rounds": "Only the 15:00 round has logged false."
+ },
+ "request": "rec-F432-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013381
+}

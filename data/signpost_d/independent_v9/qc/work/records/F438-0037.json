@@ -1,0 +1,152 @@
+{
+ "id": "F438-0037",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E-48213",
+   "specialty": "general_surgery",
+   "los": 6,
+   "admission_method": "elective"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "K80.2"
+   },
+   "comorbidities": [
+    "I10",
+    "E78.0",
+    "N18.3",
+    "E66.9"
+   ],
+   "theatre_log": [
+    {
+     "code": "J18.2",
+     "date": "2024-03-04"
+    }
+   ],
+   "documents_present": {
+    "discharge_summary": true,
+    "operation_note": true,
+    "pathology_report": false
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "K80.2"
+   },
+   "secondary_dx": [
+    "I10",
+    "E11.9",
+    "N18.9",
+    "E66.0",
+    "Z86.7"
+   ],
+   "procedures": [
+    {
+     "code": "J18.2",
+     "date": "2024-03-04"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "GB11B",
+   "hrg_regrouped": "GB11A",
+   "tariff_submitted": 2840,
+   "tariff_regrouped": 3490,
+   "submitted_to_commissioner": true,
+   "submission_date": "2024-04-02"
+  },
+  "audit_context": {
+   "sample_id": "S-207",
+   "local_conventions_applied": [
+    "Z86.7/Z95.1"
+   ],
+   "queries": []
+  },
+  "coder_history": {
+   "coder": "c-318",
+   "prior_audits": 9,
+   "error_rate": 0.23,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_suffix",
+  "missing_source": "pathology_report",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.23,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "pathology_report",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.23,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "amend_codes",
+   "second": "amend_and_regroup",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 200,
+ "deciding": {
+  "primary_supported": "The coded K80.2 matches the documented principal K80.2. The missing pathology report leaves slight doubt.",
+  "hrg_shift": "hrg_submitted GB11B differs from hrg_regrouped GB11A and the tariff moves from 2840 to 3490.",
+  "next_step": "The record is already submitted (true, 2024-04-02). The codes need correcting, and the tariff change could be handled by local amendment or by regroup and resubmission.",
+  "error_count": "Coded secondary codes E11.9, N18.9, E66.0 and Z86.7 are not in the documented comorbidities (E78.0, N18.3, E66.9), giving four mismatches.",
+  "error_severity": "The mismatches are secondary specificity slips with the primary exact, which points to a cosmetic level. The HRG change pulls somewhat higher."
+ },
+ "request": "rec-F438-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009481
+}

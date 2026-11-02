@@ -1,0 +1,143 @@
+{
+ "id": "F416-0017",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "date": "2025-06-02",
+   "end": "17:00"
+  },
+  "roster": [
+   {
+    "id": "G3",
+    "on": "09:00",
+    "off": "17:00",
+    "qx": "2026-03-01"
+   },
+   {
+    "id": "G5",
+    "on": "09:00",
+    "off": "17:00",
+    "qx": "2026-05-01"
+   }
+  ],
+  "incidents": [
+   {
+    "type": "water_rescue",
+    "t": "11:10",
+    "resp": [
+     "G3",
+     "G5"
+    ],
+    "out": "released",
+    "referral_ref": "RF-7"
+   },
+   {
+    "type": "water_rescue",
+    "t": "13:20",
+    "resp": [
+     "G3",
+     "G5"
+    ],
+    "out": "released"
+   },
+   {
+    "type": "first_aid",
+    "t": "14:00",
+    "out": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_board",
+    "out_from": "16:20",
+    "out_to": null,
+    "sub": "RB2"
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 2,
+   "kit_defects": 1,
+   "check_sheet_ref": "CS-41"
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "released_with_referral_ref",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "responder_qual_expired",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "critical",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_item",
+   "second": "amend_and_file",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 26,
+ "deciding": {
+  "two_guard_cover": "Both rescues list G3 and G5, who are rostered 09:00-17:00 with qx well after the shift date.",
+  "totals_reconcile": "Handover first_aid is 2 but only one first_aid incident is itemised, an off-by-one. Rescues 2 and kit_defects 1 match. A reader might count the rescue with a referral_ref as the second first-aid case.",
+  "next_step": "The rescue_board out_to is null, a specific missing item favouring request_item. The first_aid off-by-one is a clerical fix favouring amend_and_file. The two are held in balance.",
+  "outcome_severity": "The outcome is released but referral_ref RF-7 is attached. The reader must decide whether this is on-site care only (0) or a referral (1).",
+  "kit_outage": "The board is out from 16:20 with out_to null and a substitute RB2 logged. A substituted outage scores 0, but the open end and the 40 minutes to shift end leave a possible unsubstituted under-60 outage (1)."
+ },
+ "request": "rec-F416-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.016133
+}

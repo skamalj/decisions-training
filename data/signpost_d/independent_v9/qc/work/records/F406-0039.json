@@ -1,0 +1,194 @@
+{
+ "id": "F406-0039",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-7781",
+   "gallery_code": "W3",
+   "session_date": "2025-09-20",
+   "open": "13:00",
+   "close": "16:30",
+   "certified_limit": 100
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "13:00",
+     "occupancy": 92
+    },
+    {
+     "start": "13:15",
+     "occupancy": 101
+    },
+    {
+     "start": "13:30",
+     "occupancy": 102
+    },
+    {
+     "start": "13:45",
+     "occupancy": 102
+    },
+    {
+     "start": "14:00",
+     "occupancy": 103
+    },
+    {
+     "start": "14:15",
+     "occupancy": 103
+    },
+    {
+     "start": "14:30",
+     "occupancy": 103
+    },
+    {
+     "start": "14:45",
+     "occupancy": 102
+    },
+    {
+     "start": "15:00",
+     "occupancy": 103
+    },
+    {
+     "start": "15:15",
+     "occupancy": 102
+    },
+    {
+     "start": "15:30",
+     "occupancy": 101
+    },
+    {
+     "start": "15:45",
+     "occupancy": 102
+    },
+    {
+     "start": "16:00",
+     "occupancy": 101
+    },
+    {
+     "start": "16:15",
+     "occupancy": 95
+    }
+   ],
+   "manual_tally_peak": 99,
+   "summary_peak": 103
+  },
+  "variations": [
+   {
+    "ref": "V-402",
+    "gallery_code": "W3",
+    "valid_from": "2025-09-01",
+    "valid_to": "2025-09-19",
+    "uplift_to": 115,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "gates": [
+    "W3-S"
+   ],
+   "last_calibrated": "2025-06-02",
+   "maintenance": [
+    {
+     "gate": "W3-S",
+     "raised_at": "2025-09-20T09:15",
+     "summary": "Entry sensor over-reads approx 4%"
+    }
+   ]
+  },
+  "staff_log": {
+   "stewards": 3,
+   "egress_check": {
+    "state": "done",
+    "time": "12:40"
+   },
+   "notes": []
+  },
+  "history": {
+   "overages_30d": 1,
+   "dates": [
+    "2025-09-06"
+   ]
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.99,
+  "intervals_over_limit": 12,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "expired_day_before_session",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 1,
+  "staff_note_tone": "none",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.03,
+  "intervals_over_limit": 12,
+  "section_mismatch": "none",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 1,
+  "staff_note_tone": "none",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "restrict_admissions",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "clear",
+   "target": "4",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 145,
+ "deciding": {
+  "variation_applies": "V-402 valid_to 2025-09-19 ended the day before session_date 2025-09-20, so the certified 100 limit stands.",
+  "fault_explains_overage": "W3-S ticket raised 09:15 on the session date before opening, stating the entry sensor over-reads about 4%, which matches 103 vs tally 99.",
+  "next_step": "Twelve intervals over the certified limit with no valid uplift and a repeat overage in 30 days argue for capping the next session; the fault ticket gives some doubt.",
+  "peak_excess": "Counter peak 103 corrected for the stated 4% over-read is about 99, just under the 100 limit; tally 99.",
+  "intervals_over": "Twelve counter intervals from 13:15 to 16:00 exceed 100."
+ },
+ "request": "rec-F406-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012601
+}

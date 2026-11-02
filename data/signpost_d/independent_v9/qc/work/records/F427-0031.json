@@ -1,0 +1,151 @@
+{
+ "id": "F427-0031",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "id": "V101",
+   "visit_date": "2024-06-11",
+   "surveyor_grade": "accredited"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 4,
+   "dams_total": 6
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "DW2",
+     "depth_cm": 41
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 30,
+     "prev_depth_cm": 30
+    }
+   ],
+   "rain_30d_pct_normal": 78
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D4",
+     "pool_level_cm": 30,
+     "design_pool_cm": 30,
+     "defect_code": "SEEP",
+     "remark": "Minor seep round left end."
+    }
+   ],
+   "open_work_orders": [
+    {
+     "dam_id": "D4",
+     "status": "raised"
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 6
+    }
+   ],
+   "photos_uploaded": 8,
+   "photos_expected": 8
+  },
+  "notes": {
+   "surveyor_note": "DW2 sits in a peat pipe hollow; seep minor.",
+   "prior_visits": [
+    {
+     "date": "2023-09-02",
+     "dam_id": "D4",
+     "event": "breach"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.25,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -16.0,
+  "rainfall_pct_normal": 78.0,
+  "control_dipwells_dropped": false,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.08,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": false,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": -22.46,
+  "rainfall_pct_normal": 36.74,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 1,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "reassuring",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_record",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "contested",
+   "target": "well_below",
+   "second": "within_band",
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "dam_caused_drop": "Controls steady and rain 78% of normal point to the site, and D4 has a seep, an open order and a prior breach; but the seep is minor and pool is at design, so weather or the pipe hollow stays plausible.",
+  "next_step": "Only a minor seep with the repair order already raised; all other elements are present, so filing is favoured, though the sparse dipwell coverage leaves doubt.",
+  "hydro_state": "Only DW2 at 41 cm is 16 cm below the floor of 25, which is well_below by a hair; the note says the well sits in a pipe hollow, so within_band is arguable.",
+  "dam_severity": "D4 is coded SEEP with pool 30 equal to design 30 and no other defects: seepage.",
+  "evidence_completeness": "1 of 4 wells is read, exactly 25%, on the line between not recorded and partly recorded; photos, quadrats and inspection are in, so three or four elements."
+ },
+ "request": "rec-F427-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012532
+}

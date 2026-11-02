@@ -1,0 +1,325 @@
+{
+ "id": "F426",
+ "domain": "orchard spray application records",
+ "role": "Packhouse spray-record checker reviewing grower orchard spray records before accepting each fruit lot",
+ "setting": "A fruit packhouse receives harvested lots from contracted orchards. Before a lot is packed, a checker opens the grower's spray application record for the block the lot came from. The checker compares applications against product label references, sprayer calibration and harvest dates, then decides whether the lot can proceed.",
+ "questions": {
+  "phi_cleared": {
+   "type": "noul",
+   "instructions": "Every product's withholding period elapsed before the first pick date.",
+   "criteria": {
+    "true": "All applications cleared their withholding period before picking.",
+    "false": "An interval had not elapsed, or cannot be confirmed."
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should happen to this spray record and lot now?",
+   "criteria": {
+    "release_lot": "Accept the record; lot proceeds to packing with no action.",
+    "request_evidence": "Ask the grower for one named missing document before deciding.",
+    "hold_and_test": "Hold the lot now and order residue sampling before release.",
+    "escalate": "Refer to technical manager for rejection or regulator notification."
+   }
+  },
+  "finding_class": {
+   "type": "choice",
+   "instructions": "What is the most serious class of finding here?",
+   "criteria": {
+    "no_finding": "All sections agree; no discrepancy of any kind found.",
+    "clerical_only": "Only identifier, unit or code mismatches; doses and timing compliant.",
+    "label_deviation": "Rate, application count or crop outside authorisation; intervals respected.",
+    "interval_breach": "Picking began before at least one product's withholding period ended."
+   }
+  },
+  "reversal_time": {
+   "type": "score",
+   "instructions": "How long would it take to fully undo this outcome?",
+   "criteria": [
+    "Could be fully undone within one day",
+    "Needs one to seven days to undo",
+    "Needs eight days to three months to undo",
+    "Cannot be undone within three months"
+   ]
+  },
+  "rate_overrun": {
+   "type": "score",
+   "instructions": "How far does the highest computed rate exceed its maximum?",
+   "criteria": [
+    "Every product at or below its authorised maximum",
+    "Highest product over maximum by up to 10%",
+    "Highest product over maximum by above 10% to 25%",
+    "Highest product over maximum by more than 25%"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "phi_status",
+   "description": "Gap between each application date and harvest.first_pick_date relative to product_ref.phi_days for the worst product.",
+   "kind": "categorical",
+   "values": [
+    "clear_margin",
+    "boundary_day",
+    "breached_short",
+    "breached_long",
+    "app_date_missing"
+   ],
+   "weights": [
+    0.45,
+    0.15,
+    0.15,
+    0.1,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "rate_overrun_band",
+   "description": "Highest ratio of qty_applied divided by area_treated_ha against max_rate_per_ha, after unit conversion.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "up_to_10",
+    "above_10_to_25",
+    "over_25",
+    "near_10_boundary"
+   ],
+   "weights": [
+    0.45,
+    0.18,
+    0.15,
+    0.1,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "partial_block_spray",
+   "description": "Applications list area_treated_ha smaller than block.planted_area_ha; legitimate spot spraying that changes the computed rate if the wrong area is used.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.35,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "clerical_mismatch",
+   "description": "A minor disagreement between sections that does not affect dose or timing.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "unit_ml_vs_l",
+    "product_code_typo",
+    "sprayer_id_format",
+    "lot_block_id_mismatch"
+   ],
+   "weights": [
+    0.4,
+    0.15,
+    0.15,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "minor_use_auth",
+   "description": "A minor-use authorisation reference exists in product_ref covering the block crop or a higher maximum rate, mitigating off-label or overrun signals.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "residue_test_clear",
+   "description": "Harvest residue test was sampled after picking and returned below limits, mitigating interval or rate concerns.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "calibration_state",
+   "description": "Sprayer calibration validity on the application dates, with nozzle output deviation as a partial mitigator.",
+   "kind": "categorical",
+   "values": [
+    "valid",
+    "expired_under_30d_low_dev",
+    "expired_under_30d_high_dev",
+    "expired_long",
+    "missing"
+   ],
+   "weights": [
+    0.45,
+    0.15,
+    0.12,
+    0.13,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "missing_item",
+   "description": "One piece of evidence absent that a decision may need.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "product_ref_entry_missing",
+    "equipment_section_missing",
+    "residue_result_pending",
+    "operator_cert_null"
+   ],
+   "weights": [
+    0.5,
+    0.13,
+    0.12,
+    0.15,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S5"
+   ]
+  },
+  {
+   "name": "season_count_excess",
+   "description": "A product is applied more times this season than product_ref.max_apps_per_season allows.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S1"
+   ]
+  },
+  {
+   "name": "off_label_crop",
+   "description": "A product's approved_crops list does not include the block crop.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.15,
+   "skills": [
+    "S1",
+    "S3"
+   ]
+  },
+  {
+   "name": "num_applications",
+   "description": "Number of application entries in the season record.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 2,
+   "max": 9,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "high_wind_decoy",
+   "description": "An application logs wind speed near or above the usual drift threshold, with sprayer_type sometimes a recycling tunnel sprayer that makes it harmless.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "block",
+   "description": "Block identity: block_id, grower_id, crop, variety, planted_area_ha, lot_id reference."
+  },
+  {
+   "name": "applications",
+   "description": "List of spray events: app_id, date, product_code, qty_applied, qty_unit, area_treated_ha, water_l_ha, sprayer_id, operator_cert_no, wind_kmh."
+  },
+  {
+   "name": "product_ref",
+   "description": "Label reference per product: product_code, active, max_rate_per_ha, rate_unit, phi_days, max_apps_per_season, approved_crops, minor_use_auth_ref."
+  },
+  {
+   "name": "equipment",
+   "description": "Sprayer details: sprayer_id, sprayer_type, last_calibration, calibration_valid_to, nozzle_dev_pct."
+  },
+  {
+   "name": "harvest",
+   "description": "Lot details: lot_id, block_id, first_pick_date, bins, residue_test with sampled, result_date, below_limit."
+  }
+ ],
+ "rendering_notes": "phi_status shows only through applications[].date, harvest.first_pick_date and product_ref[].phi_days; boundary_day puts the gap exactly at phi_days so inclusive versus exclusive counting is debatable; app_date_missing sets one date to null. rate_overrun_band is never stated: the reader must compute qty_applied / area_treated_ha, converting mL to L or g to kg where qty_unit differs from rate_unit, and compare with max_rate_per_ha (or the higher authorised rate when minor_use_auth_ref is non-null). partial_block_spray makes area_treated_ha below planted_area_ha; dividing by planted area understates the rate, which is a decoy. clerical_mismatch appears as unit_ml_vs_l (qty_unit inconsistent with magnitude), product_code_typo (e.g. 'CPX-210' vs 'CPX210'), sprayer_id_format between applications and equipment, or harvest.block_id differing from block.block_id by one character. minor_use_auth sets product_ref[].minor_use_auth_ref to a reference string, otherwise null. residue_test_clear sets harvest.residue_test.sampled true and below_limit true; residue_result_pending sets sampled true with below_limit and result_date null. calibration_state shows via equipment.calibration_valid_to versus application dates and nozzle_dev_pct (under 5 low, over 10 high); missing removes the dates. equipment_section_missing sets equipment to null; product_ref_entry_missing omits one used product; operator_cert_null nulls operator_cert_no on one entry. season_count_excess requires counting applications per product_code. off_label_crop omits block.crop from approved_crops. high_wind_decoy sets wind_kmh 18 to 25 with sprayer_type 'tunnel_recycling' about half the time. No field ever states compliance, overrun percentage, interval status, a finding category or a recommended action; there are no free-text fields.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "reversal_time",
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_evidence"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.141796
+}

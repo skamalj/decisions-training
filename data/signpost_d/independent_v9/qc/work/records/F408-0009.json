@@ -1,0 +1,155 @@
+{
+ "id": "F408-0009",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "RP-5120",
+   "uprn": 100234,
+   "flat": "4",
+   "postcode": "DY5 3HN",
+   "logged_at": "2024-05-09T14:30",
+   "stream": "RECYC",
+   "claimed": "2024-05-09",
+   "photo": false
+  },
+  "property": {
+   "uprn": 100234,
+   "flat": "4A",
+   "postcode": "DY5 3HN",
+   "assisted_collection": true,
+   "assisted_since": "2023-09-12",
+   "bins": [
+    "RES",
+    "RECYC"
+   ]
+  },
+  "schedule": {
+   "round": "R-17",
+   "day": "THU",
+   "week": "A",
+   "streams": [
+    "RES"
+   ],
+   "date": "2024-05-09"
+  },
+  "round_log": {
+   "status": "complete",
+   "completed_at": "2024-05-09T13:10",
+   "disruption": null,
+   "catch_up": null,
+   "stops": [
+    {
+     "uprn": 100234,
+     "exc": "not_presented",
+     "gps_stop": false,
+     "photo_ref": null
+    }
+   ],
+   "sweep_at": "2024-05-09T16:45"
+  },
+  "history": [
+   {
+    "case": "C-901",
+    "uprn": 100234,
+    "on": "2024-02-15",
+    "stream": "RES",
+    "o": "upheld"
+   },
+   {
+    "case": "C-944",
+    "uprn": 100234,
+    "on": "2024-03-20",
+    "stream": "RES",
+    "o": "upheld"
+   },
+   {
+    "case": "C-987",
+    "uprn": 100234,
+    "on": "2024-04-18",
+    "stream": "RECYC",
+    "o": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "stream_near_match",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": true,
+  "photo_attached": false,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 3,
+  "history_decoys": 0,
+  "assisted_miss_breach": true
+ },
+ "factors_sampled": {
+  "stream_mismatch": "wrong_stream",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "street_not_visited",
+  "round_disruption": "none",
+  "already_collected": true,
+  "photo_attached": false,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 0,
+  "history_decoys": 0,
+  "assisted_miss_breach": true
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_supervisor",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (assisted_miss_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 200,
+ "deciding": {
+  "crew_missed": "The stop is coded not_presented and sweep_at 16:45 is later than logged_at 14:30, and the reported RECYC stream is not due this week, so there is no evidence of a crew miss.",
+  "report_matches": "The date matches the scheduled 2024-05-09 and the flat differs only as 4 vs 4A, but the reported RECYC stream is not in streams_due (RES only, week A).",
+  "next_step": "The property is assisted since 2023-09-12 and the stop shows not_presented with gps_stop false, and there are repeated upheld cases, which calls for supervisor referral.",
+  "return_urgency": "assisted_collection is true and the stop shows not_presented and gps_stop false, which is the assisted breach, so a same-day return is needed.",
+  "repeat_failures": "Three upheld cases fall in the history, and the earliest, on 2024-02-15, is exactly 84 days before 2024-05-09, so it sits on the window boundary and the count is 2 or 3."
+ },
+ "request": "rec-F408-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010668
+}

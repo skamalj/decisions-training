@@ -1,0 +1,103 @@
+{
+ "id": "F417-0020",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "loa_m": 8.4,
+   "draught_m": 2.6,
+   "draught_src": null
+  },
+  "berth": {
+   "max_loa_m": 8.45,
+   "fender_allow_m": 0.05,
+   "depth_lat_m": 3.4
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 8.47,
+    "draught_m": null
+   },
+   "insurance_expiry": null,
+   "inspection_date": "2025-05-02"
+  }
+ },
+ "factors": {
+  "loa_mismatch_pct": 0.83,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 0.8,
+  "draught_source": "null",
+  "insurance_status": "missing",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 0,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": true
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 0.82,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 1.89,
+  "draught_source": "null",
+  "insurance_status": "missing",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 1486,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 2,
+  "boundary_placement": true
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "confirm_allocation",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "document_gap",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "length_fits": "Survey 8.47 exceeds max 8.45 but is within max plus fender 0.05 = 8.5.",
+  "next_step": "The record is kept minimal with no account, booking or date conflicts; the one gap is the null insurance field.",
+  "primary_issue": "insurance_expiry is null and draught source is null; nothing else is wrong.",
+  "ukc_band": "Depth 3.4 minus vessel draught 2.6 = 0.8 (declared draught as no survey figure).",
+  "unresolved_count": "The 0.07 m loa gap, null insurance and unsourced draught could be counted as two or three."
+ },
+ "request": "rec-F417-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009729
+}

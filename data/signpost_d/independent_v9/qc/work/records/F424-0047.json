@@ -1,0 +1,124 @@
+{
+ "id": "F424-0047",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B202",
+   "vessel_id": "FV4",
+   "volume_hl": 50,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-05-08",
+    "gravity_sg": 1.013,
+    "temp_c": 23.2
+   },
+   {
+    "ts": "2024-05-09",
+    "gravity_sg": 1.012,
+    "temp_c": 20
+   }
+  ],
+  "events": [
+   {
+    "type": "temp_change",
+    "vessel_id": "FV4",
+    "note": "Approved free-rise; smells a bit tart, please check."
+   }
+  ],
+  "lab": {
+   "diacetyl_mgl": 0.1
+  },
+  "release_request": {
+   "vessel_id": "FV4",
+   "volume_hl": 50.2,
+   "note": "Routine slot."
+  }
+ },
+ "factors": {
+  "gravity_status": "in_band_two_readings_both_inside",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "sensory_note_only",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.1,
+  "discrepancy_count": 0,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "gravity_status": "still_dropping",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": true,
+  "micro_signal": "sensory_note_only",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.17,
+  "discrepancy_count": 2,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "alarmed"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 78,
+ "deciding": {
+  "terminal_gravity": "1.013 then 1.012, both inside 1.010-1.014, but only a one-point drop between them leaves slight doubt.",
+  "contamination_supported": "Only a 'tart' operator remark; no plate result at all, balanced against the lack of any lab support.",
+  "batch_disposition": "Lab diacetyl 0.1 and a routine request; the unverified tart remark leaves slight doubt.",
+  "deviation_severity": "Peak temp 23.2 under max 24 with an approved free-rise event; diacetyl 0.1 normal.",
+  "record_discrepancies": "Vessel FV4 matches throughout; volume 50 vs 50.2 is within 0.5 hl."
+ },
+ "request": "rec-F424-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009075
+}

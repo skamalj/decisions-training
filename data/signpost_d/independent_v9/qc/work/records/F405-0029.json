@@ -1,0 +1,158 @@
+{
+ "id": "F405-0029",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-6201",
+   "detected_on": "2025-11-12",
+   "term_start": "2025-11-10",
+   "room": "AB.1.03",
+   "slot": "Wed 10:00"
+  },
+  "booking_a": {
+   "module": "HIS140",
+   "dept": "HIST",
+   "room": "AB.1.03",
+   "day": "Wed",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 63,
+   "required_features": [
+    "accessible_entry"
+   ],
+   "staff": [
+    "Lam",
+    "Ode"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "PHY102",
+   "dept": "PHYS",
+   "room": "AB.1.03",
+   "day": "Wed",
+   "start": "11:00",
+   "end": "13:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 50,
+   "staff": [
+    "Roe",
+    "Tan"
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-09-20",
+   "approver": "M. Qiu"
+  },
+  "alternatives": [
+   {
+    "code": "AB.2.01",
+    "capacity": 75,
+    "features": [
+     "accessible_entry"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "change_request",
+    "state": "open",
+    "booking": "PHY102",
+    "target_room": "AB.2.01",
+    "filed": "2025-11-03"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.84,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 0
+ },
+ "factors_sampled": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 48,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.19,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 0
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "dismiss",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 61,
+ "deciding": {
+  "genuine_clash": "HIS140 ends 11:00 and PHY102 starts 11:00 in AB.1.03 on the same weeks. The times are back to back, and the open change request adds slight doubt.",
+  "alt_room_fits": "AB.2.01 has capacity 75 for headcount 63 and has accessible_entry, free in weeks 1-4. It fits.",
+  "resolution": "With no time overlap, dismiss leads. An open change request on PHY102 and the room alternative leave slight doubt.",
+  "urgency": "The first shared Wednesday is 2025-11-12, the day of detection. The occurrence is today. It is adjacent rather than overlapping, which makes level 2 plausible.",
+  "parties_needed": "Two departments, four staff, approver M. Qiu and an open change request put the count near five. It could also be three or four."
+ },
+ "request": "rec-F405-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01658
+}

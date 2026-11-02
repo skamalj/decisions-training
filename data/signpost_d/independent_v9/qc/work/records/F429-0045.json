@@ -1,0 +1,152 @@
+{
+ "id": "F429-0045",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "spillway": "SP-9",
+   "operator_id": "op08",
+   "log_version": 2,
+   "licence_q_max_m3s": 200,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 55.0,
+    "action_m": 55.8
+   },
+   "rainfall_mm_24h": 5,
+   "readings": [
+    {
+     "t": "2024-09-14T02:00",
+     "level_m": 53.9,
+     "datum": "site"
+    },
+    {
+     "t": "2024-09-14T06:00",
+     "level_m": 54.1,
+     "datum": "site"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "2024-09-14T03:00",
+    "open_after_m": 1.0
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.0
+    }
+   ],
+   "calc_peak_m3s": 80,
+   "gauged_peak_m3s": 59.5,
+   "tailwater_m": 20.4
+  },
+  "instruments": {
+   "piezometer": {
+    "kpa": 48,
+    "alert_kpa": 75
+   },
+   "seepage_weir_lps": 3.2,
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "2024-09-14T07:10"
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "2024-09-14T02:15",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 34.5,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "action",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "large",
+  "discharge_discrepancy_pct": 34.52,
+  "datum_mismatch": false,
+  "missing_section": "instruments_null",
+  "notice_after_release": true,
+  "inspection_status": "completed",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "trigger_tier": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 99,
+ "deciding": {
+  "within_licence": "Calc 80 and gauged 59.5 are both far under the 200 limit. The 34% gap between them is the only doubt.",
+  "gates_reconciled": "G1 open_after_m 1.0 equals calc opening_m 1.0 exactly.",
+  "next_step": "Inspection is completed, the warning was sent before the gate move and acknowledged, and the gates match, so the log can be accepted.",
+  "trigger_tier": "The highest reading, 54.1 m, is below alert_m 55.0. The large calc against gauged gap adds slight doubt.",
+  "parties_needed": "Nothing is outstanding. The unexplained discharge gap might prompt a note from one person."
+ },
+ "request": "rec-F429-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009197
+}

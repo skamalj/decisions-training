@@ -1,0 +1,137 @@
+{
+ "id": "F407-0042",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-2210",
+   "received_at": "2025-06-02T14:30",
+   "channel": "public_app",
+   "photo_ref": null,
+   "linked_reports": [
+    "R-2198",
+    "R-2201",
+    "R-2203",
+    "R-2207",
+    "R-2209"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "usrn": 31002877,
+   "road_class": "footway",
+   "intervention_depth_mm": 20,
+   "speed_limit": 30
+  },
+  "inspection": {
+   "inspector_id": "I3",
+   "inspected_at": "2025-06-04",
+   "depth_mm": 19,
+   "width_mm": 370.58,
+   "offset_m": 7
+  },
+  "works_history": [
+   {
+    "job": "J-310",
+    "completed": "2024-11-20",
+    "offset_m": null,
+    "guarantee_end": "2025-11-20"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "id": "S-41",
+     "start": "2025-06-23",
+     "extent_m": [
+      0,
+      120
+     ]
+    }
+   ],
+   "temp_measures": [
+    {
+     "offset_m": 7,
+     "installed": "2025-06-04",
+     "expiry": "2025-07-30"
+    }
+   ]
+  },
+  "current_order": null
+ },
+ "factors": {
+  "road_category": "footway",
+  "depth_vs_threshold": "on_boundary",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 5,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 370.58,
+  "photo_attached": false
+ },
+ "factors_sampled": {
+  "road_category": "footway",
+  "depth_vs_threshold": "on_boundary",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": true,
+  "planned_scheme_soon": true,
+  "duplicate_count": 5,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "none",
+  "defect_width_mm": 370.58,
+  "photo_attached": false
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "repeat_failure": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "close_no_action",
+   "second": "escalate_engineer",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 90,
+ "deciding": {
+  "meets_threshold": "depth_mm 19 is 1 mm under intervention_depth_mm 20: just below, but within measurement tolerance.",
+  "repeat_failure": "Prior job on the street with null offset, still in guarantee: could be the same spot or not.",
+  "next_step": "Marginally below threshold, temp measure and scheme S-41 covering the offset starting within 28 days favour closing; five linked reports and the possible repeat support escalation.",
+  "staff_effort": "Little to do beyond checking the scheme and recording the duplicates: a few hours.",
+  "response_timescale": "Near-threshold depth with temp measure in place suggests routine 28-day timing, and the scheme starts soon."
+ },
+ "request": "rec-F407-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007261
+}

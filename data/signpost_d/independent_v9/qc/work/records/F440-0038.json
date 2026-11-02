@@ -1,0 +1,176 @@
+{
+ "id": "F440-0038",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "B3",
+   "review_date": "2025-08-16",
+   "arrival": "2025-09-20",
+   "departure": "2025-09-23",
+   "pax": {
+    "13-17": 20,
+    "adult": 2
+   },
+   "amendments": [
+    {
+     "type": "pax_change",
+     "delta": -2,
+     "logged_at": "2025-08-01"
+    },
+    {
+     "type": "date_change",
+     "delta": 1,
+     "logged_at": "2025-08-03"
+    }
+   ]
+  },
+  "roster": [
+   {
+    "role": "leader",
+    "dob": "1982-01-20",
+    "depart": "2025-09-23"
+   },
+   {
+    "role": "leader",
+    "dob": "1988-06-02",
+    "depart": "2025-09-22"
+   },
+   {
+    "role": "participant",
+    "n": 10,
+    "dob": "2010",
+    "sex": "F"
+   },
+   {
+    "role": "participant",
+    "n": 8,
+    "dob": "2010",
+    "sex": "M"
+   }
+  ],
+  "allocation": [
+   {
+    "room": "D1",
+    "sex": "F",
+    "beds": 9,
+    "nights": [
+     "2025-09-20",
+     "2025-09-21"
+    ]
+   },
+   {
+    "room": "D2",
+    "sex": "M",
+    "beds": 10,
+    "nights": [
+     "2025-09-20",
+     "2025-09-21"
+    ]
+   }
+  ],
+  "payment": {
+   "total": 1100,
+   "deposit_due": 275,
+   "paid_total": 275
+  },
+  "safeguarding": [
+   {
+    "adult": "L1",
+    "status": "verified",
+    "expiry": "2026-05-01"
+   },
+   {
+    "adult": "L2",
+    "status": "verified",
+    "expiry": "2026-02-01"
+   }
+  ],
+  "history": {
+   "trusted": false,
+   "stays": 7,
+   "no_shows": 4
+  }
+ },
+ "factors": {
+  "pax_mismatch": "two_to_four",
+  "night_mismatch": "one_night_short",
+  "amendment_logged": true,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": false,
+  "deposit_position": "paid_full",
+  "instalment_approved": false,
+  "days_to_arrival": 35,
+  "dorm_fit": "needs_one_swap",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 4,
+  "diet_count_drift": "none"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "two_to_four",
+  "night_mismatch": "one_night_short",
+  "amendment_logged": true,
+  "supervision_level": "comfortable",
+  "extra_cover_logged": false,
+  "deposit_position": "paid_full",
+  "instalment_approved": false,
+  "days_to_arrival": 35,
+  "dorm_fit": "needs_one_swap",
+  "leader_checks": "all_verified",
+  "trusted_organiser": false,
+  "prior_no_shows": 4,
+  "diet_count_drift": "none"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 62,
+ "deciding": {
+  "ratio_met": "18 minors aged 13-17 need 2 adults; leader 2 departs 2025-09-22, so that night has one adult and no cover is logged.",
+  "deposit_covered": "paid_total 275 equals deposit_due 275; the earlier pax_change leaves slight doubt over whether the total price was adjusted.",
+  "disposition": "Checks are verified, so the only gap is the missing cover for the night of 09-22, which must be confirmed before release.",
+  "urgency": "Review 08-16 to arrival 09-20 is 35 days, so routine.",
+  "conflict_count": "Pax and nights gaps are covered by logged amendments. The 10 girls against 9 F beds is unexplained, but it is a one-bed gap and arguably fixable."
+ },
+ "request": "rec-F440-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.018845
+}

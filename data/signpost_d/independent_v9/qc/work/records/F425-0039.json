@@ -1,0 +1,115 @@
+{
+ "id": "F425-0039",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "declared_eggs": 1000,
+   "lay_dates": [
+    "2024-03-04"
+   ]
+  },
+  "grading_run": {
+   "run_start": "2024-03-06T08:00",
+   "eggs_in": 995,
+   "by_size": {
+    "S": 76,
+    "M": 300,
+    "L": 450,
+    "XL": 150
+   },
+   "outgrades": {
+    "leakers": 14,
+    "cracks": 5
+   },
+   "class_a_total": 976
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2023-12-01",
+    "interval_days": 90
+   },
+   "candling_sample": null
+  },
+  "packing": {
+   "pack_date": "2024-03-07"
+  }
+ },
+ "factors": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 3,
+  "mixed_lay_dates": false,
+  "missing_check": "candling_null",
+  "swab_positive": false,
+  "outgrade_rate_pct": 1.91,
+  "dominant_defect": "leakers",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 40
+ },
+ "factors_sampled": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 1,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 11.6,
+  "dominant_defect": "leakers",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "brief",
+  "temp_mitigated": false,
+  "flock_age_weeks": 40
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "hold_pending",
+   "second": null,
+   "targets": []
+  },
+  "anomaly_cause": {
+   "clarity": "leaning",
+   "target": "equipment_fault",
+   "second": null,
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 26,
+ "deciding": {
+  "counts_reconcile": "declared 1000 vs eggs_in 995 is exactly 0.5%; sizes 976 + outgrades 19 = 995.",
+  "batch_disposition": "checks.candling_sample is null, a specific missing check, so release waits.",
+  "anomaly_cause": "Calibration last 2023-12-01 with a 90 day interval is overdue at run_start 2024-03-06 and has no manual recheck, while outgrades are low.",
+  "lay_to_pack": "Lay 03-04 to pack 03-07 is 3 days, at the boundary with level 1.",
+  "outgrade_share": "19 of 995 is 1.91%, just under the 2% boundary."
+ },
+ "request": "rec-F425-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009825
+}

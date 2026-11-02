@@ -1,0 +1,142 @@
+{
+ "id": "F438-0024",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E4408",
+   "spec": "urology",
+   "los": 2
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "N20.0"
+   },
+   "comorbidities": [
+    "N39.0",
+    "I10",
+    "E78.0"
+   ],
+   "theatre_log": [
+    {
+     "proc": "M27.1",
+     "date": "2024-05-11"
+    }
+   ]
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "N20.0"
+   },
+   "secondary_dx": [
+    "N39.0",
+    "I10",
+    "E78.0",
+    "N17.9",
+    "E87.1",
+    "D64.9"
+   ],
+   "procedures": [
+    {
+     "code": "M27.1",
+     "date": "2024-05-11"
+    },
+    {
+     "code": "L91.2",
+     "date": "2024-05-11"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "LB36C",
+   "hrg_regrouped": "LB36C",
+   "tariff_submitted": 3650,
+   "tariff_regrouped": 2400,
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "coder_history": {
+   "error_rate": 0.18,
+   "last_audit_result": "pass"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 3,
+  "procedure_mismatch": "coded_not_documented",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.18,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "not_regroupable",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": true,
+  "pre_submission": true,
+  "coder_recent_audit_passed": true,
+  "coder_error_rate": 0.18,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unsupported_billable_code = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 53,
+ "deciding": {
+  "primary_supported": "N20.0 matches the documented principal condition; other sections raise some doubt.",
+  "hrg_shift": "LB36C is the same in both, though the tariff falls 3650 to 2400.",
+  "next_step": "Episode is pre-submission and primary and HRG hold, but the coded L91.2 is unsupported, so accepting is doubtful.",
+  "error_count": "Three undocumented secondary codes (N17.9, E87.1, D64.9) plus coded L91.2 with no theatre entry give four errors.",
+  "error_severity": "L91.2 has no documentation and a positive tariff effect (critical); the HRG is unchanged, so level 3 is still arguable."
+ },
+ "request": "rec-F438-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007746
+}

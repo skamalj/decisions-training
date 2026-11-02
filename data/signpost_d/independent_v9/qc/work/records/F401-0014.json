@@ -1,0 +1,164 @@
+{
+ "id": "F401-0014",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "K330",
+   "planned_discharge_at": "2025-05-12T13:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 15,
+     "spo2": 98,
+     "sbp": 118,
+     "hr": 68
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "K330",
+   "reconciled": [
+    {
+     "drug": "atorvastatin",
+     "dose": 20,
+     "unit": "mg",
+     "freq": "nocte"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "apixaban",
+     "action": "start",
+     "reason": "new AF",
+     "prescriber": "Dr Kaur",
+     "changed_at": "2025-05-12T09:40"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "atorvastatin",
+     "dose": 20,
+     "unit": "mg",
+     "freq": "nocte"
+    },
+    {
+     "drug": "apixaban",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ],
+   "signed_at": "2025-05-12T09:40",
+   "pharmacy_ready_at": "2025-05-12T11:30"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": null,
+    "transfer_assist_count": 0,
+    "adl_score": 20
+   },
+   "social": {
+    "lives_alone": false
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "done",
+     "completed_at": "2025-05-12T10:00",
+     "signed_by": "RN"
+    },
+    {
+     "t": "GP letter",
+     "status": "sent"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-05-12",
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "drug_added",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "pickup_time_null_on_planned_date",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "drug_added",
+  "rx_change_documented": true,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 5,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": true
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "discharge_now",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "home_independent",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 61,
+ "deciding": {
+  "rx_matches": "Apixaban is added on discharge_rx, and changes[] names it with action, reason and prescriber. Its changed_at equals signed_at at 09:40, so whether it is before signing is borderline.",
+  "next_step": "Obs are normal, there are no open items or results, IDs match, and the TTO is done and signed. Only the sent GP letter and the null pickup_time leave slight doubt about discharging as planned.",
+  "destination": "The patient is independent (ADL 20, no aid, no transfer help), lives with others, and no care arrangement is needed.",
+  "outstanding_tasks": "The TTO is done and signed, and the GP letter is marked sent rather than done or pending. Zero is likely, but one is arguable if the letter is treated as unconfirmed.",
+  "discharge_delay": "Pharmacy is ready at 11:30 before the planned 13:00. Transport is booked for the planned date with a null pickup_time, the contested boundary between levels 0 and 1."
+ },
+ "request": "rec-F401-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013802
+}

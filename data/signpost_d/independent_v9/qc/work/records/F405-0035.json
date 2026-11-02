@@ -1,0 +1,141 @@
+{
+ "id": "F405-0035",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "detected_on": "2025-10-20",
+   "term_start": "2025-09-29",
+   "room": "ENG-101"
+  },
+  "booking_a": {
+   "dept": "ENG",
+   "day": "Mon",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "dept": "MAT",
+   "room": "E101",
+   "day": "Mon",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "status": "pending_approval",
+   "approved_at": null,
+   "approver": null
+  },
+  "room": {
+   "code": "ENG-101",
+   "aliases": [
+    "E101"
+   ],
+   "capacity": 60
+  },
+  "alternatives": null,
+  "history": [
+   {
+    "type": "change_request",
+    "state": "open",
+    "weeks_added_to_a": [
+     6
+    ]
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "pending_approval",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 14,
+  "alt_room_fit": "not_assessable",
+  "alternatives_missing": true,
+  "headcount_ratio": 0.95,
+  "required_feature": "none",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "pending_approval",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": -7,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": true,
+  "headcount_ratio": 0.95,
+  "required_feature": "none",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "genuine_clash": "Weeks 1-5 and 6-10 are disjoint (favours false), but an open change request adds week 6 to booking_a and E101 is an alias of ENG-101.",
+  "alt_room_fits": "alternatives is null: no search has been run, so no listed room can be said to fit.",
+  "resolution": "booking_b is pending_approval with null approver and a change request is open, so confirmation is outstanding.",
+  "urgency": "If week 6 is added, the first clash is Monday 2025-11-03, 14 days after detection on 2025-10-20.",
+  "parties_needed": "Two departments, an approver and a change-request owner, plus a room search, put it at the edge between three-or-four and five-plus actors."
+ },
+ "request": "rec-F405-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013731
+}

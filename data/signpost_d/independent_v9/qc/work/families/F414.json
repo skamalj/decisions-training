@@ -1,0 +1,335 @@
+{
+ "id": "F414",
+ "domain": "playground equipment safety inspections",
+ "role": "Play-area safety officer in a local authority parks department, reviewing one submitted equipment inspection return at a time before it is accepted onto the asset file",
+ "setting": "Contracted and in-house inspectors submit structured inspection returns for individual pieces of fixed playground equipment. Each return combines the asset register entry, the measurements and findings from the visit, linked repair work orders, site conditions and recent inspection history. The officer checks the return against the register and the maintenance log, judges how serious the worst hazard is and how far remedial work has progressed, and decides whether the asset can stay in use, needs restriction or closure, or must wait for a missing confirmation.",
+ "questions": {
+  "prior_defects_cleared": {
+   "type": "noul",
+   "instructions": "Every defect raised at the previous inspection is now closed out.",
+   "criteria": null
+  },
+  "surfacing_adequate": {
+   "type": "noul",
+   "instructions": "Measured surfacing depth meets the requirement for the measured fall height.",
+   "criteria": {
+    "true": "Recorded depth at or above requirement for measured height",
+    "false": "Depth below requirement, unmeasured, or rated for lower height"
+   }
+  },
+  "asset_disposition": {
+   "type": "choice",
+   "instructions": "What should happen to this asset following this inspection?",
+   "criteria": {
+    "sign_off": "No open hazards; asset accepted for continued public use.",
+    "sign_off_actions": "Use continues; non-urgent repairs scheduled with due dates.",
+    "hold": "Decision deferred until one missing measurement or record confirmed.",
+    "restrict_use": "Hazardous component isolated; rest of asset stays open.",
+    "close_asset": "Whole asset taken out of use until repaired."
+   }
+  },
+  "remedial_progress": {
+   "type": "score",
+   "instructions": "What share of the raised remedial work orders is closed?",
+   "criteria": [
+    "No raised work orders closed yet",
+    "Some closed, but fewer than half",
+    "Half or more closed, at least one open",
+    "All raised work orders closed, or none raised"
+   ]
+  },
+  "hazard_severity": {
+   "type": "score",
+   "instructions": "How severe is the worst confirmed hazard on this asset?",
+   "criteria": [
+    "Negligible: only cosmetic wear or no defects recorded",
+    "Low: defect logged with no injury mechanism identified",
+    "Moderate: defect could cause minor injury such as cuts",
+    "High: defect could cause fracture or other serious injury",
+    "Critical: life-threatening hazard such as head or neck entrapment"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "equipment_type",
+   "description": "Kind of fixed play equipment inspected; changes which measurements and defect codes are relevant (chain wear for swings, run-out for slides, bearing play for roundabouts).",
+   "kind": "categorical",
+   "values": [
+    "swing",
+    "slide",
+    "climbing_frame",
+    "roundabout",
+    "spring_rocker",
+    "multi_play"
+   ],
+   "weights": [
+    0.22,
+    0.18,
+    0.18,
+    0.1,
+    0.12,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "register_mismatch",
+   "description": "Disagreement between the asset register and the inspection: none; trivial (asset_id formatting or install date off by days); moderate (surfacing type in register differs from type recorded on site); large (register critical fall height differs from measured fall height by more than 0.5 m).",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "trivial",
+    "moderate",
+    "large"
+   ],
+   "weights": [
+    0.35,
+    0.25,
+    0.22,
+    0.18
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "surfacing_depth_margin_mm",
+   "description": "Measured minimum surfacing depth minus the depth required for the measured fall height and the recorded surfacing type; values near zero sit on the boundary.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": -120,
+   "max": 120,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "worst_defect_class",
+   "description": "Injury mechanism of the worst non-entrapment defect logged, expressed through the defect code and component recorded in findings.",
+   "kind": "categorical",
+   "values": [
+    "cosmetic",
+    "no_mechanism",
+    "minor_injury",
+    "serious_injury"
+   ],
+   "weights": [
+    0.2,
+    0.28,
+    0.3,
+    0.22
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S4"
+   ]
+  },
+  {
+   "name": "head_neck_entrapment_fail",
+   "description": "Decisive aggravating fact: the entrapment probe test is recorded as failed for the head and neck probe at one or more openings. When true the worst hazard is Critical regardless of any other field.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "prior_defects_open",
+   "description": "Number of defects listed in the previous inspection whose linked work orders are still open, missing, or closed against a different component_id.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "work_orders_closed_fraction",
+   "description": "Proportion of work orders raised for this asset since the previous inspection that carry status closed with a closed_date on or before the inspection date.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 1,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S1"
+   ]
+  },
+  {
+   "name": "temporary_measure_in_place",
+   "description": "Mitigation: maintenance shows a temporary measure isolating the defective component (seat removed, barrier fitted, platform boarded) dated before or on the inspection.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "approved_variance",
+   "description": "Mitigation: register holds a current variance reference approving a known deviation (e.g. reduced run-out or alternative surfacing) for this asset.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "followup_check_passed",
+   "description": "Mitigation: a later operational check in history, dated after the inspection, records the flagged component as passed.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.45,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "missing_measurement",
+   "description": "One required measurement for this equipment type is null (surfacing depth, fall height or chain wear), leaving one confirmation outstanding.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S4",
+    "S5"
+   ]
+  },
+  {
+   "name": "inspector_grade",
+   "description": "Grade of the inspection carried out; a routine visual check carries less weight for structural findings than an annual main inspection.",
+   "kind": "categorical",
+   "values": [
+    "routine_visual",
+    "operational",
+    "annual_main"
+   ],
+   "weights": [
+    0.35,
+    0.35,
+    0.3
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S3"
+   ]
+  },
+  {
+   "name": "usage_level",
+   "description": "Recorded footfall band for the site; context and partial decoy, raises attention but never changes severity on its own.",
+   "kind": "categorical",
+   "values": [
+    "low",
+    "medium",
+    "high"
+   ],
+   "weights": [
+    0.3,
+    0.4,
+    0.3
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S6"
+   ]
+  },
+  {
+   "name": "incident_reports_90d",
+   "description": "Count of public injury or damage reports for the asset in the last 90 days; an alarming signal that may or may not relate to the logged defects.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "asset",
+   "description": "Register entry: asset_id, site_id, equip_type, install_date, std_ref, crit_fall_height_m, surf_type, variance_ref."
+  },
+  {
+   "name": "inspection",
+   "description": "Visit details: insp_date, insp_grade, inspector_id, measured fall_height_m, surf_type_found, surf_depth_mm, chain_wear_pct, probe_results list, findings list of defect codes."
+  },
+  {
+   "name": "maintenance",
+   "description": "List of work orders: wo_id, asset_id, component_id, defect_ref, raised_date, status, closed_date, temp_measure."
+  },
+  {
+   "name": "site",
+   "description": "Site conditions: usage_level, closure_status, incident_reports_90d, last_vandalism_date."
+  },
+  {
+   "name": "history",
+   "description": "Prior inspections and follow-up checks: date, grade, defect_refs raised, component results."
+  }
+ ],
+ "rendering_notes": "register_mismatch appears only by comparing asset fields with inspection fields (asset_id string vs work-order asset_id, surf_type vs surf_type_found, crit_fall_height_m vs fall_height_m); never flagged. surfacing_depth_margin_mm is never given; the reader compares inspection.surf_depth_mm with the requirement implied by fall_height_m and surf_type_found, using a requirement table embedded as inspection.surf_req_table (list of height band, type, min_depth_mm). worst_defect_class shows as findings items with defect_code, component_id and injury_mech (cosmetic, none, minor, serious); head_neck_entrapment_fail shows as a probe_results item {probe:'head_neck', opening_id, result:'fail'}; decoy probe items for finger or torso probes may fail without implying Critical. prior_defects_open is derived by matching history[-1].defect_refs against maintenance defect_ref and status; decoys include orders closed with a closed_date after insp_date or against a different component_id. work_orders_closed_fraction is computed from maintenance status and dates; zero raised orders renders an empty list. temporary_measure_in_place renders as maintenance.temp_measure with a type and date; approved_variance as a non-null asset.variance_ref with expiry date (expired references act as decoys); followup_check_passed as a history entry dated after insp_date with result pass for the flagged component. missing_measurement renders the relevant field as null. inspector_grade appears in inspection.insp_grade; usage_level and incident_reports_90d in site. Mitigation and alarming signals are sampled independently so each alarm appears with and without mitigation. No field states severity, disposition, compliance or completion; there is no risk rating, pass/fail summary or recommended action field, and no free-text notes.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": null,
+ "aggravating_factor": "head_neck_entrapment_fail",
+ "design_cost": 0.150944
+}

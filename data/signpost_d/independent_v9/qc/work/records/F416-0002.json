@@ -1,0 +1,133 @@
+{
+ "id": "F416-0002",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "E1",
+   "date": "2025-06-02",
+   "signoff": "G3 18:05"
+  },
+  "roster": [
+   {
+    "id": "G3",
+    "on": "08:00",
+    "off": "18:00",
+    "qual_expiry": "2026-03-01"
+   },
+   {
+    "id": "G9",
+    "on": "08:00",
+    "off": "18:00",
+    "qual_expiry": "2025-12-15"
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-06-02",
+    "time": "13:10",
+    "type": "water_rescue",
+    "resp": [
+     "G3",
+     "G9"
+    ],
+    "outcome": "conveyed",
+    "aed_used": true,
+    "ambulance_ref": null
+   }
+  ],
+  "equipment": [
+   {
+    "item": "oxygen kit",
+    "out_from": "09:00",
+    "out_to": "09:40",
+    "substitute_unit_id": "OX-2"
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "wind_kt": 28,
+   "check_sheet_ref": "CS-5"
+  }
+ },
+ "factors": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "rescues_off_by_one",
+  "worst_outcome": "conveyed",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": true,
+  "missing_record": "ambulance_ref",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "factors_sampled": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": true,
+  "missing_record": "ambulance_ref",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_item",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "two_guard_cover": "The one rescue lists G3 and G9, both rostered at 13:10 with qual_expiry after the shift date.",
+  "totals_reconcile": "Handover rescues is 2 but only one water_rescue is itemised, so the total is off by one.",
+  "next_step": "ambulance_ref is null on a conveyed casualty, which is a specific missing item. The totals discrepancy and the AED use leave some doubt.",
+  "outcome_severity": "Outcome code is conveyed, but aed_used is true, which could be read as critical. Sensible readers split between levels 2 and 3.",
+  "kit_outage": "The oxygen kit was out for 40 minutes with substitute OX-2 logged, so it is fully substituted. The short gap keeps level 1 plausible."
+ },
+ "request": "rec-F416-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010773
+}

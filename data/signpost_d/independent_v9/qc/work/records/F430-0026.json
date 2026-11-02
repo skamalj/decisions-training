@@ -1,0 +1,122 @@
+{
+ "id": "F430-0026",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "CB1",
+     "unit": "bar",
+     "normal_band": [
+      6.0,
+      6.5
+     ],
+     "alarm_limit": 5.5,
+     "trip_limit": 5.2,
+     "customers_fed": 9960,
+     "partner_id": null
+    }
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "CB1",
+    "param": "sf6",
+    "value": 5.9,
+    "unit": "bar"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "CB1",
+    "note": "SF6 leak heavy"
+   }
+  ],
+  "history": {
+   "open_work_orders": [
+    {
+     "asset_id": "CB2",
+     "desc": "SF6 gauge low, replacement ordered"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": false,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 9960,
+  "trivial_discrepancies": 3,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": false,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 20175,
+  "trivial_discrepancies": 3,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "leaning",
+   "target": "file_closed",
+   "second": null,
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 29,
+ "deciding": {
+  "defect_corroborated": "Note says heavy SF6 leak but CB1 reads 5.9 bar, only slightly under the 6.0 band and above the 5.5 alarm.",
+  "benign_explanation": "Open work order explains a low SF6 gauge, but on CB2 while the reading is on CB1; a neighbouring unit may share the fault.",
+  "follow_up": "Reading is mildly outside band, well above alarm, with no escalation; filing is reasonable.",
+  "limit_deviation": "5.9 bar is below the 6.0 normal band floor but above the 5.5 alarm limit.",
+  "supply_exposure": "No partner and 9960 customers fed, just under the 10,000 boundary."
+ },
+ "request": "rec-F430-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009121
+}

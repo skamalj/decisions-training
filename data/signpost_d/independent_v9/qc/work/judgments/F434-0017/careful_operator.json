@@ -1,0 +1,36 @@
+{
+ "persona": "careful_operator",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "coverage_held": {
+   "true": 0.8,
+   "false": 0.2
+  },
+  "next_step": {
+   "file": 0.03,
+   "query_marshal": 0.15,
+   "hold_confirm": 0.22,
+   "safety_review": 0.6
+  },
+  "incident_class": {
+   "no_incident": 0.01,
+   "mechanical_only": 0.1,
+   "rider_fall": 0.02,
+   "course_intrusion": 0.87
+  },
+  "reversal_time": {
+   "0": 0.1,
+   "1": 0.15,
+   "2": 0.25,
+   "3": 0.5
+  },
+  "consequence_severity": {
+   "0": 0.7,
+   "1": 0.08,
+   "2": 0.05,
+   "3": 0.17
+  }
+ },
+ "cost": 0.000491
+}

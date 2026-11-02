@@ -1,0 +1,119 @@
+{
+ "id": "F402-0015",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-5590",
+   "priority": "soon",
+   "received": "2024-06-10",
+   "onset": "2023-10-09"
+  },
+  "clinical": {
+   "diagnosis_code": "R29.6",
+   "red_flags": [],
+   "function_index": 64.3,
+   "anticoagulant": false,
+   "surgery_date": "2024-05-02"
+  },
+  "gp_record": {
+   "meds": [
+    "warfarin"
+   ],
+   "falls_3m": 2,
+   "reviews": [
+    {
+     "date": "2024-05-20",
+     "type": "urgent"
+    }
+   ]
+  },
+  "attachments": [],
+  "history": {
+   "episodes": 3,
+   "self_mgmt_trial": true,
+   "discharge": "oncology_discharge"
+  }
+ },
+ "factors": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "major",
+  "missing_item": "imaging_report",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 35,
+  "function_index": 64.31,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 2,
+  "post_op_days": 39,
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": true,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "major",
+  "missing_item": "imaging_report",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 35,
+  "function_index": 64.31,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 2,
+  "post_op_days": 39,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_lead",
+   "second": "request_info",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "self_management",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "red_flag_unresolved": "red_flags list is empty; urgent review and oncology discharge are documented.",
+  "next_step": "Anticoagulant false vs warfarin in GP meds with falls: escalate to lead/GP, or request imaging/clarification.",
+  "pathway": "Self-management already tried and function 64.3 favour self-management, but falls and anticoagulation leave doubt.",
+  "reversal_time": "Falls on an unrecognised anticoagulant risk harm that cannot be undone within three months.",
+  "clinical_urgency": "Function index 64.3, no red flags and benign history: first contact within six weeks."
+ },
+ "request": "rec-F402-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004905
+}

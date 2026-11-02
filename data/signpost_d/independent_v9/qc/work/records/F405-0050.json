@@ -1,0 +1,143 @@
+{
+ "id": "F405-0050",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C-880",
+   "detected_on": "2025-11-02",
+   "term_start": "2025-11-10",
+   "room": "EN-101"
+  },
+  "booking_a": {
+   "module": "ENG300",
+   "dept": "ENG",
+   "lecturer": "p.moss",
+   "day": "Mon",
+   "start": "14:00",
+   "end": "16:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 41,
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "ENG310",
+   "dept": "ENG",
+   "lecturer": "r.cho",
+   "room": "EN-101",
+   "day": "Mon",
+   "start": "15:55",
+   "end": "17:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 38,
+   "status": "confirmed",
+   "approved_at": "2025-09-30",
+   "approver": null
+  },
+  "room": {
+   "code": "EN-101",
+   "aliases": [],
+   "capacity": 45,
+   "features": []
+  },
+  "alternatives": [
+   {
+    "code": "EN-104",
+    "capacity": 30,
+    "features": [],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "history": []
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": true,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 8,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.73,
+  "required_feature": "none",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 0
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": true,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.73,
+  "required_feature": "none",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 0
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "contested",
+   "target": "hold_confirm",
+   "second": "dismiss",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 60,
+ "deciding": {
+  "genuine_clash": "Same room and weeks, but the times overlap by only 5 minutes (15:55-16:00), which could be changeover; balanced.",
+  "alt_room_fits": "EN-104 capacity 30 is below booking A's 41 headcount and B's 38; it only fits if headcount is flexible.",
+  "resolution": "Overlap is only 5 minutes (dismissable), but B's approver is null so approval is unconfirmed; hold or dismiss both defensible.",
+  "urgency": "Detected 2025-11-02, first Monday 2025-11-10 is 8 days away, at the 7/8 day boundary.",
+  "parties_needed": "Two lecturers (p.moss, r.cho) plus the missing approver plus the timetabling officer: three to four actors."
+ },
+ "request": "rec-F405-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011686
+}

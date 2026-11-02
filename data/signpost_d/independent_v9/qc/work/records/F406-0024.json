@@ -1,0 +1,156 @@
+{
+ "id": "F406-0024",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-5518",
+   "gallery_code": "GAL-02",
+   "session_date": "2025-04-22",
+   "open": "10:00",
+   "close": "11:30",
+   "certified_limit": 100
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "10:00",
+     "in": 30,
+     "out": 0,
+     "occupancy": 30
+    },
+    {
+     "start": "10:15",
+     "in": 35,
+     "out": 10,
+     "occupancy": 55
+    },
+    {
+     "start": "10:30",
+     "in": 40,
+     "out": 15,
+     "occupancy": 80
+    },
+    {
+     "start": "10:45",
+     "in": 30,
+     "out": 22,
+     "occupancy": 88
+    },
+    {
+     "start": "11:00",
+     "in": 15,
+     "out": 30,
+     "occupancy": 73
+    },
+    {
+     "start": "11:15",
+     "in": 10,
+     "out": 28,
+     "occupancy": 55
+    }
+   ],
+   "ticket_scans": 162,
+   "manual_tally_peak": 87,
+   "summary_peak": 88
+  },
+  "variations": [],
+  "equipment": {
+   "gates": [
+    "A1"
+   ],
+   "last_calibrated": "2025-03-30",
+   "maintenance": []
+  },
+  "staff_log": {
+   "stewards": 3,
+   "egress_check": "done",
+   "notes": "Felt very crowded in the main hall, I thought."
+  },
+  "history": {
+   "overages_30d": 1,
+   "last_overage": "2025-04-03"
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.88,
+  "intervals_over_limit": 0,
+  "section_mismatch": "none",
+  "variation_present": false,
+  "variation_scope": "matches",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "none",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 1,
+  "staff_note_tone": "alarmed_unsupported",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.01,
+  "intervals_over_limit": 5,
+  "section_mismatch": "session_date_mismatch",
+  "variation_present": false,
+  "variation_scope": "matches",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "partial",
+  "prior_overages_30d": 1,
+  "staff_note_tone": "alarmed_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "fault_explains_overage": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 92,
+ "deciding": {
+  "variation_applies": "The variations list is empty, so there is no variation to apply.",
+  "fault_explains_overage": "maintenance is empty and no interval exceeds 100, so no documented fault explains any overage.",
+  "next_step": "Counter entries (160) match ticket scans (162), tally 87 matches summary 88, egress is done; the single prior overage and the vague note are minor.",
+  "peak_excess": "Peak 88 of limit 100 is below 90%, though it is close to the boundary.",
+  "intervals_over": "All six intervals are 88 or lower against the limit of 100."
+ },
+ "request": "rec-F406-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010649
+}

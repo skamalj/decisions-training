@@ -1,0 +1,122 @@
+{
+ "id": "F408-0017",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "M202",
+   "uprn": 2002,
+   "stream": "recycling",
+   "claimed": "2025-04-01",
+   "logged_at": "2025-04-04T09:00",
+   "photo": true
+  },
+  "property": {
+   "uprn": 2002,
+   "assisted": false
+  },
+  "schedule": {
+   "streams_due": [
+    "recycling"
+   ],
+   "scheduled": "2025-04-01",
+   "week": "B"
+  },
+  "round_log": {
+   "status": "complete",
+   "completed_at": "2025-04-01T14:30",
+   "disruption": null,
+   "stops": [
+    {
+     "uprn": 2002,
+     "exception_code": "contaminated",
+     "photo_ref": "P7731",
+     "gps_stop": true
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 2002,
+    "logged_on": "2025-03-10",
+    "outcome": "pending"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "beyond_window",
+  "crew_exception": "contaminated",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 0,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "beyond_window",
+  "crew_exception": "contaminated",
+  "exception_supported": false,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "report_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_conditional",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "crew_missed": "The stop shows contaminated with photo_ref P7731 and gps_stop true, so the exception is supported and the crew did stop.",
+  "report_matches": "Stream and claimed date equal the schedule; the only doubt is logging on 04-04, past 48 hours after the scheduled date.",
+  "next_step": "Supported contamination exception, so the return depends on the resident clearing the contamination.",
+  "return_urgency": "No assisted flag or deadline; the late logging and the contamination keep standard versus same day close.",
+  "repeat_failures": "No upheld entries, but one pending case on 2025-03-10 inside the window could become an upheld miss, making the count 0 or 1."
+ },
+ "request": "rec-F408-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009575
+}

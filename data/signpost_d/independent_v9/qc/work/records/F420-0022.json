@@ -1,0 +1,127 @@
+{
+ "id": "F420-0022",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "AKE55120",
+   "uld_serial": "AKE55120QR",
+   "flt": "QR0417",
+   "dest": "DOH",
+   "pos": "31R",
+   "contour_max_cm": 160,
+   "tare_kg": 150,
+   "planned_gross_kg": 1200,
+   "straps_required": 4
+  },
+  "manifest_lines": [
+   {
+    "awb": "157-40228810",
+    "dest": "DOH",
+    "pcs": 12,
+    "weight_kg": 700
+   },
+   {
+    "awb": "157-40229347",
+    "dest": "DOH",
+    "pcs": 6,
+    "weight_kg": 350
+   }
+  ],
+  "build_measured": {
+   "uld_serial_scanned": "AKE55128QR",
+   "scale_gross_kg": 1205,
+   "max_height_cm": 171,
+   "pcs_counted": {
+    "157-40228810": 12,
+    "157-40229347": 5
+   },
+   "straps_fitted": 3,
+   "net_fitted": true
+  },
+  "approvals": {
+   "part_shipments": [],
+   "contour_waivers": [
+    {
+     "uld": "AKE55120",
+     "position": "31R",
+     "max_cm": 170
+    }
+   ]
+  },
+  "dg_notoc": null
+ },
+ "factors": {
+  "weight_deviation_pct": 0.42,
+  "piece_count_gap": 1,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "over_up_to_5cm",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "one_strap_short",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "uld_serial_differs",
+  "minutes_to_cutoff": 112,
+  "prior_rebuilds": 2
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 7.87,
+  "piece_count_gap": 1,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "over_up_to_5cm",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "uld_serial_differs",
+  "minutes_to_cutoff": 112,
+  "prior_rebuilds": 2
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "release_conditional",
+   "second": "rebuild",
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "leaning",
+   "target": "paperwork_only",
+   "second": null,
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 118,
+ "deciding": {
+  "pieces_reconciled": "157-40229347 counted 5 of 6 manifested and part_shipments is empty, so the shortfall is unexplained.",
+  "disposition": "Height 171 is 1 cm over the waiver max 170 (partial rework implies rebuild), while the only other physical item is one strap short (release_conditional); both defensible.",
+  "worst_discrepancy": "Scanned serial AKE55128QR differs from header AKE55120QR (paperwork), but the missing piece and 1 cm over-height lean toward physical.",
+  "weight_deviation": "Planned 1200 (150+700+350) vs scale 1205 is about 0.4%.",
+  "rework_extent": "One strap short (3 of 4) gives Minor, but 1 cm above the waiver max 170 gives Partial; the two fields hold it in balance."
+ },
+ "request": "rec-F420-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011678
+}

@@ -1,0 +1,126 @@
+{
+ "id": "F408-0006",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 3301,
+   "flat": "3",
+   "stream": "RES",
+   "claimed": "2024-05-14",
+   "logged_at": "2024-05-14T16:40",
+   "photo": true
+  },
+  "property": {
+   "uprn": 3301,
+   "flat": "3B"
+  },
+  "schedule": {
+   "streams": [
+    "RES"
+   ],
+   "date": "2024-05-14"
+  },
+  "round_log": {
+   "completed_at": "2024-05-14T15:20",
+   "stops": [
+    {
+     "uprn": 3301,
+     "exc": "access_blocked",
+     "gps_stop": true,
+     "photo_ref": "P-88"
+    }
+   ],
+   "sweep_at": "2024-05-14T18:05"
+  },
+  "history": [
+   {
+    "on": "2024-04-02",
+    "stream": "RES",
+    "o": "rejected"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "access_blocked",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "none",
+  "already_collected": true,
+  "photo_attached": true,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 0,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "access_blocked",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "none",
+  "already_collected": true,
+  "photo_attached": true,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 0,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "report_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 85,
+ "deciding": {
+  "crew_missed": "Stop has access_blocked with photo_ref and gps_stop true, which supports the exception, but the flat number differs (3 vs 3B), leaving some doubt.",
+  "report_matches": "Stream RES and date 2024-05-14 match the schedule and the report was logged after the round finished. The flat mismatch (3 vs 3B) adds mild doubt.",
+  "next_step": "sweep_at 18:05 is later than logged_at 16:40, so the bin was emptied and the case can close; the flat mismatch gives slight doubt.",
+  "return_urgency": "The sweep collection after the report means nothing is outstanding, so no return is needed.",
+  "repeat_failures": "The only history entry is a rejected case, so there are no upheld misses."
+ },
+ "request": "rec-F408-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010668
+}

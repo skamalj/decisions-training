@@ -1,0 +1,144 @@
+{
+ "id": "F408-0043",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "MB-3307",
+   "uprn": 78310,
+   "logged_at": "2025-04-09T10:00",
+   "stream": "recycling",
+   "claimed_date": "2025-04-08",
+   "photo_attached": true
+  },
+  "property": {
+   "uprn": 78310,
+   "assisted_collection": false
+  },
+  "schedule": {
+   "streams_due": [
+    "recycling"
+   ],
+   "scheduled_date": "2025-04-08",
+   "week_pattern": "B"
+  },
+  "round_log": {
+   "round_completed_at": "2025-04-08T15:00",
+   "disruption_code": "weather_suspension",
+   "catch_up_date": "2025-04-08",
+   "stops": [
+    {
+     "uprn": 78310,
+     "gps_stop": true,
+     "exception_code": "access_blocked",
+     "photo_ref": null
+    }
+   ],
+   "sweep_collected_at": "2025-04-09T14:20"
+  },
+  "history": [
+   {
+    "uprn": 78310,
+    "logged_on": "2025-02-20",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 78310,
+    "logged_on": "2025-03-18",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 78310,
+    "logged_on": "2025-03-30",
+    "outcome": "pending"
+   },
+   {
+    "uprn": 78310,
+    "logged_on": "2025-01-05",
+    "outcome": "rejected"
+   },
+   {
+    "uprn": 78312,
+    "logged_on": "2025-03-02",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "access_blocked",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "weather_suspension",
+  "already_collected": true,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 3,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "before_round_complete",
+  "crew_exception": "access_blocked",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "weather_suspension",
+  "already_collected": true,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 3,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 86,
+ "deciding": {
+  "crew_missed": "Stop has access_blocked with a null photo_ref, so the exception is unsupported; the weather suspension catch_up_date has already passed.",
+  "report_matches": "Recycling on 2025-04-08 matches the schedule and the report was logged after the 15:00 round completion.",
+  "next_step": "sweep_collected_at 2025-04-09T14:20 is later than logged_at, so the bin is already emptied.",
+  "return_urgency": "The sweep collection after the report means no return is needed.",
+  "repeat_failures": "Two upheld entries (2025-02-20, 2025-03-18) fall in the window; the pending, rejected and neighbour-UPRN entries do not count, but the pending one adds doubt."
+ },
+ "request": "rec-F408-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01019
+}

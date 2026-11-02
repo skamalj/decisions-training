@@ -1,0 +1,135 @@
+{
+ "id": "F425-0013",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "declared_eggs": 600,
+   "lay_dates": [
+    "2024-06-01"
+   ]
+  },
+  "grading_run": {
+   "run_start": "2024-06-08T06:00:00Z",
+   "eggs_in": 600,
+   "by_size": {
+    "S": 50,
+    "M": 250,
+    "L": 220,
+    "XL": 50
+   },
+   "outgrades": {
+    "cracks": 20,
+    "dirties": 6,
+    "blood_spots": 4
+   },
+   "class_a_total": 570
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-03-01",
+    "interval_days": 90
+   },
+   "scale_check": null
+  },
+  "packing": {
+   "pack_date": "2024-06-08",
+   "packs": [
+    {
+     "size": "S",
+     "count": 50
+    },
+    {
+     "size": "M",
+     "count": 250
+    },
+    {
+     "size": "L",
+     "count": 220
+    },
+    {
+     "size": "XL",
+     "count": 50
+    }
+   ]
+  }
+ },
+ "factors": {
+  "count_gap_size": "none",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 7,
+  "mixed_lay_dates": false,
+  "missing_check": "scale_check_missing",
+  "swab_positive": false,
+  "outgrade_rate_pct": 5.0,
+  "dominant_defect": "cracks",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 29
+ },
+ "factors_sampled": {
+  "count_gap_size": "moderate",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 4,
+  "mixed_lay_dates": false,
+  "missing_check": "scale_check_missing",
+  "swab_positive": false,
+  "outgrade_rate_pct": 11.69,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": true,
+  "temp_excursion": "brief",
+  "temp_mitigated": false,
+  "flock_age_weeks": 29
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "hold_pending",
+   "second": null,
+   "targets": []
+  },
+  "anomaly_cause": {
+   "clarity": "leaning",
+   "target": "equipment_fault",
+   "second": null,
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 28,
+ "deciding": {
+  "counts_reconcile": "declared 600 = eggs_in 600; by_size 570 plus outgrades 30 = 600; packs sum 570 = class_a_total 570.",
+  "batch_disposition": "checks.scale_check is null, so a check is outstanding; counts and timing are fine.",
+  "anomaly_cause": "Detector last calibrated 2024-03-01 with a 90-day interval, overdue by the 2024-06-08 run, with no manual_recheck; outgrades are mostly cracks.",
+  "lay_to_pack": "Lay 2024-06-01 to pack 2024-06-08 is 7 days, at the edge between standard and late.",
+  "outgrade_share": "Outgrades total 30 of 600 eggs_in, exactly 5.0%, on the line between the 2 to 5% and 5 to 10% levels."
+ },
+ "request": "rec-F425-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011823
+}

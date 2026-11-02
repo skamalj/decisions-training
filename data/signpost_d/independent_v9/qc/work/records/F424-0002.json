@@ -1,0 +1,126 @@
+{
+ "id": "F424-0002",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2412",
+   "vessel_id": "FV2",
+   "volume_hl": 40,
+   "yeast_strain": "WLP001",
+   "yeast_gen": 3,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014
+  },
+  "readings": [
+   {
+    "ts": "2024-06-05",
+    "gravity_sg": 1.012
+   },
+   {
+    "ts": "2024-06-06",
+    "gravity_sg": 1.012
+   }
+  ],
+  "events": [
+   {
+    "type": "pitch",
+    "vessel_id": "FV2",
+    "note": "WLP002 gen 5 pitched; sour smell now, infection!"
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2412",
+   "diacetyl_mgl": 0.12,
+   "micro_plate": {
+    "result": "presumptive",
+    "cfu_ml": 8
+   },
+   "retest": [
+    "negative"
+   ]
+  },
+  "release_request": {
+   "volume_hl": 41,
+   "vessel_id": "FV4"
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive plate with sensory note",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.12,
+  "discrepancy_count": 4,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "gravity_status": "over_attenuated",
+  "final_reading_gap": false,
+  "temp_excursion": "none",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.19,
+  "discrepancy_count": 1,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "alarmed"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release_conditional",
+   "second": null,
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 41,
+ "deciding": {
+  "terminal_gravity": "Two consecutive readings of 1.012 sit inside the 1.010-1.014 band.",
+  "contamination_supported": "A presumptive plate (8 cfu/ml) and an alarmed sour-smell note are weighed against a negative retest.",
+  "batch_disposition": "Lab results are complete and the gravity is final; the discrepancies are record fixes to make at packaging.",
+  "deviation_severity": "Diacetyl 0.12 is only slightly high against a typical 0.10, so it is borderline between nil and minor.",
+  "record_discrepancies": "The vessel (FV2 vs FV4), strain (WLP001 vs WLP002), gen (3 vs 5) and volume (40 vs 41) all mismatch. Whether strain and gen count separately decides between 3 and 4."
+ },
+ "request": "rec-F424-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012309
+}

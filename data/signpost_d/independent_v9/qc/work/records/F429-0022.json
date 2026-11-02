@@ -1,0 +1,127 @@
+{
+ "id": "F429-0022",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 250
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 88.0
+   },
+   "gauge_zero_offset_m": 0.5,
+   "readings": [
+    {
+     "level_m": 87.99,
+     "datum": "site"
+    },
+    {
+     "level_m": 88.0,
+     "datum": "gauge_zero"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G2",
+    "open_after_m": 1.0
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G2",
+     "opening_m": 1.0
+    }
+   ],
+   "calc_peak_m3s": 246,
+   "gauged_peak_m3s": 180
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "05:00"
+   }
+  ],
+  "instruments": {
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "09:00"
+   }
+  }
+ },
+ "factors": {
+  "reservoir_tier": "alert",
+  "near_boundary": true,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 26.51,
+  "datum_mismatch": true,
+  "missing_section": "none",
+  "notice_after_release": true,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "alert",
+  "near_boundary": true,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 26.51,
+  "datum_mismatch": true,
+  "missing_section": "none",
+  "notice_after_release": true,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": false,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "trigger_tier": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "within_licence": "Calc 246 is within 3% of 250 and the 26% gap to gauged 180 leaves it open.",
+  "gates_reconciled": "Gate openings match, but the large discharge gap casts some doubt.",
+  "next_step": "Inspection is completed, warning sent, and gates match, so nothing is outstanding.",
+  "trigger_tier": "Level 88.0 sits at the alert threshold, but the gauge_zero datum reading makes it ambiguous.",
+  "parties_needed": "The datum and discharge issues need several people, but the exact number is unclear."
+ },
+ "request": "rec-F429-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005114
+}

@@ -1,0 +1,161 @@
+{
+ "id": "F422-0039",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT4",
+   "site": "S904",
+   "delivered_at": "2024-02-05T10:00",
+   "received_at": "2024-03-09T09:00",
+   "review_date": "2024-03-20",
+   "reason": "DAMAGED_IN_TRANSIT",
+   "lines": [
+    {
+     "gtin": "G4",
+     "qty_claimed": 60
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "D63",
+   "lines": [
+    {
+     "gtin": "G4",
+     "batch": "P2",
+     "expiry": "2025-10-31",
+     "qty_dispatched": 60
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "G4",
+     "batch": "P9",
+     "expiry": "2025-10-31",
+     "qty_counted": 49,
+     "packs_damaged": 48,
+     "seals_intact": 1
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "decommissioned",
+     "decommission_site": "S904",
+     "decommission_at": "2024-03-14"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "cold_2_8",
+   "labelled_range": "2-8C",
+   "logger_id": "L2",
+   "logger_start": "2024-02-20T08:00",
+   "logger_end": "2024-03-09T08:00",
+   "min_c": 2.4,
+   "max_c": 9.9,
+   "minutes_out_of_range": 300,
+   "stability_ref": null
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2024-01-15",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "location": "Q4",
+   "hold_limit_days": 30,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2024-05-10"
+   },
+   "max_days_out_of_control": 35,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 300,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "one_foreign_batch",
+  "count_discrepancy_packs": 11,
+  "damaged_pack_fraction": 0.98,
+  "uid_alert": true,
+  "uid_alert_explained": true,
+  "days_out_of_control": 33,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 51,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 19
+ },
+ "factors_sampled": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "partial_gap",
+  "excursion_minutes": 300,
+  "stability_allowance_on_file": false,
+  "batch_reconciliation": "one_foreign_batch",
+  "count_discrepancy_packs": 11,
+  "damaged_pack_fraction": 0.98,
+  "uid_alert": true,
+  "uid_alert_explained": true,
+  "days_out_of_control": 33,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 13,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 19
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_traceable": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_stock",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "disposition_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 53,
+ "deciding": {
+  "storage_maintained": "Logger starts 02-20, 15 days after delivery on 02-05. Max 9.9 C against a 2-8 C range for 300 minutes, with no stability allowance. The audit has expired and no declaration is received.",
+  "batch_traceable": "Counted batch P9 is not on dispatch D63, which lists only batch P2.",
+  "next_step": "The record gives no missing document that would allow release. The foreign batch and the near-total damage argue against it, so release_stock is only weakly supported, mainly by the explained UID and the approved extension.",
+  "resaleable_share": "48 of 49 counted packs are damaged with 1 seal intact, and the single counted batch is foreign to the dispatch. No pack is fit.",
+  "disposition_urgency": "The approved extension replaces the original limit with 2024-05-10, 51 days after the 03-20 review. That is well over 20 days, so routine."
+ },
+ "request": "rec-F422-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014519
+}

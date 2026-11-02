@@ -1,0 +1,150 @@
+{
+ "id": "F423-0020",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-8890",
+   "product": "poster",
+   "stock_spec": "GL150",
+   "run_qty": 60000,
+   "overs_pct": 4.32,
+   "due_date": "2024-08-30",
+   "customer_tier": "key_account",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "P-120",
+   "ok_sheet_no": 2,
+   "signed_at": "2024-08-20T09:30",
+   "customer_present": true,
+   "concession": null
+  },
+  "colour_readings": {
+   "instrument": "SP-1",
+   "calibrated_on": "2024-07-21",
+   "checked_on": "2024-08-20",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.6
+    },
+    {
+     "ink": "K",
+     "delta_e": 3.0
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "unit_pair": "1-2",
+     "offset_mm": 0.08,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press_id": "H2",
+   "stock_loaded": "GL150",
+   "first_production_at": "2024-08-20T09:05",
+   "sheets_production": 2310,
+   "sheets_makeready": 280,
+   "stoppages": [
+    {
+     "min": 4
+    },
+    {
+     "min": 3
+    },
+    {
+     "min": 5
+    }
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 2310,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 4.32,
+  "register_offset_mm": 0.08,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 30,
+  "customer_tier": "key_account",
+  "prior_stoppages": 3
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 2310,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 4.32,
+  "register_offset_mm": 0.31,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 30,
+  "customer_tier": "key_account",
+  "prior_stoppages": 3
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_run",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "scrap_exposure": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 52,
+ "deciding": {
+  "colour_in_tolerance": "Highest patch K delta_e 3.0 sits exactly at spec_max_de 3.0 with a recent calibration; at limit is within, but only just.",
+  "run_before_signoff": "first_production_at 09:05 is earlier than signed_at 09:30 with 2310 production sheets logged.",
+  "next_step": "Readings are at or under limit, register offset 0.08 mm is well within 0.15 mm and a signature is on file, so the run continues.",
+  "staff_effort": "Everything passes and nothing needs correcting, so under an hour of staff time.",
+  "scrap_exposure": "No spec failure held: colour at limit, register good and stock matches, so no suspect sheets among the 2310 produced."
+ },
+ "request": "rec-F423-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011676
+}

@@ -1,0 +1,166 @@
+{
+ "id": "F437-0005",
+ "family": "F437",
+ "state": {
+  "job": {
+   "job_id": "J-67019",
+   "client_ref": "PO-9904",
+   "lang_pair": "en>pt",
+   "target_locale": "pt-BR",
+   "ordered_words": 8800,
+   "source_version": "v2",
+   "glossary_version": "6",
+   "due_at": "2025-07-08T09:00:00Z",
+   "terms": {
+    "variant_accepted": true,
+    "due_revised_to": "2025-07-14T09:00:00Z"
+   },
+   "workflow": [
+    {
+     "step": "translate",
+     "done_at": "2025-07-08T20:00:00Z"
+    },
+    {
+     "step": "dtp",
+     "done_at": "2025-07-09T22:00:00Z"
+    }
+   ]
+  },
+  "source": {
+   "version": "v3",
+   "segment_count": 700,
+   "word_count": 8800
+  },
+  "deliverable": {
+   "target_locale": "pt-BR",
+   "built_from_version": "v2",
+   "segments_translated": 700,
+   "word_count": 8800,
+   "glossary_version_used": "6",
+   "delivered_at": "2025-07-10T03:00:00Z"
+  },
+  "qa_report": {
+   "run_at": "2025-07-09T23:00:00Z",
+   "flags": 22,
+   "false_positive_marked": 9,
+   "number_mismatches": [],
+   "unresolved": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0
+   }
+  },
+  "review": {
+   "reviewer_id": "R21",
+   "assigned_at": "2025-07-09T08:00:00Z",
+   "completed_at": "2025-07-09T21:00:00Z",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "major",
+     "status": "closed"
+    },
+    {
+     "sev": "major",
+     "status": "closed"
+    },
+    {
+     "sev": "minor",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "06-20",
+    "06-26",
+    "07-01",
+    "07-05"
+   ],
+   "reassignments": 0
+  }
+ },
+ "factors": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.41,
+  "number_mismatch_count": 0,
+  "deadline_slack_hours": -42,
+  "client_waiver": true,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.41,
+  "number_mismatch_count": 5,
+  "deadline_slack_hours": -42,
+  "client_waiver": false,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": true
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 134,
+ "deciding": {
+  "scope_matches": "source.version is v3 but deliverable.built_from_version is v2, though segments are 700 of 700. The job order says v2 and the client accepted a variant, so some doubt remains.",
+  "reviewed_in_time": "Review completed_at 2025-07-09T21:00 is before delivered_at 2025-07-10T03:00 and signed_off is true.",
+  "next_step": "The v2 variant is covered by variant_accepted and the late delivery by due_revised_to 07-14. The sign-off is complete, and the zero unresolved flags leave only the version mismatch as doubt.",
+  "open_severity": "All three review errors are closed and qa_report.unresolved is all zeros.",
+  "parties_needed": "Nothing is open and the DTP step is done, so no one has to act."
+ },
+ "request": "rec-F437-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01067
+}

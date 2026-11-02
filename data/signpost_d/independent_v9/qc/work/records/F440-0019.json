@@ -1,0 +1,180 @@
+{
+ "id": "F440-0019",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "review": "2025-07-20",
+   "arrival": "2025-08-04",
+   "departure": "2025-08-06",
+   "pax": {
+    "adult": 4,
+    "13_17": 24
+   },
+   "diet": {
+    "veg": 3
+   },
+   "amendments": [
+    {
+     "type": "pax_change",
+     "delta": 1,
+     "logged_at": "2025-07-10"
+    }
+   ]
+  },
+  "roster": {
+   "adult": 4,
+   "13_17": 25,
+   "f": 13,
+   "m": 12,
+   "diet": {
+    "veg": 4
+   }
+  },
+  "allocation": {
+   "rooms": [
+    {
+     "sex": "F",
+     "beds": 8
+    },
+    {
+     "sex": "M",
+     "beds": 8
+    },
+    {
+     "sex": "M",
+     "beds": 8
+    },
+    {
+     "sex": "M",
+     "beds": 8
+    }
+   ],
+   "nights": [
+    "2025-08-05",
+    "2025-08-06"
+   ]
+  },
+  "payment": {
+   "total": 2000,
+   "due": 500,
+   "paid": 0,
+   "instalments": [
+    {
+     "due": "2025-07-28",
+     "amt": 500
+    },
+    {
+     "due": "2025-08-01",
+     "amt": 1500
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "id": "A1",
+    "status": "verified",
+    "exp": "2026-05-01"
+   },
+   {
+    "id": "A2",
+    "status": "missing",
+    "check_date": null
+   },
+   {
+    "id": "A3",
+    "status": "missing",
+    "check_date": null
+   },
+   {
+    "id": "A4",
+    "status": "pending",
+    "exp": "2025-08-01"
+   }
+  ],
+  "history": {
+   "trusted": true,
+   "no_shows": 4
+  }
+ },
+ "factors": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "different_dates",
+  "amendment_logged": false,
+  "supervision_level": "comfortable",
+  "extra_cover_logged": false,
+  "deposit_position": "nothing_paid",
+  "instalment_approved": true,
+  "days_to_arrival": 15,
+  "dorm_fit": "needs_one_swap",
+  "leader_checks": "several_missing",
+  "trusted_organiser": true,
+  "prior_no_shows": 4,
+  "diet_count_drift": "minor"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "different_dates",
+  "amendment_logged": true,
+  "supervision_level": "short_all_nights",
+  "extra_cover_logged": false,
+  "deposit_position": "nothing_paid",
+  "instalment_approved": true,
+  "days_to_arrival": 109,
+  "dorm_fit": "needs_one_swap",
+  "leader_checks": "several_missing",
+  "trusted_organiser": true,
+  "prior_no_shows": 4,
+  "diet_count_drift": "minor"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "refer_manager",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "ratio_met": "4 adults for 25 aged 13-17 against 3 required.",
+  "deposit_covered": "Nothing paid against due 500, but the approved schedule's first instalment is not due until 2025-07-28, after the review date.",
+  "disposition": "Two leader checks missing and one pending, no-show history of 4, and rooms needing a swap: several open issues for the manager.",
+  "urgency": "Arrival is 15 days after review, at the boundary of levels 1 and 2.",
+  "conflict_count": "The pax gap is covered by the logged pax_change; allocation nights are shifted a day with no date_change, and veg 3 vs 4 is trivial, so it is one or two."
+ },
+ "request": "rec-F440-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014301
+}

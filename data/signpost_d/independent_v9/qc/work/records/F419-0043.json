@@ -1,0 +1,157 @@
+{
+ "id": "F419-0043",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "date": "2024-02-06",
+   "speed_kmh": 65,
+   "thr": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": {
+    "precip_mm": 1.2
+   }
+  },
+  "device": {
+   "cal_expiry": "2024-12-01",
+   "tyre_kpa": 190,
+   "tyre_spec_kpa": [
+    170,
+    210
+   ],
+   "water_mm": 1.0
+  },
+  "runs": [
+   {
+    "dir": "04",
+    "thirds": [
+     0.66,
+     0.53,
+     0.64
+    ],
+    "segments_100m": [
+     0.58,
+     0.53,
+     0.48
+    ]
+   },
+   {
+    "dir": "22",
+    "thirds": [
+     0.65,
+     0.55,
+     0.67
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.82,
+    0.8,
+    0.84
+   ],
+   "mtd_thr_mm": 0.6,
+   "contaminant": "wet"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-07-19",
+   "cross_checks": [
+    {
+     "serial": "C2",
+     "date": "2024-02-06",
+     "thirds": [
+      0.65,
+      0.54,
+      0.64
+     ]
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2023-09-12",
+     "lowest_third": 0.54
+    }
+   ]
+  },
+  "review": {
+   "assigned": "analyst",
+   "signed_at": null
+  }
+ },
+ "factors": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "mid_section",
+  "days_since_rubber_removal": 202,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 1,
+  "test_condition_anomaly": "natural_rain",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "mid_section",
+  "days_since_rubber_removal": 202,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 4,
+  "test_condition_anomaly": "natural_rain",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "restrict_ops",
+   "second": null,
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "genuine_deficit": "The lowest mid-third is 0.53 (just above planning), but the segment 0.48 is below planning. The test was done in rain (precip 1.2 mm, wet), though the cross-check agrees. That holds true against false in balance.",
+  "next_step": "Rain on a wet surface, a mid-section segment at 0.48 and no works scheduled lean toward action. No value is below the 0.42 minimum, so restrict_ops is only a moderate lean.",
+  "deficit_driver": "No third is below planning (lowest 0.53), and texture 0.80-0.84 is above its threshold, with 202 days since rubber removal and a mid-section low. none_found leads.",
+  "friction_severity": "The lowest third is 0.53, which is level 1. The 0.48 segment is below the 0.52 planning level and above the minimum, which is level 2.",
+  "evidence_completeness": "Only review.signed_at is null with an analyst assigned. Whether that missing sign-off counts as an element splits level 3 from level 4."
+ },
+ "request": "rec-F419-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015057
+}

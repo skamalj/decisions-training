@@ -1,0 +1,139 @@
+{
+ "id": "F403-0014",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "egg",
+    "milk",
+    "nut"
+   ],
+   "plan_start": "2025-05-12"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-02-01",
+   "allergens": [
+    "egg",
+    "milk",
+    "nut",
+    "celery"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-04-30",
+   "dishes": [
+    {
+     "dish": "celery soup",
+     "contains": [
+      "celery",
+      "egg",
+      "milk",
+      "nut"
+     ],
+     "recipe_version_date": "2025-05-01",
+     "substitute": "veg broth",
+     "spec_checked_on": "2025-05-02"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true
+  },
+  "history": {
+   "review_date": "2025-05-15",
+   "packed_lunch_until": "2025-05-15",
+   "incidents": [
+    {
+     "date": "2025-05-12",
+     "dish": "nut cookie",
+     "contains": [
+      "nut"
+     ],
+     "note": "taster session"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 1,
+  "packed_lunch_interim": true,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 4,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 5,
+  "packed_lunch_interim": true,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "approve_plan",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "evidence_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 28,
+ "deciding": {
+  "evidence_allergens_covered": "Celery is in the evidence but not in pupil.declared_allergens. The celery soup entry does list celery with a veg broth substitute, so it is mapped. A reviewer could still call the list mismatch an unresolved gap.",
+  "next_step": "The mapping and controls are sound, which favours approving. But the evidence-versus-declared celery mismatch and the nut incident on plan_start could justify requesting evidence first.",
+  "first_gap_stage": "The evidence lists celery, which the declared allergens omit, so the first shortfall is at evidence stage. The menu and controls are otherwise sound.",
+  "exposure_proximity": "A nut cookie containing a declared allergen was served on 2025-05-12, the plan_start date, so exposure has been reached. The note 'taster session' leaves slight doubt.",
+  "meal_urgency": "Packed lunch runs to 2025-05-15, the review date, so the first school meal is the next school day. The incident on plan_start leaves slight doubt."
+ },
+ "request": "rec-F403-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014234
+}

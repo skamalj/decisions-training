@@ -1,0 +1,145 @@
+{
+ "id": "F430-0044",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S330",
+   "name": "Elm Road",
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "C",
+     "normal_band": [
+      40,
+      85
+     ],
+     "alarm_limit": 95,
+     "trip_limit": 105,
+     "customers_fed": 1442,
+     "partner_id": "T2"
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-07-09",
+   "scheduled_assets": [
+    "T1"
+   ],
+   "inspector_note": "All fine on site."
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_temp",
+    "value": 72,
+    "unit": "C",
+    "timestamp": "2024-07-09T10:15:00"
+   }
+  ],
+  "defects": [],
+  "history": {
+   "previous_round": {
+    "T1": 71
+   },
+   "open_work_orders": [],
+   "permits": [],
+   "load_events": [
+    {
+     "note": "High ambient temperature"
+    }
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "T2": "in_service"
+   },
+   "outage_plan": []
+  }
+ },
+ "factors": {
+  "worst_reading_band": "normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": true,
+  "defect_claim": "none_logged",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 1442,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "trip",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "recent_top_up",
+  "benign_cause_covers": false,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "stable",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 1442,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "follow_up": {
+   "clarity": "clear",
+   "target": "file_closed",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 99,
+ "deciding": {
+  "defect_corroborated": "Defects list is empty and the reading is normal, so no defect is corroborated.",
+  "benign_explanation": "Load event notes high ambient temperature; reading 72 is in band, so nothing abnormal needs explaining.",
+  "follow_up": "All scheduled assets read, in band and stable at 71 to 72, no defects; accept as filed.",
+  "limit_deviation": "72 C is inside 40-85 normal band, far from alarm 95.",
+  "supply_exposure": "No open defect, and partner T2 is in service and carries load."
+ },
+ "request": "rec-F430-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006071
+}

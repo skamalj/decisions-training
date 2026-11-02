@@ -1,0 +1,159 @@
+{
+ "id": "F425-0018",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "producer_code": "1UK-7C20",
+   "method": 0,
+   "lay_dates": [
+    "2024-07-01"
+   ],
+   "declared_eggs": 1800,
+   "trays": 60
+  },
+  "grading_run": {
+   "run_start": "2024-07-07T07:00",
+   "run_end": "2024-07-07T08:30",
+   "eggs_in": 1796,
+   "by_size": {
+    "S": 120,
+    "M": 700,
+    "L": 680,
+    "XL": 260
+   },
+   "outgrades": {
+    "cracks": 24,
+    "dirties": 5,
+    "blood_spots": 3,
+    "leakers": 2,
+    "misshapen": 2
+   },
+   "class_a_total": 1760
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-03-01",
+    "interval_days": 90
+   },
+   "candling_sample": null,
+   "scale_check": {
+    "ok": true
+   },
+   "store_temp": {
+    "minutes_above_limit": 0,
+    "max_c": 5.5
+   }
+  },
+  "flock": {
+   "age_weeks": 65,
+   "last_swab": {
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2024-07-08",
+   "packs": [
+    {
+     "size": "S",
+     "count": 120
+    },
+    {
+     "size": "M",
+     "count": 700
+    },
+    {
+     "size": "L",
+     "count": 680
+    },
+    {
+     "size": "XL",
+     "count": 260
+    }
+   ],
+   "stamp_code": "2UK-7C20",
+   "best_before": "2024-07-29",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": true,
+  "lay_to_pack_days": 7,
+  "mixed_lay_dates": false,
+  "missing_check": "candling_null",
+  "swab_positive": false,
+  "outgrade_rate_pct": 2.0,
+  "dominant_defect": "cracks",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": false,
+  "flock_age_weeks": 65
+ },
+ "factors_sampled": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": true,
+  "lay_to_pack_days": 8,
+  "mixed_lay_dates": false,
+  "missing_check": "candling_null",
+  "swab_positive": false,
+  "outgrade_rate_pct": 9.75,
+  "dominant_defect": "mixed",
+  "calibration_overdue": false,
+  "calibration_mitigated": true,
+  "temp_excursion": "brief",
+  "temp_mitigated": false,
+  "flock_age_weeks": 65
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "balanced",
+   "target": "downgrade_class_b",
+   "second": "hold_pending",
+   "targets": []
+  },
+  "anomaly_cause": {
+   "clarity": "clear",
+   "target": "equipment_fault",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "lay_to_pack": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 44,
+ "deciding": {
+  "counts_reconcile": "declared_eggs 1800 vs eggs_in 1796 is 0.2%, and sizes plus outgrades equal eggs_in and packs equal class_a_total.",
+  "batch_disposition": "candling_sample is null (hold argument) and stamp_code 2UK-7C20 differs from producer_code 1UK-7C20 with an overdue calibration (downgrade argument).",
+  "anomaly_cause": "calibration last_calibrated 2024-03-01 with a 90-day interval is overdue at run_start, no manual_recheck, and cracks dominate outgrades, with counts agreeing and no temperature excursion.",
+  "lay_to_pack": "lay 2024-07-01, pack_date 2024-07-08 gives 7 days, at the 4-7 and 8-10 boundary.",
+  "outgrade_share": "36 outgrades of 1796 eggs_in is 2.0%, at the boundary between level 0 and level 1."
+ },
+ "request": "rec-F425-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011715
+}

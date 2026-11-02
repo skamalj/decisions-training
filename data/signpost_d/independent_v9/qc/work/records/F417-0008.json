@@ -1,0 +1,125 @@
+{
+ "id": "F417-0008",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "V3",
+   "loa_m": 9.3,
+   "draught_m": 1.9,
+   "draught_src": "owner_declared",
+   "home_port": "Brixham"
+  },
+  "berth": {
+   "id": "P9",
+   "max_loa_m": 9.0,
+   "fender_allow_m": 0.3,
+   "depth_lat_m": 1.6
+  },
+  "booking": {
+   "arrival": "2025-05-12",
+   "departure": "2025-05-15"
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 9.3,
+    "draught_m": null
+   },
+   "insurance_expiry": "2026-01-31",
+   "inspection_date": "2025-04-02"
+  },
+  "account": {
+   "dues_outstanding_gbp": 40,
+   "plan_id": "PP-8",
+   "plan_status": "approved"
+  },
+  "history": []
+ },
+ "factors": {
+  "loa_mismatch_pct": 0.0,
+  "berth_length_fit": "at_fender_limit",
+  "ukc_margin_m": -0.3,
+  "draught_source": "owner_declared",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "done_before_arrival",
+  "arrears_amount": 40,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": true
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 0.31,
+  "berth_length_fit": "fits_clear",
+  "ukc_margin_m": 1.73,
+  "draught_source": "null",
+  "insurance_status": "missing",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 40,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": false,
+  "prior_incidents": 0,
+  "boundary_placement": true
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "confirm_allocation",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "ukc_band": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "unresolved_count": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 57,
+ "deciding": {
+  "length_fits": "Survey loa 9.3 equals max 9.0 plus fender 0.3 exactly, so it fits only at the limit.",
+  "next_step": "Documents, account (small dues under an approved plan) and dates are all in order.",
+  "primary_issue": "Insurance, inspection, plan and dates are all in order, and survey and vessel loa agree.",
+  "ukc_band": "Declared draught 1.9 exceeds berth depth 1.6.",
+  "unresolved_count": "Vessel and survey loa are equal and no other section disagrees."
+ },
+ "request": "rec-F417-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00864
+}

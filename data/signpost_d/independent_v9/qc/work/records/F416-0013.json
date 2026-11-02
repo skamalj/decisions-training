@@ -1,0 +1,193 @@
+{
+ "id": "F416-0013",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "station": "S2",
+   "date": "2025-07-19",
+   "signoff": "G8"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "on": "08:00",
+    "off": "18:00",
+    "qual": "2026-03-01"
+   },
+   {
+    "id": "G2",
+    "on": "08:00",
+    "off": "18:00",
+    "qual": "2025-12-15"
+   },
+   {
+    "id": "G3",
+    "on": "08:00",
+    "off": "18:00",
+    "qual": "2026-05-20"
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "t": "09:30",
+    "type": "water_rescue",
+    "r": [
+     "G1",
+     "G2"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I2",
+    "t": "10:40",
+    "type": "water_rescue",
+    "r": [
+     "G2",
+     "G3"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I3",
+    "t": "12:15",
+    "type": "water_rescue",
+    "r": [
+     "G3"
+    ],
+    "out": "gp_advised",
+    "amb": "AMB-221"
+   },
+   {
+    "id": "I4",
+    "t": "13:50",
+    "type": "water_rescue",
+    "r": [
+     "G1",
+     "G3"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I5",
+    "t": "15:25",
+    "type": "water_rescue",
+    "r": [
+     "G1",
+     "G2"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I6",
+    "t": "11:10",
+    "type": "first_aid",
+    "r": [
+     "G2"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I7",
+    "t": "16:00",
+    "type": "first_aid",
+    "r": [
+     "G1"
+    ],
+    "out": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_board",
+    "unit": "RB2",
+    "out_from": "14:00",
+    "out_to": "14:20",
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 5,
+   "first_aid": 3,
+   "kit_defects": 1
+  }
+ },
+ "factors": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "single_guard",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "referred",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "referred",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "totals_reconcile": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "corrective_order",
+   "second": "accept_log",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 60,
+ "deciding": {
+  "two_guard_cover": "Rescue I3 lists only responder G3; the other four have two in-date qualified guards.",
+  "totals_reconcile": "handover first_aid=3 but only two first_aid incidents are itemised.",
+  "next_step": "The single-guard rescue I3 is an unmitigated cover lapse (corrective_order), but the outcome is only gp_advised and the other figures are tidy, so accepting is defensible.",
+  "outcome_severity": "I3 outcome gp_advised (referred) but carries an ambulance_ref AMB-221, leaving level 1 versus 2 open.",
+  "kit_outage": "RB2 out 14:00-14:20 with no substitute: 20 minutes, a brief outage that could be read as negligible."
+ },
+ "request": "rec-F416-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00993
+}

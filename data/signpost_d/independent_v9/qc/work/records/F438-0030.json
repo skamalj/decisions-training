@@ -1,0 +1,149 @@
+{
+ "id": "F438-0030",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E7730",
+   "specialty": "gastro"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "K29.7"
+   },
+   "comorbidities": [
+    "I10",
+    "E78.0",
+    "N18.3"
+   ],
+   "theatre_log": [
+    {
+     "proc": "G45.1",
+     "date": "2024-03-12",
+     "side": "n/a"
+    }
+   ]
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "K29.1"
+   },
+   "secondary_dx": [
+    "I11.9",
+    "E78.5",
+    "N18.9"
+   ],
+   "procedures": [
+    {
+     "code": "G45.1",
+     "date": "2024-03-14"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "FD10A",
+   "hrg_regrouped": "FD10A",
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    {
+     "code_pair": [
+      "K29.1",
+      "K29.7"
+     ]
+    }
+   ],
+   "queries": [
+    {
+     "target_code": "I11.9",
+     "status": "closed",
+     "response": "confirms"
+    }
+   ]
+  },
+  "coder_history": {
+   "error_rate": 0.15,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 3,
+  "procedure_mismatch": "date_or_side_differs",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.15,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 3,
+  "procedure_mismatch": "date_or_side_differs",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.15,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "amend_codes",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 95,
+ "deciding": {
+  "primary_supported": "K29.1 against documented K29.7 differs at the fourth character, but an approved convention covers that pair.",
+  "hrg_shift": "Both HRGs are FD10A, so a shift is possible only if the primary is corrected.",
+  "next_step": "Three secondary mismatches and a procedure date mismatch can be fixed locally; the HRG stays FD10A.",
+  "error_count": "Three secondary mismatches (I11.9, E78.5, N18.9) and procedure date 03-14 against 03-12 make four, with the primary difference arguable.",
+  "error_severity": "Worst errors are secondary diagnosis codes and a procedure date, with the HRG unchanged, so minor."
+ },
+ "request": "rec-F438-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009977
+}

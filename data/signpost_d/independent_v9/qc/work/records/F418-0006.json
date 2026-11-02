@@ -1,0 +1,138 @@
+{
+ "id": "F418-0006",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "KLW",
+   "plat": 2,
+   "date": "2025-03-11",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "attendance": [
+   {
+    "staff_id": "S41",
+    "sign_on": "05:50",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2025-09-01",
+    "dispatch_comp_exp": "2025-09-01"
+   },
+   {
+    "staff_id": "S58",
+    "sign_on": null,
+    "sign_off": null
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "04:30"
+   },
+   {
+    "type": "cover_start",
+    "time": "04:30",
+    "staff_id": "S77"
+   },
+   {
+    "type": "cover_end",
+    "time": "05:10"
+   },
+   {
+    "type": "gap_end",
+    "time": "06:17"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-204",
+   "disp_platform": 2,
+   "valid_to": "2025-03-31",
+   "approved_by": null,
+   "possession_from": "04:00",
+   "possession_to": "06:00",
+   "prior_shortfalls_30d": 3
+  },
+  "remarks": [
+   "S58 not on platform."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 107,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 107,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": true
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_ops",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "leaning",
+   "target": "partial_cover",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "headcount_verified": "Roster S58 has null sign_on/sign_off in attendance, so a logged person lacks a sign-on.",
+  "next_step": "Approved_by null on dispensation, 3 prior shortfalls and gap running past 06:00 point to escalation, though the possession and short overrun leave doubt.",
+  "coverage_outcome": "Cover S77 04:30-05:10 fills only part of the gap, which ends 06:17, leaving an open period.",
+  "reversal_time": "A single-shift log can be amended within a day; no lasting harm is shown.",
+  "exposure_severity": "Gap extends to 06:17 after service_from 06:00 while the dispensation is unapproved; severity 3 is leaning, as the overrun is small and the possession overlaps."
+ },
+ "request": "rec-F418-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005837
+}

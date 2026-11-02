@@ -1,0 +1,139 @@
+{
+ "id": "F409-0009",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A9082",
+   "full_name": "Ana Reyes",
+   "submitted_on": "2024-09-10",
+   "app_type": "new",
+   "message": "Form says 2/8 Quay St, which is Flat 2."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-08-29",
+     "address_line": "Flat 2, 8 Quay St",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "verified": null
+    },
+    {
+     "doc_type": "tenancy_agreement",
+     "verified": null
+    },
+    {
+     "doc_type": "utility_bill",
+     "verified": false
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "BN21 QWE",
+   "keeper_name": "Ana Reyes"
+  },
+  "request": {
+   "address": "2/8 Quay St",
+   "plate_entered": "BN21 QWE"
+  },
+  "account_history": {
+   "live_permits": [
+    "P77"
+   ],
+   "pcns": [
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "paid"
+    }
+   ],
+   "officer_note": "Applicant disputes one PCN; representation pending."
+  }
+ },
+ "factors": {
+  "application_type": "new",
+  "address_match_level": "format_only",
+  "proof_age_days": 12,
+  "docs_missing": 3,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "new",
+  "address_match_level": "format_only",
+  "proof_age_days": 12,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "approve",
+   "second": "hold",
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "residency_shown": "Council tax bill verified true, issued 12 days before submission, 'Flat 2, 8 Quay St' matches '2/8 Quay St' in format only.",
+  "disposition": "Residency is verified and the keeper matches, favouring approval; three other documents are unverified, so hold is equally defensible.",
+  "main_issue": "Plate, keeper, address and household count (1 permit) are all in order; no check fails.",
+  "misuse_strength": "Three uncancelled PCNs form one indicator; the officer note says one is under representation, so a second indicator is arguable.",
+  "document_gaps": "id_card null, tenancy_agreement null and utility_bill false give three unverified documents."
+ },
+ "request": "rec-F409-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014286
+}

@@ -1,0 +1,143 @@
+{
+ "id": "F410-0043",
+ "family": "F410",
+ "state": {
+  "application": {
+   "term_end": "2025-09-30",
+   "commodities": [
+    "candles",
+    "soap"
+   ],
+   "pitch_req": {
+    "width_m": 3.97
+   },
+   "docs_pending": [
+    "insurance schedule",
+    "fee proof"
+   ]
+  },
+  "licence_current": {
+   "commodities": [
+    "candles"
+   ],
+   "pitch": {
+    "width_m": 3.0
+   },
+   "conditions": {
+    "min_attendance_pct": 80
+   },
+   "variations": [
+    {
+     "type": "size",
+     "approved": false
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2025-04-30",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": null,
+   "food_reg": null
+  },
+  "account": {
+   "fees_due": [
+    {
+     "amount_gbp": 700
+    }
+   ],
+   "ledger": [
+    {
+     "amount_gbp": 382.92
+    }
+   ],
+   "payment_plan": null
+  },
+  "history": {
+   "allocated_12m": 40,
+   "attended_12m": 20,
+   "absence_notices": [],
+   "complaints": []
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_more_than_14d_early",
+  "broker_confirmation_held": false,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "not_registered",
+  "stall_size_delta_m": 0.97,
+  "variation_approved": false,
+  "fee_arrears_gbp": 317.08,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.5,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": false,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "not_registered",
+  "stall_size_delta_m": 0.97,
+  "variation_approved": false,
+  "fee_arrears_gbp": 317.08,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.5,
+  "absences_notified": false,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 2
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "leaning",
+   "target": "refuse",
+   "second": null,
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "leaning",
+   "target": "desk_check",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discrepancy_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 89,
+ "deciding": {
+  "pli_term_covered": "pli.end 2025-04-30 is five months before term_end 2025-09-30 with no broker_conf.",
+  "renewal_disposition": "Lapsed cover, 50% attendance against 80% with no notices, unapproved size and arrears are several serious breaches; refuse.",
+  "inspection_level": "Unapproved changes would suggest a visit, but the soap is non-food and the open items are documents, so desk check is plausible.",
+  "reversal_time": "A refusal can be reversed only via a new application or appeal over weeks.",
+  "discrepancy_count": "Several gaps appear in the record (cover, size, commodity, attendance), so the planned lower count is doubtful."
+ },
+ "request": "rec-F410-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00521
+}

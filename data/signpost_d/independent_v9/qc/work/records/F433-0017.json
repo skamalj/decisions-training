@@ -1,0 +1,140 @@
+{
+ "id": "F433-0017",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H42",
+   "earlier_gates": [
+    {
+     "loop": 1,
+     "result": "pass"
+    }
+   ]
+  },
+  "gate": {
+   "loop": 2,
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20,
+    "hold_min": 15
+   },
+   "arrived_at": "10:00"
+  },
+  "vet_card": {
+   "arrival_copied": "10:01",
+   "presented_at": "10:21",
+   "pulse_bpm": 64,
+   "cri": {
+    "first_bpm": 64,
+    "second_bpm": 62
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 1.5,
+    "gut_sounds": "normal",
+    "skin_tent_s": 1
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": "regular"
+    },
+    {
+     "surface": "soft",
+     "grade": "regular"
+    }
+   ],
+   "tack": {
+    "site": null,
+    "finding": "none"
+   },
+   "vet_signed_at": "10:30"
+  }
+ },
+ "factors": {
+  "pulse_status": "met_at_boundary",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "regular",
+  "gait_mitigation": false,
+  "metabolic_flags": 0,
+  "cri_rise": 2.0,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "none"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_at_boundary",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": false,
+  "metabolic_flags": 3,
+  "cri_rise": 11.18,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "none"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "clear_to_continue",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "leaning",
+   "target": "pass",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "welfare_risk": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "record_completeness": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 71,
+ "deciding": {
+  "pulse_met": "Pulse 64 equals the limit; presented 10:21 is 21 min after gate arrival 10:00 but 20 min after the copied 10:01, so the window result sits on the boundary.",
+  "next_step": "All readings and signature are present and every parameter is normal, so the horse can continue.",
+  "outcome_code": "Gait regular on both surfaces, metabolic and tack normal; only the borderline pulse timing leaves slight doubt over a pass.",
+  "welfare_risk": "Pulse is at but not over the limit, and the metabolic, gait and tack readings are normal.",
+  "record_completeness": "All readings present, signed 10:30, times in sequence."
+ },
+ "request": "rec-F433-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010552
+}

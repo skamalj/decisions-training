@@ -1,0 +1,141 @@
+{
+ "id": "F418-0005",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "EDG",
+   "plat": 2,
+   "date": "2025-07-15",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "G12",
+    "planned_start": "05:30"
+   },
+   {
+    "staff_id": "G14",
+    "planned_start": "05:30"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "G12",
+    "sign_on": "05:29",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2026-03-01",
+    "dispatch_comp_exp": "2026-03-01"
+   },
+   {
+    "staff_id": "G14",
+    "sign_on": "05:35",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2025-07-18",
+    "dispatch_comp_exp": "2025-07-18"
+   }
+  ],
+  "events": [],
+  "controls": {
+   "disp_ref": "DSP-208",
+   "disp_platform": 2,
+   "valid_to": "2025-07-15T11:00",
+   "approved_by": "RO2",
+   "prior_shortfalls_30d": 3
+  },
+  "remarks": [
+   "Normal shift, both staff on platform throughout."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 0,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 36,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "expired_midgap",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": true
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "exposure_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 79,
+ "deciding": {
+  "headcount_verified": "Sign-ons match roster (G14 five minutes late) and G14 competence expires 3 days after shift, still valid; slight doubt from late sign-on.",
+  "next_step": "events empty, remarks say normal shift; nothing to chase or correct.",
+  "coverage_outcome": "No gap events and both rostered staff signed on for the whole shift.",
+  "reversal_time": "No shortfall occurred, so nothing to undo.",
+  "exposure_severity": "No gap_start event; no period below minimum."
+ },
+ "request": "rec-F418-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005827
+}

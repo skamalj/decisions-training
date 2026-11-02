@@ -1,0 +1,136 @@
+{
+ "id": "F432-0031",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E14",
+   "doors": [
+    "A",
+    "B"
+   ]
+  },
+  "shift": {
+   "end": "18:00",
+   "opening_count": 4,
+   "closing_count": 5
+  },
+  "movements": [
+   {
+    "id": "a7",
+    "dir": "in",
+    "time": "18:02"
+   }
+  ],
+  "feeding": [
+   {
+    "sheet_g": 1000,
+    "offered_g": 1000,
+    "leftover_g": 100,
+    "scatter_flag": true
+   }
+  ],
+  "rounds": [
+   {
+    "t": "10:00",
+    "logged": true
+   },
+   {
+    "t": "13:00",
+    "logged": false,
+    "cctv_reviewed": true,
+    "reviewer_id": "k3"
+   },
+   {
+    "t": "16:00",
+    "logged": false
+   }
+  ],
+  "close_check": {
+   "A": "18:03",
+   "B": "18:04"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.9,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 2,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "unexplained_larger",
+  "barrier_fault": "none",
+  "lock_check_timing": "partial_doors_only",
+  "intake_ratio": 0.17,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 3,
+  "cctv_cover": true,
+  "temp_excursion": "brief_single_reading",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_entry",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "count_reconciles": "Closing 5 = opening 4 + one logged in, but the in movement is stamped 18:02, just after shift end 18:00, which keeps it balanced.",
+  "secure_at_close": "Both doors A and B were checked at 18:03-18:04, after the last round at 16:00; there is no barrier fault, so it leans true.",
+  "next_step": "The 16:00 round has logged false with no CCTV review, so one specific entry is missing and the keeper should be asked.",
+  "intake_shortfall": "Offered 1000 g minus leftover 100 g gives 900 g against a 1000 g sheet, exactly at the 90% boundary between levels 0 and 1.",
+  "missed_rounds": "Two rounds are unlogged; the 13:00 one has a CCTV review, so the count is one or two depending on whether CCTV counts."
+ },
+ "request": "rec-F432-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010348
+}

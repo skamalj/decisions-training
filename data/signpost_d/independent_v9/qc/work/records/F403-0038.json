@@ -1,0 +1,153 @@
+{
+ "id": "F403-0038",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-7720",
+   "declared_allergens": [
+    "wheat",
+    "fish",
+    "mustard"
+   ],
+   "auto_injector": true,
+   "plan_start": "2025-04-07"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "expires": "2026-02-14",
+   "allergens": [
+    "wheat",
+    "fish",
+    "mustard"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-03-28",
+   "dishes": [
+    {
+     "dish": "fish pie",
+     "contains": [
+      "fish",
+      "wheat"
+     ],
+     "recipe_version_date": "2025-04-01",
+     "substitute": "chicken pie",
+     "spec_checked_on": "2025-04-01"
+    },
+    {
+     "dish": "mustard glaze sausage",
+     "contains": [
+      "mustard"
+     ],
+     "recipe_version_date": "2025-04-01",
+     "substitute": "plain sausage",
+     "spec_checked_on": "2025-04-01"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "trained": "2025-01-09",
+   "cleaning_log_complete": true
+  },
+  "history": {
+   "review_date": "2025-05-05",
+   "packed_lunch_until": "2025-06-02",
+   "incidents": [
+    {
+     "date": "2025-04-09",
+     "dish": "fish pie",
+     "contains": [
+      "fish",
+      "wheat"
+     ],
+     "note": "served in error; reaction treated"
+    }
+   ],
+   "messages": [
+    "Parent: very worried, wants everything rechecked."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 20,
+  "packed_lunch_interim": true,
+  "note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 3,
+  "anaphylaxis_risk": true,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": true,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 16,
+  "packed_lunch_interim": false,
+  "note_tone": "alarmed"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "return_for_rework",
+   "second": "approve_restricted",
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "balanced",
+   "target": "no_gap",
+   "second": "menu_gap",
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 49,
+ "deciding": {
+  "evidence_allergens_covered": "Wheat, fish and mustard each appear in a mapped dish with a listed substitute, but the recipes changed after mapping and the spec check is only same-day, so coverage is only modestly supported.",
+  "next_step": "Both dishes have recipe_version_date 2025-04-01 after mapped_on 2025-03-28 with spec_checked_on not later than the recipe date: two doubtful dishes (rework) versus restricting the dishes (restricted).",
+  "first_gap_stage": "Evidence and controls are verified and every dish has a substitute (no_gap), but the same-day spec checks after post-mapping recipe changes leave a menu_gap reading plausible.",
+  "exposure_proximity": "Fish pie containing fish and wheat was served on 2025-04-09, after plan_start 2025-04-07.",
+  "meal_urgency": "Packed lunch until 2025-06-02 puts the first school meal on 2025-06-03, roughly 20 school days from the 2025-05-05 review, right at the 0/1 boundary."
+ },
+ "request": "rec-F403-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013104
+}

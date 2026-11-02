@@ -1,0 +1,120 @@
+{
+ "id": "F411-0047",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "P077",
+   "review_date": "2024-05-10"
+  },
+  "vehicle": {
+   "odometer_km": 102000
+  },
+  "inspection": {
+   "result_code": "PA",
+   "brake_efficiency_pct": null
+  },
+  "defects": [
+   {
+    "code": "LGT2",
+    "grade": "minor",
+    "rectify_by": "2024-06-01",
+    "repaired_on": "2024-05-08",
+    "retest_on": null,
+    "retest_result": null
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2024-05-02",
+    "cover_note_ref": "CN88",
+    "cover_until": "2024-05-12"
+   }
+  ],
+  "history": [
+   {
+    "date": "2023-05-04",
+    "result": "P",
+    "odometer_km": 98000
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": false,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": true,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 11
+ },
+ "factors_sampled": {
+  "worst_defect_found": "minor",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": true,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": false,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": true,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 11
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_evidence",
+   "second": "conditional_renewal",
+   "targets": [
+    "T1"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "clean_pass",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "odometer_consistent": "102000 km now versus 98000 km a year ago; the reading rises with no drop.",
+  "next_step": "Brake efficiency is null and the minor repair awaits retest, favouring request_evidence; the minor defect within its deadline leaves conditional renewal defensible.",
+  "inspection_outcome": "A minor item is recorded (code LGT2), so a clean pass is not fully supported; the plan's clean_pass could not be honoured alongside the outstanding item.",
+  "document_gaps": "Insurance expired before the review date but a cover note runs to 2024-05-12, after it, so it counts as in date; reviewers may still see one gap.",
+  "outstanding_severity": "Minor LGT2 is repaired but not retested, with rectify_by after the review date; could be read as level 1 or level 2."
+ },
+ "request": "rec-F411-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008139
+}

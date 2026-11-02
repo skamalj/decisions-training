@@ -1,0 +1,128 @@
+{
+ "id": "F408-0038",
+ "family": "F408",
+ "state": {
+  "report": {
+   "flat_no": "3",
+   "logged_at": "2024-07-10T09:00",
+   "claimed": "2024-07-09",
+   "photo": true
+  },
+  "property": {
+   "flat_no": "3A"
+  },
+  "schedule": {
+   "date": "2024-07-09"
+  },
+  "round_log": {
+   "done_at": "2024-07-09T14:00",
+   "stops": [
+    {
+     "exc": "not_presented",
+     "photo": "P7",
+     "gps_stop": null
+    }
+   ]
+  },
+  "history": [
+   {
+    "on": "2024-06-20",
+    "out": "upheld"
+   },
+   {
+    "on": "2024-05-15",
+    "out": "upheld"
+   },
+   {
+    "on": "2024-04-17",
+    "out": "upheld"
+   },
+   {
+    "on": "2024-06-25",
+    "out": "rejected"
+   },
+   {
+    "on": "2024-02-01",
+    "out": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": true,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 3,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": true,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 0,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "return_conditional",
+   "second": "escalate_supervisor",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "crew_missed": "not_presented exception has a photo ref but gps_stop is null, so support is partial.",
+  "report_matches": "Date and round timing agree, but report flat 3 differs from property flat 3A.",
+  "next_step": "Presentation issue and flat mismatch suggest a conditional return, while repeated cases could justify supervisor referral.",
+  "return_urgency": "No assisted flag or deadline; repeat cases push toward standard versus next round.",
+  "repeat_failures": "Two upheld clearly inside 84 days and a third exactly on the 84-day boundary; rejected and older entries are not counted."
+ },
+ "request": "rec-F408-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008871
+}

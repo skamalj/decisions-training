@@ -1,0 +1,127 @@
+{
+ "id": "F418-0010",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "PWD",
+   "plat": 1,
+   "date": "2025-07-15",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "driver"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S50"
+   },
+   {
+    "post": "B",
+    "staff_id": "S51"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S50",
+    "sign_on": "05:55",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2025-07-20",
+    "dispatch_comp_exp": "2025-07-20"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "11:00"
+   },
+   {
+    "type": "gap_end",
+    "time": "11:53"
+   }
+  ],
+  "controls": null,
+  "remarks": [
+   "Dispensation D-77 held, see file.",
+   "Relief covered the gap."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 53,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 1,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 53,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "contradicts",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 1,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_log",
+   "second": "escalate_ops",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "leaning",
+   "target": "partial_cover",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "headcount_verified": "S50 has a sign-on and in-date competence, but S51 has no attendance row, so the answer is balanced; the log shows only S50.",
+  "next_step": "Controls null while remarks cite D-77 points to accepting if the dispensation holds, or escalating for the unverified gap.",
+  "coverage_outcome": "Gap 11:00-11:53 is open with no cover events, though the remark says relief covered it, so partial cover leads.",
+  "reversal_time": "Missing records could be chased within days or take months to settle, so level 1 and level 2 are balanced.",
+  "exposure_severity": "Below minimum for 53 minutes with a claimed dispensation, no dispatch by staff (driver mode), so level 1 leads."
+ },
+ "request": "rec-F418-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005837
+}

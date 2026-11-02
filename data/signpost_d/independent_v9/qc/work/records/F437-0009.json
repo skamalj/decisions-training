@@ -1,0 +1,168 @@
+{
+ "id": "F437-0009",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "1",
+   "glossary_version": "g2",
+   "due_at": "2025-06-02T10:00"
+  },
+  "source": {
+   "version": "1",
+   "segment_count": 60
+  },
+  "deliverable": {
+   "built_from_version": "1",
+   "segments_translated": 60,
+   "glossary_version_used": "g2",
+   "delivered_at": "2025-06-01T22:00"
+  },
+  "qa_report": {
+   "flags": 14,
+   "false_positive_marked": 2,
+   "number_mismatches": [
+    [
+     "12",
+     "21"
+    ],
+    [
+     "3.5",
+     "35"
+    ],
+    [
+     "40",
+     "4"
+    ],
+    [
+     "2019",
+     "2018"
+    ],
+    [
+     "7",
+     "17"
+    ],
+    [
+     "90",
+     "09"
+    ]
+   ],
+   "unresolved": {
+    "major": 1,
+    "minor": 3
+   }
+  },
+  "review": {
+   "completed_at": "2025-06-01T22:20",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "minor",
+     "status": "open",
+     "owner": "translator"
+    },
+    {
+     "sev": "minor",
+     "status": "open",
+     "owner": "editor"
+    },
+    {
+     "sev": "minor",
+     "status": "open",
+     "owner": "terminologist"
+    },
+    {
+     "sev": "minor",
+     "status": "open",
+     "owner": "dtp"
+    },
+    {
+     "sev": "minor",
+     "status": "open",
+     "owner": "pm"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-05-10",
+    "2025-05-20"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "completed_after_delivery",
+  "open_error_profile": "minor_with_one_unresolved_major_qa_flag",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.14,
+  "number_mismatch_count": 6,
+  "deadline_slack_hours": 12,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.14,
+  "number_mismatch_count": 6,
+  "deadline_slack_hours": -12,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "scope_matches": "Version 1 and 60 of 60 segments match across order, source and build. The 6 number mismatches are the only doubt.",
+  "reviewed_in_time": "Review completed_at 22:20 is after delivered_at 22:00 on 2025-06-01, a gap of only 20 minutes.",
+  "next_step": "Delivery is 12 hours before the due time, the glossary matches and the review is signed off. The open items are minor, so releasing is leaning, with doubt from the late review and the 6 number mismatches.",
+  "open_severity": "The review errors are all minor and open, but QA unresolved lists 1 major. That could be an open major or one of the 2 false positives.",
+  "parties_needed": "Open errors are owned by five different roles: translator, editor, terminologist, DTP and PM."
+ },
+ "request": "rec-F437-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011372
+}

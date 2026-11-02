@@ -1,0 +1,193 @@
+{
+ "id": "F440-0036",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "B1",
+   "review_date": "2025-06-14",
+   "arrival": "2025-07-20",
+   "departure": "2025-07-22",
+   "pax": {
+    "13-17": 19,
+    "adult": 2
+   },
+   "diet": {
+    "veg": 3
+   },
+   "amendments": [
+    {
+     "type": "pax_change",
+     "delta": 1,
+     "logged_at": "2025-06-02"
+    }
+   ]
+  },
+  "roster": [
+   {
+    "role": "leader",
+    "dob": "1984-02-11",
+    "sex": "F",
+    "depart": "2025-07-22"
+   },
+   {
+    "role": "leader",
+    "dob": "1990-05-09",
+    "sex": "M",
+    "depart": "2025-07-21"
+   },
+   {
+    "role": "participant",
+    "n": 12,
+    "dob": "2010",
+    "sex": "F",
+    "veg": 2
+   },
+   {
+    "role": "participant",
+    "n": 8,
+    "dob": "2009",
+    "sex": "M",
+    "veg": 1
+   }
+  ],
+  "allocation": {
+   "rooms": [
+    {
+     "room": "D1",
+     "sex": "F",
+     "beds": 12,
+     "nights": [
+      "2025-07-20",
+      "2025-07-21"
+     ]
+    },
+    {
+     "room": "D2",
+     "sex": "M",
+     "beds": 8,
+     "nights": [
+      "2025-07-20",
+      "2025-07-21"
+     ]
+    }
+   ],
+   "warden_cover": [
+    "2025-07-21"
+   ]
+  },
+  "payment": {
+   "total": 1760,
+   "deposit_due": 440,
+   "paid_total": 220,
+   "schedule": [
+    {
+     "due": "2025-06-01",
+     "amt": 220,
+     "paid": true
+    },
+    {
+     "due": "2025-07-01",
+     "amt": 220,
+     "paid": false
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "adult": "L1",
+    "status": "verified",
+    "expiry": "2026-03-01"
+   },
+   {
+    "adult": "L2",
+    "status": "pending",
+    "expiry": null
+   }
+  ],
+  "history": {
+   "org": "O17",
+   "trusted": true,
+   "stays": 9,
+   "no_shows": 2,
+   "last_stay": "2024-10-05"
+  }
+ },
+ "factors": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": true,
+  "deposit_position": "partial",
+  "instalment_approved": true,
+  "days_to_arrival": 36,
+  "dorm_fit": "fits",
+  "leader_checks": "one_pending",
+  "trusted_organiser": true,
+  "prior_no_shows": 2,
+  "diet_count_drift": "none"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "none",
+  "amendment_logged": true,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": true,
+  "deposit_position": "partial",
+  "instalment_approved": false,
+  "days_to_arrival": 36,
+  "dorm_fit": "needs_one_swap",
+  "leader_checks": "one_pending",
+  "trusted_organiser": true,
+  "prior_no_shows": 2,
+  "diet_count_drift": "minor"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "ratio_met": "20 minors aged 13-17 need 2 adults; leader 2 departs 2025-07-21, leaving night of 07-21 with one leader, but warden_cover lists that night. Whether a warden counts as an adult leader is arguable.",
+  "deposit_covered": "paid_total 220 of deposit_due 440, but the instalment schedule's first 220 instalment (due 06-01) is met and the next is not due until 07-01. No explicit approval field, so it is balanced.",
+  "disposition": "Leader L2 safeguarding status is pending with null expiry; one specific missing confirmation, with otherwise sound booking.",
+  "urgency": "Review 2025-06-14 to arrival 2025-07-20 is 36 days, so routine.",
+  "conflict_count": "Roster has 22 against booked 21, but a pax_change +1 is logged; diet and dorm counts match. Zero unexplained, but the instalment/cover question leaves one arguable."
+ },
+ "request": "rec-F440-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.018845
+}

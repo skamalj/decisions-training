@@ -1,0 +1,149 @@
+{
+ "id": "F430-0042",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S207",
+   "assets": [
+    {
+     "id": "CB2",
+     "unit": "kPa",
+     "normal_band": [
+      560,
+      620
+     ],
+     "alarm_limit": 520,
+     "trip_limit": 480,
+     "customers_fed": 11524,
+     "partner_id": "CB3"
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-06-03",
+   "scheduled_assets": [
+    "CB2",
+    "T1"
+   ]
+  },
+  "readings": [
+   {
+    "asset_id": "CB2",
+    "param": "sf6_pressure",
+    "value": 4.6,
+    "unit": "bar"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "CB2",
+    "note": "SF6 gauge low.",
+    "photo_ref": "P3"
+   }
+  ],
+  "history": {
+   "previous_round": {
+    "CB2": 4.3
+   },
+   "permits": [
+    {
+     "asset_id": "CB2",
+     "valid_to": "2024-05-20"
+    }
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "CB3": "outage"
+   },
+   "outage_plan": [
+    {
+     "asset_id": "CB3",
+     "from": "2024-06-01",
+     "to": "2024-06-10"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "worst_reading_band": "trip",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "improving",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 11524,
+  "trivial_discrepancies": 2,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": true,
+  "benign_cause_present": false,
+  "benign_cause_type": "load_transfer",
+  "benign_cause_covers": false,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "improving",
+  "scheduled_assets_missed": 1,
+  "evidence_missing": false,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 11524,
+  "trivial_discrepancies": 2,
+  "near_boundary": true
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "leaning",
+   "target": "work_order",
+   "second": null,
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 89,
+ "deciding": {
+  "defect_corroborated": "Low SF6 note matches the 4.6 bar reading, which is 460 kPa.",
+  "benign_explanation": "Permit on CB2 is the documented explanation but ended 2024-05-20, before the round date; reviewer doubt remains.",
+  "follow_up": "Reading improving from 4.3 so planned work order rather than urgent dispatch; partner out adds doubt.",
+  "limit_deviation": "4.6 bar = 460 kPa, below the 480 kPa trip limit.",
+  "supply_exposure": "CB2 feeds 11524 customers and partner CB3 is on outage per network, so a failure loses them all."
+ },
+ "request": "rec-F430-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006071
+}

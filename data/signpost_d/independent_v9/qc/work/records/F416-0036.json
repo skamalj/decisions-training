@@ -1,0 +1,148 @@
+{
+ "id": "F416-0036",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "N12",
+   "date": "2025-03-08",
+   "signoff": "G03",
+   "signoff_t": "18:05"
+  },
+  "roster": [
+   {
+    "id": "G03",
+    "on": "09:00",
+    "off": "18:00",
+    "qual_exp": "2026-01-10"
+   },
+   {
+    "id": "G07",
+    "on": "09:00",
+    "off": "15:00",
+    "qual_exp": "2026-02-01"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "12:00",
+    "wave_m": 1.2,
+    "rip_risk": "mod",
+    "flag": "red_yellow",
+    "bathing_zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-03-08",
+    "time": "15:00",
+    "type": "water_rescue",
+    "resp": [
+     "G03",
+     "G07"
+    ],
+    "outcome": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "board",
+    "unit": "B2",
+    "last_check": "2025-03-07",
+    "out_from": null,
+    "out_to": null
+   }
+  ],
+  "handover": {
+   "rescues": 1,
+   "first_aid": 0,
+   "kit_defects": 0,
+   "check_sheet_ref": "CS-881"
+  }
+ },
+ "factors": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "responder_off_roster",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "released",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "responder_off_roster",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "rescue_off_by_one",
+  "worst_outcome": "critical",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": true,
+  "missing_record": "qual_record",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "kit_outage": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 85,
+ "deciding": {
+  "two_guard_cover": "Rescue time 15:00 equals G07's roster off time 15:00, so whether G07 was still on duty is borderline.",
+  "totals_reconcile": "Handover rescues 1, first_aid 0 and kit_defects 0 match the itemised incident and equipment entries, and the incident date equals the shift date.",
+  "next_step": "Sign-off and check_sheet_ref are present, nothing is missing, and the only doubt is the borderline roster time, so the log can be filed.",
+  "outcome_severity": "The only incident outcome is released, with no AED and no ambulance.",
+  "kit_outage": "The only equipment entry has out_from and out_to null, so no kit was out of service."
+ },
+ "request": "rec-F416-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01015
+}

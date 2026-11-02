@@ -1,0 +1,146 @@
+{
+ "id": "F415-0016",
+ "family": "F415",
+ "state": {
+  "site": {
+   "id": "TB-14",
+   "closures": [
+    {
+     "from": "13:00",
+     "to": "13:40",
+     "reason": "water off",
+     "approved_by": "OFF-31"
+    }
+   ]
+  },
+  "shift": {
+   "date": "2024-05-11",
+   "start": "08:00",
+   "end": "18:00",
+   "sched_slots": [
+    "08:30",
+    "10:30",
+    "12:30",
+    "14:30",
+    "16:30"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:30",
+    "status": "done"
+   },
+   {
+    "slot": "10:30",
+    "status": "done"
+   },
+   {
+    "slot": "12:30",
+    "status": "done"
+   },
+   {
+    "slot": "14:30",
+    "status": "not_recorded",
+    "op_note": "cleaned late, tablet down"
+   },
+   {
+    "slot": "16:30",
+    "status": "done",
+    "photo_ref": "IMG-8841"
+   }
+  ],
+  "faults": [
+   {
+    "type": "sharps_find",
+    "reported_at": "2024-05-11T11:05:00",
+    "remedied_at": "2024-05-11T15:37:00",
+    "remedy_note": "bin emptied 11:30"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "operative",
+   "signed_at": "2024-05-11T18:10:00"
+  },
+  "history": {
+   "defaults": 2
+  }
+ },
+ "factors": {
+  "scheduled_slots": 5,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "unauthorised_signer",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 272.38,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 2
+ },
+ "factors_sampled": {
+  "scheduled_slots": 5,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "unauthorised_signer",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 272.38,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "contradicts_log",
+  "prior_defaults_90d": 2
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "missed_clean": "14:30 slot is not_recorded and the closure ends 13:40, but the note says it was cleaned late, so it is plausible either way.",
+  "sign_off_valid": "signer_role is operative, which is unauthorised, yet the signing time is after the last visit; the role field is the only doubt.",
+  "next_step": "Mostly complete log with full checklist and photo; recording lapse only, so accept is favoured with some doubt.",
+  "staff_effort": "The remedy note (bin emptied 11:30) contradicts remedied_at 15:37, so resolving needs days of contractor queries and audit.",
+  "fault_exposure": "Fault reported 11:05 and remedied 15:37 is 272 minutes, but the note says bin emptied 11:30 (25 minutes), so level 2 or 1 is arguable."
+ },
+ "request": "rec-F415-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005972
+}

@@ -1,0 +1,129 @@
+{
+ "id": "F421-0018",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-33907",
+   "service": "std",
+   "fragile": false,
+   "contents": "laptop",
+   "qty": 2,
+   "weight_kg": 5.0,
+   "declared_value_gbp": 1335.98
+  },
+  "handling_events": [
+   {
+    "ts": "2024-06-04T09:00",
+    "site": "DEP-R",
+    "code": "INB"
+   },
+   {
+    "ts": "2024-06-04T12:30",
+    "site": "DEP-R",
+    "code": "SORT"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-06-04T08:20",
+   "inspector": "A.Rao",
+   "observed_item": "laptop",
+   "qty_found": 1,
+   "weight_kg": 2.1,
+   "condition": "tape cut and resealed, screen cracked",
+   "photos": [
+    "1.jpg"
+   ],
+   "repair_est_gbp": 663
+  },
+  "claim": {
+   "claim_id": "C-415",
+   "claimed_gbp": 842,
+   "item_desc": "2 laptops",
+   "submitted": "2024-06-06"
+  },
+  "notes": [
+   "Box resealed, one unit absent."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "complete",
+  "loss_pct": 49.64,
+  "declared_value": 1335.98,
+  "scan_order_anomaly": true,
+  "tamper_signs": true,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.27
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "complete",
+  "loss_pct": 49.64,
+  "declared_value": 1335.98,
+  "scan_order_anomaly": true,
+  "tamper_signs": true,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.27
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_repack",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "depot_fault": "No upstream damage, but inspected_ts 08:20 precedes inbound 09:00, muddying timing.",
+  "contents_match": "Manifest qty 2 and 5.0 kg vs found qty 1 and 2.1 kg, with resealed tape.",
+  "next_step": "Tamper plus missing unit and claim need decision; approve repack is clear.",
+  "loss_share": "Repair 663 of 1335.98 is 49.6%, right at the 50% boundary between partial and major.",
+  "parties_needed": "Single record needs assessor plus one other team for repack/claim."
+ },
+ "request": "rec-F421-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005509
+}

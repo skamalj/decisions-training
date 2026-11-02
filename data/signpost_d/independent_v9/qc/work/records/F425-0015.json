@@ -1,0 +1,157 @@
+{
+ "id": "F425-0015",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "declared_eggs": 1500,
+   "lay_dates": [
+    "2024-05-14",
+    "2024-05-11"
+   ]
+  },
+  "grading_run": {
+   "run_start": "2024-05-17T06:00:00Z",
+   "run_end": "2024-05-17T09:00:00Z",
+   "eggs_in": 1500,
+   "by_size": {
+    "S": 100,
+    "M": 600,
+    "L": 570,
+    "XL": 200
+   },
+   "outgrades": {
+    "cracks": 18,
+    "dirties": 8,
+    "blood_spots": 2,
+    "leakers": 2
+   },
+   "class_a_total": 1470
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-02-01",
+    "interval_days": 90
+   },
+   "candling_sample": {
+    "n": 60,
+    "sampled_at": "2024-05-17T07:00:00Z",
+    "rejects": 14,
+    "limit": 5
+   },
+   "scale_check": {
+    "checked_at": "2024-05-17T05:30:00Z"
+   }
+  },
+  "flock": {
+   "age_weeks": 35,
+   "last_swab": {
+    "date": "2024-05-02",
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2024-05-18",
+   "packs": [
+    {
+     "size": "S",
+     "count": 100
+    },
+    {
+     "size": "M",
+     "count": 600
+    },
+    {
+     "size": "L",
+     "count": 550
+    },
+    {
+     "size": "XL",
+     "count": 200
+    }
+   ],
+   "best_before": "2024-06-11",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "moderate",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 7,
+  "mixed_lay_dates": true,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 2.0,
+  "dominant_defect": "cracks",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 35
+ },
+ "factors_sampled": {
+  "count_gap_size": "large",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 2,
+  "mixed_lay_dates": true,
+  "missing_check": "scale_check_missing",
+  "swab_positive": false,
+  "outgrade_rate_pct": 1.63,
+  "dominant_defect": "dirties",
+  "calibration_overdue": true,
+  "calibration_mitigated": true,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 35
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "downgrade_class_b",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "clear",
+   "target": "equipment_fault",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "lay_to_pack": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 92,
+ "deciding": {
+  "counts_reconcile": "packs sum 1450 vs class_a_total 1470 is a 1.4% gap, well over half a percent, while the intake, grader and size counts agree.",
+  "batch_disposition": "candling_sample shows 14 rejects in 60 against a limit of 5, a clear quality failure; swab negative and all checks done, so fit for processing but not Class A.",
+  "anomaly_cause": "Detector last calibrated 2024-02-01 with a 90-day interval, overdue at the 2024-05-17 run, with no manual_recheck; cracks dominate the outgrades.",
+  "lay_to_pack": "Oldest lay date 2024-05-11 to pack 2024-05-18 is 7 days, at the edge between standard and late; the newer date is listed first.",
+  "outgrade_share": "Outgrades total 30 of 1500 eggs_in, exactly 2.0%, on the line between the under-2% and 2 to 5% levels."
+ },
+ "request": "rec-F425-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011823
+}

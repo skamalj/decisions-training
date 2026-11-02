@@ -1,0 +1,109 @@
+{
+ "id": "F426-0027",
+ "family": "F426",
+ "state": {
+  "applications": [
+   {
+    "date": null,
+    "product_code": "FX9",
+    "qty_applied": 11,
+    "qty_unit": "L",
+    "area_treated_ha": 10,
+    "operator_cert_no": null
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "FX9",
+    "max_rate_per_ha": 1,
+    "rate_unit": "L",
+    "phi_days": 7
+   }
+  ],
+  "equipment": {
+   "calibration_valid_to": "2023-03-01"
+  },
+  "harvest": {
+   "first_pick_date": "2024-02-10",
+   "residue_test": {
+    "sampled": true,
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "app_date_missing",
+  "rate_overrun_band": "up_to_10",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "expired_long",
+  "missing_item": "operator_cert_null",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "unit_ml_vs_l",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "expired_long",
+  "missing_item": "operator_cert_null",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 6,
+  "high_wind_decoy": true
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "no_finding",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 29,
+ "deciding": {
+  "phi_cleared": "The application date is null, so the 7-day interval to the first pick on 2024-02-10 can't be confirmed. The clear residue test leaves a little doubt.",
+  "next_step": "There is no spray date, no operator cert number, and calibration expired 2023-03-01, almost a year before the pick. This is more than one missing document, so the case goes to the technical manager.",
+  "finding_class": "Apart from the gaps, the record shows no breach or label problem: the rate is at the margin and the residue test is below limit. The null date and expired calibration make no_finding only leaning.",
+  "reversal_time": "The residue test is clear and the issues are documentary, so the outcome could be undone within a day once documents arrive. A longer re-review could take days.",
+  "rate_overrun": "11 L over 10 ha is 1.1 L/ha against a max of 1, which is 10% over. That sits right on the level 1 and level 2 boundary."
+ },
+ "request": "rec-F426-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010079
+}

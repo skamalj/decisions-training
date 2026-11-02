@@ -1,0 +1,146 @@
+{
+ "id": "F423-0011",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-41872",
+   "product": "brochure",
+   "stock_spec": "GL-130",
+   "run_qty": 10000,
+   "overs_pct": 4.54,
+   "due_date": "2025-03-14",
+   "customer_tier": "trade",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "CP-5531",
+   "ok_sheet_no": 12,
+   "signed_at": "2025-03-06T09:40",
+   "customer_present": false,
+   "concession": {
+    "accepted_max_de": 4.0
+   }
+  },
+  "colour_readings": {
+   "instrument": "SP-2",
+   "calibrated_on": "2025-02-15",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.1
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.6
+    },
+    {
+     "ink": "K",
+     "delta_e": 1.4
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "pair": "K/C",
+     "offset_mm": 0.4,
+     "in_image": false
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P3",
+   "stock_loaded": "MT-115",
+   "first_production_at": "2025-03-06T08:05",
+   "sheets_production": 1384,
+   "sheets_makeready": 220,
+   "stoppages": [
+    "jam",
+    "wash",
+    "jam"
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 1384,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 4.54,
+  "register_offset_mm": 0.4,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 19,
+  "customer_tier": "trade",
+  "prior_stoppages": 3
+ },
+ "factors_sampled": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 1384,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 4.54,
+  "register_offset_mm": 0.4,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 19,
+  "customer_tier": "trade",
+  "prior_stoppages": 3
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_manager",
+   "second": "adjust_and_recheck",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (wrong_stock_loaded = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 81,
+ "deciding": {
+  "colour_in_tolerance": "Highest patch (M) reads 3.6, above spec_max_de 3.0 but under the concession accepted_max_de 4.0; the other patches are lower and the instrument calibration is recent.",
+  "run_before_signoff": "first_production_at 08:05 is earlier than signed_at 09:40, with 1384 production sheets logged.",
+  "next_step": "run_log.stock_loaded MT-115 differs from stock_spec GL-130 with production at about 14% of run, which favours escalation. Colour passes on the concession and the 0.4 mm offset is trim-only, so an on-press correction stays arguable.",
+  "staff_effort": "A wrong-stock run of 1384 sheets means a reprint and customer handling that could take either several days or more than a week. Nothing in the record sets the time.",
+  "scrap_exposure": "Wrong stock loaded with 1384 production sheets against run_qty 10000 is 13.8% of the run, above the 10% line."
+ },
+ "request": "rec-F423-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010077
+}

@@ -1,0 +1,181 @@
+{
+ "id": "F432-0034",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E31",
+   "species": "LEM",
+   "risk_cat": 2,
+   "temp_range_c": [
+    16,
+    26
+   ],
+   "roster": [
+    "l1",
+    "l2",
+    "l3",
+    "l4",
+    "l5",
+    "l6"
+   ],
+   "doors": [
+    "A",
+    "B"
+   ],
+   "active_vet_case": false
+  },
+  "shift": {
+   "date": "2024-05-14",
+   "keeper_id": "k8",
+   "start": "12:00",
+   "end": "20:00",
+   "opening_count": 6,
+   "closing_count": 6
+  },
+  "movements": [],
+  "feeding": {
+   "sheet_date": "2024-04-01",
+   "items": [
+    {
+     "item": "hay",
+     "sheet_g": 5000,
+     "offered_g": 5000,
+     "leftover_g": 250,
+     "unit": "g"
+    },
+    {
+     "item": "pellet",
+     "sheet_g": 800,
+     "offered_g": 800,
+     "leftover_g": 40,
+     "unit": "g"
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched": "14:00",
+    "logged": true,
+    "entry_time": "14:01",
+    "temp_c": 21,
+    "beh": []
+   },
+   {
+    "sched": "16:00",
+    "logged": true,
+    "entry_time": "16:02",
+    "temp_c": 22,
+    "beh": [
+     "STER"
+    ]
+   },
+   {
+    "sched": "18:00",
+    "logged": true,
+    "entry_time": "18:00",
+    "temp_c": 21,
+    "beh": []
+   },
+   {
+    "sched": "20:00",
+    "logged": true,
+    "entry_time": "20:01",
+    "temp_c": 20,
+    "beh": []
+   }
+  ],
+  "close_check": {
+   "A": "20:05",
+   "B": "19:59",
+   "ticket": null
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_near_last_round",
+  "intake_ratio": 0.95,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 0,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.16,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 5,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_2_medium"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "missed_rounds": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 134,
+ "deciding": {
+  "count_reconciles": "Opening 6 equals closing 6 and movements is empty.",
+  "secure_at_close": "Door A was checked at 20:05, but door B at 19:59, a minute before the last round entry at 20:01, so confirmation of B after the final round is only marginal; there is no barrier fault.",
+  "next_step": "All sections are present and consistent, with a single minor STER code and no faults, so the log can be filed with only a slight doubt over the door B timing.",
+  "intake_shortfall": "Hay is 4750 of 5000 g and pellets 760 of 800 g, both 95% eaten, which is above the 90% line.",
+  "missed_rounds": "All four scheduled rounds have logged true with entry times."
+ },
+ "request": "rec-F432-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010348
+}

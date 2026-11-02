@@ -1,0 +1,170 @@
+{
+ "id": "F415-0008",
+ "family": "F415",
+ "state": {
+  "site": {
+   "id": "WB-17",
+   "hours": "07:00-19:00",
+   "closures": [
+    {
+     "from": "2024-06-03T09:20",
+     "to": "2024-06-03T14:30",
+     "reason": "sharps clearance",
+     "approved_by": "OFF031"
+    }
+   ]
+  },
+  "shift": {
+   "date": "2024-06-03",
+   "start": "07:00",
+   "end": "16:00",
+   "crew": "C4",
+   "sched_slots": [
+    "07:00",
+    "09:00",
+    "11:00",
+    "13:00",
+    "15:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "07:00",
+    "start": "07:02",
+    "end": "07:30",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "pans": true,
+     "basins": true,
+     "bins": true
+    },
+    "photo_ref": null
+   },
+   {
+    "slot": "09:00",
+    "start": "09:02",
+    "end": "09:25",
+    "status": "done",
+    "checklist": {
+     "floor": true,
+     "pans": true,
+     "basins": true,
+     "bins": true
+    },
+    "photo_ref": null
+   },
+   {
+    "slot": "15:00",
+    "status": "not_recorded",
+    "end": null
+   }
+  ],
+  "faults": [
+   {
+    "type": "sharps_find",
+    "reported_at": "09:30",
+    "remedied_at": "14:28",
+    "source": "staff",
+    "remedy_note": "needle found in cubicle, sharps team attended"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "15:40",
+   "comment": "end of shift"
+  },
+  "history": {
+   "prior_defaults_90d": 1,
+   "complaints_90d": 3
+  }
+ },
+ "factors": {
+  "scheduled_slots": 5,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "signed after the last completed visit but 15:00 visit unrecorded",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 298.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 1
+ },
+ "factors_sampled": {
+  "scheduled_slots": 5,
+  "missed_slots": "2",
+  "closure_covers_gap": true,
+  "closure_approved": true,
+  "sign_off_state": "signed_before_last_visit",
+  "fault_type": "sharps_find",
+  "fault_open_minutes": 298.04,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 1
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "fault_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 160,
+ "deciding": {
+  "missed_clean": "The 15:00 slot is not_recorded with a null end, and the closure ends 14:30, so it does not cover it.",
+  "sign_off_valid": "Supervisor signed 15:40, after the last completed visit end 09:25, but the 15:00 visit is unrecorded, so doubt remains.",
+  "next_step": "The 11:00 and 13:00 slots are within the approved closure, and fault and checklist are fine; only the 15:00 entry is outstanding, which suggests accepting.",
+  "staff_effort": "A single not_recorded entry is the only item, so a short check is enough.",
+  "fault_exposure": "Fault 09:30-14:28 lies wholly inside the closure 09:20-14:30, so the block was not public while it was open."
+ },
+ "request": "rec-F415-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010082
+}

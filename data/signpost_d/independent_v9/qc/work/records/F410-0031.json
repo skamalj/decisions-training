@@ -1,0 +1,155 @@
+{
+ "id": "F410-0031",
+ "family": "F410",
+ "state": {
+  "application": {
+   "app_ref": "A-4471",
+   "licence_no": "L1182",
+   "holder_ref": "H-3571",
+   "holder_name": "R Okafor",
+   "term_start": "2025-04-01",
+   "term_end": "2026-03-31",
+   "pitch_req": {
+    "width_m": 4.0,
+    "depth_m": 3.0
+   },
+   "commodities": [
+    "fruit",
+    "hot food"
+   ],
+   "docs_pending": [
+    "pli",
+    "food_reg",
+    "fee_proof"
+   ]
+  },
+  "licence_current": {
+   "holder_ref": "H-3517",
+   "holder_name": "R Okafor",
+   "pitch": {
+    "width_m": 2.76,
+    "depth_m": 3.0
+   },
+   "commodities": [
+    "fruit"
+   ],
+   "conditions": {
+    "min_attendance_pct": 75
+   },
+   "variations": []
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2025-06-30",
+    "indemnity_gbp": 5000000
+   },
+   "pli_required_gbp": 5000000,
+   "food_reg": {
+    "registered": true,
+    "fhrs_rating": 4
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "amount_gbp": 640.24
+    }
+   ],
+   "ledger": [
+    {
+     "amount_gbp": 560,
+     "method": "card"
+    }
+   ]
+  },
+  "history": {
+   "allocated_12m": 51,
+   "attended_12m": 24,
+   "absence_notices": [
+    {
+     "reason": "illness",
+     "accepted": true
+    }
+   ],
+   "complaints": []
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "ends_more_than_14d_early",
+  "broker_confirmation_held": false,
+  "commodity_change": "food_added",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 1.24,
+  "variation_approved": false,
+  "fee_arrears_gbp": 80.24,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.47,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "transcription_error",
+  "docs_outstanding": 3
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "none",
+  "broker_confirmation_held": false,
+  "commodity_change": "food_added",
+  "food_registration_state": "registered_rating_4_5",
+  "stall_size_delta_m": 1.24,
+  "variation_approved": false,
+  "fee_arrears_gbp": 80.24,
+  "payment_plan_active": false,
+  "attendance_ratio": 0.47,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "transcription_error",
+  "docs_outstanding": 3
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "clear",
+   "target": "refuse",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "inspection_level": {
+   "clarity": "balanced",
+   "target": "none_needed",
+   "second": "desk_check",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 92,
+ "deciding": {
+  "pli_term_covered": "pli.end 2025-06-30 is nine months before term_end 2026-03-31, no broker_conf.",
+  "renewal_disposition": "Cover lapses mid-term, attendance 24/51 far below 75% with only one accepted absence, arrears, unapproved size and commodity changes: multiple serious breaches.",
+  "inspection_level": "Food added is registered (rating 4), so no food safety gap; but the size and commodity changes are unapproved, which makes scheduled_visit arguable against none_needed or desk_check.",
+  "reversal_time": "A refusal can be reappealed or reapplied within days after cover and documents are supplied, though not within a day.",
+  "discrepancy_count": "Unresolved: PLI end before term end, unapproved commodity addition, oversize stall request; holder_ref digit swap is a transcription error with matching name and attendance is a possible extra."
+ },
+ "request": "rec-F410-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005927
+}

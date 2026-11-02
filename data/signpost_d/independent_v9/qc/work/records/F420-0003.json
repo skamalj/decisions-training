@@ -1,0 +1,137 @@
+{
+ "id": "F420-0003",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PAG20956",
+   "flight": "EK0388",
+   "contour_max_cm": 163,
+   "tare_kg": 120,
+   "planned_gross_kg": 1260,
+   "straps_required": 6
+  },
+  "manifest_lines": [
+   {
+    "awb": "176-55082941",
+    "pcs": 4,
+    "weight_kg": 480
+   },
+   {
+    "awb": "176-55082952",
+    "pcs": 9,
+    "weight_kg": 360
+   },
+   {
+    "awb": "176-55082963",
+    "pcs": 6,
+    "weight_kg": 300
+   }
+  ],
+  "build_measured": {
+   "scale_gross_kg": 1305,
+   "max_height_cm": 161,
+   "pcs_counted": {
+    "176-55082941": 4,
+    "176-55082952": 9,
+    "176-55082963": 6
+   },
+   "straps_fitted": 5,
+   "net_fitted": true,
+   "uld_serial_scanned": "PAG20956",
+   "built_utc": "2025-05-19T07:25:00Z"
+  },
+  "dg_notoc": null,
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "176-55082914",
+     "pcs_this_flight": 4
+    }
+   ],
+   "contour_waivers": []
+  },
+  "checks_log": {
+   "scale_cal_due": "2025-12-01",
+   "reweigh": {
+    "scale": "CAL-2",
+    "kg": 1322
+   }
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 4.92,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "within_2cm",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "one_strap_short",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "awb_digits_transposed",
+  "minutes_to_cutoff": 345,
+  "prior_rebuilds": 2
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 3.75,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "over_more_than_5cm",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "line_missing",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "awb_digits_transposed",
+  "minutes_to_cutoff": 345,
+  "prior_rebuilds": 2
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "release_conditional",
+   "second": "rebuild",
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "leaning",
+   "target": "physical_build",
+   "second": null,
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 92,
+ "deciding": {
+  "pieces_reconciled": "All three pcs_counted values equal the manifest pcs; the part_shipments entry names 176-55082914, which matches no manifest line, so it is unrelated but a little odd.",
+  "disposition": "A strap is one short (5 of 6), which favours conditional release, but the reweigh deviation near 5% implies Partial rework, which favours rebuild.",
+  "worst_discrepancy": "The reweigh weight and strap shortfall are physical issues; the transposed AWB in part_shipments is only paperwork, and there is no DG.",
+  "weight_deviation": "The reweigh of 1322 supersedes the build scale's 1305; against planned 1260 (120 + 1140) it is 4.92%, just under 5%.",
+  "rework_extent": "A deviation over 3% to 5% means Partial, while the one-strap shortfall alone is Minor."
+ },
+ "request": "rec-F420-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012911
+}

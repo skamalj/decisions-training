@@ -1,0 +1,147 @@
+{
+ "id": "F414-0047",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SW-221",
+   "equip_type": "swing",
+   "crit_fall_height_m": 1.8,
+   "surf_type": "bark",
+   "variance_ref": null
+  },
+  "inspection": {
+   "insp_date": "2024-03-04",
+   "insp_grade": "annual_main",
+   "fall_height_m": 1.8,
+   "surf_type_found": "bark",
+   "surf_depth_mm": 95,
+   "surf_req_table": [
+    {
+     "band": "1.5-2.0",
+     "type": "bark",
+     "min_depth_mm": 100
+    }
+   ],
+   "probe_results": [],
+   "findings": [
+    {
+     "defect_code": "PNT-1",
+     "component_id": "C2",
+     "injury_mech": "none"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W9",
+    "asset_id": "SW-221",
+    "component_id": "C2",
+    "defect_ref": "PNT-1",
+    "status": "open",
+    "closed_date": null
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 1
+  },
+  "history": [
+   {
+    "date": "2023-03-02",
+    "grade": "annual_main",
+    "defect_refs": [
+     "D3"
+    ]
+   },
+   {
+    "date": "2023-04-10",
+    "component_id": "C4",
+    "result": "pass"
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "swing",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -5.0,
+  "worst_defect_class": "no_mechanism",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 1
+ },
+ "factors_sampled": {
+  "equipment_type": "swing",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 91.85,
+  "worst_defect_class": "no_mechanism",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.22,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 1
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 45,
+ "deciding": {
+  "prior_defects_cleared": "Prior ref D3 has no open order and a later pass result exists, but that pass is on C4 and no closing order is shown.",
+  "surfacing_adequate": "95 mm recorded against a 100 mm minimum, a small shortfall.",
+  "asset_disposition": "Only a no-injury-mechanism paint defect with no temporary measure; routine acceptance.",
+  "remedial_progress": "The only work order (W9) is open with no closed_date.",
+  "hazard_severity": "Single finding PNT-1 with injury_mech none; negligible, though it is a logged defect."
+ },
+ "request": "rec-F414-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012787
+}

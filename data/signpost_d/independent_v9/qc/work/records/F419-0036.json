@@ -1,0 +1,148 @@
+{
+ "id": "F419-0036",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "09/27",
+   "date": "2024-05-10",
+   "speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": null
+  },
+  "device": {
+   "cal_expiry": "2025-01-01",
+   "tyre_pressure_kpa": null,
+   "water_depth_mm": 1.0
+  },
+  "runs": [
+   {
+    "dir": "09",
+    "thirds": [
+     0.55,
+     0.54,
+     0.55
+    ],
+    "segments_100m": [
+     0.56,
+     0.41,
+     0.55
+    ]
+   },
+   {
+    "dir": "27",
+    "thirds": [
+     0.53,
+     0.54,
+     0.56
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.4,
+    0.4,
+    0.4
+   ],
+   "mtd_threshold_mm": 0.6
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-12-28",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start_date": "2024-05-20"
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2023-11-02",
+     "lowest_third": 0.54
+    }
+   ]
+  },
+  "review": {
+   "signed_at": null
+  }
+ },
+ "factors": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": true,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 134,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 3,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "low",
+  "cross_check_result": "none",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": true,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 134,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 1,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "restrict_ops",
+   "second": null,
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "leaning",
+   "target": "surface_texture",
+   "second": null,
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 25,
+ "deciding": {
+  "genuine_deficit": "One 100 m segment at 0.41 is below the 0.42 minimum while the lowest third (0.53) is only just above the 0.52 planning level, so the deficit is real but local.",
+  "next_step": "The segment value 0.41 is under thresholds.minimum 0.42, which calls for restriction; the scheduled rubber removal and the incomplete evidence give some doubt.",
+  "deficit_driver": "Thirds are uniformly low, mtd_mm 0.4 is against a 0.6 threshold, and rubber removal was only 134 days ago, which points to texture over rubber.",
+  "friction_severity": "The segment value 0.41 is below minimum 0.42, which settles level 3.",
+  "evidence_completeness": "Tyre pressure, weather and signed_at are null, three elements missing while calibration is valid. The count is firm but could be disputed at the edges."
+ },
+ "request": "rec-F419-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010856
+}

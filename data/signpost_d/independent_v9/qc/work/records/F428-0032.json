@@ -1,0 +1,141 @@
+{
+ "id": "F428-0032",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-1175",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 600,
+   "seal_type": "music_note",
+   "clear_width": 4.5,
+   "clear_width_unit": "m",
+   "consequence_class": "high"
+  },
+  "inspection": {
+   "asset_id": "VL-1175",
+   "insp_date": "2024-06-18",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2024-06-18",
+    "closure_s": 604,
+    "leakage_l_min": 6,
+    "leakage_limit_l_min": 10,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "S2",
+    "component": "seal",
+    "grade": 2,
+    "length_mm": 300,
+    "status": "open",
+    "first_seen": "2024-02-10"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "WO-5521",
+     "component": "seal",
+     "defect_code": "S2",
+     "grade_raised": 2,
+     "status": "complete",
+     "raised": "2024-02-12",
+     "completed": "2024-05-20",
+     "retest_insp_id": "INS-9031",
+     "rated_closure_s": 600
+    }
+   ],
+   "last_service": "2023-11-04"
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2024-07-09",
+    "peak_level_mAOD": 3.1,
+    "sill_level_mAOD": 2.2
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.01,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "passed_current",
+  "repair_progress": "completed_tested",
+  "mitigation_present": false,
+  "mitigation_kind": "none",
+  "days_to_forecast_peak": 21,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.57,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 2,
+  "mismatch_location": "rated_closure_time",
+  "test_status": "passed_current",
+  "repair_progress": "completed_tested",
+  "mitigation_present": false,
+  "mitigation_kind": "approved_outage_permit",
+  "days_to_forecast_peak": 21,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "seal",
+   "second": null,
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 75,
+ "deciding": {
+  "closure_test_valid": "closure_s 604 is just over the rated 600 s, although leakage 6 is under limit 10 and the result is logged as pass; the test is current, after the seal repair completed on 2024-05-20.",
+  "next_step": "The seal work order is complete with a retest linked, the remaining grade 2 defect is minor, and nothing is outstanding, so the record can be filed.",
+  "defect_class": "The only open defect is a grade 2 seal defect (S2).",
+  "section_discrepancies": "Asset ids, rated closure of 600 s, width and defect grade all match across sections. The only differences are formatting, e.g. 4.5 against 4.50.",
+  "flood_risk": "Closure at 604 s against 600 s is right at the rated-time boundary, and the only defect is grade 2; a reviewer could read it as low or as moderate."
+ },
+ "request": "rec-F428-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011581
+}

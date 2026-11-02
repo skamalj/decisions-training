@@ -1,0 +1,116 @@
+{
+ "id": "F423-0043",
+ "family": "F423",
+ "state": {
+  "job": {
+   "stock_spec": "S150",
+   "run_qty": 15000,
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "signed_at": "2024-09-10T07:50"
+  },
+  "colour_readings": {
+   "calibrated_on": "2024-05-24",
+   "patches": [
+    {
+     "ink": "K",
+     "delta_e": 2.9
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.01,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "S115",
+   "first_production_at": "2024-09-10T07:58",
+   "sheets_production": 1921
+  }
+ },
+ "factors": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 1921,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 4.23,
+  "register_offset_mm": 0.01,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 109,
+  "customer_tier": "standard",
+  "prior_stoppages": 0
+ },
+ "factors_sampled": {
+  "colour_deviation": "none_over",
+  "concession_on_file": false,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 1921,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 4.23,
+  "register_offset_mm": 0.01,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 109,
+  "customer_tier": "standard",
+  "prior_stoppages": 0
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_for_signoff",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (wrong_stock_loaded = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 32,
+ "deciding": {
+  "colour_in_tolerance": "The single patch reads 2.9 against spec_max_de 3.0, so it is under the limit. The spectro was calibrated 109 days before the check, so the reading is somewhat contestable.",
+  "run_before_signoff": "signed_at 07:50 is before first_production_at 07:58, so the signature precedes production. The record does not show whether the sign-off covered the stock actually loaded.",
+  "next_step": "stock_loaded S115 differs from stock_spec S150, and 1921 production sheets are logged. That is about 12.8% of run_qty 15000, so the case should go to the production manager. The plan's hold_for_signoff is not supported, because a signature is on file.",
+  "staff_effort": "Escalating is a short referral, so under an hour is the lead answer. Reprint planning and customer contact could extend it to a few hours.",
+  "scrap_exposure": "1921 production sheets were printed on the wrong stock, about 12.8% of run_qty 15000. That is at or above the 10% threshold."
+ },
+ "request": "rec-F423-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011407
+}

@@ -1,0 +1,37 @@
+{
+ "persona": "generalist",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "rx_matches": {
+   "true": 0.03,
+   "false": 0.97
+  },
+  "next_step": {
+   "discharge_now": 0.03,
+   "request_item": 0.1,
+   "conditional_discharge": 0.37,
+   "escalate_senior": 0.5
+  },
+  "destination": {
+   "home_independent": 0.08,
+   "home_with_package": 0.8,
+   "intermediate_care": 0.05,
+   "care_home": 0.02,
+   "remain_inpatient": 0.05
+  },
+  "outstanding_tasks": {
+   "0": 0.05,
+   "1": 0.8,
+   "2": 0.12,
+   "3": 0.03
+  },
+  "discharge_delay": {
+   "0": 0.55,
+   "1": 0.33,
+   "2": 0.07,
+   "3": 0.05
+  }
+ },
+ "cost": 0.000368
+}

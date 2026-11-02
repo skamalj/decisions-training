@@ -1,0 +1,127 @@
+{
+ "id": "F418-0020",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "plat": 6,
+   "date": "2025-07-14",
+   "svc_from": "06:00",
+   "min_staff": 2
+  },
+  "attendance": [
+   {
+    "staff_id": "S8",
+    "safety_comp_exp": "2026-02-01"
+   },
+   {
+    "staff_id": "S9",
+    "safety_comp_exp": "2026-02-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "05:48"
+   },
+   {
+    "type": "gap_end",
+    "time": "05:57"
+   },
+   {
+    "type": "cover_start",
+    "time": "05:48",
+    "staff_id": "S3"
+   },
+   {
+    "type": "cover_end",
+    "time": "05:57"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-55",
+   "disp_platform": 2,
+   "prior_shortfalls_30d": 6
+  },
+  "remarks": [
+   "No gap, nobody short."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 9,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 6,
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 9,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 6,
+  "boundary_case": true
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_log",
+   "second": "request_records",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "cover_arranged",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 59,
+ "deciding": {
+  "headcount_verified": "S8 and S9 signed on in date, but cover person S3 has no attendance row.",
+  "next_step": "Gap 05:48-05:57 is just before 06:00 service, but remarks contradict events and D-55 is for plat 2; accept vs request records.",
+  "coverage_outcome": "Cover events span the gap exactly.",
+  "reversal_time": "Brief gap near service start with a contradicting note; levels 2 vs 3 both arguable.",
+  "exposure_severity": "Gap ends 3 minutes before service and dispensation is for another platform; level 2 vs 1."
+ },
+ "request": "rec-F418-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005159
+}

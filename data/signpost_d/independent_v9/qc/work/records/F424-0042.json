@@ -1,0 +1,145 @@
+{
+ "id": "F424-0042",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B-2305",
+   "recipe": "Pils",
+   "brew_date": "2024-04-08",
+   "vessel_id": "FV1",
+   "volume_hl": 25,
+   "yeast_strain": "W-34/70",
+   "yeast_gen": 2,
+   "og_target": 1.048,
+   "fg_target_min": 1.008,
+   "fg_target_max": 1.012,
+   "strain_max_temp_c": 14
+  },
+  "readings": [
+   {
+    "ts": "2024-04-08",
+    "gravity_plato": 11.9,
+    "temp_c": 10
+   },
+   {
+    "ts": "2024-04-16",
+    "gravity_sg": 1.011,
+    "temp_c": 12
+   },
+   {
+    "ts": "2024-04-18",
+    "gravity_sg": 1.01,
+    "temp_c": 12.5
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-04-08",
+    "type": "pitch",
+    "vessel_id": "FV1",
+    "note": "Pitched W-34/70 gen 2."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B-2305",
+   "abv_pct": 5.1,
+   "micro_plate": {
+    "result": "negative",
+    "plated_on": "2024-04-18"
+   },
+   "diacetyl_mgl": 0.03,
+   "retest": []
+  },
+  "release_request": {
+   "vessel_id": "FV2",
+   "volume_hl": 25,
+   "format": "can",
+   "note": "Routine packaging slot."
+  }
+ },
+ "factors": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.03,
+  "discrepancy_count": 0,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": false,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.03,
+  "discrepancy_count": 2,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 108,
+ "deciding": {
+  "terminal_gravity": "Only two SG readings, 1.011 then 1.010, both in band; stability is thinly confirmed.",
+  "contamination_supported": "Negative plate and no sensory note; no signal at all.",
+  "batch_disposition": "Results complete and within spec; the vessel mismatch in the release request is still unresolved.",
+  "deviation_severity": "Peak 12.5 C is below the 14 C limit and diacetyl is low; nothing out of spec.",
+  "record_discrepancies": "The Plato 11.9 matches OG 1.048 (decoy). The only mismatch is the FV1 vs FV2 vessel in the release request."
+ },
+ "request": "rec-F424-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006087
+}

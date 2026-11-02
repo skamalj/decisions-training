@@ -1,0 +1,149 @@
+{
+ "id": "F409-0048",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "D. Whitlock",
+   "submitted_on": "2024-03-18",
+   "app_type": "change_of_vehicle",
+   "message": "Car is a company lease, letter attached."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-01-25",
+     "address_line": "Flat 4, 9 Orchard Rd",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2022-07-09",
+     "address_line": "Flat 4, 9 Orchard Rd",
+     "verified": null
+    }
+   ],
+   "note": "Bill is for a different flat in the same building."
+  },
+  "vehicle": {
+   "plate": "MK70 RTY",
+   "keeper_name": "Harrow Fleet Ltd",
+   "supporting_letters": [
+    {
+     "type": "lease_agreement",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "A4",
+   "address": "Flat 5, 9 Orchard Rd",
+   "plate_entered": "MK70 RTY",
+   "duration_months": 12
+  },
+  "account_history": {
+   "live_permits": [
+    "P455",
+    "P456"
+   ],
+   "max_per_household": 2,
+   "past_permits": [
+    {
+     "permit_no": "P402",
+     "status": "seized",
+     "seize_reason": "displayed on second vehicle, alteration suspected"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    }
+   ],
+   "exceptions": []
+  }
+ },
+ "factors": {
+  "application_type": "change_of_vehicle",
+  "address_match_level": "different_flat",
+  "proof_age_days": 53,
+  "docs_missing": "1 to 2",
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 3,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "change_of_vehicle",
+  "address_match_level": "different_flat",
+  "proof_age_days": 53,
+  "docs_missing": 3,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 0,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "refuse",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "household_cap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 139,
+ "deciding": {
+  "residency_shown": "The verified bill is for Flat 4 but the request is for Flat 5, so no verified document matches the address.",
+  "disposition": "Two live permits equal max_per_household 2 with no exception, so refusal is plain.",
+  "main_issue": "Live permits 2 of 2 and exceptions empty; the cap takes precedence over residence_proof and keeper.",
+  "misuse_strength": "P402 seized with 'alteration suspected', which is not a confirmed alteration; three open PCNs give one more indicator, so 2 or 3 is arguable.",
+  "document_gaps": "The id_card is unverified (null); the council tax bill is verified but for a different flat, which may count as a second gap."
+ },
+ "request": "rec-F409-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009577
+}

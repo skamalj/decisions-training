@@ -1,0 +1,147 @@
+{
+ "id": "F413-0027",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "warehouse",
+   "zones": [
+    {
+     "z": "Z2",
+     "toxic_bait_permitted": false,
+     "banned_products": [
+      "BRO5"
+     ]
+    }
+   ]
+  },
+  "visit": {
+   "type": "call-out",
+   "tech_licence_expiry": "2026-01-31",
+   "start": "2025-06-03T10:00"
+  },
+  "treatments": [
+   {
+    "product_code": "BRO5",
+    "zone": "Z2",
+    "area_m2": 40,
+    "qty_applied": null,
+    "unit": "g"
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "activity": true
+   },
+   {
+    "id": "S2",
+    "activity": true
+   },
+   {
+    "id": "S3",
+    "activity": true
+   }
+  ],
+  "van_stock": [
+   {
+    "product_code": "BRO5",
+    "movement": "withdrawal",
+    "qty": 300,
+    "unit": "g"
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 1,
+   "actions": [
+    {
+     "status": "booked",
+     "date": "2025-06-01"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "applied_qty_null",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "followup_before_trigger_visit",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 67.65,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "booked",
+  "site_risk_tier": "warehouse"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "applied_qty_null",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "followup_before_trigger_visit",
+  "activity_trend": "increased_by_two_plus",
+  "previous_visit_available": true,
+  "dose_overage_pct": 67.65,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "booked",
+  "site_risk_tier": "warehouse"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "book_revisit",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (restricted_product_used = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 62,
+ "deciding": {
+  "usage_reconciled": "qty_applied is null against a 300 g withdrawal; reconciliation cannot be shown but could be a logging omission.",
+  "activity_increased": "Three active stations versus 1 previously, though the follow-up date oddity adds slight doubt.",
+  "next_step": "Corrective action is already booked, so the revisit is arranged and the log needs conditions stated to the technician.",
+  "breach_severity": "BRO5 is listed as banned in Z2 where toxic bait is not permitted and was applied there.",
+  "parties_needed": "Booked follow-up means just the technician and the technical office need to act."
+ },
+ "request": "rec-F413-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006054
+}

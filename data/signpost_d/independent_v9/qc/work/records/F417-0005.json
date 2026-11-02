@@ -1,0 +1,132 @@
+{
+ "id": "F417-0005",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "SV-Orla",
+   "loa_m": 11.5,
+   "draught_m": 2.5,
+   "draught_src": "survey_certificate"
+  },
+  "berth": {
+   "id": "P4",
+   "max_loa_m": 11.5,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 2.5,
+   "waiver_ref": "W-142",
+   "waiver_expiry": "2025-10-31"
+  },
+  "booking": {
+   "arrival": "2025-09-05",
+   "departure": "2025-09-09",
+   "next_on_berth": null
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 11.9,
+    "draught_m": 2.5
+   },
+   "insurance_expiry": "2026-02-01",
+   "inspection_date": null,
+   "inspection_booked": true
+  },
+  "account": {
+   "dues_outstanding_gbp": 1289,
+   "plan_id": "PP-57",
+   "plan_status": "approved"
+  },
+  "history": [
+   {
+    "date": "2022-09-01",
+    "berth": "P4",
+    "incidents": 1
+   },
+   {
+    "date": "2023-09-04",
+    "berth": "P4",
+    "incidents": 1
+   },
+   {
+    "date": "2024-09-02",
+    "berth": "P4",
+    "incidents": 1
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 3.48,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 0.0,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 1289,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 3,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 3.35,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 1.73,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "scheduled",
+  "arrears_amount": 1289,
+  "payment_plan_approved": true,
+  "dimension_waiver": true,
+  "date_overlap": "none",
+  "trusted_regular": true,
+  "prior_incidents": 3,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "allocate_with_conditions",
+   "second": "refer_harbourmaster",
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 78,
+ "deciding": {
+  "length_fits": "Survey loa 11.9 exceeds max 11.5 and is within the fender-allowance total of 12.0 only; a waiver is on file, so the fit is arguable.",
+  "next_step": "Zero water under the keel at low water and 3 prior incidents make allocating with conditions versus harbour master referral finely balanced.",
+  "primary_issue": "Insurance valid, inspection booked, arrears under an approved plan, no overlap, waiver on file; no single issue stands out.",
+  "ukc_band": "Depth 2.5 equals survey draught 2.5, so grounding (level 0) versus a tight rounding to level 1 is arguable.",
+  "unresolved_count": "Loa 11.5 against survey 11.9 is a minor 3.5% difference covered by the waiver; all other sections agree."
+ },
+ "request": "rec-F417-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011746
+}

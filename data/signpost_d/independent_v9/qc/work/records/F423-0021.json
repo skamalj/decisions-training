@@ -1,0 +1,174 @@
+{
+ "id": "F423-0021",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-48213",
+   "product": "brochure",
+   "stock_spec": "GL150",
+   "run_qty": 2050,
+   "overs_pct": 1.89,
+   "due_date": "2024-05-20",
+   "customer_tier": "standard",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "proof_id": "CP-7731",
+   "ok_sheet_no": 14,
+   "signed_at": "2024-05-14T08:40",
+   "customer_present": false,
+   "concession": {
+    "accepted_max_de": 4.5
+   }
+  },
+  "colour_readings": {
+   "instrument": "SP-2",
+   "calibrated_on": "2024-02-02",
+   "measured_on": "2024-05-14",
+   "patches": [
+    {
+     "ink": "C",
+     "target_lab": [
+      55,
+      -37,
+      -50
+     ],
+     "delta_e": 2.1
+    },
+    {
+     "ink": "M",
+     "target_lab": [
+      48,
+      74,
+      -3
+     ],
+     "delta_e": 3.8
+    },
+    {
+     "ink": "Y",
+     "target_lab": [
+      89,
+      -5,
+      93
+     ],
+     "delta_e": 1.9
+    },
+    {
+     "ink": "K",
+     "target_lab": [
+      16,
+      0,
+      0
+     ],
+     "delta_e": 2.4
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "pair": "K-C",
+     "offset_mm": 0.37,
+     "in_image": true
+    },
+    {
+     "pair": "K-M",
+     "offset_mm": 0.1,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "press": "P3",
+   "stock_loaded": "GL150",
+   "first_production_at": "2024-05-14T08:40",
+   "sheets_production": 205,
+   "sheets_makeready": 120,
+   "stoppages": [
+    {
+     "at": "2024-05-14T09:30",
+     "min": 12
+    }
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_at_first_production_time",
+  "sheets_before_check": 205,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.89,
+  "register_offset_mm": 0.37,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 102,
+  "customer_tier": "standard",
+  "prior_stoppages": 1
+ },
+ "factors_sampled": {
+  "colour_deviation": "single_patch_over",
+  "concession_on_file": true,
+  "readings_completeness": "some_patches_null",
+  "signoff_state": "unsigned",
+  "sheets_before_check": 205,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 1.89,
+  "register_offset_mm": 0.37,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 102,
+  "customer_tier": "standard",
+  "prior_stoppages": 1
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "adjust_and_recheck",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "scrap_exposure": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 119,
+ "deciding": {
+  "colour_in_tolerance": "Magenta reads 3.8 against spec 3.0 but the concession accepts up to 4.5, so all patches are within the applicable limit. The 102-day-old calibration leaves some doubt.",
+  "run_before_signoff": "signed_at and first_production_at are both 08:40, so signature neither clearly precedes nor follows production. Balanced, with a slight lean to no sheets logged ahead of signature.",
+  "next_step": "The K-C offset of 0.37 mm is in image (in_image true), above 0.15 mm. Stock is correct and suspect sheets are not wrong-stock, so register must be corrected and re-checked.",
+  "staff_effort": "205 production sheets printed with in-image misregister of 0.37 mm. This is about 10% of the 2050 run, so reprint and rework would take well over five working days.",
+  "scrap_exposure": "205 production sheets are suspect because of in-image misregister, and 205/2050 is exactly 10% of run, well over the 1.89% overs. It sits on the boundary between levels 2 and 3."
+ },
+ "request": "rec-F423-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010639
+}

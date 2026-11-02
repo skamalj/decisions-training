@@ -1,0 +1,123 @@
+{
+ "id": "F417-0003",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "FV-Kestrel",
+   "loa_m": 8.9,
+   "draught_m": 2.0,
+   "draught_src": "survey_certificate"
+  },
+  "berth": {
+   "id": "N3",
+   "max_loa_m": 8.5,
+   "fender_allow_m": 0.4,
+   "depth_lat_m": 2.9
+  },
+  "booking": {
+   "arrival": "2025-06-02",
+   "departure": "2025-06-06",
+   "next_on_berth": {
+    "arrival": "2025-06-06"
+   }
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 9.0,
+    "draught_m": 2.0
+   },
+   "insurance_expiry": "2026-02-14",
+   "inspection_date": "2025-06-20"
+  },
+  "account": {
+   "dues_outstanding_gbp": 0,
+   "deposit_paid": true
+  },
+  "history": [
+   {
+    "date": "2024-05-10",
+    "berth": "N3",
+    "incidents": 2
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 1.12,
+  "berth_length_fit": "exceeds_limit",
+  "ukc_margin_m": 0.9,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 0,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": false,
+  "prior_incidents": 2,
+  "boundary_placement": true
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 1.05,
+  "berth_length_fit": "exceeds_limit",
+  "ukc_margin_m": 0.91,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 2630,
+  "payment_plan_approved": false,
+  "dimension_waiver": false,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": false,
+  "prior_incidents": 2,
+  "boundary_placement": true
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "allocate_with_conditions",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "clear",
+   "target": "no_issue",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "ukc_band": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 49,
+ "deciding": {
+  "length_fits": "Survey loa 9.0 is 0.1 m over max 8.5 plus fender 0.4 (8.9), a marginal exceedance.",
+  "next_step": "Same-day turnover on 2025-06-06 and an inspection dated after departure point to allocating with conditions such as a firm departure.",
+  "primary_issue": "Dues are zero with deposit paid, insurance is valid, and declared and survey lengths agree within about 1%; no blocking issue.",
+  "ukc_band": "Depth 2.9 minus survey draught 2.0 gives 0.9 m, which is level 2.",
+  "unresolved_count": "The marginal length excess and the inspection date after departure could count as one or two discrepancies; the same-day turnover is not an overlap."
+ },
+ "request": "rec-F417-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011746
+}

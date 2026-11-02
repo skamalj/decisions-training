@@ -1,0 +1,136 @@
+{
+ "id": "F428-0027",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "RG-2207",
+   "gate_type": "radial",
+   "rated_closure_s": 125,
+   "clear_width": 6.0,
+   "clear_width_unit": "m"
+  },
+  "inspection": {
+   "asset_id": "RG-2207",
+   "insp_date": "2025-05-06",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-05-06",
+    "closure_s": 160,
+    "leakage_l_min": 6,
+    "leakage_limit_l_min": 10,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D4",
+    "component": "hoist",
+    "grade": 3,
+    "status": "open"
+   },
+   {
+    "code": "D5",
+    "component": "seal",
+    "grade": 2,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W9",
+     "component": "hoist",
+     "defect_code": "D4",
+     "grade_raised": 3,
+     "status": "scheduled",
+     "rated_closure_s": 120,
+     "clear_width_mm": 5900
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "out_of_service",
+    "permit_expiry": "2025-05-06"
+   },
+   "flood_alert_active": false
+  }
+ },
+ "factors": {
+  "gate_type": "radial",
+  "closure_time_ratio": 1.28,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 2,
+  "mismatch_location": "rated_closure_time and clear_width (work order vs register)",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 51,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "radial",
+  "closure_time_ratio": 1.28,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 1,
+  "mismatch_location": "rated_closure_time",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 51,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_engineer",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "drive_actuation",
+   "second": null,
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "closure_test_valid": "Result says pass, but closure_s 160 exceeds rated 125 s (about 1.28x), so the test is outside limits.",
+  "next_step": "Closing late, grade 3 hoist defect with only a scheduled order, and an outage permit expiring on the inspection date call for the duty engineer.",
+  "defect_class": "Open grade 3 hoist outranks the open grade 2 seal defect; the seal item leaves some doubt.",
+  "section_discrepancies": "Work order rated_closure_s 120 vs register 125 is a clear mismatch; work order width 5900 mm vs register 6.0 m is a borderline second.",
+  "flood_risk": "Closes late (160 vs 125 s) giving level 2. The out-of-service permit ending the same day as the inspection is right at the edge of exceeding the window, which would give level 3."
+ },
+ "request": "rec-F428-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011002
+}

@@ -1,0 +1,135 @@
+{
+ "id": "F429-0035",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 180,
+   "ramp_max_m_per_10min": 0.35
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 95.0,
+    "action_m": 95.6
+   },
+   "readings": [
+    {
+     "level_m": 95.3,
+     "datum": "site"
+    },
+    {
+     "level_m": 95.5,
+     "datum": "gauge_zero"
+    }
+   ],
+   "gauge_zero_offset_m": 0.12
+  },
+  "gate_ops": [
+   {
+    "gate": "G3",
+    "t": "2024-09-04T10:00",
+    "open_after_m": 0.9
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G3",
+     "opening_m": 0.91
+    }
+   ],
+   "calc_peak_m3s": 112,
+   "gauged_peak_m3s": null,
+   "tailwater_m": [
+    36.0,
+    36.5
+   ]
+  },
+  "instruments": {
+   "piezometers": [
+    {
+     "kpa": 170,
+     "alert_kpa": 150,
+     "t": "2024-09-04T10:20"
+    }
+   ],
+   "post_op_inspection": {
+    "status": "completed",
+    "completed_at": "2024-09-04T14:00"
+   }
+  }
+ },
+ "factors": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 21.87,
+  "datum_mismatch": true,
+  "missing_section": "notifications_missing",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 21.87,
+  "datum_mismatch": true,
+  "missing_section": "notifications_missing",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_log",
+   "second": null,
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 59,
+ "deciding": {
+  "within_licence": "Calculated 112 is under 180 but gauged_peak is null, so measured discharge is unavailable.",
+  "gates_reconciled": "G3 open_after 0.9 vs calc 0.91, a 0.01 m difference.",
+  "next_step": "Inspection is complete and the gate data agree, though the gauged peak and notifications are missing.",
+  "trigger_tier": "Readings of 95.3 and 95.5 sit between the alert and action triggers, but 95.5 is on the gauge_zero datum and with the 0.12 offset it would be 95.62, above action.",
+  "parties_needed": "The operator could supply the missing gauged figure alone, but notification records might need another team."
+ },
+ "request": "rec-F429-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005425
+}

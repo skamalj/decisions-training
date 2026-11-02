@@ -1,0 +1,160 @@
+{
+ "id": "F414-0027",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SR-88",
+   "crit_fall_height_m": 0.6,
+   "surf_type": "epdm",
+   "variance_ref": null
+  },
+  "inspection": {
+   "insp_date": "2024-06-10",
+   "insp_grade": "annual_main",
+   "fall_height_m": 0.6,
+   "surf_type_found": "epdm",
+   "surf_depth_mm": 45,
+   "surf_req_table": [
+    {
+     "h_max": 0.6,
+     "type": "epdm",
+     "min_depth_mm": 30
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "head_neck",
+     "opening_id": "O2",
+     "result": null
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "SP07",
+     "component_id": "C1",
+     "injury_mech": "serious"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "SR-88",
+    "component_id": "C1",
+    "defect_ref": "D1",
+    "status": "closed",
+    "closed_date": "2024-03-01"
+   },
+   {
+    "wo_id": "W2",
+    "asset_id": "SR-88",
+    "component_id": "C2",
+    "defect_ref": "D2",
+    "status": "closed",
+    "closed_date": "2024-06-12"
+   },
+   {
+    "wo_id": "W3",
+    "asset_id": "SR-88",
+    "component_id": "C3",
+    "defect_ref": "D3",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 2
+  },
+  "history": [
+   {
+    "date": "2023-12-04",
+    "grade": "annual_main",
+    "defect_refs": [
+     "D1",
+     "D2",
+     "D3"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 15.0,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.5,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": true,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 2
+ },
+ "factors_sampled": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -39.35,
+  "worst_defect_class": "no_mechanism",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 3,
+  "work_orders_closed_fraction": 0.14,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": true,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 2
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "remedial_progress": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 32,
+ "deciding": {
+  "prior_defects_cleared": "Last inspection raised D1, D2 and D3, and the D3 work order is still open. That settles it.",
+  "surfacing_adequate": "Depth 45 mm against a 30 mm requirement for 0.6 m epdm, with matching register and found types.",
+  "asset_disposition": "The head_neck probe result on opening O2 is null, so one specific measurement is missing. Deferring the decision until it is recorded is the likely answer.",
+  "remedial_progress": "Two of three work orders are closed, but W2 closed on 2024-06-12, after the visit date. That gives either 1 of 3 or 2 of 3 closed.",
+  "hazard_severity": "The finding SP07 has injury_mech serious, which is level 3. The null head_neck probe leaves possible entrapment, level 4, unresolved."
+ },
+ "request": "rec-F414-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013561
+}

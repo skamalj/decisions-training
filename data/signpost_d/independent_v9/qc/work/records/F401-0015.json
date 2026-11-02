@@ -1,0 +1,161 @@
+{
+ "id": "F401-0015",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "T508",
+   "planned_discharge_at": "2025-07-01T11:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "recorded_at": "2025-06-30T20:00",
+     "spo2": 90,
+     "rr": 17,
+     "hr": 76
+    }
+   ],
+   "targets": {
+    "spo2": "88-92"
+   },
+   "investigations": [
+    {
+     "test": "B12",
+     "status": "awaited",
+     "required_before_discharge": false,
+     "follow_up_owner": "GP"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "T508",
+   "reconciled": [
+    {
+     "drug": "salbutamol",
+     "dose": 100,
+     "unit": "mcg",
+     "freq": "prn"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "salbutamol",
+     "dose": 100,
+     "unit": "mcg",
+     "freq": "prn"
+    }
+   ],
+   "pharmacy_ready_at": "2025-07-04T08:00"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": null,
+    "transfer_assist_count": 0,
+    "adl_score": 20
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "done",
+     "completed_at": "2025-07-01T09:00",
+     "signed_by": "RN"
+    },
+    {
+     "t": "GP letter",
+     "status": "done",
+     "completed_at": "2025-07-01T09:20",
+     "signed_by": null
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-07-03",
+    "pickup_time": "17:00"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 1,
+  "false_completion": true,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "pharmacy_ready_just_under_three_days",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 2,
+  "false_completion": true,
+  "care_need": "permanent_care",
+  "care_arrangement_status": "confirmed_on_time",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "conditional_discharge",
+   "second": "discharge_now",
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "home_independent",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 64,
+ "deciding": {
+  "rx_matches": "Salbutamol 100 mcg prn is identical on the reconciled list and discharge_rx.",
+  "next_step": "The GP letter is marked done with null signed_by, a single small gap that could be completed first. Obs are within the documented target, there is no capacity concern or blocking result, and IDs match, so discharge as planned is also defensible.",
+  "destination": "The patient is independent (ADL 20, no aid, no transfer help), no care arrangement exists, and none is needed.",
+  "outstanding_tasks": "The TTO is done and signed, and only the GP letter is outstanding because of its null signed_by.",
+  "discharge_delay": "Planned 2025-07-01T11:00. Transport is booked for 07-03 at 17:00, and pharmacy_ready_at is 07-04T08:00, about 2 days 21 hours later, which sits near the boundary between two and three days."
+ },
+ "request": "rec-F401-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013802
+}

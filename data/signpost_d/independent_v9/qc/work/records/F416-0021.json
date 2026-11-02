@@ -1,0 +1,207 @@
+{
+ "id": "F416-0021",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "N4",
+   "date": "2025-03-08",
+   "signoff": "g1"
+  },
+  "roster": [
+   {
+    "id": "g1",
+    "hrs": "07-17",
+    "qual": "2026-01-01"
+   },
+   {
+    "id": "g2",
+    "hrs": "07-17",
+    "qual": "2026-01-01"
+   },
+   {
+    "id": "g3",
+    "hrs": "07-17",
+    "qual": "2025-02-01"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "11:00",
+    "wave_m": 2.4,
+    "wind_kt": 28,
+    "water_c": 14,
+    "rip_risk": "high",
+    "flag": "red",
+    "bathing_zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "id": "r1",
+    "type": "water_rescue",
+    "resp": [
+     "g1",
+     "g2"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "r2",
+    "type": "water_rescue",
+    "resp": [
+     "g1",
+     "g2"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "r3",
+    "type": "water_rescue",
+    "resp": [
+     "g1",
+     "g2",
+     "g3"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "r4",
+    "type": "water_rescue",
+    "resp": [
+     "g1",
+     "g2"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "r5",
+    "type": "water_rescue",
+    "resp": [
+     "g1",
+     "g2"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "f1",
+    "type": "first_aid",
+    "out": "released"
+   },
+   {
+    "id": "f2",
+    "type": "first_aid",
+    "out": "released"
+   },
+   {
+    "id": "m1",
+    "type": "medical",
+    "resp": [
+     "g3"
+    ],
+    "out": "conveyed",
+    "aed_used": false,
+    "ambulance_ref": "AMB-221"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jetski",
+    "last_check": "2025-03-07",
+    "out_from": "11:00",
+    "out_to": "11:40",
+    "sub": "JS-2"
+   }
+  ],
+  "handover": {
+   "rescues": 5,
+   "first_aid": 2,
+   "kit_defects": 1,
+   "advisories": 6,
+   "beach_users_est": 4200,
+   "check_sheet_ref": "CS-0308"
+  }
+ },
+ "factors": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "responder_qual_expired",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "conveyed",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "factors_sampled": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "responder_qual_expired",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "referred",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "corrective_order",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 88,
+ "deciding": {
+  "two_guard_cover": "Every rescue has g1 and g2 in date; g3 (qual 2025-02-01, expired) is only an extra responder on r3, so cover holds but the expired guard is on the job.",
+  "totals_reconcile": "Rescues 5, first_aid 2 and kit_defects 1 match itemised entries, but the conveyed medical incident m1 could be counted as first aid, which would be off by one.",
+  "next_step": "An expired-qualification guard worked a rescue and was rostered; the conveyed case is a medical incident, not a rescue lacking cover, so the fix is an order to the station rather than escalation.",
+  "outcome_severity": "m1 outcome conveyed with ambulance_ref AMB-221 and aed_used false; nothing critical.",
+  "kit_outage": "The only outage (11:00-11:40) has substitute JS-2 logged, so no unsubstituted outage."
+ },
+ "request": "rec-F416-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01458
+}

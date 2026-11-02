@@ -1,0 +1,161 @@
+{
+ "id": "F432-0018",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E08",
+   "sp": "WLBY",
+   "risk_cat": 3,
+   "roster": [
+    "c1",
+    "c2",
+    "c3",
+    "c4"
+   ],
+   "temp_range_c": [
+    8,
+    30
+   ],
+   "maint_window": "07:00-09:00",
+   "active_vet_case": {
+    "id": "V22",
+    "type": "dental"
+   }
+  },
+  "shift": {
+   "start": "08:00",
+   "end": "15:00",
+   "opening_count": 4,
+   "closing_count": 4
+  },
+  "movements": [],
+  "feeding": {
+   "items": [
+    {
+     "sheet_g": 1500,
+     "offered_g": 1500,
+     "leftover_g": 600,
+     "unit": "g"
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched": "09:00",
+    "logged": true,
+    "entry_time": "09:02",
+    "temp_c": 16,
+    "beh": [
+     "LAME"
+    ]
+   },
+   {
+    "sched": "11:00",
+    "logged": false,
+    "cctv_reviewed": true,
+    "reviewer_id": "K4"
+   },
+   {
+    "sched": "13:00",
+    "logged": true,
+    "entry_time": "13:01",
+    "temp_c": 22,
+    "beh": [
+     "STER"
+    ]
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "D1",
+     "time": "14:40"
+    }
+   ],
+   "ticket": null
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.6,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 1,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": true,
+  "field_mismatch": "none",
+  "behaviour_codes": 2,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.91,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 2,
+  "cctv_cover": true,
+  "temp_excursion": "none",
+  "heater_maintenance_window": true,
+  "field_mismatch": "none",
+  "behaviour_codes": 2,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 68,
+ "deciding": {
+  "count_reconciles": "Opening 4 equals closing 4 and movements is an empty list.",
+  "secure_at_close": "Door D1 lock check at 14:40 follows the last round at 13:01 and no fault ticket exists; the open dental vet case is the only small doubt.",
+  "next_step": "Counts reconcile and the lock check is after the last round; the open vet case and a borderline intake leave slight doubt about filing without comment.",
+  "intake_shortfall": "Offered 1500 g less 600 g leftover is 900 g, exactly 60% of sheet, on the boundary between minor and marked.",
+  "missed_rounds": "The 11:00 round is logged false but has cctv_reviewed true with a reviewer, so it counts as missing or covered depending on the reader."
+ },
+ "request": "rec-F432-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011223
+}

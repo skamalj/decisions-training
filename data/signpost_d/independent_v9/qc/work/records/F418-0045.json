@@ -1,0 +1,153 @@
+{
+ "id": "F418-0045",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "plat": 5,
+   "date": "2025-09-01",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S3"
+   },
+   {
+    "post": "B",
+    "staff_id": "S6"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S6",
+    "sign_on": "05:55",
+    "safety_comp_exp": "2026-01-20",
+    "dispatch_comp_exp": "2026-01-20"
+   },
+   {
+    "staff_id": "S8",
+    "sign_on": "06:40",
+    "safety_comp_exp": "2026-03-03",
+    "dispatch_comp_exp": "2025-09-02"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "12:00"
+   },
+   {
+    "type": "cover_start",
+    "time": "12:00",
+    "staff_id": "S8"
+   },
+   {
+    "type": "cover_end",
+    "time": "12:20",
+    "staff_id": "S8"
+   },
+   {
+    "type": "dispatch",
+    "time": "12:25",
+    "staff_id": "S8"
+   },
+   {
+    "type": "gap_end",
+    "time": "12:36"
+   }
+  ],
+  "controls": {
+   "disp_ref": null,
+   "approved_by": null,
+   "prior_shortfalls_30d": 4
+  },
+  "remarks": [
+   "Single-staffing dispensation requested, ref to follow."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 36,
+  "shortfall_timing": "midday_in_service",
+  "dispensation_present": false,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 36,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "unapproved",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": true,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_records",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "partial_cover",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 60,
+ "deciding": {
+  "headcount_verified": "S6 and S8 both have sign-on rows with in-date safety competence; S8's dispatch expiry of 2025-09-02 is still valid.",
+  "next_step": "disp_ref and approved_by are null while the remark says a reference is to follow; the missing dispensation reference must be requested.",
+  "coverage_outcome": "Cover 12:00-12:20 fills only part of the gap 12:00-12:36, leaving 16 minutes open.",
+  "reversal_time": "Unresolved paperwork (missing dispensation ref and roster mismatch) can be fixed within days once records arrive.",
+  "exposure_severity": "Dispatch at 12:25 inside the open gap by S8, whose dispatch competence expires the next day (valid), with no approved dispensation; level 2 vs 3 is balanced."
+ },
+ "request": "rec-F418-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009965
+}

@@ -1,0 +1,151 @@
+{
+ "id": "F420-0001",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PMC41873",
+   "flight": "QR8102",
+   "pos": "21L",
+   "contour_max_cm": 163,
+   "tare_kg": 110,
+   "planned_gross_kg": 1400,
+   "straps_required": 6
+  },
+  "manifest_lines": [
+   {
+    "awb": "157-40213318",
+    "pcs": 12,
+    "weight_kg": 540,
+    "un_no": "UN1993",
+    "dg_class": "3"
+   },
+   {
+    "awb": "157-40213329",
+    "pcs": 6,
+    "weight_kg": 400,
+    "un_no": "UN1760",
+    "dg_class": "8"
+   },
+   {
+    "awb": "157-40213330",
+    "pcs": 8,
+    "weight_kg": 350
+   }
+  ],
+  "build_measured": {
+   "scale_gross_kg": 1471,
+   "max_height_cm": 158,
+   "pcs_counted": {
+    "157-40213318": 9,
+    "157-40213329": 6,
+    "157-40213330": 8
+   },
+   "straps_fitted": 6,
+   "net_fitted": true,
+   "uld_serial_scanned": "PMC41873",
+   "built_utc": "2025-03-11T09:40:00Z"
+  },
+  "dg_notoc": [
+   {
+    "awb": "157-40213318",
+    "pcs": 9,
+    "position": "21L"
+   },
+   {
+    "awb": "157-40213329",
+    "pcs": 6,
+    "position": "21L"
+   }
+  ],
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "157-40213318",
+     "pcs_this_flight": 9
+    }
+   ]
+  },
+  "checks_log": {
+   "scale_cal_due": "2025-03-01",
+   "reweigh": null
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 5.1,
+  "piece_count_gap": 3,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "class 3 and class 8 on same ULD, borderline pair",
+  "notoc_match": "match",
+  "securing_state": "complete",
+  "scale_cal_overdue": true,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 235,
+  "prior_rebuilds": 2
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 6.49,
+  "piece_count_gap": 3,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "over_up_to_5cm",
+  "contour_waiver": true,
+  "dg_state": "dg_segregation_conflict",
+  "notoc_match": "not_applicable",
+  "securing_state": "two_or_more_straps_short",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 235,
+  "prior_rebuilds": 2
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "hold",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "worst_discrepancy": {
+   "clarity": "balanced",
+   "target": "none",
+   "second": "dangerous_goods",
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 62,
+ "deciding": {
+  "pieces_reconciled": "Manifest 12 pcs on 157-40213318 against 9 counted, with a part_shipments entry for 9 pcs this flight; the cover is present but is the only support.",
+  "disposition": "scale_cal_due 2025-03-01 is before built_utc 2025-03-11 and reweigh is null, so the weight reading needs one confirmation before release.",
+  "worst_discrepancy": "The class 3 and class 8 lines are both on 21L, and the NOTOC matches pieces and position, so it is either no discrepancy or a DG pair concern; the weight is unverified.",
+  "weight_deviation": "Planned 1400 (110 + 1290) against scale 1471 gives about 5.07%, just over the 5% boundary.",
+  "rework_extent": "A deviation just over 5% would mean Full rework if the overdue-scale reading is confirmed, plus the borderline DG pair; nothing else physical is flagged."
+ },
+ "request": "rec-F420-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012911
+}

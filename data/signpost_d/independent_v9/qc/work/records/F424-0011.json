@@ -1,0 +1,130 @@
+{
+ "id": "F424-0011",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2411",
+   "vessel_id": "FV3",
+   "volume_hl": 20,
+   "yeast_strain": "US-05",
+   "og_target": 1.052,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-03-10",
+    "gravity_sg": 1.02,
+    "temp_c": 21
+   },
+   {
+    "ts": "2024-03-11",
+    "gravity_sg": 1.013,
+    "temp_c": 25.5
+   },
+   {
+    "ts": "2024-03-12",
+    "gravity_sg": 1.012,
+    "temp_c": 21
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-03-07",
+    "vessel_id": "FV4",
+    "note": "Pitched US-05 gen 4."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2411",
+   "micro_plate": {
+    "result": "presumptive"
+   },
+   "diacetyl_mgl": 0.18,
+   "abv_pct": 5.1,
+   "retest": []
+  }
+ },
+ "factors": {
+  "gravity_status": "in band, latest two readings 1.013 then 1.012, one value still falling",
+  "final_reading_gap": true,
+  "temp_excursion": "brief_minor, 25.5C against 24C max, unmitigated",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.18,
+  "discrepancy_count": 4,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": true,
+  "release_pressure": "none",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": true,
+  "temp_excursion": "brief_minor",
+  "excursion_mitigated": false,
+  "micro_signal": "presumptive_plate",
+  "micro_mitigated": false,
+  "diacetyl_mgl": 0.18,
+  "discrepancy_count": 4,
+  "decoy_mismatch": true,
+  "lab_result_pending": true,
+  "hard_limit_breach": true,
+  "release_pressure": "none",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release_conditional",
+   "second": null,
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (hard_limit_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 60,
+ "deciding": {
+  "terminal_gravity": "Last two readings 1.013 and 1.012 are both inside the 1.010-1.014 band, but the series is still falling slightly.",
+  "contamination_supported": "lab.micro_plate.result is presumptive and there is no negative retest.",
+  "batch_disposition": "Data is mostly complete, so release_conditional is the lean, though the presumptive plate and pending item leave doubt.",
+  "deviation_severity": "The 25.5C reading exceeds strain_max_temp_c 24C, a hard limit breach, so the severity is Critical.",
+  "record_discrepancies": "Four mismatches: vessel FV3 vs the FV4 pitch event, strain, brew date and OG; one of them could be counted as a decoy, so 3 vs 2 is open."
+ },
+ "request": "rec-F424-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00502
+}

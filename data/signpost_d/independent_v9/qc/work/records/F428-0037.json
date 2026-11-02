@@ -1,0 +1,117 @@
+{
+ "id": "F428-0037",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "gate_type": "mitre",
+   "rated_closure_s": 240,
+   "seal_type": "J_bulb"
+  },
+  "inspection": {
+   "insp_date": "2025-05-02",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-03-01",
+    "closure_s": 221,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "component": "seal",
+    "grade": 2,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "component": "seal",
+     "grade_raised": 2,
+     "status": "in_progress",
+     "completed": "2025-04-10",
+     "retest_insp_id": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.92,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "in_progress",
+  "mitigation_present": false,
+  "mitigation_kind": "none",
+  "days_to_forecast_peak": 30,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "mitre",
+  "closure_time_ratio": 0.92,
+  "max_defect_grade": 2,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 4,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "passed_predates_repair",
+  "repair_progress": "in_progress",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 30,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_retest",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "seal",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "closure_test_valid": "Test 2025-03-01 predates seal repair completed 2025-04-10, though pass within rated time.",
+  "next_step": "Work order has completed date but retest_insp_id null; a post-repair test is the specific missing item.",
+  "defect_class": "Only open defect is seal grade 2.",
+  "section_discrepancies": "Work order status in_progress with a completed date is a slight oddity; otherwise grades agree, so 0 or 1.",
+  "flood_risk": "Closure 221s within 240s and grade 2 defect gives low, but untested repair leaves doubt about an unproven gate; contested."
+ },
+ "request": "rec-F428-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005562
+}

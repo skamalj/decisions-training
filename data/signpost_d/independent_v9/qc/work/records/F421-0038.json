@@ -1,0 +1,132 @@
+{
+ "id": "F421-0038",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-20915",
+   "contents": "glass shelves",
+   "qty": 6,
+   "weight_kg": 22,
+   "fragile": true,
+   "declared_value_gbp": 1504.33
+  },
+  "handling_events": [
+   {
+    "ts": "2024-06-01T07:00",
+    "site": "HUB-E",
+    "code": "DMG"
+   },
+   {
+    "ts": "2024-06-01T22:00",
+    "site": "HUB-W",
+    "code": "CRUSH"
+   },
+   {
+    "ts": "2024-06-02T05:50",
+    "site": "HUB-W",
+    "code": "DMG"
+   },
+   {
+    "ts": "2024-06-03T06:30",
+    "site": "THIS",
+    "code": "INB"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-06-03T08:00",
+   "observed_item": "glass shelves",
+   "qty_found": 5,
+   "weight_kg": 21.8,
+   "condition": "broken",
+   "photos": [],
+   "repair_est_gbp": 731.2
+  },
+  "claim": {
+   "claimed_gbp": 745.8,
+   "packaging_desc": "single-wall box, no void fill"
+  },
+  "notes": [
+   "Arrived already crushed."
+  ]
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "quantity",
+  "inspection_state": "photos_missing",
+  "loss_pct": 48.61,
+  "declared_value": 1504.33,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.02
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "quantity",
+  "inspection_state": "photos_missing",
+  "loss_pct": 48.61,
+  "declared_value": 1504.33,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.02
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_supervisor",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 70,
+ "deciding": {
+  "depot_fault": "Three upstream damage codes before a clean INB, but the claim and poor packaging leave some doubt.",
+  "contents_match": "Glass shelves in both; qty 5 vs 6 is a minor count issue with matching weight.",
+  "next_step": "Three upstream damage scans, weak packaging, missing photos and a claim above the threshold call for supervisor referral.",
+  "loss_share": "Repair 731.2 is 48.6% of value, just under 50%, so total or major is borderline.",
+  "parties_needed": "Supervisor and depot may suffice, but upstream hubs and sender make 3-4 teams plausible."
+ },
+ "request": "rec-F421-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005158
+}

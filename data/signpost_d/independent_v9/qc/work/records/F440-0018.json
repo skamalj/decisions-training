@@ -1,0 +1,135 @@
+{
+ "id": "F440-0018",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "review": "2025-06-09",
+   "arrival": "2025-06-12",
+   "departure": "2025-06-14",
+   "pax": {
+    "adult": 2,
+    "13_17": 19
+   },
+   "amendments": []
+  },
+  "roster": {
+   "adult": 2,
+   "13_17": 20
+  },
+  "allocation": {
+   "nights": [
+    "2025-06-12",
+    "2025-06-13",
+    "2025-06-14"
+   ]
+  },
+  "payment": {
+   "due": 400,
+   "paid": 200,
+   "instalments": [
+    {
+     "due": "2025-06-01",
+     "amt": 200
+    },
+    {
+     "due": "2025-06-20",
+     "amt": 200
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "id": "A1",
+    "status": "verified",
+    "exp": "2026-01-01"
+   },
+   {
+    "id": "A2",
+    "status": "verified",
+    "exp": "2025-06-10"
+   }
+  ],
+  "history": {
+   "trusted": true,
+   "no_shows": 2
+  }
+ },
+ "factors": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "one_night_extra",
+  "amendment_logged": false,
+  "supervision_level": "exactly_meets_policy",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": true,
+  "days_to_arrival": 3,
+  "dorm_fit": "fits",
+  "leader_checks": "one_expiring_before_departure",
+  "trusted_organiser": true,
+  "prior_no_shows": 2,
+  "diet_count_drift": "none"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "one_person",
+  "night_mismatch": "one_night_extra",
+  "amendment_logged": false,
+  "supervision_level": "short_one_night",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": true,
+  "days_to_arrival": 2,
+  "dorm_fit": "fits",
+  "leader_checks": "several_missing",
+  "trusted_organiser": true,
+  "prior_no_shows": 2,
+  "diet_count_drift": "none"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "confirm_conditional",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "ratio_met": "2 adults for 20 aged 13-17 meets 1:10 exactly; the one-person pax gap leaves little margin.",
+  "deposit_covered": "Paid 200 meets the due instalment of 2025-06-01, but deposit due is 400 and the second instalment falls after arrival.",
+  "disposition": "A2's check expires 2025-06-10, before departure, so counts as pending: one named item to clear, otherwise confirmable.",
+  "urgency": "Arrival is 3 days after review, at the boundary of levels 2 and 3.",
+  "conflict_count": "Booked 21 vs roster 22 and an extra allocation night, both unamended; the expiring check is an arguable third."
+ },
+ "request": "rec-F440-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014301
+}

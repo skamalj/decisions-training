@@ -1,0 +1,165 @@
+{
+ "id": "F418-0048",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "HLT",
+   "plat": 4,
+   "date": "2025-06-17",
+   "svc_from": "06:30",
+   "svc_to": "22:30",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S77",
+    "planned_start": "05:30"
+   },
+   {
+    "staff_id": "S79",
+    "planned_start": "05:30"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S77",
+    "sign_on": "05:40",
+    "safety_comp_exp": "2026-03-01",
+    "dispatch_comp_exp": null
+   },
+   {
+    "staff_id": "S79",
+    "sign_on": "06:51",
+    "safety_comp_exp": "2026-02-14",
+    "dispatch_comp_exp": "2026-02-14"
+   },
+   {
+    "staff_id": "S81",
+    "sign_on": "06:34",
+    "safety_comp_exp": "2025-11-20",
+    "dispatch_comp_exp": "2025-11-20"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "05:30",
+    "plat": 4
+   },
+   {
+    "type": "dispatch",
+    "time": "06:32",
+    "staff_id": "S77",
+    "plat": 4
+   },
+   {
+    "type": "cover_start",
+    "time": "06:36",
+    "staff_id": "S81",
+    "plat": 4
+   },
+   {
+    "type": "cover_end",
+    "time": "06:51",
+    "staff_id": "S81",
+    "plat": 4
+   },
+   {
+    "type": "gap_end",
+    "time": "06:51",
+    "plat": 4
+   }
+  ],
+  "controls": {
+   "disp_ref": null,
+   "prior_shortfalls_30d": 0
+  },
+  "remarks": [
+   "S79 late. S77 alone at first train, dispatched 06:32. S81 redeployed 06:36."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 81,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": false,
+  "dispensation_fit": "not_applicable",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 0,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 81,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": true,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "consistent",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 0,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "balanced",
+   "target": "fully_rostered",
+   "second": "partial_cover",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unqualified_dispatch = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 57,
+ "deciding": {
+  "headcount_verified": "Every logged person has a sign-on and in-date safety competence; S79's late sign_on matches the remark.",
+  "next_step": "Records are complete and explain the cause, no repeats (prior 0); the log needs amending and a briefing on dispatching alone.",
+  "coverage_outcome": "Most of the 81-minute gap precedes service_from 06:30; in service only 06:30-06:36 stayed open, so fully_rostered and partial_cover are both defensible.",
+  "reversal_time": "The event cannot be undone, but the log amendment and briefing could be done in days.",
+  "exposure_severity": "S77 dispatched at 06:32 inside the gap with dispatch_comp_exp null while dispatch_mode is staff."
+ },
+ "request": "rec-F418-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011548
+}

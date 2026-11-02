@@ -1,0 +1,138 @@
+{
+ "id": "F403-0015",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "declared_allergens": [
+    "egg",
+    "sesame",
+    "milk"
+   ],
+   "auto_injector": false,
+   "plan_start": "2025-06-06"
+  },
+  "medical_evidence": {
+   "doc_type": "parent_letter",
+   "expires": "2026-06-01",
+   "allergens": [
+    "egg",
+    "sesame"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-05-20",
+   "dishes": [
+    {
+     "dish": "egg wrap",
+     "contains": [
+      "egg",
+      "sesame"
+     ],
+     "recipe_version_date": "2025-05-10",
+     "substitute": "plain wrap",
+     "spec_checked_on": null
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true
+  },
+  "history": {
+   "review_date": "2025-06-09",
+   "packed_lunch_until": "2025-06-10",
+   "incidents": [
+    {
+     "date": "2025-06-06",
+     "dish": "sesame bun",
+     "contains": [
+      "sesame"
+     ]
+    }
+   ],
+   "messages": [
+    "Parent is very worried!"
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": 2,
+  "packed_lunch_interim": true,
+  "note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 3,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": true,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": true,
+  "served_allergen_incident": true,
+  "days_to_first_meal": -6,
+  "packed_lunch_interim": false,
+  "note_tone": "alarmed"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "approve_plan",
+   "second": "approve_restricted",
+   "targets": [
+    "T1"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "evidence_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "meal_urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (served_allergen_incident = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 32,
+ "deciding": {
+  "evidence_allergens_covered": "Egg and sesame, the evidence allergens, both appear in the egg wrap entry with a plain wrap substitute. Milk is declared but not in the evidence, which is irrelevant to this question, so true is leading.",
+  "next_step": "The only dish has a substitute, but its spec_checked_on is null, which could mean withholding it (approve_restricted) or releasing the plan as is (approve_plan). The parent-only evidence and the incident are further factors pulling either way.",
+  "first_gap_stage": "The medical evidence is a parent_letter, not clinician-confirmed, so the first shortfall is at evidence stage, ahead of the unchecked spec.",
+  "exposure_proximity": "The incident dated 2025-06-06 (the plan_start date) was a sesame bun, and sesame is a declared allergen, so exposure has been reached. The missing meal context leaves slight doubt.",
+  "meal_urgency": "Packed lunch runs to 2025-06-10, so counting from the 2025-06-09 review the first meal is 2025-06-11, two school days away. The incident on plan_start could also read as already eating, so levels 2 and 3 are both defensible."
+ },
+ "request": "rec-F403-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014234
+}

@@ -1,0 +1,111 @@
+{
+ "id": "F404-0047",
+ "family": "F404",
+ "state": {
+  "session": {
+   "age_band": "three_plus",
+   "ratio_rule": "1:8; 1:13 with L6 on duty"
+  },
+  "children": {
+   "booked": 6,
+   "slots": [
+    {
+     "t": "09:00",
+     "signed_in": 6
+    },
+    {
+     "t": "10:00",
+     "signed_in": 7
+    }
+   ]
+  },
+  "staff_signin": [
+   {
+    "staff_id": "S05",
+    "time_in": "08:00",
+    "check_status": "pending"
+   },
+   {
+    "staff_id": "S08",
+    "time_in": "10:11",
+    "check_status": "ok"
+   }
+  ],
+  "cover_log": []
+ },
+ "factors": {
+  "age_band": "three_plus",
+  "children_peak": 7,
+  "staff_signin_variance": "absent",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 71,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": true,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 0
+ },
+ "factors_sampled": {
+  "age_band": "three_plus",
+  "children_peak": 7,
+  "staff_signin_variance": "absent",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 71,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 0
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "file_no_action",
+   "second": null,
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "contested",
+   "target": "none_found",
+   "second": "staff_shortfall",
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (zero_eligible_adult_slot = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 38,
+ "deciding": {
+  "below_ratio": "Only S05, status pending, is signed in from 08:00 with 6-7 children and no cover; the first eligible adult arrives 10:11, so ratio was missed.",
+  "disposition": "Zero eligible adults with 6+ children for 71 minutes, over the sixty-minute line; refer to safeguarding lead.",
+  "primary_cause": "Eligible staff were absent until 10:11 (staff shortfall); the one-child overrun above booked 6 is a minor competing explanation.",
+  "shortfall_duration": "Gap from 09:00 to S08 time_in 10:11 is 71 minutes, above sixty, with empty cover_log.",
+  "breach_severity": "No eligible adult for 6-7 children: none covered (level 3), though 7 minus a possible 1 gives a defensible alternative of level 2."
+ },
+ "request": "rec-F404-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008014
+}

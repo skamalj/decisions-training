@@ -1,0 +1,147 @@
+{
+ "id": "F402-0048",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-3319",
+   "received": "2025-05-05",
+   "source": "GP",
+   "priority": "urgent",
+   "site": {
+    "part": "lumbar",
+    "side": null
+   },
+   "onset": "2023-10-19"
+  },
+  "patient": {
+   "id": "p-77412",
+   "dob": "1971-09-14",
+   "mobility_aid": null,
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx": "M54.5",
+   "red_flags": [
+    "night_pain_weight_loss"
+   ],
+   "neuro_signs": {},
+   "function_index": 57.67,
+   "anticoagulant": false
+  },
+  "gp_record": {
+   "dob": "1971-09-14",
+   "first_presented": "2023-10-23",
+   "meds": [
+    "C09AA05"
+   ],
+   "falls_3m": 0,
+   "weight_change_kg": -0.5,
+   "reviews": []
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-04-02",
+    "result": "no_sinister"
+   }
+  ],
+  "history": {
+   "episodes": [
+    {
+     "d": "2024-07-01"
+    },
+    {
+     "d": "2025-01-15"
+    }
+   ],
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": true,
+  "mismatch_field": "symptom_onset",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 82,
+  "function_index": 57.67,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 0,
+  "post_op_days": "none",
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": true,
+  "mismatch_field": "anticoagulant_status",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "consent_to_refer",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 82,
+  "function_index": 57.67,
+  "prior_episodes_12m": 2,
+  "referrer_priority": "urgent",
+  "falls_last_3m": 4,
+  "post_op_days": 87,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_referred",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "clinical_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 112,
+ "deciding": {
+  "red_flag_unresolved": "The MRI of 2025-04-02 is within 8 weeks of receipt and has result no_sinister, explaining the listed flag; weight change is only -0.5 kg.",
+  "next_step": "Consent is present, there is no surgery, the only onset difference is 4 days, and nothing is missing, so it can be accepted as referred.",
+  "pathway": "Simple lumbar diagnosis, no neuro signs, no falls, no surgery, self-management already tried and a long stable course fit self_management.",
+  "reversal_time": "Adding to a list or advice pathway can be reversed within a day; small residual doubt from the two prior episodes.",
+  "clinical_urgency": "82-week stable course with a cleared MRI means waiting is safe; the urgent priority is a decoy."
+ },
+ "request": "rec-F402-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00817
+}

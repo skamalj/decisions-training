@@ -1,0 +1,147 @@
+{
+ "id": "F430-0025",
+ "family": "F430",
+ "state": {
+  "site": {
+   "id": "S03",
+   "assets": [
+    {
+     "id": "T1",
+     "unit": "%",
+     "normal_band": [
+      40,
+      60
+     ],
+     "alarm_limit": 30,
+     "trip_limit": 20,
+     "customers_fed": 9750,
+     "partner_id": "T2"
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-03-12",
+   "scheduled_assets": [
+    "T1"
+   ],
+   "inspector_note": "Routine round."
+  },
+  "readings": [
+   {
+    "asset_id": "T1",
+    "param": "oil_level",
+    "value": 44,
+    "unit": "%"
+   }
+  ],
+  "defects": [
+   {
+    "defect_id": "D5",
+    "asset_id": "T1",
+    "category": "oil",
+    "photo_ref": "IMG-5",
+    "note": "Oil level low-normal on T1."
+   }
+  ],
+  "history": {
+   "previous_round": null,
+   "open_work_orders": [
+    {
+     "desc": "T1 level gauge sticking, replacement ordered"
+    }
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "T2": "in_service"
+   },
+   "outage_plan": []
+  }
+ },
+ "factors": {
+  "worst_reading_band": "normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": true,
+  "defect_claim": "matches_reading",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "partner_in_service",
+  "customers_fed": 9750,
+  "trivial_discrepancies": 3,
+  "near_boundary": false
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "gauge_known_faulty",
+  "benign_cause_covers": false,
+  "defect_claim": "overstated",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": false,
+  "redundancy_state": "no_partner",
+  "customers_fed": 9750,
+  "trivial_discrepancies": 3,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "follow_up": {
+   "clarity": "leaning",
+   "target": "file_closed",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "limit_deviation": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "supply_exposure": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 63,
+ "deciding": {
+  "defect_corroborated": "The note says low-normal oil level and the reading of 44% is in the lower part of the 40-60% band, with a photo.",
+  "benign_explanation": "No abnormal reading; the open work order for a sticking T1 level gauge only loosely accounts for the low-normal value.",
+  "follow_up": "Reading is in band with a minor note and a gauge replacement already ordered, so the report can be filed.",
+  "limit_deviation": "44% is inside the 40-60% band, far above the 30% alarm limit.",
+  "supply_exposure": "T2 is in service and carries the load, so no customers would lose supply."
+ },
+ "request": "rec-F430-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011966
+}

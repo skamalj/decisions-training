@@ -1,0 +1,142 @@
+{
+ "id": "F404-0027",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "T2",
+   "date": "2025-04-02",
+   "age_band": "two_year",
+   "ratio_rule": "1:4"
+  },
+  "children": {
+   "booked": 9,
+   "slots": [
+    {
+     "t": "09:00-10:30",
+     "in": 10
+    }
+   ]
+  },
+  "rota": [
+   {
+    "id": "S11",
+    "q": 3,
+    "ratio": true
+   },
+   {
+    "id": "S12",
+    "q": 3,
+    "ratio": true
+   },
+   {
+    "id": "S13",
+    "q": 2,
+    "ratio": true
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S11",
+    "out": "09:00"
+   },
+   {
+    "id": "S12",
+    "out": "09:00"
+   },
+   {
+    "id": "S13",
+    "out": "09:00"
+   },
+   {
+    "id": "A4",
+    "age": 16,
+    "in": "08:00"
+   }
+  ],
+  "cover_log": [],
+  "history": {
+   "prior_breaches_90d": 2
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 10,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 1,
+  "shortfall_minutes": 90,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 2
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 10,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 4,
+  "shortfall_minutes": 90,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": true,
+  "boundary_case": false,
+  "prior_breaches_90d": 2
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "corrective_plan",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "primary_cause": {
+   "clarity": "clear",
+   "target": "staff_shortfall",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "shortfall_duration": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (zero_eligible_adult_slot = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 59,
+ "deciding": {
+  "below_ratio": "10 children need 3 staff at 1:4; all three rota staff signed out at 09:00, leaving only a 16-year-old, and cover_log is empty.",
+  "disposition": "Breach is evidenced by sign-outs and no cover, so no confirmation is missing; action is needed, though 90 minutes also strains the corrective_plan option.",
+  "primary_cause": "Staff on duty fell below rota after 09:00 while children were 10 vs 9 booked, so staff_shortfall.",
+  "shortfall_duration": "Window 09:00-10:30 is 90 minutes without eligible staff.",
+  "breach_severity": "Only an ineligible 16-year-old is present with 10 children, so none covered (level 3); the apprentice might give some help, leaving level 2 plausible."
+ },
+ "request": "rec-F404-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010685
+}

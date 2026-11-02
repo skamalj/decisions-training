@@ -1,0 +1,123 @@
+{
+ "id": "F427-0038",
+ "family": "F427",
+ "state": {
+  "visit": {
+   "visit_date": "2024-05-20",
+   "surveyor_grade": "trainee"
+  },
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 5
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "id": "W2",
+     "depth_cm": 29
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 30,
+     "prev_depth_cm": 22
+    }
+   ],
+   "rain_30d_pct_normal": 141
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D2",
+     "inspected_on": "2024-05-18",
+     "pool_level_cm": 28,
+     "design_pool_cm": 28,
+     "defect_code": "SEEP",
+     "remark": "Minor seep at toe."
+    }
+   ]
+  },
+  "vegetation": null
+ },
+ "factors": {
+  "dipwell_coverage": 0.2,
+  "photos_status": "none",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": 4.0,
+  "rainfall_pct_normal": 141.0,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": true,
+  "surveyor_grade": "trainee",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.33,
+  "photos_status": "full",
+  "quadrats_status": "missing",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": -4.1,
+  "rainfall_pct_normal": 140.67,
+  "control_dipwells_dropped": true,
+  "repair_order_open": false,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": true,
+  "surveyor_grade": "trainee",
+  "note_tone": "neutral",
+  "grazing_signs": false
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_record",
+   "second": "request_data",
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "leaning",
+   "target": "below_band",
+   "second": null,
+   "targets": []
+  },
+  "dam_severity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "dam_caused_drop": "Rain was 141% of normal and the control well dropped too; the dam holds its design pool.",
+  "next_step": "Little is missing beyond the thin dipwell and vegetation data and nothing needs action, so filing and asking for data are both defensible.",
+  "hydro_state": "The single well reads 29 cm against floor 25 cm, a little below the band.",
+  "dam_severity": "D2 is coded SEEP with pool 28 against design 28, so water is held.",
+  "evidence_completeness": "Only 1 of 5 wells read, no photos and no vegetation. The dam log counts as one element, but its inspected_on date precedes the visit date, which may disqualify it."
+ },
+ "request": "rec-F427-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011596
+}

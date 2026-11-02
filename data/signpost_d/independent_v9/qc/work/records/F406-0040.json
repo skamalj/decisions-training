@@ -1,0 +1,155 @@
+{
+ "id": "F406-0040",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-9015",
+   "gallery_code": "S1",
+   "session_date": "2025-05-09",
+   "open": "10:00",
+   "close": "12:00",
+   "certified_limit": 150
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "10:00",
+     "occupancy": 70
+    },
+    {
+     "start": "10:15",
+     "occupancy": 96
+    },
+    {
+     "start": "10:30",
+     "occupancy": 104
+    },
+    {
+     "start": "10:45",
+     "occupancy": 88
+    }
+   ],
+   "manual_tally_peak": 101,
+   "summary_peak": 104
+  },
+  "variations": [
+   {
+    "ref": "V-57",
+    "gallery_code": "S1",
+    "valid_from": "2025-05-01",
+    "valid_to": "2025-05-31",
+    "uplift_to": 180,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "gates": [
+    "S1-A",
+    "S1-B"
+   ],
+   "maintenance": [
+    {
+     "gate": "S1-A",
+     "raised_at": "2025-05-09T08:10",
+     "summary": "Intermittent reading drift"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": {
+    "state": "partial",
+    "routes_checked": "2 of 3"
+   },
+   "notes": [
+    "Quiet session."
+   ]
+  },
+  "history": {
+   "overages_30d": 0
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.69,
+  "intervals_over_limit": 0,
+  "section_mismatch": "none",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "partial",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.69,
+  "intervals_over_limit": 11,
+  "section_mismatch": "gallery_code_mismatch",
+  "variation_present": false,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "partial",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 95,
+ "deciding": {
+  "variation_applies": "V-57 approved, gallery S1 matches, window 2025-05-01 to 05-31 covers the session date.",
+  "fault_explains_overage": "Same-gate same-day ticket raised before opening, but its summary is vague and no overage exists to explain.",
+  "next_step": "Peak well below the limit and no overage history; only the 2 of 3 egress check is a minor loose end.",
+  "peak_excess": "Peak 104 and tally 101 are about 69% of the 150 certified limit.",
+  "intervals_over": "No interval exceeds 104 against a limit of 150 or 180."
+ },
+ "request": "rec-F406-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012601
+}

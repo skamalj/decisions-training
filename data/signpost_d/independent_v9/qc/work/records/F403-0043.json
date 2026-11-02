@@ -1,0 +1,143 @@
+{
+ "id": "F403-0043",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P-7310",
+   "declared_allergens": [
+    "sesame",
+    "soya"
+   ],
+   "auto_injector": false,
+   "plan_start": "2025-09-01"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2025-05-02",
+   "expires": "2026-05-02",
+   "allergens": [
+    "sesame",
+    "soya"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-08-15",
+   "dishes": [
+    {
+     "dish": "stir fry",
+     "contains": [
+      "soya"
+     ],
+     "recipe_version_date": "2025-07-20",
+     "substitute": "herb rice",
+     "spec_checked_on": "2025-08-10"
+    },
+    {
+     "dish": "bread",
+     "contains": [
+      "sesame"
+     ],
+     "recipe_version_date": "2025-07-20",
+     "substitute": "plain loaf",
+     "spec_checked_on": "2025-08-10"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": false,
+   "staff_trained": [
+    "2025-03-04"
+   ]
+  },
+  "history": {
+   "review_date": "2025-10-06",
+   "packed_lunch_until": null,
+   "incidents": [],
+   "messages": [
+    "Cook: all running smoothly."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 2,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 0,
+  "packed_lunch_interim": false,
+  "note_tone": "reassuring"
+ },
+ "factors_sampled": {
+  "evidence_status": "current",
+  "allergen_count": 2,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 27,
+  "packed_lunch_interim": true,
+  "note_tone": "reassuring"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "kitchen_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "clear",
+   "target": "4",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 46,
+ "deciding": {
+  "evidence_allergens_covered": "Sesame and soya in the clinician letter match the declared list and each has a substituted dish (bread, stir fry).",
+  "next_step": "Evidence is current, both dishes are substituted with spec checks after the recipe dates, and there are no incidents, so the plan can be released.",
+  "first_gap_stage": "Evidence and menu are sound; cleaning_log_complete is false, which is the first unverified control.",
+  "exposure_proximity": "All allergen dishes are substituted and there is no incident, but the incomplete cleaning log leaves one control unverified.",
+  "meal_urgency": "plan_start 2025-09-01 is before review_date 2025-10-06 and packed_lunch_until is null, so the pupil is already eating school meals."
+ },
+ "request": "rec-F403-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012998
+}

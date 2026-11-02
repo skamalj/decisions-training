@@ -1,0 +1,134 @@
+{
+ "id": "F418-0015",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "MLT",
+   "plat": 2,
+   "date": "2025-07-15",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 1,
+   "dispatch_mode": "driver"
+  },
+  "roster": [
+   {
+    "staff_id": "S61",
+    "planned_start": "06:00"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S61",
+    "sign_on": "06:15",
+    "sign_off": "16:00",
+    "safety_comp_exp": "2025-07-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "12:00"
+   },
+   {
+    "type": "cover_start",
+    "time": "12:00",
+    "staff_id": "S61"
+   }
+  ],
+  "controls": {
+   "disp_ref": "DSP-5",
+   "disp_platform": 2,
+   "valid_to": "2025-07-15",
+   "approved_by": "ROM",
+   "prior_shortfalls_30d": 3
+  },
+  "remarks": [
+   "Broadly fine."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 68,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "expired_midgap",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": true,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 68,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "expired_midgap",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": true,
+  "benign_closure": false,
+  "note_consistency": "vague",
+  "missing_section": "none",
+  "prior_shortfalls_30d": 3,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "leaning",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "exposure_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 43,
+ "deciding": {
+  "headcount_verified": "S61 signed on 06:15, but safety_comp_exp 2025-07-01 is before the shift date, against a minor late sign-on, so it is balanced.",
+  "next_step": "The record shows no big problem: one rostered person on duty, a dispensation ref present, and mild remarks.",
+  "coverage_outcome": "S61 is the rostered person and also appears as cover from 12:00, so the post looks rostered throughout.",
+  "reversal_time": "Nothing lasting happened; undone in a day.",
+  "exposure_severity": "The single gap marker has same-person cover at the same minute, with no dispatch by others, so no real period below minimum."
+ },
+ "request": "rec-F418-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005605
+}

@@ -1,0 +1,127 @@
+{
+ "id": "F408-0008",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 7710,
+   "stream": "RES",
+   "claimed": "2024-05-14",
+   "logged_at": "2024-05-14T18:00",
+   "photo": true
+  },
+  "schedule": {
+   "streams": [
+    "RES"
+   ],
+   "date": "2024-05-13"
+  },
+  "round_log": {
+   "completed_at": "2024-05-13T16:00",
+   "stops": [
+    {
+     "uprn": 7710,
+     "exc": null,
+     "gps_stop": null,
+     "photo_ref": null
+    }
+   ],
+   "sweep_at": "2024-05-14T20:00"
+  },
+  "history": [
+   {
+    "on": "2024-03-01",
+    "o": "rejected"
+   },
+   {
+    "on": "2024-05-02",
+    "o": "pending"
+   },
+   {
+    "on": "2023-11-10",
+    "o": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "claimed_day_off_by_one",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "none",
+  "already_collected": true,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 0,
+  "history_decoys": 3,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 4,
+  "history_decoys": 3,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 28,
+ "deciding": {
+  "crew_missed": "The stop has no exception and null gps_stop with no photo_ref, so there is no supported exception, but there is also no GPS data to confirm a pass.",
+  "report_matches": "Claimed date 2024-05-14 is one day after the scheduled 2024-05-13, though the report was logged within 48 hours and the stream agrees.",
+  "next_step": "sweep_at 2024-05-14T20:00 is after logged_at 18:00, so the bin was emptied and the case closes.",
+  "return_urgency": "The later sweep collection means nothing is outstanding.",
+  "repeat_failures": "The history holds only a rejected entry, a pending entry and an upheld entry from 2023-11-10, which is outside 84 days; the pending entry leaves a little doubt."
+ },
+ "request": "rec-F408-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010668
+}

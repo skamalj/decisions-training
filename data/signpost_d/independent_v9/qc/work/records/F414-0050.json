@@ -1,0 +1,151 @@
+{
+ "id": "F414-0050",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "RB-77",
+   "equip_type": "roundabout",
+   "crit_fall_height_m": 1.0,
+   "surf_type": "wetpour"
+  },
+  "inspection": {
+   "insp_date": "2024-06-08",
+   "insp_grade": "annual_main",
+   "fall_height_m": 1.0,
+   "surf_type_found": "bark",
+   "surf_depth_mm": 40,
+   "surf_req_table": [
+    {
+     "band": "<=1.0",
+     "type": "bark",
+     "min_depth_mm": 45
+    }
+   ],
+   "probe_results": [
+    {
+     "probe": "torso",
+     "opening_id": "O1",
+     "result": "fail"
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "GAP-1",
+     "component_id": "C2",
+     "injury_mech": "serious"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "RB-71",
+    "component_id": "C1",
+    "defect_ref": "PNT-3",
+    "status": "closed",
+    "closed_date": "2024-06-10"
+   },
+   {
+    "wo_id": "W2",
+    "asset_id": "RB-77",
+    "component_id": "C2",
+    "defect_ref": "D5",
+    "status": "open",
+    "temp_measure": {
+     "type": "gap blocked",
+     "date": "2024-06-08"
+    }
+   }
+  ],
+  "site": {
+   "usage_level": "low",
+   "incident_reports_90d": 1
+  },
+  "history": [
+   {
+    "date": "2023-06-01",
+    "defect_refs": [
+     "D5"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "roundabout",
+  "register_mismatch": "large",
+  "surfacing_depth_margin_mm": -5.0,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.5,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "low",
+  "incident_reports_90d": 1
+ },
+ "factors_sampled": {
+  "equipment_type": "roundabout",
+  "register_mismatch": "large",
+  "surfacing_depth_margin_mm": -6.96,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.41,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "low",
+  "incident_reports_90d": 1
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "clear",
+   "target": "sign_off_actions",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "hazard_severity": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "prior_defects_cleared": "Previous ref D5 matches W2, which is still open, and there is no follow-up check.",
+  "surfacing_adequate": "40 mm recorded against 45 mm required; register says wetpour but bark was found, which is a mismatch.",
+  "asset_disposition": "Gap is blocked by a temporary measure and use is low; accept with scheduled actions. The mismatches (W1 on another asset id, surface type) are recorded for correction.",
+  "remedial_progress": "W1 shows closed but its date is after the inspection and its asset_id is RB-71, so it may not count; W2 is open.",
+  "hazard_severity": "GAP-1 is coded serious injury with a torso probe failure, which could suggest a worse entrapment, but no head_neck failure is shown."
+ },
+ "request": "rec-F414-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012787
+}

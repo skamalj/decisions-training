@@ -1,0 +1,123 @@
+{
+ "id": "F438-0018",
+ "family": "F438",
+ "state": {
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "I50.0"
+   },
+   "comorbidities": [
+    "E11.9",
+    "N18.3",
+    "I10",
+    "J44.9"
+   ]
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "I50.1"
+   },
+   "secondary_dx": [
+    "E11.2",
+    "N18.5",
+    "I10",
+    "J44.1",
+    "T81.4"
+   ]
+  },
+  "audit_context": {
+   "queries": [
+    {
+     "target_code": "I50.1",
+     "status": "closed",
+     "response": "confirms"
+    }
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "EB03B",
+   "hrg_regrouped": "EB03B",
+   "tariff_submitted": 3310,
+   "tariff_regrouped": 2980,
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.05,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "factors_sampled": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.05,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "amend_and_regroup",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 82,
+ "deciding": {
+  "primary_supported": "I50.1 vs I50.0 differs at the fourth character, but a closed query confirms I50.1.",
+  "hrg_shift": "hrg_submitted and hrg_regrouped are both EB03B, although the tariff falls by 330.",
+  "next_step": "Tariff overstated by 330 and the codes need correction and regrouping for resubmission.",
+  "error_count": "Secondary mismatches E11.2, N18.5, J44.1 and T81.4 total three to four errors depending on whether the confirmed primary counts.",
+  "error_severity": "T81.4 has no documentation entry and drives the tariff difference (level 4), but the closed query confirming the primary invites a level 3 reading."
+ },
+ "request": "rec-F438-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009282
+}

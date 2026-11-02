@@ -1,0 +1,139 @@
+{
+ "id": "F414-0036",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "RK-0412",
+   "equip_type": "spring_rocker",
+   "crit_fall_height_m": 0.6,
+   "surf_type": "rubber"
+  },
+  "inspection": {
+   "insp_date": "2024-05-06",
+   "insp_grade": "operational",
+   "fall_height_m": 0.6,
+   "surf_type_found": "rubber",
+   "surf_depth_mm": 37,
+   "surf_req_table": [
+    {
+     "max_h": 1.0,
+     "type": "rubber",
+     "min_depth_mm": 40
+    }
+   ],
+   "probe_results": [],
+   "findings": [
+    {
+     "defect_code": "PNT1",
+     "component_id": "C1",
+     "injury_mech": "cosmetic"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "RK-0412",
+    "component_id": "C1",
+    "defect_ref": "PNT1",
+    "status": "open",
+    "closed_date": null
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 0
+  },
+  "history": [
+   {
+    "date": "2023-11-02",
+    "grade": "operational",
+    "defect_refs": []
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": -3.0,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 0,
+  "work_orders_closed_fraction": 0.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "medium",
+  "incident_reports_90d": 0
+ },
+ "factors_sampled": {
+  "equipment_type": "spring_rocker",
+  "register_mismatch": "trivial",
+  "surfacing_depth_margin_mm": -109.22,
+  "worst_defect_class": "no_mechanism",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 2,
+  "work_orders_closed_fraction": 0.99,
+  "temporary_measure_in_place": false,
+  "approved_variance": true,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "operational",
+  "usage_level": "medium",
+  "incident_reports_90d": 0
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 26,
+ "deciding": {
+  "prior_defects_cleared": "Previous inspection history has an empty defect_refs list, so nothing was outstanding; only mild doubt as there is no explicit close-out entry.",
+  "surfacing_adequate": "surf_depth_mm 37 against a 40 mm minimum for rubber at 0.6 m: slightly short, but close enough to the boundary that adequacy is arguable.",
+  "asset_disposition": "Only a cosmetic paint finding (PNT1) with no injury mechanism, no probe failures and no incidents; the asset can be accepted.",
+  "remedial_progress": "The single raised work order W1 is status open with a null closed_date, so none are closed.",
+  "hazard_severity": "The only finding has injury_mech cosmetic, so hazard is negligible."
+ },
+ "request": "rec-F414-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013525
+}

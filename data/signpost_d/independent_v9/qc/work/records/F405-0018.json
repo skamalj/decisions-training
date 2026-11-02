@@ -1,0 +1,150 @@
+{
+ "id": "F405-0018",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C318",
+   "detected_on": "2025-11-11",
+   "term_start": "2025-09-29",
+   "room": "SR12"
+  },
+  "booking_a": {
+   "dept": "LAW",
+   "room": "SR12",
+   "day": "Tue",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "headcount": 40,
+   "required_features": [
+    "accessible_entry"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "dept": "ENG",
+   "room": "SR-12",
+   "day": "Tue",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-08-30",
+   "approver": "pl"
+  },
+  "room": {
+   "code": "SR12",
+   "aliases": [
+    "SR-12"
+   ],
+   "capacity": 42
+  },
+  "alternatives": [
+   {
+    "code": "SR9",
+    "capacity": 36,
+    "features": [
+     "accessible_entry"
+    ],
+    "weeks_free": [
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-09-15"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 0,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.9,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 1
+ },
+ "factors_sampled": {
+  "overlap_type": "week_pattern_disjoint",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 40,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.8,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 1
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "resolution": {
+   "clarity": "balanced",
+   "target": "dismiss",
+   "second": "hold_confirm",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "genuine_clash": "Weeks [7-10] and [2-5] do not intersect, and SR-12 is a listed alias of SR12.",
+  "alt_room_fits": "SR9 has accessible_entry and is free, but capacity 36 vs headcount 40 is slightly short, and the shortfall is small.",
+  "resolution": "No overlap points to dismiss, but the booking weeks should be confirmed as correct, giving a modest case for hold_confirm.",
+  "urgency": "Detected Tue 2025-11-11 and booking_a is a Tue slot in week 7 (2025-11-11) so today; with no real overlap, the clash timing is debatable between today and soon.",
+  "parties_needed": "Likely nobody beyond the officer, or one department confirming its weeks."
+ },
+ "request": "rec-F405-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009361
+}

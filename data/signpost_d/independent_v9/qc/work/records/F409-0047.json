@@ -1,0 +1,162 @@
+{
+ "id": "F409-0047",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "L. Okafor",
+   "submitted_on": "2024-06-10",
+   "app_type": "change_of_vehicle",
+   "message": "Can I buy visitor vouchers online?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "utility_bill",
+     "issued_on": "2024-06-07",
+     "address_line": "Flat 2, 8 Kiln Row",
+     "verified": null
+    },
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-06-01",
+     "address_line": "2/8 Kiln Row",
+     "verified": false
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2020-03-12",
+     "address_line": "Flat 2, 8 Kiln Row",
+     "verified": null
+    }
+   ],
+   "note": "Scans readable; checks pending."
+  },
+  "vehicle": {
+   "plate": "LB21 NWT",
+   "keeper_name": "L. Okafor",
+   "supporting_letters": [
+    {
+     "type": "employer_letter",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "C1",
+   "address": "Flat 2, 8 Kiln Row",
+   "plate_entered": "LB21 NWT",
+   "duration_months": 12
+  },
+  "account_history": {
+   "live_permits": [
+    "P310",
+    "P311"
+   ],
+   "max_per_household": 2,
+   "past_permits": [
+    {
+     "permit_no": "P290",
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "cancelled",
+     "reason": "signage fault"
+    },
+    {
+     "status": "cancelled",
+     "reason": "signage fault"
+    },
+    {
+     "status": "cancelled",
+     "reason": "permit shown"
+    },
+    {
+     "status": "cancelled",
+     "reason": "permit shown"
+    }
+   ],
+   "exceptions": []
+  }
+ },
+ "factors": {
+  "application_type": "change_of_vehicle",
+  "address_match_level": "format_only",
+  "proof_age_days": 3,
+  "docs_missing": 3,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 2,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "change_of_vehicle",
+  "address_match_level": "format_only",
+  "proof_age_days": 3,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "refuse",
+   "second": "hold",
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "clear",
+   "target": "household_cap",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 76,
+ "deciding": {
+  "residency_shown": "Documents are recent and match only in format ('Flat 2' vs '2/8'), but the utility bill and id_card are unverified (null) and the council tax bill failed verification.",
+  "disposition": "Two live permits against max_per_household 2 with no exception supports refusal; the unverified documents make a hold also defensible.",
+  "main_issue": "Two live permits equal the cap of 2 and exceptions is empty.",
+  "misuse_strength": "Past permit P290 is seized for a cloned copy on a different vehicle; the four PCNs are all cancelled.",
+  "document_gaps": "All three listed documents are null or failed verification, so three are unverified."
+ },
+ "request": "rec-F409-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009577
+}

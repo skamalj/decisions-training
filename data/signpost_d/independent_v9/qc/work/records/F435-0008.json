@@ -1,0 +1,145 @@
+{
+ "id": "F435-0008",
+ "family": "F435",
+ "state": {
+  "event": {
+   "zone_id": "F1",
+   "zone_type": "standing_floor",
+   "doors_open": "2025-07-02T19:00",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 1500,
+   "variation": null,
+   "stewards_required": 40,
+   "exit_routes": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 1500,
+   "issued": 1470
+  },
+  "ingress": {
+   "device_status": "ok",
+   "raw_peak": 1492,
+   "manual_recount": {
+    "count": 1490,
+    "at": "2025-07-02T21:00"
+   }
+  },
+  "stewarding": {
+   "rostered": 41,
+   "signed_in": 39
+  },
+  "exit_checks": [
+   {
+    "route_id": "A",
+    "checked_at": "2025-07-02T18:20",
+    "status": "clear"
+   },
+   {
+    "route_id": "B",
+    "checked_at": "2025-07-02T18:25",
+    "status": "clear"
+   },
+   {
+    "route_id": "C",
+    "checked_at": "2025-07-02T18:40",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "C",
+    "checked_at": "2025-07-02T19:00",
+    "status": "clear"
+   },
+   {
+    "route_id": "D",
+    "checked_at": "2025-07-02T19:12",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.995,
+  "counter_status": "ok",
+  "counter_inflation": 0.03,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.98,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.025,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 3,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "standing_floor",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.06,
+  "counter_status": "ok",
+  "counter_inflation": 0.03,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 1.09,
+  "limit_mismatch": false,
+  "steward_gap_pct": -0.02,
+  "relief_called": false,
+  "roster_missing": false,
+  "exits_unconfirmed": 3,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "restrict_entry",
+   "second": "escalate",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "verified_exceedance": "The counter is ok with raw_peak 1492, and the recount of 1490 agrees. Both are under the 1500 limit.",
+  "disposition": "Counts are just under the limit, but the event has ended and exits and staffing are imperfect. Restricting entry or escalating are both argued, with no clear breach to settle it.",
+  "discrepancy_source": "Issued 1470 and the peak of 1492 are both within the 1500 limit that ticketing used. The near-limit peak leaves a little doubt.",
+  "steward_shortfall": "signed_in 39 of 40 required is 2.5% under, slight. The roster of 41 gives a case for treating it as met.",
+  "unconfirmed_exits": "Of 5 routes, D was checked after doors and E is absent. C was obstructed and cleared at exactly 19:00, the door time, so it may or may not count. That makes 2 or 3 unconfirmed."
+ },
+ "request": "rec-F435-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01568
+}

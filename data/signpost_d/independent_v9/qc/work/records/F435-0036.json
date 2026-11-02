@@ -1,0 +1,163 @@
+{
+ "id": "F435-0036",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "E-7101",
+   "zone_id": "HD2",
+   "zone_type": "hospitality_deck",
+   "doors_open": "2025-03-14T19:00",
+   "check_filed_at": "2025-03-14T23:40",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 400,
+   "variation": null,
+   "stewards_required": 8,
+   "exit_routes": [
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 400,
+   "issued": 372,
+   "comps_included": 30,
+   "scanned_in": 361
+  },
+  "ingress": {
+   "device_id": "D14",
+   "device_status": "fault_logged",
+   "raw_peak": 412,
+   "peak_at": "2025-03-14T20:10",
+   "manual_recount": {
+    "count": 368,
+    "at": "2025-03-14T20:25"
+   }
+  },
+  "stewarding": {
+   "rostered": 9,
+   "signed_in": 6,
+   "relief": {
+    "called_at": "2025-03-14T18:50",
+    "eta_min": 20
+   }
+  },
+  "exit_checks": [
+   {
+    "route_id": "X1",
+    "checked_at": "2025-03-14T18:20",
+    "status": "clear"
+   },
+   {
+    "route_id": "X2",
+    "checked_at": "2025-03-14T18:25",
+    "status": "clear"
+   },
+   {
+    "route_id": "X3",
+    "checked_at": "2025-03-14T18:30",
+    "status": "clear"
+   },
+   {
+    "route_id": "X4",
+    "checked_at": "2025-03-14T18:35",
+    "status": "clear"
+   },
+   {
+    "route_id": "X5",
+    "checked_at": "2025-03-14T19:12",
+    "status": "clear"
+   },
+   {
+    "route_id": "X6",
+    "checked_at": "2025-03-14T18:40",
+    "status": "obstructed"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "hospitality_deck",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.92,
+  "counter_status": "fault_logged",
+  "counter_inflation": 0.12,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.93,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.25,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 2,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "hospitality_deck",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.85,
+  "counter_status": "calibration_due",
+  "counter_inflation": 0.12,
+  "manual_recount_present": false,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.93,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.07,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 0,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "counter_fault",
+   "second": null,
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 51,
+ "deciding": {
+  "verified_exceedance": "Faulty counter peak 412 exceeds limit 400, but the manual recount of 368 is the verified figure and is under the limit.",
+  "disposition": "Verified occupancy 368 is under the limit of 400 and tickets issued 372 are under the limit, so counts reconcile.",
+  "discrepancy_source": "Only the fault_logged device (412) is over 400; issued 372 is within the limit used 400.",
+  "steward_shortfall": "Signed in 6 of 8 required is exactly 25% below, on the boundary between Marked and Severe; rostered 9 is a decoy.",
+  "unconfirmed_exits": "X5 was checked after doors (19:12) and X6 was obstructed with no later clear, so two routes lacked a pre-doors clear."
+ },
+ "request": "rec-F435-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010641
+}

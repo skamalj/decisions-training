@@ -1,0 +1,128 @@
+{
+ "id": "F407-0016",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "R-1041",
+   "received_at": "2025-03-12T09:10",
+   "channel": "own_inspector",
+   "photo_ref": null,
+   "linked_reports": [],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "main_distributor",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "inspected_at": "2025-03-05",
+   "depth_mm": 41,
+   "width_mm": 629.24,
+   "offset_m": 120
+  },
+  "works_history": [
+   {
+    "job": "J-88",
+    "completed": "2023-06-02",
+    "offset_m": 118,
+    "guarantee_end": "2024-06-02"
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "start": "2025-03-24",
+     "from_m": 0,
+     "to_m": 300
+    }
+   ],
+   "temp_measures": []
+  },
+  "current_order": {
+   "id": "WO-552",
+   "raised": "2025-03-06",
+   "status": "in_progress",
+   "completed_items": 3,
+   "total_items": 5
+  }
+ },
+ "factors": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "same_spot_out_guarantee",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": true,
+  "duplicate_count": 0,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": false,
+  "order_status": "partially_complete",
+  "defect_width_mm": 629.24,
+  "photo_attached": false
+ },
+ "factors_sampled": {
+  "road_category": "main_distributor",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "dated_before_report",
+  "prior_repair_match": "none",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": true,
+  "duplicate_count": 0,
+  "reporter_source": "own_inspector",
+  "injury_or_claim": false,
+  "order_status": "partially_complete",
+  "defect_width_mm": 629.24,
+  "photo_attached": false
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "repeat_failure": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "meets_threshold": "inspection depth 41 mm vs threshold 40 mm, but the inspection (2025-03-05) predates the report (2025-03-12), leaving some doubt.",
+  "repeat_failure": "works_history job at offset 118 m vs inspection offset 120 m is within 10 m and completed in 2023, though the guarantee has ended.",
+  "next_step": "Works order WO-552 already open (3 of 5 items done) and a scheme starting 2025-03-24 covers the offset, so the report adds nothing new.",
+  "staff_effort": "Finishing the existing partly complete order is a short admin task: a check of the order and scheme, split between under an hour and a few hours.",
+  "response_timescale": "Depth marginally over threshold on a main distributor, with an old inspection and an imminent scheme; routine 28-day vs priority 5-day is arguable."
+ },
+ "request": "rec-F407-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007742
+}

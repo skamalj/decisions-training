@@ -1,0 +1,144 @@
+{
+ "id": "F408-0003",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 100077,
+   "postcode": "HX4 2PL",
+   "stream": "refuse",
+   "claimed_date": "2024-08-06",
+   "logged_at": "2024-08-12T09:00",
+   "photo_attached": true
+  },
+  "property": {
+   "uprn": 100077,
+   "postcode": "HX4 2PJ",
+   "assisted_collection": true,
+   "assisted_since": "2024-01-10"
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled_date": "2024-08-06"
+  },
+  "round_log": {
+   "stops": [
+    {
+     "uprn": 100077,
+     "exception_code": null,
+     "photo_ref": null,
+     "gps_stop": false
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 100077,
+    "logged_on": "2024-07-22",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100077,
+    "logged_on": "2024-06-25",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100077,
+    "logged_on": "2024-06-03",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100077,
+    "logged_on": "2024-05-10",
+    "outcome": "rejected"
+   },
+   {
+    "uprn": 100078,
+    "logged_on": "2024-07-30",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "beyond_window",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "postcode_typo",
+  "prior_upheld_misses": 3,
+  "history_decoys": 2,
+  "assisted_miss_breach": true
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "beyond_window",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "postcode_typo",
+  "prior_upheld_misses": 3,
+  "history_decoys": 2,
+  "assisted_miss_breach": true
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_supervisor",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (assisted_miss_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 30,
+ "deciding": {
+  "crew_missed": "Stop has no exception, no photo and gps_stop false on an assisted address, but the report came six days late and the postcode differs by one character.",
+  "report_matches": "Stream and claimed date equal the schedule; only the postcode typo and late logging create doubt.",
+  "next_step": "Assisted breach plus three upheld misses in 84 days points to supervisor referral.",
+  "return_urgency": "Assisted collection since 2024-01-10 with gps_stop false at the stop is an assisted breach, so same day.",
+  "repeat_failures": "Three upheld entries for this UPRN in the window; the rejected entry and neighbour UPRN 100078 do not count, and the postcode typo leaves slight doubt."
+ },
+ "request": "rec-F408-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008509
+}

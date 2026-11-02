@@ -1,0 +1,159 @@
+{
+ "id": "F420-0013",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PMC55218KT",
+   "flt": "XQ930",
+   "dest": "FRA",
+   "pos": "31",
+   "contour_max_cm": 244,
+   "tare_kg": 250,
+   "planned_gross_kg": 3000,
+   "straps_required": 6,
+   "cutoff_utc": "2025-07-21T18:00:00Z"
+  },
+  "manifest_lines": [
+   {
+    "awb": "176-77031001",
+    "dest": "FRA",
+    "pcs": 20,
+    "weight_kg": 1500
+   },
+   {
+    "awb": "176-77031012",
+    "dest": "FRA",
+    "pcs": 9,
+    "weight_kg": 900,
+    "shc": "MAG",
+    "un_no": "UN3481",
+    "dg_class": "9"
+   },
+   {
+    "awb": "176-77031023",
+    "dest": "FRA",
+    "pcs": 5,
+    "weight_kg": 350
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2025-07-21T13:28:00Z",
+   "scale_gross_kg": 3097,
+   "max_height_cm": 238,
+   "pcs_counted": {
+    "176-77031001": 20,
+    "176-77031012": 9,
+    "176-77031023": 4
+   },
+   "straps_fitted": 6,
+   "net_fitted": true,
+   "uld_serial_scanned": "PMC55218KT"
+  },
+  "dg_notoc": [
+   {
+    "awb": "176-77031012",
+    "un_no": "UN3481",
+    "dg_class": "9",
+    "pcs": 9,
+    "position": "31"
+   }
+  ],
+  "approvals": {
+   "part_shipments": [],
+   "contour_waivers": [
+    {
+     "uld": "PMC55218KT",
+     "position": "31",
+     "max_cm": 250
+    }
+   ]
+  },
+  "checks_log": {
+   "scale_cal_due": "2025-12-15",
+   "reweigh": {
+    "scale": "S2",
+    "kg": 3093
+   },
+   "rebuilds": [
+    "2025-07-21T08:40:00Z",
+    "2025-07-21T11:05:00Z"
+   ]
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 3.1,
+  "piece_count_gap": -1,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "within_2cm",
+  "contour_waiver": true,
+  "dg_state": "dg_compatible",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 272,
+  "prior_rebuilds": 2
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 4.64,
+  "piece_count_gap": -1,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "within_2cm",
+  "contour_waiver": true,
+  "dg_state": "dg_compatible",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 272,
+  "prior_rebuilds": 2
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "rebuild",
+   "second": "hold",
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "clear",
+   "target": "none",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "weight_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 157,
+ "deciding": {
+  "pieces_reconciled": "176-77031023 has 5 pieces manifested and 4 counted, and the part_shipments list is empty, so the shortfall is unexplained.",
+  "disposition": "The unexplained missing piece and a reweigh of +3.1% point to a rebuild, but a hold to locate the piece is also defensible, and two earlier rebuilds are logged.",
+  "worst_discrepancy": "The DG line matches the NOTOC and the paperwork is clean, but the unexplained one-piece gap is a physical issue.",
+  "weight_deviation": "The reweigh of 3093 kg against a plan of 3000 kg is +3.1%, just over the 3% boundary between levels 1 and 2.",
+  "rework_extent": "A missing piece plus weight just over 3% points to partial rework, but the earlier rebuilds make a full breakdown arguable."
+ },
+ "request": "rec-F420-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013733
+}

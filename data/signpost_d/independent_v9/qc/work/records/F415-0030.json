@@ -1,0 +1,173 @@
+{
+ "id": "F415-0030",
+ "family": "F415",
+ "state": {
+  "site": {
+   "id": "TB-31",
+   "closures": [
+    {
+     "from": "10:00",
+     "to": "11:00",
+     "reason": "vandalism repair",
+     "approved_by": "OFF07"
+    }
+   ]
+  },
+  "shift": {
+   "date": "2024-09-11",
+   "start": "08:00",
+   "end": "14:00",
+   "sched_slots": [
+    "08:00",
+    "10:00",
+    "12:00",
+    "13:30"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "start": "08:02",
+    "end": "08:25",
+    "status": "done",
+    "checklist": {
+     "wc": true,
+     "floor": true,
+     "basin": false
+    },
+    "photo_ref": null
+   },
+   {
+    "slot": "10:00",
+    "start": "10:05",
+    "end": "10:30",
+    "status": "done",
+    "checklist": {
+     "wc": true,
+     "floor": false,
+     "basin": false
+    },
+    "photo_ref": null
+   },
+   {
+    "slot": "12:00",
+    "start": "12:01",
+    "end": "12:22",
+    "status": "done",
+    "checklist": {
+     "wc": true,
+     "floor": true,
+     "basin": true
+    },
+    "photo_ref": null
+   },
+   {
+    "slot": "13:30",
+    "start": "13:31",
+    "end": "13:50",
+    "status": "done",
+    "checklist": {
+     "wc": true,
+     "floor": true,
+     "basin": true
+    },
+    "photo_ref": null
+   }
+  ],
+  "faults": [
+   {
+    "type": "vandalised_basin",
+    "reported_at": "2024-09-11T10:05",
+    "remedied_at": "2024-09-11T11:02",
+    "source": "staff",
+    "remedy_note": "basin replaced"
+   }
+  ],
+  "sign_off": {
+   "signer_id": "O44",
+   "signer_role": "operative",
+   "signed_at": "2024-09-11T14:05",
+   "comment": "all done"
+  },
+  "history": {
+   "defaults": 3,
+   "complaints": 2
+  }
+ },
+ "factors": {
+  "scheduled_slots": 4,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "unauthorised_signer",
+  "fault_type": "vandalised_basin",
+  "fault_open_minutes": 57.21,
+  "block_closed_during_fault": true,
+  "checklist_completion": "partial",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 3
+ },
+ "factors_sampled": {
+  "scheduled_slots": 4,
+  "missed_slots": "2",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "vandalised_basin",
+  "fault_open_minutes": 57.21,
+  "block_closed_during_fault": false,
+  "checklist_completion": "partial",
+  "photo_evidence": false,
+  "timestamp_out_of_order": false,
+  "note_content": "routine",
+  "prior_defaults_90d": 3
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "sign_off_valid": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 149,
+ "deciding": {
+  "missed_clean": "All 4 slots show done visits, so no slot lacks a completed visit, though some checklist tasks are false.",
+  "sign_off_valid": "signer_role is operative, not supervisor, so the sign-off is unauthorised.",
+  "next_step": "There is no service failure or missing item, but the operative sign-off and partial checklists leave a little doubt about accepting.",
+  "staff_effort": "Replacing the signer and checking the partial checklists could take a long time or only a moderate amount; the log does not say.",
+  "fault_exposure": "The fault ran 10:05-11:02 (57 min), almost all inside the approved closure 10:00-11:00, leaving about 2 public minutes, so level 0 or 1 are both defensible."
+ },
+ "request": "rec-F415-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008749
+}

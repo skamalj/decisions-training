@@ -1,0 +1,162 @@
+{
+ "id": "F418-0039",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "MRF",
+   "plat": 4,
+   "date": "2025-06-17",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S1",
+    "planned_start": "06:00",
+    "planned_end": "14:00"
+   },
+   {
+    "post": "B",
+    "staff_id": "S6",
+    "planned_start": "06:00",
+    "planned_end": "14:00"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S1",
+    "sign_on": "06:00",
+    "sign_off": "14:00",
+    "safety_comp_exp": "2026-04-01",
+    "dispatch_comp_exp": "2026-04-01"
+   },
+   {
+    "staff_id": "S6",
+    "sign_on": "05:58",
+    "sign_off": "10:00",
+    "safety_comp_exp": "2026-03-12",
+    "dispatch_comp_exp": "2026-03-12"
+   },
+   {
+    "staff_id": "S8",
+    "sign_on": "10:06",
+    "sign_off": "11:17",
+    "safety_comp_exp": "2026-08-01",
+    "dispatch_comp_exp": "2026-08-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "10:00",
+    "staff_id": "S6",
+    "platform": 4
+   },
+   {
+    "type": "cover_start",
+    "time": "10:00",
+    "staff_id": "S8",
+    "platform": 4
+   },
+   {
+    "type": "cover_end",
+    "time": "11:17",
+    "staff_id": "S8",
+    "platform": 4
+   },
+   {
+    "type": "gap_end",
+    "time": "11:17",
+    "staff_id": "S6",
+    "platform": 4
+   }
+  ],
+  "controls": null,
+  "remarks": [
+   "Possession on Up line 10:00-11:30, few passengers.",
+   "Single-staffing dispensation DSP-4471 used, sheet to follow."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 77,
+  "shortfall_timing": "peak",
+  "dispensation_present": false,
+  "dispensation_fit": "unknown",
+  "cover_arrangement": "full",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "minor",
+  "shortfall_minutes": 77,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": false,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_records",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "cover_arranged",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 76,
+ "deciding": {
+  "headcount_verified": "S8 is not on the roster and signed on at 10:06 against a cover_start of 10:00. Competence is in date and the sign-on record exists, so true is still plausible.",
+  "next_step": "controls is null while remarks cite dispensation DSP-4471 with the sheet to follow. The missing dispensation reference is the specific item to request.",
+  "coverage_outcome": "S8's cover_start and cover_end span the 10:00 to 11:17 gap, so the gap is filled by relief and none is left open.",
+  "reversal_time": "The shift is past and the sign-on mismatch sits against an unreferenced dispensation. Records could be fixed within months, but the exposure itself is not reversible.",
+  "exposure_severity": "The below-minimum period is real, with no dispensation record because controls is null. The remarks claim a dispensation and a possession with few passengers, so level 1 against level 2 is contestable."
+ },
+ "request": "rec-F418-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012319
+}

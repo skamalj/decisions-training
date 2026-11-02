@@ -1,0 +1,153 @@
+{
+ "id": "F413-0003",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "office",
+   "stations": [
+    "O1",
+    "O2"
+   ],
+   "zones": [
+    {
+     "id": "store",
+     "toxic_bait_permitted": true
+    }
+   ]
+  },
+  "visit": {
+   "id": "V305",
+   "type": "routine",
+   "start": "2024-07-03T13:00",
+   "end": "2024-07-03T14:20",
+   "client_signoff": "2024-07-03T13:40",
+   "tech_licence_expiry": "2026-02-01"
+  },
+  "treatments": [
+   {
+    "product": "RB-9",
+    "zone": "store",
+    "area_m2": 30,
+    "qty_applied": null,
+    "unit": "g",
+    "label_max_per_m2": 10
+   },
+   {
+    "product": "GL-1",
+    "zone": "store",
+    "area_m2": 20,
+    "qty_applied": 265,
+    "unit": "g",
+    "label_max_per_m2": 10
+   }
+  ],
+  "monitoring": null,
+  "van_stock": [
+   {
+    "movement": "withdrawal",
+    "product": "RB-9",
+    "qty": 400,
+    "unit": "g"
+   },
+   {
+    "movement": "return",
+    "product": "RB-9",
+    "qty": 100,
+    "unit": "g"
+   },
+   {
+    "movement": "withdrawal",
+    "product": "GL-1",
+    "qty": 265,
+    "unit": "g"
+   }
+  ],
+  "follow_up": {
+   "prev_visit": "V290",
+   "prev_active_stations": 3,
+   "actions": [
+    {
+     "status": "raised",
+     "booked": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": true,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": true,
+  "date_sequence": "signoff_before_visit_end",
+  "activity_trend": "decreased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 32.46,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "office"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": true,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": true,
+  "date_sequence": "signoff_before_visit_end",
+  "activity_trend": "decreased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 32.46,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "office"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_records",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 132,
+ "deciding": {
+  "usage_reconciled": "RB-9 qty_applied is null although 300 g net left the van, so it is unlogged.",
+  "activity_increased": "Monitoring is null, but the previous count of 3 active stations gives no sign of a rise.",
+  "next_step": "Missing quantity, missing monitoring sheet and sign-off before visit end must be supplied first.",
+  "breach_severity": "GL-1 is 13.25 g/m2 against label max 10, a dose overage (level 2), with paperwork gaps also present.",
+  "parties_needed": "Technician, client for sign-off and a manager for the overdose and unbooked action; two or three teams."
+ },
+ "request": "rec-F413-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005474
+}

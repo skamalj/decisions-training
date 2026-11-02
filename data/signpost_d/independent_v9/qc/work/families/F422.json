@@ -1,0 +1,319 @@
+{
+ "id": "F422",
+ "domain": "pharmaceutical warehouse returns quarantine",
+ "role": "GDP Responsible Person reviewing customer returns held in the warehouse quarantine cage",
+ "setting": "A licensed pharmaceutical wholesale warehouse receives returned stock from pharmacies and hospitals. Each return is booked into a locked quarantine location and must be dispositioned before its hold limit. The Responsible Person opens one return record at a time. They compare the customer's claim, the original dispatch, the physical inspection, unique-identifier scans, temperature evidence and the customer's storage compliance, then decide what happens to the stock.",
+ "questions": {
+  "storage_maintained": {
+   "type": "noul",
+   "instructions": "Stock stayed within labelled storage conditions while away from the warehouse.",
+   "criteria": null
+  },
+  "batch_traceable": {
+   "type": "noul",
+   "instructions": "Every counted pack belongs to a batch originally dispatched to this customer.",
+   "criteria": {
+    "true": "Each counted batch appears on the linked dispatch.",
+    "false": "A counted batch is missing from dispatch, or no dispatch is linked."
+   }
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should happen to this quarantined return now?",
+   "criteria": {
+    "release_stock": "All packs pass every check; return them to saleable stock.",
+    "request_evidence": "One named document is missing; obtain it before deciding.",
+    "partial_release": "Release sound packs; send failed or short-dated packs for destruction.",
+    "reject_destroy": "No pack is resaleable; book the whole return for destruction.",
+    "escalate_qp": "Unexplained authenticity or traceability failure; refer to the Qualified Person."
+   }
+  },
+  "resaleable_share": {
+   "type": "score",
+   "instructions": "What share of counted packs is fit for saleable stock?",
+   "criteria": [
+    "No counted pack is fit for resale",
+    "Fewer than half of counted packs fit",
+    "Half or more, but not all, fit",
+    "Every counted pack fit for resale"
+   ]
+  },
+  "disposition_urgency": {
+   "type": "score",
+   "instructions": "How soon must this return be dispositioned before its hold limit?",
+   "criteria": [
+    "Routine: more than 20 days remain before hold limit",
+    "Planned: 10 to 20 days remain before limit",
+    "Prompt: 4 to 9 days remain before limit",
+    "Urgent: 0 to 3 days remain before limit",
+    "Overdue: effective hold limit already passed"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "storage_class",
+   "description": "Labelled storage requirement of the product: ambient up to 25°C, or refrigerated 2–8°C. This sets which temperature evidence is needed.",
+   "kind": "categorical",
+   "values": [
+    "ambient_25",
+    "cold_2_8"
+   ],
+   "weights": [
+    0.55,
+    0.45
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "logger_coverage",
+   "description": "Whether the temperature logger window spans the period from customer delivery to warehouse receipt, leaves a gap at either end, or is absent.",
+   "kind": "categorical",
+   "values": [
+    "full",
+    "partial_gap",
+    "absent"
+   ],
+   "weights": [
+    0.5,
+    0.3,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4",
+    "S5"
+   ]
+  },
+  {
+   "name": "excursion_minutes",
+   "description": "Cumulative minutes the logged readings sat outside the labelled range. Values below 30 are rendered as 0.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 480,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "stability_allowance_on_file",
+   "description": "Mitigation: a manufacturer stability statement is on file that tolerates excursions up to a stated duration and temperature.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "batch_reconciliation",
+   "description": "How counted batch and expiry compare with the original dispatch lines: exact; same batch with expiry in a different format; one line with a batch never dispatched to this customer; or no dispatch reference found.",
+   "kind": "categorical",
+   "values": [
+    "exact",
+    "expiry_format_only",
+    "one_foreign_batch",
+    "no_dispatch_link"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "count_discrepancy_packs",
+   "description": "Difference between packs claimed on the customer return note and packs physically counted, spread across one or more lines.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 12,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "damaged_pack_fraction",
+   "description": "Share of counted packs with broken anti-tamper seals, crushed cartons or pharmacy labels attached.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 1,
+   "p_true": 0,
+   "skills": [
+    "S4"
+   ]
+  },
+  {
+   "name": "uid_alert",
+   "description": "Alarming signal: at least one pack's unique identifier scan returns a decommissioned or unknown status at verification.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "uid_alert_explained",
+   "description": "Mitigation for a scan alert: the decommission event was made at this customer's own site within 10 days, so the pack is eligible for reactivation.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "days_out_of_control",
+   "description": "Days between delivery to the customer and receipt back at the warehouse, compared against the policy maximum for saleable returns.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 1,
+   "max": 45,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "customer_audit_current",
+   "description": "Mitigation: the customer site holds an in-date storage audit and a signed storage declaration covering this return.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "quarantine_days_remaining",
+   "description": "Days from review date to the original hold limit (received date plus hold limit days). Negative means the limit has passed.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": -6,
+   "max": 30,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "hold_extension_approved",
+   "description": "Mitigation: an approved hold extension moves the effective limit to a later date.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "shelf_life_months_remaining",
+   "description": "Months from review date to the counted pack expiry, compared with the minimum remaining shelf life required for saleable stock.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 30,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "return_header",
+   "description": "Return id, customer site, delivered_at, received_at, review_date, reason code, and claimed lines with qty_claimed."
+  },
+  {
+   "name": "dispatch_ref",
+   "description": "Original dispatch number and date, with lines of gtin, batch, expiry and qty_dispatched; null if unlinked."
+  },
+  {
+   "name": "inspection",
+   "description": "Counted lines with gtin, batch, expiry, qty_counted, packs_damaged and seals_intact, plus a list of uid_scans with status and event details."
+  },
+  {
+   "name": "temperature",
+   "description": "Storage class, labelled range, logger id, logger_start and logger_end, min_c, max_c, minutes_out_of_range, and a stability_ref (null if none)."
+  },
+  {
+   "name": "customer_compliance",
+   "description": "Last storage audit date, audit_valid_until, and whether a storage declaration was received for this return."
+  },
+  {
+   "name": "quarantine_control",
+   "description": "Location, hold_limit_days, extension object, max_days_out_of_control and min_shelf_life_months policy values."
+  }
+ ],
+ "rendering_notes": "storage_class appears in temperature.storage_class and temperature.labelled_range. logger_coverage is never stated; the reader must compare logger_start and logger_end with return_header.delivered_at and received_at. A gap shows as a start after delivery or an end before receipt; absent means logger_id, logger_start and logger_end are null. excursion_minutes appears as temperature.minutes_out_of_range, alongside min_c and max_c that sit outside or inside the labelled range consistently. stability_allowance_on_file appears as temperature.stability_ref, an object with max_hours and max_c, or null. batch_reconciliation is shown only by comparing inspection line batch and expiry with dispatch_ref lines. expiry_format_only renders as the same batch with expiry written as month-year on one side and a full date on the other. no_dispatch_link renders dispatch_ref as null. count_discrepancy_packs is split across lines as differences between return_header claimed qty_claimed and inspection qty_counted. damaged_pack_fraction is rendered as per-line packs_damaged and seals_intact counts. uid_alert appears as one or more inspection.uid_scans entries with status 'decommissioned' or 'unknown'. uid_alert_explained adds decommission_site matching the customer site id and a decommission_at within 10 days of review_date; otherwise the site is different or null. days_out_of_control must be computed from delivered_at and received_at against quarantine_control.max_days_out_of_control. customer_audit_current appears as audit_valid_until on or after review_date plus declaration_received true. quarantine_days_remaining is computed from received_at plus hold_limit_days against review_date. hold_extension_approved appears as extension {approved: true, new_limit_date}, which replaces the original limit; otherwise approved is false and new_limit_date is null. shelf_life_months_remaining is computed from counted expiry against review_date and min_shelf_life_months. Decoys: return_reason_code (for example ORDER_ERROR, OVERSTOCK, DAMAGED_IN_TRANSIT) does not decide anything, and a damage reason code may come with intact packs. quarantine_location codes, logger battery level, and an extra matching dispatch line for a product not returned are also decoys. Mismatches are never flagged. No field may state resaleability, urgency, disposition, risk or a pass/fail verdict.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_evidence"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.194444
+}

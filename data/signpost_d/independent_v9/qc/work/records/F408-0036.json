@@ -1,0 +1,127 @@
+{
+ "id": "F408-0036",
+ "family": "F408",
+ "state": {
+  "report": {
+   "logged_at": "2024-05-14T15:00",
+   "stream": "refuse",
+   "claimed": "2024-05-14"
+  },
+  "property": {
+   "assisted": true,
+   "since": "2023-09-01"
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "date": "2024-05-14"
+  },
+  "round_log": {
+   "done_at": "2024-05-14T13:30",
+   "stops": [
+    {
+     "exc": "not_presented",
+     "photo": "P1",
+     "gps_stop": true
+    }
+   ]
+  },
+  "history": [
+   {
+    "on": "2024-04-02",
+    "out": "upheld"
+   },
+   {
+    "on": "2024-03-05",
+    "out": "upheld"
+   },
+   {
+    "on": "2024-05-01",
+    "out": "pending"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 2,
+  "assisted_miss_breach": true
+ },
+ "factors_sampled": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 2,
+  "assisted_miss_breach": true
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "return_conditional",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (assisted_miss_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 27,
+ "deciding": {
+  "crew_missed": "Stop has exception not_presented with photo ref and gps_stop true, a supported exception.",
+  "report_matches": "Reported stream and claimed date equal schedule stream and date; logged after round done.",
+  "next_step": "Not_presented exception is supported, so a return depends on presentation being fixed; pending case adds some doubt.",
+  "return_urgency": "Assisted collection since 2023-09 and stop shows not_presented: same-day return.",
+  "repeat_failures": "Two upheld within 84 days plus a pending case that could become a third."
+ },
+ "request": "rec-F408-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008871
+}

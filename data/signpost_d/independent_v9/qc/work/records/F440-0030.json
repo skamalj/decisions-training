@@ -1,0 +1,192 @@
+{
+ "id": "F440-0030",
+ "family": "F440",
+ "state": {
+  "booking": {
+   "ref": "YH-5590",
+   "review_date": "2025-03-01",
+   "arrival": "2025-03-31",
+   "departure": "2025-04-03",
+   "pax_by_band": {
+    "13-17": 10,
+    "u13": 2,
+    "adult": 2
+   },
+   "diet_totals": {
+    "gf": 2
+   },
+   "amendments": [
+    {
+     "type": "date_change",
+     "delta": "+4d",
+     "logged_at": "2025-02-10"
+    }
+   ]
+  },
+  "roster": [
+   {
+    "role": "participant",
+    "dob": "2010-06-01",
+    "sex": "F",
+    "n": 5,
+    "diet": 2
+   },
+   {
+    "role": "participant",
+    "dob": "2010-06-01",
+    "sex": "M",
+    "n": 4,
+    "diet": 1
+   },
+   {
+    "role": "participant",
+    "dob": "2014-01-01",
+    "sex": "F",
+    "n": 2
+   },
+   {
+    "role": "participant",
+    "dob": "2014-01-01",
+    "sex": "M",
+    "n": 1
+   },
+   {
+    "role": "leader",
+    "n": 2
+   }
+  ],
+  "allocation": [
+   {
+    "type": "dorm",
+    "sex": "F",
+    "beds": 8,
+    "nights": [
+     "2025-03-24",
+     "2025-03-25",
+     "2025-03-26"
+    ]
+   },
+   {
+    "type": "dorm",
+    "sex": "M",
+    "beds": 6,
+    "nights": [
+     "2025-03-24",
+     "2025-03-25",
+     "2025-03-26"
+    ]
+   }
+  ],
+  "payment": {
+   "total": 1500,
+   "deposit_due": 450,
+   "paid_total": 225,
+   "instalments": [
+    {
+     "due": "2025-02-15",
+     "amt": 225,
+     "approved": true
+    },
+    {
+     "due": "2025-04-10",
+     "amt": 225,
+     "approved": true
+    }
+   ]
+  },
+  "safeguarding": [
+   {
+    "status": "verified",
+    "expiry": "2026-06-01"
+   },
+   {
+    "status": "verified",
+    "expiry": "2026-06-01"
+   }
+  ],
+  "history": {
+   "trusted": true,
+   "stays": 14,
+   "no_shows": 4
+  }
+ },
+ "factors": {
+  "pax_mismatch": "none",
+  "night_mismatch": "different_dates",
+  "amendment_logged": true,
+  "supervision_level": "exactly_at_ratio",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": true,
+  "days_to_arrival": 30,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": true,
+  "prior_no_shows": 4,
+  "diet_count_drift": "minor"
+ },
+ "factors_sampled": {
+  "pax_mismatch": "none",
+  "night_mismatch": "different_dates",
+  "amendment_logged": true,
+  "supervision_level": "exactly_at_ratio",
+  "extra_cover_logged": false,
+  "deposit_position": "partial",
+  "instalment_approved": true,
+  "days_to_arrival": 93,
+  "dorm_fit": "fits",
+  "leader_checks": "all_verified",
+  "trusted_organiser": true,
+  "prior_no_shows": 4,
+  "diet_count_drift": "none"
+ },
+ "plan": {
+  "ratio_met": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "deposit_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "confirm_conditional",
+   "second": "decline",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "conflict_count": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 83,
+ "deciding": {
+  "ratio_met": "Roster has 9 teens and 3 under-13s with 2 leaders. The requirement is 2 adults for the combined load, both leaders are verified, and none leaves early.",
+  "deposit_covered": "Paid 225 against deposit_due 450, but the schedule is marked approved and the 2025-02-15 instalment of 225 is met. The second instalment is not due until 2025-04-10.",
+  "disposition": "Date errors, a band split and a diet drift are open, though ratio, deposit schedule and checks are fine. A reviewer could confirm with one item to clear, or decline because the allocation dates do not match the stay.",
+  "urgency": "Review 2025-03-01 against arrival 2025-03-31 is exactly 30 days, the top edge of level 1 and next to level 0.",
+  "conflict_count": "Booked bands 10/2 differ from roster 9/3, diet 2 differs from roster 3, and the allocation nights 24-26 do not match the 31 Mar to 3 Apr stay. The +4d amendment leaves a 3-day residual, so it counts as three or four."
+ },
+ "request": "rec-F440-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.016424
+}

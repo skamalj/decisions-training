@@ -1,0 +1,139 @@
+{
+ "id": "F401-0023",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P303",
+   "planned_discharge_at": "2025-03-10T11:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 16,
+     "spo2": 98,
+     "recorded_at": "2025-03-10T06:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P303",
+   "reconciled": [
+    {
+     "drug": "senna",
+     "dose": 15,
+     "unit": "mg"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "senna",
+     "dose": 15,
+     "unit": "mg"
+    }
+   ]
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "done",
+     "signed_by": null
+    },
+    {
+     "t": "letter",
+     "status": "pending"
+    },
+    {
+     "t": "bloods",
+     "status": "pending"
+    }
+   ],
+   "transport": {
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 3,
+  "false_completion": true,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "transport_time_unknown",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 5,
+  "false_completion": true,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "transport_time_unknown",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "discharge_now",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "home_independent",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "rx_matches": "senna 15 mg identical in both lists.",
+  "next_step": "Normal obs and nothing in the record calls for senior input; plan answer is discharge_now despite open tasks.",
+  "destination": "No therapy or social needs; home independent.",
+  "outstanding_tasks": "Two pending items plus TTO done with null signer: three outstanding, at the 2/3 boundary.",
+  "discharge_delay": "pickup_time null on the planned date, the boundary between level 0 and 1."
+ },
+ "request": "rec-F401-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005411
+}

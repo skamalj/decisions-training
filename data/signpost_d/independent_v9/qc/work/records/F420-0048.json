@@ -1,0 +1,140 @@
+{
+ "id": "F420-0048",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PMC30991",
+   "serial": "30991",
+   "position": "12L",
+   "tare_kg": 150,
+   "planned_gross_kg": 2000,
+   "straps_required": 4,
+   "contour_max_cm": 160
+  },
+  "manifest_lines": [
+   {
+    "awb": "057-22410068",
+    "dest": "FRA",
+    "pcs": 10,
+    "weight_kg": 1100
+   },
+   {
+    "awb": "057-22410079",
+    "dest": "FRA",
+    "pcs": 6,
+    "weight_kg": 750
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2025-07-12T08:30:00Z",
+   "scale_gross_kg": 2075,
+   "max_height_cm": 150,
+   "pcs_counted": {
+    "057-22410068": 10,
+    "057-22410079": 5
+   },
+   "straps_fitted": 4,
+   "net_fitted": true,
+   "uld_serial_scanned": "30991"
+  },
+  "dg_notoc": null,
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "057-22410097",
+     "pcs_this_flight": 5
+    }
+   ],
+   "contour_waivers": [
+    {
+     "uld": "PMC30991",
+     "position": "12L",
+     "max_cm": 170
+    }
+   ]
+  },
+  "checks_log": {
+   "scale_cal_due": "2026-01-01",
+   "reweigh": {
+    "scale": "CAL-2",
+    "kg": 2100
+   }
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 5.0,
+  "piece_count_gap": -1,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "well_within",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "awb_digits_transposed",
+  "minutes_to_cutoff": 62,
+  "prior_rebuilds": 1
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 3.73,
+  "piece_count_gap": -1,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "well_within",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "awb_digits_transposed",
+  "minutes_to_cutoff": 62,
+  "prior_rebuilds": 1
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "release",
+   "second": "release_conditional",
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "pieces_reconciled": "AWB 057-22410079 counted 5 vs manifest 6; the only part shipment is for a different AWB (057-22410097, transposed digits), so the shortfall is unexplained.",
+  "disposition": "Reweigh 2100 vs 2000 is 5.0% and a piece is missing, with a transposed-AWB part shipment; the call is between release and conditional release but the physical issues weigh against it.",
+  "worst_discrepancy": "Unexplained shortfall and reweigh near 5% are physical, though the AWB transposition is paperwork only; the record is mixed.",
+  "weight_deviation": "Calibrated reweigh 2100 vs planned 2000 is exactly 5.0%, on the level 2/3 boundary (build scale 2075 is 3.75%).",
+  "rework_extent": "Securing complete, height 150 under limit and waiver matches 12L; only the one missing piece and 5% weight might need rework."
+ },
+ "request": "rec-F420-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012543
+}

@@ -1,0 +1,161 @@
+{
+ "id": "F432-0011",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E14",
+   "sp": "MUNT",
+   "risk_cat": 3,
+   "roster": [
+    "a1",
+    "a2",
+    "a3"
+   ],
+   "temp_range_c": [
+    18,
+    28
+   ]
+  },
+  "shift": {
+   "date": "2025-05-12",
+   "keeper_id": "K7",
+   "start": "08:02",
+   "end": "18:00",
+   "opening_count": 3,
+   "closing_count": 3
+  },
+  "movements": null,
+  "feeding": {
+   "sheet": "2025-03-01",
+   "items": [
+    {
+     "sheet_g": 4000,
+     "offered_g": 4000,
+     "leftover_g": 320,
+     "unit": "g",
+     "scatter_flag": true
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched_time": "09:00",
+    "logged": false
+   },
+   {
+    "sched_time": "11:00",
+    "logged": false
+   },
+   {
+    "sched_time": "13:00",
+    "logged": false
+   },
+   {
+    "sched_time": "15:00",
+    "logged": false
+   },
+   {
+    "sched_time": "17:00",
+    "logged": true,
+    "entry_time": "17:06",
+    "temp_c": 22,
+    "behaviour": [
+     "STER"
+    ]
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "D1",
+     "time": "16:51"
+    }
+   ],
+   "barrier_fault": "T-2201",
+   "ticket_state": "closed"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_before_last_round",
+  "intake_ratio": 0.92,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 4,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "movements_absent",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.57,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 1,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 3,
+  "vet_case_open": false,
+  "missing_section": "movements_absent",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "recheck_round",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 65,
+ "deciding": {
+  "count_reconciles": "Opening and closing counts are both 3 and movements is null; probably no transfers, but the absent section leaves doubt.",
+  "secure_at_close": "The only lock check is at 16:51, before the last round entry at 17:06; the ticket is closed.",
+  "next_step": "Animals look unchanged and the counts match, but four rounds are unlogged, so a targeted recheck is the fit.",
+  "intake_shortfall": "Offered 4000 g, leftover 320 g, so intake is about 92% of sheet.",
+  "missed_rounds": "Four of five scheduled rounds have logged false and no CCTV cover."
+ },
+ "request": "rec-F432-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013783
+}

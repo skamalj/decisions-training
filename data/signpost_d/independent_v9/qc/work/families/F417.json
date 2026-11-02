@@ -1,0 +1,328 @@
+{
+ "id": "F417",
+ "domain": "harbour mooring allocation records",
+ "role": "Mooring allocations officer at a municipal harbour, reviewing each berth allocation request before the vessel arrives",
+ "setting": "A mid-sized commercial and leisure harbour assigns visiting and seasonal vessels to pontoon and quay berths. Each allocation record joins the vessel's declared and surveyed particulars, the assigned berth's limits, the booked stay, supporting documents, the berthing account and the vessel's prior visits. The officer checks one record at a time, reconciles the sections and decides whether the allocation can stand.",
+ "questions": {
+  "length_fits": {
+   "type": "noul",
+   "instructions": "Vessel's surveyed length fits within the assigned berth limit.",
+   "criteria": null
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should happen to this mooring allocation now?",
+   "criteria": {
+    "confirm_allocation": "Record is complete and consistent; allocation stands as booked.",
+    "request_document": "One specific missing document or figure must arrive before deciding.",
+    "allocate_with_conditions": "Allocate now with stated conditions such as reduced stay or tide limits.",
+    "refer_harbourmaster": "Problem exceeds officer authority; harbour master must decide on it."
+   }
+  },
+  "primary_issue": {
+   "type": "choice",
+   "instructions": "Which single issue most affects this allocation?",
+   "criteria": {
+    "no_issue": "Sections agree and nothing required is missing or overdue.",
+    "dimension_mismatch": "Vessel length or draught disagrees with berth limits or survey.",
+    "document_gap": "Insurance, certificate or inspection is missing, null or expired.",
+    "account_arrears": "Unpaid berthing dues or deposit outstanding without approved plan.",
+    "date_conflict": "Stay dates overlap another booking or appear out of order."
+   }
+  },
+  "ukc_band": {
+   "type": "score",
+   "instructions": "How much under-keel clearance remains at lowest charted tide?",
+   "criteria": [
+    "Grounding: draught equals or exceeds low-water berth depth",
+    "Tight: clearance under half a metre at low water",
+    "Adequate: clearance half a metre to under one metre",
+    "Ample: clearance of one metre or more"
+   ]
+  },
+  "unresolved_count": {
+   "type": "score",
+   "instructions": "How many unresolved cross-section discrepancies does this record contain?",
+   "criteria": [
+    "No unresolved discrepancies across any section",
+    "Exactly one unresolved discrepancy between sections",
+    "Two unresolved discrepancies between sections",
+    "Three or more unresolved discrepancies between sections"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "loa_mismatch_pct",
+   "description": "Percentage by which declared length overall differs from the surveyed length; zero in many records, small in some, large in a few",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 12,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "berth_length_fit",
+   "description": "How surveyed length compares with the berth's maximum length, including the published fender allowance",
+   "kind": "categorical",
+   "values": [
+    "fits_clear",
+    "within_fender_allowance",
+    "exceeds_limit"
+   ],
+   "weights": [
+    0.5,
+    0.25,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "ukc_margin_m",
+   "description": "Berth depth at lowest charted tide minus the vessel's draught, in metres; negative means grounding",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": -0.4,
+   "max": 2.0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "draught_source",
+   "description": "Where the draught figure comes from: survey certificate, owner declaration only, or not recorded",
+   "kind": "categorical",
+   "values": [
+    "survey_certificate",
+    "owner_declared",
+    "null"
+   ],
+   "weights": [
+    0.5,
+    0.35,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "insurance_status",
+   "description": "Third-party insurance state relative to the booked stay",
+   "kind": "categorical",
+   "values": [
+    "valid_whole_stay",
+    "expires_during_stay",
+    "missing",
+    "null"
+   ],
+   "weights": [
+    0.55,
+    0.2,
+    0.15,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "name": "inspection_state",
+   "description": "Safety inspection status and its date relative to arrival",
+   "kind": "categorical",
+   "values": [
+    "done_before_arrival",
+    "scheduled",
+    "missing",
+    "dated_after_departure"
+   ],
+   "weights": [
+    0.45,
+    0.25,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "arrears_amount",
+   "description": "Outstanding berthing dues on the account in pounds",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3000,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "payment_plan_approved",
+   "description": "An approved instalment plan covers any outstanding dues",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "dimension_waiver",
+   "description": "A harbour master waiver permits the vessel on this berth despite a length or depth shortfall",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "date_overlap",
+   "description": "Overlap between this stay and the next booking on the same berth",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "same_day_turnover",
+    "one_night",
+    "multiple_nights"
+   ],
+   "weights": [
+    0.5,
+    0.2,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "trusted_regular",
+   "description": "Long-standing berth holder with several clean prior visits",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  },
+  {
+   "name": "prior_incidents",
+   "description": "Count of recorded berthing incidents on previous visits",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S7",
+    "S6"
+   ]
+  },
+  {
+   "name": "boundary_placement",
+   "description": "Key values are set exactly on a threshold, such as clearance of 0.5 m or length equal to limit",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S6"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "vessel",
+   "description": "Vessel identifier, type, declared loa_m, beam_m and draught_m, plus draught_src"
+  },
+  {
+   "name": "berth",
+   "description": "Assigned berth id, max_loa_m, fender_allow_m, depth_lat_m and any waiver reference"
+  },
+  {
+   "name": "booking",
+   "description": "Arrival and departure dates, nights booked and next booking on the berth"
+  },
+  {
+   "name": "documents",
+   "description": "Survey certificate with surveyed loa and draught, insurance expiry and inspection date"
+  },
+  {
+   "name": "account",
+   "description": "Dues outstanding, deposit paid flag, payment plan id and credit balance"
+  },
+  {
+   "name": "history",
+   "description": "List of prior visits with dates, berth ids and incident counts"
+  }
+ ],
+ "rendering_notes": "loa_mismatch_pct shows only as vessel.loa_m against documents.survey.loa_m; berth_length_fit is derived by comparing documents.survey.loa_m with berth.max_loa_m plus berth.fender_allow_m. ukc_margin_m is never shown; the reader subtracts the effective draught (survey draught if present, else vessel.draught_m) from berth.depth_lat_m. draught_source appears as vessel.draught_src and documents.survey.draught_m being a number or null. insurance_status shows as documents.insurance_expiry (ISO date, null, or section key absent) compared with booking.departure. inspection_state shows as documents.inspection_date null, a future date flagged by documents.inspection_booked true, or a date after booking.departure. arrears_amount is account.dues_outstanding_gbp; payment_plan_approved appears as account.plan_id non-null with account.plan_status 'approved'. dimension_waiver appears as berth.waiver_ref non-null with berth.waiver_expiry covering the stay. date_overlap is computed from booking.departure against booking.next_on_berth.arrival. trusted_regular and prior_incidents appear only through the history list length, dates and per-visit incident counts. Decoys: account.credit_balance_gbp, vessel.beam_m (beam never limits these berths), vessel.home_port, history entries on other berths, and a survey date that is old but still in validity. No field states fit, clearance band, issue type, discrepancy count or recommended action; there is no status, risk or priority field.",
+ "skills": [
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_document"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.127636
+}

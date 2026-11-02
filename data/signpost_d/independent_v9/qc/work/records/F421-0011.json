@@ -1,0 +1,142 @@
+{
+ "id": "F421-0011",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P71820",
+   "fragile": false,
+   "contents": "espresso machine",
+   "qty": 1,
+   "weight_kg": 8.2,
+   "declared_value_gbp": 2792.38
+  },
+  "handling_events": [
+   {
+    "ts": "2024-05-02T08:10",
+    "site": "HubN",
+    "code": "SCAN",
+    "exc": "ADDR"
+   },
+   {
+    "ts": "2024-05-02T20:00",
+    "site": "HubN",
+    "code": "SCAN",
+    "exc": "WET"
+   },
+   {
+    "ts": "2024-05-03T06:30",
+    "site": "HubN",
+    "code": "SCAN",
+    "exc": "ADDR"
+   },
+   {
+    "ts": "2024-05-03T11:00",
+    "site": "DEPOT",
+    "code": "INBOUND",
+    "exc": null
+   },
+   {
+    "ts": "2024-05-03T15:20",
+    "site": "DEPOT",
+    "code": "SORT",
+    "exc": "CRUSH"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-05-03T16:00",
+   "observed_item": "espresso machine",
+   "qty_found": 1,
+   "weight_kg": 8.1,
+   "condition": "frame crushed, boiler cracked",
+   "photos": [],
+   "repair_est_gbp": 2182.5
+  },
+  "claim": {
+   "claim_id": "C5521",
+   "claimed_gbp": 1156.7,
+   "packaging_desc": "single-wall box, no void fill"
+  },
+  "notes": [
+   "Photos to be uploaded."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "none",
+  "inspection_state": "photos_missing",
+  "loss_pct": 78.16,
+  "declared_value": 2792.38,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 0.53
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "none",
+  "inspection_state": "photos_missing",
+  "loss_pct": 78.16,
+  "declared_value": 2792.38,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 0.53
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "approve_repack",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 92,
+ "deciding": {
+  "depot_fault": "Clean inbound then CRUSH at depot sort, but three upstream exception codes (decoys ADDR/WET) and poor packaging keep it open.",
+  "contents_match": "Item, quantity and weight match the manifest.",
+  "next_step": "Inspection otherwise complete with repair estimate; missing photos are a small doubt against approving repack.",
+  "loss_share": "Estimate 2182.50 of 2792.38 is 78%, major, but crushed condition makes write-off plausible.",
+  "parties_needed": "Nothing external needed; one assessor can act."
+ },
+ "request": "rec-F421-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005646
+}

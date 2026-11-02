@@ -1,0 +1,141 @@
+{
+ "id": "F437-0018",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v1",
+   "glossary_version": "g5",
+   "due_at": "2025-06-20T10:00",
+   "terms": {
+    "variant_accepted": false
+   }
+  },
+  "source": {
+   "version": "v1",
+   "segment_count": 240,
+   "word_count": 4100
+  },
+  "deliverable": {
+   "built_from_version": "v1",
+   "segments_translated": 237,
+   "word_count": 4060,
+   "glossary_version_used": "g5",
+   "delivered_at": "2025-06-17T04:00"
+  },
+  "qa_report": {
+   "flags": 18,
+   "false_positive_marked": 8,
+   "number_mismatches": [
+    {
+     "s": "15",
+     "t": "51",
+     "resolved": true
+    },
+    {
+     "s": "2",
+     "t": "20",
+     "resolved": true
+    },
+    {
+     "s": "7",
+     "t": "7.0",
+     "resolved": true
+    }
+   ],
+   "unresolved": {}
+  },
+  "review": {
+   "assigned_at": "2025-06-16T09:00",
+   "completed_at": "2025-06-16T17:00",
+   "signed_off": false,
+   "errors": [
+    {
+     "sev": "critical",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "r1",
+    "r2",
+    "r3",
+    "r4"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "completed_not_signed",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.44,
+  "number_mismatch_count": 3,
+  "deadline_slack_hours": 78,
+  "client_waiver": false,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.44,
+  "number_mismatch_count": 3,
+  "deadline_slack_hours": 78,
+  "client_waiver": false,
+  "prior_revision_rounds": 4,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "return_for_fix",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 87,
+ "deciding": {
+  "scope_matches": "The versions agree, but 237 of 240 segments were translated, about 1.3% short. Word counts differ by about 1%, so this sits near the boundary.",
+  "reviewed_in_time": "The review has completed_at but signed_off is false, so there is no sign-off before delivered_at.",
+  "next_step": "The 3 missing segments and the missing sign-off are fixable by the translator, and there is 78h of slack before the due date.",
+  "open_severity": "qa_report unresolved is empty, the only review error is a closed critical, and the 3 number mismatches are marked resolved.",
+  "parties_needed": "The translator must complete the segments and the reviewer must sign off, which is two people."
+ },
+ "request": "rec-F437-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008059
+}

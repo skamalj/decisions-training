@@ -1,0 +1,138 @@
+{
+ "id": "F406-0041",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S101",
+   "gallery_code": "G4A",
+   "date": "2025-03-08",
+   "limit": 120
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "11:00",
+     "occupancy": 140
+    },
+    {
+     "start": "11:15",
+     "occupancy": 150
+    },
+    {
+     "start": "11:30",
+     "occupancy": 166
+    }
+   ],
+   "manual_tally_peak": 164,
+   "entries_total": 300,
+   "ticket_scans": 310
+  },
+  "variations": [
+   {
+    "gallery_code": "G4A",
+    "valid_from": "2025-03-01",
+    "valid_to": "2025-03-31",
+    "uplift_to": 150,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "gates": [
+    "G1",
+    "G2"
+   ],
+   "tickets": [
+    {
+     "gate": "G2",
+     "raised_at": "2025-03-08T09:00",
+     "summary": "intermittent drift"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": "partial",
+   "routes_checked": "2 of 3"
+  },
+  "history": {
+   "overages_30d": 1
+  }
+ },
+ "factors": {
+  "true_peak_ratio": "1.1 of uplifted limit",
+  "intervals_over_limit": "1 or 2",
+  "section_mismatch": "scans_vs_counter_minor",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "partial",
+  "prior_overages_30d": 1,
+  "staff_note_tone": "none",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.98,
+  "intervals_over_limit": 10,
+  "section_mismatch": "scans_vs_counter_minor",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": true,
+  "egress_check": "partial",
+  "prior_overages_30d": 1,
+  "staff_note_tone": "none",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "variation_applies": "Approved variation, same gallery_code G4A, window covers 2025-03-08.",
+  "fault_explains_overage": "Ticket on G2 same date, but only vague 'intermittent drift' and no stated count error.",
+  "next_step": "Variation covers the session and sections reconcile within a few percent; nothing missing.",
+  "peak_excess": "Counter peak 166 against uplift 150 is about 10.7%, tally 164 is about 9.3%, straddling 10%.",
+  "intervals_over": "Only 166 clearly exceeds uplift 150; the 150 interval sits exactly at the limit, so one or two."
+ },
+ "request": "rec-F406-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010923
+}

@@ -1,0 +1,138 @@
+{
+ "id": "F413-0040",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "warehouse",
+   "stations": [
+    "S1",
+    "S2",
+    "S3"
+   ]
+  },
+  "visit": {
+   "start": "2025-08-12T13:00",
+   "lic_exp": "2026-05-01"
+  },
+  "treatments": [
+   {
+    "p": "BR5",
+    "area_m2": 60,
+    "qty": 3.41,
+    "unit": "kg",
+    "label_max_per_m2": 0.05
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "act": true
+   },
+   {
+    "id": "S2",
+    "act": false
+   },
+   {
+    "id": "S3",
+    "act": false
+   }
+  ],
+  "van_stock": [
+   {
+    "p": "BR5",
+    "mv": "out",
+    "qty": 2,
+    "unit": "kg"
+   }
+  ],
+  "follow_up": {
+   "prev_active": null,
+   "actions": [
+    {
+     "a": "proof gap",
+     "status": "raised",
+     "booked": null
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "decreased",
+  "previous_visit_available": false,
+  "dose_overage_pct": 13.63,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "warehouse"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 0,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "in_order",
+  "activity_trend": "decreased",
+  "previous_visit_available": false,
+  "dose_overage_pct": 13.63,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "raised_not_booked",
+  "site_risk_tier": "warehouse"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "usage_reconciled": "3.41 kg applied against 2 kg withdrawn with no return is a plain unreconciled surplus.",
+  "activity_increased": "1 active station and prev_active is null, so there is no baseline; the activity itself suggests some presence.",
+  "next_step": "The plan expects sign-off; the log is otherwise complete, but the quantity gap and the unbooked action could give a reviewer pause.",
+  "breach_severity": "Applied 3.41 kg over 60 m2 is about 0.057 per m2 against 0.05, a dose exceedance, while the unbooked corrective action and the stock gap pull toward other readings.",
+  "parties_needed": "The technician, a manager, a scheduler and possibly the client or stores may need to act, so it is between three and five parties."
+ },
+ "request": "rec-F413-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005519
+}

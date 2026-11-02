@@ -1,0 +1,339 @@
+{
+ "id": "F433",
+ "domain": "equestrian event vet checks",
+ "role": "Veterinary panel reviewer at an endurance ride vet gate, checking each horse's completed inspection card before it may start the next loop",
+ "setting": "A one-day endurance ride run over several loops, with a vet gate after each loop. When a horse arrives at a gate, the crew has a fixed recovery window to bring its pulse down. The horse is then presented to a gate vet, who records pulse, a cardiac recovery index (CRI), metabolic signs, a gait grade from a trot-up and any tack injuries. The panel reviewer reads the combined record of timing, vet card, treatment log and notes, then decides whether the horse is fit to continue, what outcome code applies, how serious the welfare risk is and whether the record is complete. Ride rules are stated in the record: pulse limit, recovery window and hold length.",
+ "questions": {
+  "pulse_met": {
+   "type": "noul",
+   "instructions": "Horse met the pulse criterion within the permitted recovery window.",
+   "criteria": null
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should the panel do with this vet card now?",
+   "criteria": {
+    "clear_to_continue": "All parameters met and recorded; horse proceeds without further action.",
+    "request_recheck": "One reading or trot-up missing; obtain it before deciding.",
+    "eliminate_ftq": "Clear failure recorded; enter fail-to-qualify and stop the horse now.",
+    "refer_president": "Treatment, rule breach or dispute; pass to veterinary commission president."
+   }
+  },
+  "outcome_code": {
+   "type": "choice",
+   "instructions": "Which outcome code best fits this inspection's findings?",
+   "criteria": {
+    "pass": "Pulse, gait, metabolic and tack checks all within limits.",
+    "ftq_other": "Only a wound, tack injury or procedural breach fails.",
+    "ftq_gait": "Gait irregular on trot-up while metabolic parameters remain acceptable.",
+    "ftq_metabolic": "Pulse or metabolic parameter failed while gait remains regular.",
+    "ftq_combined": "Both gait and at least one metabolic parameter failed."
+   }
+  },
+  "welfare_risk": {
+   "type": "score",
+   "instructions": "How serious is the welfare risk to this horse now?",
+   "criteria": [
+    "Low: every recorded parameter within the gate limits.",
+    "Elevated: exactly one parameter outside limits, none severe.",
+    "High: two or more parameters outside gate limits.",
+    "Critical: pulse above 80 or horse on course uncleared."
+   ]
+  },
+  "record_completeness": {
+   "type": "score",
+   "instructions": "How complete is this horse's inspection record?",
+   "criteria": [
+    "Two or more required readings or signatures missing.",
+    "Exactly one required reading or signature missing.",
+    "All readings present, but one time out of sequence.",
+    "All readings present, signed, and times in sequence."
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "pulse_status",
+   "description": "Where the presented pulse sits against the stated limit and window: well under, exactly at the limit, met only after the window closed, or not met at all.",
+   "kind": "categorical",
+   "values": [
+    "met_well_within",
+    "met_at_boundary",
+    "met_after_window",
+    "not_met"
+   ],
+   "weights": [
+    0.45,
+    0.2,
+    0.15,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6",
+    "S1"
+   ]
+  },
+  {
+   "name": "time_mismatch",
+   "description": "Difference between the arrival time in the gate section and the arrival time copied onto the vet card. When large, it changes whether the window was met.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "minor_under_2min",
+    "major_over_5min"
+   ],
+   "weights": [
+    0.5,
+    0.3,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "gait_grade",
+   "description": "Lameness grade recorded at the trot-up: regular, inconsistent grade 1, or irregular grade 2 or above.",
+   "kind": "categorical",
+   "values": [
+    "regular",
+    "inconsistent_g1",
+    "irregular_g2plus"
+   ],
+   "weights": [
+    0.6,
+    0.22,
+    0.18
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "gait_mitigation",
+   "description": "A benign explanation for the gait observation, such as a second trot-up on firm ground graded regular, or a passport note of a long-standing conformational irregularity seen at earlier gates.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "metabolic_flags",
+   "description": "Number of metabolic parameters recorded outside normal limits: mucous membranes, capillary refill, gut sounds, skin tent.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7",
+    "S1"
+   ]
+  },
+  {
+   "name": "cri_rise",
+   "description": "Rise in bpm between the first CRI pulse and the second pulse taken after the trot-up. Above 4 is a concern.",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 16,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "missing_items",
+   "description": "Count of required vet-card entries left null: a CRI reading, the gait grade, the vet signature or the presentation time.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "out_of_sequence",
+   "description": "A logged time that cannot be right, such as a re-inspection stamped before the first exam or a presentation stamped before arrival.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.15,
+   "skills": [
+    "S2",
+    "S1"
+   ]
+  },
+  {
+   "name": "tack_wound",
+   "description": "Tack or girth injury noted on the card: none, a minor rub with no broken skin, or an open wound.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "minor_rub",
+    "open_wound"
+   ],
+   "weights": [
+    0.7,
+    0.2,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  },
+  {
+   "name": "prior_gate_history",
+   "description": "Results from this horse's earlier gates today: all clean, one earlier recheck, or a borderline pulse at a previous gate.",
+   "kind": "categorical",
+   "values": [
+    "all_clean",
+    "one_prior_recheck",
+    "prior_borderline"
+   ],
+   "weights": [
+    0.55,
+    0.25,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "treatment_logged",
+   "description": "Treatment entry for this gate: none, treatment approved by the vet (for example cooling or oral electrolytes), or invasive treatment such as IV fluids, which bars continuation.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "approved_minor",
+    "invasive"
+   ],
+   "weights": [
+    0.7,
+    0.2,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S2",
+    "S7"
+   ]
+  },
+  {
+   "name": "departed_before_clearance",
+   "description": "Aggravating fact: the gate departure time falls before the vet signature time, or before a required re-inspection, so the horse went out on course uncleared.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "name": "note_tone",
+   "description": "Free-text rider or crew note: none, a benign explanation that bears on the findings, or an alarming remark about something irrelevant (decoy).",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "benign_explanation",
+    "alarming_irrelevant"
+   ],
+   "weights": [
+    0.35,
+    0.35,
+    0.3
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "horse",
+   "description": "Horse id, name, passport number, age, and a list of earlier gate results today."
+  },
+  {
+   "name": "gate",
+   "description": "Loop number, ride rules (pulse limit, recovery window, hold length), and arrival and departure times."
+  },
+  {
+   "name": "vet_card",
+   "description": "Presentation time, pulse readings, CRI pair, metabolic parameters, trot-up gait grades, tack findings and vet signature time."
+  },
+  {
+   "name": "treatment",
+   "description": "List of treatments given at this gate with time, type and approving vet; null if none."
+  },
+  {
+   "name": "notes",
+   "description": "Short free-text rider note and a one-line vet remark."
+  }
+ ],
+ "rendering_notes": "Rule values sit in gate.rules: pulse_limit_bpm (usually 64), recovery_window_min (usually 20) and hold_min. pulse_status appears only as vet_card.pulse_bpm and vet_card.presented_at, which must be compared with gate.arrived_at plus the window. Nothing says whether the pulse was met. time_mismatch puts a separate vet_card.arrival_copied value that can differ from gate.arrived_at, and which one is used can flip the window result. gait_grade appears as vet_card.trot_ups, a list of objects with surface and grade. gait_mitigation adds a second trot-up graded regular, or a horse.passport_remark such as 'known left fore irregularity, regular at loops 1-2'. metabolic_flags sets values in vet_card.metabolic (mm: 'pink'/'pale'/'injected', crt_s, gut_sounds per quadrant, skin_tent_s), with no count given. cri_rise is shown as vet_card.cri: {first_bpm, second_bpm}. missing_items nulls fields such as cri.second_bpm, gait grade, vet_signed_at or presented_at. out_of_sequence produces an impossible timestamp ordering. tack_wound appears in vet_card.tack: {site, finding}. prior_gate_history fills horse.earlier_gates. treatment_logged fills treatment entries; invasive treatment is visible only as type 'iv_fluids', with no flag. departed_before_clearance shows only as gate.departed_at earlier than vet_card.vet_signed_at, or departed_at present while a recheck is pending. note_tone writes notes.rider_note, for example 'girth slipped on the climb, rub is old' or the decoy 'nearly lost a shoe on the road section' when the feet are fine. Other decoys: horse.age, gate.ambient_temp_c, and a vet_remark of 'busy gate, long queue'. Never include fields such as result, outcome, risk, fit_to_continue or complete; every answer must be inferred by comparison across sections.",
+ "skills": [
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_recheck"
+ },
+ "aggravating_factor": "departed_before_clearance",
+ "design_cost": 0.169592
+}

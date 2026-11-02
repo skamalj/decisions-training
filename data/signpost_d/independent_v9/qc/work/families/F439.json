@@ -1,0 +1,301 @@
+{
+ "id": "F439",
+ "domain": "driving test centre examiner reports",
+ "role": "Test centre quality assurance reviewer checking individual practical driving test reports submitted by examiners",
+ "setting": "A regional driving test centre where every completed practical car test report is sampled or flagged for review. The reviewer reads one submitted report at a time, covering test details, candidate checks, the fault sheet, the recorded outcome, any incident, and the edit trail. They decide whether the result is sound, whether the paperwork is complete, what to do with the report, and how serious the worst issue is.",
+ "questions": {
+  "result_supported": {
+   "type": "noul",
+   "instructions": "The recorded result follows from the faults marked on the sheet.",
+   "criteria": {
+    "true": "Pass or fail agrees with fault counts and categories.",
+    "false": "Result contradicts marked faults, or tallies leave it undecidable."
+   }
+  },
+  "report_complete": {
+   "type": "noul",
+   "instructions": "All mandatory report sections and sign-offs are present and correctly ordered.",
+   "criteria": {
+    "true": "Every required field present; sign-offs timestamped after test end.",
+    "false": "A required section, field or sign-off missing or misordered."
+   }
+  },
+  "disposition": {
+   "type": "choice",
+   "instructions": "What should the reviewer do with this examiner report?",
+   "criteria": {
+    "accept": "No discrepancy or gap; file the report as submitted.",
+    "hold_query": "One open point needs examiner confirmation before filing.",
+    "amend_record": "Confirmed clerical error fixable from evidence already in the report.",
+    "refer_investigation": "Result or conduct issue needs formal investigation; result suspended."
+   }
+  },
+  "staff_effort": {
+   "type": "score",
+   "instructions": "How much staff time would fully resolving this record require?",
+   "criteria": [
+    "Under one hour of staff time needed",
+    "One to eight hours of staff time",
+    "One to five working days of staff time",
+    "More than five working days of staff time"
+   ]
+  },
+  "issue_severity": {
+   "type": "score",
+   "instructions": "How serious is the most significant issue found in this report?",
+   "criteria": [
+    "No discrepancy found between any report sections",
+    "Discrepancy present but cannot change result or safety",
+    "Discrepancy that could change the recorded pass or fail",
+    "Mandatory safety procedure breached during the conducted test"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "fault_profile",
+   "description": "Underlying pattern of faults on the test: comfortable pass, fail on a serious fault, borderline driving-fault count near the 15-fault limit, or a dangerous fault marked.",
+   "kind": "categorical",
+   "values": [
+    "clear_pass",
+    "serious_fail",
+    "borderline_count",
+    "dangerous_fault"
+   ],
+   "weights": [
+    0.35,
+    0.25,
+    0.25,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "result_mismatch",
+   "description": "The recorded outcome contradicts the fault sheet, e.g. pass recorded with a serious fault ticked or with 16 driving faults.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.2,
+   "skills": [
+    "S5",
+    "S7"
+   ]
+  },
+  {
+   "name": "tally_error",
+   "description": "The driving_fault_total field differs from the sum of per-item counts; harmless on clear tests, result-changing on borderline counts.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "documentation_gap",
+   "description": "Which required element is absent or out of order: none, debrief record null, licence/ID check null, examiner sign-off missing, or sign-off timestamp earlier than test end time.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "debrief_null",
+    "id_check_null",
+    "signoff_missing",
+    "signoff_before_end"
+   ],
+   "weights": [
+    0.5,
+    0.12,
+    0.12,
+    0.12,
+    0.14
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "intervention_recorded",
+   "description": "Examiner recorded a physical or verbal intervention (dual brake or steering) during the drive; an alarming signal on its own.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.35,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  },
+  {
+   "name": "intervention_explained",
+   "description": "Intervention is matched by a corresponding serious or dangerous fault on the sheet and a note giving a benign cause; applies independently of whether intervention occurred.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "continued_after_collision",
+   "description": "Aggravating: vehicle made contact with a third party or object and the examiner continued the test route instead of terminating it as procedure requires.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  },
+  {
+   "name": "senior_countersigned",
+   "description": "A supervising examiner sat in on the test and countersigned the report, lending weight to borderline markings.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "adverse_conditions",
+   "description": "Logged weather or road conditions (heavy rain, fog, roadworks diversion) that plausibly explain hesitancy or progress faults.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.45,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "note_alignment",
+   "description": "How the examiner's free-text note relates to the fault sheet: consistent, vague, or describing an event not marked or marked differently.",
+   "kind": "categorical",
+   "values": [
+    "consistent",
+    "vague",
+    "contradicts_sheet"
+   ],
+   "weights": [
+    0.55,
+    0.25,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "examiner_complaints_12m",
+   "description": "Number of upheld candidate complaints against this examiner in the past twelve months; context decoy that never settles a question alone.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "post_submission_edit",
+   "description": "Report was edited after initial submission; whether an amendment reason is given varies.",
+   "kind": "categorical",
+   "values": [
+    "no_edit",
+    "edit_with_reason",
+    "edit_no_reason"
+   ],
+   "weights": [
+    0.65,
+    0.2,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4",
+    "S6"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "test",
+   "description": "Test reference, date, centre, category, start and end times, route code, conditions logged."
+  },
+  {
+   "name": "candidate",
+   "description": "Pseudonymous candidate ref, attempt number, licence and ID check fields."
+  },
+  {
+   "name": "fault_sheet",
+   "description": "List of marked items with driving, serious and dangerous counts, plus driving_fault_total."
+  },
+  {
+   "name": "outcome",
+   "description": "Recorded result, intervention flag, debrief record, examiner note, sign-off timestamps."
+  },
+  {
+   "name": "incident",
+   "description": "Null if none; otherwise contact type, time, location, action taken, short description."
+  },
+  {
+   "name": "review_trail",
+   "description": "Edit history, amendment reason, examiner complaint count, countersignature."
+  }
+ ],
+ "rendering_notes": "fault_profile shows only through fault_sheet.items[] (each {item, driving, serious, dangerous}) and driving_fault_total; borderline_count yields totals of 14-16. result_mismatch shows as outcome.result disagreeing with the item counts (pass with any serious/dangerous >0 or >15 driving). tally_error makes driving_fault_total differ from the item sum by 1-3; on borderline counts the true sum and total straddle 15. documentation_gap: debrief_null sets outcome.debrief to null; id_check_null sets candidate.id_check to null; signoff_missing sets outcome.examiner_signoff_at null; signoff_before_end sets examiner_signoff_at earlier than test.end_time. intervention_recorded sets outcome.intervention true with intervention_type; intervention_explained adds a matching serious/dangerous item and a benign cause in outcome.examiner_note (e.g. 'cyclist emerged from blind junction'); without it the note is silent or the sheet has no matching fault. continued_after_collision: incident section populated with contact_type and incident_time, and test.end_time and route_completed true show the route was finished well after incident_time, with incident.action_taken 'continued' or 'noted'; when false and an incident exists, action_taken is 'test_terminated' with end_time shortly after. senior_countersigned fills review_trail.countersigned_by and countersigned_at; adverse_conditions fills test.conditions with a concrete entry. note_alignment drives outcome.examiner_note (one sentence) content. examiner_complaints_12m appears as review_trail.upheld_complaints_12m and is a decoy. post_submission_edit fills review_trail.edits[] with timestamps after submission and amendment_reason text or null. Decoys: high complaint counts on clean reports, adverse conditions on reports without hesitancy faults, attempt_number high, intervention flagged with full explanation. Never include fields such as severity, valid, compliant, recommended_action or review_outcome; the reviewer must derive every answer by comparing sections.",
+ "skills": [
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": "staff_effort",
+ "next_step": null,
+ "aggravating_factor": "continued_after_collision",
+ "design_cost": 0.135748
+}

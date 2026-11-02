@@ -1,0 +1,34 @@
+{
+ "persona": "careful_operator",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "meets_threshold": {
+   "true": 0.85,
+   "false": 0.15
+  },
+  "repeat_failure": {
+   "true": 0.7,
+   "false": 0.3
+  },
+  "next_step": {
+   "close_no_action": 0.04,
+   "request_inspection": 0.05,
+   "order_repair": 0.5,
+   "escalate_engineer": 0.41
+  },
+  "staff_effort": {
+   "0": 0.05,
+   "1": 0.4,
+   "2": 0.4,
+   "3": 0.15
+  },
+  "response_timescale": {
+   "0": 0.05,
+   "1": 0.6,
+   "2": 0.3,
+   "3": 0.05
+  }
+ },
+ "cost": 0.000365
+}

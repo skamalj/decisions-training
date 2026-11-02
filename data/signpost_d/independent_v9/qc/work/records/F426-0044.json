@@ -1,0 +1,111 @@
+{
+ "id": "F426-0044",
+ "family": "F426",
+ "state": {
+  "block": {
+   "crop": "plum"
+  },
+  "applications": [
+   {
+    "date": "2024-02-01",
+    "product_code": "X1",
+    "qty_applied": 12.6,
+    "qty_unit": "L",
+    "area_treated_ha": 9.0
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "X1",
+    "max_rate_per_ha": 1.2,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "approved_crops": [
+     "plum"
+    ]
+   }
+  ],
+  "equipment": null,
+  "harvest": {
+   "first_pick_date": "2024-03-10"
+  }
+ },
+ "factors": {
+  "phi_status": "cleared",
+  "rate_overrun_band": "above_10_to_25",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "missing",
+  "missing_item": "equipment_section_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "app_date_missing",
+  "rate_overrun_band": "above_10_to_25",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": true,
+  "calibration_state": "expired_long",
+  "missing_item": "product_ref_entry_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 9,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "label_deviation",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 27,
+ "deciding": {
+  "phi_cleared": "Application 2024-02-01 and first pick 2024-03-10 give 38 days against phi_days 14.",
+  "next_step": "equipment is null, so sprayer calibration evidence is a single named missing document to request from the grower.",
+  "finding_class": "12.6 L over 9.0 ha is 1.4 L/ha against max 1.2 with no minor use reference, so the rate is over label; interval fine.",
+  "reversal_time": "Requesting the calibration document can be resolved in a few days, or in a day if it is readily available.",
+  "rate_overrun": "1.4 vs 1.2 L/ha is about 17% over, level 2."
+ },
+ "request": "rec-F426-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013776
+}

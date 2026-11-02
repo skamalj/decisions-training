@@ -1,0 +1,145 @@
+{
+ "id": "F429-0011",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 120,
+   "ramp_max_m_per_10min": 0.3
+  },
+  "reservoir": {
+   "triggers": {
+    "alert_m": 101.5,
+    "action_m": 102.2
+   },
+   "gauge_zero_offset_m": 50,
+   "readings": [
+    {
+     "level_m": 101.49,
+     "datum": "site"
+    },
+    {
+     "level_m": 51.46,
+     "datum": "gauge_zero"
+    }
+   ]
+  },
+  "gate_ops": [
+   {
+    "gate": "G1",
+    "t": "2024-05-02T08:00",
+    "open_after_m": 1.0
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G1",
+     "opening_m": 1.01
+    }
+   ],
+   "calc_peak_m3s": 56,
+   "gauged_peak_m3s": 54,
+   "tailwater_m": [
+    2.1,
+    2.4
+   ]
+  },
+  "instruments": {
+   "piezo_kpa": [
+    {
+     "v": 81,
+     "alert_kpa": 75,
+     "t": "2024-05-02T08:20"
+    }
+   ],
+   "post_op_inspection": {
+    "status": "pending",
+    "completed_at": null
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "2024-05-02T07:30",
+    "ack": true
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "normal",
+  "near_boundary": true,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 3.58,
+  "datum_mismatch": true,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "normal",
+  "near_boundary": true,
+  "discharge_vs_licence": "well_below",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 3.58,
+  "datum_mismatch": true,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": true,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "query_operator",
+   "second": "hold_for_inspection",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 65,
+ "deciding": {
+  "within_licence": "Calculated 56 and gauged 54 m3/s are far under 120, but one reading is on a different datum, so doubt remains.",
+  "gates_reconciled": "G1 opening 1.0 m in the ops list vs 1.01 m in the calculation, a trivial gap.",
+  "next_step": "Post-op inspection is pending, while the datum inconsistency could instead be corrected by the operator.",
+  "trigger_tier": "Peak level 101.49 m sits just under the 101.5 m alert trigger, and the gauge_zero reading adds ambiguity.",
+  "parties_needed": "The operator can fix the datum alone, but the pending inspection and piezometer rise may need a second team."
+ },
+ "request": "rec-F429-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005616
+}

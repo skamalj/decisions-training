@@ -1,0 +1,134 @@
+{
+ "id": "F421-0045",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-90247",
+   "service": "std",
+   "fragile": false,
+   "contents": "glass table lamp",
+   "qty": 1,
+   "weight_kg": 3.2,
+   "declared_value_gbp": 984.34
+  },
+  "handling_events": [
+   {
+    "ts": "2024-09-04T05:50",
+    "site": "HUB-E",
+    "ev": "SORT",
+    "exc": "ADDR"
+   },
+   {
+    "ts": "2024-09-04T13:20",
+    "site": "THIS-DEPOT",
+    "ev": "INBOUND",
+    "exc": null
+   },
+   {
+    "ts": "2024-09-04T15:05",
+    "site": "THIS-DEPOT",
+    "ev": "SORT",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": null,
+   "observed_item": "glass table lamp",
+   "qty_found": 1,
+   "weight_kg": 3.2,
+   "condition": "crushed, glass shattered",
+   "photos": [
+    "c1.jpg",
+    "c2.jpg"
+   ],
+   "repair_est_gbp": null
+  },
+  "claim": {
+   "claim_id": "C-1174",
+   "claimed_gbp": 850,
+   "packaging_desc": "single-wall box, no void fill"
+  },
+  "notes": [
+   "Hub-E probably weakened the box; claims and carrier to be queried."
+  ]
+ },
+ "factors": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "none",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 86.0,
+  "declared_value": 984.34,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.01
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 12.8,
+  "declared_value": 984.34,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 3,
+  "fragile_misrouted": false,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.01
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contents_match": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 85,
+ "deciding": {
+  "depot_fault": "Clean inbound then DMG at depot sort; the upstream ADDR code is not damage, though poor packaging and the note leave some doubt.",
+  "contents_match": "Glass table lamp, qty 1, 3.2 kg all identical to manifest.",
+  "next_step": "inspected_ts and repair_est_gbp are null, so the inspection is the named missing item.",
+  "loss_share": "Shattered glass and claim of 850 on 984.34 (86%) give major loss, but crushed lamp could be a full write-off; no estimate.",
+  "parties_needed": "Inspector, claims and carrier named in notes plus sender, repack or supervisor could make three to five or more."
+ },
+ "request": "rec-F421-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009441
+}

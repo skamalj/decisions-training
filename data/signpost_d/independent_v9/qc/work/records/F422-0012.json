@@ -1,0 +1,158 @@
+{
+ "id": "F422-0012",
+ "family": "F422",
+ "state": {
+  "return_header": {
+   "id": "RT-2290",
+   "site": "S-118",
+   "delivered_at": "2025-02-10T08:00",
+   "received_at": "2025-02-16T09:00",
+   "review_date": "2025-04-01",
+   "reason": "DAMAGED_IN_TRANSIT",
+   "lines": [
+    {
+     "gtin": "05098765",
+     "qty_claimed": 8
+    }
+   ]
+  },
+  "dispatch_ref": {
+   "no": "DN-7420",
+   "date": "2025-02-05",
+   "lines": [
+    {
+     "gtin": "05098765",
+     "batch": "K5521",
+     "expiry": "2025-10-31",
+     "qty_dispatched": 8
+    }
+   ]
+  },
+  "inspection": {
+   "lines": [
+    {
+     "gtin": "05098765",
+     "batch": "K5521",
+     "expiry": "10/2025",
+     "qty_counted": 5,
+     "packs_damaged": 1,
+     "seals_intact": 4
+    }
+   ],
+   "uid_scans": [
+    {
+     "status": "active"
+    }
+   ]
+  },
+  "temperature": {
+   "storage_class": "cold_2_8",
+   "labelled_range": "2-8C",
+   "logger_id": "L-077",
+   "logger_start": "2025-02-10T07:30",
+   "logger_end": "2025-02-16T09:30",
+   "min_c": 2.4,
+   "max_c": 9.4,
+   "minutes_out_of_range": 196,
+   "stability_ref": {
+    "max_hours": 2,
+    "max_c": 9.0
+   }
+  },
+  "customer_compliance": {
+   "audit_valid_until": "2025-01-15",
+   "declaration_received": false
+  },
+  "quarantine_control": {
+   "location": "QC-02",
+   "hold_limit_days": 30,
+   "extension": {
+    "approved": true,
+    "new_limit_date": "2025-03-25"
+   },
+   "max_days_out_of_control": 5,
+   "min_shelf_life_months": 6
+  }
+ },
+ "factors": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "full",
+  "excursion_minutes": 196,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "expiry_format_only",
+  "count_discrepancy_packs": 3,
+  "damaged_pack_fraction": 0.2,
+  "uid_alert": false,
+  "uid_alert_explained": false,
+  "days_out_of_control": 6,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": -7,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 6
+ },
+ "factors_sampled": {
+  "storage_class": "cold_2_8",
+  "logger_coverage": "full",
+  "excursion_minutes": 196,
+  "stability_allowance_on_file": true,
+  "batch_reconciliation": "no_dispatch_link",
+  "count_discrepancy_packs": 3,
+  "damaged_pack_fraction": 0.2,
+  "uid_alert": false,
+  "uid_alert_explained": true,
+  "days_out_of_control": 6,
+  "customer_audit_current": false,
+  "quarantine_days_remaining": 16,
+  "hold_extension_approved": true,
+  "shelf_life_months_remaining": 6
+ },
+ "plan": {
+  "storage_maintained": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "batch_traceable": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "reject_destroy",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "resaleable_share": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "disposition_urgency": {
+   "clarity": "leaning",
+   "target": "4",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 94,
+ "deciding": {
+  "storage_maintained": "Excursion of 196 minutes (3.3 h) and max 9.4C exceed the stability allowance of 2 h and 9.0C, so storage was not maintained.",
+  "batch_traceable": "Batch K5521 matches dispatch, but expiry is written 10/2025 against 2025-10-31. Same batch in a different format, so true is slightly favoured while a reader may still doubt.",
+  "next_step": "6 days out of control against a limit of 5, an excursion beyond the allowance, no valid audit or declaration, and the hold limit passed. No pack can be cleared, so destroy.",
+  "resaleable_share": "4 of 5 packs have intact seals and only 1 is damaged, but the excursion and the out-of-control period taint all of them. Level 0 versus level 1 is the split.",
+  "disposition_urgency": "The extension replaced the limit with 2025-03-25 and the review date is 2025-04-01, so the effective limit has already passed."
+ },
+ "request": "rec-F422-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012871
+}

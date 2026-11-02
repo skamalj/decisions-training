@@ -1,0 +1,153 @@
+{
+ "id": "F419-0018",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "date": "2024-09-18",
+   "speed_kmh": 65,
+   "thr": {
+    "design": 0.72,
+    "plan": 0.52,
+    "min": 0.42
+   },
+   "weather": null
+  },
+  "device": {
+   "cal_expiry": "2025-03-01",
+   "tyre_kpa": 150,
+   "tyre_spec_kpa": [
+    135,
+    165
+   ],
+   "water_mm": 0.5
+  },
+  "runs": [
+   {
+    "dir": "05",
+    "thirds": [
+     0.58,
+     0.55,
+     0.57
+    ],
+    "seg": [
+     0.51,
+     0.56,
+     0.58
+    ]
+   },
+   {
+    "dir": "23",
+    "thirds": [
+     0.57,
+     0.54,
+     0.58
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.42,
+    0.4,
+    0.43
+   ],
+   "mtd_thr_mm": 0.6
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-08-24",
+   "works_orders": [],
+   "cross_checks": [
+    {
+     "d": "2024-09-18",
+     "thirds": [
+      0.57,
+      0.55,
+      0.57
+     ]
+    }
+   ],
+   "prior_surveys": [
+    {
+     "d": "2024-03-10",
+     "lowest_third": 0.55
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-09-19T08:30"
+  }
+ },
+ "factors": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 391,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 1,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "low",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "mid_section",
+  "days_since_rubber_removal": 391,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "schedule_works",
+   "second": "monitor_closely",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "surface_texture",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "genuine_deficit": "Lowest third is 0.54, above the 0.52 planning level, but one segment reads 0.51, just under it and the thirds are close to planning; this balances the question.",
+  "next_step": "Values are close to planning with no works order, favouring schedule_works; the stable trend and the agreeing cross-check make monitor_closely defensible.",
+  "deficit_driver": "All thirds in both directions are low together with mtd of 0.40 to 0.43 against the 0.6 threshold, rubber removal is not recent, the cross-check agrees and there is no test anomaly, so surface texture.",
+  "friction_severity": "The lowest third of 0.54 lies between planning and design (level 1), but the 0.51 segment is under planning, which makes level 2 arguable.",
+  "evidence_completeness": "Only weather is null (one element, level 3); if the unsigned-weather gap or timing is counted more strictly, two is plausible."
+ },
+ "request": "rec-F419-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012637
+}

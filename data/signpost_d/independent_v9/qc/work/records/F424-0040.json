@@ -1,0 +1,153 @@
+{
+ "id": "F424-0040",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2288",
+   "vessel_id": "FV2",
+   "volume_hl": 22,
+   "yeast_strain": "WLP001",
+   "yeast_gen": 3,
+   "og_target": 1.052,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.013,
+   "strain_max_temp_c": 25
+  },
+  "readings": [
+   {
+    "ts": "2024-09-01",
+    "gravity_sg": 1.052,
+    "temp_c": 19,
+    "probe_id": "P1"
+   },
+   {
+    "ts": "2024-09-04",
+    "gravity_sg": 1.016,
+    "temp_c": 23.5,
+    "probe_id": "P1"
+   },
+   {
+    "ts": "2024-09-06",
+    "gravity_sg": 1.012,
+    "temp_c": 21,
+    "probe_id": "P1"
+   }
+  ],
+  "events": [
+   {
+    "ts": "2024-09-01",
+    "vessel_id": "FV2",
+    "note": "Pitched WLP001 gen 3."
+   },
+   {
+    "ts": "2024-09-03",
+    "vessel_id": "FV2",
+    "note": "Approved free-rise to 24C."
+   },
+   {
+    "ts": "2024-09-06",
+    "vessel_id": "FV2",
+    "note": "Faint buttery hint at sampling."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2288",
+   "abv_pct": 6.8,
+   "abv_label_band": 6.8,
+   "diacetyl_mgl": 0.03,
+   "micro_plate": {
+    "result": "no growth",
+    "cfu_ml": 0
+   },
+   "lab_note": "Plate clean at 5 days."
+  },
+  "release_request": {
+   "vessel_id": "FV2",
+   "volume_hl": 22,
+   "note": "Routine."
+  }
+ },
+ "factors": {
+  "gravity_status": "last reading in band, prior reading above band and falling",
+  "final_reading_gap": true,
+  "temp_excursion": "23.5C reading below max of 25C during approved free-rise",
+  "excursion_mitigated": true,
+  "micro_signal": "faint sensory note only, plate clean",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.03,
+  "discrepancy_count": 0,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "gravity_status": "stable_in_target",
+  "final_reading_gap": true,
+  "temp_excursion": "sustained_major",
+  "excursion_mitigated": true,
+  "micro_signal": "sensory_note_only",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.03,
+  "discrepancy_count": 3,
+  "decoy_mismatch": false,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "routine",
+  "operator_note_tone": "neutral"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "deviation_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "record_discrepancies": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 123,
+ "deciding": {
+  "terminal_gravity": "Final 1.012 is in band but the prior 1.016 was above band and falling, so there is no second stable reading.",
+  "contamination_supported": "A faint sensory note against a clean plate (0 cfu/ml, no growth).",
+  "batch_disposition": "Lab results are complete and in spec, with a routine request.",
+  "deviation_severity": "The free-rise was approved and stays under the 25C max; ABV is on band and diacetyl is 0.03.",
+  "record_discrepancies": "Vessel, volume, yeast strain and generation, and batch_ref all agree across sections."
+ },
+ "request": "rec-F424-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009129
+}

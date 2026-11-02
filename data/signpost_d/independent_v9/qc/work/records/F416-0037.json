@@ -1,0 +1,143 @@
+{
+ "id": "F416-0037",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "date": "2025-04-02",
+   "end": "16:00"
+  },
+  "roster": [
+   {
+    "id": "G1",
+    "home": "S4",
+    "exp": "2026-01-01"
+   },
+   {
+    "id": "G2",
+    "home": "S4",
+    "exp": "2026-01-01"
+   },
+   {
+    "id": "G9",
+    "home": "S7",
+    "exp": "2026-03-01"
+   }
+  ],
+  "incidents": [
+   {
+    "date": "2025-04-02",
+    "type": "water_rescue",
+    "resp": [
+     "G1",
+     "G2"
+    ],
+    "outcome": "released"
+   },
+   {
+    "date": "2025-04-02",
+    "type": "water_rescue",
+    "resp": [
+     "G1",
+     "G9"
+    ],
+    "outcome": "gp_advised",
+    "ambulance_ref": "A-4471"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "aed",
+    "out_from": "13:30",
+    "out_to": null,
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "check_sheet_ref": null
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "gp_advised with ambulance_ref present",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": false,
+  "missing_record": "aed_check_sheet",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "first_aid_off_by_one",
+  "worst_outcome": "conveyed",
+  "kit_gap_band": "end_time_null",
+  "kit_substitute_logged": true,
+  "missing_record": "aed_check_sheet",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_review",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 41,
+ "deciding": {
+  "two_guard_cover": "Both rescues list two responders with in-date qualifications; G9 is from another station (mutual aid) but is in date. All are rostered at the incident times.",
+  "totals_reconcile": "Handover rescues 2 and kit_defects 1 match the incidents and equipment entry, and the incident dates match the shift date. The null check_sheet_ref leaves some doubt.",
+  "next_step": "The AED is out with no end time and no substitute, the check sheet is missing, and there is an ambulance-called casualty, so the log goes to area safety review.",
+  "outcome_severity": "The outcome is gp_advised (referred) but an ambulance_ref A-4471 is also present, which could mean conveyed. These two readings hold the score in balance.",
+  "kit_outage": "The AED went out at 13:30 with out_to null and no substitute, and the shift ended at 16:00, so the outage is about 150 minutes."
+ },
+ "request": "rec-F416-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01015
+}

@@ -1,0 +1,133 @@
+{
+ "id": "F408-0002",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 100045,
+   "stream": "recycling",
+   "claimed_date": "2024-06-04",
+   "logged_at": "2024-06-11T16:00",
+   "photo_attached": true
+  },
+  "schedule": {
+   "streams_due": [
+    "recycling"
+   ],
+   "scheduled_date": "2024-06-11",
+   "week_pattern": "B"
+  },
+  "round_log": {
+   "round_completed_at": "2024-06-11T14:30",
+   "disruption_code": "vehicle_breakdown",
+   "catch_up_date": "2024-06-12",
+   "stops": [
+    {
+     "uprn": 100045,
+     "exception_code": "access_blocked",
+     "photo_ref": "IMG-88",
+     "gps_stop": false
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 100045,
+    "logged_on": "2024-05-20",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100045,
+    "logged_on": "2024-05-02",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100045,
+    "logged_on": "2024-04-15",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100045,
+    "logged_on": "2024-03-01",
+    "outcome": "rejected"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "off_week",
+  "report_timing": "after_round_complete",
+  "crew_exception": "access_blocked",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "access_blocked",
+  "exception_supported": true,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": true,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 1,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "return_conditional",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "crew_missed": "Access_blocked has a photo but gps_stop false, so the vehicle passed without stopping; the breakdown catch-up is the doubt.",
+  "report_matches": "Claimed date 2024-06-04 is a week before scheduled 2024-06-11 on a B-week pattern, so the claim is off-week.",
+  "next_step": "Access_blocked suggests a return once access is cleared; the gps_stop false and the unclear catch-up make asking the crew for evidence equally defensible.",
+  "return_urgency": "Catch-up date 2024-06-12 falls within two working days; three recent upheld misses could argue for same day.",
+  "repeat_failures": "Three upheld entries (2024-04-15, 05-02, 05-20) fall within 84 days of 2024-06-11; the rejected one does not count."
+ },
+ "request": "rec-F408-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008509
+}

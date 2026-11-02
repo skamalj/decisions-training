@@ -1,0 +1,162 @@
+{
+ "id": "F429-0038",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 100,
+   "ramp_max_m_per_10min": 0.5
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "t": "00:00",
+     "level_m": 102.1,
+     "datum": "site"
+    },
+    {
+     "t": "03:00",
+     "level_m": 103.4,
+     "datum": "site"
+    }
+   ],
+   "triggers": {
+    "alert_m": 103,
+    "action_m": 104.5
+   }
+  },
+  "gate_ops": [
+   {
+    "gate": "G2",
+    "t": "01:00",
+    "open_after_m": 0.4
+   },
+   {
+    "gate": "G2",
+    "t": "01:10",
+    "open_after_m": 1.6
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate": "G2",
+     "opening_m": 1.55
+    }
+   ],
+   "calc_peak_m3s": 98.5,
+   "gauged_peak_m3s": 91.57,
+   "tailwater_m": [
+    {
+     "t": "01:10",
+     "m": 2.1
+    },
+    {
+     "t": "01:30",
+     "m": 3.0
+    }
+   ]
+  },
+  "instruments": {
+   "piezometer": [
+    {
+     "t": "01:20",
+     "kpa": 140,
+     "alert_kpa": 150
+    }
+   ],
+   "post_op_inspection": {
+    "status": "pending",
+    "completed_at": null
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "00:30",
+    "ack": true
+   },
+   {
+    "type": "internal_callout",
+    "sent_at": "01:20",
+    "ack": false
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "material",
+  "discharge_discrepancy_pct": 7.56,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": true
+ },
+ "factors_sampled": {
+  "reservoir_tier": "alert",
+  "near_boundary": false,
+  "discharge_vs_licence": "above_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 7.56,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "pending",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": true
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "gates_reconciled": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "hold_for_inspection",
+   "second": "escalate",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (ramp_limit_breached = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 82,
+ "deciding": {
+  "within_licence": "Calc 98.5 and gauged 91.57 are both under 100, but calc is within 3% of the limit.",
+  "gates_reconciled": "G2 open_after 1.6 vs calc opening 1.55: 0.05 m gap, borderline material.",
+  "next_step": "Inspection pending and callout unacknowledged point to hold, while the gate ramp points to escalation.",
+  "trigger_tier": "G2 moved 0.4 to 1.6 m in 10 minutes against a 0.5 m per 10 min ramp limit.",
+  "parties_needed": "Ramp breach, inspection, unacknowledged callout, gate data and downstream notice could need three or more teams, so 3 vs 4+ is contested."
+ },
+ "request": "rec-F429-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008841
+}

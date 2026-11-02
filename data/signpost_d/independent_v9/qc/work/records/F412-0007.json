@@ -1,0 +1,173 @@
+{
+ "id": "F412-0007",
+ "family": "F412",
+ "state": {
+  "premises": {
+   "ref": "P2217",
+   "type": "takeaway",
+   "risk_band": "B"
+  },
+  "inspection": {
+   "date": "2023-12-01",
+   "contravention_count": 5,
+   "contraventions": [
+    {
+     "ref": "C1",
+     "area": "REC",
+     "due_date": "2024-01-10"
+    },
+    {
+     "ref": "C2",
+     "area": "REC",
+     "due_date": "2024-01-10"
+    },
+    {
+     "ref": "C3",
+     "area": "CLN",
+     "due_date": "2024-01-10"
+    },
+    {
+     "ref": "C4",
+     "area": "FAB",
+     "due_date": "2024-01-10"
+    },
+    {
+     "ref": "C5",
+     "area": "REC",
+     "due_date": "2024-01-10"
+    }
+   ]
+  },
+  "revisit": {
+   "date": "2024-02-23",
+   "items": [
+    {
+     "ref": "C1",
+     "status": "remedied"
+    },
+    {
+     "ref": "C2",
+     "status": "remedied"
+    },
+    {
+     "ref": "C3",
+     "status": "part_remedied"
+    },
+    {
+     "ref": "C4",
+     "status": "remedied"
+    },
+    {
+     "ref": "C5",
+     "status": "not_checked"
+    }
+   ]
+  },
+  "correspondence": {
+   "extensions": [
+    {
+     "ref": "C3",
+     "agreed": true,
+     "new_due_date": "2024-01-14"
+    }
+   ],
+   "evidence": [
+    {
+     "ref": "C6",
+     "type": "training log",
+     "verified": null
+    }
+   ]
+  },
+  "history": {
+   "enforcement": [],
+   "complaints": [],
+   "samples": [
+    {
+     "ref": "C3",
+     "result": "unsatisfactory"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "contravention_count": 5,
+  "resolution_share": "most_resolved",
+  "worst_open_area": "records_and_cleaning",
+  "food_handling_open_count": 0,
+  "cross_section_mismatch": "ref_mismatch",
+  "days_past_original_due": 44,
+  "extension_agreed": true,
+  "benign_explanation": false,
+  "operator_evidence": "submitted_unverified",
+  "adverse_sample": true,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 0,
+  "boundary_case": false,
+  "reassuring_note_decoy": false
+ },
+ "factors_sampled": {
+  "contravention_count": 5,
+  "resolution_share": "most_resolved",
+  "worst_open_area": "food_handling",
+  "food_handling_open_count": 0,
+  "cross_section_mismatch": "ref_mismatch",
+  "days_past_original_due": 40,
+  "extension_agreed": true,
+  "benign_explanation": false,
+  "operator_evidence": "submitted_unverified",
+  "adverse_sample": false,
+  "complaint_since_inspection": "none",
+  "prior_enforcement_count": 0,
+  "boundary_case": false,
+  "reassuring_note_decoy": false
+ },
+ "plan": {
+  "all_remedied": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "close_case",
+   "second": "refer_lead",
+   "targets": [
+    "T1"
+   ]
+  },
+  "worst_hazard": {
+   "clarity": "contested",
+   "target": "records_only",
+   "second": "premises_fabric",
+   "targets": []
+  },
+  "overdue_extent": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "residual_risk": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 99,
+ "deciding": {
+  "all_remedied": "Three items are remedied, but C3 is part_remedied and C5 was not checked, and the only evidence cites C6, which is not in the inspection and is unverified. A reader could still see a paperwork gap rather than real failure.",
+  "next_step": "Open items are records and cleaning, with no prior enforcement, which suggests closing. The unsatisfactory C3 sample and the large overdue period could justify referral.",
+  "worst_hazard": "Open C5 is REC and open C3 is CLN; neither is a food handling code, so records and fabric both fit.",
+  "overdue_extent": "C5 is 44 days past 2024-01-10 (level 3), while C3 against its agreed 2024-01-14 date is 40 days (level 2). Both sit around the 42-day boundary.",
+  "residual_risk": "The unsatisfactory sample linked to the open C3 cleaning item, with a second item unchecked, leans toward serious. There is no food handling item."
+ },
+ "request": "rec-F412-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01155
+}

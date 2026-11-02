@@ -1,0 +1,130 @@
+{
+ "id": "F417-0002",
+ "family": "F417",
+ "state": {
+  "vessel": {
+   "id": "SY-Rhea",
+   "loa_m": 10.3,
+   "draught_m": 2.2,
+   "draught_src": "survey_certificate"
+  },
+  "berth": {
+   "id": "P12",
+   "max_loa_m": 11.0,
+   "fender_allow_m": 0.5,
+   "depth_lat_m": 3.4
+  },
+  "booking": {
+   "arrival": "2025-08-09",
+   "departure": "2025-08-12",
+   "next_on_berth": {
+    "arrival": "2025-08-12"
+   }
+  },
+  "documents": {
+   "survey": {
+    "loa_m": 11.35,
+    "draught_m": 2.2
+   },
+   "insurance_expiry": "2026-03-01",
+   "inspection_date": "2025-08-20"
+  },
+  "account": {
+   "dues_outstanding_gbp": 2387,
+   "plan_id": "PP-31",
+   "plan_status": "approved"
+  },
+  "history": [
+   {
+    "date": "2023-07-03",
+    "berth": "P12",
+    "incidents": 1
+   },
+   {
+    "date": "2024-07-05",
+    "berth": "P12",
+    "incidents": 0
+   }
+  ]
+ },
+ "factors": {
+  "loa_mismatch_pct": 10.19,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 1.2,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 2387,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "factors_sampled": {
+  "loa_mismatch_pct": 10.16,
+  "berth_length_fit": "within_fender_allowance",
+  "ukc_margin_m": 0.61,
+  "draught_source": "survey_certificate",
+  "insurance_status": "valid_whole_stay",
+  "inspection_state": "dated_after_departure",
+  "arrears_amount": 2387,
+  "payment_plan_approved": true,
+  "dimension_waiver": false,
+  "date_overlap": "same_day_turnover",
+  "trusted_regular": true,
+  "prior_incidents": 1,
+  "boundary_placement": false
+ },
+ "plan": {
+  "length_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "confirm_allocation",
+   "second": "allocate_with_conditions",
+   "targets": [
+    "T1"
+   ]
+  },
+  "primary_issue": {
+   "clarity": "contested",
+   "target": "date_conflict",
+   "second": "dimension_mismatch",
+   "targets": []
+  },
+  "ukc_band": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "unresolved_count": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 37,
+ "deciding": {
+  "length_fits": "Survey loa 11.35 is over max 11.0 but within max plus fender allowance 11.5, so it fits only via the allowance.",
+  "next_step": "Same-day turnover (next arrival equals departure 2025-08-12) and the 1.05 m length discrepancy leave confirm versus conditions finely balanced.",
+  "primary_issue": "Declared loa 10.3 against survey 11.35 competes with next_on_berth arrival equal to departure day; both are defensible.",
+  "ukc_band": "Depth 3.4 minus survey draught 2.2 gives 1.2 m, which is level 3.",
+  "unresolved_count": "Only the loa mismatch between vessel and survey is a clear discrepancy; insurance valid, plan approved."
+ },
+ "request": "rec-F417-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011746
+}

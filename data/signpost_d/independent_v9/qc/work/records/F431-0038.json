@@ -1,0 +1,121 @@
+{
+ "id": "F431-0038",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM-31876",
+   "seal_state": "broken",
+   "seal_checked_date": "2025-01-09"
+  },
+  "period_read": {
+   "read_date": "2025-03-12",
+   "reg_kwh": 10130,
+   "src_code": "EST",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2025-02-12",
+    "reg_kwh": 9000,
+    "src": "AMR",
+    "same_period_ly_kwh": 400
+   }
+  ],
+  "diagnostics": null,
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2025-02-20",
+   "hdd_current": 250,
+   "hdd_prior_year": 200,
+   "works_orders": [
+    {
+     "type": "METER_EXCH",
+     "status": "open",
+     "date": "2025-02-27"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "system_estimate",
+  "read_sequence_issue": "none",
+  "missing_section": "diagnostics_null",
+  "consumption_ratio": 2.26,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.25,
+  "diagnostic_error_count": "unknown (diagnostics null)",
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "system_estimate",
+  "read_sequence_issue": "none",
+  "missing_section": "diagnostics_null",
+  "consumption_ratio": 2.26,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.25,
+  "diagnostic_error_count": 3,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "consumption_deviation": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 76,
+ "deciding": {
+  "meter_fault": "The seal is broken with no matching ENG visit, and the exchange order is open, which favours a fault or tampering. Diagnostics are null and the tenancy change could explain the high use, so doubt remains.",
+  "billable_actual": "src_code is EST and photo_ref is null, so this is a system estimate and not an actual read.",
+  "next_step": "This is a system-generated figure with an exchange order already open, so no further work is placed on this reading and it is released as it stands.",
+  "staff_effort": "A broken seal with no visit, an open exchange order and a tenancy change with no diagnostics need days of investigation.",
+  "consumption_deviation": "Period use is 10130-9000=1130 kWh. Expected is 400*250/200=500 kWh, so the ratio is 2.26 and the deviation is 126%."
+ },
+ "request": "rec-F431-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009886
+}

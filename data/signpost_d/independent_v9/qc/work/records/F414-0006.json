@@ -1,0 +1,135 @@
+{
+ "id": "F414-0006",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "A114",
+   "equip_type": "roundabout"
+  },
+  "inspection": {
+   "insp_grade": "routine_visual",
+   "fall_height_m": 0.6,
+   "surf_type_found": "bark",
+   "surf_depth_mm": 198,
+   "surf_req_table": [
+    {
+     "max_h": 1.0,
+     "type": "bark",
+     "min_depth_mm": 200
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "PAINT",
+     "component_id": "C1",
+     "injury_mech": "cosmetic"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "W1",
+    "asset_id": "A114",
+    "component_id": "C1",
+    "defect_ref": "D7",
+    "status": "open"
+   }
+  ],
+  "site": {
+   "usage_level": "high",
+   "incident_reports_90d": 2
+  },
+  "history": [
+   {
+    "date": "2024-03-01",
+    "defect_refs": [
+     "D7"
+    ]
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "roundabout",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": -2.0,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.0,
+  "temporary_measure_in_place": false,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "high",
+  "incident_reports_90d": 2
+ },
+ "factors_sampled": {
+  "equipment_type": "roundabout",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 4.75,
+  "worst_defect_class": "serious_injury",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 4,
+  "work_orders_closed_fraction": 0.5,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": false,
+  "missing_measurement": false,
+  "inspector_grade": "routine_visual",
+  "usage_level": "high",
+  "incident_reports_90d": 2
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "asset_disposition": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 39,
+ "deciding": {
+  "prior_defects_cleared": "History defect D7 matches work order W1 still open, with no follow-up check; only the cosmetic nature leaves slight doubt.",
+  "surfacing_adequate": "Depth 198 mm vs 200 mm minimum for bark at 0.6 m: marginally short, so close to the boundary.",
+  "asset_disposition": "Only a cosmetic paint finding; no hazard, no probe failures, so accepted for use.",
+  "remedial_progress": "The only raised work order W1 is open, none closed.",
+  "hazard_severity": "Sole finding is PAINT with injury_mech cosmetic."
+ },
+ "request": "rec-F414-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012908
+}

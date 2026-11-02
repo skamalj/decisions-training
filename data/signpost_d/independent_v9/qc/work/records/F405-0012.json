@@ -1,0 +1,159 @@
+{
+ "id": "F405-0012",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-2207",
+   "detected_on": "2025-08-10",
+   "term_start": "2025-09-15",
+   "room": "C1.03"
+  },
+  "booking_a": {
+   "module": "PHY101",
+   "dept": "PHY",
+   "day": "Tue",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 84,
+   "features": [
+    "accessible_entry"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "LAW140",
+   "dept": "LAW",
+   "day": "Tue",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-07-30",
+   "approver": "j.hale"
+  },
+  "room": {
+   "code": "C1.03",
+   "capacity": 90
+  },
+  "alternatives": [
+   {
+    "code": "C2.01",
+    "capacity": 100,
+    "features": [
+     "accessible_entry"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "clash_report"
+   },
+   {
+    "type": "change_request",
+    "state": "open"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "partial_time_with_disjoint_weeks",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 34,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.84,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": true,
+  "days_to_first_occurrence": 34,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.84,
+  "required_feature": "accessible_entry",
+  "owning_departments": "different_depts",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "clear",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "urgency": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 45,
+ "deciding": {
+  "genuine_clash": "Weeks [1-4] and [5-7] do not intersect, so there is no real overlap despite the shared Tuesday slot.",
+  "alt_room_fits": "C2.01 has capacity 100 against 84 and the accessible_entry feature, free in the weeks; but with no real clash it is not clear whether any displaced booking exists.",
+  "resolution": "The open change_request is the unconfirmed item; both bookings are confirmed, so hold_confirm is the call. The plan keeps this answer.",
+  "urgency": "Detection 2025-08-10 to first week 1 Tuesday 2025-09-16 is 37 days, but week 5 is later. This is near the 28-day boundary at level 1 vs 0.",
+  "parties_needed": "Two departments, an approver, a change-request owner and a room owner are involved; 4 or 5 people is the split."
+ },
+ "request": "rec-F405-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006018
+}

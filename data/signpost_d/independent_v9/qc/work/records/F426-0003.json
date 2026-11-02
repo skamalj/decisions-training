@@ -1,0 +1,123 @@
+{
+ "id": "F426-0003",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B3",
+   "crop": "plum"
+  },
+  "applications": [
+   {
+    "date": null,
+    "product_code": "QA9",
+    "qty_applied": 2,
+    "qty_unit": "L",
+    "area_treated_ha": 2
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "QA9",
+    "max_rate_per_ha": 1.5,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "approved_crops": [
+     "plum"
+    ]
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-09-10",
+   "residue_test": {
+    "sampled": true,
+    "below_limit": null,
+    "result_date": null
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "app_date_missing",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "missing",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "app_date_missing",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "expired_long",
+  "missing_item": "residue_result_pending",
+  "season_count_excess": true,
+  "off_label_crop": false,
+  "num_applications": 4,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "rate_overrun": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 50,
+ "deciding": {
+  "phi_cleared": "Application date is null, so the interval to first pick 2024-09-10 cannot be confirmed.",
+  "next_step": "Missing date and pending residue result point to requesting evidence; release is not well supported.",
+  "finding_class": "No stated breach or deviation; rate 1.0 L/ha under 1.5; only missing data.",
+  "reversal_time": "Any decision is quickly reversible while the lot is still unpacked.",
+  "rate_overrun": "2 L / 2 ha = 1.0 L/ha, under 1.5."
+ },
+ "request": "rec-F426-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004458
+}

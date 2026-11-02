@@ -1,0 +1,323 @@
+{
+ "id": "F419",
+ "domain": "airport runway friction test records",
+ "role": "Aerodrome pavement friction analyst reviewing each continuous friction measuring equipment survey before it is accepted",
+ "setting": "A regional airport's airside engineering office keeps one record per runway friction survey. Each record holds survey metadata and the threshold levels in force, the measuring device's calibration and settings, the measured runs split into runway thirds and 100 m segments, surface texture readings, maintenance history and the sign-off state. The analyst reviews one record at a time. For each, they decide whether a genuine deficit is shown, what happens next, the main driver of any deficit, how severe the worst reading is and how complete the required evidence is.",
+ "questions": {
+  "genuine_deficit": {
+   "type": "noul",
+   "instructions": "The record shows a genuine friction deficit below the maintenance planning level.",
+   "criteria": null
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should happen next with this friction test record?",
+   "criteria": {
+    "file_routine": "Valid test, every value at or above maintenance planning level.",
+    "hold_retest": "Validity in doubt from calibration, conditions or gaps; no minimum breach.",
+    "monitor_closely": "Valid deficit below planning level, removal works already scheduled.",
+    "schedule_works": "Valid deficit below planning level, no corrective works scheduled.",
+    "restrict_ops": "Any third or segment below minimum; NOTAM and restriction needed."
+   }
+  },
+  "deficit_driver": {
+   "type": "choice",
+   "instructions": "What is the main driver of any friction deficit recorded?",
+   "criteria": {
+    "none_found": "No third or segment falls below maintenance planning level.",
+    "rubber_deposits": "Deficit concentrated in touchdown zones, texture adequate, removal overdue.",
+    "surface_texture": "Deficit spread along runway alongside low measured macrotexture depth.",
+    "test_artefact": "Deficit coincides with off-standard test settings or higher cross-check."
+   }
+  },
+  "friction_severity": {
+   "type": "score",
+   "instructions": "How severe is the worst friction reading against the thresholds?",
+   "criteria": [
+    "Clear: all thirds and segments at or above design level",
+    "Watch: lowest value between maintenance planning and design levels",
+    "Planning: lowest value below maintenance planning, above minimum level",
+    "Critical: any third or 100 m segment below minimum"
+   ]
+  },
+  "evidence_completeness": {
+   "type": "score",
+   "instructions": "How complete is the required evidence in this test record?",
+   "criteria": [
+    "Four or more required elements missing, null or misdated",
+    "Three required elements missing, null or misdated",
+    "Two required elements missing, null or misdated",
+    "One required element missing, null or misdated",
+    "All required elements present and dated before sign-off"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "min_third_band",
+   "description": "Band of the lowest runway-third average friction, relative to the design objective, maintenance planning and minimum levels stated in the record",
+   "kind": "categorical",
+   "values": [
+    "above_design",
+    "between_planning_design",
+    "below_planning",
+    "below_minimum"
+   ],
+   "weights": [
+    0.25,
+    0.3,
+    0.3,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "near_boundary",
+   "description": "Lowest third average sits within 0.01 of the threshold that separates its band from the neighbouring band",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.25,
+   "skills": [
+    "S6"
+   ]
+  },
+  {
+   "name": "localised_segment_below_min",
+   "description": "Aggravating fact: at least one 100 m segment average falls below the minimum friction level, even when every third average is higher",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "deficit_location",
+   "description": "Where along the runway the lowest readings cluster",
+   "kind": "categorical",
+   "values": [
+    "touchdown_zones",
+    "uniform",
+    "mid_section"
+   ],
+   "weights": [
+    0.45,
+    0.35,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S7"
+   ]
+  },
+  {
+   "name": "days_since_rubber_removal",
+   "description": "Days between the last completed rubber removal and the survey date",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 20,
+   "max": 400,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "removal_scheduled",
+   "description": "An open rubber removal or resurfacing works order starts within 14 days of the survey",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "calibration_status",
+   "description": "State of the device calibration relative to the survey date",
+   "kind": "categorical",
+   "values": [
+    "valid",
+    "expired",
+    "post_dated",
+    "missing"
+   ],
+   "weights": [
+    0.6,
+    0.15,
+    0.1,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2"
+   ]
+  },
+  {
+   "name": "missing_elements_count",
+   "description": "Number of further required elements left null or absent: tyre pressure, water depth, reverse-direction run, weather block, sign-off",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "test_condition_anomaly",
+   "description": "Off-standard test condition that could depress readings",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "tyre_pressure_off",
+    "natural_rain",
+    "speed_off"
+   ],
+   "weights": [
+    0.55,
+    0.15,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "macrotexture_band",
+   "description": "Mean texture depth on the weakest third relative to the record's texture threshold",
+   "kind": "categorical",
+   "values": [
+    "adequate",
+    "marginal",
+    "low"
+   ],
+   "weights": [
+    0.55,
+    0.25,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "cross_check_result",
+   "description": "Outcome of a second-device check run within 48 hours of the survey",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "agrees",
+    "higher_by_0_08_plus"
+   ],
+   "weights": [
+    0.5,
+    0.25,
+    0.25
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "prior_survey_trend",
+   "description": "Pattern of the previous two surveys' lowest third values",
+   "kind": "categorical",
+   "values": [
+    "stable",
+    "declining",
+    "no_prior"
+   ],
+   "weights": [
+    0.4,
+    0.4,
+    0.2
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S2"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "test_meta",
+   "description": "Runway designator, survey date and time, test speed, threshold levels in force, weather block"
+  },
+  {
+   "name": "device",
+   "description": "Device type and serial, calibration certificate date and expiry, tyre pressure, self-wetting water depth"
+  },
+  {
+   "name": "runs",
+   "description": "List of runs by direction, each with three third averages and 100 m segment averages"
+  },
+  {
+   "name": "surface",
+   "description": "Mean texture depth per third, texture threshold, contaminant observed at test"
+  },
+  {
+   "name": "maintenance",
+   "description": "Last rubber removal date, open works orders with start dates, prior surveys and cross-check runs"
+  },
+  {
+   "name": "review",
+   "description": "Analyst assignment, sign-off timestamp and sign-off role, null when not yet signed"
+  }
+ ],
+ "rendering_notes": "test_meta.thresholds carries design, maint_planning and minimum values for the stated speed, for example 0.72/0.52/0.42 at 65 km/h. A decoy set for 95 km/h is shown but does not apply when test_speed_kmh is 65. min_third_band is rendered only through runs[].thirds numeric averages; the analyst compares the lowest third average across both directions with the thresholds. near_boundary places that lowest value within 0.01 of a threshold. localised_segment_below_min appears as one value in runs[].segments_100m below thresholds.minimum, while the thirds average stays higher because the neighbouring segments are good. deficit_location shapes which thirds and segments are low: the touchdown thirds for each direction, all thirds, or the middle third. days_since_rubber_removal is derived from maintenance.last_rubber_removal against test_meta.survey_date. removal_scheduled appears as a maintenance.works_orders entry with type rubber_removal and start_date within 14 days. Decoys: a closed past works order and a works order for an unrelated taxiway. calibration_status: valid means device.cal_expiry is after the survey date; expired means cal_expiry is before it; post_dated means cal_cert_date is after the survey date; missing means the calibration fields are null. missing_elements_count nulls device.tyre_pressure_kpa, device.water_depth_mm, test_meta.weather, review.signed_at, or removes the reverse-direction run. Each missing or null element and any non-valid calibration counts towards evidence_completeness. test_condition_anomaly: tyre_pressure_off shows a pressure outside the spec range given in device.tyre_spec_kpa; natural_rain shows test_meta.weather.precip_mm above 0 with surface.contaminant wet; speed_off shows runs[].mean_speed_kmh more than 5 km/h from test_speed_kmh. macrotexture_band appears as surface.mtd_mm per third against surface.mtd_threshold_mm. cross_check_result appears as maintenance.cross_checks with device serial, date and third averages, or as an empty list. prior_survey_trend appears as maintenance.prior_surveys with dates and lowest_third values, or as an empty list. Further decoys: wind speed, air temperature, runway length, run count, a high-reading third, device serial. No field states a band, severity, validity, cause, recommended action or completeness score. No boolean flags such as below_minimum or valid_test. No free-text fields.",
+ "skills": [
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": null,
+ "aggravating_factor": "localised_segment_below_min",
+ "design_cost": 0.155316
+}

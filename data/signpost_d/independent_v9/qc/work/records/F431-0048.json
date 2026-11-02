@@ -1,0 +1,125 @@
+{
+ "id": "F431-0048",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM3308",
+   "type": "mechanical",
+   "last_verified": "2018-11-20",
+   "seal_state": "intact",
+   "seal_checked": "2023-11-05"
+  },
+  "period_read": {
+   "read_date": "2024-03-31T06:00",
+   "reg_kwh": 10028,
+   "src_code": "AMR",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2024-03-31T06:00",
+    "reg_kwh": 8000,
+    "src": "AMR",
+    "same_period_ly_kwh": 1000
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_COMMS"
+   ],
+   "flow_temp_c": 66,
+   "return_temp_c": 40,
+   "battery_pct": 15
+  },
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2024-03-10",
+   "hdd_current": 390,
+   "hdd_prior_year": 500,
+   "works_orders": [
+    {
+     "type": "RECAL",
+     "status": "open",
+     "date": "2024-03-18"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "duplicate_timestamp",
+  "missing_section": "none",
+  "consumption_ratio": 2.6,
+  "occupancy_change": true,
+  "degree_day_ratio": 0.78,
+  "diagnostic_error_count": 1,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "duplicate_timestamp",
+  "missing_section": "photo_ref_missing",
+  "consumption_ratio": 1.74,
+  "occupancy_change": true,
+  "degree_day_ratio": 0.78,
+  "diagnostic_error_count": 4,
+  "meter_works_order": true,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "bill_estimate",
+   "second": "request_photo_read",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 78,
+ "deciding": {
+  "meter_fault": "Seal intact, normal delta-T, only a comms code and a tenancy change in the period; an open RECAL order leaves some doubt.",
+  "billable_actual": "Read timestamp equals the latest history entry (2024-03-31T06:00) with a different register, a sequence defect; occupancy change makes the high use plausible.",
+  "next_step": "Duplicate timestamp with an unexplained high register could justify a flagged estimate, or a photo to confirm the register; sensible readers split.",
+  "staff_effort": "Duplicate timestamp, tenancy change, open recal and a very large overshoot suggest extended multi-party reconciliation of the account.",
+  "consumption_deviation": "2028 kWh vs expected 1000*390/500=780 gives ratio 2.6, well over 100%."
+ },
+ "request": "rec-F431-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01112
+}

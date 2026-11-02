@@ -1,0 +1,126 @@
+{
+ "id": "F434-0006",
+ "family": "F434",
+ "state": {
+  "post": {
+   "km_marker": 41,
+   "off_post_at": "13:52:30",
+   "marshals_rostered": 2,
+   "marshals_signed_in": 2
+  },
+  "incidents": [
+   {
+    "time": "13:20",
+    "km": 41,
+    "type": "vehicle_on_course",
+    "bibs": [
+     88
+    ],
+    "medic_called": true,
+    "medic_arrival_min": 29.56,
+    "rider_status": "continued",
+    "escort_present": true
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "12:30",
+     "ok": false
+    },
+    {
+     "time": "13:00",
+     "ok": false
+    },
+    {
+     "time": "13:30",
+     "ok": false
+    }
+   ]
+  },
+  "control_record": {
+   "road_reopened_at": {
+    "38-44": "13:40"
+   }
+  },
+  "sweep": {
+   "passed_at": "13:52",
+   "last_rider_bib": 215,
+   "post_cleared_at": "13:53"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": true,
+  "incident_mix": "fall",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 29.56,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": true,
+  "incident_mix": "fall",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 29.56,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "query_marshal",
+   "second": "hold_confirm",
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "leaning",
+   "target": "course_intrusion",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (reopen_before_sweep = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 52,
+ "deciding": {
+  "coverage_held": "off_post_at 13:52:30 is after sweep passed_at 13:52, but three failed radio checks and no backup phone leave doubt.",
+  "next_step": "Medic attended 29.56 min but control has no medical_handovers entry to confirm, which supports hold_confirm; radio failures with no backup phone are a clerical item for the marshal.",
+  "incident_class": "A vehicle_on_course entry at km 41 with an escort present, so an intrusion; the record carries a fall elsewhere only by implication.",
+  "reversal_time": "Road reopened 13:40, before sweep 13:52 with bib 215 still to pass; consequence is a safety failure with unclear lasting harm, so level 2 or 3.",
+  "consequence_severity": "Roads reopened at 13:40 before the last rider bib 215 passed at 13:52, meaning riders met reopened traffic."
+ },
+ "request": "rec-F434-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005011
+}

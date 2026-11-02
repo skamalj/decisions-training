@@ -1,0 +1,133 @@
+{
+ "id": "F437-0050",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v2",
+   "glossary_version": "g1",
+   "due_at": "2025-07-08T09:00",
+   "workflow": [
+    {
+     "step": "dtp",
+     "done_at": "2025-07-09"
+    }
+   ]
+  },
+  "source": {
+   "version": "v2",
+   "segment_count": 300,
+   "word_count": 5200
+  },
+  "deliverable": {
+   "built_from_version": "v2",
+   "target_locale": "de-DE",
+   "segments_translated": 300,
+   "word_count": 5190,
+   "glossary_version_used": "g1",
+   "delivered_at": "2025-07-09T19:00"
+  },
+  "qa_report": {
+   "run_at": "2025-07-09T17:00",
+   "flags": 28,
+   "false_positive_marked": 10,
+   "number_mismatches": [
+    {
+     "src": "4.5%",
+     "tgt": "45%"
+    }
+   ],
+   "unresolved": {
+    "critical": 0,
+    "major": 3,
+    "minor": 4
+   }
+  },
+  "review": null,
+  "history": {
+   "revision_rounds": [
+    "2025-07-01",
+    "2025-07-04"
+   ],
+   "reassignments": 1
+  }
+ },
+ "factors": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "not_assigned",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.36,
+  "number_mismatch_count": 1,
+  "deadline_slack_hours": -34,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "none",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "not_assigned",
+  "open_error_profile": "major",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.36,
+  "number_mismatch_count": 1,
+  "deadline_slack_hours": -34,
+  "client_waiver": false,
+  "prior_revision_rounds": 2,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_for_item",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "2",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 117,
+ "deciding": {
+  "scope_matches": "Versions v2 and 300/300 segments agree; word count differs by only 10.",
+  "reviewed_in_time": "review section is null, so no sign-off; a review could exist outside the record.",
+  "next_step": "Missing named artefact: the bilingual review is null; request it before deciding.",
+  "open_severity": "QA unresolved shows 3 major and the 4.5% vs 45% number mismatch could be critical; major versus critical is open.",
+  "parties_needed": "Needs a reviewer to be assigned, translator to fix majors and number error, and account manager for lateness of 34 hours, plus perhaps DTP."
+ },
+ "request": "rec-F437-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005927
+}

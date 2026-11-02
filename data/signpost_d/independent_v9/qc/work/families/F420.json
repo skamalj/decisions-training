@@ -1,0 +1,329 @@
+{
+ "id": "F420",
+ "domain": "cargo pallet loading plans",
+ "role": "Load control officer at an air freight hub, reviewing each completed ULD pallet build record before it is released to the ramp for loading",
+ "setting": "A cargo terminal builds airline pallets (ULDs) from many air waybills. Each build produces a record that combines the planned build, the manifested pieces, the measured result at the build station, the dangerous goods notification, any approvals, and a log of checks. The load control officer reviews one pallet record at a time and decides whether the pieces reconcile, what to do with the pallet, which discrepancy class matters most, how far the weighed gross departs from plan, and how much physical rework is needed.",
+ "questions": {
+  "pieces_reconciled": {
+   "type": "noul",
+   "instructions": "Every manifested piece is accounted for on this pallet build.",
+   "criteria": {
+    "true": "Counts match, or shortfall covered by part-shipment record",
+    "false": "Unexplained shortfall, extra piece, or count not recorded"
+   }
+  },
+  "disposition": {
+   "type": "choice",
+   "instructions": "What should happen to this pallet before departure?",
+   "criteria": {
+    "release": "Pallet goes to the ramp as built and documented",
+    "release_conditional": "Released once a single ramp-side securing fix is confirmed",
+    "hold": "Kept at build area awaiting one outstanding confirmation or document",
+    "rebuild": "Returned to build team to remove, add or reposition pieces"
+   }
+  },
+  "worst_discrepancy": {
+   "type": "choice",
+   "instructions": "What is the most serious unresolved discrepancy class on this record?",
+   "criteria": {
+    "none": "No unresolved disagreement between any sections of the record",
+    "paperwork_only": "Only identifiers or document fields disagree; physical build within limits",
+    "physical_build": "Weight, height, piece count or securing outside limits, no DG issue",
+    "dangerous_goods": "Dangerous goods segregation or NOTOC disagreement remains unresolved"
+   }
+  },
+  "weight_deviation": {
+   "type": "score",
+   "instructions": "How far does measured gross weight depart from planned gross?",
+   "criteria": [
+    "Measured gross within 1% of planned gross",
+    "Measured gross differs from plan by over 1% to 3%",
+    "Measured gross differs from plan by over 3% to 5%",
+    "Measured gross differs from plan by over 5%"
+   ]
+  },
+  "rework_extent": {
+   "type": "score",
+   "instructions": "How much physical rework does this build need before release?",
+   "criteria": [
+    "None: build stands as recorded, no physical change",
+    "Minor: one securing fix only, strap or net",
+    "Partial: some pieces removed, added or repositioned",
+    "Full: pallet broken down and built again"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "weight_deviation_pct",
+   "description": "Signed percentage by which the scale gross differs from planned gross (sum of manifest line weights plus ULD tare); values cluster near the 1%, 3% and 5% boundaries in some records",
+   "kind": "number",
+   "values": [],
+   "weights": [],
+   "min": -8,
+   "max": 8,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "piece_count_gap",
+   "description": "Net difference between manifested pieces and pieces counted on the build for one or more AWB lines; 0 means all counted, positive means short, negative means extra",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": -2,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S5"
+   ]
+  },
+  {
+   "name": "part_shipment_on_file",
+   "description": "Whether an approved part-shipment entry exists that exactly covers a piece shortfall on the affected AWB; sampled independently so shortfalls appear with and without it",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "height_vs_contour",
+   "description": "How the measured maximum height compares with the contour limit for the assigned position",
+   "kind": "categorical",
+   "values": [
+    "well_within",
+    "within_2cm",
+    "over_up_to_5cm",
+    "over_more_than_5cm"
+   ],
+   "weights": [
+    0.4,
+    0.2,
+    0.25,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S6"
+   ]
+  },
+  {
+   "name": "contour_waiver",
+   "description": "Whether an approved contour waiver for this ULD and position raises the allowed height; sampled near even so over-height appears with and without mitigation",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "dg_state",
+   "description": "Dangerous goods content and segregation between classes on the same pallet",
+   "kind": "categorical",
+   "values": [
+    "no_dg",
+    "dg_compatible",
+    "dg_segregation_conflict"
+   ],
+   "weights": [
+    0.5,
+    0.35,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "notoc_match",
+   "description": "Whether the NOTOC lines agree with DG pieces in the manifest (UN number, class, piece count)",
+   "kind": "categorical",
+   "values": [
+    "matched",
+    "line_missing",
+    "pcs_differ",
+    "not_applicable"
+   ],
+   "weights": [
+    0.45,
+    0.12,
+    0.13,
+    0.3
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "securing_state",
+   "description": "State of straps and net on the measured build compared with the requirement for the ULD type",
+   "kind": "categorical",
+   "values": [
+    "complete",
+    "one_strap_short",
+    "net_not_logged",
+    "two_or_more_straps_short"
+   ],
+   "weights": [
+    0.5,
+    0.2,
+    0.18,
+    0.12
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S4"
+   ]
+  },
+  {
+   "name": "scale_cal_overdue",
+   "description": "Whether the build scale's calibration due date is earlier than the build timestamp, making the weighed gross unconfirmed",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.3,
+   "skills": [
+    "S3",
+    "S4",
+    "S6"
+   ]
+  },
+  {
+   "name": "reweigh_logged",
+   "description": "Whether an independent reweigh on a calibrated scale is logged after the build; mitigates an overdue scale or a borderline deviation",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S6"
+   ]
+  },
+  {
+   "name": "doc_field_mismatch",
+   "description": "A document-only disagreement between sections that does not affect the physical build",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "awb_digits_transposed",
+    "dest_code_differs",
+    "uld_serial_differs"
+   ],
+   "weights": [
+    0.55,
+    0.15,
+    0.15,
+    0.15
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S1",
+    "S7"
+   ]
+  },
+  {
+   "name": "minutes_to_cutoff",
+   "description": "Minutes between record review time and the flight's ULD acceptance cut-off; decoy that creates apparent urgency but does not change any answer",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 15,
+   "max": 360,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  },
+  {
+   "name": "prior_rebuilds",
+   "description": "Number of earlier rebuilds of this ULD for the same flight in the checks log; decoy history count that does not by itself change answers",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S3",
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "plan_header",
+   "description": "ULD id and serial, type, flight, date, deck position, contour code, contour_max_cm, tare_kg, planned_gross_kg, straps_required, cutoff_utc"
+  },
+  {
+   "name": "manifest_lines",
+   "description": "List of AWB lines with awb, dest, pcs, weight_kg, dims_cm, shc codes, un_no and dg_class or null"
+  },
+  {
+   "name": "build_measured",
+   "description": "Build station result: built_utc, scale_id, scale_gross_kg, max_height_cm, pcs_counted by AWB, straps_fitted, net_fitted (boolean or null), uld_serial_scanned"
+  },
+  {
+   "name": "dg_notoc",
+   "description": "NOTOC lines with awb, un_no, dg_class, pcs, position; null when no DG declared"
+  },
+  {
+   "name": "approvals",
+   "description": "Lists of part_shipments (awb, pcs_this_flight) and contour_waivers (uld, position, max_cm), possibly empty"
+  },
+  {
+   "name": "checks_log",
+   "description": "Scale calibration due date, reweigh entries with scale and kg, earlier rebuild entries with timestamps"
+  }
+ ],
+ "rendering_notes": "No free-text fields; all values are codes, numbers, ISO timestamps, booleans or null. weight_deviation_pct: plan_header.planned_gross_kg equals tare_kg plus the sum of manifest_lines weight_kg; build_measured.scale_gross_kg differs by the sampled percentage. The officer must compute the percentage; no field shows it. If reweigh_logged, checks_log.reweigh holds a calibrated-scale reading which supersedes the build scale for the weight score. piece_count_gap: build_measured.pcs_counted lists counts per AWB; one or more lines differ from manifest pcs. Place the shortfall on varied lines, sometimes split across two. If part_shipment_on_file and the gap is a shortfall, approvals.part_shipments shows pcs_this_flight equal to the counted figure for that AWB. Occasionally pcs_counted for one AWB is null, which makes pieces_reconciled false. height_vs_contour: compare build_measured.max_height_cm with plan_header.contour_max_cm; a contour_waiver entry for the same ULD and position replaces the limit, but only if its uld and position match the header. In some records the waiver names a different position as a decoy. dg_state: shown via manifest shc and dg_class pairs on the same ULD; segregation conflicts arise from incompatible class pairs. notoc_match: dg_notoc lines omit an AWB or show different pcs. When there is no DG, dg_notoc is null. securing_state: straps_fitted compared with straps_required; net_fitted is null for net_not_logged. scale_cal_overdue: checks_log.scale_cal_due is earlier than build_measured.built_utc. doc_field_mismatch: an AWB in dg_notoc or part_shipments has transposed digits, a manifest dest differs from the flight destination, or uld_serial_scanned differs from the header serial. minutes_to_cutoff and prior_rebuilds are decoys and change no answer. Answer logic: worst_discrepancy takes the most serious unresolved class in the order dangerous_goods > physical_build > paperwork_only > none. Physical_build covers weight deviation over 3%, unwaived over-height, an unexplained piece gap, or any securing shortfall. rework_extent is None when nothing physical is needed. It is Minor for one_strap_short or net_not_logged, Partial for unwaived over-height up to 5cm, extra pieces, or weight deviation over 3% to 5%, and Full for over-height over 5cm, two or more straps short with other issues, a DG segregation conflict, or deviation over 5%. Disposition is rebuild when rework is Partial or Full. Otherwise it is hold when one confirmation is outstanding: overdue scale without reweigh, a NOTOC mismatch, a document field mismatch, or net not logged. Otherwise it is release_conditional when rework is Minor, and release otherwise. Contested records arise when a deviation sits within 0.2 points of a threshold, height is exactly at the limit, or a waiver's max_cm equals the measured height. Never include fields such as status, risk, ok, approved_for_release or discrepancy flags that state an answer.",
+ "skills": [
+  "S1",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": null,
+ "aggravating_factor": null,
+ "design_cost": 0.162
+}

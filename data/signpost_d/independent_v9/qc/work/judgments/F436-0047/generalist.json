@@ -1,0 +1,36 @@
+{
+ "persona": "generalist",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "probabilities": {
+  "error_confirmed": {
+   "true": 0.65,
+   "false": 0.35
+  },
+  "next_step": {
+   "no_action": 0.08,
+   "request_evidence": 0.1,
+   "correct_now": 0.3,
+   "escalate": 0.52
+  },
+  "error_origin": {
+   "no_inaccuracy": 0.2,
+   "source_supplied": 0.5,
+   "reporter_drafting": 0.1,
+   "editing_stage": 0.2
+  },
+  "spread": {
+   "0": 0.03,
+   "1": 0.12,
+   "2": 0.75,
+   "3": 0.1
+  },
+  "harm_severity": {
+   "0": 0.04,
+   "1": 0.14,
+   "2": 0.72,
+   "3": 0.1
+  }
+ },
+ "cost": 0.000452
+}

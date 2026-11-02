@@ -1,0 +1,163 @@
+{
+ "id": "F426-0048",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B14",
+   "crop": "pear",
+   "planted_area_ha": 6
+  },
+  "applications": [
+   {
+    "app_id": "A1",
+    "date": "2024-06-10",
+    "product_code": "P2",
+    "qty_applied": 5.04,
+    "qty_unit": "L",
+    "area_treated_ha": 5,
+    "wind_kmh": 8
+   },
+   {
+    "app_id": "A2",
+    "date": "2024-06-28",
+    "product_code": "P1",
+    "qty_applied": 1.8,
+    "qty_unit": "kg",
+    "area_treated_ha": 6,
+    "wind_kmh": 10
+   },
+   {
+    "app_id": "A3",
+    "date": "2024-07-06",
+    "product_code": "P2",
+    "qty_applied": 4,
+    "qty_unit": "L",
+    "area_treated_ha": 5,
+    "wind_kmh": 12
+   },
+   {
+    "app_id": "A4",
+    "date": "2024-07-20",
+    "product_code": "P1",
+    "qty_applied": 1.8,
+    "qty_unit": "kg",
+    "area_treated_ha": 6,
+    "wind_kmh": 20
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "P1",
+    "max_rate_per_ha": 2,
+    "rate_unit": "kg",
+    "phi_days": 14,
+    "max_apps_per_season": 4,
+    "approved_crops": [
+     "pear"
+    ],
+    "minor_use_auth_ref": "MU-31"
+   },
+   {
+    "product_code": "P2",
+    "max_rate_per_ha": 1,
+    "rate_unit": "L",
+    "phi_days": 7,
+    "max_apps_per_season": 4,
+    "approved_crops": [
+     "pear"
+    ],
+    "minor_use_auth_ref": null
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "S2",
+   "sprayer_type": "tunnel_recycling",
+   "calibration_valid_to": "2024-06-25",
+   "nozzle_dev_pct": 3
+  },
+  "harvest": {
+   "first_pick_date": "2024-08-03",
+   "residue_test": {
+    "sampled": true,
+    "result_date": "2024-08-08",
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "near_0_boundary",
+  "partial_block_spray": true,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "expired_under_30d_low_dev",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 4,
+  "high_wind_decoy": true
+ },
+ "factors_sampled": {
+  "phi_status": "breached_short",
+  "rate_overrun_band": "up_to_10",
+  "partial_block_spray": true,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "expired_under_30d_low_dev",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 4,
+  "high_wind_decoy": true
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "release_lot",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "interval_breach",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "phi_cleared": "P1 applied 2024-07-20, first pick 2024-08-03, phi_days 14: gap exactly 14 days, so inclusive/exclusive counting decides it; P2 is clear.",
+  "next_step": "Boundary-day interval and calibration expired 2024-06-25 (before later applications) might justify asking for evidence, but residue test is clear and below limit, supporting release.",
+  "finding_class": "The only live issue is the withholding gap exactly at phi_days for P1; no rate, count or crop problem, so interval_breach leads with some doubt.",
+  "reversal_time": "A released lot with a boundary interval question could take a week to some months to resolve or recall; both short and medium horizons are plausible.",
+  "rate_overrun": "A1 is 5.04/5 = 1.008 L/ha against max 1: under 1% over, a rounding-level overrun; other rates are under max."
+ },
+ "request": "rec-F426-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010652
+}

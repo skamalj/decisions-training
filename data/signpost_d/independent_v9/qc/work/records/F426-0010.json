@@ -1,0 +1,149 @@
+{
+ "id": "F426-0010",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B9",
+   "crop": "cherry",
+   "planted_area_ha": 6,
+   "lot_id": "L615"
+  },
+  "applications": [
+   {
+    "app_id": "A1",
+    "date": "2023-12-26",
+    "product_code": "PRM9",
+    "qty_applied": 6,
+    "qty_unit": "kg",
+    "area_treated_ha": 6
+   },
+   {
+    "app_id": "A2",
+    "date": "2024-01-09",
+    "product_code": "PRM9",
+    "qty_applied": 6,
+    "qty_unit": "kg",
+    "area_treated_ha": 6
+   },
+   {
+    "app_id": "A3",
+    "date": "2024-01-23",
+    "product_code": "PRM9",
+    "qty_applied": 7.56,
+    "qty_unit": "kg",
+    "area_treated_ha": 6
+   },
+   {
+    "app_id": "A4",
+    "date": "2024-02-20",
+    "product_code": "PRM9",
+    "qty_applied": 6,
+    "qty_unit": "kg",
+    "area_treated_ha": 6
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "PRM9",
+    "max_rate_per_ha": 1.0,
+    "rate_unit": "kg",
+    "phi_days": 14,
+    "max_apps_per_season": 6,
+    "approved_crops": [
+     "cherry"
+    ],
+    "minor_use_auth_ref": "MUA-2291"
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "SP-5",
+   "calibration_valid_to": "2024-11-01",
+   "nozzle_dev_pct": 4
+  },
+  "harvest": {
+   "lot_id": "L615",
+   "block_id": "B9",
+   "first_pick_date": "2024-03-05",
+   "residue_test": {
+    "sampled": true,
+    "result_date": "2024-03-07",
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "over_25_borderline",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 4,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "breached_long",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": true,
+  "off_label_crop": false,
+  "num_applications": 8,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "no_finding",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "phi_cleared": "Last PRM9 app 2024-02-20 and first pick 2024-03-05 are exactly 14 days apart (2024 is a leap year), equal to phi_days 14, so counting convention decides.",
+  "next_step": "A3 computes to 1.26 kg/ha against the 1.0 label maximum, and the minor_use_auth_ref carries no stated authorised rate. The checker cannot settle this alone, so it goes to the technical manager.",
+  "finding_class": "The minor-use authorisation reference may cover the higher rate, and crop, count and intervals otherwise agree, so no discrepancy is clearly established.",
+  "reversal_time": "Escalation may lead to rejection or regulator notification, which could take months to unwind; whether it exceeds three months is uncertain.",
+  "rate_overrun": "A3 is 7.56 kg over 6 ha = 1.26 kg/ha against max 1.0, just past the 25% boundary, while 1.25 would sit in level 2."
+ },
+ "request": "rec-F426-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01283
+}

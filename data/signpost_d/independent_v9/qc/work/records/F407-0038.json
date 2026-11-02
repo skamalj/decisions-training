@@ -1,0 +1,117 @@
+{
+ "id": "F407-0038",
+ "family": "F407",
+ "state": {
+  "report": {
+   "id": "PR-6302",
+   "channel": "public_app",
+   "photo_ref": null,
+   "linked_reports": [
+    "x"
+   ],
+   "claim_ref": null
+  },
+  "location": {
+   "road_class": "strategic",
+   "intervention_depth_mm": 40
+  },
+  "inspection": {
+   "depth_mm": 41,
+   "width_mm": 455.74
+  },
+  "works_history": [
+   {
+    "job": "J-9",
+    "offset_m": null
+   }
+  ],
+  "programme": {
+   "schemes": [
+    {
+     "extent": "covers",
+     "start": "2025-04-10"
+    }
+   ]
+  },
+  "current_order": {
+   "status": "partial",
+   "done": 2,
+   "total": 5
+  }
+ },
+ "factors": {
+  "road_category": "strategic",
+  "depth_vs_threshold": "just_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": true,
+  "duplicate_count": 1,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "partially_complete",
+  "defect_width_mm": 455.74,
+  "photo_attached": false
+ },
+ "factors_sampled": {
+  "road_category": "strategic",
+  "depth_vs_threshold": "well_above",
+  "inspection_state": "completed_valid",
+  "prior_repair_match": "nearby_unconfirmed",
+  "temporary_make_safe": false,
+  "planned_scheme_soon": true,
+  "duplicate_count": 1,
+  "reporter_source": "public_app",
+  "injury_or_claim": false,
+  "order_status": "partially_complete",
+  "defect_width_mm": 455.74,
+  "photo_attached": false
+ },
+ "plan": {
+  "meets_threshold": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "repeat_failure": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "order_repair",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "response_timescale": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 42,
+ "deciding": {
+  "meets_threshold": "Depth 41 vs 40 mm: 1 mm over, at the boundary, no date given on inspection.",
+  "repeat_failure": "J-9 has null offset, street level only, so same-spot match unconfirmed.",
+  "next_step": "Existing partial order 2 of 5 and scheme covering the defect starting soon: confirm the order, timed around the scheme.",
+  "staff_effort": "Existing order only needs confirming or finishing: hours, though scheme coordination could extend it to days.",
+  "response_timescale": "Strategic road with no temp measure and no make-safe suggests 24h, but the order already in progress could mean priority 5 days."
+ },
+ "request": "rec-F407-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005513
+}

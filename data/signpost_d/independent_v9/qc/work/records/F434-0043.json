@@ -1,0 +1,146 @@
+{
+ "id": "F434-0043",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 6,
+   "riders_started": 97,
+   "first_rider_at": "09:50"
+  },
+  "post": {
+   "km_marker": 28,
+   "post_type": "descent",
+   "marshals_signed_in": 2,
+   "on_post_from": "09:15",
+   "off_post_at": "14:45"
+  },
+  "incidents": [
+   {
+    "inc_ref": "P2",
+    "time": "11:20",
+    "km": 28,
+    "type": "mechanical",
+    "bibs": [
+     33
+    ],
+    "rider_status": "continued"
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:00",
+     "ok": false
+    }
+   ],
+   "backup_phone": [
+    {
+     "time": "10:03",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C4",
+     "time": "11:22",
+     "km": 28,
+     "type": "mechanical",
+     "bibs": [
+      33
+     ]
+    }
+   ],
+   "road_reopened_at": {
+    "25-30": "14:20"
+   }
+  },
+  "sweep": {
+   "passed_at": "14:34",
+   "last_rider_bib": 96,
+   "post_cleared_at": "14:45"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": true,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "time_offset_minor",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": "none",
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": true,
+  "incident_mix": "intrusion",
+  "control_log_mismatch": "time_offset_minor",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 1,
+  "medic_arrival_minutes": 13.63,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "safety_review",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "mechanical_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (reopen_before_sweep = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 61,
+ "deciding": {
+  "coverage_held": "Marshals signed in from 09:15, before first rider 09:50, and left at 14:45, 11 minutes after sweep passage at 14:34.",
+  "next_step": "Road reopened at 14:20 for km 25-30, before sweep passage at 14:34 with last rider 96 still to pass; the 2-minute log offset is trivial.",
+  "incident_class": "Post and control list only a mechanical stop for bib 33, which continued, with no fall or intrusion.",
+  "reversal_time": "Reopening before the sweep cannot be reversed, but nothing is stated about lasting harm; level 3 and level 2 are both defensible.",
+  "consequence_severity": "Reopening before the sweep means riders met reopened traffic, though there is no injury or medic involvement."
+ },
+ "request": "rec-F434-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00934
+}

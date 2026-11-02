@@ -1,0 +1,134 @@
+{
+ "id": "F406-0038",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-3304",
+   "gallery_code": "G4W",
+   "session_date": "2025-03-11",
+   "certified_limit": 200
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "11:00",
+     "occupancy": 150
+    },
+    {
+     "start": "11:15",
+     "occupancy": 168
+    },
+    {
+     "start": "11:30",
+     "occupancy": 160
+    }
+   ],
+   "manual_tally_peak": 172,
+   "summary_peak": 168
+  },
+  "variations": [
+   {
+    "ref": "V-88",
+    "gallery_code": "G4W",
+    "valid_from": "2025-03-01",
+    "valid_to": "2025-03-11",
+    "uplift_to": 240,
+    "status": "approved"
+   }
+  ],
+  "staff_log": {
+   "notes": [
+    "East door counter seemed jumpy."
+   ]
+  },
+  "history": {
+   "overages_30d": 0
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.84,
+  "intervals_over_limit": 0,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "informal_note_only",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 0.84,
+  "intervals_over_limit": 10,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "informal_note_only",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "factual",
+  "boundary_case": true
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 49,
+ "deciding": {
+  "variation_applies": "V-88 approved, gallery G4W matches, valid through the session date itself (last valid day).",
+  "fault_explains_overage": "Only an informal steward note about a jumpy counter; no maintenance ticket and no overage to explain.",
+  "next_step": "Peak 168 and tally 172 both well under the limit, no overage history, nothing to follow up.",
+  "peak_excess": "Counter peak 168 and tally 172 are 84% to 86% of the 200 certified limit, under 90%.",
+  "intervals_over": "All three intervals (150, 168, 160) are below 200."
+ },
+ "request": "rec-F406-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012601
+}

@@ -1,0 +1,168 @@
+{
+ "id": "F401-0016",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P41",
+   "planned_discharge_at": "2025-03-10T12:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 24,
+     "spo2": 90,
+     "at": "2025-03-10T06:00"
+    }
+   ],
+   "targets": {
+    "spo2": "88-92"
+   },
+   "reviews": [
+    {
+     "role": "reg",
+     "outcome": "fit_for_discharge",
+     "at": "2025-03-10T08:00"
+    }
+   ],
+   "investigations": [
+    {
+     "test": "CT",
+     "status": "awaited",
+     "required_before_discharge": true
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P41",
+   "reconciled": [
+    {
+     "drug": "ramipril",
+     "dose": 5,
+     "unit": "mg"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "ramipril",
+     "action": "dose_up",
+     "prescriber": "Dr K",
+     "changed_at": "2025-03-10T10:00"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "ramipril",
+     "dose": 10,
+     "unit": "mg",
+     "signed_at": "2025-03-10T10:00"
+    }
+   ]
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": "frame",
+    "transfer_assist_count": 2
+   },
+   "care_arrangement": {
+    "type": "package",
+    "status": "requested",
+    "start_date": null,
+    "note": "provider est 2 days"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "done",
+     "completed_at": "2025-03-10T09:00",
+     "signed_by": "RN"
+    },
+    {
+     "t": "DN handover",
+     "status": "done",
+     "completed_at": "2025-03-10T09:30",
+     "signed_by": "verbal"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "awaited_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "new_package",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "care start undated, est 2 days",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 4,
+  "false_completion": false,
+  "care_need": "new_package",
+  "care_arrangement_status": "confirmed_on_time",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "mismatch",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_item",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "contested",
+   "target": "remain_inpatient",
+   "second": "intermediate_care",
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "rx_matches": "Ramipril 5 mg vs 10 mg; change entry exists but changed_at equals signed_at, so not clearly before signing.",
+  "next_step": "CT awaited with required_before_discharge true; no other concern, so obtain it.",
+  "destination": "Package requested with null start_date (stay in) vs frame and 2-person transfers (step-down bed plausible).",
+  "outstanding_tasks": "Both items done and dated; one signed only 'verbal', so zero or one.",
+  "discharge_delay": "Care start null (counts 3+) but note estimates 2 days, holding levels 3 and 2."
+ },
+ "request": "rec-F401-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009603
+}

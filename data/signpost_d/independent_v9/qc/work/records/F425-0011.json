@@ -1,0 +1,119 @@
+{
+ "id": "F425-0011",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "declared_eggs": 1200,
+   "lay_dates": [
+    "2024-05-02"
+   ]
+  },
+  "grading_run": {
+   "eggs_in": 1194,
+   "by_size": {
+    "S": 120,
+    "M": 480,
+    "L": 400,
+    "XL": 103
+   },
+   "outgrades": {
+    "cracks": 20,
+    "dirties": 52,
+    "blood_spots": 12,
+    "leakers": 4,
+    "misshapen": 3
+   },
+   "class_a_total": 1103
+  },
+  "checks": {
+   "candling_sample": {
+    "n": 50,
+    "rejects": 11,
+    "limit": 4
+   }
+  },
+  "packing": {
+   "pack_date": "2024-05-07"
+  }
+ },
+ "factors": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 5,
+  "mixed_lay_dates": false,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 7.62,
+  "dominant_defect": "dirties",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 26
+ },
+ "factors_sampled": {
+  "count_gap_size": "trivial",
+  "count_gap_location": "intake_vs_grader",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 3,
+  "mixed_lay_dates": false,
+  "missing_check": "candling_null",
+  "swab_positive": false,
+  "outgrade_rate_pct": 7.62,
+  "dominant_defect": "dirties",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 26
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "downgrade_class_b",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "balanced",
+   "target": "no_anomaly",
+   "second": "count_error",
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "counts_reconcile": "declared_eggs 1200 vs eggs_in 1194 is a 0.5% gap, right at the half-percent line; by_size plus outgrades sums exactly to eggs_in.",
+  "batch_disposition": "candling_sample shows 11 rejects in 50 against a limit of 4, a quality failure; checks are otherwise complete and the eggs are fit for processing.",
+  "anomaly_cause": "Internal counts are consistent and outgrades are mainly dirties; the only oddity is the 6-egg intake gap, which is either noise (no anomaly) or a minor count error.",
+  "lay_to_pack": "lay_dates 2024-05-02 to pack_date 2024-05-07 is 5 days, mid-range for level 1.",
+  "outgrade_share": "Outgrades total 91 of 1194 eggs_in, 7.6%, within the 5 to 10% band."
+ },
+ "request": "rec-F425-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011823
+}

@@ -1,0 +1,171 @@
+{
+ "id": "F401-0046",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P101",
+   "planned_discharge_at": "2025-03-10T14:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 16,
+     "spo2": 90,
+     "at": "2025-03-10T06:00"
+    }
+   ],
+   "targets": {
+    "spo2": "88-92"
+   },
+   "reviews": [
+    {
+     "role": "consultant",
+     "outcome": "fit_for_discharge",
+     "at": "2025-03-10T09:00"
+    }
+   ],
+   "investigations": [
+    {
+     "test": "CRP",
+     "status": "awaited",
+     "required_before_discharge": false,
+     "follow_up_owner": "GP",
+     "acknowledged_at": "2025-03-10T09:10"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P101",
+   "reconciled": [
+    {
+     "drug": "paracetamol",
+     "dose": 1,
+     "unit": "g",
+     "freq": "qds"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "paracetamol",
+     "dose": 1000,
+     "unit": "mg",
+     "freq": "qds"
+    }
+   ],
+   "pharmacy_ready_at": "2025-03-10T12:00"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": null,
+    "adl_score": 20
+   },
+   "social": {
+    "lives_alone": false
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "status": "done",
+     "completed_at": "2025-03-10T10:00",
+     "signed_by": "RN Ash"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-03-10",
+    "pickup_time": "2025-03-10T13:30",
+    "destination": "home"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "unit_expression_only",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_needed",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "drug_omitted",
+  "rx_change_documented": false,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 5,
+  "false_completion": false,
+  "care_need": "rehab",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "transport_time_unknown",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "discharge_now",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "home_independent",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "discharge_delay": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 42,
+ "deciding": {
+  "rx_matches": "Paracetamol 1 g qds versus 1000 mg qds is only a unit expression difference; otherwise identical, though a reader may pause on it.",
+  "next_step": "One SpO2 of 90 sits within the documented 88-92 target and a consultant fit review follows it. The awaited CRP is non-blocking and acknowledged, and the only task is done and signed.",
+  "destination": "ADL score 20, no mobility aid, not living alone and no care arrangement, so home independent.",
+  "outstanding_tasks": "The only checklist item (TTO) is done with completed_at and signed_by.",
+  "discharge_delay": "Pickup 13:30 and pharmacy ready 12:00 are both before the 14:00 planned time, and no care start is needed."
+ },
+ "request": "rec-F401-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012737
+}

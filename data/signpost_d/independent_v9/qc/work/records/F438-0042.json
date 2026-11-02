@@ -1,0 +1,138 @@
+{
+ "id": "F438-0042",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E2217",
+   "los": 6,
+   "method": "emergency"
+  },
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "N17.9"
+   },
+   "comorbidities": [
+    "N18.3",
+    "E11.9"
+   ],
+   "theatre_log": []
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "N18.3"
+   },
+   "secondary_dx": [
+    "N17.9",
+    "E11.9"
+   ],
+   "procedures": []
+  },
+  "grouping": {
+   "hrg_submitted": "LA07B",
+   "hrg_regrouped": "LA07A",
+   "submitted_to_commissioner": false,
+   "submission_date": null
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    {
+     "code_pair": [
+      "N17.9",
+      "N18.3"
+     ],
+     "rule": "LC-14"
+    }
+   ],
+   "queries": []
+  },
+  "coder_history": {
+   "prior_audits": 9,
+   "error_rate": 0.08,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "different_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": true,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.08,
+  "boundary_case": true,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "documented_not_coded",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.08,
+  "boundary_case": true,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "error_count": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "error_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 75,
+ "deciding": {
+  "primary_supported": "Coded primary N18.3 differs from documented principal N17.9, but approved convention LC-14 covers exactly this pair, so doubt remains.",
+  "hrg_shift": "hrg_submitted LA07B differs from hrg_regrouped LA07A.",
+  "next_step": "Convention LC-14 explains the acute/chronic pairing and the lists otherwise match, no queries open, no missing documents; coding stands.",
+  "error_count": "The only difference is the convention-covered pair; secondary and procedure lists match.",
+  "error_severity": "The convention-covered pair is the sole difference, so no code is wrong."
+ },
+ "request": "rec-F438-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009158
+}

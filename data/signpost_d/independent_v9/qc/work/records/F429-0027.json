@@ -1,0 +1,123 @@
+{
+ "id": "F429-0027",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 150
+  },
+  "reservoir": {
+   "gauge_zero_offset_m": 0.3,
+   "readings": [
+    {
+     "level_m": 102.38,
+     "datum": "site"
+    },
+    {
+     "level_m": 102.2,
+     "datum": "gauge_zero"
+    }
+   ],
+   "triggers": {
+    "alert_m": 102.0,
+    "action_m": 102.5
+   }
+  },
+  "gate_ops": [
+   {
+    "gate_id": "G1",
+    "open_after_m": 1.5
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate_id": "G1",
+     "opening_m": 1.4
+    }
+   ],
+   "calc_peak_m3s": 151,
+   "gauged_peak_m3s": 142,
+   "tailwater_m": [
+    3.1,
+    3.4
+   ]
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "completed"
+   }
+  }
+ },
+ "factors": {
+  "reservoir_tier": "action",
+  "near_boundary": true,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "material",
+  "discharge_discrepancy_pct": 6.31,
+  "datum_mismatch": true,
+  "missing_section": "notifications_missing",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "action",
+  "near_boundary": true,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "none",
+  "discharge_discrepancy_pct": 6.31,
+  "datum_mismatch": true,
+  "missing_section": "notifications_missing",
+  "notice_after_release": false,
+  "inspection_status": "completed",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate",
+   "second": "hold_for_inspection",
+   "targets": []
+  },
+  "trigger_tier": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "within_licence": "Calc 151 is just over the 150 limit while gauged 142 is under it.",
+  "gates_reconciled": "G1 open_after 1.5 vs calc opening 1.4, a 0.1 m gap.",
+  "next_step": "Notifications section is absent and a level near the action trigger could justify escalation or a check.",
+  "trigger_tier": "Gauge_zero reading 102.2 plus 0.3 offset equals 102.5, exactly the action trigger, while the site reading is 102.38.",
+  "parties_needed": "Missing notifications and datum correction could be done by the operator alone or need a second party."
+ },
+ "request": "rec-F429-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007045
+}

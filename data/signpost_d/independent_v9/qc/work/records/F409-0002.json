@@ -1,0 +1,134 @@
+{
+ "id": "F409-0002",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "app_type": "renewal",
+   "submitted_on": "2025-04-02"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2025-02-01",
+     "address_line": "9 Mill Lane",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "verified": null
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "KX19 ABC"
+  },
+  "request": {
+   "address": "9 Mill Lane",
+   "plate_entered": "KX19 ABC"
+  },
+  "account_history": {
+   "live_permits": [
+    "P-5521"
+   ],
+   "zone_rules": {
+    "max_per_household": 2
+   },
+   "pcns": [
+    {
+     "issued_on": "2025-01-05",
+     "status": "open"
+    },
+    {
+     "issued_on": "2025-01-19",
+     "status": "open"
+    },
+    {
+     "issued_on": "2025-02-11",
+     "status": "open"
+    },
+    {
+     "issued_on": "2024-12-01",
+     "status": "paid"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 60,
+  "docs_missing": 2,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 112,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": false,
+  "household_permits_held": 3,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "approve_temporary",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "no_issue",
+   "second": null,
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "residency_shown": "Council tax bill verified true, same address as request, issued 60 days before submission.",
+  "disposition": "Residency proven but id_card verified null and no utility bill, so a time-limited permit fits.",
+  "main_issue": "Plate and address match, one live permit against a cap of 2; only the outstanding non-residence items remain.",
+  "misuse_strength": "Four zone PCNs, three open and none cancelled, is one indicator; the count sits close to the line for a second.",
+  "document_gaps": "id_card null and no utility bill give two; the thin file could be read as three."
+ },
+ "request": "rec-F409-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01161
+}

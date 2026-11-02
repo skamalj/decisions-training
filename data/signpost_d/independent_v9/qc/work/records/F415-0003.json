@@ -1,0 +1,141 @@
+{
+ "id": "F415-0003",
+ "family": "F415",
+ "state": {
+  "site": {
+   "closures": [
+    {
+     "from": "2025-03-11T08:20",
+     "to": "2025-03-11T12:00",
+     "reason": "flood clean-up",
+     "approved_by": "OF12"
+    }
+   ]
+  },
+  "shift": {
+   "sched_slots": [
+    "07:00",
+    "08:30",
+    "10:00",
+    "11:30",
+    "13:00",
+    "15:00",
+    "17:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "17:00",
+    "start": "2025-03-11T16:55",
+    "end": "2025-03-11T17:20",
+    "photo_ref": "P771"
+   },
+   {
+    "slot": "07:00",
+    "start": "2025-03-11T06:58",
+    "end": "2025-03-11T07:18",
+    "checklist": null,
+    "photo_ref": "P770"
+   },
+   {
+    "slot": "13:00",
+    "status": "not_recorded"
+   },
+   {
+    "slot": "15:00",
+    "status": "not_recorded"
+   }
+  ],
+  "faults": [
+   {
+    "type": "blocked_pan",
+    "reported_at": "2025-03-11T07:20:00",
+    "remedied_at": "2025-03-11T12:00:32",
+    "remedy_note": "strong smell, traced to sewer works outside"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2025-03-11T17:15"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 7,
+  "missed_slots": "2",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "signed_before_last_visit",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 280.54,
+  "block_closed_during_fault": true,
+  "checklist_completion": "absent",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 2
+ },
+ "factors_sampled": {
+  "scheduled_slots": 7,
+  "missed_slots": "2",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "signed_before_last_visit",
+  "fault_type": "none",
+  "fault_open_minutes": 280.54,
+  "block_closed_during_fault": true,
+  "checklist_completion": "absent",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "alarming_benign",
+  "prior_defaults_90d": 2
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 69,
+ "deciding": {
+  "missed_clean": "The 13:00 and 15:00 slots are not_recorded and sit outside the 08:20-12:00 closure, so there is no exemption.",
+  "sign_off_valid": "The supervisor signed at 17:15, before the final visit ended at 17:20. The visit timestamps are out of order, so the true final visit is debatable.",
+  "next_step": "The two missed slots are unexempted, and the sign-off is suspect. The log does not meet the standard.",
+  "staff_effort": "Two missed slots and out-of-order timestamps need contractor queries and checks, probably one to several days. A short exchange could settle it.",
+  "fault_exposure": "The fault ran 07:20 to 12:00:32. The block was closed from 08:20 to 12:00, leaving about 60 minutes open before the closure plus 30 seconds after it. That sits on the 60-minute boundary."
+ },
+ "request": "rec-F415-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013412
+}

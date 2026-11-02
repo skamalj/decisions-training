@@ -1,0 +1,178 @@
+{
+ "id": "F413-0024",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "id": "O09",
+   "tier": "office",
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9",
+    "S10"
+   ]
+  },
+  "visit": {
+   "type": "routine",
+   "tech": "T12",
+   "lic_exp": "2026-02-28",
+   "start": "2025-06-03T10:00",
+   "end": "2025-06-03T11:40",
+   "signoff": "2025-06-03T10:55"
+  },
+  "treatments": [
+   {
+    "prod": "GR4",
+    "zone": "Z1",
+    "area_m2": 60,
+    "qty": 0.475,
+    "unit": "kg",
+    "label_max_per_m2": 0.02
+   }
+  ],
+  "monitoring": [
+   {
+    "st": "S4",
+    "act": true,
+    "bait_pct": 60
+   },
+   {
+    "st": "S1",
+    "act": true,
+    "bait_pct": 40
+   },
+   {
+    "st": "S6",
+    "act": false,
+    "bait_pct": 0
+   },
+   {
+    "st": "S2",
+    "act": true,
+    "bait_pct": 30
+   },
+   {
+    "st": "S5",
+    "act": true,
+    "bait_pct": 50
+   },
+   {
+    "st": "S3",
+    "act": false,
+    "bait_pct": 10
+   }
+  ],
+  "van_stock": [
+   {
+    "mv": "withdraw",
+    "prod": "GR4",
+    "qty": 600,
+    "unit": "g",
+    "batch": "B771"
+   },
+   {
+    "mv": "return",
+    "prod": "GR4",
+    "qty": 100,
+    "unit": "g",
+    "batch": "B771"
+   }
+  ],
+  "follow_up": {
+   "prev_visit": "V455",
+   "prev_active": 2,
+   "actions": [
+    {
+     "act": "bait top-up",
+     "status": "done_on_visit"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "trivial_under_5pct",
+  "stock_return_logged": true,
+  "station_count_gap": 4,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_before_visit_end",
+  "activity_trend": "increased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 0.0,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "office"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": true,
+  "station_count_gap": 4,
+  "monitoring_sheet_missing": true,
+  "date_sequence": "signoff_before_visit_end",
+  "activity_trend": "stable",
+  "previous_visit_available": true,
+  "dose_overage_pct": 78.71,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "completed_on_visit",
+  "site_risk_tier": "office"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "book_revisit",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 146,
+ "deciding": {
+  "usage_reconciled": "Net GR4 is 500 g (600 minus 100 returned) against 475 g applied, a gap of exactly 5%, which sits on the boundary.",
+  "activity_increased": "4 active stations against prev_active 2.",
+  "next_step": "Activity doubled and four stations (S7 to S10) were not checked, so a revisit is needed.",
+  "breach_severity": "Dose is 0.008 kg/m2 against 0.02, so it is within limits. The only gaps are the missing station checks and a signoff time before visit end, which is a record gap.",
+  "parties_needed": "The technician must complete the station checks, the office must arrange the revisit, and the client signoff time must be corrected; one to three teams."
+ },
+ "request": "rec-F413-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009995
+}

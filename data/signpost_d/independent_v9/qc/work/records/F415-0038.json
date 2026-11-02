@@ -1,0 +1,138 @@
+{
+ "id": "F415-0038",
+ "family": "F415",
+ "state": {
+  "site": {
+   "hours": "07:00-21:00",
+   "closures": [
+    {
+     "from": "2024-07-09T09:00",
+     "to": "2024-07-09T10:00",
+     "approved_by": "OFF03"
+    }
+   ]
+  },
+  "shift": {
+   "sched_slots": [
+    "08:00",
+    "10:00",
+    "12:00",
+    "14:00",
+    "16:00",
+    "18:00",
+    "20:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00"
+   },
+   {
+    "slot": "10:00"
+   },
+   {
+    "slot": "12:00"
+   },
+   {
+    "slot": "18:00"
+   },
+   {
+    "slot": "20:00",
+    "end": "2024-07-09T20:25"
+   }
+  ],
+  "faults": [
+   {
+    "type": "spillage",
+    "reported_at": "2024-07-09T08:58",
+    "remedied_at": "2024-07-09T09:58"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2024-07-09T20:40",
+   "comment": "14:00, 16:00 skipped, block shut for police"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 7,
+  "missed_slots": "2",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "spillage",
+  "fault_open_minutes": 60.0,
+  "block_closed_during_fault": true,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "explains_gap_unbacked",
+  "prior_defaults_90d": 2
+ },
+ "factors_sampled": {
+  "scheduled_slots": 7,
+  "missed_slots": "2",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "missing",
+  "fault_type": "spillage",
+  "fault_open_minutes": 390.2,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": false,
+  "note_content": "explains_gap_unbacked",
+  "prior_defaults_90d": 2
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_noted",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "missed_clean": "The 14:00 and 16:00 slots have no visits entries. The only closure is 09:00-10:00, so neither slot is covered, and the sign-off comment's police claim has no closures entry.",
+  "sign_off_valid": "A supervisor signed at 20:40, after the final visit ended at 20:25. The comment admits skipped slots, which adds slight doubt.",
+  "next_step": "The gaps are explained in the sign-off comment and the block was reportedly shut. The plan treats this as a lapse to note rather than a default.",
+  "staff_effort": "Two unbacked slot gaps need police or contractor evidence and a contract review. This could take one to five days or longer.",
+  "fault_exposure": "The spillage ran 08:58-09:58, nearly all inside the 09:00-10:00 approved closure. Only about 2 minutes were open to the public, so level 0 versus 1 is arguable."
+ },
+ "request": "rec-F415-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012138
+}

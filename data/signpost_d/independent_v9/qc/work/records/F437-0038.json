@@ -1,0 +1,148 @@
+{
+ "id": "F437-0038",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": 5,
+   "target_locale": "es-ES",
+   "glossary_version": 3,
+   "due_at": "2025-06-20T09:00",
+   "terms": {
+    "glossary_exception": true
+   }
+  },
+  "source": {
+   "version": 5,
+   "segment_count": 340
+  },
+  "deliverable": {
+   "built_from_version": 4,
+   "target_locale": "es-ES",
+   "segments_translated": 340,
+   "glossary_version_used": 3,
+   "delivered_at": "2025-06-15T10:00"
+  },
+  "qa_report": {
+   "flags": 30,
+   "false_positive_marked": 22,
+   "number_mismatches": [
+    {
+     "s": "15 mg",
+     "t": "150 mg"
+    },
+    {
+     "s": "2",
+     "t": "3"
+    },
+    {
+     "s": "40",
+     "t": "14"
+    },
+    {
+     "s": "6 h",
+     "t": "8 h"
+    }
+   ],
+   "unresolved": {
+    "critical": 1,
+    "major": 2
+   }
+  },
+  "review": {
+   "signed_off": true,
+   "completed_at": "2025-06-14T16:00",
+   "errors": [
+    {
+     "sev": "major",
+     "status": "open",
+     "note": "dose 150 mg"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-06-02",
+    "2025-06-07",
+    "2025-06-11"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "critical_open",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.73,
+  "number_mismatch_count": 4,
+  "deadline_slack_hours": 119,
+  "client_waiver": true,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.73,
+  "number_mismatch_count": 4,
+  "deadline_slack_hours": 119,
+  "client_waiver": true,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_for_fix",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "open_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 50,
+ "deciding": {
+  "scope_matches": "Order and source are version 5 but deliverable was built from version 4; segment counts match (340), and the waiver covers only the glossary, not the version.",
+  "reviewed_in_time": "review.signed_off is true and completed_at 2025-06-14T16:00 precedes delivered_at 2025-06-15T10:00.",
+  "next_step": "Open errors and the wrong source version are fixable, with 119h before the 2025-06-20 due date, so the translator should correct and resubmit.",
+  "open_severity": "qa unresolved lists critical:1 while the review logs the same 150 mg dose error as major/open, which holds level 3 and 2 in balance.",
+  "parties_needed": "Translator rebuild from v5, a reviewer re-check and a PM are clearly needed; whether the client or another linguist must also confirm the dose is uncertain, so 3 versus 2 parties is balanced."
+ },
+ "request": "rec-F437-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009538
+}

@@ -1,0 +1,153 @@
+{
+ "id": "F408-0044",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "MB-6025",
+   "uprn": 330912,
+   "postcode": "M9 3TR",
+   "logged_at": "2025-07-15T11:20",
+   "stream": "clinical",
+   "claimed_date": "2025-07-15",
+   "bin_state_reported": "lid_open",
+   "photo_attached": false
+  },
+  "property": {
+   "uprn": 330912,
+   "postcode": "M9 3TR",
+   "assisted_collection": false,
+   "bins_held": [
+    "refuse",
+    "clinical"
+   ]
+  },
+  "schedule": {
+   "round_id": "R22",
+   "collection_day": "TUE",
+   "week_pattern": "A",
+   "streams_due": [
+    "clinical"
+   ],
+   "scheduled_date": "2025-07-15"
+  },
+  "round_log": {
+   "round_status": "completed",
+   "round_completed_at": "2025-07-15T09:45",
+   "disruption_code": null,
+   "catch_up_date": null,
+   "stops": [
+    {
+     "uprn": 330912,
+     "gps_stop": false,
+     "exception_code": null,
+     "photo_ref": null
+    }
+   ],
+   "sweep_collected_at": null
+  },
+  "history": [
+   {
+    "case_id": "C455",
+    "uprn": 330912,
+    "logged_on": "2025-06-02",
+    "stream": "clinical",
+    "outcome": "upheld"
+   },
+   {
+    "case_id": "C470",
+    "uprn": 330912,
+    "logged_on": "2025-06-20",
+    "stream": "refuse",
+    "outcome": "rejected"
+   },
+   {
+    "case_id": "C471",
+    "uprn": 330914,
+    "logged_on": "2025-07-01",
+    "stream": "clinical",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 1,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "alt_week_confusion",
+  "report_timing": "before_round_complete",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "uprn_flat_mismatch",
+  "prior_upheld_misses": 0,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_conditional",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 153,
+ "deciding": {
+  "crew_missed": "The stop shows gps_stop false, no exception_code, no photo_ref and no disruption, so the crew passed without a supported exception.",
+  "report_matches": "Clinical stream, 2025-07-15 and week A all agree with the schedule, and it was logged after the 09:45 completion.",
+  "next_step": "Resident reports bin_state_reported lid_open, a presentation fault, so a return is booked on condition the resident fixes it.",
+  "return_urgency": "Clinical stream waste with a missed stop leans toward same day, though the lid_open presentation fault leaves some doubt.",
+  "repeat_failures": "One upheld entry (2025-06-02) for this UPRN; the rejected entry and the neighbouring UPRN 330914 do not count."
+ },
+ "request": "rec-F408-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01019
+}

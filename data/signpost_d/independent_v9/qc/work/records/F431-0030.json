@@ -1,0 +1,116 @@
+{
+ "id": "F431-0030",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "H5",
+   "seal_state": "intact",
+   "seal_checked_date": "2023-10-02",
+   "last_verified_date": "2018-09-12"
+  },
+  "period_read": {
+   "read_date": "2024-03-31",
+   "reg_kwh": 4185,
+   "src_code": "EST",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2024-02-29",
+    "reg_kwh": 3000,
+    "src_code": "EST",
+    "same_period_ly_kwh": 1000
+   }
+  ],
+  "diagnostics": null,
+  "site_context": {
+   "occupancy": "occupied",
+   "hdd_current": 103,
+   "hdd_prior_year": 100,
+   "works_orders": [
+    {
+     "type": "METER_EXCH",
+     "status": "open",
+     "date": "2024-03-18"
+    }
+   ],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "system_estimate",
+  "read_sequence_issue": "none",
+  "missing_section": "diagnostics_null",
+  "consumption_ratio": 1.15,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.03,
+  "diagnostic_error_count": 0,
+  "meter_works_order": true,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "system_estimate",
+  "read_sequence_issue": "none",
+  "missing_section": "diagnostics_null",
+  "consumption_ratio": 1.78,
+  "occupancy_change": false,
+  "degree_day_ratio": 1.03,
+  "diagnostic_error_count": 0,
+  "meter_works_order": true,
+  "consecutive_estimates": 1,
+  "delta_t_implausible": false,
+  "seal_status": "intact",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_reading",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 36,
+ "deciding": {
+  "meter_fault": "Seal intact, no diagnostics to show a fault, and the estimate sits near the expected value, so no corroborated fault.",
+  "billable_actual": "src_code is EST with no photo, so it is not an actual read, and diagnostics are null.",
+  "next_step": "Estimate is flagged and consumption is near expectation, so it is released; the open METER_EXCH order will bring a real read.",
+  "staff_effort": "Open METER_EXCH works order and missing diagnostics could mean a long run to a verified actual.",
+  "consumption_deviation": "Consumption 1185 vs expected 1030 (1000*103/100) is exactly 15% over, on the level 0/1 boundary."
+ },
+ "request": "rec-F431-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009637
+}

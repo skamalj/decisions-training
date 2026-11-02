@@ -1,0 +1,148 @@
+{
+ "id": "F409-0023",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "full_name": "M. Okoro",
+   "submitted_on": "2024-04-20",
+   "app_type": "renewal",
+   "message": "Car is a company lease, letter attached."
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-04-05",
+     "address_line": "5 Quay Ln",
+     "verified": true
+    },
+    {
+     "doc_type": "id_card",
+     "issued_on": "2019-01-01",
+     "address_line": "5 Quay Ln",
+     "verified": null
+    }
+   ]
+  },
+  "vehicle": {
+   "keeper_name": "Northly Leasing",
+   "supporting_letters": [
+    {
+     "type": "lease_agreement",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "address": "5 Quay Ln"
+  },
+  "account_history": {
+   "live_permits": [
+    1
+   ],
+   "past_permits": [
+    {
+     "status": "seized",
+     "seize_reason": "cloned copy found on different vehicle"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 15,
+  "docs_missing": 1,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 5,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": true
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "exact",
+  "proof_age_days": 15,
+  "docs_missing": 0,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 5,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "consistent_explanation",
+  "prior_permit_cloned": true
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "clear",
+   "target": "approve",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "main_issue": {
+   "clarity": "leaning",
+   "target": "residence_proof",
+   "second": null,
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (prior_permit_cloned = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 55,
+ "deciding": {
+  "residency_shown": "Verified council tax bill 15 days old matches exactly, but ID card is unverified.",
+  "disposition": "Record as built is plainly approvable on residency, keeper letter and cap; follows plan.",
+  "main_issue": "Residence evidence includes an unverified ID card; the seizure and PCNs compete.",
+  "misuse_strength": "Prior permit seized as cloned copy.",
+  "document_gaps": "ID card verified null; one missing, perhaps two."
+ },
+ "request": "rec-F409-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004824
+}

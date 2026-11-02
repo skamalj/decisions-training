@@ -1,0 +1,181 @@
+{
+ "id": "F406-0046",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-4412",
+   "gallery_code": "G07",
+   "session_date": "2025-03-14",
+   "open": "10:00",
+   "close": "17:00",
+   "certified_limit": 200
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "10:00",
+     "occupancy": 142
+    },
+    {
+     "start": "10:15",
+     "occupancy": 176
+    },
+    {
+     "start": "10:30",
+     "occupancy": 202
+    },
+    {
+     "start": "10:45",
+     "occupancy": 203
+    },
+    {
+     "start": "11:00",
+     "occupancy": 204
+    },
+    {
+     "start": "11:15",
+     "occupancy": 202
+    },
+    {
+     "start": "11:30",
+     "occupancy": 201
+    },
+    {
+     "start": "11:45",
+     "occupancy": 203
+    },
+    {
+     "start": "12:00",
+     "occupancy": 202
+    },
+    {
+     "start": "12:15",
+     "occupancy": 201
+    },
+    {
+     "start": "12:30",
+     "occupancy": 200
+    },
+    {
+     "start": "12:45",
+     "occupancy": 168
+    }
+   ],
+   "ticket_scans": 1180,
+   "manual_tally_peak": 180,
+   "summary_peak": 204
+  },
+  "variations": [
+   {
+    "ref": "V-221",
+    "gallery_code": "G07",
+    "valid_from": "2025-03-07",
+    "valid_to": "2025-03-13",
+    "uplift_to": 240,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "gates": [
+    "E1",
+    "E2"
+   ],
+   "last_calibrated": "2024-11-02",
+   "maintenance": [
+    {
+     "gate": "E1",
+     "raised_at": "2025-03-14T17:40",
+     "summary": "E1 over-reading, recalibrate"
+    }
+   ]
+  },
+  "staff_log": {
+   "stewards": 3,
+   "egress_check": {
+    "state": "done",
+    "time": "09:45"
+   },
+   "notes": [
+    "Tally taken at east door only."
+   ]
+  },
+  "history": {
+   "overages_30d": 0,
+   "last_overages": []
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 1.02,
+  "intervals_over_limit": 8,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": true,
+  "variation_scope": "date_outside_validity",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "raised_after_session",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.12,
+  "intervals_over_limit": 4,
+  "section_mismatch": "tally_vs_counter_peak",
+  "variation_present": false,
+  "variation_scope": "date_outside_validity",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "raised_after_session",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "fault_explains_overage": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "restrict_admissions",
+   "second": "escalate_safety_lead",
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "4",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 105,
+ "deciding": {
+  "variation_applies": "V-221 valid_to 2025-03-13 ends the day before session_date 2025-03-14, though the gallery code matches.",
+  "fault_explains_overage": "The E1 ticket was raised 17:40, after the 17:00 close, so it is not a documented prior fault. It does describe over-reading, which keeps true plausible.",
+  "next_step": "Eight counter intervals sit just above 200 and the steward tally peak is 180 with no prior overages. That supports a reduced cap, though the formal-review referral is defensible given the unresolved counter dispute.",
+  "peak_excess": "The steward tally peak of 180 is exactly 90% of 200, while the counter peak is 204. Which one is the reconciled peak decides level 0 or 1.",
+  "intervals_over": "Eight intervals exceed 200 (10:30 to 12:15), and the 12:30 interval is exactly 200. That sits at the 8/9 boundary between Several and Extended."
+ },
+ "request": "rec-F406-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014455
+}

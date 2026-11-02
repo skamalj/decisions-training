@@ -1,0 +1,125 @@
+{
+ "id": "F431-0041",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "HM20931",
+   "type": "ultrasonic",
+   "last_verified_date": "2021-06-10",
+   "seal_state": null,
+   "seal_checked_date": null
+  },
+  "period_read": {
+   "read_date": "2024-01-31",
+   "reg_kwh": 8944,
+   "vol_m3": 112.4,
+   "src_code": "AMR",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2023-12-01",
+    "reg_kwh": 7600,
+    "src": "AMR"
+   },
+   {
+    "date": "2024-02-01",
+    "reg_kwh": 8000,
+    "src": "AMR",
+    "same_period_ly_kwh": 1000
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [],
+   "flow_temp_c": 68,
+   "return_temp_c": 42,
+   "battery_pct": 85,
+   "firmware": "2.4.1"
+  },
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2024-01-20",
+   "hdd_current": 222,
+   "hdd_prior_year": 200,
+   "works_orders": [],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "none",
+  "consumption_ratio": 0.85,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.11,
+  "diagnostic_error_count": 0,
+  "meter_works_order": false,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "not_recorded",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "date_before_previous",
+  "missing_section": "previous_read_null",
+  "consumption_ratio": 0.03,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.11,
+  "diagnostic_error_count": 0,
+  "meter_works_order": false,
+  "consecutive_estimates": 0,
+  "delta_t_implausible": false,
+  "seal_status": "not_recorded",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "billable_actual": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_engineer",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 120,
+ "deciding": {
+  "meter_fault": "Diagnostics are clean (no errors, delta-T 26 K) and a tenancy change explains the usage; the only doubt is the unrecorded seal.",
+  "billable_actual": "AMR actual read with a plausible usage ratio, but the read date 2024-01-31 precedes the latest history date 2024-02-01, which leaves doubt.",
+  "next_step": "The read date precedes the previous read while the register is higher, and a tenancy change falls in the period; this out-of-sequence read needs the metering lead.",
+  "staff_effort": "Single remote read with clean diagnostics and no works or dispute; the sequence query should be a quick check.",
+  "consumption_deviation": "Period consumption 944 kWh against expected 1000x222/200=1110 kWh, which is 85%, right at the 15% boundary."
+ },
+ "request": "rec-F431-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009937
+}

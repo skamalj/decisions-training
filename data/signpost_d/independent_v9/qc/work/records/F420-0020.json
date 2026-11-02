@@ -1,0 +1,125 @@
+{
+ "id": "F420-0020",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "PMC50005RR",
+   "flt": "RR654",
+   "dest": "MAD",
+   "contour_max_cm": 160,
+   "tare_kg": 120,
+   "planned_gross_kg": 1000,
+   "straps_required": 4
+  },
+  "manifest_lines": [
+   {
+    "awb": "618-70000007",
+    "dest": "MAD",
+    "pcs": 12,
+    "weight_kg": 880
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2025-03-04T12:00:00Z",
+   "scale_gross_kg": 1030,
+   "max_height_cm": 190,
+   "pcs_counted": {
+    "618-70000007": 12
+   },
+   "straps_fitted": 4,
+   "uld_serial_scanned": "PMC50005RR"
+  },
+  "approvals": {
+   "contour_waivers": [
+    {
+     "uld": "PMC50005RR",
+     "position": "M2",
+     "max_cm": 195
+    }
+   ]
+  },
+  "dg_notoc": null,
+  "checks_log": {
+   "scale_cal_due": "2025-02-20"
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 3.0,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "over_but_waived",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": true,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 93,
+  "prior_rebuilds": 2
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 5.25,
+  "piece_count_gap": 4,
+  "part_shipment_on_file": false,
+  "height_vs_contour": "over_more_than_5cm",
+  "contour_waiver": true,
+  "dg_state": "no_dg",
+  "notoc_match": "matched",
+  "securing_state": "one_strap_short",
+  "scale_cal_overdue": true,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 93,
+  "prior_rebuilds": 2
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "pieces_reconciled": "Counted 12 equals manifest 12.",
+  "disposition": "scale_cal_due 2025-02-20 is before built_utc 2025-03-04 and no reweigh is logged, so the weight needs confirming before release.",
+  "worst_discrepancy": "The only open point is the overdue scale; the height of 190 cm exceeds 160 but the waiver (M2, 195 cm) is the matching one, and counts and straps are fine.",
+  "weight_deviation": "Planned 1000 kg against scale 1030 kg is 3.0%, right at the boundary between levels 1 and 2, and the scale is overdue.",
+  "rework_extent": "Straps 4 of 4, counts match and the waiver covers the height; no physical change is needed apart from the weight reading."
+ },
+ "request": "rec-F420-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009956
+}

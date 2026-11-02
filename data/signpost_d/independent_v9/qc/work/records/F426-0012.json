@@ -1,0 +1,125 @@
+{
+ "id": "F426-0012",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B7",
+   "crop": "pear",
+   "planted_area_ha": 3
+  },
+  "applications": [
+   {
+    "app_id": 1,
+    "date": "2024-03-01",
+    "product_code": "CPX-210",
+    "qty_applied": 6,
+    "qty_unit": "L",
+    "area_treated_ha": 3,
+    "operator_cert_no": null
+   },
+   {
+    "app_id": 2,
+    "date": "2024-03-15",
+    "product_code": "CPX-210",
+    "qty_applied": 6,
+    "qty_unit": "L",
+    "area_treated_ha": 3,
+    "operator_cert_no": "C41"
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "CPX210",
+    "max_rate_per_ha": 2,
+    "rate_unit": "L",
+    "phi_days": 21,
+    "approved_crops": [
+     "pear"
+    ],
+    "minor_use_auth_ref": null
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-03-25",
+   "residue_test": {
+    "sampled": false
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "breached_long",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "product_code_typo",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "operator_cert_null",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 2,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "breached_long",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "product_code_typo",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "operator_cert_null",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 4,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "release_lot",
+   "second": "hold_and_test",
+   "targets": [
+    "T1"
+   ]
+  },
+  "finding_class": {
+   "clarity": "balanced",
+   "target": "clerical_only",
+   "second": "interval_breach",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "phi_cleared": "Pick 10 days after the last spray against a 21-day PHI, but the code typo CPX-210 vs CPX210 leaves the product link arguable.",
+  "next_step": "Typo may be clerical, but the PHI gap and no residue test make release or hold both defensible.",
+  "finding_class": "Code typo suggests clerical, while the short interval suggests breach.",
+  "reversal_time": "Picked fruit already harvested; undoing takes months, near the 3-month edge.",
+  "rate_overrun": "6 L over 3 ha is 2 L/ha, equal to the max, so the planned overrun is not supported and the case is contestable."
+ },
+ "request": "rec-F426-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004835
+}

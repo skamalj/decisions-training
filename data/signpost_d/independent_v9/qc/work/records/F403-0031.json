@@ -1,0 +1,141 @@
+{
+ "id": "F403-0031",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P1041",
+   "declared_allergens": [
+    "egg"
+   ],
+   "auto_injector": false,
+   "plan_start": "2025-03-14"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2024-09-02",
+   "expires": "2025-09-02",
+   "allergens": [
+    "egg"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-02-20",
+   "dishes": [
+    {
+     "dish": "sponge pudding",
+     "contains": [
+      "egg"
+     ],
+     "recipe_version_date": "2025-01-10",
+     "substitute": null,
+     "spec_checked_on": null
+    },
+    {
+     "dish": "quiche",
+     "contains": [
+      "egg"
+     ],
+     "recipe_version_date": "2025-01-10",
+     "substitute": null,
+     "spec_checked_on": null
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": false,
+   "exceptions": [
+    {
+     "date": "2025-03-03",
+     "signed": "area mgr",
+     "covers": "cleaning log"
+    }
+   ]
+  },
+  "history": {
+   "review_date": "2025-03-12",
+   "packed_lunch_until": null,
+   "incidents": [],
+   "messages": [
+    "Cook: mapping done, awaiting sign-off."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 2,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 2,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "expired",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 1,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "controls_unlogged",
+  "control_exception_approved": true,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 22,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_for_rework",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "no_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 65,
+ "deciding": {
+  "evidence_allergens_covered": "The only evidence allergen, egg, appears in two dishes whose substitute is null, so it is unmapped. A reviewer might still wonder whether any substitution is planned.",
+  "next_step": "Two dishes have substitute null and no spec check, so two or more dishes need remapping before release. No incident or evidence gap is present.",
+  "first_gap_stage": "The evidence is current and the kitchen weakness (incomplete cleaning log) is covered by a signed exception. The unsubstituted dishes make menu_gap arguable, so the lean toward no_gap is doubtful.",
+  "exposure_proximity": "The cleaning log is incomplete but covered by a signed exception, which is the near-boundary signal between Guarded and Blocked. The two null substitutes pull toward Open.",
+  "meal_urgency": "Plan start is Fri 2025-03-14 against review Wed 2025-03-12, which is 2 school days away. That sits close to the next-school-day boundary."
+ },
+ "request": "rec-F403-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014493
+}

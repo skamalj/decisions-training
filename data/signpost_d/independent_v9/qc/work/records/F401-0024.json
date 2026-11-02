@@ -1,0 +1,143 @@
+{
+ "id": "F401-0024",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P404",
+   "planned_discharge_at": "2025-03-10T10:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 24,
+     "recorded_at": "2025-03-09T22:00"
+    }
+   ],
+   "reviews": [
+    {
+     "role": "reg",
+     "outcome": "fit_for_discharge",
+     "reviewed_at": "2025-03-10T08:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P404",
+   "reconciled": [
+    {
+     "drug": "furosemide",
+     "dose": 40,
+     "unit": "mg"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "furosemide",
+     "action": "reduce",
+     "reason": "low BP",
+     "by": "Dr A",
+     "changed_at": "2025-03-09T15:00"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "furosemide",
+     "dose": 20,
+     "unit": "mg"
+    }
+   ]
+  },
+  "function_social": {
+   "therapy": {
+    "aid": "hoist",
+    "transfer_assist": 2,
+    "adl": 2
+   },
+   "social": null,
+   "care_arrangement": null
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": true,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": false,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "social_history_null",
+  "outstanding_task_count": 2,
+  "false_completion": true,
+  "care_need": "permanent_care",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": true,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": false,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "social_history_null",
+  "outstanding_task_count": 0,
+  "false_completion": true,
+  "care_need": "permanent_care",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "conditional_discharge",
+   "second": "discharge_now",
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "care_home",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 47,
+ "deciding": {
+  "rx_matches": "Dose 40 vs 20 mg is covered by a prescriber change entry before signing.",
+  "next_step": "Single abnormal RR was followed by a reg fit review, but discharge_tasks is absent so tasks are unverifiable.",
+  "destination": "Hoist, two-person transfer and ADL 2 imply permanent continuous care.",
+  "outstanding_tasks": "No checklist section is present, leaving the count unclear between two to three and four or more.",
+  "discharge_delay": "No transport, pharmacy or care start dates; a care home placement would take days."
+ },
+ "request": "rec-F401-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005411
+}

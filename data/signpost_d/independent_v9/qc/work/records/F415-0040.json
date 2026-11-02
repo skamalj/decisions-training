@@ -1,0 +1,150 @@
+{
+ "id": "F415-0040",
+ "family": "F415",
+ "state": {
+  "site": {
+   "hours": "07:00-21:00",
+   "closures": []
+  },
+  "shift": {
+   "start": "2024-09-10T08:00",
+   "sched_slots": [
+    "08:00",
+    "10:00",
+    "12:00",
+    "14:00",
+    "16:00",
+    "18:00",
+    "20:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:00",
+    "start": "2024-09-10T08:00",
+    "status": "done"
+   },
+   {
+    "slot": "10:00",
+    "start": "2024-09-10T10:00",
+    "status": "done",
+    "checklist": {
+     "wc": true,
+     "floor": false
+    }
+   },
+   {
+    "slot": "12:00",
+    "status": "not_recorded"
+   },
+   {
+    "slot": "14:00",
+    "start": "2024-09-10T14:02",
+    "status": "done"
+   },
+   {
+    "slot": "16:00",
+    "start": "2024-09-10T13:55",
+    "status": "done"
+   },
+   {
+    "slot": "20:00",
+    "start": "2024-09-10T20:00",
+    "end": "2024-09-10T20:20",
+    "status": "done"
+   }
+  ],
+  "faults": [
+   {
+    "type": "blocked_pan",
+    "reported_at": "2024-09-10T08:00",
+    "remedied_at": "2024-09-10T12:04",
+    "source": "public_app",
+    "remedy_note": "pan cleared 11:40"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2024-09-10T20:20"
+  }
+ },
+ "factors": {
+  "scheduled_slots": 7,
+  "missed_slots": "1",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "blocked_pan",
+  "fault_open_minutes": 244.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "partial",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "routine",
+  "prior_defaults_90d": 0
+ },
+ "factors_sampled": {
+  "scheduled_slots": 7,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": false,
+  "sign_off_state": "valid",
+  "fault_type": "none",
+  "fault_open_minutes": 267.12,
+  "block_closed_during_fault": false,
+  "checklist_completion": "partial",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "routine",
+  "prior_defaults_90d": 0
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "sign_off_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold",
+   "second": "accept",
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "missed_clean": "The 12:00 slot is not_recorded, the closures list is empty, and no note explains it. Two slots (16:00 and 18:00) also lack matching entries.",
+  "sign_off_valid": "A supervisor signed at 20:20, the same minute the last visit ended, so it is not clearly after the final visit. The 16:00 visit also starts before the 14:00 visit's start (13:55 vs 14:02), a timestamp inconsistency.",
+  "next_step": "Evidence for the 12:00 gap and the timestamp problems is unconfirmed, which favours a hold. A clean-looking sign-off makes accept defensible.",
+  "staff_effort": "The gap, the inconsistent timestamps and the fault timing need contractor evidence. One to eight hours or one to five days are both plausible.",
+  "fault_exposure": "The pan fault ran 08:00-12:04 (244 min) with the block open throughout, just over 240. The remedy_note says cleared 11:40 (220 min), which supports level 2."
+ },
+ "request": "rec-F415-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012138
+}

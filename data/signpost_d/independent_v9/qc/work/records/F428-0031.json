@@ -1,0 +1,127 @@
+{
+ "id": "F428-0031",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "VL-0412",
+   "gate_type": "vertical_lift",
+   "rated_closure_s": 600,
+   "clear_width": 4.5,
+   "clear_width_unit": "m"
+  },
+  "inspection": {
+   "asset_id": "VL-0412",
+   "insp_date": "2024-03-11",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2024-03-11",
+    "closure_s": 510,
+    "leakage_l_min": 4,
+    "leakage_limit_l_min": 10,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D7",
+    "component": "leaf",
+    "grade": 3,
+    "status": "closed",
+    "first_seen": "2022-05-02"
+   }
+  ],
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": false
+  }
+ },
+ "factors": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 0.85,
+  "max_defect_grade": 0,
+  "dominant_defect_component": "none",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": false,
+  "mitigation_kind": "none",
+  "days_to_forecast_peak": 52,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "vertical_lift",
+  "closure_time_ratio": 1.42,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "none",
+  "mismatch_count": 3,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "passed_current",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 52,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 35,
+ "deciding": {
+  "closure_test_valid": "Test performed on the visit date, closure_s 510 against rated 600, leakage 4 against limit 10, result pass.",
+  "next_step": "Test passes, the only defect is closed, no work is open and the gate is in service, so the record is complete.",
+  "defect_class": "The only defect listed is closed (grade 3 leaf), so no open defect is recorded.",
+  "section_discrepancies": "Asset ids, width and units agree between register and inspection, and no work order disagrees.",
+  "flood_risk": "Closes in 510 s within the 600 s rating, with no open defect and no outage."
+ },
+ "request": "rec-F428-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011581
+}

@@ -1,0 +1,191 @@
+{
+ "id": "F401-0038",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P-3003",
+   "planned_discharge_at": "2025-05-12T14:00"
+  },
+  "clinical": {
+   "targets": {
+    "spo2": "88-92"
+   },
+   "obs": [
+    {
+     "rr": 18,
+     "spo2": 91,
+     "sbp": 118,
+     "hr": 84,
+     "cons": "alert",
+     "at": "2025-05-11T22:00"
+    }
+   ],
+   "reviews": [
+    {
+     "role": "consultant",
+     "outcome": "fit_for_discharge",
+     "reviewed_at": "2025-05-12T08:30"
+    }
+   ],
+   "investigations": [
+    {
+     "test": "CRP",
+     "status": "awaited",
+     "required_before_discharge": false,
+     "follow_up_owner": "GP"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P3003",
+   "reconciled": [
+    {
+     "drug": "apixaban",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "apixaban",
+     "action": "start",
+     "reason": "AF",
+     "prescriber": "Dr Shah",
+     "changed_at": "2025-05-09T10:00"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "apixaban",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "bd",
+     "signed_at": "2025-05-12T09:00"
+    }
+   ],
+   "pharmacy_ready_at": "2025-05-12T13:30"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": "frame",
+    "transfer_assist_count": 2,
+    "adl_score": 8
+   },
+   "social": {
+    "lives_alone": true,
+    "carer_available": false
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "t": "TTO",
+     "s": "pending"
+    },
+    {
+     "t": "transfer letter",
+     "s": "pending"
+    },
+    {
+     "t": "equipment",
+     "s": "pending"
+    },
+    {
+     "t": "family informed",
+     "s": "pending"
+    },
+    {
+     "t": "bed",
+     "s": "pending"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-05-12",
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "single_abnormal_set (explained by documented spo2 target)",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "awaited_non_blocking",
+  "missing_section": "none",
+  "outstanding_task_count": 5,
+  "false_completion": false,
+  "care_need": "high_needs",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "pickup_null_on_planned_date",
+  "identifier_consistency": "format_only",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": true,
+  "obs_pattern": "single_abnormal_set",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "none",
+  "outstanding_task_count": 5,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "format_only",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "discharge_now",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "balanced",
+   "target": "care_home",
+   "second": "intermediate_care",
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 60,
+ "deciding": {
+  "rx_matches": "Apixaban 5 mg bd on both lists, with a documented start entry before signing; the id format differs but it is not a drug difference.",
+  "next_step": "SpO2 91 is inside the documented 88-92 target, a consultant fit review is after it, and the result is non-blocking; the five open tasks give some doubt.",
+  "destination": "Frame, two-person transfer, ADL 8, lives alone with no carer, and no arrangement recorded; this fits care_home or intermediate_care.",
+  "outstanding_tasks": "All five checklist items are pending.",
+  "discharge_delay": "Transport is booked for the planned date but pickup_time is null; pharmacy is ready 13:30, before 14:00."
+ },
+ "request": "rec-F401-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010614
+}

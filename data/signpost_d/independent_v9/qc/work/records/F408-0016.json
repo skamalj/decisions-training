@@ -1,0 +1,136 @@
+{
+ "id": "F408-0016",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "M101",
+   "uprn": 1001,
+   "stream": "refuse",
+   "claimed": "2025-03-20",
+   "logged_at": "2025-03-20T15:10",
+   "photo": false
+  },
+  "property": {
+   "uprn": 1001,
+   "assisted": false
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled": "2025-03-20",
+   "week": "A"
+  },
+  "round_log": {
+   "status": "complete",
+   "completed_at": "2025-03-20T15:40",
+   "disruption": null,
+   "catch_up": null,
+   "stops": [
+    {
+     "uprn": 1001,
+     "exception_code": "overweight",
+     "photo_ref": null,
+     "gps_stop": false
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 1001,
+    "logged_on": "2024-12-26",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 1001,
+    "logged_on": "2025-01-30",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 1001,
+    "logged_on": "2025-02-24",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "before_round_complete",
+  "crew_exception": "overweight",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "wrong_stream",
+  "report_timing": "before_round_complete",
+  "crew_exception": "overweight",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "return_conditional",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "crew_missed": "Stop entry has exception_code overweight but photo_ref null and gps_stop false, so the exception is unsupported and no stop is shown.",
+  "report_matches": "Stream and date match the schedule, but the report was logged at 15:10, before round completion at 15:40.",
+  "next_step": "The overweight code points to a presentation fix, so a return is conditional on the resident correcting it.",
+  "return_urgency": "No assisted flag or deadline; a return in two days versus the same day is a close call.",
+  "repeat_failures": "Three upheld misses, but the earliest is dated exactly 84 days before logged_at, on the window edge, so the count is 2 or 3."
+ },
+ "request": "rec-F408-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009575
+}

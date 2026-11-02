@@ -1,0 +1,126 @@
+{
+ "id": "F402-0027",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "B207",
+   "priority": "routine",
+   "site": "lumbar",
+   "onset": "2024-08-12",
+   "received": "2025-03-17"
+  },
+  "patient": {
+   "consent_to_refer": true,
+   "mobility_aid": null
+  },
+  "clinical": {
+   "dx": "M54.5",
+   "red_flags": [
+    "night_pain_weight_loss"
+   ],
+   "neuro_signs": {},
+   "function_index": 68.5,
+   "surgery_date": null,
+   "weight_bearing": "full"
+  },
+  "gp_record": {
+   "weight_change_kg": -4.1,
+   "falls_3m": 2,
+   "reviews": [
+    "2024-12-02"
+   ]
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-01-17",
+    "side": "na",
+    "result": "no_sinister"
+   }
+  ],
+  "history": {
+   "episodes": [],
+   "self_mgmt_trial": true
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "none",
+  "missing_item": "none",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 31,
+  "function_index": 68.5,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 2,
+  "post_op_days": "none",
+  "self_mgmt_tried": true
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": false,
+  "mismatch_field": "none",
+  "mismatch_magnitude": "moderate",
+  "missing_item": "post_op_protocol",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 31,
+  "function_index": 26.89,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 2,
+  "post_op_days": 70,
+  "self_mgmt_tried": true
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "book_amended",
+   "second": "accept_as_referred",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "clear",
+   "target": "self_management",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 95,
+ "deciding": {
+  "red_flag_unresolved": "The night_pain_weight_loss flag with a 4.1 kg loss is backed by an MRI no_sinister dated 2025-01-17, slightly over 8 weeks old. The GP review predates nothing explicit about the flag, so the flag is partly but not firmly explained.",
+  "next_step": "Record is complete, so accept is defensible. Routine priority sits against an open weight-loss flag, which supports booking with amended priority or precautions.",
+  "pathway": "Function index 68.5, no neuro signs, full weight-bearing, no surgery, and self-management already tried. This settles self-management.",
+  "reversal_time": "If the weight loss and night pain are sinister, a delayed outcome could take over three months to undo. The recent MRI keeps level 2 plausible.",
+  "clinical_urgency": "Weight loss with night pain and a borderline-age MRI could mean medical review within 48 hours. The no_sinister result makes within two weeks equally defensible."
+ },
+ "request": "rec-F402-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00964
+}

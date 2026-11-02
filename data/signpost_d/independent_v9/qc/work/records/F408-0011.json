@@ -1,0 +1,141 @@
+{
+ "id": "F408-0011",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "M101",
+   "uprn": 2001,
+   "postcode": "DL4 7QX",
+   "stream": "refuse",
+   "claimed": "2024-03-12",
+   "logged_at": "2024-03-12T15:00",
+   "photo": false
+  },
+  "property": {
+   "uprn": 2001,
+   "postcode": "DL4 7QY",
+   "assisted": false
+  },
+  "schedule": {
+   "streams": [
+    "refuse"
+   ],
+   "date": "2024-03-12"
+  },
+  "round_log": {
+   "completed_at": "2024-03-12T17:30",
+   "disruption": "WX",
+   "catch_up": "2024-03-13",
+   "sweep_at": null,
+   "stops": [
+    {
+     "uprn": 2001,
+     "exc": "not_presented",
+     "photo_ref": null,
+     "gps_stop": false
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 2001,
+    "logged": "2024-02-02",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 2001,
+    "logged": "2024-01-15",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 2001,
+    "logged": "2024-03-01",
+    "outcome": "pending"
+   },
+   {
+    "uprn": 2001,
+    "logged": "2023-10-01",
+    "outcome": "rejected"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "before_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": false,
+  "telematics_pass": "gps_stop_false",
+  "round_disruption": "weather_suspension, catch-up date passed without sweep (decoy)",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "postcode_typo",
+  "prior_upheld_misses": 2,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "before_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "weather_suspension",
+  "already_collected": true,
+  "photo_attached": false,
+  "address_id_mismatch": "postcode_typo",
+  "prior_upheld_misses": 1,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "return_conditional",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "crew_missed": "Stop shows not_presented with photo_ref null and gps_stop false, so the exception is unsupported; the weather catch-up date passed with no sweep.",
+  "report_matches": "logged_at 15:00 is before round completed_at 17:30 on the same day, so the report was made before the round finished.",
+  "next_step": "The crew coded not_presented, which points to a presentation fix before a return, but the lack of a photo and the unsupported code leave some doubt.",
+  "return_urgency": "No assisted flag or deadline. Standard (2 working days) and same day are both defensible for a skipped stop.",
+  "repeat_failures": "Two upheld entries within 84 days plus a pending entry on 2024-03-01; if the pending one is upheld the count is 3."
+ },
+ "request": "rec-F408-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009806
+}

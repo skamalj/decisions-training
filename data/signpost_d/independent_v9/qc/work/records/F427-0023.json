@@ -1,0 +1,131 @@
+{
+ "id": "F427-0023",
+ "family": "F427",
+ "state": {
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 20,
+   "dipwells_scheduled": 8
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 30
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 27,
+     "prev_depth_cm": 19
+    }
+   ],
+   "rain_30d_pct_normal": 49
+  },
+  "structures": {
+   "inspections": null,
+   "open_work_orders": [
+    {
+     "dam_id": "D4",
+     "status": "raised"
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 3
+    },
+    {
+     "q": 2,
+     "score": null
+    }
+   ],
+   "photos_uploaded": 6,
+   "photos_expected": 6
+  },
+  "notes": {
+   "surveyor_note": "D4 pool mostly gone, only a trickle held."
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 0.13,
+  "photos_status": "full",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": false,
+  "worst_dam_defect": "failed",
+  "water_table_offset_cm": -10.0,
+  "rainfall_pct_normal": 49.0,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 0,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "alarmed",
+  "grazing_signs": true
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.13,
+  "photos_status": "full",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": false,
+  "worst_dam_defect": "seepage",
+  "water_table_offset_cm": -14.86,
+  "rainfall_pct_normal": 48.83,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 2,
+  "date_sequence_fault": false,
+  "surveyor_grade": "accredited",
+  "note_tone": "alarmed",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "recheck_next_visit",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "below_band",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 33,
+ "deciding": {
+  "dam_caused_drop": "Rain is 49% of normal and the control fell from 19 to 27 cm, which favours dry weather. D4 is nearly drained and has a raised work order, so a dam cause stays plausible.",
+  "next_step": "D4 already has a raised work order, so a targeted recheck at the next visit fits. Missing data and a possible failed dam add some doubt.",
+  "hydro_state": "The one dipwell reads 30 cm against a floor of 20 cm, which is 10 cm below and within 15 cm.",
+  "dam_severity": "Inspections are null. The note says D4 pool is mostly gone with only a trickle held, which sits between a partial breach and a failed dam.",
+  "evidence_completeness": "Photos are complete and quadrats are partial (one score null). Dipwells are 1 of 8 and the inspection is null, so it is two elements or arguably one."
+ },
+ "request": "rec-F427-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01043
+}

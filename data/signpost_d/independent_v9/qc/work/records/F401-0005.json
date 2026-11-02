@@ -1,0 +1,143 @@
+{
+ "id": "F401-0005",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P3318",
+   "planned_discharge_at": "2025-09-09T15:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 22,
+     "spo2": 93,
+     "hr": 104
+    },
+    {
+     "rr": 23,
+     "spo2": 92,
+     "hr": 101
+    }
+   ],
+   "targets": {
+    "note": "baseline rr 20-22"
+   }
+  },
+  "medications": {
+   "patient_id": "P3318",
+   "reconciled": [
+    "ramipril 5mg od"
+   ],
+   "changes": [
+    {
+     "drug": "sertraline",
+     "action": "start",
+     "by": "Dr Lee",
+     "at": "2025-09-08"
+    }
+   ],
+   "discharge_rx": [
+    "ramipril 5mg od",
+    "sertraline 50mg od"
+   ],
+   "pharmacy_ready_at": "2025-09-09T14:30"
+  },
+  "function_social": {
+   "care": {
+    "status": "confirmed",
+    "start": "2025-09-09"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "TTO",
+     "status": "done",
+     "completed_at": "2025-09-09T11:00",
+     "signed_by": "RN Kay"
+    }
+   ],
+   "transport": {
+    "pickup": "15:00"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "drug_added",
+  "rx_change_documented": true,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "new_package",
+  "care_arrangement_status": "confirmed",
+  "logistics_delay": "on_time",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "drug_added",
+  "rx_change_documented": true,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "permanent_care",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "escalate_senior",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "leaning",
+   "target": "home_with_package",
+   "second": null,
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 52,
+ "deciding": {
+  "rx_matches": "Sertraline is on discharge_rx but a documented start entry exists, so the mismatch is explained only partly; a dose-timing gap leaves doubt.",
+  "next_step": "Two raised obs sets with no senior review, though a baseline note partly mitigates.",
+  "destination": "Care package confirmed with start 2025-09-09 points to home_with_package.",
+  "outstanding_tasks": "The only item is done and signed, but few items listed leaves level 2 versus 3 unsettled.",
+  "discharge_delay": "Pharmacy 14:30 and pickup 15:00 fall at the planned time, sitting on the level 0/1 boundary."
+ },
+ "request": "rec-F401-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007226
+}

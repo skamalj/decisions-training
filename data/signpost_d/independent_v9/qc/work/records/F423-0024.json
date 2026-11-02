@@ -1,0 +1,138 @@
+{
+ "id": "F423-0024",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-39004",
+   "stock_spec": "MT170",
+   "run_qty": 12000,
+   "overs_pct": 2.28,
+   "customer_tier": "key_account",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "ok_sheet_no": 31,
+   "signed_at": "2024-02-20T10:30",
+   "concession": {
+    "accepted_max_de": 4.0
+   }
+  },
+  "colour_readings": {
+   "calibrated_on": "2023-11-10",
+   "measured_on": "2024-02-20",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.6
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.4
+    },
+    {
+     "ink": "Y",
+     "delta_e": 2.2
+    },
+    {
+     "ink": "K",
+     "delta_e": 2.9
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.05,
+     "in_image": false
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "GL170",
+   "first_production_at": "2024-02-20T08:45",
+   "sheets_production": 1983,
+   "sheets_makeready": 200
+  }
+ },
+ "factors": {
+  "colour_deviation": "marginal",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 1983,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 2.28,
+  "register_offset_mm": 0.05,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 102,
+  "customer_tier": "key_account",
+  "prior_stoppages": 2
+ },
+ "factors_sampled": {
+  "colour_deviation": "marginal",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 1983,
+  "wrong_stock_loaded": true,
+  "overs_allowance_pct": 2.28,
+  "register_offset_mm": 0.05,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 102,
+  "customer_tier": "key_account",
+  "prior_stoppages": 2
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_run",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (wrong_stock_loaded = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 81,
+ "deciding": {
+  "colour_in_tolerance": "Magenta 3.4 exceeds spec 3.0, but the concession accepts up to 4.0 and all patches pass it. The instrument calibration is 102 days old, which leaves some doubt.",
+  "run_before_signoff": "first_production_at 08:45 is earlier than signed_at 10:30 with 1983 production sheets logged, so production preceded signature.",
+  "next_step": "Colour and register pass and signature exists, but stock_loaded GL170 differs from stock_spec MT170 with 1983 sheets (16.5% of run). Manager escalation is required; release is not supportable.",
+  "staff_effort": "A wrong-stock reprint decision and customer contact take about one to five days, or only hours if the manager accepts the sheets as printed.",
+  "scrap_exposure": "Wrong stock: GL170 loaded against MT170, with 1983 production sheets, 16.5% of the 12000 run, which is at or above 10%."
+ },
+ "request": "rec-F423-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010639
+}

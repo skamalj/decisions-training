@@ -1,0 +1,164 @@
+{
+ "id": "F416-0034",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "W09",
+   "date": "2025-04-03",
+   "signoff": "G51",
+   "signed_at": null
+  },
+  "roster": [
+   {
+    "id": "G51",
+    "on": "08:30",
+    "off": "17:30",
+    "qual_exp": "2025-04-10"
+   },
+   {
+    "id": "G52",
+    "on": "08:30",
+    "off": "17:30",
+    "qual_exp": "2026-06-01"
+   },
+   {
+    "id": "G53",
+    "on": "08:30",
+    "off": "17:30",
+    "qual_exp": "2025-09-15"
+   }
+  ],
+  "incidents": [
+   {
+    "id": "I1",
+    "date": "2025-04-03",
+    "time": "11:05",
+    "type": "water_rescue",
+    "resp": [
+     "G51",
+     "G52"
+    ],
+    "out": "conveyed",
+    "aed_used": true,
+    "amb": "A220"
+   },
+   {
+    "id": "I2",
+    "date": "2025-04-03",
+    "time": "13:40",
+    "type": "water_rescue",
+    "resp": [
+     "G52",
+     "G53"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "I3",
+    "date": "2025-04-03",
+    "time": "15:00",
+    "type": "first_aid",
+    "resp": [
+     "G53"
+    ],
+    "out": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue_board",
+    "unit": "RB7",
+    "out_from": "10:00",
+    "out_to": "11:10",
+    "sub": "RB9"
+   }
+  ],
+  "handover": {
+   "rescues": 2,
+   "first_aid": 1,
+   "kit_defects": 1,
+   "chk": "CS-60"
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "cpr_or_aed",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "factors_sampled": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "multiple",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": false,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "low"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "amend_and_file",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 99,
+ "deciding": {
+  "two_guard_cover": "Each rescue lists two rostered responders with in-date quals; G51's expiry is only a week after the shift date, so some doubt remains.",
+  "totals_reconcile": "Rescues 2, first_aid 1 and kit_defects 1 match the itemised incidents and the one equipment entry with out_from; dates match, though the missing signed_at leaves slight doubt.",
+  "next_step": "shift.signed_at is null while the signing guard id is present; this is a clerical gap the supervisor can correct and file.",
+  "outcome_severity": "I1 has aed_used true, pointing to critical, but its outcome code is conveyed with an ambulance ref, so conveyed is plausible.",
+  "kit_outage": "RB7 was out 70 minutes but substitute RB9 is logged, giving level 0; the 70-minute gap keeps level 1 arguable."
+ },
+ "request": "rec-F416-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010774
+}

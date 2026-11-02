@@ -1,0 +1,129 @@
+{
+ "id": "F439-0013",
+ "family": "F439",
+ "state": {
+  "test": {
+   "ref": "T-91064",
+   "date": "2024-05-14",
+   "start": "11:00",
+   "end": "11:42",
+   "route": "R12",
+   "conditions": "dry"
+  },
+  "candidate": {
+   "ref": "C305",
+   "attempt": 1,
+   "id_check": true
+  },
+  "fault_sheet": {
+   "items": [
+    {
+     "item": "junctions",
+     "driving": 3,
+     "serious": 0,
+     "dangerous": 0
+    },
+    {
+     "item": "observation",
+     "driving": 2,
+     "serious": 0,
+     "dangerous": 0
+    },
+    {
+     "item": "control",
+     "driving": 1,
+     "serious": 0,
+     "dangerous": 0
+    }
+   ],
+   "driving_fault_total": 7
+  },
+  "outcome": {
+   "result": "pass",
+   "intervention": false,
+   "debrief": true,
+   "examiner_note": "Safe, confident drive with minor faults.",
+   "examiner_signoff_at": null
+  },
+  "incident": null,
+  "review_trail": {
+   "upheld_complaints_12m": 1,
+   "countersigned_by": null
+  }
+ },
+ "factors": {
+  "fault_profile": "clear_pass",
+  "result_mismatch": false,
+  "tally_error": true,
+  "documentation_gap": "signoff_missing",
+  "intervention_recorded": false,
+  "intervention_explained": false,
+  "continued_after_collision": false,
+  "senior_countersigned": false,
+  "adverse_conditions": false,
+  "note_alignment": "consistent",
+  "examiner_complaints_12m": 1,
+  "post_submission_edit": "no_edit"
+ },
+ "factors_sampled": {
+  "fault_profile": "clear_pass",
+  "result_mismatch": false,
+  "tally_error": true,
+  "documentation_gap": "none",
+  "intervention_recorded": false,
+  "intervention_explained": true,
+  "continued_after_collision": false,
+  "senior_countersigned": false,
+  "adverse_conditions": false,
+  "note_alignment": "consistent",
+  "examiner_complaints_12m": 1,
+  "post_submission_edit": "no_edit"
+ },
+ "plan": {
+  "result_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "report_complete": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "hold_query",
+   "second": "amend_record",
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "issue_severity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 122,
+ "deciding": {
+  "result_supported": "Items sum to 6 against total 7; both far below 15 with no serious or dangerous faults, so pass holds.",
+  "report_complete": "examiner_signoff_at is null, though other fields are present; the sign-off may be optional, so doubt.",
+  "disposition": "Tally off by one and sign-off null: either query the examiner or amend from the sheet.",
+  "staff_effort": "Needs examiner contact for sign-off and tally fix, likely a few hours or a day or two.",
+  "issue_severity": "Total mismatch of 1 with no effect on the pass; the missing sign-off is a minor gap."
+ },
+ "request": "rec-F439-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005604
+}

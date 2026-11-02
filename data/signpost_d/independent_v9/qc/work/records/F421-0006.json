@@ -1,0 +1,110 @@
+{
+ "id": "F421-0006",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "id": "P81",
+   "fragile": true,
+   "contents": "ceramic vase",
+   "qty": 1,
+   "weight_kg": 1.2,
+   "declared_value_gbp": 828.25
+  },
+  "handling_events": [
+   {
+    "ts": "2024-05-02T08:10",
+    "site": "DEP-N",
+    "code": "INB",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "observed_item": "vase, ceramic",
+   "qty_found": 1,
+   "weight_kg": 1.2,
+   "condition": "chipped rim",
+   "photos": [],
+   "repair_est_gbp": 39.5
+  },
+  "claim": {
+   "claimed_gbp": 57.67,
+   "packaging_desc": "single-wall box, no void fill"
+  }
+ },
+ "factors": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "trivial_unit",
+  "inspection_state": "photos_missing",
+  "loss_pct": 4.77,
+  "declared_value": 828.25,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.46
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "photos_missing",
+  "loss_pct": 63.15,
+  "declared_value": 828.25,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.46
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "depot_fault": "Only one scan; DMG exception coincides with the inbound scan, so timing is unestablished, plus poor packaging in the claim.",
+  "contents_match": "'ceramic vase' vs 'vase, ceramic' with matching qty and weight; the wording differs slightly, so a doubt remains.",
+  "next_step": "photos list is empty, a specific missing item.",
+  "loss_share": "repair_est 39.5 / 828.25 = 4.8%, right at the 5% boundary.",
+  "parties_needed": "Photos are needed from inspector, and perhaps the sender; one or two people is open."
+ },
+ "request": "rec-F421-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007462
+}

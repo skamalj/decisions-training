@@ -1,0 +1,155 @@
+{
+ "id": "F410-0030",
+ "family": "F410",
+ "state": {
+  "application": {
+   "term_end": "2026-03-31",
+   "pitch_req": {
+    "width_m": 4.6
+   },
+   "commodities": [
+    "knitwear",
+    "handmade soap"
+   ],
+   "docs_pending": [
+    "new policy schedule",
+    "stall plan",
+    "photo ID"
+   ]
+  },
+  "licence_current": {
+   "pitch": {
+    "width_m": 3.26
+   },
+   "commodities": [
+    "knitwear"
+   ],
+   "conditions": {
+    "min_attendance_pct": 60,
+    "max_width_m": 4.0
+   },
+   "variations": [
+    {
+     "type": "width",
+     "detail": "3.6m",
+     "approved": true,
+     "approved_on": "2025-02-03"
+    }
+   ]
+  },
+  "compliance_docs": {
+   "pli": {
+    "end": "2025-10-31",
+    "indemnity_gbp": 2000000
+   },
+   "pli_required_gbp": 5000000,
+   "broker_conf": {
+    "received": "2025-09-15",
+    "new_end": "2026-03-31"
+   }
+  },
+  "account": {
+   "fees_due": [
+    {
+     "amount_gbp": 620
+    }
+   ],
+   "ledger": [
+    {
+     "amount_gbp": 421.4
+    }
+   ],
+   "payment_plan": {
+    "active": true,
+    "instalments_left": 3,
+    "missed": 0
+   }
+  },
+  "history": {
+   "allocated_12m": 50,
+   "attended_12m": 31,
+   "absence_notices": [
+    {
+     "reason": "family",
+     "accepted": true
+    }
+   ]
+  }
+ },
+ "factors": {
+  "pli_cover_gap": "indemnity_below_required",
+  "broker_confirmation_held": true,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 1.34,
+  "variation_approved": false,
+  "fee_arrears_gbp": 198.6,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.62,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 3
+ },
+ "factors_sampled": {
+  "pli_cover_gap": "indemnity_below_required",
+  "broker_confirmation_held": true,
+  "commodity_change": "related_non_food_added",
+  "food_registration_state": "not_applicable",
+  "stall_size_delta_m": 1.34,
+  "variation_approved": false,
+  "fee_arrears_gbp": 198.6,
+  "payment_plan_active": true,
+  "attendance_ratio": 0.62,
+  "absences_notified": true,
+  "complaint_profile": "none",
+  "holder_ref_mismatch": "none",
+  "docs_outstanding": 3
+ },
+ "plan": {
+  "pli_term_covered": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "renewal_disposition": {
+   "clarity": "leaning",
+   "target": "grant",
+   "second": null,
+   "targets": []
+  },
+  "inspection_level": {
+   "clarity": "leaning",
+   "target": "desk_check",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "discrepancy_count": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 57,
+ "deciding": {
+  "pli_term_covered": "pli.end 2025-10-31 precedes term_end 2026-03-31 and indemnity 2,000,000 is below the required 5,000,000; broker_conf new_end 2026-03-31 gives some support for the dates, but the sum is short and a new policy schedule is pending.",
+  "renewal_disposition": "Arrears are on an active plan with missed 0 and attendance is 62% with an accepted absence, but the application is still incomplete and carries unexplained changes.",
+  "inspection_level": "Handmade soap is non-food and the changes are documentary (policy schedule, stall plan), so a desk check is leaning; the unapproved extra commodity and width could justify a visit.",
+  "reversal_time": "A grant on an incomplete application can be undone within weeks, but a full-year licence with a wider pitch could take longer; reviewers split between levels 2 and 3.",
+  "discrepancy_count": "Unresolved items are indemnity 2m against 5m required, pli end before term end, soap added to commodities with no variation, and width 4.6 against 3.26 with only a non-matching 3.6m variation; the plan covers arrears, so about four remain."
+ },
+ "request": "rec-F410-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012333
+}

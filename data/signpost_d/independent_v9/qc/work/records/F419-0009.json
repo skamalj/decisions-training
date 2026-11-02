@@ -1,0 +1,147 @@
+{
+ "id": "F419-0009",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "12/30",
+   "survey_dt": "2024-09-03T06:15",
+   "test_speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": null
+  },
+  "device": {
+   "serial": "FR-6610",
+   "cal_cert_date": null,
+   "cal_expiry": null,
+   "tyre_pressure_kpa": null,
+   "tyre_spec_kpa": [
+    200,
+    220
+   ],
+   "water_depth_mm": 0.5
+  },
+  "runs": [
+   {
+    "dir": "12",
+    "mean_speed_kmh": 78,
+    "thirds": [
+     0.52,
+     0.55,
+     0.53
+    ]
+   },
+   {
+    "dir": "30",
+    "mean_speed_kmh": 77,
+    "thirds": [
+     0.54,
+     0.56,
+     0.55
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.38,
+    0.4,
+    0.39
+   ],
+   "mtd_threshold_mm": 0.6
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-11-14",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start_date": "2024-09-12"
+    }
+   ],
+   "cross_checks": [],
+   "prior_surveys": [
+    {
+     "date": "2024-06-01",
+     "lowest_third": 0.58
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-09-03T06:15"
+  }
+ },
+ "factors": {
+  "min_third_band": "at_planning_boundary (0.52)",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 294,
+  "removal_scheduled": true,
+  "calibration_status": "missing",
+  "missing_elements_count": 2,
+  "test_condition_anomaly": "speed_off",
+  "macrotexture_band": "low",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_minimum",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 294,
+  "removal_scheduled": false,
+  "calibration_status": "missing",
+  "missing_elements_count": 2,
+  "test_condition_anomaly": "speed_off",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "declining"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "monitor_closely",
+   "second": "schedule_works",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "leaning",
+   "target": "surface_texture",
+   "second": null,
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 56,
+ "deciding": {
+  "genuine_deficit": "Mean speeds of 77-78 km/h against a 65 km/h test speed and null calibration make the readings unreliable. The lowest third sits right at the 0.52 planning level.",
+  "next_step": "A rubber_removal order starts 2024-09-12, favouring monitoring. The texture of 0.38-0.40 against 0.60 and the declining priors favour scheduling texture works.",
+  "deficit_driver": "Lows are spread across all thirds with texture far below threshold. The speed anomaly and a recent removal order leave some doubt.",
+  "friction_severity": "The lowest third of 0.52 equals the planning threshold, so it is level 1 or level 2 depending on how the boundary is read.",
+  "evidence_completeness": "Calibration, tyre pressure and weather are null, which is three missing, and the sign-off has the same timestamp as the survey. Whether that is a fourth element is the level 1 versus level 0 question."
+ },
+ "request": "rec-F419-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014812
+}

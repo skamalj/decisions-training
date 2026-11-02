@@ -1,0 +1,121 @@
+{
+ "id": "F402-0032",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "RF-5820",
+   "source": "GP",
+   "received": "2025-04-02",
+   "priority": "routine",
+   "site": {
+    "part": "lumbar spine",
+    "side": "central"
+   },
+   "onset_date": "2023-12-01"
+  },
+  "patient": {
+   "dob": "1948-06-11",
+   "mobility_aid": "stick",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx_code": "lumbar_pain_chronic",
+   "red_flags": [
+    "cancer_hx_new_spinal_pain"
+   ],
+   "neuro_signs": {},
+   "function_index": 2,
+   "weight_bearing": null
+  },
+  "gp_record": {
+   "dob": "1948-06-12",
+   "falls_3m": 3,
+   "reviews": [
+    "2025-03-05 urgent"
+   ]
+  },
+  "attachments": [],
+  "history": {
+   "episodes": [],
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": true,
+  "mismatch_field": "date_of_birth",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "weight_bearing_status",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 68,
+  "function_index": 2.0,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 3,
+  "post_op_days": "none",
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "cancer_history_new_spinal_pain",
+  "red_flag_mitigated": true,
+  "mismatch_field": "date_of_birth",
+  "mismatch_magnitude": "trivial",
+  "missing_item": "weight_bearing_status",
+  "condition_group": "simple_msk",
+  "symptom_duration_weeks": 68,
+  "function_index": 1.98,
+  "prior_episodes_12m": 0,
+  "referrer_priority": "routine",
+  "falls_last_3m": 3,
+  "post_op_days": 76,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "accept_as_referred",
+   "second": "request_info",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "balanced",
+   "target": "self_management",
+   "second": "specialist_rehab",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 96,
+ "deciding": {
+  "red_flag_unresolved": "Urgent GP review after the flag is present but no imaging or oncology discharge confirms benign cause.",
+  "next_step": "weight_bearing is null, supporting a query, yet the referral is otherwise acceptable as stated.",
+  "pathway": "Chronic simple lumbar pain suggests self-management, but function index 2 with 3 falls and a stick suggests specialist rehab.",
+  "reversal_time": "Chronic course with severe function loss and falls; recovery could take beyond or within three months.",
+  "clinical_urgency": "Urgent review done but no imaging; falls and very low function split two-week versus six-week."
+ },
+ "request": "rec-F402-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.004947
+}

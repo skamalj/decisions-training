@@ -1,0 +1,120 @@
+{
+ "id": "F433-0011",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H101",
+   "earlier_gates": [
+    "pass",
+    "pass"
+   ]
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "09:40",
+   "departed_at": null
+  },
+  "vet_card": {
+   "presented_at": "10:01",
+   "pulse_bpm": 64,
+   "cri": {
+    "first_bpm": 56,
+    "second_bpm": 52
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 2
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 2
+    }
+   ],
+   "vet_signed_at": "10:06"
+  },
+  "treatment": null,
+  "notes": {
+   "rider": "Slipped on the road."
+  }
+ },
+ "factors": {
+  "pulse_status": "not_met",
+  "time_mismatch": "none",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": false,
+  "metabolic_flags": 0,
+  "cri_rise": 10.36,
+  "missing_items": 0,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "factors_sampled": {
+  "pulse_status": "not_met",
+  "time_mismatch": "none",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": false,
+  "metabolic_flags": 1,
+  "cri_rise": 10.36,
+  "missing_items": 3,
+  "out_of_sequence": false,
+  "tack_wound": "none",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "invasive",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "clear_to_continue",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "leaning",
+   "target": "ftq_gait",
+   "second": null,
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 37,
+ "deciding": {
+  "pulse_met": "Presented 10:01 is 21 min after 09:40 arrival, 1 min over the 20 min window, though pulse is 64.",
+  "next_step": "No readings missing and nothing pending.",
+  "outcome_code": "Trot-up grade 2 with metabolic values acceptable.",
+  "welfare_risk": "Metabolic values normal; the grade 2 gait is the only borderline item.",
+  "record_completeness": "All readings present and signed, but the 10:06 signature is only just after presentation."
+ },
+ "request": "rec-F433-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005885
+}

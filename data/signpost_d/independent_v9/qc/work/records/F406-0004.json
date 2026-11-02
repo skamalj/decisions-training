@@ -1,0 +1,125 @@
+{
+ "id": "F406-0004",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S-1186",
+   "gallery_code": "GW-3",
+   "session_date": "2025-04-02",
+   "certified_limit": 60
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "10:00",
+     "occupancy": 38
+    },
+    {
+     "start": "10:15",
+     "occupancy": 53
+    },
+    {
+     "start": "10:30",
+     "occupancy": 47
+    }
+   ],
+   "ticket_scans": 131,
+   "manual_tally_peak": 53,
+   "summary_peak": 53
+  },
+  "variations": [
+   {
+    "ref": "CV-88",
+    "gallery_code": "GW-3",
+    "valid_from": "2025-04-01",
+    "valid_to": "2025-04-03",
+    "uplift_to": 75,
+    "status": "pending"
+   }
+  ],
+  "history": {
+   "overages_30d": 0
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.88,
+  "intervals_over_limit": 0,
+  "section_mismatch": "none",
+  "variation_present": true,
+  "variation_scope": "pending",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "none",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "none",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.02,
+  "intervals_over_limit": 3,
+  "section_mismatch": "scans_vs_counter_minor",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": false,
+  "fault_ticket_scope": "raised_after_session",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 0,
+  "staff_note_tone": "none",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "fault_explains_overage": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 41,
+ "deciding": {
+  "variation_applies": "CV-88 matches gallery and dates but its status is 'pending'; it is not approved, though the dates fit.",
+  "fault_explains_overage": "There is no overage and no maintenance ticket in the record.",
+  "next_step": "Peak 53 of 60 is in all sources (counter, tally), history shows 0 overages, and nothing needs correcting, so the log is filed as is.",
+  "peak_excess": "Peak 53 against the 60 limit is about 88%, below the 90% anchor, with the pending uplift irrelevant.",
+  "intervals_over": "Interval occupancies 38, 53 and 47 are all below the limit of 60."
+ },
+ "request": "rec-F406-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.020462
+}

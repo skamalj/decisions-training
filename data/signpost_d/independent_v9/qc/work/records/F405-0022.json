@@ -1,0 +1,149 @@
+{
+ "id": "F405-0022",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "C214",
+   "detected_on": "2025-03-03",
+   "term_start": "2025-03-03",
+   "room": "LT2"
+  },
+  "booking_a": {
+   "module": "MTH101",
+   "dept": "MTH",
+   "day": "Tue",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 70,
+   "required_features": [
+    "lecture_capture"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "MTH230",
+   "dept": "MTH",
+   "room": "LT-2",
+   "day": "Tue",
+   "start": "10:00",
+   "end": "12:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "status": "confirmed",
+   "approved_at": "2025-02-05",
+   "approver": "mkaur"
+  },
+  "room": {
+   "code": "LT2",
+   "aliases": [
+    "LT-2"
+   ],
+   "capacity": 100
+  },
+  "alternatives": [
+   {
+    "code": "LT5",
+    "capacity": 80,
+    "features": [
+     "lecture_capture"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "history": []
+ },
+ "factors": {
+  "overlap_type": "partial_time",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 1,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.7,
+  "required_feature": "lecture_capture",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 0
+ },
+ "factors_sampled": {
+  "overlap_type": "partial_time",
+  "room_code_alias": true,
+  "wrong_room_variant": false,
+  "booking_b_status": "confirmed",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": 12,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": false,
+  "headcount_ratio": 0.7,
+  "required_feature": "lecture_capture",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 0
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "alt_room_fits": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "leaning",
+   "target": "dismiss",
+   "second": null,
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 42,
+ "deciding": {
+  "genuine_clash": "booking_b.room LT-2 is listed in room.aliases for LT2; both Tue weeks 1-4, 09:00-11:00 vs 10:00-12:00 overlap.",
+  "alt_room_fits": "LT5 capacity 80 vs headcount 70, has lecture_capture, free weeks 1-4; fits with a small margin.",
+  "resolution": "The plan expected dismiss, but the alias resolves to the same room and the times overlap, so it cannot be dismissed; both are confirmed and LT5 fits, so relocate.",
+  "urgency": "Detected 2025-03-03 (term start, a Monday) with the clash on Tue week 1, which is 1 day away; a reader could treat it as imminent or nearly live.",
+  "parties_needed": "Both bookings are in MTH, so one scheduler could move one booking alone, or the two module leads may both need to act."
+ },
+ "request": "rec-F405-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010251
+}

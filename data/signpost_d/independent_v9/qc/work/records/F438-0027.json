@@ -1,0 +1,100 @@
+{
+ "id": "F438-0027",
+ "family": "F438",
+ "state": {
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "I50.9"
+   }
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "I50.0"
+   }
+  },
+  "grouping": {
+   "hrg_submitted": "EB03Z",
+   "hrg_regrouped": "EB03Z"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.01,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "date_or_side_differs",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.01,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_as_coded",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "error_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 25,
+ "deciding": {
+  "primary_supported": "I50.0 against documented I50.9: same three characters, different fourth, with no convention or query to settle it.",
+  "hrg_shift": "Both HRGs are EB03Z, though a specificity correction could be argued.",
+  "next_step": "HRG is unchanged and nothing is missing, so the sample plausibly closes as coded.",
+  "error_count": "The only difference is a fourth-character specificity gap, arguably not an error.",
+  "error_severity": "A specificity-only difference with the same HRG changes nothing material."
+ },
+ "request": "rec-F438-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009977
+}

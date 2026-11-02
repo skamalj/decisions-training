@@ -1,0 +1,166 @@
+{
+ "id": "F425-0005",
+ "family": "F425",
+ "state": {
+  "consignment": {
+   "producer_code": "1UK-9D33",
+   "method": "barn",
+   "lay_dates": [
+    "2024-06-06",
+    "2024-06-04"
+   ],
+   "declared_eggs": 8000,
+   "trays": 270
+  },
+  "grading_run": {
+   "run_start": "2024-06-15T07:00",
+   "run_end": "2024-06-15T09:30",
+   "eggs_in": 8000,
+   "by_size": {
+    "S": 400,
+    "M": 2600,
+    "L": 3200,
+    "XL": 990
+   },
+   "outgrades": {
+    "cracks": 600,
+    "dirties": 120,
+    "blood_spots": 60,
+    "misshapen": 30
+   },
+   "class_a_total": 7190
+  },
+  "checks": {
+   "crack_detector": {
+    "last_calibrated": "2024-06-01",
+    "interval_days": 30
+   },
+   "candling_sample": {
+    "sampled_at": "2024-06-15T08:15",
+    "n": 60
+   },
+   "scale_check": {
+    "passed": true
+   },
+   "store_temp": {
+    "minutes_above_limit": 0,
+    "max_c": 10
+   }
+  },
+  "flock": {
+   "age_weeks": 39,
+   "salmonella_vaccinated": true,
+   "last_swab": {
+    "date": "2024-06-01",
+    "result": "negative"
+   },
+   "swab_pending": false
+  },
+  "packing": {
+   "pack_date": "2024-06-15",
+   "packs": [
+    {
+     "size": "S",
+     "pack": 10,
+     "count": 40
+    },
+    {
+     "size": "M",
+     "pack": 10,
+     "count": 260
+    },
+    {
+     "size": "L",
+     "pack": 10,
+     "count": 320
+    },
+    {
+     "size": "XL",
+     "pack": 10,
+     "count": 95
+    }
+   ],
+   "stamp_code": "1UK-9D33",
+   "best_before": "2024-07-04",
+   "label_class": "A"
+  }
+ },
+ "factors": {
+  "count_gap_size": "marginal",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 11,
+  "mixed_lay_dates": true,
+  "missing_check": "none",
+  "swab_positive": false,
+  "outgrade_rate_pct": 10.13,
+  "dominant_defect": "cracks",
+  "calibration_overdue": false,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 39
+ },
+ "factors_sampled": {
+  "count_gap_size": "none",
+  "count_gap_location": "packs_vs_class_a",
+  "stamp_code_mismatch": false,
+  "lay_to_pack_days": 3,
+  "mixed_lay_dates": true,
+  "missing_check": "scale_check_missing",
+  "swab_positive": false,
+  "outgrade_rate_pct": 10.21,
+  "dominant_defect": "cracks",
+  "calibration_overdue": true,
+  "calibration_mitigated": false,
+  "temp_excursion": "none",
+  "temp_mitigated": true,
+  "flock_age_weeks": 39
+ },
+ "plan": {
+  "counts_reconcile": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "clear",
+   "target": "release_class_a",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "anomaly_cause": {
+   "clarity": "leaning",
+   "target": "shell_quality",
+   "second": null,
+   "targets": []
+  },
+  "lay_to_pack": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "outgrade_share": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 86,
+ "deciding": {
+  "counts_reconcile": "Packs sum 7150 eggs against class_a_total 7190, about 0.56%, just over half a percent; intake and grader agree at 8000.",
+  "batch_disposition": "All checks are present and in date, stamp matches, swab negative and no excursion, so nothing blocks release as Class A.",
+  "anomaly_cause": "Cracks dominate the raised outgrades (600 of 810) from a 39-week flock, with current calibration and no temperature minutes above limit.",
+  "lay_to_pack": "Oldest lay date 2024-06-04 and pack date 2024-06-15 is 11 days, one past the 10-day line; the newer date 2024-06-06 would give 9 days.",
+  "outgrade_share": "Outgrades total 810 of 8000, 10.13%, just over the 10% boundary between levels 2 and 3."
+ },
+ "request": "rec-F425-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013095
+}

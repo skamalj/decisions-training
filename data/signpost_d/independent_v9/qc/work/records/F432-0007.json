@@ -1,0 +1,142 @@
+{
+ "id": "F432-0007",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "temp_range_c": [
+    18,
+    26
+   ],
+   "maint_window": "06:00-10:00",
+   "active_vet_case": true
+  },
+  "shift": {
+   "end": "17:30",
+   "opening_count": 3,
+   "closing_count": 2
+  },
+  "movements": [
+   {
+    "id": "a7",
+    "dir": "out",
+    "time": "09:12",
+    "dest": "E14"
+   }
+  ],
+  "feeding": [
+   {
+    "sheet_g": 2000,
+    "offered_g": 2000,
+    "leftover_kg": 0.7
+   }
+  ],
+  "rounds": [
+   {
+    "sched": "08:00",
+    "logged": true,
+    "temp_c": 15.2
+   },
+   {
+    "sched": "09:00",
+    "logged": true,
+    "temp_c": 15.6
+   },
+   {
+    "sched": "10:00",
+    "logged": true,
+    "temp_c": 15.9
+   },
+   {
+    "sched": "16:00",
+    "logged": true,
+    "entry_time": "16:58"
+   }
+  ],
+  "close_check": {
+   "D1": "17:20",
+   "ticket": null
+  }
+ },
+ "factors": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.65,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 0,
+  "cctv_cover": false,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": true,
+  "field_mismatch": "unit_kg_vs_g",
+  "behaviour_codes": 0,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "fault_unresolved",
+  "lock_check_timing": "logged_before_last_round",
+  "intake_ratio": 0.6,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 4,
+  "cctv_cover": true,
+  "temp_excursion": "sustained_outside_range",
+  "heater_maintenance_window": true,
+  "field_mismatch": "unit_kg_vs_g",
+  "behaviour_codes": 1,
+  "vet_case_open": true,
+  "missing_section": "movements_absent",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "sign_off",
+   "second": "recheck_round",
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "count_reconciles": "Opening 3 and closing 2 match one logged out-movement of a7 at 09:12, inside the shift.",
+  "secure_at_close": "The door check at 17:20 follows the last round at 16:58 and ends before shift end 17:30; there is no fault ticket.",
+  "next_step": "Three readings of 15.2-15.9 C sit below the 18 C minimum but fall inside the 06:00-10:00 maintenance window, so filing and a recheck are both defensible.",
+  "intake_shortfall": "Leftover 0.7 kg converts to 700 g, so intake is 1300 of 2000 g, which is 65%.",
+  "missed_rounds": "All four scheduled rounds are logged true."
+ },
+ "request": "rec-F432-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009539
+}

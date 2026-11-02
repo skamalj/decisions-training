@@ -1,0 +1,132 @@
+{
+ "id": "F403-0028",
+ "family": "F403",
+ "state": {
+  "pupil": {
+   "ref": "P7730",
+   "declared_allergens": [
+    "fish"
+   ],
+   "auto_injector": {
+    "prescribed": false,
+    "anaphylaxis_risk": false
+   },
+   "plan_start": "2025-04-07"
+  },
+  "medical_evidence": {
+   "doc_type": "clinician_letter",
+   "issued": "2024-12-02",
+   "expires": "2025-12-02",
+   "allergens": [
+    "fish"
+   ]
+  },
+  "menu_mapping": {
+   "mapped_on": "2025-02-24",
+   "dishes": [
+    {
+     "dish": "fish pie",
+     "contains": [
+      "fish"
+     ],
+     "recipe_version_date": "2025-01-15",
+     "substitute": "vegetable pie",
+     "spec_checked_on": "2025-02-20"
+    }
+   ]
+  },
+  "kitchen_controls": {
+   "segregated_equipment": true,
+   "cleaning_log_complete": true,
+   "staff_trained": 2,
+   "last_trained": "2024-03-08"
+  },
+  "history": {
+   "review_date": "2025-03-10",
+   "packed_lunch_until": null,
+   "incidents": [],
+   "messages": [
+    "Parent: please confirm all is set."
+   ]
+  }
+ },
+ "factors": {
+  "evidence_status": "current",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": true,
+  "kitchen_control_state": "training_overdue",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": 20,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "factors_sampled": {
+  "evidence_status": "parent_letter_only",
+  "allergen_count": 1,
+  "anaphylaxis_risk": false,
+  "unsubstituted_dishes": 0,
+  "allergen_list_mismatch": false,
+  "recipe_change_after_mapping": false,
+  "supplier_spec_confirmed": false,
+  "kitchen_control_state": "all_verified",
+  "control_exception_approved": false,
+  "served_allergen_incident": false,
+  "days_to_first_meal": -9,
+  "packed_lunch_interim": false,
+  "note_tone": "neutral"
+ },
+ "plan": {
+  "evidence_allergens_covered": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "approve_plan",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "first_gap_stage": {
+   "clarity": "leaning",
+   "target": "kitchen_gap",
+   "second": null,
+   "targets": []
+  },
+  "exposure_proximity": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "meal_urgency": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "evidence_allergens_covered": "The single evidence allergen, fish, is covered by the vegetable pie substitute, with a spec check after the recipe date.",
+  "next_step": "The clinician evidence is current and the only dish is substituted, so the plan can be released; no incident or missing item calls for anything else.",
+  "first_gap_stage": "Evidence and menu are sound, but last_trained 2024-03-08 is past the 12-month refresh at the 2025-03-10 review, so the kitchen is the first gap.",
+  "exposure_proximity": "The dish is substituted, which fits Blocked, but the overdue training leaves one control unverified, which fits Guarded; the two are balanced.",
+  "meal_urgency": "The first meal on 2025-04-07 is exactly 20 school days after the 2025-03-10 review, on the line between the 6-20 band and the over-20 band."
+ },
+ "request": "rec-F403-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013105
+}

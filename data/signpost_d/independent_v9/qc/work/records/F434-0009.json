@@ -1,0 +1,100 @@
+{
+ "id": "F434-0009",
+ "family": "F434",
+ "state": {
+  "post": {
+   "km_marker": 12,
+   "on_post_from": "10:00",
+   "off_post_at": "12:30:20",
+   "marshals_signed_in": 1
+  },
+  "incidents": [],
+  "control_record": {
+   "incident_log": [],
+   "medical_handovers": [
+    {
+     "bib": 9,
+     "km": 30,
+     "destination": "race_medical_tent"
+    }
+   ]
+  },
+  "sweep": {
+   "passed_at": "12:30"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "none",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "gap_during_race",
+  "relief_swap_logged": false,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 13.85,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "none",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "gap_during_race",
+  "relief_swap_logged": false,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 13.85,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": true
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "query_marshal",
+   "second": "file",
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "no_incident",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "coverage_held": "Only one marshal signed in and no relief entry, though off_post 12:30:20 is within seconds of sweep 12:30.",
+  "next_step": "No incident at post and records match, so file; the sign-in shortfall could justify querying the marshal.",
+  "incident_class": "Post incidents empty and control log empty; the handover is at km 30, another marker.",
+  "reversal_time": "No incident here; a staffing note is a short fix, so level 1 leaning over level 0.",
+  "consequence_severity": "The km 30 tent handover is a decoy; nothing at this post, though the staffing gap leaves level 1 versus 2 open."
+ },
+ "request": "rec-F434-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005011
+}

@@ -1,0 +1,118 @@
+{
+ "id": "F420-0043",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "AKE30418",
+   "contour_max_cm": 160,
+   "tare_kg": 100,
+   "planned_gross_kg": 1000,
+   "straps_required": 3
+  },
+  "manifest_lines": [
+   {
+    "awb": "220-35104",
+    "pcs": 10,
+    "weight_kg": 900
+   }
+  ],
+  "build_measured": {
+   "built_utc": "2024-06-05T09:00Z",
+   "scale_gross_kg": 1053,
+   "max_height_cm": 140,
+   "pcs_counted": {
+    "220-35104": 9
+   },
+   "straps_fitted": 3,
+   "net_fitted": true
+  },
+  "dg_notoc": null,
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "220-35140",
+     "pcs_this_flight": 9
+    }
+   ]
+  },
+  "checks_log": {
+   "scale_cal_due": "2024-12-01"
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": 5.3,
+  "piece_count_gap": 1,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "awb_digits_transposed",
+  "minutes_to_cutoff": 232,
+  "prior_rebuilds": 0
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": 7.87,
+  "piece_count_gap": 1,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "well_within",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": false,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 232,
+  "prior_rebuilds": 0
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "balanced",
+   "target": "release",
+   "second": "hold",
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "leaning",
+   "target": "paperwork_only",
+   "second": null,
+   "targets": []
+  },
+  "weight_deviation": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "pieces_reconciled": "Counted 9 of 10 pcs; the part shipment covers 9 pcs but its AWB 220-35140 is a transposed 220-35104, so the cover is doubtful.",
+  "disposition": "The transposed AWB is one outstanding document to confirm (hold); otherwise the pallet looks otherwise physically built and could release.",
+  "worst_discrepancy": "The visible disagreement is the transposed AWB in part_shipments; no DG, height and securing are fine.",
+  "weight_deviation": "Scale 1053 kg against planned 1000 kg is +5.3%, with a calibrated scale and no reweigh.",
+  "rework_extent": "Nothing else physical is wrong, with no strap or height issue, but the weight excess could be read as needing change."
+ },
+ "request": "rec-F420-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010665
+}

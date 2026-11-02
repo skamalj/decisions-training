@@ -1,0 +1,120 @@
+{
+ "id": "F433-0039",
+ "family": "F433",
+ "state": {
+  "horse": {
+   "id": "H418",
+   "earlier_gates": []
+  },
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "10:00"
+  },
+  "vet_card": {
+   "arrival_copied": "10:01",
+   "presented_at": "10:21",
+   "pulse_bpm": 66,
+   "cri": {
+    "first_bpm": 64,
+    "second_bpm": 65
+   },
+   "metabolic": {
+    "mm": "pale",
+    "crt_s": 4,
+    "skin_tent_s": 4
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 0
+    }
+   ],
+   "tack": {
+    "site": "girth",
+    "finding": "open wound"
+   },
+   "vet_signed_at": null
+  }
+ },
+ "factors": {
+  "pulse_status": "not_met",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "regular",
+  "gait_mitigation": true,
+  "metabolic_flags": 3,
+  "cri_rise": 1.1,
+  "missing_items": 2,
+  "out_of_sequence": false,
+  "tack_wound": "open_wound",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "none"
+ },
+ "factors_sampled": {
+  "pulse_status": "not_met",
+  "time_mismatch": "minor_under_2min",
+  "gait_grade": "regular",
+  "gait_mitigation": true,
+  "metabolic_flags": 3,
+  "cri_rise": 1.1,
+  "missing_items": 2,
+  "out_of_sequence": false,
+  "tack_wound": "open_wound",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "none",
+  "departed_before_clearance": false,
+  "note_tone": "none"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "eliminate_ftq",
+   "second": "clear_to_continue",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "balanced",
+   "target": "ftq_metabolic",
+   "second": "ftq_other",
+   "targets": []
+  },
+  "welfare_risk": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 51,
+ "deciding": {
+  "pulse_met": "Against arrival_copied 10:01 presentation at 10:21 is within 20 min, but against gate arrival 10:00 it is 21 min, and pulse 66 exceeds 64.",
+  "next_step": "Open girth wound and metabolic signs suggest failure, yet the unsigned card leaves room to continue.",
+  "outcome_code": "Pale mucous membranes, CRT 4 s and pulse 66 point to metabolic failure, but the open tack wound could be taken as the sole cause.",
+  "welfare_risk": "Several parameters are borderline: pulse 66, pale membranes and the wound; level 1 or 2 are both arguable.",
+  "record_completeness": "Vet signature is null and the arrival times differ slightly, so the missing item count and sequencing are open."
+ },
+ "request": "rec-F433-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005437
+}

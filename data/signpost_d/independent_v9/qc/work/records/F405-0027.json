@@ -1,0 +1,170 @@
+{
+ "id": "F405-0027",
+ "family": "F405",
+ "state": {
+  "clash_report": {
+   "id": "CR-5102",
+   "detected_on": "2025-10-15",
+   "term_start": "2025-10-06",
+   "room": "B.204",
+   "slot": "Wed 11:00"
+  },
+  "booking_a": {
+   "module": "HIS110",
+   "dept": "HIST",
+   "room": "B.204",
+   "day": "Wed",
+   "start": "09:00",
+   "end": "11:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 40,
+   "required_features": [
+    "hearing_loop"
+   ],
+   "lecturers": [
+    "Rao",
+    "Ito"
+   ],
+   "status": "confirmed"
+  },
+  "booking_b": {
+   "module": "HIS205",
+   "dept": "HIST",
+   "room": "B.204",
+   "day": "Wed",
+   "start": "11:00",
+   "end": "13:00",
+   "weeks": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "headcount": 35,
+   "lecturers": [
+    "Chen",
+    "Ward"
+   ],
+   "status": "pending_approval",
+   "approved_at": null,
+   "approver": null
+  },
+  "room": {
+   "code": "B.204",
+   "aliases": [],
+   "capacity": 45,
+   "features": [
+    "hearing_loop"
+   ],
+   "building": "Bell"
+  },
+  "alternatives": [
+   {
+    "code": "B.310",
+    "capacity": 40,
+    "features": [
+     "hearing_loop"
+    ],
+    "weeks_free": [
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "history": [
+   {
+    "type": "clash_report",
+    "on": "2025-06-02"
+   },
+   {
+    "type": "clash_report",
+    "on": "2025-07-14"
+   }
+  ]
+ },
+ "factors": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "pending_approval",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": -7,
+  "alt_room_fit": "full_fit",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.0,
+  "required_feature": "hearing_loop",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 2
+ },
+ "factors_sampled": {
+  "overlap_type": "adjacent_no_overlap",
+  "room_code_alias": false,
+  "wrong_room_variant": false,
+  "booking_b_status": "pending_approval",
+  "approval_out_of_order": false,
+  "pending_change_request": false,
+  "days_to_first_occurrence": -7,
+  "alt_room_fit": "capacity_short",
+  "alternatives_missing": false,
+  "headcount_ratio": 1.0,
+  "required_feature": "hearing_loop",
+  "owning_departments": "same_dept",
+  "prior_clash_count": 2
+ },
+ "plan": {
+  "genuine_clash": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "alt_room_fits": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "resolution": {
+   "clarity": "balanced",
+   "target": "dismiss",
+   "second": "reschedule",
+   "targets": []
+  },
+  "urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 110,
+ "deciding": {
+  "genuine_clash": "HIS110 ends at 11:00 and HIS205 starts at 11:00 in B.204 on the same weeks, so they are back to back. Both bookings are still flagged, which leaves a little doubt.",
+  "alt_room_fits": "B.310 has capacity 40 for headcount 40 and has hearing_loop, free in weeks 1-4. It fits with no spare capacity.",
+  "resolution": "Adjacent times point to dismiss. The scan flag, the unapproved HIS205 and the exact-capacity alternative keep reschedule defensible.",
+  "urgency": "The first shared Wednesday is 2025-10-08, a week before detection on 2025-10-15. The occurrence has already passed.",
+  "parties_needed": "The record lists four lecturers across two bookings, an approver still unassigned (null), and a hearing_loop requirement. That makes about five parties, but the count is not firm."
+ },
+ "request": "rec-F405-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01658
+}

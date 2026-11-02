@@ -1,0 +1,143 @@
+{
+ "id": "F434-0014",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 5,
+   "closure_end": "14:00",
+   "riders_started": 96
+  },
+  "post": {
+   "post_type": "junction",
+   "km_marker": 72,
+   "marshals_rostered": 3,
+   "marshals_signed_in": 3,
+   "on_post_from": "11:30",
+   "off_post_at": "13:35",
+   "relief": [
+    {
+     "marshal_ref": "M7",
+     "signed_in": "12:30",
+     "signed_out": "13:35"
+    }
+   ]
+  },
+  "incidents": [],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "12:00",
+     "ok": false
+    },
+    {
+     "time": "12:30",
+     "ok": false
+    },
+    {
+     "time": "13:00",
+     "ok": false
+    }
+   ],
+   "backup_phone": [
+    {
+     "time": "12:05",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [],
+   "medical_handovers": [
+    {
+     "bib": 58,
+     "km": 72,
+     "destination": "St Anne Hospital"
+    }
+   ],
+   "road_reopened_at": {
+    "68-76": "13:15"
+   }
+  },
+  "sweep": null
+ },
+ "factors": {
+  "reopen_before_sweep": true,
+  "incident_mix": "none",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": "none",
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": true,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "time_offset_minor",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "hospital",
+  "staffing_gap": "none",
+  "relief_swap_logged": true,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 34.7,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "clear",
+   "target": "no_incident",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (reopen_before_sweep = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 117,
+ "deciding": {
+  "coverage_held": "Roster full and relief covers to 13:35, but sweep is null so passage is unverified.",
+  "next_step": "A hospital handover at km 72 has no matching incident in either log and awaits confirmation from medical or control.",
+  "incident_class": "Incident lists are empty in both post and control records.",
+  "reversal_time": "Contested: no confirmed harm so fixable in a day, or days to resolve the unexplained handover.",
+  "consequence_severity": "Hospital handover at this km and road reopened 13:15 with no sweep record imply a serious outcome, but unreconciled."
+ },
+ "request": "rec-F434-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005621
+}

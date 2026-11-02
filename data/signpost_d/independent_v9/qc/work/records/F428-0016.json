@@ -1,0 +1,134 @@
+{
+ "id": "F428-0016",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "FL-07",
+   "gate_type": "flap",
+   "rated_closure_s": 10
+  },
+  "inspection": {
+   "asset_id": "FL-O7",
+   "insp_date": "2025-03-02",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-03-02",
+    "closure_s": 10.4,
+    "leakage_l_min": 3,
+    "leakage_limit_l_min": 10,
+    "result": "pass"
+   }
+  },
+  "defects": [
+   {
+    "code": "D1",
+    "component": "seal",
+    "grade": 3,
+    "status": "closed",
+    "first_seen": "2024-11-02"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W1",
+     "component": "seal",
+     "defect_code": "D1",
+     "grade_raised": 2,
+     "rated_closure_s": 10.5,
+     "status": "complete",
+     "completed": "2025-02-20",
+     "retest_insp_id": null
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "out_of_service",
+    "permit_expiry": "2025-03-01"
+   },
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2025-04-30"
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.04,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "none",
+  "mismatch_count": 3,
+  "mismatch_location": "asset_id, defect_grade_vs_work_order, rated_closure_s",
+  "test_status": "passed_current",
+  "repair_progress": "completed_untested",
+  "mitigation_present": false,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 59,
+  "borderline_case": true,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.51,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 0,
+  "mismatch_location": "defect_grade_vs_work_order",
+  "test_status": "not_performed",
+  "repair_progress": "completed_untested",
+  "mitigation_present": false,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 59,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "sign_off",
+   "second": "escalate_engineer",
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "closure_test_valid": "Test result pass, closure 10.4 s against rated 10 s (slightly over), leakage 3 under limit 10; repair completed with no retest linked.",
+  "next_step": "Record looks complete and passing, but the permit expiry 2025-03-01 is before insp_date while the gate is out of service, which could justify escalation.",
+  "defect_class": "Only defect D1 is closed; no open defect is listed.",
+  "section_discrepancies": "asset_id FL-07 vs FL-O7, grade 3 vs grade_raised 2, rated closure 10 vs 10.5 in the work order; the third is arguably minor.",
+  "flood_risk": "Permit expired before the inspection date with the gate out of service (no flood alert), against a closure only marginally late."
+ },
+ "request": "rec-F428-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010422
+}

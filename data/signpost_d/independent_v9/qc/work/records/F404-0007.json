@@ -1,0 +1,176 @@
+{
+ "id": "F404-0007",
+ "family": "F404",
+ "state": {
+  "session": {
+   "room": "C1",
+   "date": "2025-04-02",
+   "age_band": "two_year",
+   "ratio_rule": "1:5",
+   "registered_places": 20
+  },
+  "children": {
+   "booked": 13,
+   "slots": [
+    [
+     "08:00",
+     16
+    ],
+    [
+     "08:15",
+     16
+    ],
+    [
+     "08:30",
+     16
+    ],
+    [
+     "08:45",
+     16
+    ],
+    [
+     "09:00",
+     13
+    ]
+   ]
+  },
+  "rota": [
+   {
+    "id": "S-10",
+    "q": 3,
+    "counts": true,
+    "start": "08:00"
+   },
+   {
+    "id": "S-11",
+    "q": 3,
+    "counts": true,
+    "start": "08:00"
+   },
+   {
+    "id": "S-12",
+    "q": 2,
+    "counts": true,
+    "start": "08:00"
+   },
+   {
+    "id": "S-13",
+    "q": 3,
+    "counts": true,
+    "start": "08:00"
+   }
+  ],
+  "staff_signin": [
+   {
+    "id": "S-10",
+    "in": "08:00",
+    "check": "ok",
+    "q": 3
+   },
+   {
+    "id": "S-11",
+    "in": "08:00",
+    "check": "ok",
+    "q": 3
+   },
+   {
+    "id": "S-13",
+    "in": "08:01",
+    "check": "ok",
+    "q": 3
+   },
+   {
+    "id": "S-12",
+    "in": "08:59",
+    "check": "ok",
+    "q": 2
+   }
+  ],
+  "cover_log": [
+   {
+    "id": "F-03",
+    "from": "08:00",
+    "to": "09:00",
+    "room": "C1",
+    "by": "M.Reid"
+   }
+  ],
+  "history": {
+   "prior_breaches_90d": 1
+  }
+ },
+ "factors": {
+  "age_band": "two_year",
+  "children_peak": 16,
+  "staff_signin_variance": "late_arrival",
+  "attendance_overrun": 3,
+  "shortfall_minutes": 59,
+  "floater_cover_logged": true,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 1
+ },
+ "factors_sampled": {
+  "age_band": "two_year",
+  "children_peak": 17,
+  "staff_signin_variance": "none",
+  "attendance_overrun": 3,
+  "shortfall_minutes": 59,
+  "floater_cover_logged": false,
+  "cover_log_unsigned": false,
+  "ineligible_counted": false,
+  "qualified_teacher_mismatch": "none",
+  "zero_eligible_adult_slot": false,
+  "boundary_case": true,
+  "prior_breaches_90d": 1
+ },
+ "plan": {
+  "below_ratio": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": []
+  },
+  "primary_cause": {
+   "clarity": "leaning",
+   "target": "staff_shortfall",
+   "second": null,
+   "targets": []
+  },
+  "shortfall_duration": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 54,
+ "deciding": {
+  "below_ratio": "16 children need 4 staff at 1:5. Only 3 are eligible until S-12 arrives at 08:59, but the countersigned floater F-03 covers 08:00 to 09:00 in this room, so every slot meets ratio.",
+  "disposition": "Ratio is met only because of floater F-03, who has no staff_signin entry. The auditor would want that cover confirmed before filing.",
+  "primary_cause": "S-12 was late against the rota, so eligible staff were below rota. Children were 3 over booking, but the rota had 4 staff and S-12's absence is the cause of the gap.",
+  "shortfall_duration": "The staff gap window is 08:00 to 08:59, 59 minutes. That is one minute under the 60-minute line, so a reviewer could choose level 2 or level 3.",
+  "breach_severity": "16 children against 3 eligible staff (15 children covered) leaves one child beyond cover at worst, before the floater is counted."
+ },
+ "request": "rec-F404-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013367
+}

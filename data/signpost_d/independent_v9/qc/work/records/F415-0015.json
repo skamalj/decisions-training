@@ -1,0 +1,134 @@
+{
+ "id": "F415-0015",
+ "family": "F415",
+ "state": {
+  "site": {
+   "open": "08:00",
+   "closures": []
+  },
+  "shift": {
+   "start": "2025-07-14T08:00",
+   "sched_slots": [
+    "08:30",
+    "11:00",
+    "13:00",
+    "15:00",
+    "17:00"
+   ]
+  },
+  "visits": [
+   {
+    "slot": "08:30",
+    "end": "2025-07-14T08:50"
+   },
+   {
+    "slot": "11:00",
+    "start": "2025-07-14T08:40",
+    "end": "2025-07-14T12:25",
+    "op_note": "block shut 11:00-12:00 for police incident"
+   },
+   {
+    "slot": "13:00",
+    "end": "2025-07-14T13:20"
+   },
+   {
+    "slot": "15:00",
+    "end": "2025-07-14T15:20"
+   },
+   {
+    "slot": "17:00",
+    "end": "2025-07-14T17:25",
+    "photo_ref": "P9"
+   }
+  ],
+  "faults": [
+   {
+    "type": "odour",
+    "reported_at": "2025-07-14T09:30",
+    "remedied_at": null,
+    "source": "public_app"
+   }
+  ],
+  "sign_off": {
+   "signer_role": "supervisor",
+   "signed_at": "2025-07-14T15:30"
+  },
+  "history": {
+   "prior_defaults_90d": 0
+  }
+ },
+ "factors": {
+  "scheduled_slots": 5,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "signed_before_last_visit",
+  "fault_type": "odour",
+  "fault_open_minutes": 410.0,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "explains_gap_unbacked",
+  "prior_defaults_90d": 0
+ },
+ "factors_sampled": {
+  "scheduled_slots": 5,
+  "missed_slots": "0",
+  "closure_covers_gap": false,
+  "closure_approved": true,
+  "sign_off_state": "valid",
+  "fault_type": "none",
+  "fault_open_minutes": 7.68,
+  "block_closed_during_fault": false,
+  "checklist_completion": "full",
+  "photo_evidence": true,
+  "timestamp_out_of_order": true,
+  "note_content": "explains_gap_unbacked",
+  "prior_defaults_90d": 0
+ },
+ "plan": {
+  "missed_clean": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "sign_off_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept",
+   "second": null,
+   "targets": []
+  },
+  "staff_effort": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "fault_exposure": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 87,
+ "deciding": {
+  "missed_clean": "The 11:00 visit has a 08:40 start (out of order) and a 12:25 end, and the closure note has no closures entry; a visit is recorded but its validity is doubtful.",
+  "sign_off_valid": "Signed 15:30, but the final visit (17:00 slot) ended 17:25, so the sign-off predates it.",
+  "next_step": "Visits are recorded for all slots; the lapses are recording issues, though the open fault leaves some doubt.",
+  "staff_effort": "An unremedied fault, an unbacked closure claim and a bad sign-off together suggest a long investigation.",
+  "fault_exposure": "Odour reported 09:30 with remedied_at null, with no closure entry, so it is open over 240 minutes to the public."
+ },
+ "request": "rec-F415-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011244
+}

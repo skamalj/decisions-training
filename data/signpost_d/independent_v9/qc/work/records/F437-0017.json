@@ -1,0 +1,136 @@
+{
+ "id": "F437-0017",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v3",
+   "glossary_version": "g2",
+   "due_at": "2025-05-12T09:00",
+   "terms": {
+    "variant_accepted": true
+   }
+  },
+  "source": {
+   "version": "v3",
+   "segment_count": 310,
+   "word_count": 5200
+  },
+  "deliverable": {
+   "built_from_version": "v2",
+   "segments_translated": 310,
+   "word_count": 5185,
+   "glossary_version_used": "g2",
+   "delivered_at": "2025-05-08T13:00"
+  },
+  "qa_report": {
+   "flags": 26,
+   "false_positive_marked": 12,
+   "number_mismatches": [
+    "1,200/12,000"
+   ],
+   "unresolved": {
+    "critical": 1
+   }
+  },
+  "review": {
+   "assigned_at": "2025-05-07T08:00",
+   "completed_at": "2025-05-08T11:30",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "critical",
+     "status": "open",
+     "type": "number"
+    },
+    {
+     "sev": "major",
+     "status": "closed"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "r1",
+    "r2",
+    "r3"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "critical",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.46,
+  "number_mismatch_count": 1,
+  "deadline_slack_hours": 92,
+  "client_waiver": true,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "wrong_source_version",
+  "locale_mismatch": false,
+  "glossary_version_state": "match",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "none",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.46,
+  "number_mismatch_count": 1,
+  "deadline_slack_hours": 92,
+  "client_waiver": true,
+  "prior_revision_rounds": 3,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "reviewed_in_time": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "return_for_fix",
+   "second": "escalate_am",
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 91,
+ "deciding": {
+  "scope_matches": "Job and source are v3 but the deliverable was built from v2, while segment counts match and variant_accepted is true. The waiver may cover the version gap, so this is balanced.",
+  "reviewed_in_time": "Review completed_at 11:30 and signed_off true precede delivered_at 13:00.",
+  "next_step": "There is an open critical number error and a v2 build, which suggests a fix. Three prior rounds and the variant waiver could instead justify escalating to the account manager.",
+  "open_severity": "qa_report unresolved shows critical 1 and the review has a critical error with status open. The major error is closed.",
+  "parties_needed": "Translator, reviewer and PM are needed for the fix and rebuild. Whether the account manager and client are also needed for the waiver and version question is arguable, so two to four people or teams could be needed."
+ },
+ "request": "rec-F437-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008059
+}

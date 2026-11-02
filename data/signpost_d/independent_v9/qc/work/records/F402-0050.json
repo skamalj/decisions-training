@@ -1,0 +1,129 @@
+{
+ "id": "F402-0050",
+ "family": "F402",
+ "state": {
+  "referral": {
+   "id": "R-5528",
+   "received": "2025-02-17",
+   "priority": "soon",
+   "site": {
+    "part": "hip",
+    "side": "R"
+   },
+   "onset": "2023-12-18"
+  },
+  "patient": {
+   "mobility_aid": "frame",
+   "consent_to_refer": true
+  },
+  "clinical": {
+   "dx": "R29.6",
+   "red_flags": [
+    "night_pain_weight_loss"
+   ],
+   "function_index": 37.93,
+   "surgery_date": "2024-12-20",
+   "weight_bearing": "partial"
+  },
+  "gp_record": {
+   "first_presented": "2023-12-18",
+   "falls_3m": 2,
+   "weight_change_kg": -6,
+   "reviews": []
+  },
+  "attachments": [
+   {
+    "type": "MRI",
+    "date": "2025-02-01",
+    "side": "L",
+    "result": "pending"
+   }
+  ],
+  "history": {
+   "episodes": [
+    {},
+    {},
+    {}
+   ],
+   "self_mgmt_trial": false
+  }
+ },
+ "factors": {
+  "red_flag_type": "night_pain_weight_loss",
+  "red_flag_mitigated": false,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "major",
+  "missing_item": "none",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 61,
+  "function_index": 37.93,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 2,
+  "post_op_days": 59,
+  "self_mgmt_tried": false
+ },
+ "factors_sampled": {
+  "red_flag_type": "none",
+  "red_flag_mitigated": false,
+  "mismatch_field": "laterality",
+  "mismatch_magnitude": "major",
+  "missing_item": "consent_to_refer",
+  "condition_group": "frailty_falls",
+  "symptom_duration_weeks": 61,
+  "function_index": 37.93,
+  "prior_episodes_12m": 3,
+  "referrer_priority": "soon",
+  "falls_last_3m": 2,
+  "post_op_days": 59,
+  "self_mgmt_tried": false
+ },
+ "plan": {
+  "red_flag_unresolved": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "escalate_lead",
+   "second": "book_amended",
+   "targets": [
+    "T1"
+   ]
+  },
+  "pathway": {
+   "clarity": "leaning",
+   "target": "redirect_out",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "clinical_urgency": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 89,
+ "deciding": {
+  "red_flag_unresolved": "Flag with weight_change -6 kg; the only MRI is pending and is on the left versus the right-sided referral, with no urgent review; some doubt remains.",
+  "next_step": "Laterality mismatch R versus L argues for amended booking, while the unexplained flag and weight loss argue for escalation to a lead.",
+  "pathway": "Unexplained night pain with weight loss and a pending scan point to medical work-up, so redirect_out, though frailty and a frame could suit specialist rehab.",
+  "reversal_time": "Delay in working up a possible sinister cause could be irreversible, or recoverable within months; split between level 3 and level 2.",
+  "clinical_urgency": "Referrer priority is only soon, yet an unexplained flag, -6 kg and two falls could need review within 48 hours or two weeks."
+ },
+ "request": "rec-F402-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00817
+}

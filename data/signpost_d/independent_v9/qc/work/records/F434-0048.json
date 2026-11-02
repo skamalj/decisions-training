@@ -1,0 +1,175 @@
+{
+ "id": "F434-0048",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 5,
+   "date": "2025-07-03",
+   "closure_start": "11:00",
+   "closure_end": "15:00",
+   "riders_started": 118
+  },
+  "post": {
+   "km_marker": 56,
+   "post_type": "junction",
+   "marshals_rostered": 2,
+   "marshals_signed_in": 2,
+   "on_post_from": "10:15",
+   "off_post_at": "14:50",
+   "relief": [
+    {
+     "marshal_ref": "M3",
+     "signed_in": "10:15",
+     "signed_out": "12:20"
+    },
+    {
+     "marshal_ref": "M5",
+     "signed_in": "13:10",
+     "signed_out": "14:50"
+    }
+   ]
+  },
+  "incidents": [
+   {
+    "inc_ref": "P1",
+    "time": "11:48",
+    "km": 56,
+    "type": "mechanical",
+    "bibs": [
+     88
+    ],
+    "medic_called": true,
+    "medic_cancelled": true,
+    "rider_status": "continued"
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "11:15",
+     "ok": false
+    },
+    {
+     "time": "12:15",
+     "ok": false
+    },
+    {
+     "time": "13:15",
+     "ok": false
+    }
+   ],
+   "backup_phone": [
+    {
+     "time": "12:20",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C2",
+     "time": "12:30",
+     "km": 31,
+     "type": "mechanical",
+     "bibs": [
+      140
+     ]
+    }
+   ],
+   "medical_handovers": [
+    {
+     "ref": "H3",
+     "bib": 201,
+     "km": 72,
+     "destination": "St Anne Hospital"
+    }
+   ],
+   "road_reopened_at": {
+    "50-60": "13:40"
+   }
+  },
+  "sweep": {
+   "passed_at": "14:35",
+   "last_rider_bib": 97,
+   "post_cleared_at": "14:50"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": true,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "extra_post_incident",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "gap_during_race",
+  "relief_swap_logged": false,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 9.49,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": true,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "extra_post_incident",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "gap_during_race",
+  "relief_swap_logged": false,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 9.49,
+  "medical_handover_confirmed": true,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "hold_confirm",
+   "second": null,
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "leaning",
+   "target": "mechanical_only",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (reopen_before_sweep = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 165,
+ "deciding": {
+  "coverage_held": "M3 signed out at 12:20 and M5 signed in at 13:10, leaving the post unmanned for 50 minutes while riders were still passing.",
+  "next_step": "The post incident P1 (bib 88, medic called then cancelled) is not in the control log, so it awaits confirmation. The reopening before the sweep is a serious competing signal.",
+  "incident_class": "The only incident at km 56 is a mechanical stop with the rider continuing. Its absence from control keeps some doubt.",
+  "reversal_time": "The road reopened at 13:40, before the sweep at 14:35, with last bib 97 yet to pass. A possible traffic contact has an uncertain recovery time, so level 1 or 2 are both plausible.",
+  "consequence_severity": "Road reopened at 13:40 for km 50-60, before sweep passed_at 14:35, with the last rider bib 97 after that. This puts riders on a reopened road."
+ },
+ "request": "rec-F434-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012065
+}

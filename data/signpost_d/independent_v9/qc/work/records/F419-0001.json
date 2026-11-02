@@ -1,0 +1,154 @@
+{
+ "id": "F419-0001",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "09/27",
+   "date": "2024-05-14",
+   "test_speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": null
+  },
+  "device": {
+   "type": "CFME",
+   "serial": "C-4471",
+   "cal_cert_date": "2024-02-01",
+   "cal_expiry": "2025-02-01",
+   "tyre_pressure_kpa": null,
+   "water_depth_mm": null
+  },
+  "runs": [
+   {
+    "dir": "09",
+    "thirds": [
+     0.74,
+     0.76,
+     0.75
+    ]
+   },
+   {
+    "dir": "27",
+    "thirds": [
+     0.73,
+     0.75,
+     0.77
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.38,
+    0.36,
+    0.37
+   ],
+   "mtd_threshold_mm": 0.5,
+   "contaminant": "dry"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-07-30",
+   "works_orders": [],
+   "prior_surveys": [
+    {
+     "date": "2023-11-10",
+     "lowest_third": 0.8
+    },
+    {
+     "date": "2024-02-12",
+     "lowest_third": 0.77
+    }
+   ],
+   "cross_checks": []
+  },
+  "review": {
+   "analyst": "A. Roe",
+   "signed_at": null
+  }
+ },
+ "factors": {
+  "min_third_band": "above_design",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 289,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 4,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "low",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "factors_sampled": {
+  "min_third_band": "above_design",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 289,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 4,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "low",
+  "cross_check_result": "none",
+  "prior_survey_trend": "declining"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file_routine",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "deficit_driver": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 116,
+ "deciding": {
+  "genuine_deficit": "Lowest third 0.73 is far above 0.52 planning, but a declining prior trend (0.80, 0.77, 0.73) and low texture (0.36-0.38 vs 0.5) keep a deficit plausible.",
+  "next_step": "All thirds are above design 0.72 and calibration is valid, so routine filing fits; the declining trend gives some doubt.",
+  "deficit_driver": "No third falls below planning level; low texture and the trend are the only cautions.",
+  "friction_severity": "Lowest third 0.73 is above design 0.72 by only 0.01, so level 0 with slight doubt.",
+  "evidence_completeness": "Tyre pressure, water depth, weather and signed_at are all null: four missing elements."
+ },
+ "request": "rec-F419-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011286
+}

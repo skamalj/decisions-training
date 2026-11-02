@@ -1,0 +1,120 @@
+{
+ "id": "F426-0025",
+ "family": "F426",
+ "state": {
+  "block": {
+   "crop": "cherry"
+  },
+  "applications": [
+   {
+    "date": "2024-05-02",
+    "product_code": "MUX9",
+    "qty_applied": 2.7,
+    "qty_unit": "kg",
+    "area_treated_ha": 2.5
+   },
+   {
+    "date": "2024-05-20",
+    "product_code": "MUX9",
+    "qty_applied": 2.25,
+    "qty_unit": "kg",
+    "area_treated_ha": 2.5
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "MUX9",
+    "max_rate_per_ha": 1.0,
+    "rate_unit": "kg",
+    "phi_days": 21,
+    "minor_use_auth_ref": "MU-2231",
+    "approved_crops": [
+     "cherry"
+    ]
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-07-01",
+   "residue_test": {
+    "sampled": false
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "up_to_10",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 2,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "up_to_10",
+  "partial_block_spray": false,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "product_ref_entry_missing",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 4,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_and_test",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "leaning",
+   "target": "no_finding",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 37,
+ "deciding": {
+  "phi_cleared": "MUX9 was last applied on 2024-05-20 and the pick is 2024-07-01, 42 days later, against phi_days 21. The minor-use authorisation might carry a different interval, which leaves some doubt.",
+  "next_step": "harvest.residue_test.sampled is false, and the first MUX9 application computes above the listed maximum. A minor-use authorisation reference exists but its rate is not shown. Residue sampling before release is the clear step.",
+  "finding_class": "The first application is 2.7 kg over 2.5 ha = 1.08 kg/ha against a listed 1.0 maximum, but minor_use_auth_ref MU-2231 may authorise a higher rate. Intervals and crop are fine, so no finding is leaning.",
+  "reversal_time": "A hold and sampling before release takes a day to a week or so. Whether the lab turnaround stays inside one day is open, so levels 0 and 1 both fit.",
+  "rate_overrun": "The 1.08 kg/ha first application is 8% over the listed 1.0 maximum. The minor_use_auth_ref could mean a higher authorised rate, so level 1 is slightly favoured over level 0."
+ },
+ "request": "rec-F426-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013782
+}

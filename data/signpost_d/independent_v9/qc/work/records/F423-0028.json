@@ -1,0 +1,131 @@
+{
+ "id": "F423-0028",
+ "family": "F423",
+ "state": {
+  "job": {
+   "id": "J-3908",
+   "run_qty": 5700,
+   "overs_pct": 2.7,
+   "stock_spec": "GL115",
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "ok_sheet_no": 5,
+   "signed_at": "2025-05-20T10:40",
+   "concession": {
+    "accepted_max_de": 4.0
+   }
+  },
+  "colour_readings": {
+   "calibrated_on": "2025-04-21",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 2.6
+    },
+    {
+     "ink": "M",
+     "delta_e": 3.7
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.18,
+     "in_image": true
+    }
+   ]
+  },
+  "run_log": {
+   "stock_loaded": "GL115",
+   "first_production_at": "2025-05-20T09:35",
+   "sheets_production": 573,
+   "stoppages": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
+ },
+ "factors": {
+  "colour_deviation": "marginal",
+  "concession_on_file": true,
+  "readings_completeness": "complete",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 573,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.7,
+  "register_offset_mm": 0.18,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 29,
+  "customer_tier": "standard",
+  "prior_stoppages": 4
+ },
+ "factors_sampled": {
+  "colour_deviation": "marginal",
+  "concession_on_file": true,
+  "readings_completeness": "some_patches_null",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 573,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 2.7,
+  "register_offset_mm": 0.18,
+  "offset_in_trim_only": false,
+  "spectro_calibration_age_days": 29,
+  "customer_tier": "standard",
+  "prior_stoppages": 4
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "adjust_and_recheck",
+   "second": "escalate_manager",
+   "targets": [
+    "T1"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 79,
+ "deciding": {
+  "colour_in_tolerance": "M delta_e 3.7 is over spec 3.0 but under the concession accepted_max_de 4.0.",
+  "run_before_signoff": "first_production_at 09:35 precedes signed_at 10:40 by over an hour, and 573 sheets were logged.",
+  "next_step": "In-image register 0.18 mm exceeds 0.15, so correcting it points to adjust, but 573 suspect sheets against 154 overs allowance could call for a manager.",
+  "staff_effort": "A re-pull on press is quick, but the suspect sheets might need sorting.",
+  "scrap_exposure": "573 suspect sheets (register fault) are 10.05% of run_qty 5700, right at the 10% boundary and well over the 154 overs."
+ },
+ "request": "rec-F423-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006663
+}

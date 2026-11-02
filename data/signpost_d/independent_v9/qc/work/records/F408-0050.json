@@ -1,0 +1,142 @@
+{
+ "id": "F408-0050",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 530902,
+   "stream": "recycling",
+   "claimed": "2024-04-09",
+   "logged_at": "2024-04-11T09:40",
+   "photo": true
+  },
+  "property": {
+   "uprn": 530902,
+   "assisted": false
+  },
+  "schedule": {
+   "streams_due": [
+    "recycling"
+   ],
+   "date": "2024-04-09",
+   "week": "B"
+  },
+  "round_log": {
+   "completed_at": "2024-04-09T16:00",
+   "disruption": "road_closure",
+   "catch_up": "2024-04-12",
+   "stops": [
+    {
+     "uprn": 530902,
+     "exception": null,
+     "photo_ref": null,
+     "gps_stop": false
+    }
+   ],
+   "sweep_at": null
+  },
+  "history": [
+   {
+    "uprn": 530902,
+    "on": "2024-03-22",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 530902,
+    "on": "2024-01-18",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 530902,
+    "on": "2024-04-02",
+    "outcome": "pending"
+   },
+   {
+    "uprn": 530902,
+    "on": "2024-02-12",
+    "outcome": "rejected"
+   },
+   {
+    "uprn": 530902,
+    "on": "2023-10-05",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "road_closure",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 3,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "road_closure",
+  "already_collected": true,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 3,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "request_evidence",
+   "second": "return_conditional",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 115,
+ "deciding": {
+  "crew_missed": "Road closure with catch_up 2024-04-12 still in the future and no sweep yet, so the crew is probably not at fault, though gps_stop is false and there is no exception.",
+  "report_matches": "Recycling and 2024-04-09 match streams_due and the scheduled date, and the report was logged after round completion.",
+  "next_step": "The resident photo is on file but the crew photo_ref is null; asking for evidence and a conditional return both fit.",
+  "return_urgency": "The catch-up is set for 2024-04-12 and nothing in the record is urgent, so the next round fits.",
+  "repeat_failures": "Upheld on 2024-03-22 and on 2024-01-18, exactly 84 days back, with a pending 2024-04-02 entry; 1 versus 2 is contested."
+ },
+ "request": "rec-F408-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010405
+}

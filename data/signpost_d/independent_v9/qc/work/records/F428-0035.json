@@ -1,0 +1,138 @@
+{
+ "id": "F428-0035",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "FL-0620",
+   "gate_type": "flap",
+   "rated_closure_s": 60,
+   "seal_type": "music_note",
+   "clear_width": 1.2,
+   "clear_width_unit": "m"
+  },
+  "inspection": {
+   "asset_id": "FL-0620",
+   "insp_date": "2024-08-14",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2024-08-14",
+    "closure_s": 54,
+    "leakage_l_min": 10.2,
+    "leakage_limit_l_min": 10,
+    "result": "fail"
+   }
+  },
+  "defects": [
+   {
+    "code": "H3",
+    "component": "hinge",
+    "grade": 1,
+    "status": "open",
+    "first_seen": "2024-06-03"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "WO-402",
+     "component": "hinge",
+     "defect_code": "H3",
+     "grade_raised": 1,
+     "status": "scheduled",
+     "raised": "2024-06-05",
+     "completed": null,
+     "retest_insp_id": null,
+     "rated_closure_s": 60
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2024-08-29",
+    "peak_level_mAOD": 2.6,
+    "sill_level_mAOD": 2.1
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "flap",
+  "closure_time_ratio": 0.9,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "failed",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 15,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "flap",
+  "closure_time_ratio": 0.9,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "none",
+  "mismatch_count": 2,
+  "mismatch_location": "seal_type",
+  "test_status": "failed",
+  "repair_progress": "not_started",
+  "mitigation_present": true,
+  "mitigation_kind": "scheduled_works_order",
+  "days_to_forecast_peak": 15,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "raise_repair",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "contested",
+   "target": "drive_actuation",
+   "second": "no_open_defect",
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 72,
+ "deciding": {
+  "closure_test_valid": "Logged as fail with leakage 10.2 against limit 10, a marginal exceedance, while closure_s 54 is within the rated 60.",
+  "next_step": "The test failed on leakage, the forecast peak is 15 days away, and the hinge defect repair is not started; a repair is needed with interim restrictions.",
+  "defect_class": "Only an open grade 1 hinge defect is listed. It is a drive component, but grade 1 is at the no-open-defect threshold, so either class is defensible.",
+  "section_discrepancies": "Asset ids, rated closure of 60, defect grade of 1 and WO grade_raised of 1 all agree.",
+  "flood_risk": "Closes in 54 s within the 60 s rating and has only a grade 1 defect. The marginal leakage fail and the peak 15 days away could argue for moderate."
+ },
+ "request": "rec-F428-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011581
+}

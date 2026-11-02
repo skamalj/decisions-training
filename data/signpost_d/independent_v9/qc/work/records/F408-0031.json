@@ -1,0 +1,141 @@
+{
+ "id": "F408-0031",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "MB-1041",
+   "uprn": 100231,
+   "stream": "refuse",
+   "claimed": "2025-03-11",
+   "logged_at": "2025-03-12T08:30",
+   "photo": false
+  },
+  "property": {
+   "uprn": 100231,
+   "assisted": false
+  },
+  "schedule": {
+   "round": "R12",
+   "week": "A",
+   "streams_due": [
+    "refuse"
+   ],
+   "date": "2025-03-11"
+  },
+  "round_log": {
+   "status": "complete",
+   "completed_at": "2025-03-11T16:00",
+   "disruption": "vehicle_breakdown",
+   "catch_up": "2025-03-11",
+   "stops": [],
+   "sweep_at": "2025-03-12T11:05"
+  },
+  "history": [
+   {
+    "uprn": 100231,
+    "logged": "2025-01-20",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100231,
+    "logged": "2025-02-14",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100231,
+    "logged": "2024-12-19",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 100231,
+    "logged": "2025-03-01",
+    "outcome": "pending"
+   },
+   {
+    "uprn": 100231,
+    "logged": "2025-02-02",
+    "outcome": "rejected"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": true,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 3,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 2,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "report_matches": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 84,
+ "deciding": {
+  "crew_missed": "Round marked complete but stops is empty: no stop for this UPRN and no exception; the breakdown catch_up date had already passed.",
+  "report_matches": "Stream and claimed date match the schedule and the report was logged after round completion within 48h; the breakdown adds some doubt.",
+  "next_step": "sweep_at (2025-03-12T11:05) is later than logged_at (08:30), so the bin was emptied and the case can be closed.",
+  "return_urgency": "Sweep collection suggests level 0, but the earlier breakdown and missed stop leave some arguing for a next-round return (level 1).",
+  "repeat_failures": "Three upheld entries for this UPRN, one dated 2024-12-19 close to the 84-day edge, plus pending and rejected entries, so 3 vs 2 is plausible."
+ },
+ "request": "rec-F408-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012077
+}

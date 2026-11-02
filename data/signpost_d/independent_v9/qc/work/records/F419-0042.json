@@ -1,0 +1,171 @@
+{
+ "id": "F419-0042",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "16/34",
+   "date": "2024-08-20",
+   "speed_kmh": 65,
+   "thr": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": {
+    "precip_mm": 0,
+    "wind_kt": 6
+   }
+  },
+  "device": {
+   "cal_cert_date": "2024-08-21",
+   "cal_expiry": "2025-08-21",
+   "tyre_kpa": 190,
+   "tyre_spec_kpa": [
+    170,
+    210
+   ],
+   "water_mm": 1.0
+  },
+  "runs": [
+   {
+    "dir": "16",
+    "mean_speed_kmh": 65,
+    "thirds": [
+     0.74,
+     0.75,
+     0.73
+    ],
+    "segments_100m": [
+     0.74,
+     0.75,
+     0.4,
+     0.76
+    ]
+   },
+   {
+    "dir": "34",
+    "mean_speed_kmh": 64,
+    "thirds": [
+     0.72,
+     0.76,
+     0.75
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.85,
+    0.88,
+    0.84
+   ],
+   "mtd_thr_mm": 0.6,
+   "contaminant": "dry"
+  },
+  "maintenance": {
+   "last_rubber_removal": "2024-06-12",
+   "works_orders": [
+    {
+     "type": "taxiway_resurface",
+     "start_date": "2024-09-02"
+    }
+   ],
+   "cross_checks": [
+    {
+     "serial": "C3",
+     "date": "2024-08-20",
+     "thirds": [
+      0.73,
+      0.76,
+      0.74
+     ]
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2024-05-10",
+     "lowest_third": 0.73
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-08-21T09:00Z",
+   "role": "analyst"
+  }
+ },
+ "factors": {
+  "min_third_band": "above_design",
+  "near_boundary": true,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 69,
+  "removal_scheduled": false,
+  "calibration_status": "post_dated (cert date one day after survey)",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "above_design",
+  "near_boundary": true,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 69,
+  "removal_scheduled": false,
+  "calibration_status": "post_dated",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "agrees",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "hold_retest",
+   "second": "restrict_ops",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "leaning",
+   "target": "none_found",
+   "second": null,
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 84,
+ "deciding": {
+  "genuine_deficit": "The 0.40 segment in run 16 is below the 0.42 minimum. The cross-check agrees, speeds and tyre pressure are in spec and the trend is stable, so the deficit is likely real. Doubt remains from the calibration certificate date.",
+  "next_step": "cal_cert_date 2024-08-21 is after the survey date, which puts validity in doubt and favours hold_retest. The 0.40 segment below minimum keeps restrict_ops plausible.",
+  "deficit_driver": "The lowest third is 0.72, at design level, and texture, cross-check and test settings are all fine. Only one isolated segment is low, so none_found leads.",
+  "friction_severity": "The segment value 0.40 is below the 0.42 minimum, so level 3 leads. The doubtful calibration date leaves slight room for doubt.",
+  "evidence_completeness": "All fields are present, but the calibration cert is dated one day after the survey, which may be a typo and counts as one misdated element. That balances level 3 against level 4."
+ },
+ "request": "rec-F419-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015057
+}

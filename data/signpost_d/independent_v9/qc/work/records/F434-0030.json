@@ -1,0 +1,155 @@
+{
+ "id": "F434-0030",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 6,
+   "riders_started": 110
+  },
+  "post": {
+   "km_marker": 27,
+   "post_type": "feed_zone",
+   "on_post_from": "10:05",
+   "off_post_at": "13:00",
+   "relief": [
+    {
+     "marshal_ref": "M6",
+     "signed_in": "10:00",
+     "signed_out": "10:20"
+    }
+   ]
+  },
+  "incidents": [
+   {
+    "inc_ref": "P1",
+    "time": "11:42",
+    "km": 27,
+    "type": "fall",
+    "bibs": [
+     73
+    ],
+    "medic_called": true,
+    "medic_cancelled": true,
+    "escort_present": true
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:30",
+     "ok": true
+    },
+    {
+     "time": "11:15",
+     "ok": false
+    },
+    {
+     "time": "12:00",
+     "ok": false
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C4",
+     "time": "11:42",
+     "km": 27,
+     "type": "fall",
+     "bibs": [
+      73
+     ]
+    }
+   ],
+   "medical_handovers": [
+    {
+     "ref": "M5",
+     "bib": 73,
+     "km": 27,
+     "destination": "Northgate Hospital"
+    }
+   ],
+   "abandonments": [
+    73
+   ]
+  },
+  "sweep": {
+   "passed_at": "12:45",
+   "last_rider_bib": 110
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "hospital",
+  "staffing_gap": "late_before_first_rider",
+  "relief_swap_logged": true,
+  "radio_check_failures": 2,
+  "medic_arrival_minutes": 29.82,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "medic_attended",
+  "staffing_gap": "late_before_first_rider",
+  "relief_swap_logged": true,
+  "radio_check_failures": 2,
+  "medic_arrival_minutes": 29.82,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "file",
+   "second": null,
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "balanced",
+   "target": "rider_fall",
+   "second": "no_incident",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "coverage_held": "Relief 10:00-10:20 covers start; on_post_from 10:05 and off_post_at 13:00 after sweep 12:45.",
+  "next_step": "Post and control agree on the fall; file is likely but the hospital handover is unconfirmed in the post report.",
+  "incident_class": "Fall appears in both logs, but escort_present true with the fall at 11:42 leaves the class contested.",
+  "reversal_time": "Hospital handover and abandonment of bib 73; recovery likely over days to weeks.",
+  "consequence_severity": "Control handover to Northgate Hospital points to level 3, but post shows medic_cancelled, leaving level 2 plausible."
+ },
+ "request": "rec-F434-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005805
+}

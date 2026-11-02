@@ -1,0 +1,125 @@
+{
+ "id": "F433-0003",
+ "family": "F433",
+ "state": {
+  "gate": {
+   "rules": {
+    "pulse_limit_bpm": 64,
+    "recovery_window_min": 20
+   },
+   "arrived_at": "14:00"
+  },
+  "vet_card": {
+   "arrival_copied": "14:08",
+   "presented_at": "14:23",
+   "pulse_bpm": 60,
+   "cri": {
+    "first_bpm": 60,
+    "second_bpm": 62
+   },
+   "metabolic": {
+    "mm": "pink",
+    "crt_s": 2,
+    "skin_tent_s": null
+   },
+   "trot_ups": [
+    {
+     "surface": "hard",
+     "grade": 0
+    }
+   ],
+   "tack": {
+    "site": "withers",
+    "finding": "open wound"
+   },
+   "vet_signed_at": null
+  },
+  "treatment": [
+   {
+    "type": "wound_dressing",
+    "by": "Dr Hale"
+   }
+  ],
+  "notes": {
+   "rider_note": "Girth slipped on the climb."
+  }
+ },
+ "factors": {
+  "pulse_status": "met_only_by_copied_arrival",
+  "time_mismatch": "major_over_5min",
+  "gait_grade": "regular",
+  "gait_mitigation": false,
+  "metabolic_flags": 0,
+  "cri_rise": 2.0,
+  "missing_items": 2,
+  "out_of_sequence": false,
+  "tack_wound": "open_wound",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "factors_sampled": {
+  "pulse_status": "met_well_within",
+  "time_mismatch": "major_over_5min",
+  "gait_grade": "irregular_g2plus",
+  "gait_mitigation": false,
+  "metabolic_flags": 0,
+  "cri_rise": 15.36,
+  "missing_items": 1,
+  "out_of_sequence": false,
+  "tack_wound": "open_wound",
+  "prior_gate_history": "all_clean",
+  "treatment_logged": "approved_minor",
+  "departed_before_clearance": false,
+  "note_tone": "benign_explanation"
+ },
+ "plan": {
+  "pulse_met": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "eliminate_ftq",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_code": {
+   "clarity": "clear",
+   "target": "ftq_other",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "welfare_risk": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "record_completeness": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 43,
+ "deciding": {
+  "pulse_met": "Presented 23 min after gate.arrived_at (14:00), which is outside the window, but 15 min after arrival_copied (14:08). The pulse of 60 is under the limit, so the arrival time decides.",
+  "next_step": "The open withers wound with dressing is a clear tack failure. The missing signature leaves some doubt, so the lean is to eliminate.",
+  "outcome_code": "The gait is regular, the CRT is 2 s, the mm are pink and the CRI is flat. Only the open withers wound fails.",
+  "welfare_risk": "The one open wound, treated, is the single outside-limit item. The doubtful pulse window could count as a second.",
+  "record_completeness": "vet_signed_at is null and skin_tent_s is null. Whether the skin tent is a required reading decides between level 0 and level 1."
+ },
+ "request": "rec-F433-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013306
+}

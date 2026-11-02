@@ -1,0 +1,108 @@
+{
+ "id": "F438-0036",
+ "family": "F438",
+ "state": {
+  "clinical_documentation": {
+   "principal_condition": {
+    "code": "K59.0"
+   },
+   "comorbidities": [
+    "E11.9"
+   ]
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "K59.1"
+   },
+   "secondary_dx": [
+    "E11.9"
+   ]
+  },
+  "grouping": {
+   "hrg_submitted": "FD10B",
+   "hrg_regrouped": "FD10C",
+   "tariff_submitted": 1210,
+   "tariff_regrouped": 1210,
+   "submitted_to_commissioner": false
+  }
+ },
+ "factors": {
+  "primary_dx_match": "specificity_differs",
+  "secondary_discrepancies": 0,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_suffix_same_tariff",
+  "missing_source": "none",
+  "clinician_query": "none",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.3,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "different_condition",
+  "secondary_discrepancies": 1,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "none",
+  "clinician_query": "outstanding",
+  "approved_local_convention": false,
+  "pre_submission": true,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.3,
+  "boundary_case": true,
+  "unsupported_billable_code": false
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "amend_codes",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "error_severity": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 40,
+ "deciding": {
+  "primary_supported": "Coded K59.1 and documented K59.0 share the same three characters and differ only in the fourth, so the primary is supported at a different specificity.",
+  "hrg_shift": "hrg_submitted FD10B differs from hrg_regrouped FD10C. Identical tariffs leave some doubt.",
+  "next_step": "The episode is not yet submitted (submitted_to_commissioner false) and there are no open queries or missing documents, so a local code amendment fits.",
+  "error_count": "Only the primary fourth-character mismatch differs. Secondary codes and procedures match.",
+  "error_severity": "The mismatch is a specificity slip with the same clinical meaning (level 1). The identical tariff makes a case for level 0, while the changed HRG suffix leans the other way."
+ },
+ "request": "rec-F438-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009481
+}

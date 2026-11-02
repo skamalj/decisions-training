@@ -1,0 +1,174 @@
+{
+ "id": "F432-0021",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E14",
+   "sp": "TGR",
+   "risk_cat": 1,
+   "roster": [
+    "a101",
+    "a102",
+    "a103",
+    "a104",
+    "a105",
+    "a106"
+   ],
+   "temp_range_c": [
+    18,
+    28
+   ],
+   "maint_window": "2024-05-07T13:00/15:00",
+   "active_vet_case": null
+  },
+  "shift": {
+   "date": "2024-05-07",
+   "keeper_id": "k22",
+   "start": "07:02",
+   "end": "17:01",
+   "opening_count": 6,
+   "closing_count": 5
+  },
+  "movements": null,
+  "feeding": {
+   "sheet": "2024-03-01",
+   "items": [
+    {
+     "item": "meat",
+     "sheet_g": 4000,
+     "offered_g": 4000,
+     "leftover_g": 3200,
+     "unit": "g"
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched": "08:00",
+    "logged": true,
+    "entry_time": "08:04",
+    "temp_c": 22
+   },
+   {
+    "sched": "10:00",
+    "logged": true,
+    "entry_time": "10:01",
+    "temp_c": 23
+   },
+   {
+    "sched": "12:00",
+    "logged": false
+   },
+   {
+    "sched": "14:00",
+    "logged": false
+   },
+   {
+    "sched": "15:00",
+    "logged": true,
+    "entry_time": null,
+    "temp_c": null
+   },
+   {
+    "sched": "16:00",
+    "logged": false
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "A",
+     "time": "16:40"
+    },
+    {
+     "door": "B",
+     "time": "16:42"
+    }
+   ],
+   "ticket": "T-881",
+   "ticket_state": "repaired",
+   "retest_due": "2024-05-09"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "repaired_retest_pending",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.2,
+  "intake_mitigation": false,
+  "unrecorded_rounds": "3 not logged plus 1 logged without entry time",
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": true,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "movements_absent",
+  "risk_category": "cat_1_high"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "repaired_retest_pending",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.67,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 3,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": true,
+  "field_mismatch": "animal_id_not_on_roster",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "movements_absent",
+  "risk_category": "cat_1_high"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "secure_at_close": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "recheck_round",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 109,
+ "deciding": {
+  "count_reconciles": "Opening 6 vs closing 5 with movements null: no matching transfer entry, but a transfer could be logged elsewhere.",
+  "secure_at_close": "Both doors locked 16:40-16:42 after last round, but ticket T-881 is only repaired with retest due 2024-05-09.",
+  "next_step": "Heavy round gaps and low intake on a cat 1 enclosure call for a targeted recheck at the next round.",
+  "intake_shortfall": "Offered 4000 g, leftover 3200 g against sheet 4000 g gives 20% intake.",
+  "missed_rounds": "Three rounds logged false plus the 15:00 round marked logged with null entry_time and temp: 3 or 4 gaps."
+ },
+ "request": "rec-F432-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013381
+}

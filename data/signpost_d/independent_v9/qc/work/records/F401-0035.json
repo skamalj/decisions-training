@@ -1,0 +1,170 @@
+{
+ "id": "F401-0035",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P-3345",
+   "planned_discharge_at": "2025-06-05T14:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 16,
+     "spo2": 97,
+     "sbp": 130,
+     "hr": 76,
+     "at": "2025-06-05T07:00"
+    }
+   ],
+   "reviews": [
+    {
+     "role": "registrar",
+     "outcome": "fit_for_discharge",
+     "reviewed_at": "2025-06-05T09:00"
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P-3345",
+   "reconciled": [
+    {
+     "drug": "furosemide",
+     "dose": 40,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "furosemide",
+     "action": "dose_reduced",
+     "reason": "weight",
+     "prescriber": "Dr Obi",
+     "changed_at": "2025-06-05T10:20"
+    }
+   ],
+   "discharge_rx": {
+    "signed_at": "2025-06-05T10:00",
+    "items": [
+     {
+      "drug": "furosemide",
+      "dose": 20,
+      "unit": "mg",
+      "freq": "od"
+     }
+    ]
+   },
+   "pharmacy_ready_at": "2025-06-05T13:45"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": "stick",
+    "transfer_assist_count": 1,
+    "adl_score": 12
+   },
+   "social": {
+    "lives_alone": true,
+    "carer_available": false,
+    "existing_package": null
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "summary",
+     "status": "done",
+     "completed_at": "2025-06-05T10:30",
+     "signed_by": "RN Shaw"
+    },
+    {
+     "task": "handover",
+     "status": "done",
+     "completed_at": "2025-06-05T11:00",
+     "signed_by": null
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-06-05",
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 1,
+  "false_completion": true,
+  "care_need": "borderline_dependency",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "dose_differs",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "none",
+  "missing_section": "none",
+  "outstanding_task_count": 4,
+  "false_completion": true,
+  "care_need": "new_package",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "discharge_now",
+   "second": "escalate_senior",
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "balanced",
+   "target": "home_independent",
+   "second": "care_home",
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 69,
+ "deciding": {
+  "rx_matches": "Furosemide 40 mg vs 20 mg; the change entry (10:20) is after rx signing (10:00), so it does not clearly cover it, but it names the drug and reason.",
+  "next_step": "Normal obs and registrar fit review favour discharge; the unresolved dose and a lone patient with some dependency leave escalation plausible.",
+  "destination": "Stick, one-person transfer, ADL 12, lives alone with no carer or package: home is plausible but so is higher-dependency care.",
+  "outstanding_tasks": "Handover is marked done with signed_by null; whether it counts as outstanding (1) or not (0) is contestable.",
+  "discharge_delay": "Pharmacy ready 13:45 before the 14:00 plan, but pickup_time is null on the planned date, the contested boundary between levels 0 and 1."
+ },
+ "request": "rec-F401-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010525
+}

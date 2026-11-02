@@ -1,0 +1,112 @@
+{
+ "id": "F418-0035",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "DLT",
+   "plat": 1,
+   "date": "2025-07-08",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 2
+  },
+  "attendance": [
+   {
+    "staff_id": "S5",
+    "sign_on": "05:50"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "08:10"
+   },
+   {
+    "type": "gap_end",
+    "time": "08:58"
+   }
+  ],
+  "controls": null,
+  "remarks": [
+   "Possession 08:00-09:00, covered per ref."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 48,
+  "shortfall_timing": "peak",
+  "dispensation_present": false,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 6,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 48,
+  "shortfall_timing": "peak",
+  "dispensation_present": false,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "consistent",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 6,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "contested",
+   "target": "fully_rostered",
+   "second": "partial_cover",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 25,
+ "deciding": {
+  "headcount_verified": "One sign-on row (S5) is present with no competence dates; the roster is omitted, so it is balanced.",
+  "next_step": "The remarks cite a possession covering the gap, favouring accept, but controls are null.",
+  "coverage_outcome": "The 08:10-08:58 gap is in the remarked possession (fully_rostered); no cover events and a 48-minute open period in service support partial_cover.",
+  "reversal_time": "A missed peak shortfall cannot be undone; the possession remark might permit a retroactive correction within months.",
+  "exposure_severity": "Below minimum at peak 08:10-08:58 with controls null (no dispensation); the possession remark leaves open whether uncertified duties occurred."
+ },
+ "request": "rec-F418-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006704
+}

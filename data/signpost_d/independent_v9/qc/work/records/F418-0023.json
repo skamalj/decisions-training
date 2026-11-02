@@ -1,0 +1,140 @@
+{
+ "id": "F418-0023",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "WTN",
+   "platform": 4,
+   "date": "2024-08-21",
+   "start": "08:00",
+   "end": "16:00",
+   "service_from": "06:00",
+   "service_to": "23:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S31",
+    "planned_start": "08:00"
+   },
+   {
+    "staff_id": "S32",
+    "planned_start": "08:00"
+   }
+  ],
+  "attendance": null,
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "09:00",
+    "staff_id": "S32"
+   },
+   {
+    "type": "dispatch",
+    "time": "09:08",
+    "staff_id": "S31"
+   },
+   {
+    "type": "cover_start",
+    "time": "09:14",
+    "staff_id": "S33"
+   },
+   {
+    "type": "cover_end",
+    "time": "09:17",
+    "staff_id": "S33"
+   },
+   {
+    "type": "gap_end",
+    "time": "09:20"
+   }
+  ],
+  "controls": {
+   "disp_ref": "D-77",
+   "disp_platform": 3,
+   "valid_to": "2024-12-31",
+   "approved_by": "AOM",
+   "prior_shortfalls_30d": 4
+  },
+  "remarks": [
+   "All covered; sign-on sheet to follow."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 20,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "none",
+  "shortfall_minutes": 20,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "wrong_platform",
+  "cover_arrangement": "partial",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "correct_and_brief",
+   "second": "accept_log",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "balanced",
+   "target": "uncovered",
+   "second": "partial_cover",
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 64,
+ "deciding": {
+  "headcount_verified": "attendance is null, so no sign-on or competence can be matched to S31, S32 or S33; the remarks promise a sheet to follow. Nothing shows a lapse, so true stays plausible.",
+  "next_step": "The 09:00-09:20 gap and the 'All covered' remark contradict each other, which points to correcting and briefing. The gap is short and a sheet is promised, so accepting the log remains defensible.",
+  "coverage_outcome": "Cover by S33 ran only 09:14-09:17, a few minutes of a 20-minute gap, and S33 is neither rostered nor in attendance. That reads as uncovered or as partial cover.",
+  "reversal_time": "The staffing gap and the dispatch at 09:08 cannot be rewound. Whether the record fix takes weeks or months is open, so levels 3 and 2 are contested.",
+  "exposure_severity": "The dispatch at 09:08 falls inside the gap with attendance null, so certification cannot be checked. D-77 is for platform 3 but the shift is on platform 4, so there is no valid dispensation. Level 3 or level 2."
+ },
+ "request": "rec-F418-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.013499
+}

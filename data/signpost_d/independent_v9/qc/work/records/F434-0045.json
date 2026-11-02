@@ -1,0 +1,146 @@
+{
+ "id": "F434-0045",
+ "family": "F434",
+ "state": {
+  "event": {
+   "stage_no": 5,
+   "riders_started": 120,
+   "first_rider_at": "10:05"
+  },
+  "post": {
+   "km_marker": 52,
+   "post_type": "feed_zone",
+   "marshals_signed_in": 2,
+   "on_post_from": "09:30",
+   "off_post_at": "11:30",
+   "relief": [
+    {
+     "marshal_ref": "M2",
+     "signed_in": "09:30",
+     "signed_out": "11:30"
+    }
+   ]
+  },
+  "incidents": [
+   {
+    "inc_ref": "P1",
+    "time": "10:41",
+    "km": 52,
+    "type": "fall",
+    "bibs": [
+     71
+    ],
+    "medic_called": true,
+    "medic_cancelled": true,
+    "rider_status": "continued"
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:30",
+     "ok": true
+    },
+    {
+     "time": "11:00",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "ctl_ref": "C3",
+     "time": "10:41",
+     "km": 52,
+     "type": "fall",
+     "bibs": [
+      71
+     ]
+    }
+   ],
+   "medical_handovers": [],
+   "abandonments": [],
+   "road_reopened_at": {
+    "50-55": "13:10"
+   }
+  },
+  "sweep": null
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "none",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "continued",
+  "staffing_gap": "left_before_sweep",
+  "relief_swap_logged": true,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": "none",
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "mechanical",
+  "control_log_mismatch": "extra_post_incident",
+  "intrusion_mitigated": true,
+  "worst_rider_outcome": "abandoned",
+  "staffing_gap": "left_before_sweep",
+  "relief_swap_logged": true,
+  "radio_check_failures": 0,
+  "medic_arrival_minutes": 17.29,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": true,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "incident_class": {
+   "clarity": "leaning",
+   "target": "rider_fall",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 82,
+ "deciding": {
+  "coverage_held": "Sweep is null so passage time is unverifiable, and off-post at 11:30 is well before the 13:10 reopening of the km range.",
+  "next_step": "Post and control incident entries match exactly for the fall of bib 71, with no handovers or abandonments, so nothing is left open.",
+  "incident_class": "A fall for bib 71 appears in both logs with no vehicle, person or animal on course; the cancelled medic call leaves slight doubt.",
+  "reversal_time": "A fall with a cancelled medic call and a rider who continued could be undone within a day or take a few days to settle.",
+  "consequence_severity": "Rider 71 fell and continued, which is level 1, but the medic call was cancelled and no injury is recorded, so level 0 is also defensible."
+ },
+ "request": "rec-F434-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00934
+}

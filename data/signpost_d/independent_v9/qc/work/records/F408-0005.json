@@ -1,0 +1,126 @@
+{
+ "id": "F408-0005",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 100205,
+   "stream": "refuse",
+   "claimed_date": "2024-02-07",
+   "logged_at": "2024-02-08T08:15",
+   "photo_attached": true
+  },
+  "property": {
+   "uprn": 100205,
+   "assisted_collection": false
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled_date": "2024-02-07",
+   "week_pattern": "A"
+  },
+  "round_log": {
+   "round_completed_at": "2024-02-07T12:50",
+   "disruption_code": "weather_suspension",
+   "catch_up_date": "2024-02-10",
+   "stops": [
+    {
+     "uprn": 100205,
+     "exception_code": null,
+     "photo_ref": null,
+     "gps_stop": null
+    }
+   ],
+   "sweep_collected_at": null
+  },
+  "history": []
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "weather_suspension, catch-up 2024-02-10 still pending",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 0,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "no_gps_data",
+  "round_disruption": "weather_suspension",
+  "already_collected": false,
+  "photo_attached": true,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 1,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 49,
+ "deciding": {
+  "crew_missed": "Stop has no GPS data and no exception, but the weather suspension with a pending catch-up could explain the miss.",
+  "report_matches": "Stream, claimed date and scheduled date all agree on 2024-02-07.",
+  "next_step": "Weather suspension with catch-up date 2024-02-10 still in the future means the bin will be emptied, so close.",
+  "return_urgency": "The catch-up collection is already scheduled, so no separate return is needed.",
+  "repeat_failures": "History is an empty list, so no upheld misses."
+ },
+ "request": "rec-F408-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008509
+}

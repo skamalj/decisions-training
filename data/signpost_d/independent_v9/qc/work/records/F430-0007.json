@@ -1,0 +1,131 @@
+{
+ "id": "F430-0007",
+ "family": "F430",
+ "state": {
+  "site": {
+   "assets": [
+    {
+     "id": "CB2",
+     "param": "sf6",
+     "unit": "bar",
+     "normal_band": [
+      5.4,
+      6.0
+     ],
+     "alarm_limit": 5.0,
+     "partner_id": "CB3",
+     "customers_fed": 104
+    }
+   ]
+  },
+  "round": {
+   "date": "2024-06-03"
+  },
+  "readings": [
+   {
+    "asset_id": "CB2",
+    "param": "sf6",
+    "value": 5.4,
+    "unit": "bar"
+   }
+  ],
+  "defects": [
+   {
+    "asset_id": "CB2",
+    "photo_ref": null,
+    "note": "SF6 leak suspected, gauge dropping."
+   }
+  ],
+  "history": {
+   "previous_round": null,
+   "permits": [
+    {
+     "asset_id": "CB2",
+     "desc": "gas handling",
+     "valid_to": "2024-06-03T12:00"
+    }
+   ]
+  },
+  "network": {
+   "partner_status": {
+    "CB3": "out_of_service"
+   }
+  }
+ },
+ "factors": {
+  "worst_reading_band": "at_normal_band_edge",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": true,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": true,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 104,
+  "trivial_discrepancies": 0,
+  "near_boundary": true
+ },
+ "factors_sampled": {
+  "worst_reading_band": "outside_normal",
+  "limit_unit_mismatch": false,
+  "benign_cause_present": false,
+  "benign_cause_type": "permit_to_work",
+  "benign_cause_covers": true,
+  "defect_claim": "unsupported",
+  "trend_vs_last_round": "no_previous",
+  "scheduled_assets_missed": 0,
+  "evidence_missing": true,
+  "redundancy_state": "partner_out_of_service",
+  "customers_fed": 14525,
+  "trivial_discrepancies": 0,
+  "near_boundary": false
+ },
+ "plan": {
+  "defect_corroborated": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "benign_explanation": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "follow_up": {
+   "clarity": "balanced",
+   "target": "urgent_attendance",
+   "second": "recheck_next_round",
+   "targets": []
+  },
+  "limit_deviation": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "supply_exposure": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 63,
+ "deciding": {
+  "defect_corroborated": "The SF6 reading of 5.4 bar is at the band floor, which loosely fits the suspected leak, but the defect has no photo and there is no previous round to show a drop.",
+  "benign_explanation": "A valid gas handling permit on CB2 could explain the low reading, but there is no top-up entry and the note describes a leak.",
+  "follow_up": "The partner CB3 is out of service and CB2 may be leaking, which points to urgent attendance, but the reading is only at the band edge so a recheck is also defensible.",
+  "limit_deviation": "The reading of 5.4 bar equals the lower normal band edge and is well above the 5.0 alarm limit.",
+  "supply_exposure": "CB2 feeds 104 customers with CB3 out, which is right at the 100-customer boundary between few and some."
+ },
+ "request": "rec-F430-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009217
+}

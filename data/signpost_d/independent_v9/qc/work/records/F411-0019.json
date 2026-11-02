@@ -1,0 +1,125 @@
+{
+ "id": "F411-0019",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "PH781",
+   "type": "private_hire",
+   "review_date": "2025-05-20",
+   "hearing_requested": true
+  },
+  "vehicle": {
+   "first_reg": "2024-02-01",
+   "odometer_km": 38900
+  },
+  "inspection": {
+   "station": "S12",
+   "date": "2025-05-02",
+   "result_code": "F",
+   "brake_efficiency_pct": 58
+  },
+  "defects": [
+   {
+    "code": "2.4",
+    "grade": "major",
+    "rectify_by": "2025-05-16",
+    "repaired_on": "2025-05-09",
+    "retest_on": "2025-05-12",
+    "retest_result": "pass"
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2025-05-10",
+    "cover_note_ref": "CN-31",
+    "cover_until": "2025-06-30"
+   }
+  ],
+  "history": [
+   {
+    "date": "2024-05-03",
+    "result": "F",
+    "odometer_km": 19800
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "major",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 2,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 1
+ },
+ "factors_sampled": {
+  "worst_defect_found": "major",
+  "rectification_state": "repaired_awaiting_retest",
+  "deadline_passed": true,
+  "documents_missing_count": 1,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": true,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 1
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "refer_committee",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "contested",
+   "target": "major_fail",
+   "second": "clean_pass",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 60,
+ "deciding": {
+  "odometer_consistent": "38900 km is above the history reading 19800 km; no drop.",
+  "next_step": "hearing_requested is true on the licence after a major fail; the matter goes to the committee rather than being decided by the officer.",
+  "inspection_outcome": "Major item 2.4 and result F at inspection, but it was repaired and retested pass, so a reader could treat it as resolved.",
+  "document_gaps": "Insurance expired but covered by CN-31; the documents list holds only one of the required types, so the others look absent and the count is 1 or 2.",
+  "outstanding_severity": "Item 2.4 has repaired_on 2025-05-09 and retest pass on 2025-05-12; nothing remains except possible document issues."
+ },
+ "request": "rec-F411-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009501
+}

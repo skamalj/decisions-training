@@ -1,0 +1,142 @@
+{
+ "id": "F409-0033",
+ "family": "F409",
+ "state": {
+  "applicant": {
+   "applicant_id": "A-7730",
+   "full_name": "S. Marsh",
+   "submitted_on": "2024-06-10",
+   "app_type": "renewal",
+   "message": "Do visitor vouchers need renewing too?"
+  },
+  "residence_evidence": {
+   "docs": [
+    {
+     "doc_type": "council_tax_bill",
+     "issued_on": "2024-03-12",
+     "address_line": "Flat 2, 8 Park Row",
+     "verified": true
+    }
+   ]
+  },
+  "vehicle": {
+   "plate": "HN18 PLT",
+   "keeper_name": "Hollis Leasing Ltd",
+   "supporting_letters": [
+    {
+     "type": "lease_agreement",
+     "names_applicant": true
+    }
+   ]
+  },
+  "request": {
+   "zone_code": "B4",
+   "address": "Flat 3, 8 Park Row",
+   "plate_entered": "HN18 PLT",
+   "duration_months": 12
+  },
+  "account_history": {
+   "live_permits": [
+    {
+     "permit_no": "P-6001"
+    }
+   ],
+   "past_permits": [
+    {
+     "permit_no": "P-5120",
+     "status": "seized",
+     "seize_reason": "displayed on non-registered vehicle"
+    }
+   ],
+   "pcns": [
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "open"
+    },
+    {
+     "status": "cancelled"
+    }
+   ],
+   "exceptions": []
+  }
+ },
+ "factors": {
+  "application_type": "renewal",
+  "address_match_level": "different_flat",
+  "proof_age_days": 90,
+  "docs_missing": 0,
+  "keeper_mismatch": "different_keeper",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 1,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": false,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "factors_sampled": {
+  "application_type": "renewal",
+  "address_match_level": "different_flat",
+  "proof_age_days": 200,
+  "docs_missing": 2,
+  "keeper_mismatch": "none",
+  "keeper_letter_on_file": true,
+  "household_permits_held": 3,
+  "cap_exception_approved": false,
+  "zone_pcn_count": 4,
+  "pcns_cancelled": true,
+  "date_order_anomaly": false,
+  "message_claim": "nothing_relevant",
+  "prior_permit_cloned": false
+ },
+ "plan": {
+  "residency_shown": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "hold",
+   "second": null,
+   "targets": []
+  },
+  "main_issue": {
+   "clarity": "contested",
+   "target": "no_issue",
+   "second": "vehicle_keeper",
+   "targets": []
+  },
+  "misuse_strength": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "document_gaps": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 68,
+ "deciding": {
+  "residency_shown": "The bill is for Flat 2 but the request is for Flat 3, so the verified document does not match the requested address.",
+  "disposition": "The address evidence names a different flat, so residency is not established and nothing should be issued until it is resolved.",
+  "main_issue": "The keeper is Hollis Leasing Ltd, but a lease letter names the applicant, so the difference is explained. The flat mismatch and PCNs also compete, which makes this contested.",
+  "misuse_strength": "Three open PCNs make one indicator. The permit seized for being displayed on a non-registered vehicle is a second, and might be read as a sold or cloned permit (level 3).",
+  "document_gaps": "The only residence document is verified but is exactly 90 days old, at the staleness boundary, so it could be counted as received or as unverified."
+ },
+ "request": "rec-F409-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011454
+}

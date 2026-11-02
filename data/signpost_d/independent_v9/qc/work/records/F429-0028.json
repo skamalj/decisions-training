@@ -1,0 +1,141 @@
+{
+ "id": "F429-0028",
+ "family": "F429",
+ "state": {
+  "log_header": {
+   "licence_q_max_m3s": 150,
+   "log_version": 3
+  },
+  "reservoir": {
+   "readings": [
+    {
+     "level_m": 102.39
+    }
+   ],
+   "triggers": {
+    "alert_m": 101.8,
+    "action_m": 102.4
+   }
+  },
+  "gate_ops": [
+   {
+    "gate_id": "G2",
+    "ts": "2024-05-02T09:10",
+    "open_after_m": 1.8
+   }
+  ],
+  "discharge": {
+   "calc_inputs": [
+    {
+     "gate_id": "G2",
+     "opening_m": 1.81
+    }
+   ],
+   "calc_peak_m3s": 151,
+   "gauged_peak_m3s": 122.8,
+   "tailwater_m": [
+    2.9,
+    3.3
+   ]
+  },
+  "instruments": {
+   "post_op_inspection": {
+    "status": "not_started",
+    "completed_at": null
+   }
+  },
+  "notifications": [
+   {
+    "type": "downstream_warning",
+    "sent_at": "2024-05-02T08:40",
+    "ack": true
+   },
+   {
+    "type": "callout",
+    "to": "inspector",
+    "ack": false
+   },
+   {
+    "type": "callout",
+    "to": "seepage_team",
+    "ack": false
+   }
+  ]
+ },
+ "factors": {
+  "reservoir_tier": "alert",
+  "near_boundary": true,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 22.96,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "factors_sampled": {
+  "reservoir_tier": "action",
+  "near_boundary": true,
+  "discharge_vs_licence": "near_limit",
+  "gate_position_mismatch": "trivial",
+  "discharge_discrepancy_pct": 22.96,
+  "datum_mismatch": false,
+  "missing_section": "none",
+  "notice_after_release": false,
+  "inspection_status": "not_started",
+  "piezometer_rise": false,
+  "tailwater_explains_rise": true,
+  "ramp_limit_breached": false
+ },
+ "plan": {
+  "within_licence": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "gates_reconciled": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_for_inspection",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "trigger_tier": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 107,
+ "deciding": {
+  "within_licence": "Calc 151 slightly exceeds 150 but gauged 122.8 is well under; the gap between them is large.",
+  "gates_reconciled": "G2 open_after 1.8 vs calc opening 1.81, a trivial gap.",
+  "next_step": "Post-op inspection status not_started with null completed_at.",
+  "trigger_tier": "Peak 102.39 is 0.01 below the 102.4 action trigger and above alert 101.8.",
+  "parties_needed": "Unacknowledged callouts to inspector and seepage team plus engineer and operator give three or four, possibly more, parties."
+ },
+ "request": "rec-F429-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007045
+}

@@ -1,0 +1,135 @@
+{
+ "id": "F421-0046",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-48213",
+   "service": "std",
+   "fragile": false,
+   "contents": "table lamp",
+   "qty": 1,
+   "weight_kg": 3.2,
+   "declared_value_gbp": 1363.04
+  },
+  "handling_events": [
+   {
+    "ts": "2024-05-02T08:10",
+    "site": "HUB-N",
+    "code": "SCAN",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-05-02T14:00",
+    "site": "HUB-N",
+    "code": "OUT",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-05-03T06:30",
+    "site": "DEPOT",
+    "code": "IN",
+    "exc": null
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-05-03T09:00",
+   "observed_item": "desk lamp",
+   "qty_found": 1,
+   "weight_kg": 3.1,
+   "condition": "shade scuffed",
+   "photos": [
+    "a.jpg",
+    "b.jpg"
+   ],
+   "repair_est_gbp": 27.26
+  },
+  "claim": null
+ },
+ "factors": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 2.0,
+  "declared_value": 1363.04,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": false,
+  "note_slant": "absent",
+  "claim_amount_gap": "not applicable (no claim)"
+ },
+ "factors_sampled": {
+  "damage_timing": "before_intake",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "inspection_pending",
+  "loss_pct": 49.1,
+  "declared_value": 1363.04,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 2,
+  "fragile_misrouted": true,
+  "note_slant": "absent",
+  "claim_amount_gap": 2.21
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "contents_match": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 71,
+ "deciding": {
+  "depot_fault": "Two upstream HUB-N DMG exceptions precede the clean inbound scan at the depot.",
+  "contents_match": "Manifest says table lamp, report says desk lamp; near-identical item and weight 3.2 vs 3.1 kg, so a modest lean to match.",
+  "next_step": "Report complete with photos, no claim, trivial loss, damage predates intake: nothing to act on.",
+  "loss_share": "Repair estimate 27.26 is about 2% of declared 1363.04.",
+  "parties_needed": "No claim or onward action; the assessor can close it alone."
+ },
+ "request": "rec-F421-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00817
+}

@@ -1,0 +1,192 @@
+{
+ "id": "F416-0009",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "N30",
+   "date": "2025-08-11",
+   "signoff": "G60 17:05"
+  },
+  "roster": [
+   {
+    "id": "G60",
+    "on": "09:00",
+    "off": "17:00",
+    "qual": "2025-08-11",
+    "home": "N30"
+   },
+   {
+    "id": "G61",
+    "on": "09:00",
+    "off": "17:00",
+    "qual": "2026-02-20",
+    "home": "N30"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "13:00",
+    "wave_m": 2.0,
+    "rip": "high",
+    "flag": "red_yellow",
+    "zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "type": "water_rescue",
+    "resp": [
+     "G60",
+     "G61"
+    ],
+    "out": "released"
+   },
+   {
+    "type": "water_rescue",
+    "resp": [
+     "G60",
+     "G61"
+    ],
+    "out": "released"
+   },
+   {
+    "type": "water_rescue",
+    "resp": [
+     "G60",
+     "G61"
+    ],
+    "out": "released"
+   },
+   {
+    "type": "water_rescue",
+    "resp": [
+     "G60",
+     "G61"
+    ],
+    "out": "released"
+   },
+   {
+    "type": "water_rescue",
+    "resp": [
+     "G60",
+     "G61"
+    ],
+    "out": "gp_advised",
+    "amb": "A-310",
+    "ref": "RF-12"
+   },
+   {
+    "type": "first_aid",
+    "resp": [
+     "G61"
+    ],
+    "out": "released"
+   },
+   {
+    "type": "water_assist",
+    "resp": [
+     "G60"
+    ],
+    "out": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "jetski",
+    "out_from": "09:00",
+    "out_to": "10:40",
+    "sub": "J2"
+   },
+   {
+    "item": "J2",
+    "out_from": "10:20",
+    "out_to": "10:45",
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 5,
+   "first_aid": 2,
+   "kit_defects": 2,
+   "check_sheet_ref": "CS-40"
+  }
+ },
+ "factors": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "first_aid_count_ambiguous",
+  "worst_outcome": "gp_advised with ambulance_ref and referral_ref both present",
+  "kit_gap_band": "under_60 residual after substitute",
+  "kit_substitute_logged": true,
+  "missing_record": "none",
+  "flag_lag": true,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": true,
+  "decoy_load": "medium"
+ },
+ "factors_sampled": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "responder_qual_expired",
+  "mutual_aid_logged": false,
+  "totals_mismatch": "none",
+  "worst_outcome": "referred",
+  "kit_gap_band": "60_to_180",
+  "kit_substitute_logged": true,
+  "missing_record": "ambulance_ref",
+  "flag_lag": true,
+  "zone_relocated": true,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "medium"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "accept_log",
+   "second": "amend_and_file",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 84,
+ "deciding": {
+  "two_guard_cover": "All five rescues list G60 and G61 on roster; G60's expiry 2025-08-11 equals the shift date, so it is at the boundary.",
+  "totals_reconcile": "Handover first_aid is 2 against one itemised first_aid incident; the water_assist entry may or may not count, so the discrepancy is uncertain. Rescues 5 and kit_defects 2 match.",
+  "next_step": "The only possible issue is a trivial first_aid count, and the log is otherwise complete with ref and sign-off; the red_yellow flag is mitigated by zone_moved true. Filing as is or amending are both defensible.",
+  "outcome_severity": "The worst incident is coded gp_advised with referral RF-12, but an ambulance ref A-310 is also logged, holding level 1 against level 2.",
+  "kit_outage": "The jetski's 100 min outage has substitute J2, but J2 itself was out 10:20 to 10:45 (25 min) with no substitute, so level 0 or 1."
+ },
+ "request": "rec-F416-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.014231
+}

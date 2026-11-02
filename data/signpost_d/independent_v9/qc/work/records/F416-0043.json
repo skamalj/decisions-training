@@ -1,0 +1,151 @@
+{
+ "id": "F416-0043",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "date": "2024-07-20",
+   "signoff": "G5"
+  },
+  "roster": [
+   {
+    "id": "G5",
+    "qe": "2025-04-01",
+    "home": "N2"
+   },
+   {
+    "id": "G6",
+    "qe": "2025-05-09",
+    "home": "N2"
+   },
+   {
+    "id": "G7",
+    "qe": "2025-03-03",
+    "home": "N6"
+   }
+  ],
+  "conditions": [
+   {
+    "time": "13:00",
+    "rip_risk": "high",
+    "flag": "red_yellow",
+    "bathing_zone_moved": false
+   }
+  ],
+  "incidents": [
+   {
+    "t": "water_rescue",
+    "r": [
+     "G5",
+     "G6"
+    ],
+    "out": "released"
+   },
+   {
+    "t": "water_rescue",
+    "r": [
+     "G5",
+     "G7"
+    ],
+    "out": "conveyed",
+    "aed_used": true,
+    "amb": null
+   },
+   {
+    "t": "water_assist",
+    "out": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "radio",
+    "out_from": "10:00",
+    "out_to": "10:40",
+    "sub": null
+   }
+  ],
+  "handover": {
+   "rescues": 3,
+   "first_aid": 0,
+   "kit_defects": 1,
+   "beach_users_est": 6100
+  }
+ },
+ "factors": {
+  "rescue_count": 2,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "ambiguous (water_assist incident vs handover rescues 3)",
+  "worst_outcome": "critical",
+  "kit_gap_band": "under_60",
+  "kit_substitute_logged": false,
+  "missing_record": "ambulance_ref",
+  "flag_lag": true,
+  "zone_relocated": false,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "factors_sampled": {
+  "rescue_count": 5,
+  "rescue_cover_shortfall": "responder_off_roster",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "critical",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": true,
+  "missing_record": "ambulance_ref",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": false,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "corrective_order",
+   "second": "escalate_review",
+   "targets": [
+    "T1"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "kit_outage": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 71,
+ "deciding": {
+  "two_guard_cover": "Both rescues list two in-date responders. G7 is mutual aid from N6 with qualification valid to 2025-03-03.",
+  "totals_reconcile": "Handover rescues is 3 against 2 water_rescue incidents plus one water_assist. Whether the assist counts as a rescue is open.",
+  "next_step": "Red_yellow flag with high rip risk and no zone move is an unmitigated lapse. The conveyed casualty with AED use and no ambulance_ref pulls toward escalation.",
+  "outcome_severity": "The outcome code is conveyed, but aed_used is true and the ambulance_ref is null. Whether this is a shock-level critical case is open.",
+  "kit_outage": "The radio was out 10:00 to 10:40 with no substitute, which is 40 minutes. The doubt is that the end time and extent are only roughly certain."
+ },
+ "request": "rec-F416-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010911
+}

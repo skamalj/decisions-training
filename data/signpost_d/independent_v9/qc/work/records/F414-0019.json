@@ -1,0 +1,150 @@
+{
+ "id": "F414-0019",
+ "family": "F414",
+ "state": {
+  "asset": {
+   "asset_id": "SW-60",
+   "site_id": "S15",
+   "equip_type": "swing",
+   "crit_fall_height_m": 1.8,
+   "surf_type": "grass_mat"
+  },
+  "inspection": {
+   "insp_date": "2024-04-22",
+   "insp_grade": "annual_main",
+   "fall_height_m": 1.8,
+   "surf_type_found": "grass_mat",
+   "surf_depth_mm": 25,
+   "surf_req_table": [
+    {
+     "band_m": "<=2.0",
+     "type": "grass_mat",
+     "min_depth_mm": 25
+    }
+   ],
+   "findings": [
+    {
+     "defect_code": "PNT-2",
+     "component_id": "C-frame",
+     "injury_mech": "cosmetic"
+    }
+   ]
+  },
+  "maintenance": [
+   {
+    "wo_id": "WO-3",
+    "asset_id": "SW-60",
+    "component_id": "C-frame",
+    "defect_ref": "D-8",
+    "status": "open",
+    "temp_measure": {
+     "type": "cone",
+     "date": "2024-04-20"
+    }
+   }
+  ],
+  "site": {
+   "usage_level": "medium",
+   "incident_reports_90d": 3
+  },
+  "history": [
+   {
+    "date": "2023-10-02",
+    "defect_refs": [
+     "D-8"
+    ]
+   },
+   {
+    "date": "2024-04-25",
+    "result": "pass",
+    "component_id": "C-frame"
+   }
+  ]
+ },
+ "factors": {
+  "equipment_type": "swing",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 0.0,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.0,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 3
+ },
+ "factors_sampled": {
+  "equipment_type": "swing",
+  "register_mismatch": "none",
+  "surfacing_depth_margin_mm": 75.15,
+  "worst_defect_class": "cosmetic",
+  "head_neck_entrapment_fail": false,
+  "prior_defects_open": 1,
+  "work_orders_closed_fraction": 0.69,
+  "temporary_measure_in_place": true,
+  "approved_variance": false,
+  "followup_check_passed": true,
+  "missing_measurement": false,
+  "inspector_grade": "annual_main",
+  "usage_level": "medium",
+  "incident_reports_90d": 3
+ },
+ "plan": {
+  "prior_defects_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "surfacing_adequate": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "asset_disposition": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "remedial_progress": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "hazard_severity": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 46,
+ "deciding": {
+  "prior_defects_cleared": "D-8 work order WO-3 is still open, but a later passing follow-up on C-frame exists.",
+  "surfacing_adequate": "Depth 25 mm equals the 25 mm minimum, so it meets the requirement.",
+  "asset_disposition": "Only a cosmetic paint defect is logged; nothing hazardous.",
+  "remedial_progress": "Single work order WO-3 is open; none closed.",
+  "hazard_severity": "The only finding is cosmetic, injury_mech cosmetic."
+ },
+ "request": "rec-F414-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005865
+}

@@ -1,0 +1,159 @@
+{
+ "id": "F416-0025",
+ "family": "F416",
+ "state": {
+  "shift": {
+   "stn": "C3",
+   "date": "2025-07-19",
+   "signoff": "g7"
+  },
+  "roster": [
+   {
+    "id": "g7",
+    "hrs": "09-18",
+    "qual": "2026-05-01",
+    "home": "C3"
+   },
+   {
+    "id": "g8",
+    "hrs": "09-18",
+    "qual": "2026-02-01",
+    "home": "C1"
+   }
+  ],
+  "conditions": [
+   {
+    "t": "13:00",
+    "wave_m": 2.1,
+    "wind_kt": 25,
+    "water_c": 13,
+    "rip_risk": "high",
+    "flag": "red",
+    "bathing_zone_moved": true
+   }
+  ],
+  "incidents": [
+   {
+    "id": "r1",
+    "date": "2025-07-19",
+    "type": "water_rescue",
+    "resp": [
+     "g7",
+     "g8"
+    ],
+    "out": "released"
+   },
+   {
+    "id": "f1",
+    "date": "2025-07-19",
+    "type": "first_aid",
+    "out": "released"
+   },
+   {
+    "id": "m1",
+    "date": "2025-07-19",
+    "type": "medical",
+    "out": "released"
+   }
+  ],
+  "equipment": [
+   {
+    "item": "rescue board",
+    "out_from": null
+   }
+  ],
+  "handover": {
+   "rescues": 1,
+   "first_aid": 2,
+   "kit_defects": 0,
+   "advisories": 5,
+   "beach_users_est": 5100,
+   "check_sheet_ref": "CS-0719"
+  }
+ },
+ "factors": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "none",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": false,
+  "missing_record": "none",
+  "flag_lag": false,
+  "zone_relocated": true,
+  "signoff_present": true,
+  "boundary_placement": false,
+  "decoy_load": "high"
+ },
+ "factors_sampled": {
+  "rescue_count": 1,
+  "rescue_cover_shortfall": "none",
+  "mutual_aid_logged": true,
+  "totals_mismatch": "multiple",
+  "worst_outcome": "none_first_aid",
+  "kit_gap_band": "none",
+  "kit_substitute_logged": true,
+  "missing_record": "aed_check_sheet",
+  "flag_lag": true,
+  "zone_relocated": true,
+  "signoff_present": false,
+  "boundary_placement": true,
+  "decoy_load": "high"
+ },
+ "plan": {
+  "two_guard_cover": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "totals_reconcile": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "accept_log",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "outcome_severity": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "kit_outage": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 47,
+ "deciding": {
+  "two_guard_cover": "r1 has g7 and mutual-aid g8 (home C1, qual 2026-02-01 in date), both within rostered hours.",
+  "totals_reconcile": "Handover first_aid 2 versus one first_aid incident (f1); it matches only if medical incident m1 is counted as first aid, so the totals are held in balance.",
+  "next_step": "Signed off, check_sheet_ref present, high rip risk met by a red flag, no outage and a released outcome; nothing needs action.",
+  "outcome_severity": "Both non-rescue incidents are released on site; no ambulance_ref or AED.",
+  "kit_outage": "Equipment out_from is null; no kit was out of service."
+ },
+ "request": "rec-F416-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.01458
+}

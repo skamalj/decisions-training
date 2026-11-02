@@ -1,0 +1,135 @@
+{
+ "id": "F408-0020",
+ "family": "F408",
+ "state": {
+  "report": {
+   "id": "M505",
+   "uprn": 5005,
+   "stream": "refuse",
+   "claimed": "2025-06-09",
+   "logged_at": "2025-06-10T08:50",
+   "photo": false
+  },
+  "property": {
+   "uprn": 5005,
+   "assisted": false
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "scheduled": "2025-06-10",
+   "week": "A"
+  },
+  "round_log": {
+   "status": "complete",
+   "completed_at": "2025-06-10T14:20",
+   "disruption": "vehicle_breakdown",
+   "catch_up": "2025-06-11",
+   "sweep_collected_at": "2025-06-10T17:30",
+   "stops": [
+    {
+     "uprn": 5005,
+     "exception_code": null,
+     "photo_ref": null,
+     "gps_stop": false
+    }
+   ]
+  },
+  "history": [
+   {
+    "uprn": 5005,
+    "logged_on": "2025-03-17",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 5005,
+    "logged_on": "2025-04-22",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 5005,
+    "logged_on": "2025-05-19",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "before_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": true,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 2,
+  "history_decoys": 1,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "date_one_day_off",
+  "report_timing": "before_round_complete",
+  "crew_exception": "none",
+  "exception_supported": false,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "vehicle_breakdown",
+  "already_collected": true,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 0,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "repeat_failures": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 98,
+ "deciding": {
+  "crew_missed": "Stop has no exception and gps_stop false, but a vehicle breakdown with catch-up on 06-11 and a later sweep make a crew miss only modestly likely.",
+  "report_matches": "Claimed date 06-09 is a day before the scheduled 06-10, and the report was logged at 08:50, before the 14:20 round completion.",
+  "next_step": "sweep_collected_at 17:30 is later than logged_at 08:50, so the bin was emptied and the case can close.",
+  "return_urgency": "The sweep already emptied the bin, but the unsupported no-stop leaves a small chance a return is still wanted.",
+  "repeat_failures": "Two upheld misses (04-22, 05-19) fall in the window; the 03-17 upheld entry is 85 days before logged_at, one day outside, so the count is 2 or 3."
+ },
+ "request": "rec-F408-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009575
+}

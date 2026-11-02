@@ -1,0 +1,135 @@
+{
+ "id": "F418-0040",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "PDL",
+   "plat": 2,
+   "date": "2025-07-08",
+   "service_from": "06:00",
+   "service_to": "22:00",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "post": "A",
+    "staff_id": "S2"
+   },
+   {
+    "post": "B",
+    "staff_id": "S6",
+    "ot": true
+   }
+  ],
+  "attendance": null,
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "05:10",
+    "staff_id": "S6",
+    "platform": 2
+   },
+   {
+    "type": "gap_end",
+    "time": "05:44",
+    "staff_id": "S6",
+    "platform": 2
+   }
+  ],
+  "controls": {
+   "disp_ref": "DSP-3310",
+   "disp_platform": 2,
+   "valid_from": "2025-07-01",
+   "valid_to": "2025-09-30",
+   "approved_by": "ROM-Chen",
+   "possession_from": "05:00",
+   "possession_to": "05:50",
+   "prior_shortfalls_30d": 2
+  },
+  "remarks": [
+   "Roster used as sign-on. S9 swapped for S6 at 06:00, no redeploy logged."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 34,
+  "shortfall_timing": "outside_service",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "contradicts",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "major",
+  "shortfall_minutes": 34,
+  "shortfall_timing": "no_shortfall",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": true,
+  "note_consistency": "contradicts",
+  "missing_section": "attendance_missing",
+  "prior_shortfalls_30d": 2,
+  "boundary_case": true
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "correct_and_brief",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "fully_rostered",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 76,
+ "deciding": {
+  "headcount_verified": "attendance is null and the remarks say S9 replaced rostered S6 with no redeploy event. There are no sign-on records for anyone, so the claim of matching sign-ons fails.",
+  "next_step": "The remarks name the swap, so the log entries are wrong and need amending. The dispensation is valid and the gap is outside service, so a briefing on sign-on and redeploy logging fits the case.",
+  "coverage_outcome": "The only gap, 05:10 to 05:44, is before service_from of 06:00, so minimum posts were rostered throughout service.",
+  "reversal_time": "The rostered gap was before service and only the log entries need correction. This could be fixed within a day or take a few days of chasing the missing sign-on sheet.",
+  "exposure_severity": "The gap lies entirely outside service, which supports level 0. It overlaps a possession 05:00 to 05:50 and sits under dispensation DSP-3310, which leaves level 1 plausible."
+ },
+ "request": "rec-F418-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012319
+}

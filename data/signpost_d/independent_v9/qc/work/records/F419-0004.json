@@ -1,0 +1,148 @@
+{
+ "id": "F419-0004",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "18/36",
+   "date": "2024-06-03",
+   "test_speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": {
+    "precip_mm": 0
+   }
+  },
+  "device": {
+   "serial": "C-3306",
+   "cal_expiry": "2024-05-20",
+   "tyre_pressure_kpa": 140,
+   "water_depth_mm": 0.5
+  },
+  "runs": [
+   {
+    "dir": "36",
+    "thirds": [
+     0.52,
+     0.6,
+     0.58
+    ]
+   },
+   {
+    "dir": "18",
+    "thirds": [
+     0.55,
+     0.61,
+     0.57
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.7,
+    0.72,
+    0.69
+   ],
+   "mtd_threshold_mm": 0.5
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-09-20",
+   "works_orders": [
+    {
+     "type": "rubber_removal",
+     "start_date": "2024-06-10"
+    }
+   ],
+   "cross_checks": [
+    {
+     "serial": "C-3350",
+     "date": "2024-06-04",
+     "thirds": [
+      0.62,
+      0.68,
+      0.66
+     ]
+    }
+   ]
+  },
+  "review": {
+   "signed_at": "2024-06-05T09:00"
+  }
+ },
+ "factors": {
+  "min_third_band": "at_maint_planning",
+  "near_boundary": true,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 257,
+  "removal_scheduled": true,
+  "calibration_status": "expired",
+  "missing_elements_count": 0,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "between_planning_design",
+  "near_boundary": false,
+  "localised_segment_below_min": false,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 257,
+  "removal_scheduled": true,
+  "calibration_status": "expired",
+  "missing_elements_count": 1,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "file_routine",
+   "second": "schedule_works",
+   "targets": []
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "none_found",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 54,
+ "deciding": {
+  "genuine_deficit": "Lowest third 0.52 equals maintenance planning and is not below it, and a cross-check device reads 0.10 higher; but calibration expired 2024-05-20, leaving the measure uncertain.",
+  "next_step": "Nothing is below planning, which favours filing; the lowest third sits exactly at planning and removal is already ordered for 2024-06-10, so scheduling is still arguable.",
+  "deficit_driver": "No third or segment falls below planning 0.52, and texture is adequate.",
+  "friction_severity": "Lowest third 0.52 is at planning level and far above minimum 0.42; the expired calibration makes it uncertain.",
+  "evidence_completeness": "Calibration expired 2024-05-20, before the survey, is the only gap; reviewers could count that as one or also count the later cross-check as a second issue."
+ },
+ "request": "rec-F419-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011286
+}

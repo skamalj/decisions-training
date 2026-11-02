@@ -1,0 +1,142 @@
+{
+ "id": "F438-0022",
+ "family": "F438",
+ "state": {
+  "episode": {
+   "id": "E2217",
+   "spec": "cardiology",
+   "los": 6
+  },
+  "clinical_documentation": {
+   "documents_present": {
+    "discharge_summary": false,
+    "operation_note": true,
+    "pathology_report": true
+   },
+   "principal_condition": {
+    "code": "I50.0"
+   },
+   "comorbidities": [
+    "N18.3",
+    "E11.2",
+    "I48.1",
+    "J44.0"
+   ]
+  },
+  "coded_record": {
+   "primary_dx": {
+    "code": "I50.0"
+   },
+   "secondary_dx": [
+    "N18.4",
+    "E11.3",
+    "I48.2",
+    "J44.1"
+   ],
+   "procedures": []
+  },
+  "grouping": {
+   "hrg_submitted": "EB03B",
+   "hrg_regrouped": "EB03B",
+   "tariff_submitted": 2800,
+   "tariff_regrouped": 2950,
+   "submitted_to_commissioner": true
+  },
+  "audit_context": {
+   "local_conventions_applied": [
+    "N18.3/N18.4"
+   ],
+   "queries": [
+    {
+     "target_code": "I48.1",
+     "status": "closed",
+     "response": "confirms"
+    }
+   ]
+  },
+  "coder_history": {
+   "prior_audits": 9,
+   "error_rate": 0.23,
+   "last_audit_result": "fail"
+  }
+ },
+ "factors": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 4,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "same_hrg",
+  "missing_source": "discharge_summary",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.23,
+  "boundary_case": false,
+  "unsupported_billable_code": false
+ },
+ "factors_sampled": {
+  "primary_dx_match": "exact",
+  "secondary_discrepancies": 3,
+  "procedure_mismatch": "all_match",
+  "regroup_outcome": "diff_hrg_same_subchapter",
+  "missing_source": "discharge_summary",
+  "clinician_query": "answered_confirms",
+  "approved_local_convention": true,
+  "pre_submission": false,
+  "coder_recent_audit_passed": false,
+  "coder_error_rate": 0.23,
+  "boundary_case": false,
+  "unsupported_billable_code": true
+ },
+ "plan": {
+  "primary_supported": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "hrg_shift": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "accept_as_coded",
+   "second": "amend_codes",
+   "targets": [
+    "T1"
+   ]
+  },
+  "error_count": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "error_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (unsupported_billable_code = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 84,
+ "deciding": {
+  "primary_supported": "I50.0 matches the documented principal condition, but the discharge summary is absent, leaving some doubt.",
+  "hrg_shift": "EB03B is unchanged on regrouping, but the tariff differs 2800 versus 2950 and the source is incomplete.",
+  "next_step": "Submitted episode with only fourth-character slips; accept_as_coded (convention, no HRG change) or amend_codes (four mismatches) are both defensible.",
+  "error_count": "Four secondary codes each differ from the documented comorbidities in the fourth character.",
+  "error_severity": "All are fourth-character specificity slips with the HRG unchanged, but the N18 pair is covered by the local convention, so level 0 versus 1 is close."
+ },
+ "request": "rec-F438-0021",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007746
+}

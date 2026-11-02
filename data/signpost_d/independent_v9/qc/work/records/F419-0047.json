@@ -1,0 +1,154 @@
+{
+ "id": "F419-0047",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "16/34",
+   "date": "2024-05-10",
+   "speed_kmh": 65,
+   "thr": {
+    "design": 0.72,
+    "maint": 0.52,
+    "min": 0.42
+   },
+   "weather": {
+    "precip_mm": 0
+   }
+  },
+  "device": {
+   "cal_expiry": "2025-01-15",
+   "tyre_kpa": null,
+   "water_mm": null
+  },
+  "runs": [
+   {
+    "dir": "16",
+    "thirds": [
+     0.5,
+     0.62,
+     0.64
+    ],
+    "seg_min": 0.4
+   },
+   {
+    "dir": "34",
+    "thirds": [
+     0.63,
+     0.62,
+     0.55
+    ],
+    "seg_min": 0.48
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.6,
+    0.6,
+    0.6
+   ],
+   "mtd_thr": 0.5
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-06-23",
+   "works_orders": [],
+   "cross_checks": [
+    {
+     "serial": "B77",
+     "date": "2024-05-10",
+     "thirds": [
+      0.6,
+      0.7,
+      0.72
+     ]
+    }
+   ],
+   "prior_surveys": [
+    {
+     "date": "2024-01-10",
+     "lowest_third": 0.51
+    }
+   ]
+  },
+  "review": {
+   "signed_at": null
+  }
+ },
+ "factors": {
+  "min_third_band": "below_planning",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 322,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 3,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "stable"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_planning",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 322,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 3,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "higher_by_0_08_plus",
+  "prior_survey_trend": "stable"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "hold_retest",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deficit_driver": {
+   "clarity": "balanced",
+   "target": "rubber_deposits",
+   "second": "none_found",
+   "targets": []
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 34,
+ "deciding": {
+  "genuine_deficit": "The cross-check device read 0.60-0.72 against 0.50 on the lowest third, and tyre pressure, water depth and sign-off are empty, so the low readings are not trustworthy as a genuine deficit.",
+  "next_step": "Tyre pressure, water depth and signed_at are null and the cross-check disagrees by 0.08 or more, so hold for retest.",
+  "deficit_driver": "Lows are at the touchdown ends, the last removal was 322 days ago and no works are open (rubber), but the cross-check reads higher and the prior survey was 0.51 (none_found); balanced.",
+  "friction_severity": "Segment 0.40 is below the 0.42 minimum, so level 3; the unreliable test leaves some doubt.",
+  "evidence_completeness": "Tyre pressure, water depth and sign-off time are null, so three elements are missing; a fourth issue is arguable from the disputed readings, so level 1 or 0."
+ },
+ "request": "rec-F419-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012925
+}

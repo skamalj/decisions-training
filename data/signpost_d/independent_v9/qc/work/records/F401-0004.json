@@ -1,0 +1,176 @@
+{
+ "id": "F401-0004",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P9052",
+   "planned_discharge_at": "2025-04-20T11:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "rr": 15,
+     "spo2": 96,
+     "sbp": 118,
+     "hr": 70
+    }
+   ],
+   "reviews": [
+    {
+     "outcome": "fit_for_discharge",
+     "at": "2025-04-20T08:00"
+    }
+   ],
+   "inv": [
+    {
+     "test": "Hb",
+     "status": "abnormal",
+     "ack": null
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P9025",
+   "reconciled": [
+    {
+     "drug": "metformin",
+     "dose": 1,
+     "unit": "g",
+     "freq": "bd"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "metformin",
+     "dose": 500,
+     "unit": "mg",
+     "freq": "bd"
+    }
+   ],
+   "pharmacy_ready_at": "2025-04-20T10:30"
+  },
+  "function_social": {
+   "therapy": {
+    "aid": "frame",
+    "transfer_assist": 2,
+    "adl": 8
+   },
+   "social": {
+    "lives_alone": true
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "TTO",
+     "status": "pending"
+    },
+    {
+     "task": "letter",
+     "status": "pending"
+    },
+    {
+     "task": "equipment",
+     "status": "pending"
+    },
+    {
+     "task": "GP",
+     "status": "pending"
+    },
+    {
+     "task": "obs",
+     "status": "done",
+     "completed_at": "2025-04-20T07:00",
+     "signed_by": "RN Hale"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-04-20",
+    "pickup": "10:45"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "none",
+  "outstanding_task_count": 4,
+  "false_completion": false,
+  "care_need": "rehab",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "mismatch",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "none",
+  "rx_change_documented": false,
+  "obs_pattern": "all_within_range",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "none",
+  "outstanding_task_count": 4,
+  "false_completion": false,
+  "care_need": "rehab",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "mismatch",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate_senior",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "remain_inpatient",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 86,
+ "deciding": {
+  "rx_matches": "Metformin 1 g versus 500 mg bd looks like a halved dose, but a unit-style reading and the ID mismatch leave doubt.",
+  "next_step": "patient.id P9052 versus medications.patient_id P9025 is a true identifier mismatch.",
+  "destination": "Frame, two-person transfer, ADL 8, lives alone, and no arrangement or start date show no safe destination.",
+  "outstanding_tasks": "Four tasks pending; the done obs item is irrelevant; level 3 versus 2 is arguable if one task is not required.",
+  "discharge_delay": "Pharmacy 10:30 and pickup 10:45 are before the planned 11:00, but outstanding tasks make same-day slippage plausible."
+ },
+ "request": "rec-F401-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007226
+}

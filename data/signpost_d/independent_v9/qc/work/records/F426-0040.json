@@ -1,0 +1,117 @@
+{
+ "id": "F426-0040",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B77",
+   "crop": "plum",
+   "planted_area_ha": 8.0
+  },
+  "applications": [
+   {
+    "date": "2024-04-02",
+    "product_code": "CPX-210",
+    "qty_applied": 6.12,
+    "qty_unit": "kg",
+    "area_treated_ha": 6.0,
+    "sprayer_id": "S5"
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "CPX210",
+    "max_rate_per_ha": 1.0,
+    "rate_unit": "kg",
+    "phi_days": 14,
+    "approved_crops": [
+     "plum"
+    ]
+   }
+  ],
+  "harvest": {
+   "first_pick_date": "2024-04-16",
+   "residue_test": {
+    "sampled": true,
+    "result_date": "2024-04-20",
+    "below_limit": false
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "boundary_day (changed from breached_long)",
+  "rate_overrun_band": "about 2% over max (changed from none)",
+  "partial_block_spray": true,
+  "clerical_mismatch": "product_code_typo",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "none (changed)",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "breached_long",
+  "rate_overrun_band": "none",
+  "partial_block_spray": true,
+  "clerical_mismatch": "product_code_typo",
+  "minor_use_auth": false,
+  "residue_test_clear": false,
+  "calibration_state": "valid",
+  "missing_item": "product_ref_entry_missing",
+  "season_count_excess": false,
+  "off_label_crop": true,
+  "num_applications": 8,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "clerical_only",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 73,
+ "deciding": {
+  "phi_cleared": "Applied 2024-04-02, first pick 2024-04-16: exactly 14 days, equal to phi_days, so inclusive or exclusive counting decides it.",
+  "next_step": "Residue result below_limit false: residue over the limit calls for referral to the technical manager, not release.",
+  "finding_class": "Code 'CPX-210' vs 'CPX210' is a clerical mismatch; the dose and timing otherwise comply on the stated terms.",
+  "reversal_time": "Referral and rejection decision likely resolves in days to a week.",
+  "rate_overrun": "6.12 kg / 6.0 ha = 1.02 kg/ha vs max 1.0, about 2% over; level 0 or 1 depending on tolerance."
+ },
+ "request": "rec-F426-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010292
+}

@@ -1,0 +1,133 @@
+{
+ "id": "F418-0027",
+ "family": "F418",
+ "state": {
+  "shift": {
+   "stn": "MRD",
+   "plat": 4,
+   "date": "2025-04-02",
+   "service_from": "06:00",
+   "service_to": "23:30",
+   "min_staff": 2,
+   "dispatch_mode": "staff"
+  },
+  "roster": [
+   {
+    "staff_id": "S12",
+    "planned_start": "13:00"
+   },
+   {
+    "staff_id": "S19",
+    "planned_start": "13:00"
+   }
+  ],
+  "attendance": [
+   {
+    "staff_id": "S12",
+    "sign_on": "13:05",
+    "safety_comp_exp": "2026-01-10",
+    "dispatch_comp_exp": "2026-01-10"
+   },
+   {
+    "staff_id": "S19",
+    "sign_on": "13:00",
+    "safety_comp_exp": "2025-12-01",
+    "dispatch_comp_exp": "2025-12-01"
+   }
+  ],
+  "events": [
+   {
+    "type": "gap_start",
+    "time": "14:10"
+   },
+   {
+    "type": "gap_end",
+    "time": "15:16"
+   }
+  ],
+  "controls": null,
+  "remarks": [
+   "Gap fully covered by relief. Dispensation D-204 attached."
+  ]
+ },
+ "factors": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 66,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "roster_attendance_mismatch": "trivial",
+  "shortfall_minutes": 66,
+  "shortfall_timing": "off_peak",
+  "dispensation_present": true,
+  "dispensation_fit": "covers_fully",
+  "cover_arrangement": "none",
+  "unqualified_dispatch": false,
+  "competence_lapse": false,
+  "benign_closure": false,
+  "note_consistency": "contradicts",
+  "missing_section": "controls_missing",
+  "prior_shortfalls_30d": 4,
+  "boundary_case": false
+ },
+ "plan": {
+  "headcount_verified": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate_ops",
+   "second": "correct_and_brief",
+   "targets": [
+    "T1"
+   ]
+  },
+  "coverage_outcome": {
+   "clarity": "clear",
+   "target": "partial_cover",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "leaning",
+   "target": "2",
+   "second": null,
+   "targets": []
+  },
+  "exposure_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "headcount_verified": "Both staff have sign-ons and in-date competence; only a 5-minute sign-on shift for S12.",
+  "next_step": "controls null while remarks cite D-204 and claim full cover with an open gap: records could be chased, corrected or escalated.",
+  "coverage_outcome": "Remark claims relief covered the gap, but events show gap_start 14:10 to 15:16 with no cover events, so at best partial cover; the contradiction is plain.",
+  "reversal_time": "Missing dispensation paperwork and a contradicted log likely need weeks to resolve.",
+  "exposure_severity": "66-minute gap in service; the dispensation is only referenced in remarks and controls is null, so level 1 versus 0 is balanced."
+ },
+ "request": "rec-F418-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00554
+}

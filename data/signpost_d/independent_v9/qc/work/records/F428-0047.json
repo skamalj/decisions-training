@@ -1,0 +1,120 @@
+{
+ "id": "F428-0047",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "SL-33",
+   "gate_type": "stoplog",
+   "rated_closure_s": 500
+  },
+  "inspection": {
+   "asset_id": "SL-33",
+   "insp_date": "2025-04-22",
+   "closure_test": {
+    "performed": true,
+    "test_date": "2025-04-22",
+    "closure_s": 450,
+    "leakage_l_min": 18,
+    "leakage_limit_l_min": 10,
+    "result": "fail"
+   }
+  },
+  "defects": [
+   {
+    "code": "P1",
+    "component": "leaf_paint",
+    "grade": 1,
+    "status": "open",
+    "first_seen": "2024-10-03"
+   }
+  ]
+ },
+ "factors": {
+  "gate_type": "demountable_stoplog",
+  "closure_time_ratio": 0.9,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "none",
+  "mismatch_count": 0,
+  "mismatch_location": "none",
+  "test_status": "leaking",
+  "repair_progress": "none_needed",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 49,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "demountable_stoplog",
+  "closure_time_ratio": 1.46,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "structural",
+  "mismatch_count": 4,
+  "mismatch_location": "test_date_vs_repair",
+  "test_status": "passed_current",
+  "repair_progress": "none_needed",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 49,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "flood_risk": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 33,
+ "deciding": {
+  "closure_test_valid": "Leakage 18 l/min exceeds the 10 l/min limit and the result is fail.",
+  "next_step": "The only open item is a grade 1 cosmetic paint defect, no work orders and no outage, so the record is filed as it stands.",
+  "defect_class": "The only open defect is a grade 1 paint defect, which is not above grade 1.",
+  "section_discrepancies": "asset_id, rated closure time and the other cross-section values all agree.",
+  "flood_risk": "closure_s 450 is within the rated 500 and there is no defect above grade 1."
+ },
+ "request": "rec-F428-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010367
+}

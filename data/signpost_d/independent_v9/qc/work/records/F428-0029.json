@@ -1,0 +1,126 @@
+{
+ "id": "F428-0029",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "FL-1180",
+   "gate_type": "flap",
+   "rated_closure_s": 40
+  },
+  "inspection": {
+   "asset_id": "FL-118O",
+   "insp_date": "2025-04-02",
+   "closure_test": {
+    "performed": false,
+    "closure_s": null,
+    "result": null
+   }
+  },
+  "defects": [
+   {
+    "code": "D2",
+    "component": "locking_gear",
+    "grade": 3,
+    "status": "open"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W31",
+     "component": "locking_gear",
+     "defect_code": "D2",
+     "grade_raised": 3,
+     "status": "in_progress",
+     "retest_insp_id": null
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "flood_alert_active": false
+  }
+ },
+ "factors": {
+  "gate_type": "flap",
+  "closure_time_ratio": "not measured (no test)",
+  "max_defect_grade": 3,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 1,
+  "mismatch_location": "asset_id (one character)",
+  "test_status": "not_performed",
+  "repair_progress": "in_progress",
+  "mitigation_present": false,
+  "mitigation_kind": "none",
+  "days_to_forecast_peak": 23,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.27,
+  "max_defect_grade": 3,
+  "dominant_defect_component": "seal",
+  "mismatch_count": 1,
+  "mismatch_location": "asset_id",
+  "test_status": "not_performed",
+  "repair_progress": "in_progress",
+  "mitigation_present": false,
+  "mitigation_kind": "recent_pass_retest",
+  "days_to_forecast_peak": 23,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "raise_repair",
+   "second": "request_retest",
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "clear",
+   "target": "drive_actuation",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 53,
+ "deciding": {
+  "closure_test_valid": "closure_test performed false with null closure_s and result.",
+  "next_step": "Grade 3 locking defect with a work order in progress and retest_insp_id null: either issue a repair with restrictions or ask for a post-repair retest.",
+  "defect_class": "The only open defect is grade 3 on locking_gear.",
+  "section_discrepancies": "Inspection asset_id FL-118O vs register FL-1180 differs by one character; it may be a typo, so level 0 is arguable.",
+  "flood_risk": "No test and no alert, in service; one open grade 3 defect (level 1) but closure ability is unmeasured, so level 0 is also defensible."
+ },
+ "request": "rec-F428-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011002
+}

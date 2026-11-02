@@ -1,0 +1,161 @@
+{
+ "id": "F426-0046",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B7",
+   "crop": "apple",
+   "planted_area_ha": 8
+  },
+  "applications": [
+   {
+    "app_id": "A1",
+    "date": "2024-06-02",
+    "product_code": "KZ5",
+    "qty_applied": 9,
+    "qty_unit": "kg",
+    "area_treated_ha": 6,
+    "sprayer_id": "S1",
+    "operator_cert_no": "C-221",
+    "wind_kmh": 22
+   },
+   {
+    "app_id": "A2",
+    "date": "2024-08-01",
+    "product_code": "LM3",
+    "qty_applied": 4,
+    "qty_unit": "L",
+    "area_treated_ha": 4,
+    "sprayer_id": "S1",
+    "operator_cert_no": "C-221",
+    "wind_kmh": 9
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "KZ5",
+    "max_rate_per_ha": 2,
+    "rate_unit": "kg",
+    "phi_days": 28,
+    "max_apps_per_season": 4,
+    "approved_crops": [
+     "apple"
+    ],
+    "minor_use_auth_ref": "MU-88"
+   },
+   {
+    "product_code": "LM3",
+    "max_rate_per_ha": 1.5,
+    "rate_unit": "L",
+    "phi_days": 14,
+    "max_apps_per_season": 3,
+    "approved_crops": [
+     "apple"
+    ],
+    "minor_use_auth_ref": null
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "S1",
+   "sprayer_type": "tunnel_recycling",
+   "last_calibration": "2024-03-10",
+   "calibration_valid_to": "2025-03-10",
+   "nozzle_dev_pct": 3
+  },
+  "harvest": {
+   "lot_id": "L7",
+   "block_id": "B7",
+   "first_pick_date": "2024-08-15",
+   "residue_test": {
+    "sampled": true,
+    "result_date": "2024-08-20",
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "none",
+  "partial_block_spray": true,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 2,
+  "high_wind_decoy": true
+ },
+ "factors_sampled": {
+  "phi_status": "boundary_day",
+  "rate_overrun_band": "near_10_boundary",
+  "partial_block_spray": true,
+  "clerical_mismatch": "none",
+  "minor_use_auth": true,
+  "residue_test_clear": false,
+  "calibration_state": "expired_under_30d_high_dev",
+  "missing_item": "operator_cert_null",
+  "season_count_excess": false,
+  "off_label_crop": true,
+  "num_applications": 9,
+  "high_wind_decoy": true
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "release_lot",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "no_finding",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "rate_overrun": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 96,
+ "deciding": {
+  "phi_cleared": "LM3 applied 2024-08-01, first pick 2024-08-15, phi_days 14: gap exactly equals the withholding period, so 'elapsed before' is arguable but leans not elapsed.",
+  "next_step": "Residue test sampled and below limit, calibration valid, certificates present, rates within label: nothing outstanding to request or escalate.",
+  "finding_class": "Rates 1.5 kg/ha and 1.0 L/ha are within maxes, crops approved, counts within limits, identifiers consistent, so no discrepancy.",
+  "reversal_time": "Accepting a compliant record with a clear residue result has no lasting consequence and can be reversed within a day.",
+  "rate_overrun": "9/6 = 1.5 kg/ha against max 2; 4/4 = 1.0 L/ha against max 1.5: both under maximum."
+ },
+ "request": "rec-F426-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010652
+}

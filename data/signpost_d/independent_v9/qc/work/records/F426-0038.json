@@ -1,0 +1,125 @@
+{
+ "id": "F426-0038",
+ "family": "F426",
+ "state": {
+  "block": {
+   "block_id": "B31",
+   "crop": "pear",
+   "planted_area_ha": 2.5
+  },
+  "applications": [
+   {
+    "date": "2024-01-05",
+    "product_code": "P3",
+    "qty_applied": 3.15,
+    "qty_unit": "kg",
+    "area_treated_ha": 2.5,
+    "sprayer_id": "S-07"
+   }
+  ],
+  "product_ref": [
+   {
+    "product_code": "P3",
+    "max_rate_per_ha": 1.0,
+    "rate_unit": "kg",
+    "phi_days": 14,
+    "approved_crops": [
+     "pear"
+    ],
+    "minor_use_auth_ref": "MU-5521"
+   }
+  ],
+  "equipment": {
+   "sprayer_id": "S07",
+   "calibration_valid_to": "2024-12-31",
+   "nozzle_dev_pct": 4
+  },
+  "harvest": {
+   "first_pick_date": "2024-02-10",
+   "residue_test": {
+    "sampled": true,
+    "result_date": "2024-02-12",
+    "below_limit": true
+   }
+  }
+ },
+ "factors": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "just over 25% above label max (changed from none so label_deviation holds)",
+  "partial_block_spray": false,
+  "clerical_mismatch": "sprayer_id_format",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "minor-use authorisation document (rate under it not shown)",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 1,
+  "high_wind_decoy": false
+ },
+ "factors_sampled": {
+  "phi_status": "clear_margin",
+  "rate_overrun_band": "none",
+  "partial_block_spray": false,
+  "clerical_mismatch": "sprayer_id_format",
+  "minor_use_auth": true,
+  "residue_test_clear": true,
+  "calibration_state": "valid",
+  "missing_item": "none",
+  "season_count_excess": false,
+  "off_label_crop": false,
+  "num_applications": 9,
+  "high_wind_decoy": false
+ },
+ "plan": {
+  "phi_cleared": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "request_evidence",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "finding_class": {
+   "clarity": "clear",
+   "target": "label_deviation",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "rate_overrun": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 70,
+ "deciding": {
+  "phi_cleared": "Application 2024-01-05, pick 2024-02-10: 36 days against phi 14; residue below limit.",
+  "next_step": "Rate exceeds label max, but minor_use_auth_ref MU-5521 is cited without its authorised rate; request that document.",
+  "finding_class": "3.15 kg / 2.5 ha = 1.26 kg/ha vs label max 1.0, with intervals respected: rate outside label.",
+  "reversal_time": "Obtaining the authorisation could take days, but a refused authorisation could take weeks; both plausible.",
+  "rate_overrun": "1.26 kg/ha is 26% over the 1.0 label max, right at the 25% boundary; the higher authorised rate is not shown."
+ },
+ "request": "rec-F426-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010292
+}

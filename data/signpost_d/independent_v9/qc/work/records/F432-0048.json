@@ -1,0 +1,167 @@
+{
+ "id": "F432-0048",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E03",
+   "risk_cat": 1,
+   "doors": [
+    "A",
+    "B"
+   ],
+   "temp_range_c": [
+    15,
+    25
+   ],
+   "active_vet_case": false
+  },
+  "shift": {
+   "date": "2024-05-14",
+   "start": "07:00",
+   "end": "15:00",
+   "opening_count": 3,
+   "closing_count": 4
+  },
+  "movements": [
+   {
+    "animal_id": "K7",
+    "direction": "in",
+    "time": "09:12",
+    "from": "E11"
+   }
+  ],
+  "feeding": {
+   "sheet_ver": "2024-04-02",
+   "items": [
+    {
+     "sheet_g": 1800,
+     "offered_g": 1800,
+     "leftover_g": 0.07,
+     "unit": "kg",
+     "fast_flag": false,
+     "scatter_flag": true
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched": "09:00",
+    "logged": true,
+    "entry_time": "09:02",
+    "temp_c": 21
+   },
+   {
+    "sched": "12:00",
+    "logged": true,
+    "entry_time": "12:03",
+    "temp_c": 22
+   },
+   {
+    "sched": "14:55",
+    "logged": true,
+    "entry_time": "14:57",
+    "temp_c": 21
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "A",
+     "time": "14:59"
+    },
+    {
+     "door": "B",
+     "time": "14:59"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "none",
+  "lock_check_timing": "logged_after_last_round_narrow_gap",
+  "intake_ratio": 0.96,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 0,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "unit_kg_vs_g",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_1_high"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "movement_logged_elsewhere",
+  "barrier_fault": "none",
+  "lock_check_timing": "partial_doors_only",
+  "intake_ratio": 0.96,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 0,
+  "cctv_cover": false,
+  "temp_excursion": "brief_single_reading",
+  "heater_maintenance_window": false,
+  "field_mismatch": "unit_kg_vs_g",
+  "behaviour_codes": 2,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_1_high"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "missed_rounds": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 56,
+ "deciding": {
+  "count_reconciles": "Opening 3 plus one logged in movement (K7 at 09:12) equals closing 4; the source enclosure is a different one, leaving mild doubt.",
+  "secure_at_close": "Both doors A and B were checked at 14:59, two minutes after the last round entry at 14:57 and one minute before shift end, a narrow margin.",
+  "next_step": "Counts, rounds, locks and intake are all in order with no open tickets, so the log can be filed.",
+  "intake_shortfall": "Leftover 0.07 kg converts to 70 g against 1800 g offered, about 96% intake; the unit mismatch is a small doubt.",
+  "missed_rounds": "All three scheduled rounds are logged true with entry times."
+ },
+ "request": "rec-F432-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012484
+}

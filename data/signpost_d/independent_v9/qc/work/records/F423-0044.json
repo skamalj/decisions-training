@@ -1,0 +1,127 @@
+{
+ "id": "F423-0044",
+ "family": "F423",
+ "state": {
+  "job": {
+   "run_qty": 20000,
+   "overs_pct": 3.73,
+   "spec_max_de": 3.0
+  },
+  "proof_signoff": {
+   "signed_at": "2024-03-12T10:06",
+   "concession": {
+    "accepted_max_de": 4.5
+   }
+  },
+  "colour_readings": {
+   "calibrated_on": "2024-03-10",
+   "patches": [
+    {
+     "ink": "C",
+     "delta_e": 4.8
+    },
+    {
+     "ink": "M",
+     "delta_e": null
+    },
+    {
+     "ink": "Y",
+     "delta_e": 5.1
+    }
+   ]
+  },
+  "registration": {
+   "targets": [
+    {
+     "offset_mm": 0.37,
+     "in_image": false
+    }
+   ]
+  },
+  "run_log": {
+   "first_production_at": "2024-03-12T10:05",
+   "sheets_production": 2308
+  }
+ },
+ "factors": {
+  "colour_deviation": "multiple_over",
+  "concession_on_file": true,
+  "readings_completeness": "some_patches_null",
+  "signoff_state": "signed_after_production",
+  "sheets_before_check": 2308,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 3.73,
+  "register_offset_mm": 0.37,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 2,
+  "customer_tier": "trade",
+  "prior_stoppages": 4
+ },
+ "factors_sampled": {
+  "colour_deviation": "multiple_over",
+  "concession_on_file": true,
+  "readings_completeness": "some_patches_null",
+  "signoff_state": "signed_in_order",
+  "sheets_before_check": 2308,
+  "wrong_stock_loaded": false,
+  "overs_allowance_pct": 3.73,
+  "register_offset_mm": 0.37,
+  "offset_in_trim_only": true,
+  "spectro_calibration_age_days": 2,
+  "customer_tier": "trade",
+  "prior_stoppages": 4
+ },
+ "plan": {
+  "colour_in_tolerance": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "run_before_signoff": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "adjust_and_recheck",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "scrap_exposure": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 31,
+ "deciding": {
+  "colour_in_tolerance": "Patches read 4.8 and 5.1, both over the concession limit of 4.5, and the magenta patch is null. Colour is plainly out of tolerance.",
+  "run_before_signoff": "signed_at 10:06 is one minute after first_production_at 10:05, with 2308 production sheets logged. The signature probably came late, but the one-minute gap leaves it open.",
+  "next_step": "Over-limit and missing patch readings mean colour needs correcting on press and the sheet re-pulled and remeasured. The 0.37 mm offset is on a target outside the image, so register is not the issue.",
+  "staff_effort": "Correcting colour and re-measuring is about a day, and the null patch needs a re-measure. The 2308 sheets already printed may need sorting, which could take several days.",
+  "scrap_exposure": "2308 production sheets were printed with colour over the limit, about 11.5% of run_qty 20000. That is above the 10% threshold and far beyond the overs allowance."
+ },
+ "request": "rec-F423-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011407
+}

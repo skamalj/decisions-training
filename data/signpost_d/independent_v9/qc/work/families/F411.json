@@ -1,0 +1,294 @@
+{
+ "id": "F411",
+ "domain": "taxi licence vehicle inspections",
+ "role": "Vehicle licensing compliance officer at a district council taxi and private hire licensing unit, reviewing one vehicle's renewal inspection file at a time",
+ "setting": "Each record is the inspection file for a licensed taxi or private hire vehicle seeking plate renewal. It holds the licence details, the vehicle's identity and odometer, the inspection carried out at an approved testing station, the defects found and their rectification, the required supporting documents, and a short history of earlier inspections. The officer decides whether the renewal proceeds, what the inspection outcome was, how complete the paperwork is, how much safety exposure remains, and whether the odometer reading can be trusted.",
+ "questions": {
+  "odometer_consistent": {
+   "type": "noul",
+   "instructions": "The current odometer reading is consistent with the vehicle's recorded history.",
+   "criteria": null
+  },
+  "next_step": {
+   "type": "choice",
+   "instructions": "What should happen to this licence renewal application now?",
+   "criteria": {
+    "renew": "Grant as is; vehicle and paperwork fully meet standards.",
+    "request_evidence": "One specific missing document or valid retest needed first.",
+    "conditional_renewal": "Renew with dated condition to clear minor outstanding defects.",
+    "refuse_renewal": "Major defect or several documents outstanding; odometer history sound.",
+    "refer_committee": "Unexplained odometer drop present; licensing committee must decide."
+   }
+  },
+  "inspection_outcome": {
+   "type": "choice",
+   "instructions": "Which category best describes the worst defect found at inspection?",
+   "criteria": {
+    "clean_pass": "No defects or advisories of any kind recorded at inspection.",
+    "advisory_only": "Only advisory notes recorded; no item reached fail severity.",
+    "minor_fail": "Worst failing item graded minor; nothing major or dangerous.",
+    "major_fail": "At least one item graded major or dangerous at inspection."
+   }
+  },
+  "document_gaps": {
+   "type": "score",
+   "instructions": "How many required documents are missing or expired at review date?",
+   "criteria": [
+    "Complete: no required document missing or expired",
+    "Single gap: exactly one document missing or expired",
+    "Two gaps: exactly two documents missing or expired",
+    "Multiple gaps: three or more missing or expired"
+   ]
+  },
+  "outstanding_severity": {
+   "type": "score",
+   "instructions": "How severe is the worst defect still outstanding today?",
+   "criteria": [
+    "No defect outstanding; all rectified and validly retested",
+    "Worst outstanding item is an advisory only",
+    "Worst outstanding is minor, still within its deadline",
+    "Worst outstanding is minor, past its rectification deadline",
+    "At least one major or dangerous defect outstanding"
+   ]
+  }
+ },
+ "factors": [
+  {
+   "name": "worst_defect_found",
+   "description": "Highest severity grade among items recorded at the inspection, before any rectification.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "advisory",
+    "minor",
+    "major",
+    "dangerous"
+   ],
+   "weights": [
+    0.25,
+    0.2,
+    0.3,
+    0.17,
+    0.08
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S4",
+    "S7"
+   ]
+  },
+  {
+   "name": "rectification_state",
+   "description": "State of repair for failing items: not started, repaired but not retested, retest passed, or retest failed.",
+   "kind": "categorical",
+   "values": [
+    "not_started",
+    "repaired_awaiting_retest",
+    "retest_passed",
+    "retest_failed"
+   ],
+   "weights": [
+    0.25,
+    0.25,
+    0.4,
+    0.1
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S3",
+    "S4"
+   ]
+  },
+  {
+   "name": "deadline_passed",
+   "description": "Whether the review date is after the rectification deadline set for outstanding minor defects.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.4,
+   "skills": [
+    "S2",
+    "S6"
+   ]
+  },
+  {
+   "name": "documents_missing_count",
+   "description": "Number of required documents (insurance, MOT-equivalent certificate, V5-style registration, meter calibration, wheelchair equipment certificate where applicable) absent or past expiry.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 3,
+   "p_true": 0,
+   "skills": [
+    "S2",
+    "S4"
+   ]
+  },
+  {
+   "name": "cover_note_mitigation",
+   "description": "An expired insurance or certificate entry carries a valid interim cover note or renewal receipt, so it counts as in date.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3"
+   ]
+  },
+  {
+   "name": "expiry_on_boundary",
+   "description": "One document's expiry date falls exactly on the review date, leaving in-date status arguable.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.15,
+   "skills": [
+    "S6"
+   ]
+  },
+  {
+   "name": "odometer_drop",
+   "description": "Whether the current reading is below the highest earlier reading, and by how much: none, small (under 100 km, plausible keying slip) or large.",
+   "kind": "categorical",
+   "values": [
+    "none",
+    "small",
+    "large"
+   ],
+   "weights": [
+    0.7,
+    0.12,
+    0.18
+   ],
+   "min": 0,
+   "max": 0,
+   "p_true": 0,
+   "skills": [
+    "S5",
+    "S6"
+   ]
+  },
+  {
+   "name": "cluster_replacement_documented",
+   "description": "A dated instrument cluster replacement with old and new readings is logged in history, explaining a drop.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.5,
+   "skills": [
+    "S3",
+    "S5"
+   ]
+  },
+  {
+   "name": "brake_test_missing",
+   "description": "The brake efficiency result in the inspection section is null, so the inspection is incomplete.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.1,
+   "skills": [
+    "S2"
+   ]
+  },
+  {
+   "name": "retest_before_repair",
+   "description": "Recorded retest date precedes the logged repair date, so the retest cannot validate the repair.",
+   "kind": "boolean",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 0,
+   "p_true": 0.08,
+   "skills": [
+    "S2",
+    "S5"
+   ]
+  },
+  {
+   "name": "prior_failures_12m",
+   "description": "Count of failed inspections in the preceding twelve months; context and decoy only.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 0,
+   "max": 4,
+   "p_true": 0,
+   "skills": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "name": "vehicle_age_years",
+   "description": "Age of the vehicle from first registration; within policy limits, used as a decoy.",
+   "kind": "integer",
+   "values": [],
+   "weights": [],
+   "min": 1,
+   "max": 14,
+   "p_true": 0,
+   "skills": [
+    "S7"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "name": "licence",
+   "description": "Plate number, licence type (hackney or private hire), current expiry date and review date."
+  },
+  {
+   "name": "vehicle",
+   "description": "Registration, make, model, first registration date, seats, current odometer_km."
+  },
+  {
+   "name": "inspection",
+   "description": "Station id, inspection date, overall result code, brake_efficiency_pct, emissions and lighting checks."
+  },
+  {
+   "name": "defects",
+   "description": "List of items with code, grade, rectify_by date, repaired_on, retest_on and retest_result."
+  },
+  {
+   "name": "documents",
+   "description": "List of required documents with type, reference, expires_on, cover_note_ref and cover_until."
+  },
+  {
+   "name": "history",
+   "description": "Earlier inspections with date, result and odometer_km, plus logged component replacements."
+  }
+ ],
+ "rendering_notes": "worst_defect_found appears only as grade values (advisory, minor, major, dangerous) on items in defects; an empty list means none. inspection.result_code is a terse station code (P, PA, F) that never distinguishes minor from major and is not the answer. rectification_state shows through repaired_on and retest_on/retest_result on failing items: both null = not started; repaired_on set and retest_on null = awaiting retest; retest_result 'pass' or 'fail'. retest_before_repair renders retest_on earlier than repaired_on with retest_result 'pass'; treat that item as unretested. deadline_passed is shown only by comparing defects.rectify_by with licence.review_date. documents_missing_count renders as required types absent from the list or expires_on before review_date; cover_note_mitigation adds cover_note_ref and cover_until after review_date to an expired entry, which then counts as in date. expiry_on_boundary sets expires_on equal to review_date with no cover note. odometer_drop compares vehicle.odometer_km with the highest history odometer_km; cluster_replacement_documented adds a history.replacements entry of type instrument_cluster dated between the readings with old_km and new_km that account for the drop; a drop without it makes the odometer claim false, and a small drop leaves it contested. brake_test_missing sets inspection.brake_efficiency_pct to null, which calls for request_evidence unless a major defect already justifies refusal. Precedence for next_step: unexplained odometer drop goes to refer_committee; else outstanding major/dangerous defect or two or more document gaps to refuse_renewal; else one document gap, null brake test or awaiting/invalid retest to request_evidence; else minor defects within deadline to conditional_renewal; else renew. prior_failures_12m (history results) and vehicle_age_years (first registration date) are decoys that never decide any answer alone. No field states a decision, risk level, completeness count or odometer verdict.",
+ "skills": [
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7"
+ ],
+ "shared_scale": null,
+ "next_step": {
+  "question": "next_step",
+  "info_option": "request_evidence"
+ },
+ "aggravating_factor": null,
+ "design_cost": 0.162364
+}

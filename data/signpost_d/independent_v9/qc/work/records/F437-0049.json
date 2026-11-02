@@ -1,0 +1,140 @@
+{
+ "id": "F437-0049",
+ "family": "F437",
+ "state": {
+  "job": {
+   "source_version": "v4",
+   "glossary_version": "g7",
+   "due_at": "2025-06-12T15:00",
+   "workflow": [
+    {
+     "step": "dtp",
+     "done_at": "2025-06-11"
+    }
+   ]
+  },
+  "source": {
+   "version": "v4",
+   "segment_count": 150,
+   "word_count": 2400
+  },
+  "deliverable": {
+   "built_from_version": "v4",
+   "segments_translated": 148,
+   "word_count": 2380,
+   "glossary_version_used": "g6",
+   "delivered_at": "2025-06-11T20:00"
+  },
+  "qa_report": {
+   "flags": 25,
+   "false_positive_marked": 19,
+   "number_mismatches": [
+    {
+     "src": "1,500",
+     "tgt": "1.050"
+    },
+    {
+     "src": "12",
+     "tgt": "21"
+    }
+   ],
+   "unresolved": {
+    "critical": 1,
+    "minor": 3
+   }
+  },
+  "review": {
+   "completed_at": "2025-06-11T18:00",
+   "signed_off": true,
+   "errors": [
+    {
+     "sev": "minor",
+     "status": "open"
+    }
+   ]
+  },
+  "history": {
+   "revision_rounds": [
+    "2025-06-05"
+   ]
+  }
+ },
+ "factors": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "critical",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.76,
+  "number_mismatch_count": 2,
+  "deadline_slack_hours": 19,
+  "client_waiver": false,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "factors_sampled": {
+  "scope_mismatch": "segments_missing",
+  "locale_mismatch": false,
+  "glossary_version_state": "older_version",
+  "review_status": "signed_before_delivery",
+  "open_error_profile": "minor_only",
+  "auto_qa_present": true,
+  "qa_false_positive_share": 0.76,
+  "number_mismatch_count": 6,
+  "deadline_slack_hours": 19,
+  "client_waiver": false,
+  "prior_revision_rounds": 1,
+  "dtp_step_pending": false
+ },
+ "plan": {
+  "scope_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "reviewed_in_time": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "return_for_fix",
+   "second": "escalate_am",
+   "targets": [
+    "T1"
+   ]
+  },
+  "open_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 60,
+ "deciding": {
+  "scope_matches": "Only 148 of 150 segments translated, but versions agree; small gap leaves it arguable.",
+  "reviewed_in_time": "Review completed 18:00 and signed off before delivery at 20:00; open minor error leaves slight doubt.",
+  "next_step": "Fixable errors with 19 hours before deadline favour return; older glossary and number errors could justify escalation.",
+  "open_severity": "qa_report.unresolved shows 1 critical though review shows only a minor open error.",
+  "parties_needed": "Translator can fix alone, but reviewer re-check or account manager on glossary may be needed."
+ },
+ "request": "rec-F437-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005927
+}

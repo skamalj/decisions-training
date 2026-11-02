@@ -1,0 +1,199 @@
+{
+ "id": "F401-0034",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P-9061",
+   "planned_discharge_at": "2025-03-10T12:00"
+  },
+  "clinical": {
+   "targets": {
+    "spo2": "88-92"
+   },
+   "obs": [
+    {
+     "rr": 22,
+     "spo2": 89,
+     "hr": 96,
+     "at": "2025-03-10T05:00"
+    },
+    {
+     "rr": 21,
+     "spo2": 90,
+     "hr": 94,
+     "at": "2025-03-09T21:00"
+    }
+   ],
+   "investigations": [
+    {
+     "test": "CRP",
+     "result": 48,
+     "status": "resulted",
+     "required_before_discharge": false,
+     "acknowledged_at": null
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P-9061",
+   "reconciled": [
+    {
+     "drug": "salbutamol",
+     "dose": 100,
+     "unit": "mcg",
+     "freq": "prn"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "prednisolone",
+     "action": "started",
+     "reason": "COPD exacerbation",
+     "prescriber": "Dr Aziz",
+     "changed_at": "2025-03-09T15:00"
+    }
+   ],
+   "discharge_rx": {
+    "signed_at": "2025-03-10T08:00",
+    "items": [
+     {
+      "drug": "salbutamol",
+      "dose": 100,
+      "unit": "mcg",
+      "freq": "prn"
+     },
+     {
+      "drug": "prednisolone",
+      "dose": 30,
+      "unit": "mg",
+      "freq": "od"
+     }
+    ]
+   },
+   "pharmacy_ready_at": "2025-03-10T11:00"
+  },
+  "function_social": {
+   "therapy": {
+    "mobility_aid": "frame",
+    "transfer_assist_count": 2,
+    "adl_score": 8
+   },
+   "social": {
+    "lives_alone": true,
+    "existing_package": null
+   },
+   "care_arrangement": {
+    "type": "reablement_bed",
+    "status": "confirmed",
+    "start_date": "2025-03-12"
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "summary",
+     "status": "done",
+     "completed_at": "2025-03-10T09:00",
+     "signed_by": "RN Cole"
+    },
+    {
+     "task": "handover",
+     "status": "done",
+     "completed_at": "2025-03-10T09:30",
+     "signed_by": null
+    },
+    {
+     "task": "equipment",
+     "status": "pending"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-03-13",
+    "pickup_time": null
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "drug_added",
+  "rx_change_documented": true,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": true,
+  "senior_fit_review": false,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "none",
+  "outstanding_task_count": 2,
+  "false_completion": true,
+  "care_need": "intermediate_care",
+  "care_arrangement_status": "confirmed_later_start",
+  "logistics_delay": "three_days",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "drug_added",
+  "rx_change_documented": true,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": false,
+  "senior_fit_review": false,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "discharge_rx_absent",
+  "outstanding_task_count": 4,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "not_required",
+  "logistics_delay": "none",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "escalate_senior",
+   "second": "discharge_now",
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "clear",
+   "target": "intermediate_care",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "outstanding_tasks": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "2",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 62,
+ "deciding": {
+  "rx_matches": "Prednisolone added on rx is covered by a change entry (reason, prescriber) dated before signing.",
+  "next_step": "Obs mildly abnormal but within the documented SpO2 target 88-92; CRP 48 is unacknowledged. Both escalating and discharging are defensible.",
+  "destination": "Frame, 2-person transfers, ADL 8, lives alone, and a confirmed reablement bed.",
+  "outstanding_tasks": "Equipment is pending; handover is done but has no signed_by, so it is arguably outstanding too (1 vs 2).",
+  "discharge_delay": "Bed from 03-12, but transport is booked 03-13 with no pickup time, a boundary between two days and three days."
+ },
+ "request": "rec-F401-0031",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010525
+}

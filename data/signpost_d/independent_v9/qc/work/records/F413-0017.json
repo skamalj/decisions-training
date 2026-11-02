@@ -1,0 +1,142 @@
+{
+ "id": "F413-0017",
+ "family": "F413",
+ "state": {
+  "site_profile": {
+   "tier": "warehouse",
+   "zones": [
+    {
+     "z": "dock",
+     "toxic_bait_permitted": false
+    }
+   ],
+   "stations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6"
+   ]
+  },
+  "visit": {
+   "tech_licence_expiry": "2026-01-31",
+   "start": "2025-05-12T08:30",
+   "client_signoff": null
+  },
+  "treatments": [
+   {
+    "product": "RB-5",
+    "zone": "dock",
+    "area_m2": 10,
+    "qty_applied": 303,
+    "unit": "g",
+    "label_max_per_m2": 21
+   }
+  ],
+  "van_stock": [
+   {
+    "movement": "withdraw",
+    "product": "RB-5",
+    "qty": 500,
+    "unit": "g"
+   }
+  ],
+  "monitoring": [
+   {
+    "id": "S1",
+    "activity": false
+   },
+   {
+    "id": "S2",
+    "activity": true
+   }
+  ],
+  "follow_up": {
+   "prev_active_stations": 3,
+   "actions": [
+    {
+     "status": "booked",
+     "date": "2025-07-02"
+    }
+   ]
+  }
+ },
+ "factors": {
+  "stock_mismatch": "surplus",
+  "stock_return_logged": false,
+  "station_count_gap": 4,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "decreased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 44.3,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": true,
+  "corrective_status": "booked",
+  "site_risk_tier": "warehouse"
+ },
+ "factors_sampled": {
+  "stock_mismatch": "none",
+  "stock_return_logged": false,
+  "station_count_gap": 4,
+  "monitoring_sheet_missing": false,
+  "date_sequence": "signoff_null",
+  "activity_trend": "decreased",
+  "previous_visit_available": true,
+  "dose_overage_pct": 44.4,
+  "licence_valid_on_visit": true,
+  "restricted_product_used": false,
+  "corrective_status": "booked",
+  "site_risk_tier": "warehouse"
+ },
+ "plan": {
+  "usage_reconciled": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "activity_increased": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "escalate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "breach_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 36,
+ "deciding": {
+  "usage_reconciled": "500 g withdrawn, none returned, 303 g applied: a 197 g unlogged surplus.",
+  "activity_increased": "1 active station against previous 3, but only 2 of 6 stations were checked, so doubt remains.",
+  "next_step": "RB-5 toxic bait applied in dock zone with toxic_bait_permitted false, which calls for escalation.",
+  "breach_severity": "Banned toxic bait used in the dock zone; the dose is also over label, but the prohibited use is the top level.",
+  "parties_needed": "Technician, manager, client, stock control and the booked revisit team: three or four, possibly five parties."
+ },
+ "request": "rec-F413-0016",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010903
+}

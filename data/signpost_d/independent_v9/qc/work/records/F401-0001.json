@@ -1,0 +1,201 @@
+{
+ "id": "F401-0001",
+ "family": "F401",
+ "state": {
+  "patient": {
+   "id": "P4410",
+   "ward": "AMU2",
+   "planned_discharge_at": "2025-03-12T14:00"
+  },
+  "clinical": {
+   "obs": [
+    {
+     "at": "2025-03-11T20:00",
+     "rr": 24,
+     "spo2": 89,
+     "sbp": 128,
+     "hr": 96
+    },
+    {
+     "at": "2025-03-12T06:00",
+     "rr": 23,
+     "spo2": 90,
+     "sbp": 126,
+     "hr": 92
+    }
+   ],
+   "targets": {
+    "spo2": "88-92"
+   },
+   "reviews": [
+    {
+     "role": "consultant",
+     "outcome": "fit_for_discharge",
+     "at": "2025-03-12T09:00"
+    }
+   ],
+   "investigations": [
+    {
+     "test": "K+",
+     "status": "resulted_abnormal",
+     "required_before_discharge": false,
+     "acknowledged_at": null
+    }
+   ]
+  },
+  "medications": {
+   "patient_id": "P4410",
+   "reconciled": [
+    {
+     "drug": "ramipril",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "od"
+    },
+    {
+     "drug": "furosemide",
+     "dose": 40,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "changes": [
+    {
+     "drug": "furosemide",
+     "action": "stop",
+     "reason": "AKI",
+     "by": "Dr Aziz",
+     "at": "2025-03-12T08:30"
+    }
+   ],
+   "discharge_rx": [
+    {
+     "drug": "ramipril",
+     "dose": 5,
+     "unit": "mg",
+     "freq": "od"
+    }
+   ],
+   "signed_at": "2025-03-12T10:00",
+   "pharmacy_ready_at": "2025-03-12T16:30"
+  },
+  "function_social": {
+   "therapy": {
+    "aid": "frame",
+    "transfer_assist": 1,
+    "adl": 14
+   },
+   "social": {
+    "lives_alone": true,
+    "carer": false
+   },
+   "care_arrangement": {
+    "type": "reablement",
+    "status": "requested_no_date",
+    "start": null
+   }
+  },
+  "discharge_tasks": {
+   "items": [
+    {
+     "task": "TTO",
+     "status": "done",
+     "completed_at": "2025-03-12T10:05",
+     "signed_by": "RN Cole"
+    },
+    {
+     "task": "letter",
+     "status": "done",
+     "completed_at": "2025-03-12T10:40",
+     "signed_by": "Dr Aziz"
+    }
+   ],
+   "transport": {
+    "booked_date": "2025-03-12",
+    "pickup": "17:00",
+    "dest": "home"
+   }
+  }
+ },
+ "factors": {
+  "rx_discrepancy": "drug_omitted",
+  "rx_change_documented": true,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "factors_sampled": {
+  "rx_discrepancy": "drug_omitted",
+  "rx_change_documented": true,
+  "obs_pattern": "repeated_abnormal",
+  "obs_baseline_documented": true,
+  "senior_fit_review": true,
+  "pending_result": "abnormal_unactioned",
+  "missing_section": "none",
+  "outstanding_task_count": 0,
+  "false_completion": false,
+  "care_need": "none",
+  "care_arrangement_status": "requested_no_date",
+  "logistics_delay": "same_day_late",
+  "identifier_consistency": "consistent",
+  "capacity_safeguarding_open": false
+ },
+ "plan": {
+  "rx_matches": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "request_item",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "destination": {
+   "clarity": "contested",
+   "target": "remain_inpatient",
+   "second": "intermediate_care",
+   "targets": []
+  },
+  "outstanding_tasks": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "discharge_delay": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 171,
+ "deciding": {
+  "rx_matches": "Furosemide absent from discharge_rx but a stop entry (AKI, Dr Aziz, 08:30) precedes signing at 10:00, so reconciled.",
+  "next_step": "Abnormal potassium unacknowledged with no follow_up_owner suggests getting it actioned; obs are mitigated by a 88-92 target and later consultant review, so doubt remains.",
+  "destination": "Reablement requested with null start date and frame/lives alone point to remain_inpatient, while reablement type also fits intermediate_care.",
+  "outstanding_tasks": "Both listed tasks are signed and timed, so 0; the unacknowledged potassium could be counted as one gap.",
+  "discharge_delay": "Reablement requested_no_date counts as three or more days; transport 17:00 and pharmacy 16:30 are same day, so level 3 versus 2 is arguable."
+ },
+ "request": "rec-F401-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.007226
+}

@@ -1,0 +1,126 @@
+{
+ "id": "F421-0047",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-30958",
+   "service": "express",
+   "fragile": false,
+   "contents": "espresso machine",
+   "qty": 1,
+   "weight_kg": 9.5,
+   "declared_value_gbp": 809.54
+  },
+  "handling_events": [
+   {
+    "ts": "2024-06-11T07:05",
+    "site": "HUB-W",
+    "code": "OUT",
+    "exc": null
+   },
+   {
+    "ts": "2024-06-11T13:40",
+    "site": "DEPOT",
+    "code": "IN",
+    "exc": "DMG"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-06-11T15:00",
+   "observed_item": "kettle",
+   "qty_found": 1,
+   "weight_kg": 1.8,
+   "condition": "dented lid",
+   "photos": [
+    "k1.jpg"
+   ],
+   "repair_est_gbp": 28.33
+  },
+  "claim": {
+   "claim_id": "C-5521",
+   "claimed_gbp": 46.46,
+   "item_desc": "espresso machine",
+   "packaging_desc": "double-wall box, void fill",
+   "submitted": "2024-06-14"
+  },
+  "notes": [
+   "Sender asks for a callback about what was received."
+  ]
+ },
+ "factors": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 3.5,
+  "declared_value": 809.54,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.64
+ },
+ "factors_sampled": {
+  "damage_timing": "in_depot",
+  "manifest_mismatch": "weight_large",
+  "inspection_state": "complete",
+  "loss_pct": 7.01,
+  "declared_value": 809.54,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": false,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": false,
+  "note_slant": "neutral",
+  "claim_amount_gap": 1.64
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "loss_share": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "parties_needed": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 107,
+ "deciding": {
+  "depot_fault": "First DMG code coincides with the depot inbound scan and no upstream scan shows damage, so timing is not established; leaning not proven.",
+  "contents_match": "Manifest espresso machine 9.5 kg vs observed kettle 1.8 kg: different product and far over 20% weight gap.",
+  "next_step": "Report complete with photo and small loss; the claim is small and the open point is only a callback, so closing is likely but doubted.",
+  "loss_share": "Repair 28.33 of 809.54 is about 3.5%; the claimed 46.46 (5.7%) is a decoy that creates some doubt.",
+  "parties_needed": "The assessor could close alone, but the sender callback and claim could involve a second team; held in balance."
+ },
+ "request": "rec-F421-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00817
+}

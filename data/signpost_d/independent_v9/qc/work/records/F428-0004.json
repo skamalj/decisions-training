@@ -1,0 +1,133 @@
+{
+ "id": "F428-0004",
+ "family": "F428",
+ "state": {
+  "asset": {
+   "asset_id": "FL-560",
+   "gate_type": "flap",
+   "rated_closure_s": 36,
+   "clear_width": 3.2,
+   "clear_width_unit": "m"
+  },
+  "inspection": {
+   "insp_id": "I-905",
+   "asset_id": "FL-506",
+   "insp_date": "2025-04-08",
+   "closure_test": {
+    "performed": false,
+    "test_date": null,
+    "closure_s": null,
+    "result": null
+   }
+  },
+  "defects": [
+   {
+    "code": "D4",
+    "component": "hinge",
+    "grade": 1,
+    "status": "open",
+    "first_seen": "2025-01-15"
+   }
+  ],
+  "maintenance": {
+   "work_orders": [
+    {
+     "wo_id": "W12",
+     "component": "hinge",
+     "grade_raised": 2,
+     "status": "in_progress",
+     "rated_closure_s": 36.5,
+     "retest_insp_id": null
+    }
+   ]
+  },
+  "operations": {
+   "outage": {
+    "status": "in_service"
+   },
+   "temp_barrier_deployed": true,
+   "flood_alert_active": false,
+   "forecast": {
+    "peak_date": "2025-05-11",
+    "peak_level_mAOD": 3.1,
+    "sill_level_mAOD": 2.4
+   }
+  }
+ },
+ "factors": {
+  "gate_type": "flap",
+  "closure_time_ratio": "not_applicable",
+  "max_defect_grade": 1,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 2,
+  "mismatch_location": "asset_id, work order grade, rated_closure_s (borderline)",
+  "test_status": "not_performed",
+  "repair_progress": "in_progress",
+  "mitigation_present": true,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 33,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "factors_sampled": {
+  "gate_type": "flap",
+  "closure_time_ratio": 1.24,
+  "max_defect_grade": 1,
+  "dominant_defect_component": "drive_actuation",
+  "mismatch_count": 2,
+  "mismatch_location": "asset_id",
+  "test_status": "not_performed",
+  "repair_progress": "in_progress",
+  "mitigation_present": true,
+  "mitigation_kind": "temporary_barrier_deployed",
+  "days_to_forecast_peak": 33,
+  "borderline_case": false,
+  "outage_beyond_permit": false
+ },
+ "plan": {
+  "closure_test_valid": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "leaning",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T1"
+   ]
+  },
+  "defect_class": {
+   "clarity": "leaning",
+   "target": "no_open_defect",
+   "second": null,
+   "targets": []
+  },
+  "section_discrepancies": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "flood_risk": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 90,
+ "deciding": {
+  "closure_test_valid": "closure_test performed false with null timings and result; no test is logged.",
+  "next_step": "Gate in service with a temporary barrier deployed, a grade 1 defect and a repair already in progress, so file.",
+  "defect_class": "The only open defect is grade 1 (hinge), so no open defect above grade 1.",
+  "section_discrepancies": "Balanced: asset_id FL-560 vs FL-506 and work order grade 2 vs defect grade 1 are clear; the work order rated_closure_s 36.5 vs register 36 is a doubtful third.",
+  "flood_risk": "Contested: no defect above grade 1 and a temporary barrier is deployed, but the closure test was not performed, so closing time is unknown; forecast peak 3.1 mAOD is above sill 2.4."
+ },
+ "request": "rec-F428-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008804
+}

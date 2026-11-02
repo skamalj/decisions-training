@@ -1,0 +1,115 @@
+{
+ "id": "F408-0007",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 1001,
+   "stream": "RES",
+   "claimed": "2024-05-07",
+   "logged_at": "2024-05-07T15:10"
+  },
+  "schedule": {
+   "streams": [
+    "RES"
+   ],
+   "date": "2024-05-07"
+  },
+  "round_log": {
+   "completed_at": "2024-05-07T15:00",
+   "stops": [
+    {
+     "uprn": 1001,
+     "exc": null,
+     "gps_stop": false,
+     "photo_ref": null
+    }
+   ],
+   "sweep_at": "2024-05-07T17:30"
+  },
+  "history": []
+ },
+ "factors": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": true,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 0,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "factors_sampled": {
+  "stream_mismatch": "none",
+  "report_timing": "after_round_complete",
+  "crew_exception": "none",
+  "exception_supported": true,
+  "telematics_pass": "passed_no_stop",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "none",
+  "prior_upheld_misses": 4,
+  "history_decoys": 0,
+  "assisted_miss_breach": false
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "report_matches": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 34,
+ "deciding": {
+  "crew_missed": "The stop has no exception code, gps_stop false and no photo_ref, so the crew passed without a supported exception.",
+  "report_matches": "Stream and date agree with the schedule, but the report was logged only 10 minutes after the round completed, which is close to the boundary.",
+  "next_step": "sweep_at 17:30 is later than logged_at 15:10, so the bin was already emptied and the case closes.",
+  "return_urgency": "The later sweep collection means nothing is outstanding, so no return is needed.",
+  "repeat_failures": "The history list is empty, so there are no upheld misses."
+ },
+ "request": "rec-F408-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010668
+}

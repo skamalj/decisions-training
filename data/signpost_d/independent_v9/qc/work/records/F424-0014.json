@@ -1,0 +1,128 @@
+{
+ "id": "F424-0014",
+ "family": "F424",
+ "state": {
+  "batch": {
+   "batch_id": "B2414",
+   "vessel_id": "FV2",
+   "volume_hl": 20,
+   "yeast_strain": "S-04",
+   "og_target": 1.05,
+   "fg_target_min": 1.01,
+   "fg_target_max": 1.014,
+   "strain_max_temp_c": 24
+  },
+  "readings": [
+   {
+    "ts": "2024-06-04",
+    "gravity_sg": 1.013,
+    "temp_c": 22.5
+   },
+   {
+    "ts": "2024-06-05",
+    "gravity_sg": 1.013,
+    "temp_c": 22.5
+   }
+  ],
+  "events": [
+   {
+    "note": "Possible tang, check."
+   },
+   {
+    "note": "Pitched US-05 in FV6."
+   }
+  ],
+  "lab": {
+   "batch_ref": "B2414",
+   "micro_plate": {
+    "result": "negative"
+   },
+   "retest": [
+    "negative"
+   ],
+   "diacetyl_mgl": 0.08
+  },
+  "release_request": {
+   "vessel_id": "FV2",
+   "volume_hl": 22
+  }
+ },
+ "factors": {
+  "gravity_status": "stable in band 1.013, two readings",
+  "final_reading_gap": false,
+  "temp_excursion": "sustained_major, noted but readings within limit",
+  "excursion_mitigated": false,
+  "micro_signal": "sensory note only",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.08,
+  "discrepancy_count": 3,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "alarmed"
+ },
+ "factors_sampled": {
+  "gravity_status": "stuck_high",
+  "final_reading_gap": false,
+  "temp_excursion": "sustained_major",
+  "excursion_mitigated": false,
+  "micro_signal": "none",
+  "micro_mitigated": true,
+  "diacetyl_mgl": 0.08,
+  "discrepancy_count": 3,
+  "decoy_mismatch": true,
+  "lab_result_pending": false,
+  "hard_limit_breach": false,
+  "release_pressure": "none",
+  "operator_note_tone": "alarmed"
+ },
+ "plan": {
+  "terminal_gravity": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "contamination_supported": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "batch_disposition": {
+   "clarity": "leaning",
+   "target": "release_conditional",
+   "second": null,
+   "targets": []
+  },
+  "deviation_severity": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "record_discrepancies": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "",
+ "target_words": 51,
+ "deciding": {
+  "terminal_gravity": "Two readings of 1.013 are in band, with little doubt.",
+  "contamination_supported": "The tang note against a negative plate and negative retest is two-sided.",
+  "batch_disposition": "Results are complete and a record fix is needed, so release_conditional.",
+  "deviation_severity": "Temps stay within 24C, so Nil, though the alarmed note leaves Minor open.",
+  "record_discrepancies": "Mismatches in strain vs the pitch note, vessel vs the pitch event, and volume 20 vs 22."
+ },
+ "request": "rec-F424-0011",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00502
+}

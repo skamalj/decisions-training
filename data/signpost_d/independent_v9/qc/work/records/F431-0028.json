@@ -1,0 +1,130 @@
+{
+ "id": "F431-0028",
+ "family": "F431",
+ "state": {
+  "meter": {
+   "serial": "H3",
+   "seal_state": "broken",
+   "seal_checked_date": "2024-03-20"
+  },
+  "period_read": {
+   "read_date": "2024-03-31",
+   "reg_kwh": 9340,
+   "src_code": "AMR",
+   "photo_ref": null
+  },
+  "history": [
+   {
+    "date": "2024-01-31",
+    "reg_kwh": 7400,
+    "src_code": "EST",
+    "same_period_ly_kwh": 1200
+   },
+   {
+    "date": "2024-02-15",
+    "reg_kwh": 7700,
+    "src_code": "EST",
+    "same_period_ly_kwh": 1100
+   },
+   {
+    "date": "2024-02-29",
+    "reg_kwh": 8000,
+    "src_code": "EST",
+    "same_period_ly_kwh": 1000
+   }
+  ],
+  "diagnostics": {
+   "error_codes": [
+    "E_FLOW"
+   ],
+   "flow_temp_c": 66,
+   "return_temp_c": 40
+  },
+  "site_context": {
+   "occupancy": "changed",
+   "tenancy_change_date": "2024-03-12",
+   "hdd_current": 107,
+   "hdd_prior_year": 100,
+   "works_orders": [],
+   "dispute_open": false
+  }
+ },
+ "factors": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 1.25,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.07,
+  "diagnostic_error_count": 1,
+  "meter_works_order": false,
+  "consecutive_estimates": 3,
+  "delta_t_implausible": false,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "factors_sampled": {
+  "read_source": "amr_remote",
+  "read_sequence_issue": "none",
+  "missing_section": "none",
+  "consumption_ratio": 2.51,
+  "occupancy_change": true,
+  "degree_day_ratio": 1.07,
+  "diagnostic_error_count": 1,
+  "meter_works_order": false,
+  "consecutive_estimates": 3,
+  "delta_t_implausible": false,
+  "seal_status": "broken_no_visit",
+  "dispute_open": false
+ },
+ "plan": {
+  "meter_fault": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "billable_actual": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "bill_estimate",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "staff_effort": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  },
+  "consumption_deviation": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 38,
+ "deciding": {
+  "meter_fault": "Seal broken on 2024-03-20 with no ENG entry or works order, plus an active E_FLOW code, indicates tampering or a device fault.",
+  "billable_actual": "AMR read in sequence, but the broken unmatched seal and E_FLOW undermine it; three prior estimates give some doubt about how reliable the baseline is.",
+  "next_step": "Seal break without a visit plus a flow error make the read unusable, and three trailing estimates mean billing a flagged estimate until a visit.",
+  "staff_effort": "Unmatched seal break, three estimates in a row and no works order point to a long investigation, possibly beyond five days.",
+  "consumption_deviation": "Consumption 1340 vs expected 1070 (1000*107/100) is about 25% over, in the 15 to 40% band."
+ },
+ "request": "rec-F431-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009637
+}

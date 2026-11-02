@@ -1,0 +1,151 @@
+{
+ "id": "F427-0030",
+ "family": "F427",
+ "state": {
+  "site_targets": {
+   "band_top_cm": 5,
+   "band_floor_cm": 25,
+   "dipwells_scheduled": 2
+  },
+  "hydrology": {
+   "dipwells": [
+    {
+     "depth_cm": 12,
+     "prev_depth_cm": 7
+    },
+    {
+     "depth_cm": 14,
+     "prev_depth_cm": 8
+    }
+   ],
+   "controls": [
+    {
+     "depth_cm": 9,
+     "prev_depth_cm": 5
+    }
+   ],
+   "rain_30d_pct_normal": 59
+  },
+  "structures": {
+   "inspections": [
+    {
+     "dam_id": "D2",
+     "pool_level_cm": 34,
+     "design_pool_cm": 40,
+     "defect_code": "OVTP",
+     "remark": "Minor lip overflow."
+    }
+   ],
+   "open_work_orders": [
+    {
+     "dam_id": "D2",
+     "status": "contractor_booked"
+    }
+   ]
+  },
+  "vegetation": {
+   "quadrats": [
+    {
+     "q": 1,
+     "score": 5
+    },
+    {
+     "q": 2,
+     "score": 4,
+     "species_n": null
+    }
+   ],
+   "photos_uploaded": 6,
+   "photos_expected": 6
+  },
+  "notes": {
+   "prior_visits": [
+    "2023-05-02 D2 breach",
+    "2023-09-14 D2 breach",
+    "2024-02-20 D2 breach"
+   ]
+  }
+ },
+ "factors": {
+  "dipwell_coverage": 1.0,
+  "photos_status": "full",
+  "quadrats_status": "complete",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "minor_overtopping",
+  "water_table_offset_cm": 0.0,
+  "rainfall_pct_normal": 59.0,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 3,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "reassuring",
+  "grazing_signs": true
+ },
+ "factors_sampled": {
+  "dipwell_coverage": 0.44,
+  "photos_status": "partial",
+  "quadrats_status": "partial",
+  "dam_inspection_logged": true,
+  "worst_dam_defect": "none",
+  "water_table_offset_cm": 6.51,
+  "rainfall_pct_normal": 59.31,
+  "control_dipwells_dropped": true,
+  "repair_order_open": true,
+  "prior_failure_same_dam": 3,
+  "date_sequence_fault": false,
+  "surveyor_grade": "trainee",
+  "note_tone": "reassuring",
+  "grazing_signs": true
+ },
+ "plan": {
+  "dam_caused_drop": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "accept_record",
+   "second": "escalate_lead",
+   "targets": [
+    "T1"
+   ]
+  },
+  "hydro_state": {
+   "clarity": "clear",
+   "target": "within_band",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "dam_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  },
+  "evidence_completeness": {
+   "clarity": "balanced",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 35,
+ "deciding": {
+  "dam_caused_drop": "The control also dropped 4 cm and rain is only 59% of normal, which points to dry weather, but the site wells dropped more and D2 is overtopping.",
+  "next_step": "Within band, a contractor is already booked for D2, and the record is complete, so filing is defensible; three earlier breaches on D2 support escalation.",
+  "hydro_state": "Mean depth 13 cm is inside the 5-25 cm band.",
+  "dam_severity": "OVTP with pool 34 of 40 cm and a minor overflow: level 2 by the code, level 1 if read as minor.",
+  "evidence_completeness": "All four elements are present in full; one species_n field is null, so level 3 is arguable."
+ },
+ "request": "rec-F427-0026",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.011036
+}

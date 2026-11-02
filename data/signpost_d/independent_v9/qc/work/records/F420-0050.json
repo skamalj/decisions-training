@@ -1,0 +1,137 @@
+{
+ "id": "F420-0050",
+ "family": "F420",
+ "state": {
+  "plan_header": {
+   "uld": "AKE55207",
+   "serial": "55207",
+   "position": "05L",
+   "tare_kg": 130,
+   "planned_gross_kg": 1930,
+   "straps_required": 4,
+   "contour_max_cm": 170
+  },
+  "manifest_lines": [
+   {
+    "awb": "217-84120055",
+    "pcs": 9,
+    "weight_kg": 1200
+   },
+   {
+    "awb": "217-84120066",
+    "pcs": 3,
+    "weight_kg": 600
+   }
+  ],
+  "build_measured": {
+   "scale_gross_kg": 1811,
+   "max_height_cm": 175,
+   "pcs_counted": {
+    "217-84120055": 9,
+    "217-84120066": null
+   },
+   "straps_fitted": 4,
+   "net_fitted": true,
+   "uld_serial_scanned": "55207"
+  },
+  "dg_notoc": null,
+  "approvals": {
+   "part_shipments": [
+    {
+     "awb": "217-84120055",
+     "pcs_this_flight": 9
+    }
+   ],
+   "contour_waivers": [
+    {
+     "uld": "AKE55207",
+     "position": "03R",
+     "max_cm": 180
+    }
+   ]
+  },
+  "checks_log": {
+   "scale_cal_due": "2026-02-01",
+   "reweigh": {
+    "scale": "CAL-1",
+    "kg": 1925
+   }
+  }
+ },
+ "factors": {
+  "weight_deviation_pct": -0.26,
+  "piece_count_gap": "null_count",
+  "part_shipment_on_file": true,
+  "height_vs_contour": "over_by_5cm",
+  "contour_waiver": false,
+  "dg_state": "no_dg",
+  "notoc_match": "not_applicable",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 154,
+  "prior_rebuilds": 0
+ },
+ "factors_sampled": {
+  "weight_deviation_pct": -6.17,
+  "piece_count_gap": 0,
+  "part_shipment_on_file": true,
+  "height_vs_contour": "within_2cm",
+  "contour_waiver": true,
+  "dg_state": "dg_segregation_conflict",
+  "notoc_match": "matched",
+  "securing_state": "complete",
+  "scale_cal_overdue": false,
+  "reweigh_logged": true,
+  "doc_field_mismatch": "none",
+  "minutes_to_cutoff": 154,
+  "prior_rebuilds": 0
+ },
+ "plan": {
+  "pieces_reconciled": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "disposition": {
+   "clarity": "leaning",
+   "target": "release",
+   "second": null,
+   "targets": []
+  },
+  "worst_discrepancy": {
+   "clarity": "clear",
+   "target": "physical_build",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "weight_deviation": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": []
+  },
+  "rework_extent": {
+   "clarity": "balanced",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 94,
+ "deciding": {
+  "pieces_reconciled": "pcs_counted for 217-84120066 is null, so its 3 pieces are not confirmed, though the other AWB matches its part shipment.",
+  "disposition": "Height 175 exceeds 170 and the waiver is for position 03R, not 05L, so physical issues point to rebuild; a reader might still release given the clean weight.",
+  "worst_discrepancy": "Unwaived over-height of 5 cm and an unrecorded count; no DG, so it is physical build.",
+  "weight_deviation": "Calibrated reweigh 1925 vs planned 1930 is -0.26%, overriding the build scale 1811 (-6.2%).",
+  "rework_extent": "Over-height of exactly 5 cm sits on the line between partial and full rework."
+ },
+ "request": "rec-F420-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012543
+}

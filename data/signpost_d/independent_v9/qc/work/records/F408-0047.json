@@ -1,0 +1,136 @@
+{
+ "id": "F408-0047",
+ "family": "F408",
+ "state": {
+  "report": {
+   "uprn": 200045,
+   "postcode": "BN3 2QX",
+   "stream": "garden",
+   "claimed": "2024-05-07",
+   "logged_at": "2024-05-09T10:00",
+   "photo": false
+  },
+  "property": {
+   "uprn": 200045,
+   "postcode": "BN3 2QY",
+   "assisted": true,
+   "assisted_since": "2023-11-01"
+  },
+  "schedule": {
+   "streams_due": [
+    "refuse"
+   ],
+   "date": "2024-05-07"
+  },
+  "round_log": {
+   "completed_at": "2024-05-07T14:00",
+   "stops": [
+    {
+     "uprn": 200045,
+     "exception": "not_presented",
+     "photo_ref": "P88",
+     "gps_stop": true
+    }
+   ],
+   "sweep_at": null
+  },
+  "history": [
+   {
+    "uprn": 200045,
+    "on": "2024-04-02",
+    "outcome": "upheld"
+   },
+   {
+    "uprn": 200045,
+    "on": "2024-03-20",
+    "outcome": "rejected"
+   },
+   {
+    "uprn": 200045,
+    "on": "2023-12-01",
+    "outcome": "upheld"
+   }
+  ]
+ },
+ "factors": {
+  "stream_mismatch": "wrong_stream",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": true,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "none",
+  "already_collected": false,
+  "photo_attached": false,
+  "address_id_mismatch": "postcode_typo",
+  "prior_upheld_misses": 1,
+  "history_decoys": 2,
+  "assisted_miss_breach": true
+ },
+ "factors_sampled": {
+  "stream_mismatch": "wrong_stream",
+  "report_timing": "after_round_complete",
+  "crew_exception": "not_presented",
+  "exception_supported": false,
+  "telematics_pass": "stopped_at_address",
+  "round_disruption": "none",
+  "already_collected": true,
+  "photo_attached": false,
+  "address_id_mismatch": "postcode_typo",
+  "prior_upheld_misses": 4,
+  "history_decoys": 2,
+  "assisted_miss_breach": true
+ },
+ "plan": {
+  "crew_missed": {
+   "clarity": "clear",
+   "target": "false",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "report_matches": {
+   "clarity": "leaning",
+   "target": "false",
+   "second": null,
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "return_conditional",
+   "second": "request_evidence",
+   "targets": [
+    "T1"
+   ]
+  },
+  "return_urgency": {
+   "clarity": "clear",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3",
+    "T5"
+   ]
+  },
+  "repeat_failures": {
+   "clarity": "clear",
+   "target": "1",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (assisted_miss_breach = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 51,
+ "deciding": {
+  "crew_missed": "The stop has exception not_presented with photo_ref P88 and gps_stop true, so the crew did not miss a presented bin.",
+  "report_matches": "Garden stream reported but only refuse is due; the postcode differs by one character (QX vs QY).",
+  "next_step": "Not_presented with a photo points to a conditional return, but the stream and postcode mismatches leave a request for evidence plausible.",
+  "return_urgency": "Assisted collection since 2023-11-01 and the stop shows not_presented, so same day.",
+  "repeat_failures": "Only one upheld entry (2024-04-02) falls inside 84 days; the other is a rejected case and an older one from 2023-12-01."
+ },
+ "request": "rec-F408-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010405
+}

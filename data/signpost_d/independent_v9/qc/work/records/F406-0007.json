@@ -1,0 +1,132 @@
+{
+ "id": "F406-0007",
+ "family": "F406",
+ "state": {
+  "session": {
+   "gallery_code": "G6",
+   "date": "2024-07-02",
+   "certified_limit": 150
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "13:00",
+     "occupancy": 170
+    },
+    {
+     "start": "13:15",
+     "occupancy": 183
+    },
+    {
+     "start": "13:30",
+     "occupancy": 175
+    }
+   ],
+   "manual_tally_peak": 162
+  },
+  "variations": [
+   {
+    "gallery_code": "G6",
+    "valid_from": "2024-07-01",
+    "valid_to": "2024-07-03",
+    "uplift_to": 180,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "maintenance": [
+    {
+     "gate": "S2",
+     "raised_at": "2024-07-02T09:10",
+     "summary": "over-count"
+    }
+   ]
+  },
+  "staff_log": {
+   "egress_check": "done",
+   "notes": "Quiet, no issues."
+  },
+  "history": {
+   "overages_30d": 6
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.9,
+  "intervals_over_limit": 1,
+  "section_mismatch": "tally_vs_counter",
+  "variation_present": true,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": true
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.24,
+  "intervals_over_limit": 1,
+  "section_mismatch": "none",
+  "variation_present": false,
+  "variation_scope": "wrong_gallery",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 6,
+  "staff_note_tone": "reassuring_unsupported",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "clear",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4",
+    "T5"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "contested",
+   "target": "restrict_admissions",
+   "second": "file_as_complete",
+   "targets": [
+    "T1"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  },
+  "intervals_over": {
+   "clarity": "contested",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 34,
+ "deciding": {
+  "variation_applies": "The variation gallery_code G6 matches the session, the window covers 07-02, status is approved, and the uplift is 180.",
+  "fault_explains_overage": "A ticket for gate S2 was raised before the session on the same date, but its summary is a vague over-count and no gate-level counts are shown.",
+  "next_step": "Six overages in 30 days argue for restricting the next session, while the documented fault and the tally of 162 under 180 argue for filing.",
+  "peak_excess": "The tally peak of 162 is exactly 90% of the 180 limit, on the boundary between levels 0 and 1, though the counter shows 183.",
+  "intervals_over": "Only the 13:15 counter reading of 183 exceeds 180, and it falls under the fault ticket, so the count is 0 or 1."
+ },
+ "request": "rec-F406-0006",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.00979
+}

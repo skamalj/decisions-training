@@ -1,0 +1,153 @@
+{
+ "id": "F419-0039",
+ "family": "F419",
+ "state": {
+  "test_meta": {
+   "rwy": "12/30",
+   "date": "2024-06-03",
+   "speed_kmh": 65,
+   "thresholds": {
+    "design": 0.72,
+    "maint_planning": 0.52,
+    "minimum": 0.42
+   },
+   "weather": {
+    "wind_kph": 12,
+    "temp_c": 18
+   }
+  },
+  "device": {
+   "cal_expiry": "2025-02-01",
+   "tyre_pressure_kpa": 205,
+   "tyre_spec_kpa": [
+    200,
+    220
+   ],
+   "water_depth_mm": 1.0
+  },
+  "runs": [
+   {
+    "dir": "12",
+    "thirds": [
+     0.51,
+     0.51,
+     0.5
+    ],
+    "segments_100m": [
+     0.52,
+     0.41,
+     0.5
+    ]
+   },
+   {
+    "dir": "30",
+    "thirds": [
+     0.5,
+     0.51,
+     0.52
+    ]
+   }
+  ],
+  "surface": {
+   "mtd_mm": [
+    0.3,
+    0.3,
+    0.3
+   ],
+   "mtd_threshold_mm": 0.6
+  },
+  "maintenance": {
+   "last_rubber_removal": "2023-11-13",
+   "works_orders": [
+    {
+     "type": "taxiway_resurface",
+     "start_date": "2024-06-10"
+    }
+   ],
+   "prior_surveys": []
+  },
+  "review": {
+   "signed_at": "2024-06-04T08:00Z"
+  }
+ },
+ "factors": {
+  "min_third_band": "below_planning",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "uniform",
+  "days_since_rubber_removal": 203,
+  "removal_scheduled": false,
+  "calibration_status": "valid",
+  "missing_elements_count": 1,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "low",
+  "cross_check_result": "none",
+  "prior_survey_trend": "no_prior"
+ },
+ "factors_sampled": {
+  "min_third_band": "below_planning",
+  "near_boundary": false,
+  "localised_segment_below_min": true,
+  "deficit_location": "touchdown_zones",
+  "days_since_rubber_removal": 203,
+  "removal_scheduled": true,
+  "calibration_status": "valid",
+  "missing_elements_count": 1,
+  "test_condition_anomaly": "none",
+  "macrotexture_band": "adequate",
+  "cross_check_result": "none",
+  "prior_survey_trend": "no_prior"
+ },
+ "plan": {
+  "genuine_deficit": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "schedule_works",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "deficit_driver": {
+   "clarity": "clear",
+   "target": "surface_texture",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "friction_severity": {
+   "clarity": "leaning",
+   "target": "3",
+   "second": null,
+   "targets": [
+    "T3"
+   ]
+  },
+  "evidence_completeness": {
+   "clarity": "contested",
+   "target": "4",
+   "second": "3",
+   "targets": []
+  }
+ },
+ "note": "This record contains the decisive aggravating fact (localised_segment_below_min = true): show it plainly, so that on its own it puts the severity, risk or urgency question at the top level.",
+ "target_words": 58,
+ "deciding": {
+  "genuine_deficit": "The lowest third of 0.50 is only a little under the 0.52 planning level, and there is no prior survey to confirm a trend; the test itself is valid.",
+  "next_step": "Deficit is valid and there is no rubber_removal order (only an unrelated taxiway order), so works need scheduling.",
+  "deficit_driver": "All thirds are 0.50 to 0.52 while mtd_mm is 0.3 against 0.6, so the deficit is spread and texture is low.",
+  "friction_severity": "A 100 m segment reads 0.41, below the minimum of 0.42, which gives level 3 with some doubt as the thirds are close to planning.",
+  "evidence_completeness": "weather has no precip_mm, which is arguably a missing element (level 3) or arguably fine since the field is absent from the weather block (level 4); everything else is present."
+ },
+ "request": "rec-F419-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010856
+}

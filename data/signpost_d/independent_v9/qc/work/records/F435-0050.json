@@ -1,0 +1,151 @@
+{
+ "id": "F435-0050",
+ "family": "F435",
+ "state": {
+  "event": {
+   "event_id": "EV-8023",
+   "zone_id": "BAL-2",
+   "zone_type": "balcony",
+   "doors_open": "2025-11-08T19:00",
+   "check_filed_at": "2025-11-09T00:20",
+   "phase": "post_event"
+  },
+  "licence": {
+   "base_limit": 500,
+   "variation": null,
+   "stewards_required": 30,
+   "exit_routes": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5"
+   ]
+  },
+  "ticketing": {
+   "zone_limit_used": 500,
+   "issued": 430,
+   "comps_included": 25,
+   "scanned_in": 421
+  },
+  "ingress": {
+   "device_id": "CTR-9",
+   "device_status": "ok",
+   "raw_peak": 503,
+   "peak_at": "2025-11-08T20:40",
+   "manual_recount": {
+    "count": 498,
+    "at": "2025-11-08T20:50"
+   }
+  },
+  "stewarding": {
+   "rostered": 32,
+   "signed_in": 30,
+   "relief": {
+    "called_at": "2025-11-08T20:58",
+    "eta_min": 10
+   },
+   "note": "1 steward left post 20:55, shift swap"
+  },
+  "exit_checks": [
+   {
+    "route_id": "D1",
+    "checked_at": "2025-11-08T18:15",
+    "status": "clear"
+   },
+   {
+    "route_id": "D2",
+    "checked_at": "2025-11-08T18:20",
+    "status": "clear"
+   },
+   {
+    "route_id": "D3",
+    "checked_at": "2025-11-08T18:30",
+    "status": "obstructed"
+   },
+   {
+    "route_id": "D5",
+    "checked_at": "2025-11-08T19:00",
+    "status": "clear"
+   }
+  ]
+ },
+ "factors": {
+  "zone_type": "balcony",
+  "event_phase": "post_event",
+  "occupancy_ratio": 1.006,
+  "counter_status": "ok",
+  "counter_inflation": 0.03,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.86,
+  "limit_mismatch": false,
+  "steward_gap_pct": 0.0,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 3,
+  "exit_log_missing": false
+ },
+ "factors_sampled": {
+  "zone_type": "balcony",
+  "event_phase": "post_event",
+  "occupancy_ratio": 0.83,
+  "counter_status": "ok",
+  "counter_inflation": 0.03,
+  "manual_recount_present": true,
+  "capacity_variation": "none",
+  "tickets_issued_ratio": 0.86,
+  "limit_mismatch": true,
+  "steward_gap_pct": 0.24,
+  "relief_called": true,
+  "roster_missing": false,
+  "exits_unconfirmed": 5,
+  "exit_log_missing": false
+ },
+ "plan": {
+  "verified_exceedance": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "disposition": {
+   "clarity": "contested",
+   "target": "sign_off",
+   "second": "conditional_sign_off",
+   "targets": []
+  },
+  "discrepancy_source": {
+   "clarity": "leaning",
+   "target": "none",
+   "second": null,
+   "targets": []
+  },
+  "steward_shortfall": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "unconfirmed_exits": {
+   "clarity": "contested",
+   "target": "3",
+   "second": "2",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 67,
+ "deciding": {
+  "verified_exceedance": "Counter is ok, so raw_peak 503 counts and is over the limit of 500; the manual recount of 498 is a few people lower and would put it under.",
+  "disposition": "Staffing is met and tickets are within the limit, but the peak is borderline and exits have gaps; either plain approval or approval with logged follow-up is defensible.",
+  "discrepancy_source": "Tickets issued 430 are under zone_limit_used 500 and the counter is ok; only a 3-person raw peak margin over the limit remains.",
+  "steward_shortfall": "signed_in 30 equals the 30 required, but the note about one steward leaving post at 20:55 leaves some doubt.",
+  "unconfirmed_exits": "D3 obstructed with no later clear and D4 absent from the log make two; D5 clear exactly at doors_open is borderline, so 2 or 3."
+ },
+ "request": "rec-F435-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.015976
+}

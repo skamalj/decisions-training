@@ -1,0 +1,164 @@
+{
+ "id": "F406-0043",
+ "family": "F406",
+ "state": {
+  "session": {
+   "id": "S303",
+   "gallery_code": "G7",
+   "date": "2025-06-12",
+   "open": "10:00",
+   "close": "12:00",
+   "limit": 200
+  },
+  "counts": {
+   "intervals": [
+    {
+     "start": "10:00",
+     "occupancy": 120
+    },
+    {
+     "start": "10:15",
+     "occupancy": 150
+    },
+    {
+     "start": "10:30",
+     "occupancy": 174
+    },
+    {
+     "start": "10:45",
+     "occupancy": 168
+    },
+    {
+     "start": "11:00",
+     "occupancy": 160
+    },
+    {
+     "start": "11:15",
+     "occupancy": 140
+    },
+    {
+     "start": "11:30",
+     "occupancy": 110
+    },
+    {
+     "start": "11:45",
+     "occupancy": 80
+    }
+   ],
+   "ticket_scans": 402,
+   "entries_total": 390,
+   "manual_tally_peak": 172
+  },
+  "variations": [
+   {
+    "gallery_code": "G7",
+    "valid_from": "2025-06-01",
+    "valid_to": "2025-06-12",
+    "uplift_to": 220,
+    "status": "approved"
+   }
+  ],
+  "equipment": {
+   "last_calibrated": "2025-05-20",
+   "tickets": [
+    {
+     "gate": "G7-N",
+     "raised_at": "2025-06-12T08:10",
+     "summary": "reader reset, no count error"
+    }
+   ]
+  },
+  "staff_log": {
+   "stewards": 3,
+   "egress_check": "done 10:05",
+   "notes": "Steady flow; no queues."
+  },
+  "history": {
+   "overages_30d": 1,
+   "last": "2025-06-02"
+  }
+ },
+ "factors": {
+  "true_peak_ratio": 0.87,
+  "intervals_over_limit": 0,
+  "section_mismatch": "scans_vs_counter_minor",
+  "variation_present": true,
+  "variation_scope": "matches (valid_to equals session date)",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 1,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "factors_sampled": {
+  "true_peak_ratio": 1.07,
+  "intervals_over_limit": 10,
+  "section_mismatch": "scans_vs_counter_minor",
+  "variation_present": false,
+  "variation_scope": "matches",
+  "counter_fault_logged": true,
+  "fault_ticket_scope": "same_gate_same_date",
+  "interval_export_missing": false,
+  "egress_check": "completed",
+  "prior_overages_30d": 5,
+  "staff_note_tone": "factual",
+  "boundary_case": false
+ },
+ "plan": {
+  "variation_applies": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "fault_explains_overage": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "file_as_complete",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "peak_excess": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  },
+  "intervals_over": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 138,
+ "deciding": {
+  "variation_applies": "Approved variation, matching gallery G7, valid_to equals session date, though no uplift was needed since peak stayed below the certified limit.",
+  "fault_explains_overage": "Ticket is same date before session but says no count error, and there is no overage to explain.",
+  "next_step": "Peak 174 and tally 172 against limit 200, scans within 3% of entries, egress done; nothing to follow up.",
+  "peak_excess": "Interval peak 174 of limit 200 is 87%, near but below the 90% anchor.",
+  "intervals_over": "No interval exceeds 200; the maximum is 174."
+ },
+ "request": "rec-F406-0041",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.010923
+}

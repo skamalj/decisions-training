@@ -1,0 +1,193 @@
+{
+ "id": "F432-0050",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E30",
+   "risk_cat": 3,
+   "doors": [
+    "A",
+    "B"
+   ],
+   "temp_range_c": [
+    12,
+    28
+   ],
+   "active_vet_case": false
+  },
+  "shift": {
+   "date": "2024-05-21",
+   "keeper_id": "K12",
+   "start": "07:00",
+   "end": "15:00",
+   "opening_count": 5,
+   "closing_count": 5
+  },
+  "movements": [
+   {
+    "animal_id": "M4",
+    "direction": "out",
+    "time": "08:15",
+    "dest": "E32"
+   },
+   {
+    "animal_id": "M9",
+    "direction": "in",
+    "time": "12:40",
+    "from": "E32"
+   }
+  ],
+  "feeding": {
+   "sheet_ver": "2024-04-15",
+   "items": [
+    {
+     "item": "browse",
+     "sheet_g": 3000,
+     "offered_g": 3000,
+     "leftover_g": 100,
+     "unit": "g",
+     "fast_flag": false,
+     "scatter_flag": false
+    },
+    {
+     "item": "pellets",
+     "sheet_g": 800,
+     "offered_g": 800,
+     "leftover_g": 0,
+     "unit": "g",
+     "fast_flag": false,
+     "scatter_flag": false
+    }
+   ]
+  },
+  "rounds": [
+   {
+    "sched": "09:00",
+    "logged": true,
+    "entry_time": "09:04",
+    "temp_c": 19
+   },
+   {
+    "sched": "11:00",
+    "logged": true,
+    "entry_time": "11:02",
+    "temp_c": 21
+   },
+   {
+    "sched": "13:00",
+    "logged": true,
+    "entry_time": "13:21",
+    "temp_c": 23
+   },
+   {
+    "sched": "14:30",
+    "logged": true,
+    "entry_time": "14:33",
+    "temp_c": 22
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "A",
+     "time": "14:48"
+    },
+    {
+     "door": "B",
+     "time": "14:49"
+    }
+   ],
+   "ticket": "T-377",
+   "ticket_state": "closed"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.97,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 0,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "none",
+  "behaviour_codes": 0,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "unexplained_larger",
+  "barrier_fault": "fault_unresolved",
+  "lock_check_timing": "logged_after_last_round",
+  "intake_ratio": 0.74,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 5,
+  "cctv_cover": true,
+  "temp_excursion": "brief_single_reading",
+  "heater_maintenance_window": true,
+  "field_mismatch": "none",
+  "behaviour_codes": 3,
+  "vet_case_open": true,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "sign_off",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "missed_rounds": {
+   "clarity": "leaning",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 122,
+ "deciding": {
+  "count_reconciles": "Opening 5 and closing 5 with one out (M4) and one in (M9) logged, netting zero; the in and out are to and from the same neighbouring enclosure, leaving slight doubt.",
+  "secure_at_close": "Doors A and B were checked at 14:48 and 14:49 after the last round entry at 14:33, and ticket T-377 is closed; nothing is outstanding.",
+  "next_step": "Counts, rounds, locks, feeding and ticket are all complete and consistent, so the log can be filed with no follow-up.",
+  "intake_shortfall": "Leftover 100 g of 3800 g offered across items, about 97% intake, with no flags.",
+  "missed_rounds": "All four rounds are logged true; the 13:00 entry was made 21 minutes late, which is a small doubt."
+ },
+ "request": "rec-F432-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.012484
+}

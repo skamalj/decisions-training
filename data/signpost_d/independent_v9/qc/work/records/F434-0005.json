@@ -1,0 +1,148 @@
+{
+ "id": "F434-0005",
+ "family": "F434",
+ "state": {
+  "post": {
+   "km_marker": 19,
+   "post_type": "descent",
+   "on_post_from": "09:50",
+   "off_post_at": "12:30"
+  },
+  "incidents": [
+   {
+    "time": "11:05",
+    "km": 19,
+    "type": "fall",
+    "bibs": [
+     74
+    ],
+    "medic_called": true,
+    "medic_cancelled": true,
+    "medic_arrival_min": 6.2,
+    "rider_status": "continued"
+   }
+  ],
+  "comms": {
+   "radio_checks": [
+    {
+     "time": "10:00",
+     "ok": true
+    },
+    {
+     "time": "10:30",
+     "ok": false
+    },
+    {
+     "time": "11:00",
+     "ok": false
+    },
+    {
+     "time": "11:30",
+     "ok": false
+    }
+   ],
+   "backup_phone": [
+    {
+     "time": "11:00",
+     "ok": true
+    }
+   ]
+  },
+  "control_record": {
+   "incident_log": [
+    {
+     "time": "11:05",
+     "km": 19,
+     "type": "fall",
+     "bibs": [
+      47
+     ]
+    }
+   ],
+   "medical_handovers": [
+    {
+     "bib": 12,
+     "km": 40,
+     "destination": "Lakeside Hospital"
+    }
+   ]
+  },
+  "sweep": {
+   "passed_at": "12:20",
+   "last_rider_bib": 150,
+   "post_cleared_at": "12:21"
+  }
+ },
+ "factors": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "bib_digit_swap",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "none",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 6.16,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "factors_sampled": {
+  "reopen_before_sweep": false,
+  "incident_mix": "fall",
+  "control_log_mismatch": "bib_digit_swap",
+  "intrusion_mitigated": false,
+  "worst_rider_outcome": "hospital",
+  "staffing_gap": "none",
+  "relief_swap_logged": false,
+  "radio_check_failures": 3,
+  "medic_arrival_minutes": 6.16,
+  "medical_handover_confirmed": false,
+  "sweep_record_missing": false,
+  "timestamp_boundary": false
+ },
+ "plan": {
+  "coverage_held": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "file",
+   "second": "query_marshal",
+   "targets": []
+  },
+  "incident_class": {
+   "clarity": "leaning",
+   "target": "rider_fall",
+   "second": null,
+   "targets": []
+  },
+  "reversal_time": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "3",
+   "targets": []
+  },
+  "consequence_severity": {
+   "clarity": "balanced",
+   "target": "1",
+   "second": "0",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 66,
+ "deciding": {
+  "coverage_held": "off_post_at 12:30 is after sweep passed_at 12:20 and on_post_from was before the start, but three failed radio checks with one backup call leave some doubt, so balanced.",
+  "next_step": "Bib 74 in the post list versus bib 47 in control is a digit swap fixable by the marshal (query_marshal); otherwise the report matches and file is defensible.",
+  "incident_class": "A fall at km 19 at 11:05 appears in both post and control logs; no vehicle or animal entry.",
+  "reversal_time": "Fall with the rider continuing and the medic cancelled; the only hospital handover is bib 12 at km 40, so the level is balanced between 2 and 3.",
+  "consequence_severity": "Rider continued after the fall with the medic cancelled, which gives level 1 against level 0 if the bib mismatch means the fall is not matched."
+ },
+ "request": "rec-F434-0001",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.006875
+}

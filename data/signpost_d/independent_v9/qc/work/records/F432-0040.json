@@ -1,0 +1,144 @@
+{
+ "id": "F432-0040",
+ "family": "F432",
+ "state": {
+  "enclosure": {
+   "id": "E31",
+   "risk_cat": 3,
+   "roster": [
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+   ]
+  },
+  "shift": {
+   "end": "16:00",
+   "opening_count": 4,
+   "closing_count": 5
+  },
+  "movements": [
+   {
+    "animal_id": "a22",
+    "dir": "in",
+    "time": "11:10"
+   }
+  ],
+  "feeding": [
+   {
+    "sheet_g": 1000,
+    "offered_g": 1000,
+    "leftover_g": 100,
+    "unit": "g"
+   }
+  ],
+  "rounds": [
+   {
+    "t": "10:00",
+    "logged": true,
+    "beh": [
+     "AGGR"
+    ]
+   },
+   {
+    "t": "13:00",
+    "logged": false
+   },
+   {
+    "t": "15:59",
+    "logged": true
+   }
+  ],
+  "close_check": {
+   "doors": [
+    {
+     "door": "D1",
+     "time": "15:58"
+    }
+   ],
+   "ticket_state": "closed"
+  }
+ },
+ "factors": {
+  "count_discrepancy": "none",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "logged_at_last_round",
+  "intake_ratio": 0.9,
+  "intake_mitigation": false,
+  "unrecorded_rounds": 1,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "animal_id_not_on_roster",
+  "behaviour_codes": 1,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "factors_sampled": {
+  "count_discrepancy": "unexplained_larger",
+  "barrier_fault": "minor_ticket_closed",
+  "lock_check_timing": "absent",
+  "intake_ratio": 0.36,
+  "intake_mitigation": true,
+  "unrecorded_rounds": 4,
+  "cctv_cover": false,
+  "temp_excursion": "none",
+  "heater_maintenance_window": false,
+  "field_mismatch": "animal_id_not_on_roster",
+  "behaviour_codes": 3,
+  "vet_case_open": false,
+  "missing_section": "none",
+  "risk_category": "cat_3_low"
+ },
+ "plan": {
+  "count_reconciles": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "secure_at_close": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "balanced",
+   "target": "keeper_action",
+   "second": "recheck_round",
+   "targets": [
+    "T1"
+   ]
+  },
+  "intake_shortfall": {
+   "clarity": "contested",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "missed_rounds": {
+   "clarity": "leaning",
+   "target": "1",
+   "second": null,
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 36,
+ "deciding": {
+  "count_reconciles": "Opening 4 plus one logged in-movement equals closing 5, but the moved animal a22 is not on the roster.",
+  "secure_at_close": "D1 lock check at 15:58 is one minute before the last round at 15:59, within minutes of shift end, and the ticket is closed.",
+  "next_step": "The AGGR code, the unrostered animal and the one missed round could justify sending a keeper, or merely a targeted recheck next round.",
+  "intake_shortfall": "Offered 1000 g with 100 g left gives exactly 90%, on the boundary between none and minor.",
+  "missed_rounds": "Only the 13:00 round has logged false."
+ },
+ "request": "rec-F432-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.009666
+}

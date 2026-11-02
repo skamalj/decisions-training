@@ -1,0 +1,130 @@
+{
+ "id": "F411-0050",
+ "family": "F411",
+ "state": {
+  "licence": {
+   "plate": "H508",
+   "review_date": "2024-08-20"
+  },
+  "vehicle": {
+   "odometer_km": 71350
+  },
+  "inspection": {
+   "result_code": "PA",
+   "brake_efficiency_pct": 68
+  },
+  "defects": [
+   {
+    "code": "WPR4",
+    "grade": "minor",
+    "rectify_by": "2024-09-10",
+    "repaired_on": "2024-08-12",
+    "retest_on": "2024-08-14",
+    "retest_result": "pass"
+   },
+   {
+    "code": "TYR2",
+    "grade": "advisory",
+    "rectify_by": "2024-09-30"
+   }
+  ],
+  "documents": [
+   {
+    "type": "insurance",
+    "expires_on": "2024-08-15",
+    "cover_note_ref": "CN19",
+    "cover_until": "2024-08-25"
+   },
+   {
+    "type": "badge",
+    "expires_on": "2025-04-01"
+   }
+  ],
+  "history": [
+   {
+    "date": "2023-08-18",
+    "result": "P",
+    "odometer_km": 71000
+   }
+  ]
+ },
+ "factors": {
+  "worst_defect_found": "minor",
+  "rectification_state": "retest_passed",
+  "deadline_passed": false,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 5
+ },
+ "factors_sampled": {
+  "worst_defect_found": "major",
+  "rectification_state": "retest_passed",
+  "deadline_passed": true,
+  "documents_missing_count": 0,
+  "cover_note_mitigation": true,
+  "expiry_on_boundary": false,
+  "odometer_drop": "none",
+  "cluster_replacement_documented": false,
+  "brake_test_missing": false,
+  "retest_before_repair": false,
+  "prior_failures_12m": 1,
+  "vehicle_age_years": 5
+ },
+ "plan": {
+  "odometer_consistent": {
+   "clarity": "balanced",
+   "target": "true",
+   "second": "false",
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "renew",
+   "second": null,
+   "targets": [
+    "T1",
+    "T5"
+   ]
+  },
+  "inspection_outcome": {
+   "clarity": "clear",
+   "target": "minor_fail",
+   "second": null,
+   "targets": [
+    "T5"
+   ]
+  },
+  "document_gaps": {
+   "clarity": "balanced",
+   "target": "0",
+   "second": "1",
+   "targets": []
+  },
+  "outstanding_severity": {
+   "clarity": "balanced",
+   "target": "2",
+   "second": "1",
+   "targets": []
+  }
+ },
+ "note": "",
+ "target_words": 68,
+ "deciding": {
+  "odometer_consistent": "71350 km is above last year's 71000 km, but only 350 km in a year is very low for a licensed taxi, which makes it doubtful.",
+  "next_step": "The minor defect was repaired and retested with a pass, the only open item is an advisory, and documents are covered, so renewal can proceed.",
+  "inspection_outcome": "WPR4 is graded minor and nothing is major or dangerous.",
+  "document_gaps": "Insurance expired 2024-08-15 but cover note CN19 runs to 2024-08-25, after the review date; counts as in date, though a reader might still see one gap.",
+  "outstanding_severity": "WPR4 was repaired and passed its retest; only the TYR2 advisory is open, though it has a rectify_by date that makes it read like a minor item within its deadline."
+ },
+ "request": "rec-F411-0046",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.008139
+}

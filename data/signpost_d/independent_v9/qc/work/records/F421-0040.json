@@ -1,0 +1,130 @@
+{
+ "id": "F421-0040",
+ "family": "F421",
+ "state": {
+  "parcel": {
+   "parcel_id": "P-61847",
+   "service": "CONV-STD",
+   "contents": "ceramic mug set",
+   "qty": 1,
+   "weight_kg": 2.1,
+   "fragile": true,
+   "declared_value_gbp": 760.6
+  },
+  "handling_events": [
+   {
+    "ts": "2024-08-14T09:00",
+    "site": "THIS",
+    "code": "INB",
+    "exc": "DMG"
+   },
+   {
+    "ts": "2024-08-14T11:00",
+    "site": "THIS",
+    "code": "CONV-STD"
+   }
+  ],
+  "damage_report": {
+   "inspected_ts": "2024-08-14T12:00",
+   "observed_item": "ceramic mug set",
+   "qty_found": 1,
+   "weight_kg": 2.1,
+   "condition": "minor chip on one mug",
+   "photos": [
+    "c1.jpg"
+   ],
+   "repair_est_gbp": 24
+  },
+  "claim": {
+   "claimed_gbp": 47.3,
+   "packaging_desc": "single-wall box, no void fill"
+  },
+  "notes": [
+   "Chip likely from upstream handling. No action needed."
+  ]
+ },
+ "factors": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "none",
+  "inspection_state": "complete",
+  "loss_pct": 3.16,
+  "declared_value": 760.6,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 0,
+  "fragile_misrouted": true,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.97
+ },
+ "factors_sampled": {
+  "damage_timing": "unclear",
+  "manifest_mismatch": "item_description",
+  "inspection_state": "complete",
+  "loss_pct": 68.84,
+  "declared_value": 760.6,
+  "scan_order_anomaly": false,
+  "tamper_signs": false,
+  "sender_packaging_poor": true,
+  "prior_damage_scans": 1,
+  "fragile_misrouted": true,
+  "note_slant": "blames_upstream",
+  "claim_amount_gap": 1.97
+ },
+ "plan": {
+  "depot_fault": {
+   "clarity": "balanced",
+   "target": "false",
+   "second": "true",
+   "targets": []
+  },
+  "contents_match": {
+   "clarity": "leaning",
+   "target": "true",
+   "second": null,
+   "targets": [
+    "T4"
+   ]
+  },
+  "next_step": {
+   "clarity": "clear",
+   "target": "close_no_action",
+   "second": null,
+   "targets": [
+    "T2",
+    "T1",
+    "T5"
+   ]
+  },
+  "loss_share": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  },
+  "parties_needed": {
+   "clarity": "clear",
+   "target": "0",
+   "second": null,
+   "targets": [
+    "T2",
+    "T5"
+   ]
+  }
+ },
+ "note": "This record is routine: nothing in it calls for review, action or urgency, so the low-end answers are right; keep it plainly unremarkable.",
+ "target_words": 88,
+ "deciding": {
+  "depot_fault": "Damage code coincides with the inbound scan, though a fragile parcel later got CONV-STD.",
+  "contents_match": "Ceramic mug set, qty 1, weight 2.1 in both manifest and report.",
+  "next_step": "Report complete with photo and a trivial 24 repair, so nothing further is required.",
+  "loss_share": "Repair 24 of 760.6 is about 3%, under 5%.",
+  "parties_needed": "Nothing to resolve, so the assessor alone can finish."
+ },
+ "request": "rec-F421-0036",
+ "model": "claude-sonnet-5-5",
+ "cost": 0.005158
+}
